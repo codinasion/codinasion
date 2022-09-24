@@ -1,0 +1,62 @@
+name: "Automate Program"
+
+description: "Automate program related issues"
+
+inputs:
+  OWNER:
+    description: "repo owner"
+    required: true
+    default: "codinasion"
+
+  REPO:
+    description: "repo name"
+    required: true
+    default: "program"
+
+  TOKEN:
+    description: "github token"
+    required: true
+
+  USERNAME:
+    description: "github username"
+    required: true
+
+  ISSUE_NUMBER:
+    description: "issue number"
+    required: true
+
+  ISSUE_TITLE:
+    description: "issue title"
+    required: true
+
+  ISSUE_BODY:
+    description: "issue body"
+    required: true
+
+  ISSUE_LABEL:
+    description: "issue label"
+    required: true
+
+  SUBMIT_PROGRAM:
+    description: "submit a program"
+    required: true
+    default: false
+
+  AUTO_CREATE_ISSUE:
+    description: "create track issue"
+    required: true
+    default: false
+
+  AUTO_TRACK_ISSUE:
+    description: "auto create good first issue"
+    required: true
+    default: false
+
+  AUTO_ASSIGN_ISSUE:
+    description: "auto assign issue"
+    required: true
+    default: false
+
+runs:
+  using: "node16"
+  main: "../action.js"

@@ -1,0 +1,97 @@
+[
+    {
+        "name": "C",
+        "fileExtension": "c",
+        "namingConvension": "PascalCase"
+    },
+    {
+        "name": "C#",
+        "fileExtension": "cs",
+        "namingConvension": "PascalCase"
+    },
+    {
+        "name": "C++",
+        "fileExtension": "cpp",
+        "namingConvension": "PascalCase"
+    },
+    {
+        "name": "Dart",
+        "fileExtension": "dart",
+        "namingConvension": "snake_case"
+    },
+    {
+        "name": "F#",
+        "fileExtension": "fs",
+        "namingConvension": "PascalCase"
+    },
+    {
+        "name": "GO",
+        "fileExtension": "go",
+        "namingConvension": "snake_case"
+    },
+    {
+        "name": "Java",
+        "fileExtension": "java",
+        "namingConvension": "PascalCase"
+    },
+    {
+        "name": "JavaScript",
+        "fileExtension": "js",
+        "namingConvension": "PascalCase"
+    },
+    {
+        "name": "Julia",
+        "fileExtension": "jl",
+        "namingConvension": "kebab-case"
+    },
+    {
+        "name": "Kotlin",
+        "fileExtension": "kt",
+        "namingConvension": "PascalCase"
+    },
+    {
+        "name": "Perl",
+        "fileExtension": "pl",
+        "namingConvension": "snake_case"
+    },
+    {
+        "name": "PHP",
+        "fileExtension": "php",
+        "namingConvension": "snake_case"
+    },
+    {
+        "name": "Python",
+        "fileExtension": "py",
+        "namingConvension": "kebab-case"
+    },
+    {
+        "name": "R",
+        "fileExtension": "r",
+        "namingConvension": "snake_case"
+    },
+    {
+        "name": "Ruby",
+        "fileExtension": "rb",
+        "namingConvension": "PascalCase"
+    },
+    {
+        "name": "Rust",
+        "fileExtension": "rs",
+        "namingConvension": "snake_case"
+    },
+    {
+        "name": "Scala",
+        "fileExtension": "sc",
+        "namingConvension": "camelCase"
+    },
+    {
+        "name": "Swift",
+        "fileExtension": "swift",
+        "namingConvension": "PascalCase"
+    },
+    {
+        "name": "TypeScript",
+        "fileExtension": "ts",
+        "namingConvension": "PascalCase"
+    }
+]

@@ -1,0 +1,42 @@
+name: Auto Assign Issue
+on:
+  issue_comment:
+    types: [created]
+
+jobs:
+  auto_track:
+    if: github.event.comment.body == '!assign'
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Cache Node Modules
+        id: cache-node-modules
+        uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: node-modules-${{ hashFiles('yarn.lock') }}
+
+      - name: Yarn
+        if: steps.cache-node-modules.outputs.cache-hit != 'true'
+        run: |
+          yarn
+
+      - name: Issue data
+        run: |
+          echo "USERNAME: ${{ github.event.comment.user.login }}"
+          echo "Issue number : ${{ github.event.issue.number }}"
+          echo "Issue title  : ${{ github.event.issue.title }}"
+          echo "Issue body   : ${{ github.event.issue.body }}"
+
+      - name: Assign Issue
+        uses: ./action/
+        with:
+          USERNAME: ${{ github.event.comment.user.login }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}        
+          AUTO_ASSIGN_ISSUE: true
+          TOKEN: ${{ secrets.PAT }}
+
