@@ -1,5 +1,14 @@
 [
   {
+    "title": "Find Cube of a number",
+    "description": "Write a program to find cube of a number\n\n```\r\nInput  : 2\r\nOutput : 8\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-27T21:43:39.842Z",
+    "createdIssueNumber": "41",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Find square of a number",
     "description": "Write a program to find square of a number\n\n```\r\nInput  : 5\r\nOutput : 25\r\n```\n",
     "contributor": "harshraj8843",
