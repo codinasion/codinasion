@@ -1,0 +1,38 @@
+name: 📄 Documentation issue
+description: Found an issue in the documentation? You can use this one!
+labels: ["documentation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Hey Geek !!!** 
+
+        This is an open source repository.
+
+        * For questions, ask in [Discussions](https://github.com/codinasion/program/discussions).
+        * Check to make sure someone hasn't already opened a similar [issue](https://github.com/codinasion/program/issues).
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A brief description of the question or issue
+    validations:
+      required: true
+
+  - type: textarea
+    id: extrainfo
+    attributes:
+      label: Additional information
+      description: Is there anything else we should know about this issue?
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: This project has a Code of Conduct that all participants are expected to understand and follow.
+      options:
+        - label: I have read and agree to the Codinasion project's [Code of Conduct](CODE_OF_CONDUCT.md)
+          required: true
