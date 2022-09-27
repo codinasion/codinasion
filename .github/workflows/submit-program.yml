@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.PAT }}
 
       - name: Cache Node Modules
         id: cache-node-modules
@@ -49,4 +51,3 @@ jobs:
           add: "data/programs.json"
           fetch: true
           message: "add new program - ${{ github.event.issue.user.login }}"
-          default_author: github_actions
