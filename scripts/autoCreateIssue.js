@@ -113,7 +113,7 @@ ${randomProgram.description}
 
   const readmeData = `---
 title: ${title}
-trackId: ${randomProgram.createdIssueNumber}
+trackId: ${response.number}
 ---
 
 ## ${randomProgram.description}
