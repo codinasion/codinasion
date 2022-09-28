@@ -113,11 +113,13 @@ ${randomProgram.description}
 
   const readmeData = `---
 title: ${title}
+trackId: ${randomProgram.createdIssueNumber}
 ---
 
 ## ${randomProgram.description}
 
----`;
+---
+`;
   await console.log("readmeData => ", readmeData);
 
   await fs.writeFileSync(readmeFilePath, readmeData, (err) => {
