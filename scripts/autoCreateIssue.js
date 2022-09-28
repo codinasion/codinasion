@@ -37,7 +37,7 @@ export default async function autoCreateIssue(OWNER, REPO, TOKEN) {
   const trackTitle = `Write a program to ${title.toLowerCase()}`;
   var body = `### Description
 
-${randomProgram.description}
+${randomProgram.description.trim()}
 `;
 
   if (randomProgram.contributor !== "harshraj8843") {
@@ -116,7 +116,7 @@ title: ${title}
 trackId: ${response.number}
 ---
 
-## ${randomProgram.description}
+## ${randomProgram.description.trim()}
 
 ---
 `;
