@@ -99,6 +99,15 @@
     "created": false
   },
   {
+    "title": "Check Upper Case",
+    "description": "Write a program to check upper case\n\nCheck if the given character is upper case (A-Z).\r\n\r\n```\r\nInput  : A\r\nOutput : Upper Case\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T07:59:25.711Z",
+    "createdIssueNumber": "176",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Check Vowel",
     "description": "Write a program to check vowel\n\nVowel check is a simple program to check whether a character is a vowel or not.\r\n\r\n```\r\nInput  : a\r\nOutput : Vowel\r\n```\n",
     "contributor": "harshraj8843",
