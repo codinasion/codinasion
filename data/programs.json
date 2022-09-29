@@ -126,6 +126,15 @@
     "created": false
   },
   {
+    "title": "Convert binary to decimal",
+    "description": "Write a program to convert binary to decimal\n\nBinary is a base-2 number system. It uses only two digits: 0 and 1. The digits are called bits. A bit is the smallest unit of information in a computer. A bit can be either 0 or 1. A bit can be used to represent a single value, such as 0 or 1, or it can be used to represent a single state, such as on or off.\r\n\r\nTo convert a binary number to decimal, we can use the following algorithm:\r\n\r\n1. Multiply the first bit by 2^0.\r\n2. Multiply the second bit by 2^1.\r\n3. Multiply the third bit by 2^2.\r\n4. Multiply the fourth bit by 2^3.\r\n5. Repeat steps 3 and 4 until the last bit.\r\n6. Add the results of all the multiplications.\r\n7. The decimal number is the sum of all the multiplications.\r\n\r\n```\r\nInput  : 1010\r\nOutput : 10\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T12:25:39.755Z",
+    "createdIssueNumber": "219",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Convert Celsius to Fahrenheit",
     "description": "Write a program to convert celsius to fahrenheit\n\nfahrerheit = (celsius * 9/5) + 32\r\n\r\n```\r\nInput ( C )  : -40\r\nOutput ( F ) : -40\r\n```\n",
     "contributor": "harshraj8843",
