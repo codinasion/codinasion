@@ -27,6 +27,15 @@
     "created": false
   },
   {
+    "title": "Check Palindrome String",
+    "description": "Write a program to check palindrome string\n\nPalindrome string is a string that is same when read from left to right and right to left. For example, \"aba\" is a palindrome string, \"abc\" is not.\r\n\r\n```\r\nInput  : abba\r\nOutput : Palindrome String\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T07:50:20.489Z",
+    "createdIssueNumber": "169",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Check Pangram String",
     "description": "Write a program to check pangram string\n\nA pangram is a sentence containing every letter in the English Alphabet.\r\n\r\n```\r\nInput  : The quick brown fox jumps over the lazy dog\r\nOutput : Pangram sentence\r\n```\n",
     "contributor": "harshraj8843",
