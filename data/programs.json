@@ -270,6 +270,15 @@
     "created": false
   },
   {
+    "title": "Find GCD of two numbers by recursion",
+    "description": "Write a program to find gcd of two numbers by recursion\n\nGCD (Greatest Common Divisor) of two numbers is the largest number that divides both of them. A simple way to find GCD is to factorize both numbers and multiply common factors.\r\n\r\n```\r\nInput  : 12 18\r\nOutput : 6\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T08:15:35.450Z",
+    "createdIssueNumber": "188",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Find LCM of two numbers",
     "description": "Write a program to find lcm of two numbers\n\nLCM (Least Common Multiple) of two numbers is the smallest number which can be divided by both numbers. For example, the LCM of 15 and 20 is 60 and LCM of 10 and 15 is 30.\r\n\r\n```\r\nInput  : 12 18\r\nOutput : 36\r\n```\n",
     "contributor": "harshraj8843",
