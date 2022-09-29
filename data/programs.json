@@ -144,6 +144,15 @@
     "created": false
   },
   {
+    "title": "Find perimeter of a rectangle",
+    "description": "Write a program to find perimeter of a rectangle\n\nPerimeter of rectangle = 2 × (`Length` + `Width`)\r\n\r\n```\r\nLength : 2\r\nWidth  : 3\r\n\r\nPerimeter : 10\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T06:53:32.599Z",
+    "createdIssueNumber": "161",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Find square of a number",
     "description": "Write a program to find square of a number\n\n```\r\nInput  : 5\r\nOutput : 25\r\n```\n",
     "contributor": "harshraj8843",
