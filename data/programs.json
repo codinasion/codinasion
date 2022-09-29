@@ -18,6 +18,15 @@
     "created": false
   },
   {
+    "title": "Check Palindrome Number",
+    "description": "Write a program to check palindrome number\n\nPalindrome numbers are the numbers for which reverse is exactly same as the original number. For example, 121 is palindrome, but 123 is not palindrome.\r\n\r\n```\r\nInput  : 121\r\nOutput : Palindrome Number\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T07:47:13.719Z",
+    "createdIssueNumber": "168",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Check Pangram String",
     "description": "Write a program to check pangram string\n\nA pangram is a sentence containing every letter in the English Alphabet.\r\n\r\n```\r\nInput  : The quick brown fox jumps over the lazy dog\r\nOutput : Pangram sentence\r\n```\n",
     "contributor": "harshraj8843",
