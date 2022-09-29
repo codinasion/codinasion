@@ -342,6 +342,15 @@
     "created": false
   },
   {
+    "title": "Find power of a number by recursion",
+    "description": "Write a program to find power of a number by recursion\n\nPower of a number is calculated by multiplying the number by itself for the given number of times. For example, 2^3 = 2 * 2 * 2 = 8.\r\n\r\nPower of a number can be calculated by recursion. The formula is:\r\n\r\n```math\r\nx^n = x * x^{n-1}\r\n```\r\n\r\n```\r\nInput  : 2 3\r\nOutput : 8\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T08:19:25.769Z",
+    "createdIssueNumber": "191",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Find square of a number",
     "description": "Write a program to find square of a number\n\n```\r\nInput  : 5\r\nOutput : 25\r\n```\n",
     "contributor": "harshraj8843",
