@@ -394,5 +394,14 @@
     "createdIssueNumber": "183",
     "publishedAt": "",
     "created": false
+  },
+  {
+    "title": "Print reverse of a string",
+    "description": "Write a program to print reverse of a string\n\nReverse of a string is the string with the characters in reverse order. For example, the reverse of \"hello\" is \"olleh\".\r\n\r\n```\r\nInput  : abcd\r\nOutput : dcba\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T08:08:17.306Z",
+    "createdIssueNumber": "184",
+    "publishedAt": "",
+    "created": false
   }
 ]
