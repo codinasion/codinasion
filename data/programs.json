@@ -405,6 +405,15 @@
     "created": false
   },
   {
+    "title": "Find sum of cubes of numbers by recursion",
+    "description": "Write a program to find sum of cubes of numbers by recursion\n\n```\r\nInput  : 1 2 3 4 5\r\nOutput : 225\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T12:07:01.313Z",
+    "createdIssueNumber": "202",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Find sum of digits of a number",
     "description": "Write a program to find sum of digits of a number\n\nSuppose you have a number `n` and you want to find the sum of its digits. For example, if `n = 123`, then the sum of its digits is `1 + 2 + 3 = 6`.\r\n\r\n```\r\nInput  : 123\r\nOutput : 6\r\n```\n",
     "contributor": "harshraj8843",
