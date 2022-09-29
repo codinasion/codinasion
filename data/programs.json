@@ -144,6 +144,15 @@
     "created": false
   },
   {
+    "title": "Convert decimal to octal",
+    "description": "Write a program to convert decimal to octal\n\nOctal is a base-8 number system. It uses only eight digits: 0, 1, 2, 3, 4, 5, 6, and 7. The digits are called octits. An octit is the smallest unit of information in a computer. An octit can be used to represent a single value, such as 0, 1, 2, 3, 4, 5, 6, or 7, or it can be used to represent a single state, such as on or off.\r\n\r\nTo convert a decimal number to octal, we can use the following algorithm:\r\n\r\n1. Divide the decimal number by 8.\r\n2. Write down the remainder.\r\n3. Divide the quotient by 8.\r\n4. Write down the remainder.\r\n5. Repeat steps 3 and 4 until the quotient is 0.\r\n6. The octal number is the sequence of remainders written in reverse order.\r\n\r\n```\r\nInput  : 10\r\nOutput : 12\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T12:23:20.593Z",
+    "createdIssueNumber": "217",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Convert Fahrenheit to Celsius",
     "description": "Write a program to convert fahrenheit to celsius\n\ncelcius = (fahrenheit - 32) * 5/9\r\n\r\n```\r\nInput ( F )  : -40\r\nOutput ( C ) : -40\r\n```\n",
     "contributor": "harshraj8843",
