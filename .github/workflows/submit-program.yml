@@ -45,6 +45,10 @@ jobs:
           SUBMIT_PROGRAM: true
           TOKEN: ${{ secrets.PAT }}
 
+      - name: Git Pull
+        run: |
+          git pull
+
       - name: Commit Program Data
         uses: EndBug/add-and-commit@v9
         with:
