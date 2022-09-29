@@ -180,6 +180,15 @@
     "created": false
   },
   {
+    "title": "Convert octal to decimal",
+    "description": "Write a program to convert octal to decimal\n\nOctal is a base-8 number system. It uses only eight digits: 0, 1, 2, 3, 4, 5, 6, and 7. The digits are called octits. An octit is the smallest unit of information in a computer. An octit can be used to represent a single value, such as 0, 1, 2, 3, 4, 5, 6, or 7, or it can be used to represent a single state, such as on or off.\r\n\r\nTo convert an octal number to decimal, we can use the following algorithm:\r\n\r\n1. Multiply the first octit by 8^0.\r\n2. Multiply the second octit by 8^1.\r\n3. Multiply the third octit by 8^2.\r\n4. Multiply the fourth octit by 8^3.\r\n5. Repeat steps 3 and 4 until the last octit.\r\n6. Add the results of all the multiplications.\r\n7. The decimal number is the sum of all the multiplications.\r\n\r\n```\r\nInput  : 12\r\nOutput : 10\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T12:27:33.532Z",
+    "createdIssueNumber": "220",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Convert Paise to Rupees",
     "description": "Write a program to convert paise to rupees\n\n```\r\nInput  ( Ps ) : 100\r\nOutput ( Rs ) : 1\r\n```\n",
     "contributor": "harshraj8843",
