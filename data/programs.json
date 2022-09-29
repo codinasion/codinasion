@@ -18,6 +18,15 @@
     "created": false
   },
   {
+    "title": "Convert Fahrenheit to Celsius",
+    "description": "Write a program to convert fahrenheit to celsius\n\ncelcius = (fahrenheit - 32) * 5/9\r\n\r\n```\r\nInput ( F )  : -40\r\nOutput ( C ) : -40\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T06:43:28.759Z",
+    "createdIssueNumber": "149",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Divide two numbers",
     "description": "Write a program to divide two numbers\n\n```\r\nInput  : 2 4\r\nOutput : 0.5\r\n```\n",
     "contributor": "harshraj8843",
