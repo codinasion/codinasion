@@ -297,6 +297,15 @@
     "created": false
   },
   {
+    "title": "Find sum of digits of a number by recursion",
+    "description": "Write a program to find sum of digits of a number by recursion\n\nSuppose we have a number `n` and we want to find the sum of its digits. For example, if `n = 123`, then the sum of its digits is `1 + 2 + 3 = 6`.\r\n\r\nRecursion is a method of solving a problem where the solution depends on solutions to smaller instances of the same problem. In this case, we can use recursion to find the sum of digits of a number.\r\n\r\n```\r\nInput  : 123\r\nOutput : 6\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T08:02:32.240Z",
+    "createdIssueNumber": "179",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Find volume of a cuboid",
     "description": "Write a program to find volume of a cuboid\n\nVolume of a cuboid = `Length` × `Width` × `Height`\r\n\r\n```\r\nLength : 2\r\nWidth  : 3\r\nHeight : 4\r\n\r\nVolume : 24\r\n```\n",
     "contributor": "harshraj8843",
