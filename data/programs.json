@@ -198,6 +198,15 @@
     "created": false
   },
   {
+    "title": "Convert hexadecimal to binary",
+    "description": "Write a program to convert hexadecimal to binary\n\nHexadecimal is a base-16 number system. It uses sixteen digits: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, and F. The digits are called hexits. A hexit is the smallest unit of information in a computer. A hexit can be used to represent a single value, such as 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, or F, or it can be used to represent a single state, such as on or off.\r\n\r\nBinary is a base-2 number system. It uses only two digits: 0 and 1. The digits are called bits. A bit is the smallest unit of information in a computer. A bit can be either 0 or 1. A bit can be used to represent a single value, such as 0 or 1, or it can be used to represent a single state, such as on or off.\r\n\r\nTo convert a hexadecimal number to binary, we can use the following algorithm:\r\n\r\n1. Convert the hexadecimal number to decimal.\r\n2. Convert the decimal number to binary.\r\n\r\n```\r\nInput  : A\r\nOutput : 1010\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T12:42:52.512Z",
+    "createdIssueNumber": "226",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Convert hexadecimal to decimal",
     "description": "Write a program to convert hexadecimal to decimal\n\nHexadecimal is a base-16 number system. It uses sixteen digits: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, and F. The digits are called hexits. A hexit is the smallest unit of information in a computer. A hexit can be used to represent a single value, such as 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, or F, or it can be used to represent a single state, such as on or off.\r\n\r\nTo convert a hexadecimal number to decimal, we can use the following algorithm:\r\n\r\n1. Multiply the first hexit by 16^0.\r\n2. Multiply the second hexit by 16^1.\r\n3. Multiply the third hexit by 16^2.\r\n4. Multiply the fourth hexit by 16^3.\r\n5. Repeat steps 3 and 4 until the last hexit.\r\n6. Add the results of all the multiplications.\r\n7. The decimal number is the sum of all the multiplications.\r\n\r\n```\r\nInput  : A\r\nOutput : 10\r\n```\n",
     "contributor": "harshraj8843",
