@@ -198,6 +198,15 @@
     "created": false
   },
   {
+    "title": "Print Fibonacci series without recursion",
+    "description": "Write a program to print fibonacci series without recursion\n\n```\r\nInput  : 5\r\nOutput : 0 1 1 2 3\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T06:56:18.727Z",
+    "createdIssueNumber": "164",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Print Hello World",
     "description": "Write a program to print hello world\n\n### Desciption\r\n\r\n```\r\nHello World !!!\r\n```\n",
     "contributor": "harshraj8843",
