@@ -385,5 +385,14 @@
     "createdIssueNumber": "182",
     "publishedAt": "",
     "created": false
+  },
+  {
+    "title": "Print reverse of a number by recursion",
+    "description": "Write a program to print reverse of a number by recursion\n\nReverse of a number is the number obtained by reversing the digits of the original number. For example, reverse of 123 is 321. The recursive solution is to print the last digit of the number and then call the function recursively to print the remaining digits.\r\n\r\n```\r\nInput  : 123\r\nOutput : 321\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T08:07:00.362Z",
+    "createdIssueNumber": "183",
+    "publishedAt": "",
+    "created": false
   }
 ]
