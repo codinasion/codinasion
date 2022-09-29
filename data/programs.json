@@ -234,6 +234,15 @@
     "created": false
   },
   {
+    "title": "Convert feet to centimeters",
+    "description": "Write a program to convert feet to centimeters\n\n1 foot = 30.48 centimeters\r\n\r\n```\r\nInput  : 5\r\nOutput : 152.4\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T13:11:03.436Z",
+    "createdIssueNumber": "254",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Convert feet to inches",
     "description": "Write a program to convert feet to inches\n\n1 foot = 12 inches\r\n\r\n```\r\nInput  : 5\r\nOutput : 60\r\n```\n",
     "contributor": "harshraj8843",
