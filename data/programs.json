@@ -495,6 +495,15 @@
     "created": false
   },
   {
+    "title": "Find volume of a cone",
+    "description": "Write a program to find volume of a cone\n\nVolume of cone = 1/3 × π × `Radius`^2 × `Height`\r\n\r\n```\r\nRadius : 2\r\nHeight : 3\r\n\r\nVolume : 25.132741228718345\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T12:13:25.509Z",
+    "createdIssueNumber": "208",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Find volume of a cuboid",
     "description": "Write a program to find volume of a cuboid\n\nVolume of a cuboid = `Length` × `Width` × `Height`\r\n\r\n```\r\nLength : 2\r\nWidth  : 3\r\nHeight : 4\r\n\r\nVolume : 24\r\n```\n",
     "contributor": "harshraj8843",
