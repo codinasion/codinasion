@@ -18,6 +18,15 @@
     "created": false
   },
   {
+    "title": "Check Leap Year",
+    "description": "Write a program to check leap year\n\nLeap years are years that are divisible by 4, but not by 100, unless they are also divisible by 400. For example, 1996 is a leap year, but 1900 is not. Write a function that takes a year as a parameter and returns True if the year is a leap year, False otherwise.\r\n\r\n```\r\nInput  : 2016\r\nOutput : Leap Year\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T07:51:16.431Z",
+    "createdIssueNumber": "170",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Check Palindrome Number",
     "description": "Write a program to check palindrome number\n\nPalindrome numbers are the numbers for which reverse is exactly same as the original number. For example, 121 is palindrome, but 123 is not palindrome.\r\n\r\n```\r\nInput  : 121\r\nOutput : Palindrome Number\r\n```\n",
     "contributor": "harshraj8843",
