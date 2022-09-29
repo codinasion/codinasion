@@ -261,6 +261,15 @@
     "created": false
   },
   {
+    "title": "Find GCD of two numbers",
+    "description": "Write a program to find gcd of two numbers\n\nGCD (Greatest Common Divisor) of two numbers is the largest number that divides both of them. A simple way to find GCD is to factorize both numbers and multiply common factors.\r\n\r\n```\r\nInput  : 12 18\r\nOutput : 6\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T08:13:29.945Z",
+    "createdIssueNumber": "186",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Find length of a string",
     "description": "Write a program to find length of a string\n\n```\r\nInput  : abcd\r\nOutput : 4\r\n```\n",
     "contributor": "harshraj8843",
