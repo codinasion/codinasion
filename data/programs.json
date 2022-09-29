@@ -1,5 +1,59 @@
 [
   {
+    "title": "Check Even or Odd number",
+    "description": "Write a program to check even or odd number\n\n```\r\nInput  : 3\r\nOutput : Odd Number\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T06:41:14.020Z",
+    "createdIssueNumber": "147",
+    "publishedAt": "",
+    "created": false
+  },
+  {
+    "title": "Check Prime Number",
+    "description": "Write a program to check prime number\n\nA prime number is a natural number greater than 1 that has no positive divisors other than 1 and itself.\r\n\r\n```\r\nInput  : 5\r\nOutput : Prime Number\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T06:57:17.847Z",
+    "createdIssueNumber": "166",
+    "publishedAt": "",
+    "created": false
+  },
+  {
+    "title": "Convert Celsius to Fahrenheit",
+    "description": "Write a program to convert celsius to fahrenheit\n\nfahrerheit = (celsius * 9/5) + 32\r\n\r\n```\r\nInput ( C )  : -40\r\nOutput ( F ) : -40\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T06:42:37.474Z",
+    "createdIssueNumber": "148",
+    "publishedAt": "",
+    "created": false
+  },
+  {
+    "title": "Convert Fahrenheit to Celsius",
+    "description": "Write a program to convert fahrenheit to celsius\n\ncelcius = (fahrenheit - 32) * 5/9\r\n\r\n```\r\nInput ( F )  : -40\r\nOutput ( C ) : -40\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T06:43:28.759Z",
+    "createdIssueNumber": "149",
+    "publishedAt": "",
+    "created": false
+  },
+  {
+    "title": "Convert Paise to Rupees",
+    "description": "Write a program to convert paise to rupees\n\n```\r\nInput  ( Ps ) : 100\r\nOutput ( Rs ) : 1\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T06:46:03.074Z",
+    "createdIssueNumber": "152",
+    "publishedAt": "",
+    "created": false
+  },
+  {
+    "title": "Convert Rupees to Paise",
+    "description": "Write a program to convert rupees to paise\n\n```\r\nInput  ( Rs ) : 1\r\nOutput ( Ps ) : 100\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T06:45:26.153Z",
+    "createdIssueNumber": "151",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Divide two numbers",
     "description": "Write a program to divide two numbers\n\n```\r\nInput  : 2 4\r\nOutput : 0.5\r\n```\n",
     "contributor": "harshraj8843",
@@ -9,6 +63,60 @@
     "created": true
   },
   {
+    "title": "Find area of a circle",
+    "description": "Write a program to find area of a circle\n\nArea of circle = π × `Radius`^2\r\n\r\n```\r\nRadius : 2\r\n\r\nArea : 12.566370614359172\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T06:51:14.286Z",
+    "createdIssueNumber": "157",
+    "publishedAt": "",
+    "created": false
+  },
+  {
+    "title": "Find area of a cube",
+    "description": "Write a program to find area of a cube\n\nArea of cube = 6 × `Side`^2\r\n\r\n```\r\nSide : 2\r\n\r\nArea : 24\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T06:52:29.859Z",
+    "createdIssueNumber": "159",
+    "publishedAt": "",
+    "created": false
+  },
+  {
+    "title": "Find area of a cuboid",
+    "description": "Write a program to find area of a cuboid\n\nArea of cuboid = 2 × (`Length` × `Width` + `Length` × `Height` + `Width` × `Height`)\r\n\r\n```\r\nLength : 2\r\nWidth  : 3\r\nHeight : 4\r\n\r\nArea : 52\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T06:52:55.954Z",
+    "createdIssueNumber": "160",
+    "publishedAt": "",
+    "created": false
+  },
+  {
+    "title": "Find area of a rectangle",
+    "description": "Write a program to find area of a rectangle\n\nArea of rectangle = `Length` × `Width`\r\n\r\n```\r\nLength : 2\r\nWidth  : 3\r\n\r\nArea : 6\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T06:48:21.795Z",
+    "createdIssueNumber": "155",
+    "publishedAt": "",
+    "created": false
+  },
+  {
+    "title": "Find area of a right angled triangle",
+    "description": "Write a program to find area of a right angled triangle\n\nArea of right angled triangle = 0.5 × `Base` × `Height`\r\n\r\n```\r\nBase   : 2\r\nHeight : 3\r\n\r\nArea : 3\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T06:50:41.454Z",
+    "createdIssueNumber": "156",
+    "publishedAt": "",
+    "created": false
+  },
+  {
+    "title": "Find area of a square",
+    "description": "Write a program to find area of a square\n\nArea of square = `Side`^2\r\n\r\n```\r\nSide : 2\r\n\r\nArea : 4\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T06:51:53.695Z",
+    "createdIssueNumber": "158",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Find Cube of a number",
     "description": "Write a program to find cube of a number\n\n```\r\nInput  : 2\r\nOutput : 8\r\n```\n",
     "contributor": "harshraj8843",
@@ -16,6 +124,51 @@
     "createdIssueNumber": "41",
     "publishedAt": "2022-09-28T09:35:46.495Z",
     "created": true
+  },
+  {
+    "title": "Find factorial of a number",
+    "description": "Write a program to find factorial of a number\n\nFactorial of N = N *(N-1)* (N-2) *...* 1\r\n\r\n```\r\nInput  : 5\r\nOutput : 120\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T06:40:07.478Z",
+    "createdIssueNumber": "146",
+    "publishedAt": "",
+    "created": false
+  },
+  {
+    "title": "Find length of a string",
+    "description": "Write a program to find length of a string\n\n```\r\nInput  : abcd\r\nOutput : 4\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T06:44:31.887Z",
+    "createdIssueNumber": "150",
+    "publishedAt": "",
+    "created": false
+  },
+  {
+    "title": "Find negative of a number",
+    "description": "Write a program to find negative of a number\n\n```\r\nInput  : 5\r\nOutput : -5\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T06:47:49.757Z",
+    "createdIssueNumber": "154",
+    "publishedAt": "",
+    "created": false
+  },
+  {
+    "title": "Find perimeter of a rectangle",
+    "description": "Write a program to find perimeter of a rectangle\n\nPerimeter of rectangle = 2 × (`Length` + `Width`)\r\n\r\n```\r\nLength : 2\r\nWidth  : 3\r\n\r\nPerimeter : 10\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T06:53:32.599Z",
+    "createdIssueNumber": "161",
+    "publishedAt": "",
+    "created": false
+  },
+  {
+    "title": "Find perimeter of a square",
+    "description": "Write a program to find perimeter of a square\n\nPerimeter of square = 4 × `Side`\r\n\r\n```\r\nSide : 2\r\n\r\nPerimeter : 8\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T06:54:46.263Z",
+    "createdIssueNumber": "162",
+    "publishedAt": "",
+    "created": false
   },
   {
     "title": "Find square of a number",
@@ -45,6 +198,24 @@
     "created": true
   },
   {
+    "title": "Print Fibonacci series by recursion",
+    "description": "Write a program to print fibonacci series by recursion\n\n```\r\nInput  : 5\r\nOutput : 0 1 1 2 3\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T06:55:20.907Z",
+    "createdIssueNumber": "163",
+    "publishedAt": "",
+    "created": false
+  },
+  {
+    "title": "Print Fibonacci series without recursion",
+    "description": "Write a program to print fibonacci series without recursion\n\n```\r\nInput  : 5\r\nOutput : 0 1 1 2 3\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T06:56:18.727Z",
+    "createdIssueNumber": "164",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Print Hello World",
     "description": "Write a program to print hello world\n\n### Desciption\r\n\r\n```\r\nHello World !!!\r\n```\n",
     "contributor": "harshraj8843",
@@ -52,5 +223,14 @@
     "createdIssueNumber": "1",
     "publishedAt": "2022-09-24T14:51:59.093Z",
     "created": true
+  },
+  {
+    "title": "Print Multiplication Table",
+    "description": "Write a program to print multiplication table\n\n```\r\nInput  : 2\r\n\r\n2 x 1 = 2\r\n2 x 2 = 4\r\n2 x 3 = 6\r\n2 x 4 = 8\r\n2 x 5 = 10\r\n2 x 6 = 12\r\n2 x 7 = 14\r\n2 x 8 = 16\r\n2 x 9 = 18\r\n2 x 10 = 20\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T06:47:23.267Z",
+    "createdIssueNumber": "153",
+    "publishedAt": "",
+    "created": false
   }
 ]
