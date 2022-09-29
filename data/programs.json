@@ -27,6 +27,15 @@
     "created": false
   },
   {
+    "title": "Check Digit",
+    "description": "Write a program to check digit\n\nCheck wether given character is a digit (0-9).\r\n\r\n```\r\nInput  : 1\r\nOutput : Digit\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T07:56:34.515Z",
+    "createdIssueNumber": "174",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Check Even or Odd number",
     "description": "Write a program to check even or odd number\n\n```\r\nInput  : 3\r\nOutput : Odd Number\r\n```\n",
     "contributor": "harshraj8843",
