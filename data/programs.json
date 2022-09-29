@@ -27,6 +27,15 @@
     "created": false
   },
   {
+    "title": "Convert Paise to Rupees",
+    "description": "Write a program to convert paise to rupees\n\n```\r\nInput  ( Ps ) : 100\r\nOutput ( Rs ) : 1\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T06:46:03.074Z",
+    "createdIssueNumber": "152",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Convert Rupees to Paise",
     "description": "Write a program to convert rupees to paise\n\n```\r\nInput  ( Rs ) : 1\r\nOutput ( Ps ) : 100\r\n```\n",
     "contributor": "harshraj8843",
