@@ -63,6 +63,15 @@
     "created": false
   },
   {
+    "title": "Find area of a right angled triangle",
+    "description": "Write a program to find area of a right angled triangle\n\nArea of right angled triangle = 0.5 × `Base` × `Height`\r\n\r\n```\r\nBase   : 2\r\nHeight : 3\r\n\r\nArea : 3\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T06:50:41.454Z",
+    "createdIssueNumber": "156",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Find Cube of a number",
     "description": "Write a program to find cube of a number\n\n```\r\nInput  : 2\r\nOutput : 8\r\n```\n",
     "contributor": "harshraj8843",
