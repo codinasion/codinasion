@@ -54,6 +54,15 @@
     "created": true
   },
   {
+    "title": "Find area of a circle",
+    "description": "Write a program to find area of a circle\n\nArea of circle = π × `Radius`^2\r\n\r\n```\r\nRadius : 2\r\n\r\nArea : 12.566370614359172\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T06:51:14.286Z",
+    "createdIssueNumber": "157",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Find area of a rectangle",
     "description": "Write a program to find area of a rectangle\n\nArea of rectangle = `Length` × `Width`\r\n\r\n```\r\nLength : 2\r\nWidth  : 3\r\n\r\nArea : 6\r\n```\n",
     "contributor": "harshraj8843",
