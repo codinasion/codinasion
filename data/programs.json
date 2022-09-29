@@ -396,6 +396,15 @@
     "created": false
   },
   {
+    "title": "Convert weeks to hours",
+    "description": "Write a program to convert weeks to hours\n\n1 week = 7 days = 168 hours\r\n\r\n```\r\nInput  : 5\r\nOutput : 840\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T12:57:54.488Z",
+    "createdIssueNumber": "242",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Divide two numbers",
     "description": "Write a program to divide two numbers\n\n```\r\nInput  : 2 4\r\nOutput : 0.5\r\n```\n",
     "contributor": "harshraj8843",
