@@ -891,6 +891,15 @@
     "created": false
   },
   {
+    "title": "Print ASCII value of a string",
+    "description": "Write a program to print ascii value of a string\n\nASCII value is the numeric representation of a character. For example, the ASCII value of the character 'A' is 65. The ASCII value of the character 'a' is 97. The ASCII value of the character '0' is 48. The ASCII value of the character ' ' is 32.\r\n\r\n```\r\nInput  : ABC\r\nOutput : 65 66 67\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T13:08:26.135Z",
+    "createdIssueNumber": "250",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Print character of an ASCII value",
     "description": "Write a program to print character of an ascii value\n\nASCII value is the numeric representation of a character. For example, the ASCII value of the character 'A' is 65. The ASCII value of the character 'a' is 97. The ASCII value of the character '0' is 48. The ASCII value of the character ' ' is 32.\r\n\r\n```\r\nInput  : 65\r\nOutput : A\r\n```\n",
     "contributor": "harshraj8843",
