@@ -684,6 +684,15 @@
     "created": true
   },
   {
+    "title": "Find Digital Root of a number",
+    "description": "Write a program to find digital root of a number\n\nDigital root of a number is the recursive sum of its digits until we get a single digit number.\r\n\r\n```\r\nInput  : 1234\r\nOutput : 1\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T13:22:50.941Z",
+    "createdIssueNumber": "266",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Find factorial of a number",
     "description": "Write a program to find factorial of a number\n\nFactorial of N = N *(N-1)* (N-2) *...* 1\r\n\r\n```\r\nInput  : 5\r\nOutput : 120\r\n```\n",
     "contributor": "harshraj8843",
