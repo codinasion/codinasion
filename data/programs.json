@@ -162,6 +162,15 @@
     "created": false
   },
   {
+    "title": "Convert centimeters to feet",
+    "description": "Write a program to convert centimeters to feet\n\n1 foot = 30.48 centimeters\r\n\r\n```\r\nInput  : 152.4\r\nOutput : 5\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T13:13:05.844Z",
+    "createdIssueNumber": "255",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Convert days to hours",
     "description": "Write a program to convert days to hours\n\n1 day = 24 hours\r\n\r\n```\r\nInput  : 5\r\nOutput : 120\r\n```\n",
     "contributor": "harshraj8843",
