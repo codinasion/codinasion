@@ -90,6 +90,15 @@
     "created": false
   },
   {
+    "title": "Check Special Character",
+    "description": "Write a program to check special character\n\nCheck if given character is a special character (not a letter or a number).\r\n\r\n```\r\nInput  : @\r\nOutput : Special Character\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T07:57:38.136Z",
+    "createdIssueNumber": "175",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Check Vowel",
     "description": "Write a program to check vowel\n\nVowel check is a simple program to check whether a character is a vowel or not.\r\n\r\n```\r\nInput  : a\r\nOutput : Vowel\r\n```\n",
     "contributor": "harshraj8843",
