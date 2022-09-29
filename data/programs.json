@@ -1,5 +1,14 @@
 [
   {
+    "title": "Check Armstrong Number",
+    "description": "Write a program to check armstrong number\n\nAn Armstrong number is a number that is equal to the sum of cubes of its digits.\r\n\r\n```\r\nInput  : 153\r\nOutput : Armstrong Number\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T07:04:27.863Z",
+    "createdIssueNumber": "167",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Check Even or Odd number",
     "description": "Write a program to check even or odd number\n\n```\r\nInput  : 3\r\nOutput : Odd Number\r\n```\n",
     "contributor": "harshraj8843",
