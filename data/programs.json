@@ -115,5 +115,14 @@
     "createdIssueNumber": "1",
     "publishedAt": "2022-09-24T14:51:59.093Z",
     "created": true
+  },
+  {
+    "title": "Print Multiplication Table",
+    "description": "Write a program to print multiplication table\n\n```\r\nInput  : 2\r\n\r\n2 x 1 = 2\r\n2 x 2 = 4\r\n2 x 3 = 6\r\n2 x 4 = 8\r\n2 x 5 = 10\r\n2 x 6 = 12\r\n2 x 7 = 14\r\n2 x 8 = 16\r\n2 x 9 = 18\r\n2 x 10 = 20\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T06:47:23.267Z",
+    "createdIssueNumber": "153",
+    "publishedAt": "",
+    "created": false
   }
 ]
