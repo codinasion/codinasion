@@ -504,6 +504,15 @@
     "created": true
   },
   {
+    "title": "Find volume of a cylinder",
+    "description": "Write a program to find volume of a cylinder\n\nVolume of cylinder = π × `Radius`^2 × `Height`\r\n\r\n```\r\nRadius : 2\r\nHeight : 3\r\n\r\nVolume : 37.69911184307752\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T12:12:29.216Z",
+    "createdIssueNumber": "207",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Find volume of a sphere",
     "description": "Write a program to find volume of a sphere\n\nVolume of sphere = 4/3 × π × `Radius`^3\r\n\r\n```\r\nRadius : 2\r\n\r\nVolume : 33.510321638291124\r\n```\n",
     "contributor": "harshraj8843",
