@@ -81,6 +81,15 @@
     "created": false
   },
   {
+    "title": "Find negative of a number",
+    "description": "Write a program to find negative of a number\n\n```\r\nInput  : 5\r\nOutput : -5\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T06:47:49.757Z",
+    "createdIssueNumber": "154",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Find square of a number",
     "description": "Write a program to find square of a number\n\n```\r\nInput  : 5\r\nOutput : 25\r\n```\n",
     "contributor": "harshraj8843",
