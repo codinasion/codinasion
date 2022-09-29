@@ -504,6 +504,15 @@
     "created": false
   },
   {
+    "title": "Find surface area of a cube",
+    "description": "Write a program to find surface area of a cube\n\nSurface area of cube = 6 × `Side`^2\r\n\r\n```\r\nSide : 2\r\n\r\nSurface area : 24\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T12:18:29.036Z",
+    "createdIssueNumber": "215",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Find surface area of a cuboid",
     "description": "Write a program to find surface area of a cuboid\n\nSurface area of cuboid = 2 × (`Length` × `Width` + `Length` × `Height` + `Width` × `Height`)\r\n\r\n```\r\nLength : 2\r\nWidth  : 3\r\nHeight : 4\r\n\r\nSurface area : 52\r\n```\n",
     "contributor": "harshraj8843",
