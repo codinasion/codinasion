@@ -72,6 +72,15 @@
     "created": false
   },
   {
+    "title": "Find area of a cuboid",
+    "description": "Write a program to find area of a cuboid\n\nArea of cuboid = 2 × (`Length` × `Width` + `Length` × `Height` + `Width` × `Height`)\r\n\r\n```\r\nLength : 2\r\nWidth  : 3\r\nHeight : 4\r\n\r\nArea : 52\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T06:52:55.954Z",
+    "createdIssueNumber": "160",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Find area of a rectangle",
     "description": "Write a program to find area of a rectangle\n\nArea of rectangle = `Length` × `Width`\r\n\r\n```\r\nLength : 2\r\nWidth  : 3\r\n\r\nArea : 6\r\n```\n",
     "contributor": "harshraj8843",
