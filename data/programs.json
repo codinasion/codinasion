@@ -9,6 +9,15 @@
     "created": false
   },
   {
+    "title": "Check Consonant",
+    "description": "Write a program to check consonant\n\nCheck if a character is a consonant.\r\n\r\n```\r\nInput  : b\r\nOutput : Consonant\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T07:53:29.025Z",
+    "createdIssueNumber": "172",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Check Even or Odd number",
     "description": "Write a program to check even or odd number\n\n```\r\nInput  : 3\r\nOutput : Odd Number\r\n```\n",
     "contributor": "harshraj8843",
