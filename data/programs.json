@@ -360,6 +360,15 @@
     "created": true
   },
   {
+    "title": "Find square root of a number",
+    "description": "Write a program to find square root of a number\n\nSquare root of a number is the number that when multiplied by itself gives the original number. For example, square root of 4 is 2 because 2 * 2 = 4. Similarly, square root of 9 is 3 because 3 * 3 = 9.\r\n\r\n```\r\nInput  : 4\r\nOutput : 2\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T08:20:10.549Z",
+    "createdIssueNumber": "192",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Find sum of digits of a number",
     "description": "Write a program to find sum of digits of a number\n\nSuppose you have a number `n` and you want to find the sum of its digits. For example, if `n = 123`, then the sum of its digits is `1 + 2 + 3 = 6`.\r\n\r\n```\r\nInput  : 123\r\nOutput : 6\r\n```\n",
     "contributor": "harshraj8843",
