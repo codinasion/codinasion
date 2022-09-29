@@ -495,6 +495,15 @@
     "created": false
   },
   {
+    "title": "Find surface area of a cone",
+    "description": "Write a program to find surface area of a cone\n\nSurface area of cone = π × `Radius` × (`Radius` + `Slant Height`)\r\n\r\n```\r\nRadius       : 2\r\nSlant Height : 3\r\n\r\nSurface area : 50.26548245743669\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T12:17:07.223Z",
+    "createdIssueNumber": "213",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Find surface area of a cylinder",
     "description": "Write a program to find surface area of a cylinder\n\nSurface area of cylinder = 2 × π × `Radius` × `Height`\r\n\r\n```\r\nRadius : 2\r\nHeight : 3\r\n\r\nSurface area : 62.83185307179586\r\n```\n",
     "contributor": "harshraj8843",
