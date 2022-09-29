@@ -306,6 +306,15 @@
     "created": false
   },
   {
+    "title": "Convert seconds to hours",
+    "description": "Write a program to convert seconds to hours\n\n1 hour = 60 minutes = 3600 seconds\r\n\r\n```\r\nInput  : 18000\r\nOutput : 5\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T12:48:14.802Z",
+    "createdIssueNumber": "233",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Convert seconds to minutes",
     "description": "Write a program to convert seconds to minutes\n\n1 minute = 60 seconds\r\n\r\n```\r\nInput  : 300\r\nOutput : 5\r\n```\n",
     "contributor": "harshraj8843",
