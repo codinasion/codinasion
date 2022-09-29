@@ -63,6 +63,15 @@
     "created": false
   },
   {
+    "title": "Check Vowel",
+    "description": "Write a program to check vowel\n\nVowel check is a simple program to check whether a character is a vowel or not.\r\n\r\n```\r\nInput  : a\r\nOutput : Vowel\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T07:52:20.496Z",
+    "createdIssueNumber": "171",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Convert Celsius to Fahrenheit",
     "description": "Write a program to convert celsius to fahrenheit\n\nfahrerheit = (celsius * 9/5) + 32\r\n\r\n```\r\nInput ( C )  : -40\r\nOutput ( F ) : -40\r\n```\n",
     "contributor": "harshraj8843",
