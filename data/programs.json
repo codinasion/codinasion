@@ -279,6 +279,15 @@
     "created": false
   },
   {
+    "title": "Convert seconds to minutes",
+    "description": "Write a program to convert seconds to minutes\n\n1 minute = 60 seconds\r\n\r\n```\r\nInput  : 300\r\nOutput : 5\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T12:45:20.619Z",
+    "createdIssueNumber": "229",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Divide two numbers",
     "description": "Write a program to divide two numbers\n\n```\r\nInput  : 2 4\r\nOutput : 0.5\r\n```\n",
     "contributor": "harshraj8843",
