@@ -1107,6 +1107,15 @@
     "created": false
   },
   {
+    "title": "Print number to words in Indian numbering system",
+    "description": "Write a program to print number to words in indian numbering system\n\n```\r\nInput  : 123456789\r\nOutput : One Hundred Twenty Three Crore Forty Five Lakh Sixty Seven Thousand Eight Hundred Ninety\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T13:26:34.277Z",
+    "createdIssueNumber": "270",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Print reverse of a number",
     "description": "Write a program to print reverse of a number\n\nReverse of a number is the number obtained by reversing the digits of the original number. For example, the reverse of 123 is 321. The reverse of 100 is 1. The reverse of 1000 is 1.\r\n\r\n```\r\nInput  : 123\r\nOutput : 321\r\n```\n",
     "contributor": "harshraj8843",
