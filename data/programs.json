@@ -234,6 +234,15 @@
     "created": false
   },
   {
+    "title": "Convert minutes to hours",
+    "description": "Write a program to convert minutes to hours\n\n1 hour = 60 minutes\r\n\r\n```\r\nInput  : 300\r\nOutput : 5\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T12:46:46.750Z",
+    "createdIssueNumber": "231",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Convert minutes to seconds",
     "description": "Write a program to convert minutes to seconds\n\n1 minute = 60 seconds\r\n\r\n```\r\nInput  : 5\r\nOutput : 300\r\n```\n",
     "contributor": "harshraj8843",
