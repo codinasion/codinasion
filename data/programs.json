@@ -432,6 +432,15 @@
     "created": false
   },
   {
+    "title": "Find sum of squares of numbers",
+    "description": "Write a program to find sum of squares of numbers\n\nSuppose you have a list of numbers, and you want to find the sum of the squares of those numbers. For example, if you have the list `[1, 2, 3]`, you want to find the sum of the squares of those numbers, which is `1^2 + 2^2 + 3^2 = 14`.\r\n\r\n```\r\nInput  : 1 2 3 4 5\r\nOutput : 55\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T11:39:27.599Z",
+    "createdIssueNumber": "199",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Find volume of a cuboid",
     "description": "Write a program to find volume of a cuboid\n\nVolume of a cuboid = `Length` × `Width` × `Height`\r\n\r\n```\r\nLength : 2\r\nWidth  : 3\r\nHeight : 4\r\n\r\nVolume : 24\r\n```\n",
     "contributor": "harshraj8843",
