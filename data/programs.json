@@ -288,6 +288,15 @@
     "created": true
   },
   {
+    "title": "Find sum of digits of a number",
+    "description": "Write a program to find sum of digits of a number\n\nSuppose you have a number `n` and you want to find the sum of its digits. For example, if `n = 123`, then the sum of its digits is `1 + 2 + 3 = 6`.\r\n\r\n```\r\nInput  : 123\r\nOutput : 6\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T08:01:18.688Z",
+    "createdIssueNumber": "178",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Find volume of a cuboid",
     "description": "Write a program to find volume of a cuboid\n\nVolume of a cuboid = `Length` × `Width` × `Height`\r\n\r\n```\r\nLength : 2\r\nWidth  : 3\r\nHeight : 4\r\n\r\nVolume : 24\r\n```\n",
     "contributor": "harshraj8843",
