@@ -1,5 +1,14 @@
 [
   {
+    "title": "Calculate compound interest",
+    "description": "Write a program to calculate compound interest\n\nCompound interest = principal amount * (1 + rate of interest) ^ time\r\n\r\n```\r\nPrincipal : 1000\r\nRate      : 10\r\nTime      : 5\r\n\r\nCompound interest : 1610.51\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T13:24:58.172Z",
+    "createdIssueNumber": "268",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Calculate simple interest",
     "description": "Write a program to calculate simple interest\n\nSimple interest = principal amount * rate of interest * time\r\n\r\n```\r\nPrincipal : 1000\r\nRate      : 10\r\nTime      : 5\r\n\r\nSimple interest : 500\r\n```\n",
     "contributor": "harshraj8843",
