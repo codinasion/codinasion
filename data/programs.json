@@ -324,6 +324,15 @@
     "created": false
   },
   {
+    "title": "Convert inches to centimeters",
+    "description": "Write a program to convert inches to centimeters\n\n1 inch = 2.54 centimeters\r\n\r\n```\r\nInput  : 5\r\nOutput : 12.7\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T13:13:28.248Z",
+    "createdIssueNumber": "256",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Convert inches to feet",
     "description": "Write a program to convert inches to feet\n\n1 foot = 12 inches\r\n\r\n```\r\nInput  : 60\r\nOutput : 5\r\n```\n",
     "contributor": "harshraj8843",
