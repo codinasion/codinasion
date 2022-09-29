@@ -1,0 +1,1 @@
+export const convertMetersToMiles = (meters:number):number =>  meters / 1609.344;
