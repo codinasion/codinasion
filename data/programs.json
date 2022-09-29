@@ -171,6 +171,15 @@
     "created": false
   },
   {
+    "title": "Convert centimeters to inches",
+    "description": "Write a program to convert centimeters to inches\n\n1 inch = 2.54 centimeters\r\n\r\n```\r\nInput  : 12.7\r\nOutput : 5\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T13:14:01.236Z",
+    "createdIssueNumber": "257",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Convert days to hours",
     "description": "Write a program to convert days to hours\n\n1 day = 24 hours\r\n\r\n```\r\nInput  : 5\r\nOutput : 120\r\n```\n",
     "contributor": "harshraj8843",
