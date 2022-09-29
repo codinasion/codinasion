@@ -432,6 +432,15 @@
     "created": false
   },
   {
+    "title": "Find sum of n natural numbers",
+    "description": "Write a program to find sum of n natural numbers\n\n```\r\nInput  : 5\r\nOutput : 15\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T12:09:41.024Z",
+    "createdIssueNumber": "203",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Find sum of numbers",
     "description": "Write a program to find sum of numbers\n\n```\r\nInput  : 1 2 3 4 5\r\nOutput : 15\r\n```\n",
     "contributor": "harshraj8843",
