@@ -1168,5 +1168,14 @@
     "createdIssueNumber": "251",
     "publishedAt": "",
     "created": false
+  },
+  {
+    "title": "Swap two numbers",
+    "description": "Write a program to swap two numbers\n\n```\r\nInput  : 10 20\r\nOutput : 20 10\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T13:31:01.383Z",
+    "createdIssueNumber": "272",
+    "publishedAt": "",
+    "created": false
   }
 ]
