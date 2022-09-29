@@ -234,6 +234,15 @@
     "created": false
   },
   {
+    "title": "Convert hours to days",
+    "description": "Write a program to convert hours to days\n\n1 day = 24 hours\r\n\r\n```\r\nInput  : 120\r\nOutput : 5\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T12:49:20.094Z",
+    "createdIssueNumber": "235",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Convert hours to minutes",
     "description": "Write a program to convert hours to minutes\n\n1 hour = 60 minutes\r\n\r\n```\r\nInput  : 5\r\nOutput : 300\r\n```\n",
     "contributor": "harshraj8843",
