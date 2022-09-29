@@ -153,6 +153,15 @@
     "created": false
   },
   {
+    "title": "Find perimeter of a square",
+    "description": "Write a program to find perimeter of a square\n\nPerimeter of square = 4 × `Side`\r\n\r\n```\r\nSide : 2\r\n\r\nPerimeter : 8\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T06:54:46.263Z",
+    "createdIssueNumber": "162",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Find square of a number",
     "description": "Write a program to find square of a number\n\n```\r\nInput  : 5\r\nOutput : 25\r\n```\n",
     "contributor": "harshraj8843",
