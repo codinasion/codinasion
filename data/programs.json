@@ -405,6 +405,15 @@
     "created": false
   },
   {
+    "title": "Convert seconds to weeks",
+    "description": "Write a program to convert seconds to weeks\n\n1 week = 7 days = 168 hours = 10080 minutes = 604800 seconds\r\n\r\n```\r\nInput  : 3024000\r\nOutput : 5\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T13:06:03.951Z",
+    "createdIssueNumber": "247",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Convert weeks to days",
     "description": "Write a program to convert weeks to days\n\n1 week = 7 days\r\n\r\n```\r\nInput  : 5\r\nOutput : 35\r\n```\n",
     "contributor": "harshraj8843",
