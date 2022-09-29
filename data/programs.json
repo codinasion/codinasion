@@ -9,6 +9,15 @@
     "created": false
   },
   {
+    "title": "Check Prime Number",
+    "description": "Write a program to check prime number\n\nA prime number is a natural number greater than 1 that has no positive divisors other than 1 and itself.\r\n\r\n```\r\nInput  : 5\r\nOutput : Prime Number\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T06:57:17.847Z",
+    "createdIssueNumber": "166",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Convert Celsius to Fahrenheit",
     "description": "Write a program to convert celsius to fahrenheit\n\nfahrerheit = (celsius * 9/5) + 32\r\n\r\n```\r\nInput ( C )  : -40\r\nOutput ( F ) : -40\r\n```\n",
     "contributor": "harshraj8843",
