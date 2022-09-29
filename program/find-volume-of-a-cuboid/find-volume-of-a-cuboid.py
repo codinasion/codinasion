@@ -1,6 +1,12 @@
 def find_volume_of_a_cuboid(length, width, height):
     return length * width * height
 
+
 if __name__ == "__main__":
-    print(find_volume_of_a_cuboid(1, 2, 3))
-    print(find_volume_of_a_cuboid(1.1, 2.2, 3.3))
+    length = 2
+    width = 3
+    height = 4
+    print("Length : ", length)
+    print("Width  : ", width)
+    print("Height : ", height)
+    print("\nVolume : ", find_volume_of_a_cuboid(length, width, height))
