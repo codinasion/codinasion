@@ -387,6 +387,15 @@
     "created": false
   },
   {
+    "title": "Convert miles to inches",
+    "description": "Write a program to convert miles to inches\n\n1 mile = 63360 inches\r\n\r\n```\r\nInput  : 5\r\nOutput : 316800\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T13:19:55.114Z",
+    "createdIssueNumber": "264",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Convert miles to kilometers",
     "description": "Write a program to convert miles to kilometers\n\n1 mile = 1.609 kilometers\r\n\r\n```\r\nInput  : 5\r\nOutput : 8.04672\r\n```\n",
     "contributor": "harshraj8843",
