@@ -1035,6 +1035,15 @@
     "created": true
   },
   {
+    "title": "Merge two strings",
+    "description": "Write a program to merge two strings\n\n```\r\nInput  : ABC DEF\r\nOutput : ABCDEF\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T13:29:16.057Z",
+    "createdIssueNumber": "271",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Print ASCII value of a character",
     "description": "Write a program to print ascii value of a character\n\nASCII value is the numeric representation of a character. For example, the ASCII value of the character 'A' is 65. The ASCII value of the character 'a' is 97. The ASCII value of the character '0' is 48. The ASCII value of the character ' ' is 32.\r\n\r\n```\r\nInput  : A\r\nOutput : 65\r\n```\n",
     "contributor": "harshraj8843",
