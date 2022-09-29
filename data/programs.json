@@ -1,5 +1,14 @@
 [
   {
+    "title": "Calculate simple interest",
+    "description": "Write a program to calculate simple interest\n\nSimple interest = principal amount * rate of interest * time\r\n\r\n```\r\nPrincipal : 1000\r\nRate      : 10\r\nTime      : 5\r\n\r\nSimple interest : 500\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T13:24:31.700Z",
+    "createdIssueNumber": "267",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Check Alphabet",
     "description": "Write a program to check alphabet\n\nCheck that the given character is an alphabet or not (a-z, A-Z).\r\n\r\n```\r\nInput  : a\r\nOutput : Alphabet\r\n```\n",
     "contributor": "harshraj8843",
