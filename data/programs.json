@@ -504,6 +504,15 @@
     "created": true
   },
   {
+    "title": "Find volume of a sphere",
+    "description": "Write a program to find volume of a sphere\n\nVolume of sphere = 4/3 × π × `Radius`^3\r\n\r\n```\r\nRadius : 2\r\n\r\nVolume : 33.510321638291124\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T12:11:51.744Z",
+    "createdIssueNumber": "206",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Find volume of cube",
     "description": "Write a program to find volume of cube\n\nVolume of cube = (edge of cube)^3\r\n\r\n```\r\nInput  : 2\r\nOutput : 8\r\n```\n",
     "contributor": "harshraj8843",
