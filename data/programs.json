@@ -414,6 +414,15 @@
     "created": false
   },
   {
+    "title": "Convert weeks to minutes",
+    "description": "Write a program to convert weeks to minutes\n\n1 week = 7 days = 168 hours = 10080 minutes\r\n\r\n```\r\nInput  : 5\r\nOutput : 50400\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T13:04:06.696Z",
+    "createdIssueNumber": "244",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Divide two numbers",
     "description": "Write a program to divide two numbers\n\n```\r\nInput  : 2 4\r\nOutput : 0.5\r\n```\n",
     "contributor": "harshraj8843",
