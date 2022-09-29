@@ -403,5 +403,14 @@
     "createdIssueNumber": "184",
     "publishedAt": "",
     "created": false
+  },
+  {
+    "title": "Print reverse of a string by recursion",
+    "description": "Write a program to print reverse of a string by recursion\n\nReverse of a string is the string with characters in reverse order. For example, reverse of \"GeeksQuiz\" is \"ziuQskeeG\".\r\n\r\n```\r\nInput  : abcd\r\nOutput : dcba\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T08:08:41.523Z",
+    "createdIssueNumber": "185",
+    "publishedAt": "",
+    "created": false
   }
 ]
