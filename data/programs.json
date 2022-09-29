@@ -351,6 +351,15 @@
     "created": false
   },
   {
+    "title": "Convert seconds to days",
+    "description": "Write a program to convert seconds to days\n\n1 day = 24 hours = 1440 minutes = 86400 seconds\r\n\r\n```\r\nInput  : 432000\r\nOutput : 5\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T12:51:47.443Z",
+    "createdIssueNumber": "239",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Convert seconds to hours",
     "description": "Write a program to convert seconds to hours\n\n1 hour = 60 minutes = 3600 seconds\r\n\r\n```\r\nInput  : 18000\r\nOutput : 5\r\n```\n",
     "contributor": "harshraj8843",
