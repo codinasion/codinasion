@@ -1,3 +1,5 @@
+import core from "@actions/core";
+
 import fs from "fs";
 
 import fetch from "node-fetch";
@@ -105,6 +107,7 @@ Thanks for your contribution :hugs:
       .then((res) => res.json())
       .catch((e) => console.log("e => ", e));
     await console.log("closeIssueResponse => ", closeIssueResponse);
+    await core.setFailed("Title already exists");
     return;
   }
   // add new data to prev data
@@ -131,42 +134,5 @@ Thanks for your contribution :hugs:
       console.log("program data written to file");
     }
   );
-  // create comment on issue
-  const commentResponse = await fetch(
-    `https://api.github.com/repos/${OWNER}/${REPO}/issues/${ISSUE_NUMBER}/comments`,
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `token ${TOKEN}`,
-      },
-      body: JSON.stringify({
-        body: `Program added successfully :tada:
-
-Thanks for your contribution :hugs:
-`,
-      }),
-    }
-  )
-    .then((res) => res.json())
-    .catch((e) => console.log("e => ", e));
-  await console.log("commentResponse => ", commentResponse);
-  // close issue
-  const closeIssueResponse = await fetch(
-    `https://api.github.com/repos/${OWNER}/${REPO}/issues/${ISSUE_NUMBER}`,
-    {
-      method: "PATCH",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `token ${TOKEN}`,
-      },
-      body: JSON.stringify({
-        state: "closed",
-        labels: [`${ISSUE_LABEL}`, "submitted"],
-      }),
-    }
-  )
-    .then((res) => res.json())
-    .catch((e) => console.log("e => ", e));
-  await console.log("closeIssueResponse => ", closeIssueResponse);
+  await core.setOutput("submit-success", "true");
 }

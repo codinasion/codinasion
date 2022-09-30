@@ -1,6 +1,7 @@
 import core from "@actions/core";
 
 import submitProgram from "./scripts/submitProgram.js";
+import submitProgramCommentClose from "./scripts/submitProgramCommentClose.js";
 import autoCreateIssue from "./scripts/autoCreateIssue.js";
 import autoTrackIssue from "./scripts/autoTrackIssue.js";
 import autoAssignIssue from "./scripts/autoAssignIssue.js";
@@ -23,6 +24,9 @@ import autoAssignIssue from "./scripts/autoAssignIssue.js";
     const ISSUE_LABEL = await core.getInput("ISSUE_LABEL");
 
     const SUBMIT_PROGRAM = await core.getInput("SUBMIT_PROGRAM");
+    const SUBMIT_PROGRAM_COMMENT_CLOSE = await core.getInput(
+      "SUBMIT_PROGRAM_COMMENT_CLOSE"
+    );
     const AUTO_CREATE_ISSUE = await core.getInput("AUTO_CREATE_ISSUE");
     const AUTO_TRACK_ISSUE = await core.getInput("AUTO_TRACK_ISSUE");
     const AUTO_ASSIGN_ISSUE = await core.getInput("AUTO_ASSIGN_ISSUE");
@@ -36,6 +40,16 @@ import autoAssignIssue from "./scripts/autoAssignIssue.js";
         ISSUE_NUMBER,
         ISSUE_TITLE,
         ISSUE_BODY,
+        ISSUE_LABEL
+      );
+    }
+
+    if (SUBMIT_PROGRAM_COMMENT_CLOSE === "true") {
+      await submitProgramCommentClose(
+        OWNER,
+        REPO,
+        TOKEN,
+        ISSUE_NUMBER,
         ISSUE_LABEL
       );
     }
