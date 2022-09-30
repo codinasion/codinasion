@@ -13,6 +13,8 @@ function divideTwoNumbers(num1, num2) {
 // alert(divideTwoNumbers(n1, n2));
 
 // Console Tests
+const n1 = 15;
+const n2 = 5;
 console.log("Normal Case");
 console.log(`Input: n1 = ${n1} and n2 = ${n2}`);
 console.log(`Output: ${divideTwoNumbers(n1, n2)}`);
