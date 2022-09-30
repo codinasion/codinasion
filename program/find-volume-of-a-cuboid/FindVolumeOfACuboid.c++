@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-void main()
+int main()
 {
     int l, w, h, volume;
     cout << "Enter value of length : ";
@@ -12,4 +12,5 @@ void main()
     volume = l * w * h;
 
     cout << "volume of cuboid is : " << volume;
+    return 0;
 }
