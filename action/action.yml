@@ -41,6 +41,11 @@ inputs:
     description: "submit a program"
     required: true
     default: false
+  
+  SUBMIT_PROGRAM_COMMENT_CLOSE:
+    description: "comment & close for submit program issue"
+    required: true
+    default: false
 
   AUTO_CREATE_ISSUE:
     description: "create track issue"
