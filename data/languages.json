@@ -81,7 +81,7 @@
     },
     {
         "name": "Scala",
-        "fileExtension": "sc",
+        "fileExtension": "scala",
         "namingConvension": "camelCase"
     },
     {
