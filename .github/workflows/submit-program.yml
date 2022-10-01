@@ -35,6 +35,7 @@ jobs:
           echo "user         : ${{ github.event.issue.user.login }}"
 
       - name: Submit Program
+        id: submit-program
         uses: ./action/
         with:
           USERNAME: ${{ github.event.issue.user.login }}
@@ -45,9 +46,24 @@ jobs:
           SUBMIT_PROGRAM: true
           TOKEN: ${{ secrets.PAT }}
 
+      - name: Git Pull
+        if: steps.submit-program.outputs.submit-success == 'true'
+        run: |
+          git pull
+
       - name: Commit Program Data
+        if: steps.submit-program.outputs.submit-success == 'true'
         uses: EndBug/add-and-commit@v9
         with:
           add: "data/programs.json"
           fetch: true
           message: "add new program - ${{ github.event.issue.user.login }}"
+
+      - name: Comment & Close
+        if: steps.submit-program.outputs.submit-success == 'true'
+        uses: ./action/
+        with:
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          ISSUE_LABEL: ${{ github.event.label.name }}
+          SUBMIT_PROGRAM_COMMENT_CLOSE: true
+          TOKEN: ${{ secrets.PAT }}

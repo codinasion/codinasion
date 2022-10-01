@@ -4,4 +4,4 @@ function FindSquareOfANumber(num: number) {
 
 const number = 5;
 console.log("Input  :", number);
-console.log("Output :", findSquareNumber(number));
+console.log("Output :", FindSquareOfANumber(number));
