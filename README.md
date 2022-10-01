@@ -26,7 +26,7 @@ An open source codebase for sharing programming solutions.
 
 See [the contributing guide][9] for detailed instructions on how to get started with our project.
 
-We accept different types of contributions, including some that don't require you to write a single line of code.
+We accept [different types of contributions][12], including some that don't require you to write a single line of code.
 
 If you're looking for a way to contribute, you can scan through our [existing issues][10] for something to work on. When ready, check out [Getting Started with Contributing][9] for detailed instructions.
 
@@ -73,3 +73,4 @@ We use GitHub Discussions to talk about all sorts of topics related to documenta
 [9]: ./CONTRIBUTING.md "Contributing Guide"
 [10]: https://github.com/codinasion/program/issues "Issues"
 [11]: https://github.com/codinasion/program/discussions "Discussions"
+[12]: ./types-of-contributions.md "Types of Contributions"
