@@ -5,7 +5,7 @@ on:
 
 jobs:
   auto_track:
-    if: github.event.comment.body == '!assign'
+    if: startsWith(github.event.comment.body, '!assign')
 
     runs-on: ubuntu-latest
 
@@ -38,7 +38,6 @@ jobs:
         uses: ./action/
         with:
           USERNAME: ${{ github.event.comment.user.login }}
-          ISSUE_NUMBER: ${{ github.event.issue.number }}        
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
           AUTO_ASSIGN_ISSUE: true
           TOKEN: ${{ secrets.PAT }}
-
