@@ -1,6 +1,5 @@
-// Write a C# program to find volume of a cuboid
-
 using System;
+
 class VolumeaOfCuboid
 {
     static void Main()
@@ -8,12 +7,13 @@ class VolumeaOfCuboid
         double Length = Convert.ToDouble(Console.ReadLine());
         double Width = Convert.ToDouble(Console.ReadLine());
         double Height = Convert.ToDouble(Console.ReadLine());
+
         // Applying the formula
         double Volume = Height * Width * Length;
+
         Console.WriteLine("Length  : " + Length);
         Console.WriteLine("Width   : " + Width);
         Console.WriteLine("Height  : " + Height);
         Console.WriteLine("Volume  : " + Volume);
-        Console.ReadKey();
     }
 }
