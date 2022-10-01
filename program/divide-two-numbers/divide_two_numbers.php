@@ -7,7 +7,7 @@
 		return $num1 / $num2;
 	}
 	// Tests
-	print_r(divide_two_numbers(2, 4));        // 1
-	print_r(divide_two_numbers(15, "5"));     // 2.66
+	print_r(divide_two_numbers(2, 4));        // 0.5
+	print_r(divide_two_numbers(15, "5"));     // 3
 	print_r(divide_two_numbers("600", 0));    // null or empty
 	print_r(divide_two_numbers("Hello"));     // null or empty
