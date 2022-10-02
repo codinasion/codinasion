@@ -492,7 +492,7 @@
     "createdAt": "2022-09-29T12:27:33.532Z",
     "createdIssueNumber": "220",
     "publishedAt": "",
-    "created": false
+    "created": true
   },
   {
     "title": "Convert octal to hexadecimal",
@@ -1086,7 +1086,7 @@
     "createdAt": "2022-09-29T13:08:26.135Z",
     "createdIssueNumber": "250",
     "publishedAt": "",
-    "created": false
+    "created": true
   },
   {
     "title": "Print character of an ASCII value",
