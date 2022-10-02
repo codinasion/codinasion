@@ -1,6 +1,8 @@
 function areaOfRightAngleTriangle(b: number, h: number) {
     let area = 1/2*b*h;
-    return area;
+    return area
 }
 
 areaOfRightAngleTriangle(8, 15);
+
+console.log("area", areaOfRightAngleTriangle(8, 15));
