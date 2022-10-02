@@ -6,12 +6,11 @@ public class ConvertOctalToDecimal {
 		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
-		int b = sc.nextInt();
-		int f = getAnybasetoDecimal(n , b);
+		int f = convertOctaltoDecimal(n , 8);
 		System.out.println(f);
 
 	}
-	public static int getAnybasetoDecimal(int n , int b ) {
+	public static int convertOctaltoDecimal(int n , int b ) {
 		int rv = 0;
 		int p = 1;
 		while(n>0) {
