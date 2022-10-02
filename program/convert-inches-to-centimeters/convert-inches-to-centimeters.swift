@@ -1,7 +1,7 @@
 import Foundation
 
-let inches = 5
+let inch = 5
 
-let centimeters = Double(inches) * 2.54
+let centimeters = Double(inch) * 2.54
 
 print(centimeters)
