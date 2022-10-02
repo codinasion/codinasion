@@ -1,4 +1,3 @@
-
 def octalToDecimal(n):
  
     num = n
