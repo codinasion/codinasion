@@ -1,4 +1,4 @@
-var cubeSide : Int = 4
+var cubeSide : Int = 2
 
 // Finding the volume of the cube 
 var cubeVolume = cubeSide * cubeSide * cubeSide
