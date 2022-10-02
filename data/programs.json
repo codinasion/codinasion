@@ -303,7 +303,7 @@
     "createdAt": "2022-09-29T12:42:52.512Z",
     "createdIssueNumber": "226",
     "publishedAt": "",
-    "created": false
+    "created": true
   },
   {
     "title": "Convert hexadecimal to decimal",
