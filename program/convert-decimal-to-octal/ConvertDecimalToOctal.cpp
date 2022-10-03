@@ -3,7 +3,7 @@
 #include <algorithm>
 using namespace std;
 
-string decimaltooctal(int n){
+string decimal_to_octal(int n){
     string ans="";
     for(int i=n;i>0;i=i/8){
         int mod=i%8;
