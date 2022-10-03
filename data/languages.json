@@ -30,6 +30,11 @@
         "namingConvension": "snake_case"
     },
     {
+        "name": "Haskell",
+        "fileExtension": "hs",
+        "namingConvension": "snake_case"
+    },
+    {
         "name": "Java",
         "fileExtension": "java",
         "namingConvension": "PascalCase"
