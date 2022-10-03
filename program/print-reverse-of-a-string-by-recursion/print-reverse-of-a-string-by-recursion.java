@@ -14,16 +14,16 @@ class StringReverse {
     }
 
     public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
+	Scanner sc = new Scanner(System.in);
         System.out.print("Enter a string: ");
         String str = sc.nextLine();
         System.out.println(str);
         System.out.print("Reverse of the string: ");
         StringReverse sr = new StringReverse();
         sr.reverse(str);
-	}
+    }
 }
 
 Output :- 
-Enter a string: program
-Reverse of the string: margorp
+Enter a string: GeeksQuiz
+Reverse of the string: ziuQskeeG
