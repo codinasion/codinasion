@@ -3,7 +3,7 @@
 #include <algorithm>
 using namespace std;
 
-string decimal_to_octal(int n){
+string decimaltooctal(int n){
     string ans="";
     for(int i=n;i>0;i=i/8){
         int mod=i%8;
@@ -18,5 +18,5 @@ int main(){
     int n;
     cout<<"Enter a number"<<'\n';
     cin>>n;
-    cout<<decimal_to_octal(n)<<'\n';
+    cout<<decimaltooctal(n)<<'\n';
 }
