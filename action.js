@@ -5,6 +5,7 @@ import submitProgramCommentClose from "./scripts/submitProgramCommentClose.js";
 import autoCreateIssue from "./scripts/autoCreateIssue.js";
 import autoTrackIssue from "./scripts/autoTrackIssue.js";
 import autoAssignIssue from "./scripts/autoAssignIssue.js";
+import autoAddLabel from "./scripts/autoAddLabel.js";
 
 // main action function
 (async () => {
@@ -30,6 +31,8 @@ import autoAssignIssue from "./scripts/autoAssignIssue.js";
     const AUTO_CREATE_ISSUE = await core.getInput("AUTO_CREATE_ISSUE");
     const AUTO_TRACK_ISSUE = await core.getInput("AUTO_TRACK_ISSUE");
     const AUTO_ASSIGN_ISSUE = await core.getInput("AUTO_ASSIGN_ISSUE");
+
+    const AUTO_ADD_LABEL = await core.getInput("AUTO_ADD_LABEL");
 
     if (SUBMIT_PROGRAM === "true") {
       await submitProgram(
@@ -71,6 +74,10 @@ import autoAssignIssue from "./scripts/autoAssignIssue.js";
 
     if (AUTO_ASSIGN_ISSUE === "true") {
       await autoAssignIssue(OWNER, REPO, TOKEN, ISSUE_NUMBER, USERNAME);
+    }
+
+    if (AUTO_ADD_LABEL === "true") {
+      await autoAddLabel(OWNER, REPO, TOKEN, ISSUE_NUMBER);
     }
 
     // end of main function
