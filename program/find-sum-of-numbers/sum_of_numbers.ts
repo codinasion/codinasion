@@ -10,4 +10,4 @@ function sumOfNumbers(num: number) {
     return sumOfNum;
 }
 
-console.log("Sum of Numbers", sumOfNumbers(999));
+console.log("Sum of Numbers", sumOfNumbers(12345));
