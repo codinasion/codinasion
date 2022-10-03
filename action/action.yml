@@ -61,6 +61,11 @@ inputs:
     description: "auto assign issue"
     required: true
     default: false
+  
+  AUTO_ADD_LABEL:
+    description: "auto add label"
+    required: true
+    default: false
 
 runs:
   using: "node16"
