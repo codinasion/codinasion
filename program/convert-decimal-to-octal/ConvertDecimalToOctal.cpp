@@ -18,5 +18,5 @@ int main(){
     int n;
     cout<<"Enter a number"<<'\n';
     cin>>n;
-    cout<<decimaltooctal(n)<<'\n';
+    cout<<decimal_to_octal(n)<<'\n';
 }
