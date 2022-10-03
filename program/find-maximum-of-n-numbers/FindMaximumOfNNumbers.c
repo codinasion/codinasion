@@ -8,7 +8,7 @@
  * Return: max
  */
 
-int find_max(int n[], int len)
+int findMaximumOfNNumbers(int n[], int len)
 {
     int max = 0, i = 0;
 
