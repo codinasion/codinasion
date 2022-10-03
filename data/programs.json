@@ -158,8 +158,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T12:32:58.049Z",
     "createdIssueNumber": "223",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-02T21:25:07.670Z",
+    "created": true
   },
   {
     "title": "Convert binary to octal",
@@ -257,8 +257,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T12:23:20.593Z",
     "createdIssueNumber": "217",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-02T23:31:41.425Z",
+    "created": true
   },
   {
     "title": "Convert Fahrenheit to Celsius",
@@ -473,8 +473,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T13:04:41.859Z",
     "createdIssueNumber": "245",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-03T02:18:42.908Z",
+    "created": true
   },
   {
     "title": "Convert octal to binary",
@@ -923,8 +923,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T11:37:50.259Z",
     "createdIssueNumber": "197",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-02T22:27:24.615Z",
+    "created": true
   },
   {
     "title": "Find sum of numbers by recursion",
@@ -1040,8 +1040,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T12:11:51.744Z",
     "createdIssueNumber": "206",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-02T19:23:28.460Z",
+    "created": true
   },
   {
     "title": "Find volume of cube",
@@ -1175,8 +1175,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T08:08:17.306Z",
     "createdIssueNumber": "184",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-02T20:29:20.646Z",
+    "created": true
   },
   {
     "title": "Print reverse of a string by recursion",
