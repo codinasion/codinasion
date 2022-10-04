@@ -6,7 +6,7 @@ on:
 
 jobs:
   auto_add_label:
-    if: github.event.pull_request.merged == 'true' && github.event.pull_request.head.repo.full_name == github.repository
+    if: github.event.pull_request.merged == true
 
     runs-on: ubuntu-latest
 
