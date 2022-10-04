@@ -5,8 +5,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T13:24:58.172Z",
     "createdIssueNumber": "268",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-03T23:28:20.512Z",
+    "created": true
   },
   {
     "title": "Calculate simple interest",
@@ -32,8 +32,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T07:04:27.863Z",
     "createdIssueNumber": "167",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-03T12:58:44.434Z",
+    "created": true
   },
   {
     "title": "Check Consonant",
@@ -41,8 +41,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T07:53:29.025Z",
     "createdIssueNumber": "172",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-03T05:48:33.715Z",
+    "created": true
   },
   {
     "title": "Check Digit",
@@ -59,8 +59,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T06:41:14.020Z",
     "createdIssueNumber": "147",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-04T02:07:14.987Z",
+    "created": true
   },
   {
     "title": "Check Leap Year",
@@ -104,8 +104,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T07:01:22.249Z",
     "createdIssueNumber": "165",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-03T14:05:36.568Z",
+    "created": true
   },
   {
     "title": "Check Prime Number",
@@ -131,8 +131,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T07:59:25.711Z",
     "createdIssueNumber": "176",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-03T08:37:40.538Z",
+    "created": true
   },
   {
     "title": "Check Vowel",
@@ -158,8 +158,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T12:32:58.049Z",
     "createdIssueNumber": "223",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-02T21:25:07.670Z",
+    "created": true
   },
   {
     "title": "Convert binary to octal",
@@ -257,8 +257,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T12:23:20.593Z",
     "createdIssueNumber": "217",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-02T23:31:41.425Z",
+    "created": true
   },
   {
     "title": "Convert Fahrenheit to Celsius",
@@ -347,8 +347,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T12:47:26.978Z",
     "createdIssueNumber": "232",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-03T09:34:29.267Z",
+    "created": true
   },
   {
     "title": "Convert hours to weeks",
@@ -383,8 +383,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T13:20:30.861Z",
     "createdIssueNumber": "265",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-03T10:32:04.787Z",
+    "created": true
   },
   {
     "title": "Convert kilometers to miles",
@@ -428,8 +428,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T13:15:52.112Z",
     "createdIssueNumber": "258",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-03T07:34:39.558Z",
+    "created": true
   },
   {
     "title": "Convert miles to meters",
@@ -473,8 +473,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T13:04:41.859Z",
     "createdIssueNumber": "245",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-03T02:18:42.908Z",
+    "created": true
   },
   {
     "title": "Convert octal to binary",
@@ -581,8 +581,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T13:04:06.696Z",
     "createdIssueNumber": "244",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-03T06:45:46.716Z",
+    "created": true
   },
   {
     "title": "Convert weeks to seconds",
@@ -752,8 +752,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T08:14:50.215Z",
     "createdIssueNumber": "187",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-03T11:25:11.588Z",
+    "created": true
   },
   {
     "title": "Find LCM of two numbers by recursion",
@@ -923,8 +923,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T11:37:50.259Z",
     "createdIssueNumber": "197",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-02T22:27:24.615Z",
+    "created": true
   },
   {
     "title": "Find sum of numbers by recursion",
@@ -1040,8 +1040,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T12:11:51.744Z",
     "createdIssueNumber": "206",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-02T19:23:28.460Z",
+    "created": true
   },
   {
     "title": "Find volume of cube",
@@ -1067,8 +1067,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T13:31:56.609Z",
     "createdIssueNumber": "274",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-03T15:33:26.625Z",
+    "created": true
   },
   {
     "title": "Print ASCII value of a character",
@@ -1094,8 +1094,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T13:07:55.843Z",
     "createdIssueNumber": "249",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-03T04:05:10.085Z",
+    "created": true
   },
   {
     "title": "Print Fibonacci series by recursion",
@@ -1148,8 +1148,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T13:26:34.277Z",
     "createdIssueNumber": "270",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-03T16:46:24.447Z",
+    "created": true
   },
   {
     "title": "Print reverse of a number",
@@ -1175,8 +1175,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T08:08:17.306Z",
     "createdIssueNumber": "184",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-02T20:29:20.646Z",
+    "created": true
   },
   {
     "title": "Print reverse of a string by recursion",
