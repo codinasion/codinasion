@@ -1,7 +1,7 @@
 # Add label 'hacktoberfest-accepted' to PRs that are merged
 name: Auto Add Label
 on:
-  pull_request:
+  pull_request_target:
     types: [closed]
 
 jobs:
