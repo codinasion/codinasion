@@ -311,8 +311,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T12:30:59.655Z",
     "createdIssueNumber": "221",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-04T13:59:04.427Z",
+    "created": true
   },
   {
     "title": "Convert hexadecimal to octal",
@@ -1193,8 +1193,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T13:09:04.673Z",
     "createdIssueNumber": "251",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-04T12:52:26.101Z",
+    "created": true
   },
   {
     "title": "Swap two numbers",
