@@ -5,8 +5,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T13:24:58.172Z",
     "createdIssueNumber": "268",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-03T23:28:20.512Z",
+    "created": true
   },
   {
     "title": "Calculate simple interest",
@@ -23,8 +23,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T07:54:40.784Z",
     "createdIssueNumber": "173",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-04T08:32:09.812Z",
+    "created": true
   },
   {
     "title": "Check Armstrong Number",
@@ -59,8 +59,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T06:41:14.020Z",
     "createdIssueNumber": "147",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-04T02:07:14.987Z",
+    "created": true
   },
   {
     "title": "Check Leap Year",
@@ -95,8 +95,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T07:50:20.489Z",
     "createdIssueNumber": "169",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-04T09:26:45.878Z",
+    "created": true
   },
   {
     "title": "Check Pangram String",
@@ -212,8 +212,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T12:50:00.377Z",
     "createdIssueNumber": "236",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-04T04:10:58.951Z",
+    "created": true
   },
   {
     "title": "Convert days to seconds",
@@ -320,8 +320,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T12:43:34.797Z",
     "createdIssueNumber": "227",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-04T05:45:05.014Z",
+    "created": true
   },
   {
     "title": "Convert hours to days",
@@ -356,8 +356,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T12:58:26.022Z",
     "createdIssueNumber": "243",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-04T11:20:05.512Z",
+    "created": true
   },
   {
     "title": "Convert inches to centimeters",
@@ -572,8 +572,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T12:57:54.488Z",
     "createdIssueNumber": "242",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-04T06:35:48.498Z",
+    "created": true
   },
   {
     "title": "Convert weeks to minutes",
@@ -896,8 +896,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T12:09:41.024Z",
     "createdIssueNumber": "203",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-04T10:25:55.301Z",
+    "created": true
   },
   {
     "title": "Find sum of n natural numbers by recursion",
@@ -1103,8 +1103,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T06:55:20.907Z",
     "createdIssueNumber": "163",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-04T07:30:42.299Z",
+    "created": true
   },
   {
     "title": "Print Fibonacci series without recursion",
