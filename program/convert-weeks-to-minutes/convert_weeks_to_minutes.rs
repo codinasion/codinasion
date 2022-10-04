@@ -4,5 +4,5 @@ fn convert_weeks_to_minutes(weeks: i32) -> i32 {
 
 fn main() {
    let minutes =  convert_weeks_to_minutes(5);
-   println!("{}", t);
+   println!("{}", minutes);
 }
