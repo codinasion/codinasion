@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class SumOfCube {
+public class FindSumOfCubesOfNumbers {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -14,6 +14,7 @@ public class SumOfCube {
             sum += Math.pow(arr[i], 3);
         }
         System.out.println(sum);
+        sc.close();
     }
 
 }

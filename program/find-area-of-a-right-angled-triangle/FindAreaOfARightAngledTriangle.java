@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class AreaOfRAT {
+public class FindAreaOfARightAngledTriangle {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int b, h;
