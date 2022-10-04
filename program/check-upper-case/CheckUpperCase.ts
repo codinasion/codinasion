@@ -1,5 +1,5 @@
 
-function checkUpperCaseInJS(character: string) {
+function checkUpperCase(character: string) {
     /**
      * Better implenetation than converting the character toUpperCase and checking. 
      */
