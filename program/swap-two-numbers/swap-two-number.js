@@ -14,4 +14,4 @@ const number_2 = 20;
 // before the opearation
 console.log(`before swaping numbers: a = ${number_1}, b = ${number_2}`);
 // after the opearation
-console.log(`after swaping numbers: a = ${swapTowNumbers(number_1, number_2)[0]}, b = ${swapTowNumbers(number_1, number_2)[1]}`)
+console.log(`after swaping numbers: a = ${swapTowNumbers(number_1, number_2)[0]}, b = ${swapTowNumbers(number_1, number_2)[1]}`);
