@@ -21,5 +21,5 @@ int main(){
 	int n;
 	cin>>n;
 	
-	cout<<((check_prime(n))? "YES" : "NO")<<endl;
+	cout<<((check_prime(n))? "Prime Number" : "Not Prime Number")<<endl;
 }
