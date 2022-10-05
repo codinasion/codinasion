@@ -12,6 +12,6 @@ func volume (radius float64) float64 {
 func main() {
   var radius float64
   fmt.Println("Enter value of radius:")
-  fmt.Scanf(&radius)
+  fmt.Scan(&radius)
   fmt.Println("Volume of Sphere is:",volume(radius))
 }
