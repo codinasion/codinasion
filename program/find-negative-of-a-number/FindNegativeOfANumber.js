@@ -1,4 +1,4 @@
 function negativeNum(num) {
-    return -Math.abs(num)
-    
+    let result = -Math.abs(num)
+    console.log(result)
 }
