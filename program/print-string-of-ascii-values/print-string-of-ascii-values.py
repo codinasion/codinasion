@@ -1,17 +1,8 @@
-l=[]
-x='x'
-
-print('enter one ASCII value or type x to get output')
-while True:
-    y=eval(input('enter the ASCII Value:'))
-    if y=='x':
-        break
-    else:
-        l.append(y)
-string=""
+x=input('enter ascii value:')
+l=x.split()
+string=''
 for i in l:
-    string=string+chr(i)
-    
-print(string)
+    string=string+chr(int(i))
 
-        
+print('Output', string)
+
