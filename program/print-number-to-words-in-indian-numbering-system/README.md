@@ -7,7 +7,7 @@ trackId: 1312
 
 ```
 Input  : 123456789
-Output : One Hundred Twenty Three Crore Forty Five Lakh Sixty Seven Thousand Eight Hundred Ninety
+Output : Twelve Crore Thirty Four Lakh Fifty Six Thousand Seven Hundred Eighty Nine
 ```
 
 ---
