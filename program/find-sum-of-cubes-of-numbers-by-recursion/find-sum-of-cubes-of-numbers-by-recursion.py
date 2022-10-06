@@ -1,3 +1,4 @@
+from decimal import Decimal
 
 
 def culc_sum_of_cubes_of_numbers(nums, res):
@@ -15,7 +16,7 @@ def convert_input_to_numbers_list(user_input):
         # separate the user input by empty space
         nums = user_input.split()
         
-        nums = [int(num) for num in nums]
+        nums = [Decimal(num) for num in nums]
         
     except ValueError:
         print(f"Please enter valid input.")
