@@ -86,8 +86,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T07:47:13.719Z",
     "createdIssueNumber": "168",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-05T05:50:47.599Z",
+    "created": true
   },
   {
     "title": "Check Palindrome String",
@@ -113,8 +113,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T06:57:17.847Z",
     "createdIssueNumber": "166",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-04T20:28:20.408Z",
+    "created": true
   },
   {
     "title": "Check Special Character",
@@ -140,8 +140,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T07:52:20.496Z",
     "createdIssueNumber": "171",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-04T17:40:28.178Z",
+    "created": true
   },
   {
     "title": "Convert binary to decimal",
@@ -149,8 +149,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T12:25:39.755Z",
     "createdIssueNumber": "219",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-05T04:01:13.806Z",
+    "created": true
   },
   {
     "title": "Convert binary to hexadecimal",
@@ -221,8 +221,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T12:51:06.085Z",
     "createdIssueNumber": "238",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-04T23:27:18.798Z",
+    "created": true
   },
   {
     "title": "Convert days to weeks",
@@ -311,8 +311,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T12:30:59.655Z",
     "createdIssueNumber": "221",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-04T13:59:04.427Z",
+    "created": true
   },
   {
     "title": "Convert hexadecimal to octal",
@@ -356,8 +356,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T12:58:26.022Z",
     "createdIssueNumber": "243",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-04T11:20:05.512Z",
+    "created": true
   },
   {
     "title": "Convert inches to centimeters",
@@ -464,8 +464,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T12:44:45.276Z",
     "createdIssueNumber": "228",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-04T22:24:13.976Z",
+    "created": true
   },
   {
     "title": "Convert minutes to weeks",
@@ -680,8 +680,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T08:21:00.873Z",
     "createdIssueNumber": "193",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-04T21:21:26.773Z",
+    "created": true
   },
   {
     "title": "Find average of numbers by recursion",
@@ -797,8 +797,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T06:47:49.757Z",
     "createdIssueNumber": "154",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-04T19:24:06.206Z",
+    "created": true
   },
   {
     "title": "Find perimeter of a rectangle",
@@ -806,8 +806,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T06:53:32.599Z",
     "createdIssueNumber": "161",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-04T16:36:28.186Z",
+    "created": true
   },
   {
     "title": "Find perimeter of a square",
@@ -869,8 +869,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T12:07:01.313Z",
     "createdIssueNumber": "202",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-04T18:35:44.602Z",
+    "created": true
   },
   {
     "title": "Find sum of digits of a number",
@@ -896,8 +896,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T12:09:41.024Z",
     "createdIssueNumber": "203",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-04T10:25:55.301Z",
+    "created": true
   },
   {
     "title": "Find sum of n natural numbers by recursion",
@@ -968,8 +968,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T12:18:29.036Z",
     "createdIssueNumber": "215",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-05T02:06:39.508Z",
+    "created": true
   },
   {
     "title": "Find surface area of a cuboid",
@@ -1112,8 +1112,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T06:56:18.727Z",
     "createdIssueNumber": "164",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-06T10:29:41.273Z",
+    "created": true
   },
   {
     "title": "Print Hello World",
@@ -1130,8 +1130,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T06:47:23.267Z",
     "createdIssueNumber": "153",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-04T14:42:32.074Z",
+    "created": true
   },
   {
     "title": "Print number to words",
@@ -1193,8 +1193,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T13:09:04.673Z",
     "createdIssueNumber": "251",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-04T12:52:26.101Z",
+    "created": true
   },
   {
     "title": "Swap two numbers",
@@ -1202,8 +1202,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T13:31:01.383Z",
     "createdIssueNumber": "272",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-04T15:27:37.379Z",
+    "created": true
   },
   {
     "title": "Swap two numbers without using third variable",
