@@ -1,4 +1,4 @@
-from decimal import Decimal
+from decimal import Decimal, DecimalException
 
 
 def culc_sum_of_cubes_of_numbers(nums, res):
@@ -18,7 +18,7 @@ def convert_input_to_numbers_list(user_input):
         
         nums = [Decimal(num) for num in nums]
         
-    except ValueError:
+    except (ValueError, DecimalException):
         print(f"Please enter valid input.")
         exit()
         
