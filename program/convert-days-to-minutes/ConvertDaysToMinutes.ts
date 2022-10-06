@@ -1,4 +1,4 @@
-function daysToMinutes(days) {
+function daysToMinutes(days:any) {
   // 👇️        hour  min
   return days * 24 * 60;
 }
