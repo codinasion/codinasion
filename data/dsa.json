@@ -1,0 +1,11 @@
+[
+  {
+    "title": "Linear Search",
+    "description": "Write a program for linear search\n\nLinear search is a very simple search algorithm. In this type of search, a sequential search is made over all items one by one. Every item is checked and if a match is found then that particular item is returned, otherwise the search continues till the end of the data collection.\r\n\r\n```\r\nInput  : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\r\nTarget : 5\r\n\r\nOutput : 4\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T20:09:37.018Z",
+    "createdIssueNumber": "2198",
+    "publishedAt": "",
+    "created": false
+  }
+]
