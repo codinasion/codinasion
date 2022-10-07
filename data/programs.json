@@ -1,5 +1,14 @@
 [
   {
+    "title": "Add two matrices",
+    "description": "Write a program to add two matrices\n\nMatrix addition is the process of adding two matrices by adding the corresponding elements of the two matrices. Two matrices must have an equal number of rows and columns to be added.\n\n```\nInput  :\n1 2 3\n4 5 6\n7 8 9\n\n1 2 3\n4 5 6\n7 8 9\n\nOutput :\n2 4 6\n8 10 12\n14 16 18\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Calculate compound interest",
     "description": "Write a program to calculate compound interest\n\nCompound interest = principal amount * (1 + rate of interest) ^ time\r\n\r\n```\r\nPrincipal : 1000\r\nRate      : 10\r\nTime      : 5\r\n\r\nCompound interest : 1610.51\r\n```\n",
     "contributor": "harshraj8843",
@@ -14,6 +23,24 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T13:24:31.700Z",
     "createdIssueNumber": "267",
+    "publishedAt": "",
+    "created": false
+  },
+  {
+    "title": "Calculate the combination of n objects taken r at a time",
+    "description": "Write a program to calculate the combination of n objects taken r at a time\n\nCombination is a selection of objects from a group such that (unlike permutations) the order of selection does not matter. The number of combinations on n objects taken r at a time is given by the formula n!/(r!(n-r)!) = n(n-1)(n-2)...(n-r+1)/r!\n\n```\nInput  : 5, 2\nOutput : 10\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "",
+    "created": false
+  },
+  {
+    "title": "Calculate the permutation of n objects taken r at a time",
+    "description": "Write a program to calculate the permutation of n objects taken r at a time\n\nPermutation is an arrangement of objects in a particular order. The number of permutations on n objects taken r at a time is given by the formula n!/(n-r)!\n\n```\nInput  : 5, 2\nOutput : 20\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
     "publishedAt": "",
     "created": false
   },
@@ -61,6 +88,15 @@
     "createdIssueNumber": "147",
     "publishedAt": "2022-10-04T02:07:14.987Z",
     "created": true
+  },
+  {
+    "title": "Check integer or float",
+    "description": "Write a program to check integer or float\n\n```\nInput  : 1\nOutput : Integer\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "",
+    "created": false
   },
   {
     "title": "Check Leap Year",
@@ -135,6 +171,15 @@
     "created": true
   },
   {
+    "title": "Check valid Date",
+    "description": "Write a program to check valid date\n\nCheck if a given date is valid or not.\n\n```\nInput  : 2019-02-29\nOutput : False\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Check Vowel",
     "description": "Write a program to check vowel\n\nVowel check is a simple program to check whether a character is a vowel or not.\r\n\r\n```\r\nInput  : a\r\nOutput : Vowel\r\n```\n",
     "contributor": "harshraj8843",
@@ -142,6 +187,24 @@
     "createdIssueNumber": "171",
     "publishedAt": "2022-10-04T17:40:28.178Z",
     "created": true
+  },
+  {
+    "title": "Convert a string to an integer",
+    "description": "Write a program to convert a string to an integer\n\n```\nInput  : \"123\"\nOutput : 123\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "",
+    "created": false
+  },
+  {
+    "title": "Convert a string to an integer (without using built-in functions)",
+    "description": "Write a program to convert a string to an integer (without using built-in functions)\n\n```\nInput  : \"123\"\nOutput : 123\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "",
+    "created": false
   },
   {
     "title": "Convert binary to decimal",
@@ -558,6 +621,159 @@
     "created": false
   },
   {
+    "title": "Convert string to alternatingcase",
+    "description": "Write a program to convert string to alternatingcase\n\nAlternatingcase is a style of writing in which each letter is converted to its opposite case.\n\n```\nInput  : \"hello world\"\nOutput : \"hElLo WoRlD\"\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "",
+    "created": false
+  },
+  {
+    "title": "Convert string to camelcase",
+    "description": "Write a program to convert string to camelcase\n\nCamelcase is a style of writing in which the first letter of each word is capitalized except the first word.\n\n```\nInput  : \"hello world\"\nOutput : \"helloWorld\"\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "",
+    "created": false
+  },
+  {
+    "title": "Convert string to consonantcase",
+    "description": "Write a program to convert string to consonantcase\n\nConsonantcase is a style of writing in which all consonants are converted to uppercase and all vowels are converted to lowercase.\n\n```\nInput  : \"hello world\"\nOutput : \"HELlo WORLD\"\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "",
+    "created": false
+  },
+  {
+    "title": "Convert string to constantcase",
+    "description": "Write a program to convert string to constantcase\n\nConstantcase is a style of writing in which all letters are uppercase and spaces are replaced with underscores.\n\n```\nInput  : \"hello world\"\nOutput : \"HELLO_WORLD\"\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "",
+    "created": false
+  },
+  {
+    "title": "Convert string to dotcase",
+    "description": "Write a program to convert string to dotcase\n\nDotcase is a style of writing in which all letters are lowercase and spaces are replaced with periods.\n\n```\nInput  : \"hello world\"\nOutput : \"hello.world\"\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "",
+    "created": false
+  },
+  {
+    "title": "Convert string to kebabcase",
+    "description": "Write a program to convert string to kebabcase\n\nKebabcase is a style of writing in which all letters are lowercase and spaces are replaced with hyphens.\n\n```\nInput  : \"hello world\"\nOutput : \"hello-world\"\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "",
+    "created": false
+  },
+  {
+    "title": "Convert string to lowercase",
+    "description": "Write a program to convert string to lowercase\n\n```\nInput  : \"Hello World\"\nOutput : \"hello world\"\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "",
+    "created": false
+  },
+  {
+    "title": "Convert string to pascalcase",
+    "description": "Write a program to convert string to pascalcase\n\nPascalcase is a style of writing in which the first letter of each word is capitalized.\n\n```\nInput  : \"hello world\"\nOutput : \"HelloWorld\"\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "",
+    "created": false
+  },
+  {
+    "title": "Convert string to pathcase",
+    "description": "Write a program to convert string to pathcase\n\nPathcase is a style of writing in which all letters are lowercase and spaces are replaced with forward slashes.\n\n```\nInput  : \"hello world\"\nOutput : \"hello/world\"\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "",
+    "created": false
+  },
+  {
+    "title": "Convert string to reversecase",
+    "description": "Write a program to convert string to reversecase\n\nReversecase is a style of writing in which all lowercase letters are converted to uppercase and all uppercase letters are converted to lowercase.\n\n```\nInput  : \"hello world\"\nOutput : \"HELLO WORLD\"\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "",
+    "created": false
+  },
+  {
+    "title": "Convert string to sentencecase",
+    "description": "Write a program to convert string to sentencecase\n\nSentencecase is a style of writing in which the first letter of the first word is capitalized.\n\n```\nInput  : \"hello world\"\nOutput : \"Hello world\"\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "",
+    "created": false
+  },
+  {
+    "title": "Convert string to snakecase",
+    "description": "Write a program to convert string to snakecase\n\nSnakecase is a style of writing in which all letters are lowercase and spaces are replaced with underscores.\n\n```\nInput  : \"hello world\"\nOutput : \"hello_world\"\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "",
+    "created": false
+  },
+  {
+    "title": "Convert string to titlecase",
+    "description": "Write a program to convert string to titlecase\n\nTitlecase is a style of writing in which the first letter of each word is capitalized.\n\n```\nInput  : \"hello world\"\nOutput : \"Hello World\"\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "",
+    "created": false
+  },
+  {
+    "title": "Convert string to uppercase",
+    "description": "Write a program to convert string to uppercase\n\n```\nInput  : \"Hello World\"\nOutput : \"HELLO WORLD\"\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "",
+    "created": false
+  },
+  {
+    "title": "Convert string to vowelcase",
+    "description": "Write a program to convert string to vowelcase\n\nVowelcase is a style of writing in which all vowels are converted to uppercase and all consonants are converted to lowercase.\n\n```\nInput  : \"hello world\"\nOutput : \"heLLO worLd\"\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "",
+    "created": false
+  },
+  {
+    "title": "Convert time from 12-hour to 24-hour format",
+    "description": "Write a program to convert time from 12-hour to 24-hour format\n\n```\nInput  : 12:05:45PM\nOutput : 12:05:45\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "",
+    "created": false
+  },
+  {
+    "title": "Convert time from 24-hour to 12-hour format",
+    "description": "Write a program to convert time from 24-hour to 12-hour format\n\n```\nInput  : 12:05:45\nOutput : 12:05:45PM\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Convert weeks to days",
     "description": "Write a program to convert weeks to days\n\n1 week = 7 days\r\n\r\n```\r\nInput  : 5\r\nOutput : 35\r\n```\n",
     "contributor": "harshraj8843",
@@ -590,6 +806,15 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T13:05:15.975Z",
     "createdIssueNumber": "246",
+    "publishedAt": "",
+    "created": false
+  },
+  {
+    "title": "Cylindrically rotate a matrix by 90 degrees",
+    "description": "Write a program to cylindrically rotate a matrix by 90 degrees\n\n```\nInput  :\n1 2 3\n4 5 6\n7 8 9\n\nOutput :\n7 4 1\n8 5 2\n9 6 3\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
     "publishedAt": "",
     "created": false
   },
@@ -702,6 +927,15 @@
     "created": true
   },
   {
+    "title": "Find cube root of a number",
+    "description": "Write a program to find cube root of a number\n\n```\nInput  : 27\nOutput : 3\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Find Digital Root of a number",
     "description": "Write a program to find digital root of a number\n\nDigital root of a number is the recursive sum of its digits until we get a single digit number.\r\n\r\n```\r\nInput  : 1234\r\nOutput : 1\r\n```\n",
     "contributor": "harshraj8843",
@@ -743,6 +977,24 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T08:15:35.450Z",
     "createdIssueNumber": "188",
+    "publishedAt": "",
+    "created": false
+  },
+  {
+    "title": "Find largest and smallest numbers in an array",
+    "description": "Write a program to find largest and smallest numbers in an array\n\n```\nInput  : [1, 2, 3, 4, 5]\nOutput : 5, 1\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "",
+    "created": false
+  },
+  {
+    "title": "Find largest number in an array",
+    "description": "Write a program to find largest number in an array\n\n```\nInput  : [1, 2, 3, 4, 5]\nOutput : 5\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
     "publishedAt": "",
     "created": false
   },
@@ -837,6 +1089,33 @@
     "created": true
   },
   {
+    "title": "Find second largest number in an array",
+    "description": "Write a program to find second largest number in an array\n\n```\nInput  : [1, 2, 3, 4, 5]\nOutput : 4\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "",
+    "created": false
+  },
+  {
+    "title": "Find second smallest number in an array",
+    "description": "Write a program to find second smallest number in an array\n\n```\nInput  : [1, 2, 3, 4, 5]\nOutput : 2\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "",
+    "created": false
+  },
+  {
+    "title": "Find smallest number in an array",
+    "description": "Write a program to find smallest number in an array\n\n```\nInput  : [1, 2, 3, 4, 5]\nOutput : 1\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Find square of a number",
     "description": "Write a program to find square of a number\n\n```\r\nInput  : 5\r\nOutput : 25\r\n```\n",
     "contributor": "harshraj8843",
@@ -851,6 +1130,15 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T08:20:10.549Z",
     "createdIssueNumber": "192",
+    "publishedAt": "",
+    "created": false
+  },
+  {
+    "title": "Find sum of AP series",
+    "description": "Write a program to find sum of ap series\n\nAn arithmetic progression (AP) is a sequence of numbers such that the difference of any two consecutive terms is a constant. The nth term of an AP is given by the formula a<sub>n</sub> = a<sub>1</sub> + (n-1)d where a<sub>1</sub> is the first term and d is the common difference.\n\n```\nInput  : 2, 5, 3\nOutput : 20\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
     "publishedAt": "",
     "created": false
   },
@@ -889,6 +1177,15 @@
     "createdIssueNumber": "179",
     "publishedAt": "2022-10-02T13:29:48.017Z",
     "created": true
+  },
+  {
+    "title": "Find sum of GP series",
+    "description": "Write a program to find sum of gp series\n\nA geometric progression (GP) is a sequence of numbers where each term after the first is found by multiplying the previous one by a fixed, non-zero number called the common ratio. The nth term of a GP is given by the formula a<sub>n</sub> = a<sub>1</sub>r<sup>n-1</sup> where a<sub>1</sub> is the first term and r is the common ratio.\n\n```\nInput  : 2, 3, 3\nOutput : 54\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "",
+    "created": false
   },
   {
     "title": "Find sum of n natural numbers",
@@ -999,6 +1296,132 @@
     "created": false
   },
   {
+    "title": "Find the adjoint of a matrix",
+    "description": "Write a program to find the adjoint of a matrix\n\nThe adjoint of a square matrix A is the transpose of the matrix of cofactors of A. The adjoint of a matrix A is denoted as A<sup>\\*</sup>.\n\n```\nInput  :\n1 2 3\n4 5 6\n7 8 9\n\nOutput :\n[[-3, 6, -3], [6, -12, 6], [-3, 6, -3]]\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "",
+    "created": false
+  },
+  {
+    "title": "Find the average of all numbers in an array",
+    "description": "Write a program to find the average of all numbers in an array\n\n```\nInput  : [1, 2, 3, 4, 5]\nOutput : 3\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "",
+    "created": false
+  },
+  {
+    "title": "Find the cofactor of a matrix",
+    "description": "Write a program to find the cofactor of a matrix\n\nThe cofactor of an element a<sub>ij</sub> of a square matrix A is the determinant of the minor of A obtained by deleting the ith row and jth column of A. The cofactor of a matrix A is the matrix of cofactors of A.\n\n```\nInput  :\n1 2 3\n4 5 6\n7 8 9\n\nOutput :\n[[-3, 6, -3], [6, -12, 6], [-3, 6, -3]]\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "",
+    "created": false
+  },
+  {
+    "title": "Find the determinant of a matrix",
+    "description": "Write a program to find the determinant of a matrix\n\nThe determinant of a square matrix is a scalar value that can be computed from the elements of the matrix. The determinant of a matrix A is denoted as det(A) or |A|.\n\n```\nInput  :\n1 2 3\n4 5 6\n7 8 9\n\nOutput :\n0\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "",
+    "created": false
+  },
+  {
+    "title": "Find the eigenvalues of a matrix",
+    "description": "Write a program to find the eigenvalues of a matrix\n\nThe eigenvalues and eigenvectors of a linear transformation are the values and vectors that determine the transformation. The eigenvalues of a matrix A are the values λ for which the matrix equation Av = λv has a non-trivial solution.\n\n```\nInput  :\n1 2 3\n4 5 6\n7 8 9\n\nOutput :\n16.116843969807043\n-1.1168439698070427\n0.9999999999999998\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "",
+    "created": false
+  },
+  {
+    "title": "Find the eigenvectors of a matrix",
+    "description": "Write a program to find the eigenvectors of a matrix\n\nThe eigenvalues and eigenvectors of a linear transformation are the values and vectors that determine the transformation. The eigenvectors of a matrix A are the vectors v for which the matrix equation Av = λv has a non-trivial solution.\n\n```\nInput  :\n1 2 3\n4 5 6\n7 8 9\n\nOutput :\n[[-0.23197068724628608, -0.7858302387246789, 0.4082482904638631],\n [-0.5253220933012334, -0.08675134095039447, -0.8164965809277261],\n [-0.8186734993561807, 0.6123275568238899, 0.4082482904638631]]\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "",
+    "created": false
+  },
+  {
+    "title": "Find the inverse of a",
+    "description": "Write a program to find the inverse of a\n\nThe inverse of a square matrix A is another square matrix B such that the product of A and B is the identity matrix I. The inverse of A is denoted as A<sup>-1</sup>.\n\n```\nInput  :\n1 2 3\n4 5 6\n7 8 9\n\nOutput :\n-0.16666666666666666 0.3333333333333333 -0.16666666666666666\n0.3333333333333333 -0.6666666666666666 0.3333333333333333\n-0.16666666666666666 0.3333333333333333 -0.16666666666666666\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "",
+    "created": false
+  },
+  {
+    "title": "Find the maximum sum of a contiguous subarray",
+    "description": "Write a program to find the maximum sum of a contiguous subarray\n\nMaximum subarray problem is the task of finding the contiguous subarray within a one-dimensional array of numbers which has the largest sum. For example, for the sequence of values `−2, 1, −3, 4, −1, 2, 1, −5, 4;` the contiguous subarray with the largest sum is `4, −1, 2, 1,` with sum `6`.\n\n```\nInput  : [-2, -3, 4, -1, -2, 1, 5, -3]\nOutput : 7\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "",
+    "created": false
+  },
+  {
+    "title": "Find the maximum sum of a contiguous subarray (Circular)",
+    "description": "Write a program to find the maximum sum of a contiguous subarray (circular)\n\nMaximum sum of a circular subarray is the task of finding the contiguous subarray within a circular one-dimensional array of numbers which has the largest sum. For example, for the sequence of values `10, -3, -4, 7, 6, 5, -4, -1;` the contiguous subarray with the largest sum is `7, 6, 5,` with sum `18`.\n\n```\nInput  : [8, -8, 9, -9, 10, -11, 12]\nOutput : 22\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "",
+    "created": false
+  },
+  {
+    "title": "Find the maximum sum of a contiguous subarray (Kadane's Algorithm)",
+    "description": "Write a program to find the maximum sum of a contiguous subarray (kadane's algorithm)\n\nKadane's algorithm is used to find the maximum sum of a contiguous subarray within a one-dimensional array of numbers. For example, for the sequence of values `−2, 1, −3, 4, −1, 2, 1, −5, 4;` the contiguous subarray with the largest sum is `4, −1, 2, 1,` with sum `6`.\n\n```\nInput  : [1, 2, 3, -2, 5]\nOutput : 9\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "",
+    "created": false
+  },
+  {
+    "title": "Find the rank of a matrix",
+    "description": "Write a program to find the rank of a matrix\n\nThe rank of a matrix is the dimension of the vector space generated by its columns. The rank of a matrix is also equal to the dimension of the vector space generated by its rows. The rank of a matrix is also equal to the number of pivots in its reduced row echelon form.\n\n```\nInput  :\n1 2 3\n4 5 6\n7 8 9\n\nOutput :\n2\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "",
+    "created": false
+  },
+  {
+    "title": "Find the sum of all numbers in an array",
+    "description": "Write a program to find the sum of all numbers in an array\n\n```\nInput  : [1, 2, 3, 4, 5]\nOutput : 15\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "",
+    "created": false
+  },
+  {
+    "title": "Find the trace of a matrix",
+    "description": "Write a program to find the trace of a matrix\n\nThe trace of a square matrix is the sum of the elements on the main diagonal (from the upper left to the lower right).\n\n```\nInput  :\n1 2 3\n4 5 6\n7 8 9\n\nOutput :\n15\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "",
+    "created": false
+  },
+  {
+    "title": "Find the transpose of a matrix",
+    "description": "Write a program to find the transpose of a matrix\n\nThe transpose of a matrix is an operator which flips a matrix over its diagonal, that is it switches the row and column indices of the matrix by producing another matrix denoted as A<sup>T</sup>.\n\n```\nInput  :\n1 2 3\n4 5 6\n7 8 9\n\nOutput :\n1 4 7\n2 5 8\n3 6 9\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Find volume of a cone",
     "description": "Write a program to find volume of a cone\n\nVolume of cone = 1/3 × π × `Radius`^2 × `Height`\r\n\r\n```\r\nRadius : 2\r\nHeight : 3\r\n\r\nVolume : 25.132741228718345\r\n```\n",
     "contributor": "harshraj8843",
@@ -1098,6 +1521,24 @@
     "created": true
   },
   {
+    "title": "Print diamond pattern",
+    "description": "Write a program to print diamond pattern\n\n```\nInput  : 5\n\nOutput : \n    *\n   ***\n  *****\n *******\n*********\n *******\n  *****\n   ***\n    *\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "",
+    "created": false
+  },
+  {
+    "title": "Print elements of an array",
+    "description": "Write a program to print elements of an array\n\n```\nInput  : [1, 2, 3, 4, 5]\nOutput : 1 2 3 4 5\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Print Fibonacci series by recursion",
     "description": "Write a program to print fibonacci series by recursion\n\n```\r\nInput  : 5\r\nOutput : 0 1 1 2 3\r\n```\n",
     "contributor": "harshraj8843",
@@ -1114,6 +1555,15 @@
     "createdIssueNumber": "164",
     "publishedAt": "2022-10-06T10:29:41.273Z",
     "created": true
+  },
+  {
+    "title": "Print Floyd's triangle",
+    "description": "Write a program to print floyd's triangle\n\nFloyd's triangle is a right-angled triangle of natural numbers, used in computer science as an example of a space-filling curve. It is named after Robert Floyd. It is defined by filling the rows of the triangle with consecutive numbers, starting with a 1 in the top left corner.\n\n```\nInput  : 5\n\nOutput : \n1\n2 3\n4 5 6\n7 8 9 10\n11 12 13 14 15\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "",
+    "created": false
   },
   {
     "title": "Print Hello World",
@@ -1150,6 +1600,60 @@
     "createdIssueNumber": "270",
     "publishedAt": "2022-10-03T16:46:24.447Z",
     "created": true
+  },
+  {
+    "title": "Print numbers from 1 to n",
+    "description": "Write a program to print numbers from 1 to n\n\n```\nInput  : 5\nOutput : 1 2 3 4 5\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "",
+    "created": false
+  },
+  {
+    "title": "Print numbers from 1 to n without using a loop",
+    "description": "Write a program to print numbers from 1 to n without using a loop\n\n```\nInput  : 5\nOutput : 1 2 3 4 5\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "",
+    "created": false
+  },
+  {
+    "title": "Print numbers from n to 1",
+    "description": "Write a program to print numbers from n to 1\n\n```\nInput  : 5\nOutput : 5 4 3 2 1\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "",
+    "created": false
+  },
+  {
+    "title": "Print numbers from n to 1 without using a loop",
+    "description": "Write a program to print numbers from n to 1 without using a loop\n\n```\nInput  : 5\nOutput : 5 4 3 2 1\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "",
+    "created": false
+  },
+  {
+    "title": "Print Pascal's triangle",
+    "description": "Write a program to print pascal's triangle\n\nPascal's triangle is a triangular array of the binomial coefficients. Write a function that takes an integer value `n` as input and prints first `n` lines of the Pascal's triangle.\n\n```\nInput  : 5\n\nOutput : \n        1\n       1 1\n      1 2 1\n     1 3 3 1\n    1 4 6 4 1\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "",
+    "created": false
+  },
+  {
+    "title": "Print Pattern 1",
+    "description": "Write a program to print pattern 1\n\n```\r\nInput  : 5\r\n\r\nOutput :\r\n1\r\n1 2 \r\n1 2 3\r\n1 2 3 4\r\n1 2 3 4 5\r\n```\n",
+    "contributor": "PraaneshSelvaraj",
+    "createdAt": "2022-10-07T13:32:43.003Z",
+    "createdIssueNumber": "2153",
+    "publishedAt": "",
+    "created": false
   },
   {
     "title": "Print reverse of a number",
@@ -1195,6 +1699,33 @@
     "createdIssueNumber": "251",
     "publishedAt": "2022-10-04T12:52:26.101Z",
     "created": true
+  },
+  {
+    "title": "Reverse an array",
+    "description": "Write a program to reverse an array\n\n```\nInput  : [1, 2, 3, 4, 5]\nOutput : [5, 4, 3, 2, 1]\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "",
+    "created": false
+  },
+  {
+    "title": "Split string into array of characters",
+    "description": "Write a program to split string into array of characters\n\n```\nInput  : \"hello world\"\nOutput : [\"h\", \"e\", \"l\", \"l\", \"o\", \" \", \"w\", \"o\", \"r\", \"l\", \"d\"]\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "",
+    "created": false
+  },
+  {
+    "title": "Split string into array of words",
+    "description": "Write a program to split string into array of words\n\n```\nInput  : \"hello world\"\nOutput : [\"hello\", \"world\"]\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "",
+    "created": false
   },
   {
     "title": "Swap two numbers",
