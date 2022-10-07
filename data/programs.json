@@ -829,7 +829,7 @@
   },
   {
     "title": "Find area of a circle",
-    "description": "Write a program to find area of a circle\n\nArea of circle = \u03c0 \u00d7 `Radius`^2\r\n\r\n```\r\nRadius : 2\r\n\r\nArea : 12.566370614359172\r\n```\n",
+    "description": "Write a program to find area of a circle\n\nArea of circle = π × `Radius`^2\r\n\r\n```\r\nRadius : 2\r\n\r\nArea : 12.566370614359172\r\n```\n",
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T06:51:14.286Z",
     "createdIssueNumber": "157",
@@ -838,7 +838,7 @@
   },
   {
     "title": "Find area of a cube",
-    "description": "Write a program to find area of a cube\n\nArea of cube = 6 \u00d7 `Side`^2\r\n\r\n```\r\nSide : 2\r\n\r\nArea : 24\r\n```\n",
+    "description": "Write a program to find area of a cube\n\nArea of cube = 6 × `Side`^2\r\n\r\n```\r\nSide : 2\r\n\r\nArea : 24\r\n```\n",
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T06:52:29.859Z",
     "createdIssueNumber": "159",
@@ -847,7 +847,7 @@
   },
   {
     "title": "Find area of a cuboid",
-    "description": "Write a program to find area of a cuboid\n\nArea of cuboid = 2 \u00d7 (`Length` \u00d7 `Width` + `Length` \u00d7 `Height` + `Width` \u00d7 `Height`)\r\n\r\n```\r\nLength : 2\r\nWidth  : 3\r\nHeight : 4\r\n\r\nArea : 52\r\n```\n",
+    "description": "Write a program to find area of a cuboid\n\nArea of cuboid = 2 × (`Length` × `Width` + `Length` × `Height` + `Width` × `Height`)\r\n\r\n```\r\nLength : 2\r\nWidth  : 3\r\nHeight : 4\r\n\r\nArea : 52\r\n```\n",
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T06:52:55.954Z",
     "createdIssueNumber": "160",
@@ -856,7 +856,7 @@
   },
   {
     "title": "Find area of a rectangle",
-    "description": "Write a program to find area of a rectangle\n\nArea of rectangle = `Length` \u00d7 `Width`\r\n\r\n```\r\nLength : 2\r\nWidth  : 3\r\n\r\nArea : 6\r\n```\n",
+    "description": "Write a program to find area of a rectangle\n\nArea of rectangle = `Length` × `Width`\r\n\r\n```\r\nLength : 2\r\nWidth  : 3\r\n\r\nArea : 6\r\n```\n",
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T06:48:21.795Z",
     "createdIssueNumber": "155",
@@ -865,7 +865,7 @@
   },
   {
     "title": "Find area of a right angled triangle",
-    "description": "Write a program to find area of a right angled triangle\n\nArea of right angled triangle = 0.5 \u00d7 `Base` \u00d7 `Height`\r\n\r\n```\r\nBase   : 2\r\nHeight : 3\r\n\r\nArea : 3\r\n```\n",
+    "description": "Write a program to find area of a right angled triangle\n\nArea of right angled triangle = 0.5 × `Base` × `Height`\r\n\r\n```\r\nBase   : 2\r\nHeight : 3\r\n\r\nArea : 3\r\n```\n",
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T06:50:41.454Z",
     "createdIssueNumber": "156",
@@ -1054,7 +1054,7 @@
   },
   {
     "title": "Find perimeter of a rectangle",
-    "description": "Write a program to find perimeter of a rectangle\n\nPerimeter of rectangle = 2 \u00d7 (`Length` + `Width`)\r\n\r\n```\r\nLength : 2\r\nWidth  : 3\r\n\r\nPerimeter : 10\r\n```\n",
+    "description": "Write a program to find perimeter of a rectangle\n\nPerimeter of rectangle = 2 × (`Length` + `Width`)\r\n\r\n```\r\nLength : 2\r\nWidth  : 3\r\n\r\nPerimeter : 10\r\n```\n",
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T06:53:32.599Z",
     "createdIssueNumber": "161",
@@ -1063,7 +1063,7 @@
   },
   {
     "title": "Find perimeter of a square",
-    "description": "Write a program to find perimeter of a square\n\nPerimeter of square = 4 \u00d7 `Side`\r\n\r\n```\r\nSide : 2\r\n\r\nPerimeter : 8\r\n```\n",
+    "description": "Write a program to find perimeter of a square\n\nPerimeter of square = 4 × `Side`\r\n\r\n```\r\nSide : 2\r\n\r\nPerimeter : 8\r\n```\n",
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T06:54:46.263Z",
     "createdIssueNumber": "162",
@@ -1252,7 +1252,7 @@
   },
   {
     "title": "Find surface area of a cone",
-    "description": "Write a program to find surface area of a cone\n\nSurface area of cone = \u03c0 \u00d7 `Radius` \u00d7 (`Radius` + `Slant Height`)\r\n\r\n```\r\nRadius       : 2\r\nSlant Height : 3\r\n\r\nSurface area : 50.26548245743669\r\n```\n",
+    "description": "Write a program to find surface area of a cone\n\nSurface area of cone = π × `Radius` × (`Radius` + `Slant Height`)\r\n\r\n```\r\nRadius       : 2\r\nSlant Height : 3\r\n\r\nSurface area : 50.26548245743669\r\n```\n",
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T12:17:07.223Z",
     "createdIssueNumber": "213",
@@ -1261,7 +1261,7 @@
   },
   {
     "title": "Find surface area of a cube",
-    "description": "Write a program to find surface area of a cube\n\nSurface area of cube = 6 \u00d7 `Side`^2\r\n\r\n```\r\nSide : 2\r\n\r\nSurface area : 24\r\n```\n",
+    "description": "Write a program to find surface area of a cube\n\nSurface area of cube = 6 × `Side`^2\r\n\r\n```\r\nSide : 2\r\n\r\nSurface area : 24\r\n```\n",
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T12:18:29.036Z",
     "createdIssueNumber": "215",
@@ -1270,7 +1270,7 @@
   },
   {
     "title": "Find surface area of a cuboid",
-    "description": "Write a program to find surface area of a cuboid\n\nSurface area of cuboid = 2 \u00d7 (`Length` \u00d7 `Width` + `Length` \u00d7 `Height` + `Width` \u00d7 `Height`)\r\n\r\n```\r\nLength : 2\r\nWidth  : 3\r\nHeight : 4\r\n\r\nSurface area : 52\r\n```\n",
+    "description": "Write a program to find surface area of a cuboid\n\nSurface area of cuboid = 2 × (`Length` × `Width` + `Length` × `Height` + `Width` × `Height`)\r\n\r\n```\r\nLength : 2\r\nWidth  : 3\r\nHeight : 4\r\n\r\nSurface area : 52\r\n```\n",
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T12:17:42.829Z",
     "createdIssueNumber": "214",
@@ -1279,7 +1279,7 @@
   },
   {
     "title": "Find surface area of a cylinder",
-    "description": "Write a program to find surface area of a cylinder\n\nSurface area of cylinder = 2 \u00d7 \u03c0 \u00d7 `Radius` \u00d7 `Height`\r\n\r\n```\r\nRadius : 2\r\nHeight : 3\r\n\r\nSurface area : 62.83185307179586\r\n```\n",
+    "description": "Write a program to find surface area of a cylinder\n\nSurface area of cylinder = 2 × π × `Radius` × `Height`\r\n\r\n```\r\nRadius : 2\r\nHeight : 3\r\n\r\nSurface area : 62.83185307179586\r\n```\n",
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T12:16:37.404Z",
     "createdIssueNumber": "212",
@@ -1288,7 +1288,7 @@
   },
   {
     "title": "Find surface area of a sphere",
-    "description": "Write a program to find surface area of a sphere\n\nSurface area of sphere = 4 \u00d7 \u03c0 \u00d7 `Radius`^2\r\n\r\n```\r\nRadius : 2\r\n\r\nSurface area : 50.26548245743669\r\n```\n",
+    "description": "Write a program to find surface area of a sphere\n\nSurface area of sphere = 4 × π × `Radius`^2\r\n\r\n```\r\nRadius : 2\r\n\r\nSurface area : 50.26548245743669\r\n```\n",
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T12:15:26.705Z",
     "createdIssueNumber": "211",
@@ -1333,7 +1333,7 @@
   },
   {
     "title": "Find the eigenvalues of a matrix",
-    "description": "Write a program to find the eigenvalues of a matrix\n\nThe eigenvalues and eigenvectors of a linear transformation are the values and vectors that determine the transformation. The eigenvalues of a matrix A are the values \u03bb for which the matrix equation Av = \u03bbv has a non-trivial solution.\n\n```\nInput  :\n1 2 3\n4 5 6\n7 8 9\n\nOutput :\n16.116843969807043\n-1.1168439698070427\n0.9999999999999998\n```",
+    "description": "Write a program to find the eigenvalues of a matrix\n\nThe eigenvalues and eigenvectors of a linear transformation are the values and vectors that determine the transformation. The eigenvalues of a matrix A are the values λ for which the matrix equation Av = λv has a non-trivial solution.\n\n```\nInput  :\n1 2 3\n4 5 6\n7 8 9\n\nOutput :\n16.116843969807043\n-1.1168439698070427\n0.9999999999999998\n```",
     "contributor": "harshraj8843",
     "createdAt": "2022-10-07T18:46:27.887768Z",
     "createdIssueNumber": "0",
@@ -1342,7 +1342,7 @@
   },
   {
     "title": "Find the eigenvectors of a matrix",
-    "description": "Write a program to find the eigenvectors of a matrix\n\nThe eigenvalues and eigenvectors of a linear transformation are the values and vectors that determine the transformation. The eigenvectors of a matrix A are the vectors v for which the matrix equation Av = \u03bbv has a non-trivial solution.\n\n```\nInput  :\n1 2 3\n4 5 6\n7 8 9\n\nOutput :\n[[-0.23197068724628608, -0.7858302387246789, 0.4082482904638631],\n [-0.5253220933012334, -0.08675134095039447, -0.8164965809277261],\n [-0.8186734993561807, 0.6123275568238899, 0.4082482904638631]]\n```",
+    "description": "Write a program to find the eigenvectors of a matrix\n\nThe eigenvalues and eigenvectors of a linear transformation are the values and vectors that determine the transformation. The eigenvectors of a matrix A are the vectors v for which the matrix equation Av = λv has a non-trivial solution.\n\n```\nInput  :\n1 2 3\n4 5 6\n7 8 9\n\nOutput :\n[[-0.23197068724628608, -0.7858302387246789, 0.4082482904638631],\n [-0.5253220933012334, -0.08675134095039447, -0.8164965809277261],\n [-0.8186734993561807, 0.6123275568238899, 0.4082482904638631]]\n```",
     "contributor": "harshraj8843",
     "createdAt": "2022-10-07T18:46:27.887768Z",
     "createdIssueNumber": "0",
@@ -1360,7 +1360,7 @@
   },
   {
     "title": "Find the maximum sum of a contiguous subarray",
-    "description": "Write a program to find the maximum sum of a contiguous subarray\n\nMaximum subarray problem is the task of finding the contiguous subarray within a one-dimensional array of numbers which has the largest sum. For example, for the sequence of values `\u22122, 1, \u22123, 4, \u22121, 2, 1, \u22125, 4;` the contiguous subarray with the largest sum is `4, \u22121, 2, 1,` with sum `6`.\n\n```\nInput  : [-2, -3, 4, -1, -2, 1, 5, -3]\nOutput : 7\n```",
+    "description": "Write a program to find the maximum sum of a contiguous subarray\n\nMaximum subarray problem is the task of finding the contiguous subarray within a one-dimensional array of numbers which has the largest sum. For example, for the sequence of values `−2, 1, −3, 4, −1, 2, 1, −5, 4;` the contiguous subarray with the largest sum is `4, −1, 2, 1,` with sum `6`.\n\n```\nInput  : [-2, -3, 4, -1, -2, 1, 5, -3]\nOutput : 7\n```",
     "contributor": "harshraj8843",
     "createdAt": "2022-10-07T18:46:27.887768Z",
     "createdIssueNumber": "0",
@@ -1378,7 +1378,7 @@
   },
   {
     "title": "Find the maximum sum of a contiguous subarray (Kadane's Algorithm)",
-    "description": "Write a program to find the maximum sum of a contiguous subarray (kadane's algorithm)\n\nKadane's algorithm is used to find the maximum sum of a contiguous subarray within a one-dimensional array of numbers. For example, for the sequence of values `\u22122, 1, \u22123, 4, \u22121, 2, 1, \u22125, 4;` the contiguous subarray with the largest sum is `4, \u22121, 2, 1,` with sum `6`.\n\n```\nInput  : [1, 2, 3, -2, 5]\nOutput : 9\n```",
+    "description": "Write a program to find the maximum sum of a contiguous subarray (kadane's algorithm)\n\nKadane's algorithm is used to find the maximum sum of a contiguous subarray within a one-dimensional array of numbers. For example, for the sequence of values `−2, 1, −3, 4, −1, 2, 1, −5, 4;` the contiguous subarray with the largest sum is `4, −1, 2, 1,` with sum `6`.\n\n```\nInput  : [1, 2, 3, -2, 5]\nOutput : 9\n```",
     "contributor": "harshraj8843",
     "createdAt": "2022-10-07T18:46:27.887768Z",
     "createdIssueNumber": "0",
@@ -1423,7 +1423,7 @@
   },
   {
     "title": "Find volume of a cone",
-    "description": "Write a program to find volume of a cone\n\nVolume of cone = 1/3 \u00d7 \u03c0 \u00d7 `Radius`^2 \u00d7 `Height`\r\n\r\n```\r\nRadius : 2\r\nHeight : 3\r\n\r\nVolume : 25.132741228718345\r\n```\n",
+    "description": "Write a program to find volume of a cone\n\nVolume of cone = 1/3 × π × `Radius`^2 × `Height`\r\n\r\n```\r\nRadius : 2\r\nHeight : 3\r\n\r\nVolume : 25.132741228718345\r\n```\n",
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T12:13:25.509Z",
     "createdIssueNumber": "208",
@@ -1441,7 +1441,7 @@
   },
   {
     "title": "Find volume of a cuboid",
-    "description": "Write a program to find volume of a cuboid\n\nVolume of a cuboid = `Length` \u00d7 `Width` \u00d7 `Height`\r\n\r\n```\r\nLength : 2\r\nWidth  : 3\r\nHeight : 4\r\n\r\nVolume : 24\r\n```\n",
+    "description": "Write a program to find volume of a cuboid\n\nVolume of a cuboid = `Length` × `Width` × `Height`\r\n\r\n```\r\nLength : 2\r\nWidth  : 3\r\nHeight : 4\r\n\r\nVolume : 24\r\n```\n",
     "contributor": "harshraj8843",
     "createdAt": "2022-09-27T21:34:33.608Z",
     "createdIssueNumber": "25",
@@ -1450,7 +1450,7 @@
   },
   {
     "title": "Find volume of a cylinder",
-    "description": "Write a program to find volume of a cylinder\n\nVolume of cylinder = \u03c0 \u00d7 `Radius`^2 \u00d7 `Height`\r\n\r\n```\r\nRadius : 2\r\nHeight : 3\r\n\r\nVolume : 37.69911184307752\r\n```\n",
+    "description": "Write a program to find volume of a cylinder\n\nVolume of cylinder = π × `Radius`^2 × `Height`\r\n\r\n```\r\nRadius : 2\r\nHeight : 3\r\n\r\nVolume : 37.69911184307752\r\n```\n",
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T12:12:29.216Z",
     "createdIssueNumber": "207",
@@ -1459,7 +1459,7 @@
   },
   {
     "title": "Find volume of a sphere",
-    "description": "Write a program to find volume of a sphere\n\nVolume of sphere = 4/3 \u00d7 \u03c0 \u00d7 `Radius`^3\r\n\r\n```\r\nRadius : 2\r\n\r\nVolume : 33.510321638291124\r\n```\n",
+    "description": "Write a program to find volume of a sphere\n\nVolume of sphere = 4/3 × π × `Radius`^3\r\n\r\n```\r\nRadius : 2\r\n\r\nVolume : 33.510321638291124\r\n```\n",
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T12:11:51.744Z",
     "createdIssueNumber": "206",
@@ -1643,6 +1643,15 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-10-07T18:46:27.887768Z",
     "createdIssueNumber": "0",
+    "publishedAt": "",
+    "created": false
+  },
+  {
+    "title": "Print Pattern 1",
+    "description": "Write a program to print pattern 1\n\n```\r\nInput  : 5\r\n\r\nOutput :\r\n1\r\n1 2 \r\n1 2 3\r\n1 2 3 4\r\n1 2 3 4 5\r\n```\n",
+    "contributor": "PraaneshSelvaraj",
+    "createdAt": "2022-10-07T13:32:43.003Z",
+    "createdIssueNumber": "2153",
     "publishedAt": "",
     "created": false
   },
