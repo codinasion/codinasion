@@ -1,5 +1,3 @@
-// C++ program for Fibonacci Series
-// using Dynamic Programming
 #include <bits/stdc++.h>
 using namespace std;
 
