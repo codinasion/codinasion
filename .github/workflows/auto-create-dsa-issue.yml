@@ -1,11 +1,11 @@
-name: Auto Create Issue
+name: Auto Create DSA Issue
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "0 0/1 * * *"
+  # schedule:
+  #   - cron: "0 0/1 * * *"
 
 jobs:
-  auto_create_issue:
+  auto_create_dsa_issue:
     runs-on: ubuntu-latest
 
     steps:
@@ -29,23 +29,23 @@ jobs:
       - name: Create Issue
         uses: ./action/
         with:
-          AUTO_CREATE_ISSUE: true
+          AUTO_CREATE_DSA_ISSUE: true
           TOKEN: ${{ secrets.PAT }}
       
       - name: Git Pull
         run: |
           git pull
 
-      - name: Commit Program Data
+      - name: Commit DSA Data
         uses: EndBug/add-and-commit@v9
         with:
-          add: "data/programs.json"
+          add: "data/dsa.json"
           fetch: true
           message: "auto create issue"
 
       - name: Commit README
         uses: EndBug/add-and-commit@v9
         with:
-          add: "program"
+          add: "dsa"
           fetch: true
           message: "add README.md"
