@@ -2,7 +2,7 @@ name: Auto Create Issue
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 0/1 * * *"
+    - cron: "0 0/4 * * *"
 
 jobs:
   auto_create_issue:
