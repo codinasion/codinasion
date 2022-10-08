@@ -50,23 +50,67 @@ Thanks for your interest in contributing to this project.`,
         .catch((err) => console.log("err => ", err));
       await console.log("response => ", response);
     } else {
-      // assign issue
-      const response = await fetch(
-        `https://api.github.com/repos/${OWNER}/${REPO}/issues/${ISSUE_NUMBER}/assignees`,
+      // find all the issues assigned to the user
+      const issuesAssignedToUser = await fetch(
+        `https://api.github.com/search/issues?q=assignee:${USERNAME}+repo:${OWNER}/${REPO}+type:issue+label:"good first issue"`,
         {
-          method: "POST",
+          method: "GET",
           headers: {
-            "Content-Type": "application/json",
             Authorization: `token ${TOKEN}`,
           },
-          body: JSON.stringify({
-            assignees: [USERNAME],
-          }),
         }
       )
         .then((res) => res.json())
         .catch((err) => console.log("err => ", err));
-      await console.log("response => ", response);
+
+      const assignmentCount = issuesAssignedToUser.total_count;
+
+      if (assignmentCount < 21) {
+        // assign issue
+        const response = await fetch(
+          `https://api.github.com/repos/${OWNER}/${REPO}/issues/${ISSUE_NUMBER}/assignees`,
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `token ${TOKEN}`,
+            },
+            body: JSON.stringify({
+              assignees: [USERNAME],
+            }),
+          }
+        )
+          .then((res) => res.json())
+          .catch((err) => console.log("err => ", err));
+        await console.log("response => ", response);
+      } else {
+        // create comment
+        const response = await fetch(
+          `https://api.github.com/repos/${OWNER}/${REPO}/issues/${ISSUE_NUMBER}/comments`,
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `token ${TOKEN}`,
+            },
+            body: JSON.stringify({
+              body: `Hey @${USERNAME}
+
+Sorry but the assignment limit has been set to 20 issues per user.
+
+These limits are set to ensure everyone gets a chance to contribute to Hacktoberfest.
+
+These limits will be lifted after 31st October.
+
+Thank you very much for contributing to this project.
+`,
+            }),
+          }
+        )
+          .then((res) => res.json())
+          .catch((err) => console.log("err => ", err));
+        await console.log("response => ", response);
+      }
     }
   } else {
     // create comment
