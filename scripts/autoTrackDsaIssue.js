@@ -5,7 +5,7 @@ import fetch from "node-fetch";
 import sleep from "./sleep.js";
 import fileNaming from "./fileNaming.js";
 
-export default async function autoTrackIssue(
+export default async function autoTrackDsaIssue(
   OWNER,
   REPO,
   TOKEN,
@@ -60,11 +60,11 @@ export default async function autoTrackIssue(
   }
   await console.log("tracking_issues_json => ", tracking_issues_json);
 
-  const programFolderPath = "data";
-  if (!fs.existsSync(programFolderPath)) {
+  const dsaFolderPath = "data";
+  if (!fs.existsSync(dsaFolderPath)) {
     return;
   }
-  const languagesFilePath = `${programFolderPath}/languages.json`;
+  const languagesFilePath = `${dsaFolderPath}/languages.json`;
   if (!fs.existsSync(languagesFilePath)) {
     return;
   }
@@ -73,7 +73,7 @@ export default async function autoTrackIssue(
 
   for (const each_object of tracking_issues_json) {
     let filename = await `${each_object.sentence}`
-      .replace(`Write a ${each_object.language_tag} program to `, "")
+      .replace(`Write a ${each_object.language_tag} program for `, "")
       .trim();
     let languageData = languagesDataJson.find(
       (item) => item.name === each_object.language_tag.trim()
@@ -86,8 +86,8 @@ export default async function autoTrackIssue(
 <details>
 <summary>How to contribute</summary>
 
-- Save the solution in \`program/${file}\` file
-- Add \`${file}\` file in \`${filename
+- Save the solution in \`${file}\` file
+- Add \`${file}\` file in \`dsa/${filename
       .toLowerCase()
       .replace(/ /g, "-")}\` folder
 
@@ -104,7 +104,7 @@ export default async function autoTrackIssue(
         body: JSON.stringify({
           title: `${each_object.sentence}`,
           body: `${issueDescription}`,
-          labels: [each_object.language_tag, "good first issue"],
+          labels: [each_object.language_tag, "good first issue", "DSA"],
         }),
       }
     )
@@ -137,7 +137,7 @@ export default async function autoTrackIssue(
       },
       body: JSON.stringify({
         body: `${issue_body}`,
-        labels: ["auto-track", "tweet-it", "tweet-confirm"],
+        labels: ["auto-track-dsa", "tweet-it", "tweet-confirm"],
       }),
     }
   )
