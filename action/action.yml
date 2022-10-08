@@ -41,9 +41,19 @@ inputs:
     description: "submit a program"
     required: true
     default: false
-  
+
+  SUBMIT_DSA:
+    description: "submit dsa"
+    required: true
+    default: false
+
   SUBMIT_PROGRAM_COMMENT_CLOSE:
     description: "comment & close for submit program issue"
+    required: true
+    default: false
+
+  SUBMIT_DSA_COMMENT_CLOSE:
+    description: "comment & close for submit dsa issue"
     required: true
     default: false
 
@@ -51,9 +61,19 @@ inputs:
     description: "create track issue"
     required: true
     default: false
+  
+  AUTO_CREATE_DSA_ISSUE:
+    description: "create dsa issue"
+    required: true
+    default: false
 
   AUTO_TRACK_ISSUE:
     description: "auto create good first issue"
+    required: true
+    default: false
+  
+  AUTO_TRACK_DSA_ISSUE:
+    description: "auto create dsa issue"
     required: true
     default: false
 
