@@ -6,7 +6,7 @@ namespace Sample {
          int num2 = 25;
          int result;
          result = num1 / num2;
-         Console.WriteLine("Division: Value is {0}", result) 
+         Console.WriteLine("Division: Value is {0}", result); 
       }
    }
 }
