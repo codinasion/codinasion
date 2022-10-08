@@ -11,9 +11,10 @@ int main(){
     int total_sum = 0;
     int curr_max = arr[0], curr_min = arr[0], max_subarr_sum = arr[0], min_subarr_sum = arr[0];
 
-    for(int i = 0; i < arr.size(); i++){
+    for(int i = 0; i < arr.size(); i++)
         total_sum+= arr[i];
 
+    for(int i = 1; i < arr.size(); i++){
         curr_max = max(curr_max + arr[i], arr[i]);
         curr_min = min(curr_min + arr[i], arr[i]);
 
