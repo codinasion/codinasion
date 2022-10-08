@@ -239,8 +239,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T06:42:37.474Z",
     "createdIssueNumber": "148",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-08T08:27:42.005Z",
+    "created": true
   },
   {
     "title": "Convert centimeters to feet",
@@ -986,8 +986,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-10-07T18:46:27.887768Z",
     "createdIssueNumber": "0",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-08T01:49:30.293Z",
+    "created": true
   },
   {
     "title": "Find largest number in an array",
@@ -1319,8 +1319,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-10-07T18:46:27.887768Z",
     "createdIssueNumber": "0",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-08T20:24:41.570Z",
+    "created": true
   },
   {
     "title": "Find the determinant of a matrix",
@@ -1373,8 +1373,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-10-07T18:46:27.887768Z",
     "createdIssueNumber": "0",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-08T12:38:33.727Z",
+    "created": true
   },
   {
     "title": "Find the maximum sum of a contiguous subarray (Kadane's Algorithm)",
@@ -1400,8 +1400,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-10-07T18:46:27.887768Z",
     "createdIssueNumber": "0",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-08T04:43:40.647Z",
+    "created": true
   },
   {
     "title": "Find the trace of a matrix",
