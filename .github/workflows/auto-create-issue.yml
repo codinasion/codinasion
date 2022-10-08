@@ -2,7 +2,7 @@ name: Auto Create Issue
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 0/1 * * *"
+    - cron: "0 0/2 * * *"
 
 jobs:
   auto_create_issue:
@@ -33,7 +33,6 @@ jobs:
           TOKEN: ${{ secrets.PAT }}
       
       - name: Git Pull
-        if: steps.submit-program.outputs.submit-success == 'true'
         run: |
           git pull
 
