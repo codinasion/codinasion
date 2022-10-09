@@ -9,9 +9,12 @@ namespace TitleCase
         {
             var textinfo = new CultureInfo("en-US", false).TextInfo;
             var textInfo = CultureInfo.CurrentCulture.TextInfo;
-            Console.WriteLine("Input: ");
+
+            //input
             String text = Console.ReadLine();
+            //output
             Console.WriteLine(textinfo.ToTitleCase(text));
         }
     }
 }
+
