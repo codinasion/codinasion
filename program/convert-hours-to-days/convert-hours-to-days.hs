@@ -1,5 +1,3 @@
-import System.Environment   
-import Data.List 
 main :: IO ()
 main = do 
     putStrLn "Enter a number of hours, and I will convert it to days" 
