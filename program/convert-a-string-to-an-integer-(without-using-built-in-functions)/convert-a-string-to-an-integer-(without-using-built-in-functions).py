@@ -19,6 +19,8 @@ def convert_to_integer(string):
         -123
         >>> convert_to_integer("asd")
         None
+
+    Author: [@ahmedheltaher](https://github.com/ahmedheltaher)
     """
     if string == "":
         return None
