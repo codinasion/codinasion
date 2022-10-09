@@ -6,6 +6,7 @@ on:
 
 jobs:
   auto_create_issue:
+    if: "${{ github.event.pull_request.head.repo.full_name == github.repository }}"
     runs-on: ubuntu-latest
 
     steps:
@@ -31,7 +32,7 @@ jobs:
         with:
           AUTO_CREATE_ISSUE: true
           TOKEN: ${{ secrets.PAT }}
-      
+
       - name: Git Pull
         run: |
           git pull
