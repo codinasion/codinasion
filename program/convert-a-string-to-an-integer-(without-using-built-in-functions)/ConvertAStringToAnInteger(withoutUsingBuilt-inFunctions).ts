@@ -1,10 +1,3 @@
-// without using built-in functions
-
-// Language: typescript
-// Path: ConvertAStringToAnInteger(withoutUsingBuilt-inFunctions).ts
-// without using built-in functions
-
-
 /**
  * This function converts a string to an integer without using built-in functions with respect to the negative sign and the decimal point
  * @param {string} str - The string to be converted
