@@ -203,8 +203,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-10-07T18:46:27.887768Z",
     "createdIssueNumber": "0",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-09T10:17:54.696Z",
+    "created": true
   },
   {
     "title": "Convert binary to decimal",
@@ -248,8 +248,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T13:13:05.844Z",
     "createdIssueNumber": "255",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-09T01:39:43.562Z",
+    "created": true
   },
   {
     "title": "Convert centimeters to inches",
@@ -662,8 +662,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-10-07T18:46:27.887768Z",
     "createdIssueNumber": "0",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-09T06:24:06.387Z",
+    "created": true
   },
   {
     "title": "Convert string to kebabcase",
@@ -671,8 +671,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-10-07T18:46:27.887768Z",
     "createdIssueNumber": "0",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-09T08:20:58.754Z",
+    "created": true
   },
   {
     "title": "Convert string to lowercase",
@@ -734,8 +734,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-10-07T18:46:27.887768Z",
     "createdIssueNumber": "0",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-09T12:30:43.600Z",
+    "created": true
   },
   {
     "title": "Convert string to uppercase",
@@ -851,8 +851,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T06:52:55.954Z",
     "createdIssueNumber": "160",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-09T16:22:49.654Z",
+    "created": true
   },
   {
     "title": "Find area of a rectangle",
@@ -860,8 +860,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T06:48:21.795Z",
     "createdIssueNumber": "155",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-09T04:27:54.678Z",
+    "created": true
   },
   {
     "title": "Find area of a right angled triangle",
@@ -1319,8 +1319,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-10-07T18:46:27.887768Z",
     "createdIssueNumber": "0",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-08T20:24:41.570Z",
+    "created": true
   },
   {
     "title": "Find the determinant of a matrix",
@@ -1589,8 +1589,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T13:26:05.628Z",
     "createdIssueNumber": "269",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-09T18:19:54.709Z",
+    "created": true
   },
   {
     "title": "Print number to words in Indian numbering system",
@@ -1715,8 +1715,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-10-07T18:46:27.887768Z",
     "createdIssueNumber": "0",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-09T14:16:24.919Z",
+    "created": true
   },
   {
     "title": "Split string into array of words",
