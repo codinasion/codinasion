@@ -1,5 +1,14 @@
 [
   {
+    "title": "Binary Search",
+    "description": "Write a program for binary search\n\nBinary search is a search algorithm that finds the position of a target value within a sorted array. Binary search compares the target value to the middle element of the array. If they are not equal, the half in which the target cannot lie is eliminated and the search continues on the remaining half, again taking the middle element to compare to the target value, and repeating this until the target value is found. If the search ends with the remaining half being empty, the target is not in the array.\r\n\r\n```bash\r\nInput  : 10 20 30 40 50 60 70 80 90 100\r\nTarget : 30\r\n\r\nOutput : 2\r\n```\r\n\r\n### Steps to implement Binary Search\r\n\r\n1. Compare x with the middle element.\r\n2. If x matches with middle element, we return the mid index.\r\n3. Else If x is greater than the mid element, then x can only lie in right half subarray after the mid element. So we recur for right half.\r\n4. Else (x is smaller) recur for the left half.\r\n5. End\r\n\r\n```text\r\n10 20 30 40 50 60 70 80 90 100\r\n------------------------------\r\n            ^\r\n            30 => Not Found\r\n```\r\n\r\n```text\r\n10 20 30 40 50 60 70 80 90 100\r\n--------------\r\n      ^\r\n      30 => Found\r\n```\n",
+    "contributor": "PravunathSingh",
+    "createdAt": "2022-10-09T15:38:14.010Z",
+    "createdIssueNumber": "2558",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Linear Search",
     "description": "Write a program for linear search\n\nLinear search is a very simple search algorithm. In this type of search, a sequential search is made over all items one by one. Every item is checked and if a match is found then that particular item is returned, otherwise the search continues till the end of the data collection.\r\n\r\n```\r\nInput  : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\r\nTarget : 5\r\n\r\nOutput : 4\r\n```\n",
     "contributor": "harshraj8843",
