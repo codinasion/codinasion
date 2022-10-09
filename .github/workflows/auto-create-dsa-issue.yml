@@ -6,7 +6,8 @@ on:
 
 jobs:
   auto_create_dsa_issue:
-    if: "${{ github.event.pull_request.head.repo.full_name == github.repository }}"
+    # run only if repo is not a fork
+    if: github.repository == 'codinasion/program'
     runs-on: ubuntu-latest
 
     steps:
