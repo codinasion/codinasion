@@ -19,4 +19,5 @@ fn main() {
 
 }
 
+
 // Contributed by technical Amanjeet 
