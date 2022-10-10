@@ -9,8 +9,7 @@ int gcd(int a, int b)
             break;
         }
         result--;
-    }
-    return result; 
+    }return result;
 }
  
 int main()

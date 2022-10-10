@@ -6,8 +6,7 @@ function gcd(a,b)
             break;
         }
         result--;
-    }
-    return result; 
+    }return result; 
 }
 
 let a = 10;
