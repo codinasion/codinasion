@@ -1,4 +1,4 @@
-function kebabCase(str) {
+function dotcase(str) {
     let givenString = str.split('');
     for (let i = 0; i < givenString.length; i++) {
         if (givenString[i] == " ") {
@@ -9,4 +9,4 @@ function kebabCase(str) {
     return console.log(givenString);
 }
 
-kebabCase("hello world");
+dotcase("hello world");
