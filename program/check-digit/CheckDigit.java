@@ -1,15 +1,17 @@
-import java.util.*;
+import java.util.Scanner;
 
-class CheckDigit{
-    public static void main(String[] args){
+public class CheckDigit {
 
-        Scanner sc = new Scnner(System.in);
-        System.out.println("Enter a charcter");
-        char ch = sc.nextLine();
-        if (ch >= '0' & ch <= '9'){
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        char ch = sc.nextLine().charAt(0);
+        sc.close();
+
+        if (ch >= '0' & ch <= '9') {
             System.out.println("Digit");
-        }else{
+        } else {
             System.out.println("Not a Digit");
+
         }
     }
 }
