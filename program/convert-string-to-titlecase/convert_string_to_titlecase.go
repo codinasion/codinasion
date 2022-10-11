@@ -6,14 +6,12 @@ import (
 
 // Returns if the passed char is a lowercase letter
 func isLowercaseLetter(char string) bool {
-	runes := []rune(char)
-	return (runes[0] >= 97 && runes[0] <= 122)
+	return (char[0] >= 97 && char[0] <= 122)
 }
 
 // Returns if the passed char is a uppercase letter
 func isUppercaseLetter(char string) bool {
-	runes := []rune(char)
-	return (runes[0] >= 65 && runes[0] <= 90)
+	return (char[0] >= 65 && char[0] <= 90)
 }
 
 // Returns if the passed char is a letter (Comparing ascii codes)
@@ -24,7 +22,7 @@ func isLetter(char string) bool {
 // Returns the passed character uppercased
 func toUpperCaseChar(char string) string {
 	if isLowercaseLetter(string(char[0])) {
-		return string([]rune(char)[0] - 32)
+		return string(char[0] - 32)
 	}
 
 	return char
@@ -32,7 +30,7 @@ func toUpperCaseChar(char string) string {
 
 func toLowerCaseChar(char string) string {
 	if isUppercaseLetter(string(char)) {
-		return string([]rune(char)[0] + 32)
+		return string(char[0] + 32)
 	}
 
 	return char
