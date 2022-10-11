@@ -19,9 +19,14 @@ int main()
     assert(arrayLength < allocatedSize);
     array[arrayLength++] = str[i];
   }
-
+  printf("[");
   for (int i = 0; i < arrayLength; ++i)
+  {
+    printf("'");
     printf("%c ", array[i]);
+    printf("', ");
+  }
+  printf("]");
   free(array);
 
   return 0;
