@@ -32,8 +32,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-10-07T18:46:27.887768Z",
     "createdIssueNumber": "0",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-09T22:16:27.458Z",
+    "created": true
   },
   {
     "title": "Calculate the permutation of n objects taken r at a time",
@@ -77,8 +77,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T07:56:34.515Z",
     "createdIssueNumber": "174",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-10T16:26:40.857Z",
+    "created": true
   },
   {
     "title": "Check Even or Odd number",
@@ -158,8 +158,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T07:57:38.136Z",
     "createdIssueNumber": "175",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-10T18:27:07.913Z",
+    "created": true
   },
   {
     "title": "Check Upper Case",
@@ -338,8 +338,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T13:11:03.436Z",
     "createdIssueNumber": "254",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-10T20:18:50.091Z",
+    "created": true
   },
   {
     "title": "Convert feet to inches",
@@ -392,8 +392,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T12:49:20.094Z",
     "createdIssueNumber": "235",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-09T20:17:44.875Z",
+    "created": true
   },
   {
     "title": "Convert hours to minutes",
@@ -482,8 +482,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T13:19:55.114Z",
     "createdIssueNumber": "264",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-11T06:40:24.452Z",
+    "created": true
   },
   {
     "title": "Convert miles to kilometers",
@@ -680,8 +680,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-10-07T18:46:27.887768Z",
     "createdIssueNumber": "0",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-10T01:45:56.068Z",
+    "created": true
   },
   {
     "title": "Convert string to pascalcase",
@@ -698,8 +698,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-10-07T18:46:27.887768Z",
     "createdIssueNumber": "0",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-10T06:44:11.800Z",
+    "created": true
   },
   {
     "title": "Convert string to reversecase",
@@ -806,8 +806,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T13:05:15.975Z",
     "createdIssueNumber": "246",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-11T01:27:02.839Z",
+    "created": true
   },
   {
     "title": "Cylindrically rotate a matrix by 90 degrees",
@@ -851,8 +851,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T06:52:55.954Z",
     "createdIssueNumber": "160",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-09T16:22:49.654Z",
+    "created": true
   },
   {
     "title": "Find area of a rectangle",
@@ -941,8 +941,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T13:22:50.941Z",
     "createdIssueNumber": "266",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-11T04:09:19.551Z",
+    "created": true
   },
   {
     "title": "Find factorial of a number",
@@ -968,8 +968,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T08:13:29.945Z",
     "createdIssueNumber": "186",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-10T12:37:57.479Z",
+    "created": true
   },
   {
     "title": "Find GCD of two numbers by recursion",
@@ -995,8 +995,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-10-07T18:46:27.887768Z",
     "createdIssueNumber": "0",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-10T14:36:45.111Z",
+    "created": true
   },
   {
     "title": "Find LCM of two numbers",
@@ -1202,8 +1202,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T12:10:22.837Z",
     "createdIssueNumber": "204",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-10T10:17:51.658Z",
+    "created": true
   },
   {
     "title": "Find sum of n natural numbers using formula",
@@ -1292,8 +1292,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T12:15:26.705Z",
     "createdIssueNumber": "211",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-10T22:18:20.765Z",
+    "created": true
   },
   {
     "title": "Find the adjoint of a matrix",
@@ -1436,8 +1436,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T12:14:29.299Z",
     "createdIssueNumber": "210",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-10T08:27:39.226Z",
+    "created": true
   },
   {
     "title": "Find volume of a cuboid",
@@ -1589,8 +1589,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T13:26:05.628Z",
     "createdIssueNumber": "269",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-09T18:19:54.709Z",
+    "created": true
   },
   {
     "title": "Print number to words in Indian numbering system",
@@ -1625,8 +1625,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-10-07T18:46:27.887768Z",
     "createdIssueNumber": "0",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-10T04:12:33.006Z",
+    "created": true
   },
   {
     "title": "Print numbers from n to 1 without using a loop",
