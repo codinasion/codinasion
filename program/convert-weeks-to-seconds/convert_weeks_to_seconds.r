@@ -1,6 +1,6 @@
 
 
-number_of_seconds<-10080
+number_of_seconds<-604800
 
 noOfweeks<-scan(what = integer(),n=1);
 
