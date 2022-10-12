@@ -3,7 +3,7 @@ import re
 def run(string):
     regex = re.compile('[@_!#$%^&*()<>?/\|}{~:]')
     if (regex.search(string) == None):
-        print("Not special character found")
+        print("Not a special character found!")
     else:
         print("This is a special character")
 #driver code
