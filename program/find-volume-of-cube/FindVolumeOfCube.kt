@@ -1,6 +1,8 @@
 import java.util.Scanner
 import kotlin.math.pow
 
+// Contributed by Nudennie White / Tc2r1 www.github.com/tc2r1
+
 fun main(args: Array<String>) {
     val scanner = Scanner(System.`in`)
 
