@@ -1,17 +1,13 @@
-# importing Numpy package
+from array import ArrayType
 import numpy as np
 
-# creating a 3X3 Numpy matrix
-n_array = np.array([[1, 2, 3],
-					[4, 5, 6],
-					[7,8, 9]])
 
-# Displaying the Matrix
-print("Numpy Matrix is:")
-print(n_array)
+def create_line(i: int) -> ArrayType:
+    line_i = input(f"Line {i}: ").split()
+    return np.array(line_i, dtype=float)
 
-# calculating the determinant of matrix
-det = np.linalg.det(n_array)
 
-print("\nDeterminant of given 3X3 square matrix:")
-print(int(det))
+n = int(input("Matrix Dimension: "))
+matrix = [create_line(i) for i in range(n)]
+
+print(np.linalg.det(matrix))
