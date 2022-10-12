@@ -5,7 +5,7 @@ on:
 
 jobs:
   submit_program:
-    if: github.event.label.name == 'submit-program'
+    if: github.event.label.name == 'submit-program' && github.event.user.login == 'harshraj8843'
 
     runs-on: ubuntu-latest
 
