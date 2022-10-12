@@ -28,6 +28,5 @@ int main()
   }
   printf("]");
   free(array);
-
   return 0;
 }
