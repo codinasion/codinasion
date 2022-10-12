@@ -77,8 +77,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T07:56:34.515Z",
     "createdIssueNumber": "174",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-10T16:26:40.857Z",
+    "created": true
   },
   {
     "title": "Check Even or Odd number",
@@ -104,8 +104,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T07:51:16.431Z",
     "createdIssueNumber": "170",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-12T01:53:38.110Z",
+    "created": true
   },
   {
     "title": "Check Lower Case",
@@ -158,8 +158,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T07:57:38.136Z",
     "createdIssueNumber": "175",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-10T18:27:07.913Z",
+    "created": true
   },
   {
     "title": "Check Upper Case",
@@ -257,8 +257,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T13:14:01.236Z",
     "createdIssueNumber": "257",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-12T06:30:15.969Z",
+    "created": true
   },
   {
     "title": "Convert days to hours",
@@ -338,8 +338,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T13:11:03.436Z",
     "createdIssueNumber": "254",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-10T20:18:50.091Z",
+    "created": true
   },
   {
     "title": "Convert feet to inches",
@@ -482,8 +482,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T13:19:55.114Z",
     "createdIssueNumber": "264",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-11T06:40:24.452Z",
+    "created": true
   },
   {
     "title": "Convert miles to kilometers",
@@ -518,8 +518,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T12:46:46.750Z",
     "createdIssueNumber": "231",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-12T12:35:07.130Z",
+    "created": true
   },
   {
     "title": "Convert minutes to seconds",
@@ -590,8 +590,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T12:51:47.443Z",
     "createdIssueNumber": "239",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-12T22:17:13.026Z",
+    "created": true
   },
   {
     "title": "Convert seconds to hours",
@@ -617,8 +617,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T13:06:03.951Z",
     "createdIssueNumber": "247",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-12T20:19:23.328Z",
+    "created": true
   },
   {
     "title": "Convert string to alternatingcase",
@@ -635,8 +635,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-10-07T18:46:27.887768Z",
     "createdIssueNumber": "0",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-11T16:27:14.908Z",
+    "created": true
   },
   {
     "title": "Convert string to consonantcase",
@@ -725,8 +725,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-10-07T18:46:27.887768Z",
     "createdIssueNumber": "0",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-11T08:25:54.405Z",
+    "created": true
   },
   {
     "title": "Convert string to titlecase",
@@ -743,8 +743,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-10-07T18:46:27.887768Z",
     "createdIssueNumber": "0",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-12T14:34:59.559Z",
+    "created": true
   },
   {
     "title": "Convert string to vowelcase",
@@ -806,8 +806,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T13:05:15.975Z",
     "createdIssueNumber": "246",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-11T01:27:02.839Z",
+    "created": true
   },
   {
     "title": "Cylindrically rotate a matrix by 90 degrees",
@@ -842,8 +842,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T06:52:29.859Z",
     "createdIssueNumber": "159",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-11T18:23:20.340Z",
+    "created": true
   },
   {
     "title": "Find area of a cuboid",
@@ -887,8 +887,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T08:03:24.306Z",
     "createdIssueNumber": "180",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-11T20:20:03.995Z",
+    "created": true
   },
   {
     "title": "Find average of digits of a number by recursion",
@@ -941,8 +941,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T13:22:50.941Z",
     "createdIssueNumber": "266",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-11T04:09:19.551Z",
+    "created": true
   },
   {
     "title": "Find factorial of a number",
@@ -950,8 +950,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T06:40:07.478Z",
     "createdIssueNumber": "146",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-11T14:29:15.817Z",
+    "created": true
   },
   {
     "title": "Find factorial of a number by recursion",
@@ -1094,8 +1094,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-10-07T18:46:27.887768Z",
     "createdIssueNumber": "0",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-12T16:32:33.089Z",
+    "created": true
   },
   {
     "title": "Find second smallest number in an array",
@@ -1130,8 +1130,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T08:20:10.549Z",
     "createdIssueNumber": "192",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-12T18:25:48.262Z",
+    "created": true
   },
   {
     "title": "Find sum of AP series",
@@ -1229,8 +1229,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T11:38:26.588Z",
     "createdIssueNumber": "198",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-11T22:17:35.051Z",
+    "created": true
   },
   {
     "title": "Find sum of squares of numbers",
@@ -1292,8 +1292,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T12:15:26.705Z",
     "createdIssueNumber": "211",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-10T22:18:20.765Z",
+    "created": true
   },
   {
     "title": "Find the adjoint of a matrix",
@@ -1328,8 +1328,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-10-07T18:46:27.887768Z",
     "createdIssueNumber": "0",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-12T08:21:32.599Z",
+    "created": true
   },
   {
     "title": "Find the eigenvalues of a matrix",
@@ -1346,8 +1346,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-10-07T18:46:27.887768Z",
     "createdIssueNumber": "0",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-11T12:35:56.836Z",
+    "created": true
   },
   {
     "title": "Find the inverse of a",
@@ -1391,8 +1391,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-10-07T18:46:27.887768Z",
     "createdIssueNumber": "0",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-12T04:05:08.235Z",
+    "created": true
   },
   {
     "title": "Find the sum of all numbers in an array",
@@ -1418,8 +1418,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-10-07T18:46:27.887768Z",
     "createdIssueNumber": "0",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-11T10:19:08.772Z",
+    "created": true
   },
   {
     "title": "Find volume of a cone",
@@ -1661,8 +1661,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T08:06:10.300Z",
     "createdIssueNumber": "182",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-12T10:20:22.277Z",
+    "created": true
   },
   {
     "title": "Print reverse of a number by recursion",
