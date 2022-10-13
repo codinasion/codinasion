@@ -1,6 +1,6 @@
 ---
 title: Find minimum of n numbers
-trackId: 3750
+trackId: 3750 
 ---
 
 ## Write a program to find minimum of n numbers
