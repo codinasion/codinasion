@@ -302,8 +302,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T12:21:36.552Z",
     "createdIssueNumber": "216",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-13T14:21:25.366Z",
+    "created": true
   },
   {
     "title": "Convert decimal to hexadecimal",
@@ -500,8 +500,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T13:16:54.513Z",
     "createdIssueNumber": "260",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-13T10:14:36.917Z",
+    "created": true
   },
   {
     "title": "Convert minutes to days",
@@ -761,8 +761,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-10-07T18:46:27.887768Z",
     "createdIssueNumber": "0",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-13T12:25:49.639Z",
+    "created": true
   },
   {
     "title": "Convert time from 24-hour to 12-hour format",
@@ -1040,8 +1040,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T13:32:54.779Z",
     "createdIssueNumber": "276",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-13T08:17:26.095Z",
+    "created": true
   },
   {
     "title": "Find negative of a number",
