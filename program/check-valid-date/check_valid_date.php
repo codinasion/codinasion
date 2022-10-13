@@ -22,25 +22,25 @@ if ($month > 0 && $month < 13) {
             // if day is valid for month
             if ($month == 2) {
                 if ($day < 30 || ($day == 29 && $year % 4 == 0)) {
-                    echo 'valid';
+                    echo 'True';
                 } else {
-                    echo 'invalid';
+                    echo 'False';
                 }
             } else if ($month == 4 || $month == 6 || $month == 9 || $month == 11) {
                 if ($day < 31) {
-                    echo 'valid';
+                    echo 'True';
                 } else {
-                    echo 'invalid';
+                    echo 'False';
                 }
             } else {
-                echo 'valid';
+                echo 'True';
             }
         } else {
-            echo 'invalid';
+            echo 'False';
         }
     } else {
-        echo 'invalid';
+        echo 'False';
     }
 } else {
-    echo 'invalid';
+    echo 'False';
 }
