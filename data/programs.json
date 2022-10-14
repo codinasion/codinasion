@@ -311,8 +311,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T12:24:25.635Z",
     "createdIssueNumber": "218",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-13T18:21:56.949Z",
+    "created": true
   },
   {
     "title": "Convert decimal to octal",
@@ -455,8 +455,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T13:16:22.848Z",
     "createdIssueNumber": "259",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-14T06:43:24.975Z",
+    "created": true
   },
   {
     "title": "Convert meters to miles",
@@ -653,8 +653,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-10-07T18:46:27.887768Z",
     "createdIssueNumber": "0",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-14T01:20:15.145Z",
+    "created": true
   },
   {
     "title": "Convert string to dotcase",
@@ -689,8 +689,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-10-07T18:46:27.887768Z",
     "createdIssueNumber": "0",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-14T12:26:59.358Z",
+    "created": true
   },
   {
     "title": "Convert string to pathcase",
@@ -1112,8 +1112,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-10-07T18:46:27.887768Z",
     "createdIssueNumber": "0",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-13T22:15:05.169Z",
+    "created": true
   },
   {
     "title": "Find square of a number",
@@ -1301,8 +1301,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-10-07T18:46:27.887768Z",
     "createdIssueNumber": "0",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-14T08:19:08.301Z",
+    "created": true
   },
   {
     "title": "Find the average of all numbers in an array",
@@ -1382,8 +1382,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-10-07T18:46:27.887768Z",
     "createdIssueNumber": "0",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-13T20:14:13.578Z",
+    "created": true
   },
   {
     "title": "Find the rank of a matrix",
@@ -1499,8 +1499,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T13:07:18.152Z",
     "createdIssueNumber": "248",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-14T16:19:40.217Z",
+    "created": true
   },
   {
     "title": "Print ASCII value of a string",
@@ -1643,8 +1643,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-10-07T18:46:27.887768Z",
     "createdIssueNumber": "0",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-14T04:18:09.388Z",
+    "created": true
   },
   {
     "title": "Print Pattern 1",
@@ -1652,8 +1652,8 @@
     "contributor": "PraaneshSelvaraj",
     "createdAt": "2022-10-07T13:32:43.003Z",
     "createdIssueNumber": "2153",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-14T14:31:40.379Z",
+    "created": true
   },
   {
     "title": "Print reverse of a number",
@@ -1742,7 +1742,7 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T13:31:33.500Z",
     "createdIssueNumber": "273",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-14T10:14:30.348Z",
+    "created": true
   }
 ]
