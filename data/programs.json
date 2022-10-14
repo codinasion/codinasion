@@ -689,8 +689,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-10-07T18:46:27.887768Z",
     "createdIssueNumber": "0",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-14T12:26:59.358Z",
+    "created": true
   },
   {
     "title": "Convert string to pathcase",
@@ -1364,8 +1364,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-10-07T18:46:27.887768Z",
     "createdIssueNumber": "0",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-14T18:17:00.603Z",
+    "created": true
   },
   {
     "title": "Find the maximum sum of a contiguous subarray (Circular)",
@@ -1499,8 +1499,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T13:07:18.152Z",
     "createdIssueNumber": "248",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-14T16:19:40.217Z",
+    "created": true
   },
   {
     "title": "Print ASCII value of a string",
@@ -1652,8 +1652,8 @@
     "contributor": "PraaneshSelvaraj",
     "createdAt": "2022-10-07T13:32:43.003Z",
     "createdIssueNumber": "2153",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-14T14:31:40.379Z",
+    "created": true
   },
   {
     "title": "Print reverse of a number",
@@ -1742,7 +1742,7 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T13:31:33.500Z",
     "createdIssueNumber": "273",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-14T10:14:30.348Z",
+    "created": true
   }
 ]
