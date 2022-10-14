@@ -1,5 +1,4 @@
 import java.util.*
-import kotlin.math.pow
 
 fun decToBinary(n: Int) {
         var num = n
