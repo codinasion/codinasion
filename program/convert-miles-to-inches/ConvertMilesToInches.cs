@@ -10,11 +10,6 @@ public class ConvertMilesToInches
 		    return;
 	    }
         int miles = Int32.Parse( args[0]);
-        Console.WriteLine(ConvertMilesToInches(miles));
+        Console.WriteLine(miles * 63360);
     }
-
-    static int ConvertMilesToInches(int miles)
-    {
-        return miles * 63360;
-    } 
 }  
