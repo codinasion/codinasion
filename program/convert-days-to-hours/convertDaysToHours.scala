@@ -4,5 +4,5 @@ def convertDaysToHours(days: Int): Int = {
 };
 
 var days_to_convert: Int = 5 ;
-val hours:Int =  convertDaysToHours(days_to_convert) ; 
+var hours:Int =  convertDaysToHours(days_to_convert) ; 
 println(hours) ;
