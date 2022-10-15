@@ -1,14 +1,30 @@
 #include <iostream>
 #include <math.h>
+#include <vector>
+
 using namespace std;
 
-int main()
-{
-    int n  ;
-    cout<<"Enter a no. : "<<endl; 
-    cin>>n ;
+int findArithmeticProgressionSum(vector<int> v) {
 
-    cout<<"Square of "<<n<<" is "<<pow(n,2) ;
+  int n = v.size();
 
-    return 0;
+  if (n == 1) {
+    return v[0];
+  }
+
+  int a = v[0];
+  int d = v[1] - a;
+
+  int an = a + (n - 1) * d;
+
+  return n / 2 * (a + an);
+}
+
+int main() {
+
+  vector<int> v = {-2, 4, 10, 16, 22};
+
+  cout << findArithmeticProgressionSum(v);
+
+  return 0;
 }
