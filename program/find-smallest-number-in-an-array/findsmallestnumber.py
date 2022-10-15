@@ -1,5 +1,5 @@
 #PYTHON program to find smallest number
-l=[ int(l) for l in input("List:").split(",")]
+l=[ int(l) for l in input("Create an array:").split(",")]
 print("Your list is",l)
 #Assign first element as minimum
 min1=l[0]
