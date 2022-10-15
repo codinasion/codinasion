@@ -113,8 +113,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T08:00:12.709Z",
     "createdIssueNumber": "177",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-15T10:12:33.470Z",
+    "created": true
   },
   {
     "title": "Check Palindrome Number",
@@ -194,8 +194,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-10-07T18:46:27.887768Z",
     "createdIssueNumber": "0",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-15T16:16:37.339Z",
+    "created": true
   },
   {
     "title": "Convert a string to an integer (without using built-in functions)",
@@ -293,8 +293,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T12:53:04.305Z",
     "createdIssueNumber": "241",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-15T14:13:35.254Z",
+    "created": true
   },
   {
     "title": "Convert decimal to binary",
@@ -509,8 +509,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T12:50:29.602Z",
     "createdIssueNumber": "237",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-15T08:16:47.047Z",
+    "created": true
   },
   {
     "title": "Convert minutes to hours",
@@ -770,8 +770,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-10-07T18:46:27.887768Z",
     "createdIssueNumber": "0",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-15T06:24:02.466Z",
+    "created": true
   },
   {
     "title": "Convert weeks to days",
@@ -1139,8 +1139,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-10-07T18:46:27.887768Z",
     "createdIssueNumber": "0",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-10-15T12:23:03.721Z",
+    "created": true
   },
   {
     "title": "Find sum of cubes of numbers",
