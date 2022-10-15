@@ -1,5 +1,5 @@
 void main() {
-  int seconds = convertDaysToSeconds(5);
+  print(convertDaysToSeconds(5));
 }
 
 int convertDaysToSeconds(int days) {
