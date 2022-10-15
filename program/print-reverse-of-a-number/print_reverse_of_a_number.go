@@ -2,21 +2,24 @@ package main
 
 import "fmt"
 
-func reverseNumber(num int) int {
+func reverse(s string) string {
+	rns := []rune(s)
+	for i, j := 0, len(rns)-1; i < j; i, j = i+1, j-1 {
 
-	res := 0
-	for num > 0 {
-		remainder := num % 10
-		res = (res * 10) + remainder
-		num /= 10
+		rns[i], rns[j] = rns[j], rns[i]
 	}
-	return res
+
+	return string(rns)
 }
 
 func main() {
-	var reverseNo int
-	fmt.Print("Enter any Number to find its Reverse = ")
-	fmt.Scanln(&reverseNo)
 
-	fmt.Println(reverseNumber(reverseNo))
+	var revnum string
+
+	fmt.Print("Enter the Number to Reverse = ")
+	fmt.Scanln(&revnum)
+
+	reverse := reverse(revnum)
+
+	fmt.Println("The Reverse of the Given Number = ", reverse)
 }
