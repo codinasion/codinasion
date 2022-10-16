@@ -9,14 +9,14 @@ public class IntOrFloat {
         String number = br.readLine();
         boolean isInt = false;
         boolean isFloat = false;
-        try{
+        try {
             Integer.parseInt(number);
             isInt = true;
         } catch (NumberFormatException ignored) {
 
         }
 
-        try{
+        try {
             Float.parseFloat(number);
             isFloat = true;
         } catch (NumberFormatException ignored) {
@@ -25,11 +25,9 @@ public class IntOrFloat {
 
         if (isInt) {
             System.out.println("Integer");
-        }
-        else if (isFloat) {
+        } else if (isFloat) {
             System.out.println("Float");
-        }
-        else {
+        } else {
             System.out.println("Neither Integer nor Float");
         }
 
