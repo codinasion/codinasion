@@ -8,5 +8,9 @@ import (
 func main() {
 	var char rune
 	fmt.Scanf("%c", &char)
-	fmt.Println(unicode.IsLower(char))
+	if unicode.IsLower(char) {
+		fmt.Printf("Character '%c' is lower case\n", char)
+	} else {
+		fmt.Printf("Character '%c' is not in lower case\n", char)
+	}
 }
