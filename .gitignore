@@ -132,3 +132,14 @@ dist
 
 ######################
 **.class
+.vscode/settings.json
+.metals/*
+.bsp/sbt.json
+target/.history3
+target/scala-2.12/sync/copy-resource
+project/target/active.json
+target/scala-2.12/*
+target/streams/*
+project/target/streams/compile/*
+project/target/streams/runtime/*
+project/*
