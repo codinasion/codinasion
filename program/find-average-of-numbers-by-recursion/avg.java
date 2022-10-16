@@ -1,4 +1,4 @@
-class avg
+public class avg
 {
     // a is array, i is index and n is size of array
     static double avgRec(int a[], int i, int n)
