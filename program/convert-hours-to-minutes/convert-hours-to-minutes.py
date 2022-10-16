@@ -1,21 +1,18 @@
-def convertHoursToMinutes(hours:float) -> float:
+def convertHoursToMinutes(hours: float) -> float:
     """
     convert hours to minutes
     Arguments:
-        hours:float 
+        hours:float
     Returns:
         minutes:float
     """
 
-    return hours*60
+    return hours * 60
 
 
 if __name__ == "__main__":
-    Hours = int(input("Type number of hours : "))
-    print("number of minutes is",convertHoursToMinutes(Hours))
+    hours = float(input("Type number of hours: "))
+    print("Number of minutes is:", convertHoursToMinutes(hours))
 
 
-
-
-
-#contributed by MedMly20208 Mohamed Moulay
+# contributed by MedMly20208 Mohamed Moulay
