@@ -14,6 +14,14 @@ An open source codebase for sharing programming solutions.
 
 <br>
 
+> **Warning** This repository has been `excluded` from Hacktoberfest 2022.
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/codinasion/.github/master/assets/rainbow-hr.png" alt="rainbow hr" width="100%" height="70%">
+</div>
+
+<br>
+
 > **Note** We accept `assignment based` contributions only. Please read [CONTRIBUTING.md][9] for more details.
 >
 > Comment `!assign` on the issue you want to contribute to.
