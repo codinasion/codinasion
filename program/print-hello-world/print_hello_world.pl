@@ -3,8 +3,9 @@
 # Desciption
 # Hello World !!!
 
-
-print "Enter a number: ";
-
+use strict;
+use warnings;
+  
+print("Hello World");
 
 # contribute by technical amanjeet
