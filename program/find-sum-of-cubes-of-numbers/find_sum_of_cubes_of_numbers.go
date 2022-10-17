@@ -5,7 +5,7 @@ import "fmt"
 func findArraySum(arr []int) int {
 	res := 0
 	for i := 0; i < len(arr); i++ {
-		res += arr[i] * 3
+		res += arr[i] * arr[i] * arr[i]
 	}
 	return res
 }
