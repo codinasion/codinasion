@@ -5,7 +5,7 @@ on:
 
 jobs:
   submit_dsa:
-    if: github.event.label.name == 'submit-dsa'
+    if: github.event.label.name == 'submit-dsa' && github.event.issue.user.login == 'harshraj8843'
 
     runs-on: ubuntu-latest
 
