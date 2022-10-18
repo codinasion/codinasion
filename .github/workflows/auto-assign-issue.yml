@@ -9,8 +9,6 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    using: "node16"
-
     steps:
       - name: Checkout
         uses: actions/checkout@v3
