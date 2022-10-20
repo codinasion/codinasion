@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class DaysToHours {
+public class ConvertDaysToHours {
 
 	public static void main(String[] args) {
 
@@ -8,9 +8,10 @@ public class DaysToHours {
 
 		Scanner sc = new Scanner(System.in);
 
-		System.out.println("Enter days:");
+		System.out.print("Enter days: ");
 		days = sc.nextInt();
-
+		sc.close();
+		
 		long hours = days * 24;
 
 		System.out.println(hours + " hr");
