@@ -3,6 +3,7 @@ package main
 import "fmt"
 
 func main() {
+var a, b int
 	fmt.Println("Enter value of a:")
 	fmt.Scan(&a)
 	fmt.Println("Enter value of b:")
