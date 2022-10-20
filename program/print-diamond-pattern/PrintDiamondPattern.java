@@ -1,6 +1,6 @@
 import java.util.*;
  
-class Main
+class PrintDiamondPattern
 {
     static void printDiamond(int n)
     {
