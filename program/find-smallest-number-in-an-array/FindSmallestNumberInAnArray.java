@@ -6,7 +6,7 @@ class FindSmallestNumberInAnArray {
 	}
 
 	private static double findSmallestNumber(double[] array) {
-		double smallest = 99999999;
+		double smallest = array[0];
 
 		for (int i = 0; i < array.length; i++) {
 			double currentItem = array[i];
