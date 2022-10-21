@@ -14,15 +14,15 @@ double FindAverageByRecursion(double arr[], int index, int num)
 }
 int main()
 {
-    int numEle = 6;
+    int numEle;
     cout << "Enter the number of elements :";
-    // cin >> numEle;
+    cin >> numEle;
 
-    double arr[] = {1,2,3,4,5,6};
-    // for (int i = 0; i < numEle; ++i)
-    // {
-    //     cin >> arr[i];
-    // }
+    double arr[numEle];
+    for (int i = 0; i < numEle; ++i)
+    {
+        cin >> arr[i];
+    }
     cout << "Average : " << FindAverageByRecursion(arr, 0, numEle);
     return 0;
 }
