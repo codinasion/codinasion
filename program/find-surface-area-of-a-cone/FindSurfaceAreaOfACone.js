@@ -22,5 +22,5 @@ function FindSurfaceAreaOfACone(radius, slantHeight) {
 console.log("Area of cone of radius 2 and slant-height 3: ");
 console.log("That is " + FindSurfaceAreaOfACone(2, 3) + " // 31.41592653589793");
 
-console.log("Numer of weeks in 3024000 seconds: ");
-console.log("That is " + FindSurfaceAreaOfACone(5, 10) + " // 235.61944901923448")
+console.log("Area of cone of radius 5 and slant-height 10: ");
+console.log("That is " + FindSurfaceAreaOfACone(5, 10) + " // 235.61944901923448");
