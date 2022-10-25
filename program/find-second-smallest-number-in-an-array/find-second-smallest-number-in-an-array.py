@@ -1,13 +1,7 @@
-"""
-There are multiple ways to find the smallest number in an array.
-But the simplest way is to use the sort() method provided by python, to sort the array in ascending order.
-"""
-# Python prog to illustrate the following in a list
-def find_len(list1):
-    length = len(list1)
-    list1.sort()
-    print("Second Smallest element is:", list1[1])
- 
-# Driver Code
-list1=[1, 2, 3, 4, 5]
-Largest = find_len(list1)
+def find_len(n):
+    l = [input(f"Element {i + 1}: ") for i in range(n)]
+    l.sort()
+    print("\nSecond smallest element is:", l[1])
+
+size_list = int(input("What's the size of the list: "))
+find_len(size_list)
