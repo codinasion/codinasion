@@ -1,5 +1,3 @@
-package com.labs1904.hwe.exercises
-
 object findPerimeterOfASquare {
   def  findPerimeterOfASquare(side: Double) =
     4 * side
