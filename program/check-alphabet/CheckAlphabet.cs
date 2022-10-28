@@ -6,7 +6,7 @@ class CheckAlphabet {
     {
         Console.WriteLine("Input a character: ");
         char ch = (char)Console.Read();
-        if(Char.IsLetter(ch));
+        
         if (Char.IsLetter(ch)) {
              Console.WriteLine(ch + " is an alphabet");
         } else {
