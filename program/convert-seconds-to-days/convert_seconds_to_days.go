@@ -3,8 +3,8 @@ package main
 import "fmt"
 
 func main() {
-	var input int
+	var input float64
 	fmt.Printf("Input: ")
 	fmt.Scan(&input)
-	fmt.Println("Output:", input/86400)
+	fmt.Printf("Output: %.5f\n", input/86400)
 }
