@@ -1,33 +1,25 @@
-import math
+from math import pi
 
 
-def findSurfaceAreaOfACone(radius:float,slantHeight:float) -> None:
+def findSurfaceAreaOfACone(radius:float, slantHeight:float) -> None:
     """
     find surface Area of A Cone 
     Arguments:
-        radius:float
-        slantHeight:float
+        radius: float
+        slantHeight: float
     Returns:
-        SurfaceArea : float
-
-
-    Surface area of cone = π*  radius * ( radius + sqrt( radius^2 + slantHeight^2 ))
-
-
+        SurfaceArea: float
+    Surface area of cone = π * radius * (radius + slantHeight)
     """
 
-    return math.pi*radius*(radius+math.sqrt(math.pow(radius,2)+math.pow(slantHeight,2)))
+    return pi * radius * (radius + slantHeight)
 
 
 if __name__ == "__main__":
-    Radius = float(input("Type Radius : "))
-    slantHeight = float(input("Type slant height : "))
+    Radius = float(input("Type Radius: "))
+    slantHeight = float(input("Type slant height: "))
 
 
     print(findSurfaceAreaOfACone(Radius,slantHeight))
-
-
-
-
 
 #contributed by MedMly20208 Mohamed Moulay
