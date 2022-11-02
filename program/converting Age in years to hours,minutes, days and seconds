@@ -1,0 +1,33 @@
+#include <iostream>
+
+using namespace std;
+
+long long main()
+
+{
+    long long years;
+
+    cout << "How many years have you lived: " ;
+
+    cin >> years;
+
+    cout << "You have lived: " << years; cout << " years:" << endl;
+
+   long long days = 0.5 + (years * 365.25);
+
+    cout << days; cout << " days" << endl;
+
+    long long hours = days * 24;
+
+    cout << hours; cout << " hours" << endl;
+
+    long long minutes = hours * 60;
+
+    cout << minutes; cout << " minutes" << endl;
+
+    long long seconds = minutes * 60;
+
+    cout << seconds; cout << " seconds" << endl;
+
+    return 0;
+}
