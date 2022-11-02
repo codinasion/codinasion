@@ -1,2 +1,1 @@
-arr=list(input().strip().split())
-print(max(arr))
+print(max(map(lambda x: int(x), list(input("Enter the values: ").strip().split()))))
