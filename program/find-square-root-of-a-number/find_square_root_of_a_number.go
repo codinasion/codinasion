@@ -7,5 +7,5 @@ func main() {
   fmt.Print("Type a number: ")
   fmt.Scan(&i)
   result := math.Sqrt(i)
-  fmt.Println("Your square root is:", i)
+  fmt.Println("Your square root is:", result)
 }
