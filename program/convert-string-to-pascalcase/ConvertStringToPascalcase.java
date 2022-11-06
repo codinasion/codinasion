@@ -25,7 +25,7 @@ public class ConvertStringToPascalcase {
             titleCase.append(c);
         }
 
-        return titleCase.toString();
+        return titleCase.toString().replaceAll("\\s", "");
     }
 
 }
