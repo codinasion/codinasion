@@ -1,0 +1,14 @@
+{
+  "name": "program",
+  "version": "1.0.0",
+  "main": "action.js",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "dependencies": {
+    "@actions/core": "^1.9.0",
+    "node-fetch": "^3.2.10"
+  }
+}
