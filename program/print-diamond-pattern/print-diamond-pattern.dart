@@ -2,8 +2,10 @@ import 'dart:io';
 
 void main() {
   int i, j, k, m = 1;
-  print("Enter the number:");
+  
+  print("Enter the number : ");
   int? n = int.parse(stdin.readLineSync()!);
+  
   print("$n");
   for ( i =1; i <= n; i++) {
     for (j = 1; j <= n - i; j++) {
@@ -14,6 +16,7 @@ void main() {
     }
     stdout.writeln("");
   }
+  
   for ( i = n-1; i >= 1; i--) {
     for ( j = 1; j <= m; j++) {
       stdout.write(" ");
@@ -25,5 +28,3 @@ void main() {
     stdout.writeln("");
   }
 }
-
-
