@@ -7,7 +7,11 @@ void PrintNum(int);
 
 int main()
 {
-    PrintNum(5);
+    std::cout << "Enter a num: ";
+    int n;
+    std::cin >> n;
+
+    PrintNum(n);
     return 0;
 }
 
