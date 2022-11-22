@@ -16,5 +16,6 @@ class StringToSnakecase
                 string.setCharAt(i,'_');
             }
         System.out.println(string);
+       
     }
 }
