@@ -9,7 +9,7 @@ fun main() {
 
 }
 
-private fun ConvertMilesToMeters(miles: Int): Double {
+private fun ConvertMilesToMeters(miles: Double): Double {
     val meter = miles*1609.344;
 
     return  meter
