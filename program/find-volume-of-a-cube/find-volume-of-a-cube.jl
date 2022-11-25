@@ -10,4 +10,4 @@ cube = num * num * num
 
 println(cube)
 
-# contributed by Technical Amanjeet 
+# contributed by Technical Amanjeet
