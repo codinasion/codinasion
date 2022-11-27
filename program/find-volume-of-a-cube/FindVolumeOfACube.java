@@ -1,14 +1,17 @@
+package MyClass;
 import java.util.Scanner;
+public class FindVolumeOfCube {
 
-class VolumeOfACube{
-    public static void main(String[] args)
-    {
-        // Take input from user
-        System.out.println("Enter Length of Side of Cube");
-        Scanner scanner = new Scanner(System.in);
-        Double side = scanner.nextDouble();
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		
+		 int edge   = sc.nextInt();
+		 int volume = edge * edge * edge ;
+		 
+		 System.out.println(volume);
+				
 
-        Double volume = side*side*side;
-        System.out.format("Volume of the cube = %.2f" + volume);
-    }
+	}
+
 }
