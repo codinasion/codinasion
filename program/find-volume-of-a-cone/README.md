@@ -11,7 +11,7 @@ Volume of cone = 1/3 × π × `Radius`^2 × `Height`
 Radius : 2
 Height : 3
 
-Volume : 25.132741228718345
+Volume : 12.566370614359
 ```
 
 ---
