@@ -72,5 +72,5 @@ We use GitHub Discussions to talk about all sorts of topics related to documenta
 [8]: https://github.com/codinasion/program/graphs/commit-activity
 [9]: ./CONTRIBUTING.md "Contributing Guide"
 [10]: https://github.com/codinasion/program/issues "Issues"
-[11]: https://github.com/codinasion/program/discussions "Discussions"
+[11]: https://github.com/orgs/codinasion/discussions "Discussions"
 [12]: ./types-of-contributions.md "Types of Contributions"
