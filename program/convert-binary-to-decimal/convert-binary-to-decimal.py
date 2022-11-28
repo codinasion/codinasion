@@ -10,4 +10,3 @@ while n>0:
     decimal += rem*power
     power = power*2
 print(decimal)
-
