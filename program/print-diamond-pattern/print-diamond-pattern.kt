@@ -14,7 +14,7 @@ fun drawDiamond(rows: Int) {
         println()
         k = 0
     }
-        
+
     for (i in rows-1 downTo 1) {
 
         for (space in 1..rows - i) {
@@ -33,8 +33,8 @@ fun drawDiamond(rows: Int) {
     }
 }
 
-fun main(args: Array<String>) {
-    print("Enter No. to Print Diamond Pattern: ")
-    val num = readln().toInt()
+fun main() {
+    val num = 5
+    print("\n")
     drawDiamond(num)
 }
