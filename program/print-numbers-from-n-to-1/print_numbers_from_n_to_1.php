@@ -4,13 +4,13 @@
 # Output : 5 4 3 2 1 -->
 
 <?php
-  $num = 5
+  $num = 5;
 
-  $i = num
+  $i = $num;
 
-  for ($i = num; $i > 0; $i--) 
+  for ($i = $num; $i > 0; $i--) 
   { 
-    echo"$i "
+    echo"$i ";
 
   }
 
