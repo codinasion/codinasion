@@ -10,7 +10,7 @@ class VolumeaOfCuboid
         // Applying the formula
         double hours = number * 168;
 
-        Console.WriteLine("Total hours in "+ number + " weeks is  : " + Length);
+        Console.WriteLine("Total hours in "+ number + " weeks is  : " + hours);
         ;
     }
 }
