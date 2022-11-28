@@ -14,14 +14,6 @@ An open source codebase for sharing programming solutions.
 
 <br>
 
-> **Warning** This repository has been `excluded` from Hacktoberfest 2022.
-
-<div align="center">
-  <img src="https://raw.githubusercontent.com/codinasion/.github/master/assets/rainbow-hr.png" alt="rainbow hr" width="100%" height="70%">
-</div>
-
-<br>
-
 > **Note** We accept `assignment based` contributions only. Please read [CONTRIBUTING.md][9] for more details.
 >
 > Comment `!assign` on the issue you want to contribute to.
@@ -80,5 +72,5 @@ We use GitHub Discussions to talk about all sorts of topics related to documenta
 [8]: https://github.com/codinasion/program/graphs/commit-activity
 [9]: ./CONTRIBUTING.md "Contributing Guide"
 [10]: https://github.com/codinasion/program/issues "Issues"
-[11]: https://github.com/codinasion/program/discussions "Discussions"
+[11]: https://github.com/orgs/codinasion/discussions "Discussions"
 [12]: ./types-of-contributions.md "Types of Contributions"
