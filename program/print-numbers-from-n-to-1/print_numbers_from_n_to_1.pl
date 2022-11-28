@@ -5,7 +5,8 @@
 
 $num = 5;
 
-$i = num
+$i = num;
+
 do {
    print "$i ";
    $i -= 1;
