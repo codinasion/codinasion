@@ -16,7 +16,7 @@ func main(){
  var i int = num
  for i > 0{
 	 fmt.Println(i)
-	 x--
+	 i--
  }
 }
 
