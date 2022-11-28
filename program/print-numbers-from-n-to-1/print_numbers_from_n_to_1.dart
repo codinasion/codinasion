@@ -7,7 +7,7 @@ import 'dart:io';
  
 void main() {
   print('Enter Number : ');
-  int num = int.parse(stdin.readLineSync()!);
+  int num = int.parse(stdin.readLineSync());
  
   int i = num;
 
