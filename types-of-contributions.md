@@ -39,7 +39,7 @@ When we merge those changes, they should be deployed to the live site within 24 
 [3]: ./CONTRIBUTING.md#make-changes "Make changes"
 [4]: ./CONTRIBUTING.md#solve-an-issue "Solve an Issue"
 [5]: https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue "Link PR to an Issue"
-[6]: https://github.com/codinasion/program/discussions "Discussions"
+[6]: https://github.com/orgs/codinasion/discussions "Discussions"
 [7]: https://github.com/codinasion/program/issues/new/choose "Issue Template"
 [8]: https://github.com/codinasion/program/pulls "Pull Requests"
 [9]: https://codinasion.org/ "Work In Progress"

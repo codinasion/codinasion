@@ -128,3 +128,13 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+
+######################
+**.class
+**.exe
+.vscode/
+.metals/*
+.bsp/
+target/
+project/
