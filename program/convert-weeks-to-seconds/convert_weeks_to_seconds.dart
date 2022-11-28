@@ -9,7 +9,7 @@ import 'dart:io';
  
 void main() {
   print('Enter Number of Weeks : ');
-  int num_of_weeks = int.parse(stdin.readLineSync()!);
+  int num_of_weeks = int.parse(stdin.readLineSync());
  
   int total_seconds = num_of_weeks * 604800;
  
