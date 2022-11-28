@@ -11,7 +11,7 @@ public class ConvertDaysToHours {
 		System.out.print("Enter days: ");
 		days = sc.nextInt();
 		sc.close();
-		
+
 		long hours = days * 24;
 
 		System.out.println(hours + " hr");
