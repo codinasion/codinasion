@@ -8,7 +8,7 @@ object convertStringToConstantcase {
         var finalStr = ""
         //Loop to iterate over the words
         for (i <- 0 until strArrayLength) {
-            finalStr += strArray(i).upperCase
+            finalStr += strArray(i).toUpperCase
             // If it is not the last word of the string add underscore then proceed
             if (i != strArrayLength - 1) {
                 finalStr += "_"
@@ -16,9 +16,9 @@ object convertStringToConstantcase {
         }
         return finalStr
   }
-  def main(args: Array[String]): Unit = {
-    val str = "Hello World"
-    println(printConstantcase(str))
+    def main(args: Array[String]): Unit = {
+        val str = "Hello World"
+    	println(printConstantcase(str))
   }
-  
+
 }
