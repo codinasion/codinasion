@@ -1,1 +1,3 @@
-import inflect; print(inflect.engine().number_to_words(int(input())).title())
+import inflect
+
+print(inflect.engine().number_to_words(int(input())).title())

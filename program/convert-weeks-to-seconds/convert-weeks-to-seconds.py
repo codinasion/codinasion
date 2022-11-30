@@ -13,4 +13,4 @@ total_seconds = num_of_weeks * 604800
 
 print(f"Total seconds in ${num_of_weeks} is ${total_seconds}")
 
-# Contributed by technical amanjeet 
+# Contributed by technical amanjeet

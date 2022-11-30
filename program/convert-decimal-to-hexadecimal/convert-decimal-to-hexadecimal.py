@@ -1,1 +1,1 @@
-print(hex(int(input())).split('x')[-1])
+print(hex(int(input())).split("x")[-1])

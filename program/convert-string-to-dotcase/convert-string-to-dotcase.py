@@ -1,3 +1,3 @@
-a=input()
-b=a.replace(' ','.')
+a = input()
+b = a.replace(" ", ".")
 print(b.lower())

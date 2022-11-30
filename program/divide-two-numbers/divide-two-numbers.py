@@ -1,3 +1,3 @@
-a,b=map(int,input().split())
-ans=a/b
+a, b = map(int, input().split())
+ans = a / b
 print(ans)

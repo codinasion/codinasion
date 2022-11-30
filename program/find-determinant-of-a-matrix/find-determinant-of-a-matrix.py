@@ -1,4 +1,5 @@
 from array import ArrayType
+
 import numpy as np
 
 
