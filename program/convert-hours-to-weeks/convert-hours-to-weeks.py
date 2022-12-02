@@ -1,4 +1,4 @@
-#Contributed by Raghav Garg (grraghav120)
+# Contributed by Raghav Garg (grraghav120)
 ##ConvertHoursToWeeks.py
 
 # 1 week = 7 days = 168 hours
@@ -7,6 +7,5 @@
 # 1 hrs=1/168 week
 
 
-hours=int(input())
-print(hours/168)
-
+hours = int(input())
+print(hours / 168)

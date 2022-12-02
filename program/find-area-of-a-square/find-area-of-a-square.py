@@ -1,1 +1,1 @@
-print("Area:", int(input("Side: "))**2)
+print("Area:", int(input("Side: ")) ** 2)

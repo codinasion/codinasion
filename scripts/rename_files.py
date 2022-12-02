@@ -1,5 +1,5 @@
-import os
 import json
+import os
 
 # read language data
 language_data = json.load(open("data/languages.json", "r"))

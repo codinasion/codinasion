@@ -1,1 +1,1 @@
-print(int(input())/7)
+print(int(input()) / 7)

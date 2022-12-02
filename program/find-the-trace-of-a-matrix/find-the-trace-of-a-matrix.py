@@ -8,7 +8,7 @@ except:
 
 sm = 0
 
-for i in range(len(arr)) :
+for i in range(len(arr)):
     sm += arr[i][i]
-    
+
 print(sm)

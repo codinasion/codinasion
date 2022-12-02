@@ -1,6 +1,7 @@
 def HexToOct(h):
     return oct(int(h, 16))
 
+
 print("Input  : ", end="")
 hnum = input()
 

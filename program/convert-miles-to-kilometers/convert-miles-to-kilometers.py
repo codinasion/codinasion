@@ -8,7 +8,7 @@ if distancemiles.isdigit():
     # converting string type to floating type
     distancemiles = float(distancemiles)
     # calculating on basis of formula
-    distancekilometer = (distancemiles * 1.609)
+    distancekilometer = distancemiles * 1.609
     # printing the output
     print(f"Distance in kilometer is: {distancekilometer} km")
 

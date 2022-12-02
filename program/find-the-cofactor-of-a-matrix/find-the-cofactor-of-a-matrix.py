@@ -1,4 +1,5 @@
 from typing import List
+
 import numpy as np
 
 
@@ -24,9 +25,7 @@ def compute_cofactor_matrix(matrix: List[List[int]]) -> np.ndarray:
     return cofactor_matrix.reshape((n_lines, n_columns))
 
 
-print(compute_cofactor_matrix([[1, 2, 3], 
-                               [4, 5, 6], 
-                               [7, 8, 9]]))
+print(compute_cofactor_matrix([[1, 2, 3], [4, 5, 6], [7, 8, 9]]))
 
 """ Output:
 [[ -3.   6.  -3.]

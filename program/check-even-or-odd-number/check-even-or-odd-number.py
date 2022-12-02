@@ -1,10 +1,9 @@
-#Checks if the input number is even or odd
+# Checks if the input number is even or odd
 
 
-#Solution
+# Solution
 def checkEven(num):
-    return ((num % 2) == 0)
-
+    return (num % 2) == 0
 
 
 isEven = checkEven(3)

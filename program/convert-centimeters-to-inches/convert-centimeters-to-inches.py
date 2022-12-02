@@ -1,2 +1,2 @@
-n=float(input())
-print(n/2.54)
+n = float(input())
+print(n / 2.54)

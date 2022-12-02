@@ -6,12 +6,14 @@ def findGCD(x, y):
             y = y - x
     return x
 
+
 def findLCM(x, y):
-    z = x*y
+    z = x * y
     gcd = findGCD(x, y)
-    lcm = int(z/gcd)
+    lcm = int(z / gcd)
     return lcm
+
 
 x = int(input("n1: "))
 y = int(input("n2: "))
-print(f'LCM of {x} and {y} : {findLCM(x,y)}')
+print(f"LCM of {x} and {y} : {findLCM(x,y)}")
