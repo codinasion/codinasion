@@ -1,8 +1,9 @@
 const diamondPattern = (n) => {
-   let total = n, iteration = 0;
-   const construct = ['*'.repeat(n)];
-   while((n-=2) > 0) {
-      const layer = ' '.repeat(++iteration)+'*'.repeat(n);
+   let iteration = 0;
+   const construct = ['*'.repeat(2 * n - 1)];
+   n *= 2;
+   while ((n -= 2) > 0) {
+      const layer = ' '.repeat(++iteration) + '*'.repeat(n - 1);
       construct.unshift(layer); 
       construct.push(layer);   
    }
