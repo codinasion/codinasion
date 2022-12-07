@@ -10,4 +10,4 @@ const diamondPattern = (n) => {
    construct.forEach((pattern) => console.log(pattern)); 
 }
 
-diamondPattern(11);
+diamondPattern(5);
