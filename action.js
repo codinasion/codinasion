@@ -9,6 +9,8 @@ import autoTrackIssue from "./scripts/autoTrackIssue.js";
 
 import autoAssignIssue from "./scripts/autoAssignIssue.js";
 
+import collectProgramData from "./script/collectProgramData.js";
+
 // main action function
 (async () => {
   try {
@@ -36,6 +38,11 @@ import autoAssignIssue from "./scripts/autoAssignIssue.js";
     const AUTO_TRACK_ISSUE = await core.getInput("AUTO_TRACK_ISSUE");
 
     const AUTO_ASSIGN_ISSUE = await core.getInput("AUTO_ASSIGN_ISSUE");
+
+    // collect program data
+    const PROGRAM_REPO = await core.getInput("PROGRAM_REPO");
+    const PROGRAM_REPO_FOLDER = await core.getInput("PROGRAM_REPO_FOLDER");
+    const COLLECT_PROGRAM_DATA = await core.getInput("COLLECT_PROGRAM_DATA");
 
     if (SUBMIT_PROGRAM === "true") {
       await submitProgram(
@@ -77,6 +84,10 @@ import autoAssignIssue from "./scripts/autoAssignIssue.js";
 
     if (AUTO_ASSIGN_ISSUE === "true") {
       await autoAssignIssue(OWNER, REPO, TOKEN, ISSUE_NUMBER, USERNAME);
+    }
+
+    if (COLLECT_PROGRAM_DATA === "true") {
+      await collectProgramData(OWNER, PROGRAM_REPO, PROGRAM_REPO_FOLDER, TOKEN);
     }
 
     // end of main function

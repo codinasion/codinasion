@@ -1,0 +1,60 @@
+name: Collect Program Data
+
+on:
+  workflow_dispatch:
+
+jobs:
+  collect_program_data:
+    if: github.repository == 'codinasion/program'
+
+    runs-on: ubuntu-latest
+    name: Collect Program Data
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      ##########  Get Date  ##########
+      - name: Get Date
+        id: date
+        uses: nanzm/get-time-action@v1.1
+        with:
+          timeZone: 5.5
+          format: "YYYY-MM-DD-hh-mm"
+
+      # Cache node_modules
+      - name: Cache Node Modules
+        id: cache-node-modules
+        uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: node-modules-${{ hashFiles('yarn.lock') }}
+
+      # Install dependencies
+      - name: Yarn
+        if: steps.cache-node-modules.outputs.cache-hit != 'true'
+        run: |
+          yarn
+
+      ##########  collect program data  ##########
+      - name: Collect Program Data
+        uses: ./action/
+        with:
+          COLLECT_PROGRAM_DATA: true
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # - name: Commit Program Data
+      #   uses: crazy-max/ghaction-github-pages@v3.0.0
+      #   with:
+      #     target_branch: data
+      #     build_dir: program-data
+      #     keep_history: false
+      #     committer: Harsh Raj <harshraj8843@users.noreply.github.com>
+      #     author: Harsh Raj <harshraj8843@users.noreply.github.com>
+      #     commit_message: |
+      #       program list data - ${{ steps.date.outputs.time }}
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
