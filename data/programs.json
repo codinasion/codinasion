@@ -1107,6 +1107,15 @@
     "created": true
   },
   {
+    "title": "Find smallest element in a matrix",
+    "description": "Write a program to find smallest element in a matrix\n\n```\r\nInput :\r\n4 7 3\r\n9 4 2\r\n0 6 4\r\n\r\nOutput : 0\r\n```\n",
+    "contributor": "ShubhraSuman",
+    "createdAt": "2022-12-09T03:52:32.511Z",
+    "createdIssueNumber": "2882",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Find smallest number in an array",
     "description": "Write a program to find smallest number in an array\n\n```\nInput  : [1, 2, 3, 4, 5]\nOutput : 1\n```",
     "contributor": "harshraj8843",
