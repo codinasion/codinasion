@@ -329,8 +329,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T06:43:28.759Z",
     "createdIssueNumber": "149",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-12-09T05:14:20.446Z",
+    "created": true
   },
   {
     "title": "Convert feet to centimeters",
@@ -626,7 +626,7 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-10-07T18:46:27.887768Z",
     "createdIssueNumber": "0",
-    "publishedAt": "",
+    "publishedAt": "2022-12-09T05:40:30.624Z",
     "created": false
   },
   {
@@ -644,8 +644,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-10-07T18:46:27.887768Z",
     "createdIssueNumber": "0",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-12-09T08:11:55.976Z",
+    "created": true
   },
   {
     "title": "Convert string to constantcase",
@@ -707,8 +707,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-10-07T18:46:27.887768Z",
     "createdIssueNumber": "0",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-12-09T09:09:04.669Z",
+    "created": true
   },
   {
     "title": "Convert string to sentencecase",
@@ -716,8 +716,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-10-07T18:46:27.887768Z",
     "createdIssueNumber": "0",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-12-09T05:23:33.885Z",
+    "created": true
   },
   {
     "title": "Convert string to snakecase",
@@ -752,8 +752,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-10-07T18:46:27.887768Z",
     "createdIssueNumber": "0",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-12-09T04:02:11.615Z",
+    "created": true
   },
   {
     "title": "Convert time from 12-hour to 24-hour format",
@@ -1076,8 +1076,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T08:17:53.554Z",
     "createdIssueNumber": "190",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-12-09T06:12:23.638Z",
+    "created": true
   },
   {
     "title": "Find power of a number by recursion",
@@ -1104,6 +1104,15 @@
     "createdAt": "2022-10-07T18:46:27.887768Z",
     "createdIssueNumber": "0",
     "publishedAt": "2022-10-15T22:11:47.044Z",
+    "created": true
+  },
+  {
+    "title": "Find smallest element in a matrix",
+    "description": "Write a program to find smallest element in a matrix\n\n```\r\nInput :\r\n4 7 3\r\n9 4 2\r\n0 6 4\r\n\r\nOutput : 0\r\n```\n",
+    "contributor": "ShubhraSuman",
+    "createdAt": "2022-12-09T03:52:32.511Z",
+    "createdIssueNumber": "2882",
+    "publishedAt": "2022-12-09T07:08:16.613Z",
     "created": true
   },
   {
@@ -1184,8 +1193,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-10-07T18:46:27.887768Z",
     "createdIssueNumber": "0",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-12-09T05:07:40.157Z",
+    "created": true
   },
   {
     "title": "Find sum of n natural numbers",
@@ -1283,8 +1292,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T12:16:37.404Z",
     "createdIssueNumber": "212",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-12-09T05:17:53.039Z",
+    "created": true
   },
   {
     "title": "Find surface area of a sphere",
@@ -1310,8 +1319,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-10-07T18:46:27.887768Z",
     "createdIssueNumber": "0",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-12-09T03:53:43.949Z",
+    "created": true
   },
   {
     "title": "Find the cofactor of a matrix",
@@ -1454,7 +1463,7 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T12:12:29.216Z",
     "createdIssueNumber": "207",
-    "publishedAt": "",
+    "publishedAt": "2022-12-09T05:42:55.358Z",
     "created": false
   },
   {
@@ -1575,6 +1584,15 @@
     "created": true
   },
   {
+    "title": "Print inverted pyramid pattern",
+    "description": "Write a program to print inverted pyramid pattern\n\n```\r\nInput   : 5\r\n\r\nOutput : \r\n1 2 3 4 5\r\n1 2 3 4 \r\n1 2 3\r\n1 2\r\n1\r\n```\n",
+    "contributor": "PraaneshSelvaraj",
+    "createdAt": "2022-12-09T03:57:12.300Z",
+    "createdIssueNumber": "4717",
+    "publishedAt": "2022-12-09T05:08:35.128Z",
+    "created": true
+  },
+  {
     "title": "Print Multiplication Table",
     "description": "Write a program to print multiplication table\n\n```\r\nInput  : 2\r\n\r\n2 x 1 = 2\r\n2 x 2 = 4\r\n2 x 3 = 6\r\n2 x 4 = 8\r\n2 x 5 = 10\r\n2 x 6 = 12\r\n2 x 7 = 14\r\n2 x 8 = 16\r\n2 x 9 = 18\r\n2 x 10 = 20\r\n```\n",
     "contributor": "harshraj8843",
@@ -1616,8 +1634,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-10-07T18:46:27.887768Z",
     "createdIssueNumber": "0",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-12-09T05:27:57.281Z",
+    "created": true
   },
   {
     "title": "Print numbers from n to 1",
@@ -1706,8 +1724,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-10-07T18:46:27.887768Z",
     "createdIssueNumber": "0",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-12-09T05:02:53.780Z",
+    "created": true
   },
   {
     "title": "Split string into array of characters",
