@@ -9,7 +9,7 @@ import autoTrackIssue from "./scripts/autoTrackIssue.js";
 
 import autoAssignIssue from "./scripts/autoAssignIssue.js";
 
-import collectProgramData from "./script/collectProgramData.js";
+import collectProgramData from "./scripts/collectProgramData.js";
 
 // main action function
 (async () => {
