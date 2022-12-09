@@ -627,7 +627,7 @@
     "createdAt": "2022-10-07T18:46:27.887768Z",
     "createdIssueNumber": "0",
     "publishedAt": "2022-12-09T05:40:30.624Z",
-    "created": true
+    "created": false
   },
   {
     "title": "Convert string to camelcase",
