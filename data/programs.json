@@ -1584,6 +1584,15 @@
     "created": true
   },
   {
+    "title": "Print inverted pyramid pattern",
+    "description": "Write a program to print inverted pyramid pattern\n\n```\r\nInput   : 5\r\n\r\nOutput : \r\n1 2 3 4 5\r\n1 2 3 4 \r\n1 2 3\r\n1 2\r\n1\r\n```\n",
+    "contributor": "PraaneshSelvaraj",
+    "createdAt": "2022-12-09T03:57:12.300Z",
+    "createdIssueNumber": "4717",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Print Multiplication Table",
     "description": "Write a program to print multiplication table\n\n```\r\nInput  : 2\r\n\r\n2 x 1 = 2\r\n2 x 2 = 4\r\n2 x 3 = 6\r\n2 x 4 = 8\r\n2 x 5 = 10\r\n2 x 6 = 12\r\n2 x 7 = 14\r\n2 x 8 = 16\r\n2 x 9 = 18\r\n2 x 10 = 20\r\n```\n",
     "contributor": "harshraj8843",
