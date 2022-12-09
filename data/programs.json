@@ -329,8 +329,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T06:43:28.759Z",
     "createdIssueNumber": "149",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-12-09T05:14:20.446Z",
+    "created": true
   },
   {
     "title": "Convert feet to centimeters",
@@ -626,8 +626,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-10-07T18:46:27.887768Z",
     "createdIssueNumber": "0",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-12-09T05:40:30.624Z",
+    "created": true
   },
   {
     "title": "Convert string to camelcase",
@@ -716,8 +716,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-10-07T18:46:27.887768Z",
     "createdIssueNumber": "0",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-12-09T05:23:33.885Z",
+    "created": true
   },
   {
     "title": "Convert string to snakecase",
@@ -1193,8 +1193,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-10-07T18:46:27.887768Z",
     "createdIssueNumber": "0",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-12-09T05:07:40.157Z",
+    "created": true
   },
   {
     "title": "Find sum of n natural numbers",
@@ -1292,8 +1292,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T12:16:37.404Z",
     "createdIssueNumber": "212",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-12-09T05:17:53.039Z",
+    "created": true
   },
   {
     "title": "Find surface area of a sphere",
@@ -1463,7 +1463,7 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T12:12:29.216Z",
     "createdIssueNumber": "207",
-    "publishedAt": "",
+    "publishedAt": "2022-12-09T05:42:55.358Z",
     "created": false
   },
   {
@@ -1589,8 +1589,8 @@
     "contributor": "PraaneshSelvaraj",
     "createdAt": "2022-12-09T03:57:12.300Z",
     "createdIssueNumber": "4717",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-12-09T05:08:35.128Z",
+    "created": true
   },
   {
     "title": "Print Multiplication Table",
@@ -1634,8 +1634,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-10-07T18:46:27.887768Z",
     "createdIssueNumber": "0",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-12-09T05:27:57.281Z",
+    "created": true
   },
   {
     "title": "Print numbers from n to 1",
@@ -1724,8 +1724,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-10-07T18:46:27.887768Z",
     "createdIssueNumber": "0",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-12-09T05:02:53.780Z",
+    "created": true
   },
   {
     "title": "Split string into array of characters",
