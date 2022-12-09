@@ -752,8 +752,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-10-07T18:46:27.887768Z",
     "createdIssueNumber": "0",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-12-09T04:02:11.615Z",
+    "created": true
   },
   {
     "title": "Convert time from 12-hour to 24-hour format",
@@ -1107,6 +1107,15 @@
     "created": true
   },
   {
+    "title": "Find smallest element in a matrix",
+    "description": "Write a program to find smallest element in a matrix\n\n```\r\nInput :\r\n4 7 3\r\n9 4 2\r\n0 6 4\r\n\r\nOutput : 0\r\n```\n",
+    "contributor": "ShubhraSuman",
+    "createdAt": "2022-12-09T03:52:32.511Z",
+    "createdIssueNumber": "2882",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Find smallest number in an array",
     "description": "Write a program to find smallest number in an array\n\n```\nInput  : [1, 2, 3, 4, 5]\nOutput : 1\n```",
     "contributor": "harshraj8843",
@@ -1310,8 +1319,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-10-07T18:46:27.887768Z",
     "createdIssueNumber": "0",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-12-09T03:53:43.949Z",
+    "created": true
   },
   {
     "title": "Find the cofactor of a matrix",
@@ -1573,6 +1582,15 @@
     "createdIssueNumber": "1",
     "publishedAt": "2022-09-24T14:51:59.093Z",
     "created": true
+  },
+  {
+    "title": "Print inverted pyramid pattern",
+    "description": "Write a program to print inverted pyramid pattern\n\n```\r\nInput   : 5\r\n\r\nOutput : \r\n1 2 3 4 5\r\n1 2 3 4 \r\n1 2 3\r\n1 2\r\n1\r\n```\n",
+    "contributor": "PraaneshSelvaraj",
+    "createdAt": "2022-12-09T03:57:12.300Z",
+    "createdIssueNumber": "4717",
+    "publishedAt": "",
+    "created": false
   },
   {
     "title": "Print Multiplication Table",
