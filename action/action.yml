@@ -40,27 +40,45 @@ inputs:
   SUBMIT_PROGRAM:
     description: "submit a program"
     required: true
-    default: false
+    default: "false"
 
   SUBMIT_PROGRAM_COMMENT_CLOSE:
     description: "comment & close for submit program issue"
     required: true
-    default: false
+    default: "false"
 
   AUTO_CREATE_ISSUE:
     description: "create track issue"
     required: true
-    default: false
+    default: "false"
 
   AUTO_TRACK_ISSUE:
     description: "auto create good first issue"
     required: true
-    default: false
+    default: "false"
 
   AUTO_ASSIGN_ISSUE:
     description: "auto assign issue"
     required: true
-    default: false
+    default: "false"
+
+  ######################################################
+  ##        Collect Program Data Related Inputs       ##
+  ######################################################
+  PROGRAM_REPO:
+    description: "name of program repository"
+    required: true
+    default: "program"
+
+  PROGRAM_REPO_FOLDER:
+    description: "folder name of program repository"
+    required: true
+    default: "program"
+
+  COLLECT_PROGRAM_DATA:
+    description: "collect program data"
+    required: true
+    default: "false"
 
 runs:
   using: "node16"
