@@ -46,15 +46,15 @@ jobs:
           COLLECT_PROGRAM_DATA: true
           TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # - name: Commit Program Data
-      #   uses: crazy-max/ghaction-github-pages@v3.0.0
-      #   with:
-      #     target_branch: data
-      #     build_dir: program-data
-      #     keep_history: false
-      #     committer: Harsh Raj <harshraj8843@users.noreply.github.com>
-      #     author: Harsh Raj <harshraj8843@users.noreply.github.com>
-      #     commit_message: |
-      #       program list data - ${{ steps.date.outputs.time }}
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Commit Program Data
+        uses: crazy-max/ghaction-github-pages@v3.0.0
+        with:
+          target_branch: data
+          build_dir: program-data
+          keep_history: false
+          committer: Harsh Raj <harshraj8843@users.noreply.github.com>
+          author: Harsh Raj <harshraj8843@users.noreply.github.com>
+          commit_message: |
+            program list data - ${{ steps.date.outputs.time }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
