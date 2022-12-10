@@ -6,6 +6,10 @@ public class SplitStringIntoArrayOfWords {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the String: ");
         String str = sc.nextLine();
-        System.out.println(Arrays.toString(str.split(" ")));
+        System.out.println(Arrays.toString(splitString(str)));
+    }
+    static String [] splitString(String str){
+        String [] result = str.split(" ");
+        return result;
     }
 }
