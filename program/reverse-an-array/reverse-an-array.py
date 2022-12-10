@@ -1,3 +1,8 @@
-array = input('Create an array:').split(',')
-array.reverse()
-print(array)
+print(
+    list(
+        map(
+            lambda x: int(x.strip()),
+            input().replace("[", "").replace("]", "").split(","),
+        )
+    )[::-1]
+)
