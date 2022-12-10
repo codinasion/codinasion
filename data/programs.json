@@ -23,8 +23,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T13:24:31.700Z",
     "createdIssueNumber": "267",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-12-09T15:08:51.610Z",
+    "created": true
   },
   {
     "title": "Calculate the combination of n objects taken r at a time",
@@ -347,8 +347,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T13:10:06.097Z",
     "createdIssueNumber": "252",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-12-10T06:11:22.943Z",
+    "created": true
   },
   {
     "title": "Convert feet to miles",
@@ -437,8 +437,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T13:10:25.408Z",
     "createdIssueNumber": "253",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-12-10T07:08:03.560Z",
+    "created": true
   },
   {
     "title": "Convert inches to miles",
@@ -581,8 +581,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T06:45:26.153Z",
     "createdIssueNumber": "151",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-12-09T12:16:17.867Z",
+    "created": true
   },
   {
     "title": "Convert seconds to days",
@@ -626,8 +626,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-10-07T18:46:27.887768Z",
     "createdIssueNumber": "0",
-    "publishedAt": "2022-12-09T05:40:30.624Z",
-    "created": false
+    "publishedAt": "2022-12-09T16:12:12.945Z",
+    "created": true
   },
   {
     "title": "Convert string to camelcase",
@@ -779,8 +779,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T12:52:24.104Z",
     "createdIssueNumber": "240",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-12-10T02:09:55.769Z",
+    "created": true
   },
   {
     "title": "Convert weeks to hours",
@@ -815,8 +815,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-10-07T18:46:27.887768Z",
     "createdIssueNumber": "0",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-12-09T22:08:41.275Z",
+    "created": true
   },
   {
     "title": "Divide two numbers",
@@ -896,8 +896,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T08:04:51.344Z",
     "createdIssueNumber": "181",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-12-09T18:11:13.874Z",
+    "created": true
   },
   {
     "title": "Find average of numbers",
@@ -977,8 +977,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T08:15:35.450Z",
     "createdIssueNumber": "188",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-12-09T10:09:45.404Z",
+    "created": true
   },
   {
     "title": "Find largest and smallest numbers in an array",
@@ -1022,8 +1022,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T06:44:31.887Z",
     "createdIssueNumber": "150",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-12-10T03:09:20.949Z",
+    "created": true
   },
   {
     "title": "Find maximum of n numbers",
@@ -1175,8 +1175,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T08:01:18.688Z",
     "createdIssueNumber": "178",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-12-09T20:09:28.196Z",
+    "created": true
   },
   {
     "title": "Find sum of digits of a number by recursion",
@@ -1220,8 +1220,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T12:11:10.067Z",
     "createdIssueNumber": "205",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-12-09T17:08:41.542Z",
+    "created": true
   },
   {
     "title": "Find sum of numbers",
@@ -1247,8 +1247,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T11:39:27.599Z",
     "createdIssueNumber": "199",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-12-09T13:16:41.475Z",
+    "created": true
   },
   {
     "title": "Find sum of squares of numbers by recursion",
@@ -1346,8 +1346,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-10-07T18:46:27.887768Z",
     "createdIssueNumber": "0",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-12-10T05:08:01.644Z",
+    "created": true
   },
   {
     "title": "Find the eigenvectors of a matrix",
@@ -1364,8 +1364,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-10-07T18:46:27.887768Z",
     "createdIssueNumber": "0",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-12-09T14:08:10.708Z",
+    "created": true
   },
   {
     "title": "Find the maximum sum of a contiguous subarray",
@@ -1463,8 +1463,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T12:12:29.216Z",
     "createdIssueNumber": "207",
-    "publishedAt": "2022-12-09T05:42:55.358Z",
-    "created": false
+    "publishedAt": "2022-12-09T19:07:59.607Z",
+    "created": true
   },
   {
     "title": "Find volume of a sphere",
@@ -1490,8 +1490,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T13:29:16.057Z",
     "createdIssueNumber": "271",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-12-09T21:08:23.997Z",
+    "created": true
   },
   {
     "title": "Print all prime numbers between two numbers",
@@ -1544,8 +1544,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-10-07T18:46:27.887768Z",
     "createdIssueNumber": "0",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-12-09T23:09:04.482Z",
+    "created": true
   },
   {
     "title": "Print Fibonacci series by recursion",
@@ -1571,8 +1571,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-10-07T18:46:27.887768Z",
     "createdIssueNumber": "0",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-12-10T00:43:20.590Z",
+    "created": true
   },
   {
     "title": "Print Hello World",
@@ -1625,8 +1625,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-10-07T18:46:27.887768Z",
     "createdIssueNumber": "0",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-12-09T11:07:37.708Z",
+    "created": true
   },
   {
     "title": "Print numbers from 1 to n without using a loop",
@@ -1688,8 +1688,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T08:07:00.362Z",
     "createdIssueNumber": "183",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-12-10T04:10:45.000Z",
+    "created": true
   },
   {
     "title": "Print reverse of a string",
@@ -1742,8 +1742,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2022-10-07T18:46:27.887768Z",
     "createdIssueNumber": "0",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2022-12-10T08:11:09.767Z",
+    "created": true
   },
   {
     "title": "Swap two numbers",
