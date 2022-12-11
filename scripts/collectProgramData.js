@@ -58,7 +58,7 @@ export default async function collectProgramData(
         let slug = path.split("/")[0];
         const file = path.split("/")[1];
         // check if slug is already in the filesData array
-        let index = filesData.findIndex((file) => file.slug === slug);
+        let index = filesData.findIndex((programfile) => programfile.slug === slug);
         if (index === -1) {
           // if slug is not in the array, add it
           filesData.push({
