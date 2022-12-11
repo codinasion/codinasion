@@ -15,7 +15,7 @@ export default async function collectProgramData(
   const programFileDir = "program-data/program";
   await fs.promises.mkdir(programFileDir, { recursive: true });
 
-  const languages = fetch(
+  const languages = await fetch(
     `https://raw.githubusercontent.com/codinasion/program/master/data/languages.json`,
     {
       method: "GET",
