@@ -56,7 +56,7 @@ export default async function collectProgramData(
       let path = data.path.replace(PROGRAM_REPO_FOLDER + "/", "");
       if (path.includes("/")) {
         let slug = path.split("/")[0];
-        let file = path.split("/")[1];
+        const file = path.split("/")[1];
         // check if slug is already in the filesData array
         let index = filesData.findIndex((file) => file.slug === slug);
         if (index === -1) {
