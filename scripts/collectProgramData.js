@@ -6,8 +6,6 @@ import matter from "gray-matter";
 import { remark } from "remark";
 import html from "remark-html";
 
-import languages from "../data/languages.json";
-
 export default async function collectProgramData(
   OWNER,
   PROGRAM_REPO,
@@ -16,6 +14,16 @@ export default async function collectProgramData(
 ) {
   const programFileDir = "program-data/program";
   await fs.promises.mkdir(programFileDir, { recursive: true });
+
+  const languages = fetch(
+    `https://raw.githubusercontent.com/codinasion/program/master/data/languages.json`,
+    {
+      method: "GET",
+      headers: {
+        Authorization: `token ${TOKEN}`,
+      },
+    }
+  ).then((res) => res.json());
 
   const programList = [];
   const pathsData = await fetch(
