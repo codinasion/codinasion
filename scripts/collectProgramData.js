@@ -89,11 +89,11 @@ export default async function collectProgramData(
 
     var files = data.files;
     // remove README.md from files array
-    files = files.filter((file) => file !== "README.md");
+    files = files.filter((programfile) => programfile !== "README.md");
     const tags = [];
 
-    for (file of files) {
-      let extension = file.split(".")[1];
+    for (programfile of files) {
+      let extension = programfile.split(".")[1];
       // find name of language from extension
       let language = languages.find((language) =>
         language.extensions.includes(extension)
@@ -107,7 +107,7 @@ export default async function collectProgramData(
 <CodeBlock>
 `;
 
-    for (const file of files) {
+    for (const programfile of files) {
       let response_text = await fetch(
         `https://raw.githubusercontent.com/${OWNER}/${PROGRAM_REPO}/master/${PROGRAM_REPO_FOLDER}/${slug}/${file}`,
         {
@@ -121,7 +121,7 @@ export default async function collectProgramData(
         .catch((error) => console.log(error));
 
       code_text += `
-\`\`\`${file.split(".")[1]}
+\`\`\`${programfile.split(".")[1]}
 ${response_text.trim()}
 \`\`\`
 `;
