@@ -99,7 +99,7 @@ export default async function collectProgramData(
       let extension = programfile.split(".")[1];
       // find name of language from extension
       let language = languages.filter(
-        (language) => language.extension === extension
+        (language) => language.fileExtension === extension
       )[0];
       if (language) {
         tags.push(language.name);
