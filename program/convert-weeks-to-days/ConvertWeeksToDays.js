@@ -1,4 +1,4 @@
 let weeks = 5;
-let day = weeks * 7;
+let days = weeks * 7;
 
-console.log(day);
+console.log(days);
