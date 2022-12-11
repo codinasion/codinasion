@@ -6,6 +6,8 @@ import matter from "gray-matter";
 import { remark } from "remark";
 import html from "remark-html";
 
+import languages from "../data/languages.json";
+
 export default async function collectProgramData(
   OWNER,
   PROGRAM_REPO,
@@ -80,9 +82,18 @@ export default async function collectProgramData(
     var files = data.files;
     // remove README.md from files array
     files = files.filter((file) => file !== "README.md");
+    const tags = [];
 
-    // get program tags
-    const tags = files.map((file) => file.split(".")[1]);
+    for (file of files) {
+      let extension = file.split(".")[1];
+      // find name of language from extension
+      let language = languages.find((language) =>
+        language.extensions.includes(extension)
+      );
+      if (language) {
+        tags.push(language.name);
+      }
+    }
 
     let code_text = `
 <CodeBlock>
