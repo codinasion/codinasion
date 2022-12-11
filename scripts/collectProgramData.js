@@ -42,6 +42,7 @@ export default async function collectProgramData(
     });
 
   const filesData = [];
+  var file = "";
 
   for (const data of pathsData) {
     if (
@@ -56,9 +57,11 @@ export default async function collectProgramData(
       let path = data.path.replace(PROGRAM_REPO_FOLDER + "/", "");
       if (path.includes("/")) {
         let slug = path.split("/")[0];
-        const file = path.split("/")[1];
+        file = path.split("/")[1];
         // check if slug is already in the filesData array
-        let index = filesData.findIndex((programfile) => programfile.slug === slug);
+        let index = filesData.findIndex(
+          (programfile) => programfile.slug === slug
+        );
         if (index === -1) {
           // if slug is not in the array, add it
           filesData.push({
