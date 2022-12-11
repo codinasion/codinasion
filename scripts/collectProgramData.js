@@ -92,7 +92,7 @@ export default async function collectProgramData(
     files = files.filter((programfile) => programfile !== "README.md");
     const tags = [];
 
-    for (programfile of files) {
+    for (const programfile of files) {
       let extension = programfile.split(".")[1];
       // find name of language from extension
       let language = languages.find((language) =>
