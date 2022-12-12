@@ -123,7 +123,11 @@ export default async function collectProgramData(
         .catch((error) => console.log(error));
 
       code_text += `
-\`\`\`${programfile.split(".")[1]}
+\`\`\`${
+        languages.filter(
+          (language) => language.fileExtension === programfile.split(".")[1]
+        )[0].name
+      }
 ${response_text.trim()}
 \`\`\`
 `;
