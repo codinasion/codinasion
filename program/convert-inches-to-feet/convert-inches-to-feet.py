@@ -1,2 +1,1 @@
-inches = float(input())
-print(inches/12)
+print(round(float(input())/12, 2))
