@@ -15,6 +15,16 @@ export default async function collectProgramData(
   const programFileDir = "program-data/program";
   await fs.promises.mkdir(programFileDir, { recursive: true });
 
+  const languages = await fetch(
+    `https://raw.githubusercontent.com/codinasion/program/master/data/languages.json`,
+    {
+      method: "GET",
+      headers: {
+        Authorization: `token ${TOKEN}`,
+      },
+    }
+  ).then((res) => res.json());
+
   const programList = [];
   const pathsData = await fetch(
     `https://api.github.com/repos/${OWNER}/${PROGRAM_REPO}/git/trees/master?recursive=1`,
@@ -32,6 +42,7 @@ export default async function collectProgramData(
     });
 
   const filesData = [];
+  var file = "";
 
   for (const data of pathsData) {
     if (
@@ -46,9 +57,11 @@ export default async function collectProgramData(
       let path = data.path.replace(PROGRAM_REPO_FOLDER + "/", "");
       if (path.includes("/")) {
         let slug = path.split("/")[0];
-        let file = path.split("/")[1];
+        file = path.split("/")[1];
         // check if slug is already in the filesData array
-        let index = filesData.findIndex((file) => file.slug === slug);
+        let index = filesData.findIndex(
+          (programfile) => programfile.slug === slug
+        );
         if (index === -1) {
           // if slug is not in the array, add it
           filesData.push({
@@ -79,16 +92,25 @@ export default async function collectProgramData(
 
     var files = data.files;
     // remove README.md from files array
-    files = files.filter((file) => file !== "README.md");
+    files = files.filter((programfile) => programfile !== "README.md");
+    const tags = [];
 
-    // get program tags
-    const tags = files.map((file) => file.split(".")[1]);
+    for (const programfile of files) {
+      let extension = programfile.split(".")[1];
+      // find name of language from extension
+      let language = languages.filter(
+        (language) => language.fileExtension === extension
+      )[0];
+      if (language) {
+        tags.push(language.name);
+      }
+    }
 
     let code_text = `
 <CodeBlock>
 `;
 
-    for (const file of files) {
+    for (const programfile of files) {
       let response_text = await fetch(
         `https://raw.githubusercontent.com/${OWNER}/${PROGRAM_REPO}/master/${PROGRAM_REPO_FOLDER}/${slug}/${file}`,
         {
@@ -102,7 +124,7 @@ export default async function collectProgramData(
         .catch((error) => console.log(error));
 
       code_text += `
-\`\`\`${file.split(".")[1]}
+\`\`\`${programfile.split(".")[1]}
 ${response_text.trim()}
 \`\`\`
 `;
