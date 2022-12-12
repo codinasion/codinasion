@@ -42,7 +42,6 @@ export default async function collectProgramData(
     });
 
   const filesData = [];
-  var file = "";
 
   for (const data of pathsData) {
     if (
@@ -57,7 +56,7 @@ export default async function collectProgramData(
       let path = data.path.replace(PROGRAM_REPO_FOLDER + "/", "");
       if (path.includes("/")) {
         let slug = path.split("/")[0];
-        file = path.split("/")[1];
+        let file = path.split("/")[1];
         // check if slug is already in the filesData array
         let index = filesData.findIndex(
           (programfile) => programfile.slug === slug
@@ -112,7 +111,7 @@ export default async function collectProgramData(
 
     for (const programfile of files) {
       let response_text = await fetch(
-        `https://raw.githubusercontent.com/${OWNER}/${PROGRAM_REPO}/master/${PROGRAM_REPO_FOLDER}/${slug}/${file}`,
+        `https://raw.githubusercontent.com/${OWNER}/${PROGRAM_REPO}/master/${PROGRAM_REPO_FOLDER}/${slug}/${programfile}`,
         {
           method: "GET",
           headers: {
