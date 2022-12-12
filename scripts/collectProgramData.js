@@ -2,6 +2,8 @@ import fetch from "node-fetch";
 
 import fs from "fs";
 
+import {date} from 'date-fns';
+
 import matter from "gray-matter";
 import { remark } from "remark";
 import html from "remark-html";
@@ -157,7 +159,7 @@ ${code_text}
       .then((res) => res[0].commit.author.date)
       .catch((error) => {
         console.log(error);
-        return date.now().toString();
+        return date.now();
       });
 
     let contributors = await fetch(
