@@ -108,7 +108,7 @@ export default async function collectProgramData(
     }
 
     let code_text = `
-<CodeBlock slug=${slug} >
+<CodeBlock slug="${slug}" >
 `;
 
     for (const programfile of files) {
