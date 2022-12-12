@@ -122,18 +122,8 @@ export default async function collectProgramData(
         .then((res) => res.text())
         .catch((error) => console.log(error));
 
-      let extension = programfile.split(".")[1];
-      // find name of language from extension
-      let language = languages.filter(
-        (language) => language.fileExtension === extension
-      )[0];
-      let tag = programfile.split(".")[1];
-      if (language) {
-        tag = language.name;
-      }
-
       code_text += `
-\`\`\`${tag}
+\`\`\`${programfile.split(".")[1]}
 ${response_text.trim()}
 \`\`\`
 `;
