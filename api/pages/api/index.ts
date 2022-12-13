@@ -26,6 +26,6 @@ export default async function handler(
     }
   ).then((res: any) => res.json());
 
-  res.setHeader("Cache-Control", "s-maxage=86400, stale-while-revalidate");
+  res.setHeader("Cache-Control", "s-maxage=60, stale-while-revalidate");
   res.status(200).json(programListJson)
 }
