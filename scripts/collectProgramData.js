@@ -2,6 +2,8 @@ import fetch from "node-fetch";
 
 import fs from "fs";
 
+import dateFns from "date-fns";
+
 import matter from "gray-matter";
 import { remark } from "remark";
 import html from "remark-html";
@@ -42,7 +44,6 @@ export default async function collectProgramData(
     });
 
   const filesData = [];
-  var file = "";
 
   for (const data of pathsData) {
     if (
@@ -57,7 +58,7 @@ export default async function collectProgramData(
       let path = data.path.replace(PROGRAM_REPO_FOLDER + "/", "");
       if (path.includes("/")) {
         let slug = path.split("/")[0];
-        file = path.split("/")[1];
+        let file = path.split("/")[1];
         // check if slug is already in the filesData array
         let index = filesData.findIndex(
           (programfile) => programfile.slug === slug
@@ -107,12 +108,12 @@ export default async function collectProgramData(
     }
 
     let code_text = `
-<CodeBlock>
+<CodeBlock slug="${slug}" >
 `;
 
     for (const programfile of files) {
       let response_text = await fetch(
-        `https://raw.githubusercontent.com/${OWNER}/${PROGRAM_REPO}/master/${PROGRAM_REPO_FOLDER}/${slug}/${file}`,
+        `https://raw.githubusercontent.com/${OWNER}/${PROGRAM_REPO}/master/${PROGRAM_REPO_FOLDER}/${slug}/${programfile}`,
         {
           method: "GET",
           headers: {
@@ -158,7 +159,7 @@ ${code_text}
       .then((res) => res[0].commit.author.date)
       .catch((error) => {
         console.log(error);
-        return date.now().toString();
+        return dateFns.date.now();
       });
 
     let contributors = await fetch(
