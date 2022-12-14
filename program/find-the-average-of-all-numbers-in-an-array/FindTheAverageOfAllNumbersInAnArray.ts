@@ -3,6 +3,8 @@ const FindTheAverageOfAllNumbersInAnArray = (nums: number[]): number => {
     for (let i: number = 0; i < nums.length; i++) {
         sum += nums[i];
     }
-    return sum / nums.length;
+    let avg: number = parseFloat((sum / nums.length).toFixed(2));
+    console.log(avg);
+    return avg;
 }
 export default FindTheAverageOfAllNumbersInAnArray;
