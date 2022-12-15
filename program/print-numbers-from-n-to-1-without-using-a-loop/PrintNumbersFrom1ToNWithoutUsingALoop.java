@@ -4,10 +4,10 @@ public class PrintNumbersFrom1ToNWithoutUsingALoop {
     }
     public static void print1ToN(int n){
         if(n == 1){
-            System.out.println(n);
+            System.out.print(n + " ");
             return;
         }
-        print1ToN(n-1);
-        System.out.println(n);
+        print1ToN(n - 1);
+        System.out.print(n + " ");
     }
 }
