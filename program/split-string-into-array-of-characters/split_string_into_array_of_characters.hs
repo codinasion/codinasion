@@ -4,8 +4,15 @@
 -- Double quotes would indicate this is an array of strings. This operation can be performed as follows:
 
 -- String into array of single-character strings
+module Main where
+
 characters :: [Char] -> [[Char]]
 characters [] = []
 characters (x:xs)
     | null xs = [[x]]
     | otherwise = [x]:characters xs
+
+main :: IO ()
+main = do
+  let result = characters "Hii there"
+  print result
