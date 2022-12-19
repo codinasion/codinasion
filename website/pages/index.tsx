@@ -34,14 +34,28 @@ type tagType = {
 
 export default function Home({ programsData }: PropsType) {
   const [tags, setTags] = React.useState<tagType[]>([]);
+  const chipRef = React.useRef<string>("");
 
   // pagination
+  const [displayProgramData, setDisplayProgramData] = React.useState(programsData);
   const [maxCount] = React.useState(10);
   const [page, setPage] = React.useState(1);
   const indexOfLast = page * maxCount;
   const indexOfFirst = indexOfLast - maxCount;
-  const programs = programsData.slice(indexOfFirst, indexOfLast);
-  const counter = Math.ceil(programsData.length / maxCount);
+  const programs = displayProgramData.slice(indexOfFirst, indexOfLast);
+  const counter = Math.ceil(displayProgramData.length / maxCount);
+
+  const handleClick = (data: string) => {
+    chipRef.current = data;
+    const filterByLang = programsData.filter((item) => {
+      if (item.tags.includes(chipRef.current)) {
+        return item;
+      }
+    });
+    setPage(1);
+    setDisplayProgramData(filterByLang);
+  };
+
   const handlePaginationChange = (event: any, value: number) => {
     setPage(value);
 
@@ -56,8 +70,8 @@ export default function Home({ programsData }: PropsType) {
   const countTags = () => {
     const tagList: tagType[] = [];
 
-    programsData.forEach((programData: programType) => {
-      programData.tags.forEach((tag: string) => {
+    displayProgramData.forEach((displayProgramData: programType) => {
+      displayProgramData.tags.forEach((tag: string) => {
         const index = tagList.findIndex((tagListData) => {
           return tagListData.name === tag;
         });
@@ -87,9 +101,9 @@ export default function Home({ programsData }: PropsType) {
       <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }} component="main">
         <Grid container spacing={2}>
           <Grid item xs={12} md={8}>
-            {programs.map((programData: programType, index: number) => (
-              <Link href={`/${programData.slug}`} key={index}>
-                <ProgramCard programData={programData} />
+            {programs.map((displayProgramData: programType, index: number) => (
+              <Link href={`/${displayProgramData.slug}`} key={index}>
+                <ProgramCard programData={displayProgramData} />
               </Link>
             ))}
             <Box sx={{ my: 4 }}>
@@ -123,10 +137,13 @@ export default function Home({ programsData }: PropsType) {
                 <Chip
                   key={index}
                   label={`${tag.name} ( ${tag.count} )`}
-                  variant="outlined"
                   color="success"
                   size="medium"
+                  variant={tag.name == chipRef.current ? "filled" : "outlined"}
                   style={{ margin: "5px" }}
+                  onClick={(e) => {
+                    handleClick(tag.name);
+                  }}
                 />
               ))}
             </Grid>
