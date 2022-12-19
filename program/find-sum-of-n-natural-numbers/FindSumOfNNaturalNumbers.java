@@ -1,12 +1,12 @@
-public class FindSumOfNNaturalNumbers {
+import java.util.Scanner;
+
+public class FindSumOfNNaturalNumbersUsingFormula {
     public static void main(String[] args) {
-        int num = 8;
-        int sum = 0;
-
-        for (int i = 1; i <= num; i++) {
-            sum += i;
-        }
-
-        System.out.println(sum);
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        System.out.println(sumOfnNaturalNumbers(num));
+}
+    static int sumOfnNaturalNumbers(int n){
+        return (n*(n+1))/2;
     }
 }
