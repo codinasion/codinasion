@@ -46,10 +46,23 @@ jobs:
         run: |
           python3 scripts/rename_files.py
 
+      - name: Move Program Files
+        run: |
+          mkdir -p temp
+          mv program/ temp/
+
       - name: Commit Rename Program Files
-        uses: EndBug/add-and-commit@v9
+        uses: crazy-max/ghaction-github-pages@v3.0.0
         with:
-          message: "rename program files - ${{ steps.date.outputs.time }}"
+          target_branch: master
+          build_dir: temp
+          keep_history: true # <-- Don't touch it
+          committer: Harsh Raj <harshraj8843@users.noreply.github.com>
+          author: Harsh Raj <harshraj8843@users.noreply.github.com>
+          commit_message: |
+            rename program files
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       ##########  collect program data  ##########
       - name: Collect Program Data
