@@ -64,7 +64,7 @@ jobs:
           commit_message: |
             rename program files
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PUSH_TOKEN }}
 
       ##########  collect program data  ##########
       - name: Collect Program Data
