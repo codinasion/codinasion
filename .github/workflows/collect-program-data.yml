@@ -3,7 +3,7 @@ name: Collect Program Data
 on:
   workflow_dispatch:
   schedule:
-    - cron:  '0 1 * * *'
+    - cron: "0 0/6 * * *"
 
 jobs:
   collect_program_data:
@@ -40,6 +40,16 @@ jobs:
         if: steps.cache-node-modules.outputs.cache-hit != 'true'
         run: |
           yarn
+
+      ##########  Rename program files  ##########
+      - name: Rename Program Files
+        run: |
+          python3 scripts/rename_files.py
+
+      - name: Commit Rename Program Files
+        uses: EndBug/add-and-commit@v9
+        with:
+          message: "rename program files - ${{ steps.date.outputs.time }}"
 
       ##########  collect program data  ##########
       - name: Collect Program Data
