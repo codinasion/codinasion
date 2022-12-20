@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 class FindPowerOfANumber {
     public static void main(String[] args) {
 
@@ -7,18 +9,19 @@ class FindPowerOfANumber {
         System.out.print("Enter the power: ");
         int power = scanner.nextInt();
 
-        if (power < 0 || number < 0) {
+        if(power < 0 || number < 0){
             System.out.println("Invalid input/Power can't be negative");
         } else {
 
-            System.out.println(number + "^" + power + " = " + findPower(number,power));
+            System.out.println(number + "^" + power + " = " + findPower(number, power));
         }
     }
 
     private static long findPower(int number, int power) {
-        if (power == 0) {
+        if(power == 0){
             return 1;
         } else {
-            return (long)Math.pow(number, power);
+            return (long) Math.pow(number, power);
         }
+    }
 }
