@@ -1,15 +1,13 @@
 <?php
 
-function multiplicationTable($n) {
-$start = 1;
-$end = 10;
-for($i = $start; $i <= $end; $i++)
+function multiplicationTable($n)
 {
-echo nl2br(("$n * $i = ".$n * $i )." \r\n ");
-}
-return 0;
+    for ($i = 1; $i <= 10; $i++) {
+        echo "$n * $i = " . $n * $i . "\n";
+    }
 }
 
-multiplicationTable(2)
+$n = (int) readline();
+multiplicationTable($n);
 
 ?>
