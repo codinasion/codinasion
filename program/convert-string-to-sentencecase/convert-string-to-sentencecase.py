@@ -1,4 +1,4 @@
-# Returns a string with the fist letter capitalized in a sentence
+# Returns a string with the first letter capitalized in a sentence
 # The first letter of the string is capitalized if nothing but spaces or the listed punctuation is found
 # Every first letter after the listed punctuation is also capitalized
 
@@ -27,3 +27,5 @@ def sentence_case(string: str):
                     new_string += x
 
     return new_string
+
+print(sentence_case(input()))
