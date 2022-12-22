@@ -86,8 +86,8 @@ export default async function autoTrackIssue(
 <details>
 <summary>How to contribute</summary>
 
-- Save the solution in \`program/${file}\` file
-- Add \`${file}\` file in \`${filename
+- Save the solution in \`${file}\` file
+- Add \`${file}\` file in \`program/${filename
       .toLowerCase()
       .replace(/ /g, "-")}\` folder
 
