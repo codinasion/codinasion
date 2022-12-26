@@ -3,16 +3,13 @@ import core from "@actions/core";
 import submitProgram from "./scripts/submitProgram.js";
 import submitProgramCommentClose from "./scripts/submitProgramCommentClose.js";
 
-import submitDsa from "./scripts/submitDsa.js";
-import submitDsaCommentClose from "./scripts/submitDsaCommentClose.js";
-
 import autoCreateIssue from "./scripts/autoCreateIssue.js";
-import autoCreateDsaIssue from "./scripts/autoCreateDsaIssue.js";
 
 import autoTrackIssue from "./scripts/autoTrackIssue.js";
-import autoTrackDsaIssue from "./scripts/autoTrackDsaIssue.js";
 
 import autoAssignIssue from "./scripts/autoAssignIssue.js";
+
+import collectProgramData from "./scripts/collectProgramData.js";
 
 // main action function
 (async () => {
@@ -36,18 +33,16 @@ import autoAssignIssue from "./scripts/autoAssignIssue.js";
       "SUBMIT_PROGRAM_COMMENT_CLOSE"
     );
 
-    const SUBMIT_DSA = await core.getInput("SUBMIT_DSA");
-    const SUBMIT_DSA_COMMENT_CLOSE = await core.getInput(
-      "SUBMIT_DSA_COMMENT_CLOSE"
-    );
-
     const AUTO_CREATE_ISSUE = await core.getInput("AUTO_CREATE_ISSUE");
-    const AUTO_CREATE_DSA_ISSUE = await core.getInput("AUTO_CREATE_DSA_ISSUE");
 
     const AUTO_TRACK_ISSUE = await core.getInput("AUTO_TRACK_ISSUE");
-    const AUTO_TRACK_DSA_ISSUE = await core.getInput("AUTO_TRACK_DSA_ISSUE");
 
     const AUTO_ASSIGN_ISSUE = await core.getInput("AUTO_ASSIGN_ISSUE");
+
+    // collect program data
+    const PROGRAM_REPO = await core.getInput("PROGRAM_REPO");
+    const PROGRAM_REPO_FOLDER = await core.getInput("PROGRAM_REPO_FOLDER");
+    const COLLECT_PROGRAM_DATA = await core.getInput("COLLECT_PROGRAM_DATA");
 
     if (SUBMIT_PROGRAM === "true") {
       await submitProgram(
@@ -72,35 +67,8 @@ import autoAssignIssue from "./scripts/autoAssignIssue.js";
       );
     }
 
-    if (SUBMIT_DSA === "true") {
-      await submitDsa(
-        OWNER,
-        REPO,
-        TOKEN,
-        USERNAME,
-        ISSUE_NUMBER,
-        ISSUE_TITLE,
-        ISSUE_BODY,
-        ISSUE_LABEL
-      );
-    }
-
-    if (SUBMIT_DSA_COMMENT_CLOSE === "true") {
-      await submitDsaCommentClose(
-        OWNER,
-        REPO,
-        TOKEN,
-        ISSUE_NUMBER,
-        ISSUE_LABEL
-      );
-    }
-
     if (AUTO_CREATE_ISSUE === "true") {
       await autoCreateIssue(OWNER, REPO, TOKEN);
-    }
-
-    if (AUTO_CREATE_DSA_ISSUE === "true") {
-      await autoCreateDsaIssue(OWNER, REPO, TOKEN);
     }
 
     if (AUTO_TRACK_ISSUE === "true") {
@@ -114,19 +82,12 @@ import autoAssignIssue from "./scripts/autoAssignIssue.js";
       );
     }
 
-    if (AUTO_TRACK_DSA_ISSUE === "true") {
-      await autoTrackDsaIssue(
-        OWNER,
-        REPO,
-        TOKEN,
-        ISSUE_NUMBER,
-        ISSUE_TITLE,
-        ISSUE_BODY
-      );
-    }
-
     if (AUTO_ASSIGN_ISSUE === "true") {
       await autoAssignIssue(OWNER, REPO, TOKEN, ISSUE_NUMBER, USERNAME);
+    }
+
+    if (COLLECT_PROGRAM_DATA === "true") {
+      await collectProgramData(OWNER, PROGRAM_REPO, PROGRAM_REPO_FOLDER, TOKEN);
     }
 
     // end of main function
