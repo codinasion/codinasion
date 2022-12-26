@@ -1,4 +1,5 @@
 import { Typography } from "@mui/material";
+import CodeIcon from "@mui/icons-material/Code";
 
 import Link from "@/components/Link";
 
@@ -13,9 +14,18 @@ export default function FooterText(props: FooterTextProps) {
       color="text.secondary"
       align="center"
       {...props}
+      style={{
+        verticalAlign: "middle",
+      }}
     >
       <b className="footer-text">
-        {"Made with ❤️ by "}
+        <CodeIcon
+          fontSize="medium"
+          style={{
+            verticalAlign: "middle",
+          }}
+        />
+        {" with ❤️ by "}
         <Link color="inherit" href="https://github.com/codinasion">
           Codinasion
         </Link>
