@@ -10,7 +10,7 @@ function Comment() {
         category={`General`}
         categoryId={`DIC_kwDOHb-6Gs4CPbX4`}
         mapping={`url`}
-        strict={`1`}
+        strict={`0`}
         term="Welcome to Codinasion :)"
         reactionsEnabled={`1`}
         emitMetadata={`0`}
