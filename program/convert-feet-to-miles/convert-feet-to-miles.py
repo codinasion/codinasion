@@ -1,6 +1,4 @@
-print(
-    "Python program to convert feet to miles \n 1 mile = 5280 feet"
-)
+print("Python program to convert feet to miles \n 1 mile = 5280 feet")
 
 
 def feetToMiles(num):
