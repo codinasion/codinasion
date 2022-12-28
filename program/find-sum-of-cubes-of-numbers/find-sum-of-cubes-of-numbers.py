@@ -1,6 +1,5 @@
 from functools import reduce
 
-
 print(
     "Sum of cubes:",
     reduce(
