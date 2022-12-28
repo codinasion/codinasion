@@ -73,7 +73,7 @@ for folder_name in folder_names:
                 if temp_file_name != new_file_name + "." + file_extension:
                         # print(temp_file_name)
                         # print(new_file_name + "." + file_extension)
-                        if os.path.isfile(os.path.join("program",folder_name,new_file_name+"."+file_extension)):
+                        if os.path.isfile(os.path.join("program",folder_name,new_file_name)):
                             # print(os.path.join("program",folder_name,new_file_name+"."+file_extension))
                             print("Could not rename " + temp_file_name + " as the file "+ new_file_name + "." + file_extension + " already exists!")
                             confirm_delete=input("Do you want to delete "+ temp_file_name + " Y/N ")
