@@ -1,12 +1,20 @@
-const secsToMins = 1 / 60;
-const minsToHrs = 1 / 60;
-const hrsToDays = 1 / 24;
-const daysToWeeks = 1 / 7;
+import java.util.Scanner
 
-const convertSecondsToWeeks = (seconds) => {
-    const secsToWeeks =
-        seconds * secsToMins * minsToHrs * hrsToDays * daysToWeeks;
-    return secsToWeeks;
-};
+fun main() {
+    print("Enter Seconds : ")
+    println()
+    var sec = readLine()
 
-console.log(convertSecondsToWeeks(3024000));
+    try {
+        println("$sec seconds to weeks : " + ConvertSecondsToWeeks(sec!!.toInt()))
+    } catch (exception: Exception) {
+        println("Input string was not in a correct format")
+    }
+
+}
+
+private fun ConvertSecondsToWeeks(sec: Int): Int {
+    val secToWeeks = sec / 604800
+
+    return  secToWeeks
+}
