@@ -73,10 +73,47 @@ for folder_name in folder_names:
                 if temp_file_name != new_file_name + "." + file_extension:
                         # print(temp_file_name)
                         # print(new_file_name + "." + file_extension)
-                        if os.path.isfile("program/"
+                        if os.path.join("program",folder_name,new_file_name) :
+                            # print(os.path.join("program",folder_name,new_file_name+"."+file_extension))
+                            print("Path 1")
+                            print("Could not rename " + temp_file_name + " as the file "+ new_file_name + "." + file_extension + " already exists!")
+                            confirm_delete=input("Do you want to delete "+ temp_file_name + " Y/N ")
+                            if confirm_delete == 'Y' :
+                                os.remove("program/"
+                            + folder_name
+                            + "/"
+                            + temp_file_name
+                                )
+                                print("Successfully deleted "  + temp_file_name + " file")
+                                rename = False
+                            elif confirm_delete == 'N' :
+                                confirm_delete = input("Do you want to delete existing "+ new_file_name + " Y/N ")
+                                if(confirm_delete == 'Y'):
+                                    os.remove("program/"
+                                            + folder_name
+                                            + "/"
+                                            + new_file_name
+                                            + "."
+                                            + file_extension)
+                                    print("Successfully deleted "  + new_file_name + " file")
+                                    # print(temp_file_name)
+                                    rename = True
+                                else :
+                                    rename = False
+                                    print("Renaming could not be done! multiple files exist")
+                            else :
+                                print("File Not deleted.")
+                            
+                            number_of_files_renamed = -1
+
+                        #check 2
+                        elif os.path.isfile("program/"
                                 + folder_name
                                 + "/"
-                                + new_file_name) :
+                                + new_file_name
+                                + "."
+                                + file_extension) :
+                            print("Path 2")
                             # print(os.path.join("program",folder_name,new_file_name+"."+file_extension))
                             print("Could not rename " + temp_file_name + " as the file "+ new_file_name + "." + file_extension + " already exists!")
                             confirm_delete=input("Do you want to delete "+ temp_file_name + " Y/N ")
@@ -100,14 +137,16 @@ for folder_name in folder_names:
                                     print("Successfully deleted "  + new_file_name + " file")
                                     # print(temp_file_name)
                                     rename = True
+                                else :
+                                    rename = False
+                                    print("Renaming could not be done! multiple files exist")
                             else :
                                 print("File Not deleted.")
                             
                             number_of_files_renamed = -1
-
-                            
+                        
                         if(rename):
-                            print(temp_file_name)
+                            # print(temp_file_name)
                             os.rename(
                                 "program/" + folder_name + "/" + temp_file_name,
                                 "program/"
