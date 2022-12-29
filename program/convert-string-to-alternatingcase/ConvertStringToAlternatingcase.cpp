@@ -7,12 +7,15 @@ using namespace std;
 // Replaces all characters in string to the opposite case
 string AlternateCase(string str) {
 	int len = str.length();
+	bool cap = false;
 	for (int i = 0; i < len; i++) {
-		if (isupper(str[i])) {
-			str[i] = tolower(str[i]);
-		}
-		else if (islower(str[i])) {
+		if (cap == false) {
 			str[i] = toupper(str[i]);
+			cap = true;
+		}
+		else if (cap == true) {
+			str[i] = tolower(str[i]);
+			cap = false;
 		}
 	}
 	return str;
