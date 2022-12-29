@@ -49,7 +49,7 @@ def ConvertToCamelCase(name):
 
 
 folder_names = os.listdir("program")
-
+number_of_files_renamed = 0
 for folder_name in folder_names:
     file_names = os.listdir("program/" + folder_name)
     for file_name in file_names:
@@ -69,11 +69,16 @@ for folder_name in folder_names:
                     new_file_name = ConvertToCamelCase(folder_name)
                 
                 # Rename the file
-                number_of_files_renamed = 0
+                
                 if temp_file_name != new_file_name + "." + file_extension:
                         # print(temp_file_name)
                         # print(new_file_name + "." + file_extension)
-                        if os.path.isfile(os.path.join("program",folder_name,new_file_name)):
+                        if os.path.isfile("program/"
+                                + folder_name
+                                + "/"
+                                + new_file_name
+                                + "."
+                                + file_extension) :
                             # print(os.path.join("program",folder_name,new_file_name+"."+file_extension))
                             print("Could not rename " + temp_file_name + " as the file "+ new_file_name + "." + file_extension + " already exists!")
                             confirm_delete=input("Do you want to delete "+ temp_file_name + " Y/N ")
@@ -86,6 +91,9 @@ for folder_name in folder_names:
                             
                             else :
                                 print("File Not deleted.")
+                            
+                            number_of_files_renamed = -1
+
                             
                         else:
                             os.rename(
@@ -102,6 +110,6 @@ for folder_name in folder_names:
 
 
 if number_of_files_renamed == 0 :
-    print("Every file is named properly!")
-                    
-                        
+    print("All files are Named properly!")
+elif number_of_files_renamed < 0 :
+    print("All the files are as per your wish!")
