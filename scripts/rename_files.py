@@ -50,6 +50,7 @@ def ConvertToCamelCase(name):
 
 folder_names = os.listdir("program")
 number_of_files_renamed = 0
+rename = True
 for folder_name in folder_names:
     file_names = os.listdir("program/" + folder_name)
     for file_name in file_names:
@@ -69,16 +70,13 @@ for folder_name in folder_names:
                     new_file_name = ConvertToCamelCase(folder_name)
                 
                 # Rename the file
-                
                 if temp_file_name != new_file_name + "." + file_extension:
                         # print(temp_file_name)
                         # print(new_file_name + "." + file_extension)
                         if os.path.isfile("program/"
                                 + folder_name
                                 + "/"
-                                + new_file_name
-                                + "."
-                                + file_extension) :
+                                + new_file_name) :
                             # print(os.path.join("program",folder_name,new_file_name+"."+file_extension))
                             print("Could not rename " + temp_file_name + " as the file "+ new_file_name + "." + file_extension + " already exists!")
                             confirm_delete=input("Do you want to delete "+ temp_file_name + " Y/N ")
@@ -86,16 +84,30 @@ for folder_name in folder_names:
                                 os.remove("program/"
                             + folder_name
                             + "/"
-                            + temp_file_name)
+                            + temp_file_name
+                                )
                                 print("Successfully deleted "  + temp_file_name + " file")
-                            
+                                rename = False
+                            elif confirm_delete == 'N' :
+                                confirm_delete = input("Do you want to delete existing "+ new_file_name + " Y/N ")
+                                if(confirm_delete == 'Y'):
+                                    os.remove("program/"
+                                            + folder_name
+                                            + "/"
+                                            + new_file_name
+                                            + "."
+                                            + file_extension)
+                                    print("Successfully deleted "  + new_file_name + " file")
+                                    # print(temp_file_name)
+                                    rename = True
                             else :
                                 print("File Not deleted.")
                             
                             number_of_files_renamed = -1
 
                             
-                        else:
+                        if(rename):
+                            print(temp_file_name)
                             os.rename(
                                 "program/" + folder_name + "/" + temp_file_name,
                                 "program/"
