@@ -95,7 +95,7 @@ Now that you are part of the Codinasion community, see how else you can [contrib
 [10]: https://github.com/codinasion/program/issues/new/choose "Issue Template"
 [11]: https://github.com/search?q=is:open+user:codinasion&type=Issues "Codinasion Open Issues"
 [12]: https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue "Link PR to Issue"
-[13]: ttps://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/allowing-changes-to-a-pull-request-branch-created-from-a-fork "Allow maintainers to edit"
+[13]: https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/allowing-changes-to-a-pull-request-branch-created-from-a-fork "Allow maintainers to edit"
 [14]: https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/incorporating-feedback-in-your-pull-request "Suggest Changes"
 [15]: https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/commenting-on-a-pull-request#resolving-conversations "Mark conversation as resolved"
 [16]: https://lab.github.com/githubtraining/managing-merge-conflicts "Git Tutorial"
