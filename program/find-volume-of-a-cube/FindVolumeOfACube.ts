@@ -11,9 +11,9 @@
  *
  * @author Tanishq Singh
  */
-function FindVolumeOfACone(side: number): number {
+ function FindVolumeOfACone(side: number): number {
 	const volume = side * side * side;
-	
+
 	return volume;
 }
 
