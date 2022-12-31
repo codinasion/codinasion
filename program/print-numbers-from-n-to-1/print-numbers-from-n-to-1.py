@@ -7,8 +7,7 @@ inputNumber = input("Enter number : ")
 
 num = int(inputNumber)
 
-for i in range(1,num + 1):
-  print(f"{i} ", end = "")
+for i in range(1, num + 1):
+    print(f"{i} ", end="")
 
-  # Contributed By Technical Amanjeet 
-
+    # Contributed By Technical Amanjeet
