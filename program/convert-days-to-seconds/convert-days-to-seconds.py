@@ -1,5 +1,5 @@
-a=int(input())
+a = int(input())
 
-print(a*86400)
+print(a * 86400)
 
-#Contributed by Raghav Garg
+# Contributed by Raghav Garg
