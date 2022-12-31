@@ -1,5 +1,6 @@
 def findSurfaceAreaOfCube(a):
-  return 6 * a * a
+    return 6 * a * a
+
 
 print(findSurfaceAreaOfCube(2))
 # input 2
