@@ -1,5 +1,6 @@
 def convertSecondsToHours(seconds):
-    return seconds/3600
+    return seconds / 3600
+
 
 seconds = 18000
 print("Input: " + str(seconds))
