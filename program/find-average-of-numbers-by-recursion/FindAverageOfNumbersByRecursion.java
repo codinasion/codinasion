@@ -1,22 +1,17 @@
-public class FindAverageOfNumbersByRecursion {
-    // a is array, i is index and n is size of array
-    static double avgRec(int a[], int i, int n) {
-        // for last element
-        if (i == n - 1)
-            return a[i];
+import java.util.Scanner;
 
-        // When index is 0, divide sum computed so far by n.
-        if (i == 0)
-            return ((a[i] + avgRec(a, i + 1, n)) / n);
-
-        // Compute sum
-        return (a[i] + avgRec(a, i + 1, n));
-    }
-
+public class FindAverageOfDigitsOfANumberByRecursion {
     public static void main(String[] args) {
-        int arr[] = { 1, 2, 3, 4, 5 };
-        int n = arr.length;
-
-        System.out.println(avgRec(arr, 0, n));
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        System.out.println(findAverage(num));
+    }
+    static double findAverage(int num){
+        return helper(num,0,0);
+    }
+    static double helper(int num, int sum, int count){
+        if(num == 0){
+            return (double)sum/count;
+        } return helper(num/10, sum + num%10, count+1);
     }
 }
