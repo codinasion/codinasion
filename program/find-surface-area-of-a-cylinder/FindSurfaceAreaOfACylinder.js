@@ -7,4 +7,4 @@ function surfaceArea(radius, height) {
 }
 
 const cylinder = surfaceArea(2, 3);
-cylinder.area();
+console.log(cylinder.area());
