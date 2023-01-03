@@ -5,7 +5,7 @@ fun main() {
     println()
     var min = readLine()
 
-    println("Pasacl Case: " + ConvertStringToPascalcase(min!!.split(" ")))
+    println("Pascal Case: " + ConvertStringToPascalcase(min!!.split(" ")))
 
 }
 
@@ -21,3 +21,4 @@ private fun ConvertStringToPascalcase(args: List<String>): String {
 
     return buffer.toString()
 }
+
