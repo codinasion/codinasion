@@ -1,7 +1,7 @@
 //inverted pyramid
-for(let a = 6;a>=1;a--){
+for(let a = 5;a>=1;a--){
     let str =' '
-    for(let i = 1;i<=a-1;i++){
+    for(let i = 1;i<=a;i++){
         str+=i + " "
     }
     console.log(str)
