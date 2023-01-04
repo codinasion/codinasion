@@ -3,7 +3,7 @@ def convert_string_to_consonantcase(str):
   for letter in str:
     if letter not in ['a','e','i','o','u']:
       solution += letter.upper()
-     else:
+    else:
       solution += letter
       
   return solution
