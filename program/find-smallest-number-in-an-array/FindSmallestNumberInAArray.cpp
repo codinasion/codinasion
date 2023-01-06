@@ -4,12 +4,15 @@
 using namespace std;
 
 int main(){
+    // Taking array limit input:
     cout<<"Enter the length of the array :";
     ll n;   cin>>n;
     ll a[n];
     for(int i=0;i<n;i++){
         cin>>a[i];
     }
+
+    //Finding the smallest element present in the array :
 
     ll min = INT_MAX;
     for(int i=0;i<n;i++){
@@ -18,6 +21,7 @@ int main(){
         }
     }
 
+    //Returning the value :
     cout<<"The smallest element present in the array is : "<<min<<endl;
     return 0;
 }
