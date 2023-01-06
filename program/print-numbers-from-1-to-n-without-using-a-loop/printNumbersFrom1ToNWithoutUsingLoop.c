@@ -17,7 +17,7 @@ int main()
 {
     int input;
 
-    printf("enter an enteger: \n");
+    printf("Enter an Integer: \n");
     scanf("%d", &input);
 
     printNumbersFromOneToN(input);
