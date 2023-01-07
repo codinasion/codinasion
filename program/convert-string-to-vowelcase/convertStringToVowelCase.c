@@ -6,7 +6,7 @@ int main()
   
   printf("Please input string for conversion: ");
 
-  scanf("%s", &mystring);
+  scanf("%[^\n]s", &mystring);
 
   for (size_t i = 0; i < sizeof(mystring); i++)
   {
