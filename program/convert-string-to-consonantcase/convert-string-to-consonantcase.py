@@ -5,11 +5,9 @@ def convert_string_to_consonantcase(str):
       solution += letter.upper()
     else:
       solution += letter
-      
+
   return solution
 
 ##example
-
-print(convert_string_to_consonantcase("hello world"))
-
-## "HeLLo WoRLD"
+user_input = input("Enter the string : ")
+print(convert_string_to_consonantcase(user_input))
