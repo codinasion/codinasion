@@ -1,3 +1,5 @@
+#Programme to find the sun of all numbers in an array....
+
 def findTheSumOfAllNumbersInAnArray numArray
     puts numArray.sum
 end
