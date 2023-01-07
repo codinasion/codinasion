@@ -294,7 +294,6 @@ for folder_name in folder_names:
                     print("Successfully Renamed "  + temp_file_name + " to " + new_file_name + "." + file_extension)
                     number_of_files_renamed = number_of_files_renamed + 1
                 
-
 #Showing the final output
 if number_of_files_renamed == 0 :
     print("All files are Named properly!")
