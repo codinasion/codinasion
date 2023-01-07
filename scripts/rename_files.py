@@ -53,6 +53,8 @@ folder_names = os.listdir("program")
 # Important flags
 number_of_files_renamed = 0
 rename = True
+passed = False
+ct = 0
 
 #Accessing all the files present in there respective folders.
 for folder_name in folder_names:
@@ -75,7 +77,6 @@ for folder_name in folder_names:
                     new_file_name = ConvertToCamelCase(folder_name)
 
                 #finding temp file name without extension
-                ct=0
                 temp_file_name_without_extension=""
                 for i in range(0,len(temp_file_name)):
                     if temp_file_name[i]=='.':
@@ -86,17 +87,13 @@ for folder_name in folder_names:
                 #For handling std file naming conventions. (File_Name.txt == file_name.txt) --> Std file naming convention
                 mini = min(len(temp_file_name_without_extension),len(new_file_name))
                 if len(temp_file_name_without_extension) == len(new_file_name):
-                    for i in range(0, mini) :
-                        if temp_file_name[i].swapcase() == new_file_name[i] :
-                            ct = ct + 1
-                            # print(ct)
-                            # sys.exit()
-
-                else :
-                        # print(temp_file_name)
-                        # print(new_file_name + "." + file_extension)
-                        #Verifying if the file already exists...
-
+                    if temp_file_name_without_extension.lower() == new_file_name.lower() :
+                        for i in range(0, len(new_file_name)) :
+                            if temp_file_name_without_extension[i] != new_file_name[i] :
+                                ct = ct + 1
+                                # print(ct)
+                    else :
+                         #Verifying if the file already exists...
                             if os.path.exists(os.path.join("program",folder_name, new_file_name+"."+file_extension)) :
                                 print("*********************************************")
                                 print("Could not rename " + temp_file_name + " as the file " + new_file_name + "." + file_extension + " already exists!")
@@ -183,19 +180,13 @@ for folder_name in folder_names:
                                 )
                                 print("Successfully Renamed "  + temp_file_name + " to " + new_file_name + "." + file_extension)
                                 number_of_files_renamed = number_of_files_renamed + 1
+                        
 
-                #Solving the case of Std file naming convention.
-
-                if len(temp_file_name) == len(new_file_name):
-                    
-                        if ct != len(new_file_name):
+                else :
                         # print(temp_file_name)
                         # print(new_file_name + "." + file_extension)
-                        #Same Verifying the existance of the file...
-
+                        #Verifying if the file already exists...
                             if os.path.exists(os.path.join("program",folder_name, new_file_name+"."+file_extension)) :
-                                # print(os.path.join("program",folder_name,new_file_name+"."+file_extension))
-                                # print("\n")
                                 print("*********************************************")
                                 print("Could not rename " + temp_file_name + " as the file " + new_file_name + "." + file_extension + " already exists!")
                                 confirm_delete=input("Do you want to delete "+ temp_file_name + " Y/N ")
@@ -217,7 +208,6 @@ for folder_name in folder_names:
                                                 + "."
                                                 + file_extension)
                                         print("Successfully deleted "  + new_file_name + " file")
-                                        # print(temp_file_name)
                                         rename = True
                                     else :
                                         rename = False
@@ -267,8 +257,10 @@ for folder_name in folder_names:
                                 
                                 number_of_files_renamed = -1
 
-                            #Renaming the file
+                            #Renaming the file....
+
                             if(rename):
+                                # print(temp_file_name)
                                 os.rename(
                                     "program/" + folder_name + "/" + temp_file_name,
                                     "program/"
@@ -280,21 +272,32 @@ for folder_name in folder_names:
                                 )
                                 print("Successfully Renamed "  + temp_file_name + " to " + new_file_name + "." + file_extension)
                                 number_of_files_renamed = number_of_files_renamed + 1
+                                # rename= False (doubt)
+
+                #Solving the case of Std file naming convention.
+
+                if len(temp_file_name_without_extension) == len(new_file_name):
+                    
+                        if ct > 0 :
+                        # print(temp_file_name)
+                        # print(new_file_name + "." + file_extension)
+                        #Same Verifying the existance of the file...
+                            #Renaming the file
+                            os.rename(
+                                "program/" + folder_name + "/" + temp_file_name,
+                                "program/"
+                                + folder_name
+                                + "/"
+                                + new_file_name
+                                + "."
+                                + file_extension,
+                            )
+                            print("Successfully Renamed "  + temp_file_name + " to " + new_file_name + "." + file_extension)
+                            number_of_files_renamed = number_of_files_renamed + 1
+                            ct=0
                 
-                elif ct == len(new_file_name):
-                    os.rename(
-                    "program/" + folder_name + "/" + temp_file_name,
-                    "program/"
-                    + folder_name
-                    + "/"
-                    + new_file_name
-                    + "."
-                    + file_extension,
-                )
-                    print("Successfully Renamed "  + temp_file_name + " to " + new_file_name + "." + file_extension)
-                    number_of_files_renamed = number_of_files_renamed + 1
-                
-#Showing the final output
+
+# Showing the final output
 if number_of_files_renamed == 0 :
     print("All files are Named properly!")
 elif number_of_files_renamed < 0 :
