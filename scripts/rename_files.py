@@ -57,6 +57,7 @@ passed = False
 ct = 0
 
 #Accessing all the files present in there respective folders.
+
 for folder_name in folder_names:
     file_names = os.listdir("program/" + folder_name)
     for file_name in file_names:
@@ -94,6 +95,7 @@ for folder_name in folder_names:
                                 # print(ct)
                     else :
                          #Verifying if the file already exists...
+                         
                             if os.path.exists(os.path.join("program",folder_name, new_file_name+"."+file_extension)) :
                                 print("*********************************************")
                                 print("Could not rename " + temp_file_name + " as the file " + new_file_name + "." + file_extension + " already exists!")
@@ -298,6 +300,7 @@ for folder_name in folder_names:
                 
 
 # Showing the final output
+
 if number_of_files_renamed == 0 :
     print("All files are Named properly!")
 elif number_of_files_renamed < 0 :
