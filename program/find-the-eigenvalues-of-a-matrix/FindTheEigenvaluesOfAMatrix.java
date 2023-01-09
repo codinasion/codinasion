@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class EigenvalueCalculator {
+public class FindTheEigenvaluesOfAMatrix {
     public static void main(String[] args) {
         // Read the input matrix
         Scanner scanner = new Scanner(System.in);
