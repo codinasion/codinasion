@@ -1,35 +1,127 @@
 import datetime
 import requests
-from pprint import pprint
+import time
+import os
+import sys
 
-repo_owner= "codinasion"
-repo_name = "program"
+REPO_OWNER = "codinasion"
+REPO_NAME = "program"
 
-# Make a GET request to get all good-first-issues
-url = f"https://api.github.com/repos/{repo_owner}/{repo_name}/issues?labels=good%20first%20issue"
-issues = requests.get(url).json()
+# Get REPO_TOKEN from command line
+if len(sys.argv) > 1:
+    REPO_TOKEN = sys.argv[1]
+else:
+    raise Exception("REPO_TOKEN is required")
 
-for i in issues:
+
+# GET all 'good first issues'
+issues = []
+page = 1
+while True:
+    print(f"Fetching page {page}...")
+    issue_url = f"https://api.github.com/repos/{REPO_OWNER}/{REPO_NAME}/issues?labels=good%20first%20issue&per_page=100&page={page}"
+    issue_data_response = requests.get(
+        issue_url, headers={"Authorization": f"Bearer {REPO_TOKEN}"}
+    )
+
+    if issue_data_response.status_code == 200:
+        issue_data = issue_data_response.json()
+        issues.extend(issue_data)
+        if len(issue_data) < 100:
+            break
+        page += 1
+    else:
+        print("Error while fetch 'good first issue'")
+        print(f"Status Code : {issue_data_response.status_code}")
+        break
+
+    # Wait for few seconds to prevent Github API secondary rate limit
+    time.sleep(3)
+print(f"Total issues fetched: {len(issues)}")
+
+
+for issue in issues:
     # Check if the issue has assignees
-    if i.get("assignees"):
-        issue_number = i.get("number")
-        # Make a GET request to get issue events
-        url = f"https://api.github.com/repos/{repo_owner}/{repo_name}/issues/{issue_number}/events"
-        issue_events = requests.get(url).json()
-        assigned_events = [event for event in issue_events if event["event"]=="assigned"]
-        assigned_events = sorted(assigned_events, key=lambda event: datetime.datetime.strptime(event["created_at"],"%Y-%m-%dT%H:%M:%SZ"),reverse=True)
-        latest_assigned_event = assigned_events[0] if assigned_events else None
-        if latest_assigned_event:
-            created_at = datetime.datetime.strptime(latest_assigned_event["created_at"],"%Y-%m-%dT%H:%M:%SZ")
-            elapsed_time = datetime.datetime.utcnow() - created_at
-            #To check how many days elapsed
-            # pprint(elapsed_time)
+    if issue.get("assignees"):
+        print("It has assignees !!!")
+        issue_number = issue.get("number")
 
-            # Check if the elapsed time is greater than 30 days
-            if elapsed_time.days > 30:
-                headers = {"Authorization": "Bearer {YOUR_TOKEN}"}
-                data = {"assignees": []}
-                url = f"https://api.github.com/repos/{repo_owner}/{repo_name}/issues/{issue_number}"
-                response = requests.patch(url, headers=headers, json=data)
-                print(response.status_code)
-                #if 200 then Succesfull
+        # GET issue events
+        events_url = f"https://api.github.com/repos/{REPO_OWNER}/{REPO_NAME}/issues/{issue_number}/events"
+        events_data_response = requests.get(
+            events_url, headers={"Authorization": f"Bearer {REPO_TOKEN}"}
+        )
+
+        if events_data_response.status_code == 200:
+            events_data = events_data_response.json()
+
+            # Get the latest assigned event
+            assignment_events = [
+                event for event in events_data if event["event"] == "assigned"
+            ]
+            assignment_events = sorted(
+                assignment_events,
+                key=lambda event: datetime.datetime.strptime(
+                    event["created_at"], "%Y-%m-%dT%H:%M:%SZ"
+                ),
+                reverse=True,
+            )
+
+            # Get the latest assignment event
+            latest_assignment_event = (
+                assignment_events[0] if assignment_events else None
+            )
+
+            if latest_assignment_event:
+                assignment_time = latest_assignment_event["created_at"]
+                print(f"Assignment Time: {assignment_time}")
+
+                elapsed_time = datetime.datetime.now() - datetime.datetime.strptime(
+                    assignment_time, "%Y-%m-%dT%H:%M:%SZ"
+                )
+
+                # Check if the issue is assigned for more than 15 days
+                if elapsed_time.days > 15:
+                    print("Issue is assigned for more than 15 days !!!")
+
+                    unassign_url = f"https://api.github.com/repos/{REPO_OWNER}/{REPO_NAME}/issues/{issue_number}/assignees"
+                    unassign_response = requests.delete(
+                        unassign_url,
+                        headers={"Authorization": f"Bearer {REPO_TOKEN}"},
+                        json={"assignees": [latest_assignment_event["actor"]["login"]]},
+                    )
+
+                    # Wait for few seconds to prevent Github API secondary rate limit
+                    time.sleep(3)
+
+                    if unassign_response.status_code == 200:
+                        print(
+                            f"Unassigned @{latest_assignment_event['actor']['login']} successfully !!!"
+                        )
+
+                        # Comment on the Issue about the Unassignment
+                        comment_url = f"https://api.github.com/repos/{REPO_OWNER}/{REPO_NAME}/issues/{issue_number}/comments"
+                        comment_response = requests.post(
+                            comment_url,
+                            headers={"Authorization": f"Bearer {REPO_TOKEN}"},
+                            json={
+                                "body": f"""Hey @{latest_assignment_event['actor']['login']},\n\nThis issue has been assigned to you for more than 15 days.\n\nWe are unassigning you from this issue.\n\nIf you are still interested in contributing to this issue, please get auto-assigned on the issue by commenting `!assign` again.\n\nThanks for your contributions :)"""
+                            },
+                        )
+
+                        if comment_response.status_code == 201:
+                            print("Commented successfully !!!")
+                        else:
+                            print("Error while commenting !!!")
+                    else:
+                        print("Error while unassigning !!!")
+
+        else:
+            print("Error while fetching events data !!!")
+            print(f"Status Code: {events_data_response.status_code}")
+            break
+
+        # Wait for few seconds to prevent Github API secondary rate limit
+        time.sleep(3)
+
+# Contributed by: @patel-aum
