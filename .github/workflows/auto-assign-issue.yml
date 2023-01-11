@@ -13,7 +13,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
         with:
-          token: ${{ secrets.PAT }}
+          token: ${{ secrets.REPO_TOKEN }}
 
       - name: Cache Node Modules
         id: cache-node-modules
@@ -40,4 +40,4 @@ jobs:
           USERNAME: ${{ github.event.comment.user.login }}
           ISSUE_NUMBER: ${{ github.event.issue.number }}
           AUTO_ASSIGN_ISSUE: true
-          TOKEN: ${{ secrets.PAT }}
+          TOKEN: ${{ secrets.REPO_TOKEN }}
