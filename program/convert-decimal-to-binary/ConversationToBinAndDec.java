@@ -1,5 +1,5 @@
 import java.util.AbstractMap.SimpleEntry;
-
+import java.util.Scanner;
 import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -15,7 +15,10 @@ public class ConversationToBinAndDec {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        System.out.println(dectobin(10));
+        Scanner sc= new Scanner(System.in);    //System.in is a standard input stream  
+        System.out.print("Enter decimal number- ");  
+        int a= sc.nextInt();  
+        System.out.println(dectobin(a));
 
     }
 
