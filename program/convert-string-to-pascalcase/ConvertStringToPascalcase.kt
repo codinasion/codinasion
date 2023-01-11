@@ -21,4 +21,3 @@ private fun ConvertStringToPascalcase(args: List<String>): String {
 
     return buffer.toString()
 }
-
