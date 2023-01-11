@@ -19,7 +19,7 @@ issues = []
 page = 1
 while True:
     print(f"Fetching page {page}...")
-    issue_url = f"https://api.github.com/repos/{REPO_OWNER}/{REPO_NAME}/issues?labels=good%20first%20issue&per_page=100&page={page}"
+    issue_url = f"https://api.github.com/repos/{REPO_OWNER}/{REPO_NAME}/issues?labels=good%20first%20issue&state=open&per_page=100&page={page}"
     issue_data_response = requests.get(
         issue_url, headers={"Authorization": f"Bearer {REPO_TOKEN}"}
     )
