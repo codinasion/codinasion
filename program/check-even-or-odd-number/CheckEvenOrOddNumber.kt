@@ -9,10 +9,10 @@ fun main(args: Array<String>) {
 
     if (num % 2 == 0)
     {
-        println("$num is even")
+        println("$num is an even number.")
     }
     else
     {
-        println("$num is odd")
+        println("$num is an odd number.")
     }
 }
