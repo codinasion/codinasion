@@ -9,7 +9,7 @@ Consonantcase is a style of writing in which all consonants are converted to upp
 
 ```
 Input  : "hello world"
-Output : "HELlo WORLD"
+Output : "HeLlo WoRLD"
 ```
 
 ---
