@@ -9,7 +9,7 @@ Vowelcase is a style of writing in which all vowels are converted to uppercase a
 
 ```
 Input  : "hello world"
-Output : "heLLO worLd"
+Output : "hEllO wOrld"
 ```
 
 ---
