@@ -4,5 +4,5 @@ puts "Enter a number : "
  if number % 2 == 0
  puts number.to_s + " is an even number."
  else
- puts number.to_s + " is a odd number."
+ puts number.to_s + " is an odd number."
  end
