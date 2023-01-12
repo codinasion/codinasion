@@ -7,7 +7,7 @@ int main(){
     cout<<"Enter the length of the array:";
     ll n;   cin>>n;
     ll a[n];
-    ll ans[n];
+    ll ans[n]; // temp
 
     //Taking array input
     cout<<"Enter the "<<n<<" numbers : ";
@@ -20,10 +20,15 @@ int main(){
         ans[i] = a[n-1-i];
     }
 
+    // Changing the reverse array to the inputted array.
+    for(int i=0;i<n;i++){
+        a[i]=ans[i];
+    }
+
     // Show the reversed array
     cout<<"The reversed array is :"<<endl;
     for(int i=0;i<n;i++){
-        cout<<ans[i]<<" ";
+        cout<<a[i]<<" ";
     }
     return 0;
 }
