@@ -4,7 +4,7 @@ input_number = gets.to_i
 def findFactorialOfANumber number
     factorial = 1
 
-    (2..number).each_with_index do |x, i|
+    (2..number).each do |x|
         factorial *= x
     end
 
