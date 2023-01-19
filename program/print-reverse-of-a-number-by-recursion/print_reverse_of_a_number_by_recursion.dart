@@ -1,5 +1,4 @@
 String _reverseNum(String num, {String reversed = ''}) {
-  print('next: ${num}');
   // Base, will return in last sequence, when no more digits to reverse
   if (num.length == 1) return '${reversed.toString()}${num}';
 
