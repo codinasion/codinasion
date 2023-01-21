@@ -138,3 +138,5 @@ dist
 .bsp/
 target/
 project/
+
+.venv
