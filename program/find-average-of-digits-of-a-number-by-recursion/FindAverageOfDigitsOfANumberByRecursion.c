@@ -12,6 +12,6 @@ float average_of_digits(int number, int sum, int digits) {
 int main() {
 	int n;
 	scanf("%d", &n);
-	printf("%.0f", average_of_digits(n, 0, 0));
+	printf("%.2f", average_of_digits(n, 0, 0));
 	return 0;
 }
