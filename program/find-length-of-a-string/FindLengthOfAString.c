@@ -1,30 +1,16 @@
-# include <stdio.h>   /*printf */
-# include <stdlib.h> /*size_t */
+# include <stdio.h>
 
-size_t FindLengthOfString(char *string);
 
-int main()
+void FindLengthOfString(char *string)
+{
+	printf("%d\n", sizeof(string));
+}
+
+void main()
 {
 	char string[] = "abcd";
-
-	printf("%ld\n",FindLengthOfString(string));
-
-	return 0;
+	FindLengthOfString(string);
 }
-
-size_t FindLengthOfString(char *string)
-{
-	size_t counter = 0;
-
-	while(*string != '\0')
-	{
-		++counter;
-		++string;
-	}
-
-	return counter;
-}
-
 
 
 
