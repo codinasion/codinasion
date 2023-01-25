@@ -4,11 +4,13 @@ void ConvertStringToReverseCase(char *str);
 
 int main()
 {
-    char str[13] = "hello world";
+    char str[40];
+    
+    fgets(str, 40, stdin);
 
     ConvertStringToReverseCase(str);
 
-    printf("%s\n",str);
+    printf("%s\n", str);
 
     return 0;
 }
@@ -16,11 +18,11 @@ int main()
 void ConvertStringToReverseCase(char *str)
 {
     char *curr = str;
-    
+
     while(*curr != '\0')
     {
         /* -checks if the curr place of the string is high | low case*/
-        
+
         /* -add / remove 32( the difference between lower case and high case) to match the new ascii value*/
         if((*curr >= 'A') && (*curr <= 'Z'))
         {
