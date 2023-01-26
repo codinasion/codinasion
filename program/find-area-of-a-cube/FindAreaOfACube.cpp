@@ -12,7 +12,7 @@ int main(){
 
     //printing output;
     cout<<"The Surface area of the cube is: "<<6*(length*length)<<endl;
-
+    
     return 0;
 }
 
