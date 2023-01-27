@@ -3,10 +3,18 @@
 int sum_squares(int input[],int n);
 
 int main()
-{
-    int input[5]= {1,2,3,4,5};
-
-    sum_squares(input,5);
+{   
+    printf("Enter the size of the input array :");
+    int n;  scanf("%d",&n);
+    int input[n];
+    
+    
+    printf("Enter the values :\n");
+    for(int i =0;i<n;i++){
+        scanf("%d" , &input[i]);
+    }
+    
+    sum_squares(input,n);
 
     return 0;
 }
@@ -21,7 +29,7 @@ int sum_squares(int input[], int n)
         sum+=(input[i]*input[i]);
     }
 
-    printf("sum=%d\n",sum);
+    printf("sum = %d\n",sum);
 
     return sum;
 }
