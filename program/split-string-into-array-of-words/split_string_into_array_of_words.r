@@ -1,2 +1,4 @@
-message <- readline()
-split_message <- strsplit(message, split=" ")
+string <- "hello world"
+words <- strsplit(string, " ")[[1]]
+result <- paste(shQuote(words), collapse=", ")
+cat(sprintf("[%s]", result))
