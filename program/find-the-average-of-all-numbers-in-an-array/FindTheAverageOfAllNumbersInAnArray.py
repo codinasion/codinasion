@@ -1,3 +1,4 @@
+### Author: Shashank Gurunaga ###
 def listAverage(array,n1):
     arraysum=0
     for j in range(n1):
