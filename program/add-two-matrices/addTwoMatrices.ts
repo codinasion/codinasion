@@ -10,13 +10,16 @@ function addTwoMatrices(matrix1: number[][], matrix2: number[][]) {
     return sum
 }
 
-const arr1 = [[1, 2],
-              [4, 5],
-              [7, 8]
-             ]
+const arr1 = [
+    [1, 2],
+    [4, 5],
+    [7, 8]
+]
 
-const arr2 = [[1, 2],
-              [4, 5],
-              [7, 8]  
-             ]
-addTwoMatrices(arr1, arr2)
+const arr2 = [
+    [1, 2],
+    [4, 5],
+    [7, 8]
+]
+
+console.log(addTwoMatrices(arr1, arr2));
