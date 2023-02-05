@@ -1,5 +1,5 @@
 #include <iostream> // cout, cin
-
+using namespace std;
 
 float Divide2Numbers(int x, int y);
 
@@ -8,12 +8,12 @@ int main()
     int x = 0;
     int y = 0;
 
-    std::cout << "please enter two numbers to divide:" << std::endl;
+    cout << "please enter two numbers to divide:" << endl;
 
-    std::cin >> x;
-    std::cin >> y;
+    cin >> x;
+    cin >> y;
 
-    std::cout << Divide2Numbers(x,y);
+    cout << Divide2Numbers(x,y);
 }
 
 float Divide2Numbers(int x, int y)
