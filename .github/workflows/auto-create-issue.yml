@@ -14,7 +14,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
         with:
-          token: ${{ secrets.PAT }}
+          token: ${{ secrets.REPO_TOKEN }}
 
       - name: Cache Node Modules
         id: cache-node-modules
@@ -32,7 +32,7 @@ jobs:
         uses: ./action/
         with:
           AUTO_CREATE_ISSUE: true
-          TOKEN: ${{ secrets.PAT }}
+          TOKEN: ${{ secrets.REPO_TOKEN }}
 
       - name: Git Pull
         run: |
