@@ -132,3 +132,11 @@ dist
 
 ######################
 **.class
+**.exe
+.vscode/
+.metals/*
+.bsp/
+target/
+project/
+
+.venv
