@@ -5,7 +5,7 @@ bool IsPangram(std::string str);
 int main()
 {
     std::string str;
-    std::cin >> str;
+    getline(std::cin,str);
 
     std::cout << IsPangram(str) << std::endl;
 
@@ -24,7 +24,7 @@ bool IsPangram(std::string str)
         }
     }
 
-    for(size_t i = 0; i <26; ++i)
+    for(size_t i = 0; i < 26; ++i)
     {
         if(!arr[i])
         {
