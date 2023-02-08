@@ -11,7 +11,7 @@ int main() {
 
   for(int i = 0; i < strLen; i++) {
     char ch = s[i];
-    s[i] = ch.toUpper();
+    s[i] = toupper(ch);
   }
 
 
