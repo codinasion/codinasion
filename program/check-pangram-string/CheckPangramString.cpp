@@ -1,33 +1,37 @@
 #include <iostream>
 
-bool IsPangram(std::string str);
+using namespace std;
+
+bool IsPangram(string str);
 
 int main()
 {
-    std::string str;
-    getline(std::cin,str);
+    string str;
+    cout << "Input  : ";
+    getline(cin,str);
 
-    std::cout << IsPangram(str) << std::endl;
+    cout << "Output : ";
+    if(IsPangram(str) == 1) {
+        cout << "Pangram sentence";
+    } else {
+        cout << "Not a Pangram sentence";
+    }
 
     return 0;
 }
 
-bool IsPangram(std::string str)
+bool IsPangram(string str)
 {
     int arr[26] = {0};
 
-    for(size_t i = 0; i < str.size(); ++i)
-    {
-        if((tolower(str[i]) >= 'a') && (tolower(str[i]) <= 'z'))
-        {   
+    for(size_t i = 0; i < str.size(); ++i) {
+        if((tolower(str[i]) >= 'a') && (tolower(str[i]) <= 'z')) {
             ++arr[tolower(str[i]) - 'a'];
         }
     }
 
-    for(size_t i = 0; i < 26; ++i)
-    {
-        if(!arr[i])
-        {
+    for(size_t i = 0; i < 26; ++i) {
+        if(!arr[i]) {
             return false;
         }
     }
