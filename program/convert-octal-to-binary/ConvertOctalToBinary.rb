@@ -4,6 +4,8 @@ module Octal_to_binary
     result = base10_to_base2(base8_to_base10(num))
     num.negative? ? -result : result
   end
+  
+  private
 
   def self.base8_to_base10(num)
     decimal = 0
