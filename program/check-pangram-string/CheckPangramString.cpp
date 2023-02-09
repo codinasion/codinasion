@@ -1,7 +1,3 @@
-
-Marking files as viewed can help keep track of your progress, but will not affect your submitted review
-Viewed
-@@ -0,0 +1,36 @@
 #include <iostream>
 
 bool IsPangram(std::string str);
