@@ -13,6 +13,6 @@ public class ConvertStringToTitlecase {
         }
 
         String output = sb.toString().trim();
-        System.out.println(output);
+        System.out.println(output); //output string to titel case
     }
 }
