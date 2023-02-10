@@ -1,9 +1,12 @@
 module Power
 
   def self.power(num, pow)
-    result = num
-    (pow-1).times { |i| result *= num }
-    result
+    num**pow
+    
+    # # Another Way
+    # result = num
+    # (pow-1).times { |i| result *= num }
+    # result
   end
   
 end
