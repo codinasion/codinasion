@@ -6,7 +6,7 @@ void ReverseAnArray(int *arr, size_t size);
 
 /* function to print the array*/
 
-void PrintArr(int *arr,int size);
+void PrintArr(int *arr,size_t size);
 /*****************************************************************/
 int main()
 {
@@ -52,10 +52,10 @@ void ReverseAnArray(int *arr, size_t size)
     }
 }
 /*****************************************************************/
-void PrintArr(int *arr,int size)
+void PrintArr(int *arr,size_t size)
 {
     size_t i = 0;
-    
+
     printf("\n");
 
     for(i = 0; i < size;++i)
