@@ -13,6 +13,8 @@ int main()
 	}
 	
 	printf("%d",FindSquare(num));
+
+    return 0;
 }
 
 int FindSquare(int num)
