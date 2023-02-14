@@ -7,7 +7,7 @@ trackId: 4589
 
 The trace of a square matrix is the sum of the elements on the main diagonal (from the upper left to the lower right).
 
-```
+```txt
 Input  :
 1 2 3
 4 5 6
