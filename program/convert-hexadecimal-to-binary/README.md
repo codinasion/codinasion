@@ -14,7 +14,7 @@ To convert a hexadecimal number to binary, we can use the following algorithm:
 1. Convert the hexadecimal number to decimal.
 2. Convert the decimal number to binary.
 
-```
+```txt
 Input  : A
 Output : 1010
 ```
