@@ -1,5 +1,7 @@
 #include <stdio.h> /* printf, scanf*/
 
+int ConvertDaysToHours(int days);
+
 int main()
 {
     int num = 0;
@@ -11,7 +13,12 @@ int main()
         return -1;
     }
 
-    printf("%d\n",ConvertDaysToHours(num))
+    printf("%d\n",ConvertDaysToHours(num));
 
     return 0;
+}
+
+int ConvertDaysToHours(int days)
+{
+    return days * 24;
 }
