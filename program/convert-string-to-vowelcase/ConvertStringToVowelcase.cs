@@ -1,4 +1,6 @@
-﻿public class ConvertStringToVowelcase
+using System;
+
+public class ConvertStringToVowelcase
 {
     public static void Main(string[] args)
     {
