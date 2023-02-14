@@ -7,7 +7,7 @@ trackId: 5013
 
 celcius = (fahrenheit - 32) * 5/9
 
-```
+```txt
 Input ( F )  : -40
 Output ( C ) : -40
 ```
