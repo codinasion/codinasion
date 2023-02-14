@@ -6,10 +6,10 @@ class ConvertPaiseToRupees {
 		
 		Scanner input = new Scanner(System.in);
 		
-		System.out.print("Input ( Ps ) : ");
+		System.out.print("Input ( Paise ) : ");
 		int currencyInPaise = input.nextInt();
 		
-		System.out.print("Output ( Rs ) : " + (currencyInPaise / 100));
+		System.out.print("Output ( Rupees ) : " + (currencyInPaise / 100));
 	}
 	
 	
