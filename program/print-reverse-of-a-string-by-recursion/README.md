@@ -7,7 +7,7 @@ trackId: 554
 
 Reverse of a string is the string with characters in reverse order. For example, reverse of "GeeksQuiz" is "ziuQskeeG".
 
-```
+```txt
 Input  : abcd
 Output : dcba
 ```

@@ -7,7 +7,7 @@ trackId: 1260
 
 A pangram is a sentence containing every letter in the English Alphabet.
 
-```
+```txt
 Input  : The quick brown fox jumps over the lazy dog
 Output : Pangram sentence
 ```

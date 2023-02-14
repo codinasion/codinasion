@@ -7,7 +7,7 @@ trackId: 4635
 
 1 hour = 60 minutes
 
-```
+```txt
 Input  : 5
 Output : 300
 ```
