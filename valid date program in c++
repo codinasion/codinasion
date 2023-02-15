@@ -1,0 +1,39 @@
+#include <iostream>
+
+int main(){
+    int dd,mm,yy;
+    std::cout<<"Enter date:";
+     std::cin>>dd;
+     std::cout<<"Enter month: ";
+     std::cin>>mm;
+     std::cout<<"Enter year: ";
+     std::cin>>yy;
+  //checking date 
+   if(yy>=1900 && yy<=9999)
+    {
+        //check month
+        if(mm>=1 && mm<=12)
+        {
+            //check days
+            if((dd>=1 && dd<=31) && (mm==1 || mm==3 || mm==5 || mm==7 || mm==8 || mm==10 || mm==12))
+                std::cout<<"Date is valid.\n";
+            else if((dd>=1 && dd<=30) && (mm==4 || mm==6 || mm==9 || mm==11))
+                std::cout<<"Date is valid.\n";
+            else if((dd>=1 && dd<=28) && (mm==2))
+                std::cout<<"Date is valid.\n";
+            else if(dd==29 && mm==2 && (yy%400==0 ||(yy%4==0 && yy%100!=0)))
+                std::cout<<"leap year.\n";
+            else
+                std::cout<<"Day is invalid.\n";
+        }
+        else
+        {
+            std::cout<<"Month is not valid.\n";
+        }
+    }
+    else
+    {
+          std::cout<<"Year is not valid.\n";
+    }
+    return 0;
+  }
