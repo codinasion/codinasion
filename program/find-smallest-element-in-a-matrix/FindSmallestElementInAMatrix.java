@@ -13,28 +13,21 @@ public class FindSmallestElementInAMatrix {
                 arr[i][j] = scnr.nextInt();
             }
         }
-
-
         for (i = 0; i < 3; i++) {
             for (j = 0; j < 3; j++) {
-
-
                 if (j == 0 && i == 0) {
                     k = arr[0][0];
                     continue;
                 }
                 if (k < arr[i][j]) {
-
                     smallest = k;
                 }
                 else {
-
                     smallest = arr[i][j];
                 }
-
                 k = smallest;
             }
         }
-System.out.println(smallest);
+        System.out.println(smallest);
     }
 }
