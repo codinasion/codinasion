@@ -6,7 +6,7 @@ int main()
 {
     char character = 0;
 
-    int is_good = scanf("%c",character);
+    int is_good = scanf("%c",&character);
     
     if(is_good != 1)
     {
@@ -15,7 +15,7 @@ int main()
 
     if(IsLowerCase(character))
     {
-        print("lower case\n");
+        printf("lower case\n");
     }
 
     return 0;
