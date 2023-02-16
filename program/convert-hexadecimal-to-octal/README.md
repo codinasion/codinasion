@@ -14,7 +14,7 @@ To convert a hexadecimal number to octal, we can use the following algorithm:
 1. Convert the hexadecimal number to decimal.
 2. Convert the decimal number to octal.
 
-```
+```txt
 Input  : A
 Output : 12
 ```
