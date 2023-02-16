@@ -17,5 +17,5 @@ public class PrintStringOfAsciiValues {
         int ascii3 = c;
         System.out.println(ascii1 + " " + ascii2 + " " + ascii3);
         scnr.close();
-        }
+    }
 }
