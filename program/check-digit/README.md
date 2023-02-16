@@ -7,7 +7,7 @@ trackId: 2930
 
 Check wether given character is a digit (0-9).
 
-```
+```txt
 Input  : 1
 Output : Digit
 ```
