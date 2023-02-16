@@ -1,21 +1,38 @@
 import java.util.Scanner;
-
+import java.util.ArrayList;
 public class PrintStringOfAsciiValues {
     public static void main(String[] args) {
 
         Scanner scnr = new Scanner(System.in);
-        // Scanning three user input values
-        System.out.println("Enter any three characters");
-        // And storing them into corresponding character vaiables
-        char a = scnr.next().charAt(0);
-        char b = scnr.next().charAt(0);
-        char c = scnr.next().charAt(0);
+        char character;
+        int asciivalue;
+        String output = "";
 
-        //Assigning those character values to integer varaibles for getting the corresponding ascii values.
-        int ascii1 = a;
-        int ascii2 = b;
-        int ascii3 = c;
-        System.out.println(ascii1 + " " + ascii2 + " " + ascii3);
+        System.out.println("Enter the ASCII values separated by spaces and press enter 2 times to finish: ");
+        ArrayList<Integer> numbers = new ArrayList<>();
+
+        String line = scnr.nextLine();
+        while (!line.isEmpty()) {
+            String[] values = line.split("\\s+");
+            for (String value : values) {
+                try {
+                    int intValue = Integer.parseInt(value);
+                    numbers.add(intValue);
+                } catch (NumberFormatException e) {
+                    System.out.println("Invalid input: " + value);
+                }
+            }
+            line = scnr.nextLine();
+        }
+
+        for (int i = 0; i < numbers.size(); i++) {
+            asciivalue = (numbers.get(i));
+            character = (char) asciivalue;
+            output += character;
+        }
+
+        System.out.println(output);
+
         scnr.close();
     }
 }
