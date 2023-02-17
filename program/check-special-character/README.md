@@ -7,7 +7,7 @@ trackId: 2961
 
 Check if given character is a special character (not a letter or a number).
 
-```
+```txt
 Input  : @
 Output : Special Character
 ```
