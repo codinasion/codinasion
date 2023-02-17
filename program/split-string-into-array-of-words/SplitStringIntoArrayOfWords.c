@@ -5,11 +5,11 @@
 int main()
 {
     char input[] = "hello world";
-+   char **words = malloc(sizeof(char*) * strlen(input));
+    char **words = malloc(sizeof(char*) * strlen(input));
     int word_count = 0;
     char *token = strtok(input, " ");
     while (token != NULL) {
-+       words[word_count] = malloc(sizeof(char) * (strlen(token) + 1));
+        words[word_count] = malloc(sizeof(char) * (strlen(token) + 1));
         strcpy(words[word_count], token);
         word_count++;
         token = strtok(NULL, " ");
