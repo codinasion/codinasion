@@ -7,7 +7,7 @@ trackId: 5402
 
 Suppose you have a number `n` and you want to find the sum of its digits. For example, if `n = 123`, then the sum of its digits is `1 + 2 + 3 = 6`.
 
-```
+```txt
 Input  : 123
 Output : 6
 ```

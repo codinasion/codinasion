@@ -7,7 +7,7 @@ trackId: 3988
 
 Pascal's triangle is a triangular array of the binomial coefficients. Write a function that takes an integer value `n` as input and prints first `n` lines of the Pascal's triangle.
 
-```
+```txt
 Input  : 5
 
 Output : 
