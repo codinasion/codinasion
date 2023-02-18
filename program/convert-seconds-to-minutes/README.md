@@ -7,7 +7,7 @@ trackId: 352
 
 1 minute = 60 seconds
 
-```
+```txt
 Input  : 300
 Output : 5
 ```
