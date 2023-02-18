@@ -13,7 +13,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
         with:
-          token: ${{ secrets.PAT }}
+          token: ${{ secrets.REPO_TOKEN }}
 
       - name: Cache Node Modules
         id: cache-node-modules
@@ -44,7 +44,7 @@ jobs:
           ISSUE_BODY: ${{ github.event.issue.body }}
           ISSUE_LABEL: ${{ github.event.label.name }}
           SUBMIT_PROGRAM: true
-          TOKEN: ${{ secrets.PAT }}
+          TOKEN: ${{ secrets.REPO_TOKEN }}
 
       - name: Git Pull
         if: steps.submit-program.outputs.submit-success == 'true'
@@ -66,4 +66,4 @@ jobs:
           ISSUE_NUMBER: ${{ github.event.issue.number }}
           ISSUE_LABEL: ${{ github.event.label.name }}
           SUBMIT_PROGRAM_COMMENT_CLOSE: true
-          TOKEN: ${{ secrets.PAT }}
+          TOKEN: ${{ secrets.REPO_TOKEN }}
