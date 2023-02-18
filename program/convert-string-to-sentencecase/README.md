@@ -7,7 +7,7 @@ trackId: 5055
 
 Sentencecase is a style of writing in which the first letter of the first word is capitalized.
 
-```
+```txt
 Input  : "hello world"
 Output : "Hello world"
 ```

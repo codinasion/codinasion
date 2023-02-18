@@ -7,7 +7,7 @@ trackId: 5034
 
 Surface area of cylinder = 2 × π × `Radius` × `Height`
 
-```
+```txt
 Radius : 2
 Height : 3
 
