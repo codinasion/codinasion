@@ -1,10 +1,7 @@
-function largeSmall(numbers) {
-    let sorted = numbers.slice().sort(function (a, b) {
-        return a - b;
-    });
-    return sorted;
+function findingSmallestLargest(numArr) {
+    return [Math.max(...numArr), Math.min(...numArr)];
+  
 }
-
-let numbers = [1, 2, 3, 4, 5];
-let sort = largeSmall(numbers);
-console.log(sort[sort.length - 1], sort[0]);
+  
+  const numberArrTest = [1, 2, 3, 4, 5];
+  findingSmallLarge(numberArrTest);
