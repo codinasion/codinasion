@@ -7,7 +7,7 @@ trackId: 1354
 
 Compound interest = principal amount * (1 + rate of interest) ^ time
 
-```
+```txt
 Principal : 1000
 Rate      : 10
 Time      : 5

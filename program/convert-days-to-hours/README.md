@@ -7,7 +7,7 @@ trackId: 4265
 
 1 day = 24 hours
 
-```
+```txt
 Input  : 5
 Output : 120
 ```
