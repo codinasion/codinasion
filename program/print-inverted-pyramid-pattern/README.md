@@ -5,7 +5,7 @@ trackId: 4979
 
 ## Write a program to print inverted pyramid pattern
 
-```
+```txt
 Input   : 5
 
 Output : 
