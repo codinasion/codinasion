@@ -3,7 +3,7 @@
 int main(){
 
     float length_in_cm;
-    printf("Enter length in centimeters\n");
+    printf("Enter length in Centimeters: \n");
     scanf("%f", &length_in_cm);
 
     float length_in_ft = length_in_cm / 30.48;
