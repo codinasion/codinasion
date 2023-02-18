@@ -5,7 +5,7 @@ trackId: 4113
 
 ## Write a program to print pattern 1
 
-```
+```txt
 Input  : 5
 
 Output :
