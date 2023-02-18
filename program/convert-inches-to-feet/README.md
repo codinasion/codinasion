@@ -7,7 +7,7 @@ trackId: 5617
 
 1 foot = 12 inches
 
-```
+```txt
 Input  : 60
 Output : 5
 ```
