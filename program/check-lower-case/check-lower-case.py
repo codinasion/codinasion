@@ -9,4 +9,4 @@ char_inp = input()
 if is_lower_case(char_inp):
     print("Lower Case")
 else:
-    print("Upper Case")
+    print("Not Lower Case")
