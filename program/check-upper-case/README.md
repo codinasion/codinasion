@@ -7,7 +7,7 @@ trackId: 1126
 
 Check if the given character is upper case (A-Z).
 
-```
+```txt
 Input  : A
 Output : Upper Case
 ```
