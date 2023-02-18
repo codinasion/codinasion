@@ -7,7 +7,7 @@ trackId: 5316
 
 Alternatingcase is a style of writing in which each letter is converted to its opposite case.
 
-```
+```txt
 Input  : "hello world"
 Output : "hElLo WoRlD"
 ```
