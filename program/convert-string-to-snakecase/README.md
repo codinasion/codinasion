@@ -7,7 +7,7 @@ trackId: 3119
 
 Snakecase is a style of writing in which all letters are lowercase and spaces are replaced with underscores.
 
-```
+```txt
 Input  : "hello world"
 Output : "hello_world"
 ```
