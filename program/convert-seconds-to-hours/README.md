@@ -7,7 +7,7 @@ trackId: 3721
 
 1 hour = 60 minutes = 3600 seconds
 
-```
+```txt
 Input  : 18000
 Output : 5
 ```
