@@ -7,7 +7,7 @@ trackId: 4381
 
 1 week = 7 days
 
-```
+```txt
 Input  : 35
 Output : 5
 ```

@@ -7,7 +7,7 @@ trackId: 3221
 
 Camelcase is a style of writing in which the first letter of each word is capitalized except the first word.
 
-```
+```txt
 Input  : "hello world"
 Output : "helloWorld"
 ```

@@ -7,7 +7,7 @@ trackId: 1236
 
 An Armstrong number is a number that is equal to the sum of cubes of its digits.
 
-```
+```txt
 Input  : 153
 Output : Armstrong Number
 ```
