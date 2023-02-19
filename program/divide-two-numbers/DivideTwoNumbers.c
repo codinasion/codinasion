@@ -9,9 +9,14 @@ int main()
     int num2 = 0;
     printf("please enter two numbers to divide\n");
 
-    scanf("%d%d",&num1,&num2);
+    if(scanf("%d%d",&num1,&num2) != 2)
+    {
+        return -1;
+    }
 
-    printf("%f",DivideTwoNumbers(num1,num2));
+    printf("%.2f\n",DivideTwoNumbers(num1,num2));
+
+    return 0;
 }
 
 float DivideTwoNumbers(int num1, int num2)
