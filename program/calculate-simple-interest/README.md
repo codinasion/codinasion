@@ -7,7 +7,7 @@ trackId: 5293
 
 Simple interest = (principal amount * rate of interest * time) / 100
 
-```
+```txt
 Principal : 1000
 Rate      : 10
 Time      : 5

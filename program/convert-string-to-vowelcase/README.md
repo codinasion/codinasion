@@ -7,7 +7,7 @@ trackId: 4929
 
 Vowelcase is a style of writing in which all vowels are converted to uppercase and all consonants are converted to lowercase.
 
-```
+```txt
 Input  : "hello world"
 Output : "hEllO wOrld"
 ```
