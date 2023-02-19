@@ -7,7 +7,7 @@ trackId: 1855
 
 Average of numbers is the sum of all numbers divided by the number of numbers.
 
-```
+```txt
 Input  : 1 2 3 4 5
 Output : 3
 ```
