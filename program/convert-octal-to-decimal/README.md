@@ -17,7 +17,7 @@ To convert an octal number to decimal, we can use the following algorithm:
 6. Add the results of all the multiplications.
 7. The decimal number is the sum of all the multiplications.
 
-```
+```txt
 Input  : 12
 Output : 10
 ```

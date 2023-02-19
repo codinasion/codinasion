@@ -7,7 +7,7 @@ trackId: 1054
 
 Check if a character is a consonant.
 
-```
+```txt
 Input  : b
 Output : Consonant
 ```

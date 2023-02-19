@@ -7,9 +7,9 @@ trackId: 5142
 
 Consonantcase is a style of writing in which all consonants are converted to uppercase and all vowels are converted to lowercase.
 
-```
+```txt
 Input  : "hello world"
-Output : "HELlo WORLD"
+Output : "HeLlo WoRLD"
 ```
 
 ---
