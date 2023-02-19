@@ -7,7 +7,7 @@ trackId: 4544
 
 Matrix addition is the process of adding two matrices by adding the corresponding elements of the two matrices. Two matrices must have an equal number of rows and columns to be added.
 
-```
+```txt
 Input  :
 1 2 3
 4 5 6
