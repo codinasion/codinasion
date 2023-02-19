@@ -9,7 +9,7 @@ Suppose we have a number `n` and we want to find the sum of its digits. For exam
 
 Recursion is a method of solving a problem where the solution depends on solutions to smaller instances of the same problem. In this case, we can use recursion to find the sum of digits of a number.
 
-```
+```txt
 Input  : 123
 Output : 6
 ```
