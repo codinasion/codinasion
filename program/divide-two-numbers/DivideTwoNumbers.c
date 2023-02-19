@@ -11,7 +11,7 @@ int main()
 
     scanf("%d%d",&num1,&num2);
 
-    printf(DivideTwoNumbers(num1,num2));
+    printf("%f",DivideTwoNumbers(num1,num2));
 }
 
 float DivideTwoNumbers(int num1, int num2)
