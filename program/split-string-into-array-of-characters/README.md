@@ -5,7 +5,7 @@ trackId: 2535
 
 ## Write a program to split string into array of characters
 
-```
+```txt
 Input  : "hello world"
 Output : ["h", "e", "l", "l", "o", " ", "w", "o", "r", "l", "d"]
 ```

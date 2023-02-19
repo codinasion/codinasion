@@ -7,7 +7,7 @@ trackId: 2789
 
 Volume of cube = `Side`^3
 
-```
+```txt
 Side : 2
 
 Volume : 8
