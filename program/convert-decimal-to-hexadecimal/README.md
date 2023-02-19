@@ -16,7 +16,7 @@ To convert a decimal number to hexadecimal, we can use the following algorithm:
 5. Repeat steps 3 and 4 until the quotient is 0.
 6. The hexadecimal number is the sequence of remainders written in reverse order.
 
-```
+```txt
 Input  : 10
 Output : A
 ```

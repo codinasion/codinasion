@@ -7,7 +7,7 @@ trackId: 4085
 
 Pascalcase is a style of writing in which the first letter of each word is capitalized.
 
-```
+```txt
 Input  : "hello world"
 Output : "HelloWorld"
 ```
