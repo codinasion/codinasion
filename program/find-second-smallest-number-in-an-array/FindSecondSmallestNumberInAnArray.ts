@@ -1,17 +1,17 @@
 function findSecondSmallestNumberInAnArrayTs(numbersArr: number[]): number {
-  let sm: number = Infinity;
-  let secSm: number = Infinity;
+  let firstSmallest: number = Infinity;
+  let secondSmallest: number = Infinity;
 
   numbersArr.forEach((num: number) => {
-    if (num < sm) {
-      secSm = sm;
-      sm = num;
-    } else if (num < secSm && num > sm) {
-      secSm = num;
+    if (num < firstSmallest) {
+      secondSmallest = firstSmallest;
+      firstSmallest = num;
+    } else if (num < secondSmallest && num > firstSmallest) {
+      secondSmallest = num;
     }
   });
 
-  return secSm;
+  return secondSmallest;
 }
 
 console.log(findSecondSmallestNumberInAnArrayTs([2, 3, 45, -2, 5]));
