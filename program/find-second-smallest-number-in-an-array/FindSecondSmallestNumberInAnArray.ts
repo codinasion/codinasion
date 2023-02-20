@@ -13,5 +13,3 @@ function findSecondSmallestNumberInAnArrayTs(numbersArr: number[]): number {
 
   return secondSmallest;
 }
-
-console.log(findSecondSmallestNumberInAnArrayTs([2, 3, 45, -2, 5]));
