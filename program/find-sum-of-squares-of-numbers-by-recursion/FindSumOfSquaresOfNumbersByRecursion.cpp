@@ -5,6 +5,7 @@
 int FindSumOfSquares(std::vector<int>& nums);
 // Find a square of numbers by recursion
 int FindSumOfSquaresRec(std::vector<int>& nums,size_t idx);
+
 int main()
 {
     size_t size = 0;
@@ -24,6 +25,8 @@ int main()
     }
 
     std::cout << FindSumOfSquares(nums) << std::endl;
+
+    return 0;
 }
 
 int FindSumOfSquares(std::vector<int>& nums)
