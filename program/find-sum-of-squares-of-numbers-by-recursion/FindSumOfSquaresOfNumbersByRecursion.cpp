@@ -7,7 +7,7 @@ int FindSumOfSquares(std::vector<int>& nums);
 int FindSumOfSquaresRec(std::vector<int>& nums,size_t idx);
 int main()
 {
-    int size = 0;
+    size_t size = 0;
 
     std::cout << "please enter the size of the array:" << std::endl;
     std::cin >> size;
@@ -23,7 +23,7 @@ int main()
         nums.push_back(tmp);
     }
 
-    std::cout << FindSumOfSquaresRec(nums) << std::endl;
+    std::cout << FindSumOfSquares(nums) << std::endl;
 }
 
 int FindSumOfSquares(std::vector<int>& nums)
@@ -41,5 +41,5 @@ int FindSumOfSquaresRec(std::vector<int>& nums,size_t idx)
 
     int square_of = nums[idx] * nums[idx];
 
-    return FindSumOfSquaresRec(nums,idx - 1);
+    return square_of + FindSumOfSquaresRec(nums,idx - 1);
 }
