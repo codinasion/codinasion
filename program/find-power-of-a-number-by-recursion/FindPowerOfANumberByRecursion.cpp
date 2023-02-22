@@ -10,7 +10,7 @@ int main()
 
     std::cout << "please enter base number and than exponent number:" << std::endl;
 
-    std::cin >> base,expo;
+    std::cin >> base >> expo;
 
     std::cout << PowerOfNumRec(base,expo) << std::endl;
 }
