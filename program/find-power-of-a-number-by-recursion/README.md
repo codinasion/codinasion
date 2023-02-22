@@ -13,7 +13,7 @@ Power of a number can be calculated by recursion. The formula is:
 x^n = x * x^{n-1}
 ```
 
-```
+```txt
 Input  : 2 3
 Output : 8
 ```
