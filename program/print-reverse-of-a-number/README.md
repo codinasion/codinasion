@@ -7,7 +7,7 @@ trackId: 3468
 
 Reverse of a number is the number obtained by reversing the digits of the original number. For example, the reverse of 123 is 321. The reverse of 100 is 1. The reverse of 1000 is 1.
 
-```
+```txt
 Input  : 123
 Output : 321
 ```

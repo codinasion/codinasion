@@ -7,7 +7,7 @@ trackId: 5575
 
 The eigenvalues and eigenvectors of a linear transformation are the values and vectors that determine the transformation. The eigenvalues of a matrix A are the values λ for which the matrix equation Av = λv has a non-trivial solution.
 
-```
+```txt
 Input  :
 1 2 3
 4 5 6
