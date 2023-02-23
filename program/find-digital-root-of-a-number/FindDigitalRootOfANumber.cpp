@@ -15,8 +15,17 @@ int main()
 
 int DigitalRoot(int num)
 {
-    while(num)
+    while(num > 9)
     {
-        
+        int tmp = num;
+
+        while(num)
+        {
+            tmp += num % 10;
+            num / 10;
+        }
+        num = tmp;
     }
+
+    return num;
 }
