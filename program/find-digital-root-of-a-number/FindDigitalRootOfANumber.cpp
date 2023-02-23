@@ -1,5 +1,6 @@
 #include<iostream> // cout, sin
 
+//num must be non negative.
 int DigitalRoot(int num);
 
 int main()
@@ -17,12 +18,12 @@ int DigitalRoot(int num)
 {
     while(num > 9)
     {
-        int tmp = num;
+        int tmp = 0;
 
         while(num)
         {
             tmp += num % 10;
-            num / 10;
+            num /= 10;
         }
         num = tmp;
     }
