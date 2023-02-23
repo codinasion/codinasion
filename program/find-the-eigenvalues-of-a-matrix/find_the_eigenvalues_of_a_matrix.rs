@@ -1,4 +1,4 @@
-use ndarray::{arr2, Array2};
+use ndarray::{Array1, Array2};
 use ndarray_linalg::Eigen;
 
 fn main() {
@@ -18,9 +18,7 @@ fn main() {
     let eigenvalues = matrix.eigvals().unwrap();
 
     // Print the eigenvalues to standard output
-    for i in 0..eigenvalues.len() {
-        println!("Eigenvalue {}: {}", i, eigenvalues[i]);
+    for (i, &value) in eigenvalues.iter().enumerate() {
+        println!("Eigenvalue {}: {}", i, value);
     }
 }
-
-for the input 1 2 3; 4 5 6; 7 8 9
