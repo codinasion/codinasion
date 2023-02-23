@@ -1,0 +1,72 @@
+name: Rename Files
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - master
+    paths:
+      - "program/**"
+      - "scripts/**"
+      - ".github/workflows/rename-files.yml"
+
+jobs:
+  rename_files:
+    if: github.repository == 'codinasion/program'
+
+    runs-on: ubuntu-latest
+    name: Collect Program Data
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.REPO_TOKEN }}
+
+      ##########  Get Date  ##########
+      - name: Get Date
+        id: date
+        uses: nanzm/get-time-action@v1.1
+        with:
+          timeZone: 5.5
+          format: "YYYY-MM-DD-hh-mm"
+
+      # Cache node_modules
+      - name: Cache Node Modules
+        id: cache-node-modules
+        uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: node-modules-${{ hashFiles('yarn.lock') }}
+
+      # Install dependencies
+      - name: Yarn
+        if: steps.cache-node-modules.outputs.cache-hit != 'true'
+        run: |
+          yarn
+
+      ##########  Rename program files  ##########
+      - name: Rename Program Files
+        run: |
+          python3 scripts/rename_files.py
+
+      - name: Move Program Files
+        run: |
+          mkdir -p temp
+          mv program/ temp/
+
+      - name: Commit Rename Program Files
+        uses: crazy-max/ghaction-github-pages@v3.0.0
+        with:
+          target_branch: master
+          build_dir: temp
+          keep_history: true # <-- Don't touch it
+          committer: Harsh Raj <harshraj8843@users.noreply.github.com>
+          author: Harsh Raj <harshraj8843@users.noreply.github.com>
+          commit_message: |
+            rename files on push
+        env:
+          GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
