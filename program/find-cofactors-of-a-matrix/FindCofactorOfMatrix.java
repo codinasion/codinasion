@@ -63,6 +63,7 @@ public class FindCofactorOfMatrix {
                     System.out.print("], ");
                 }            
         }System.out.print("]]");
-        }}
+        }
+    }
 	}
 
