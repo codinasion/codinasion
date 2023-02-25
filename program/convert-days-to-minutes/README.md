@@ -7,7 +7,7 @@ trackId: 1403
 
 1 day = 24 hours = 1440 minutes
 
-```
+```txt
 Input  : 5
 Output : 7200
 ```
