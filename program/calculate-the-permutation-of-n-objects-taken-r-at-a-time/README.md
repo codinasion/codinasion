@@ -7,7 +7,7 @@ trackId: 4194
 
 Permutation is an arrangement of objects in a particular order. The number of permutations on n objects taken r at a time is given by the formula n!/(n-r)!
 
-```
+```txt
 Input  : 5, 2
 Output : 20
 ```
