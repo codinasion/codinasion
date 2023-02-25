@@ -7,7 +7,7 @@ trackId: 2986
 
 1 foot = 30.48 centimeters
 
-```
+```txt
 Input  : 5
 Output : 152.4
 ```
