@@ -17,10 +17,8 @@ public class FindCofactorOfMatrix {
                     n = 0;
                     m++;
                 }
-            }
-            
+            }            
         }
-
         return temp;
     }
 
@@ -36,7 +34,8 @@ public class FindCofactorOfMatrix {
                 minor = (temp[0][0]*temp[1][1]) - (temp[0][1]*temp[1][0]);
                 cofactormatrix[i][j] = (int) (Math.pow(-1, (i+j))*minor);
 
-            }}
+            }
+        }
             return cofactormatrix;
     }
 
@@ -62,11 +61,8 @@ public class FindCofactorOfMatrix {
                 }
                 if(i!=2){
                     System.out.print("], ");
-                }
-            
+                }            
         }System.out.print("]]");
-        }
-    }
-
+        }}
 	}
 
