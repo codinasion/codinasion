@@ -7,7 +7,7 @@ trackId: 5271
 
 The inverse of a square matrix A is another square matrix B such that the product of A and B is the identity matrix I. The inverse of A is denoted as A<sup>-1</sup>.
 
-```
+```txt
 Input  :
 1 2 3
 4 5 6

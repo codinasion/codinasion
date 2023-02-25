@@ -1,8 +1,8 @@
 # Recursive function to return gcd of a and b
-def recursiveGcd(a:int, b:int):
+def recursiveGcd(a: int, b: int):
     # Everything divides 0
     if a == 0 or b == 0:
-        return a if a== 0 else b
+        return a if a == 0 else b
 
     # base case
     if a == b:

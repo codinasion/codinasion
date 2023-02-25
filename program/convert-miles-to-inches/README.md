@@ -7,7 +7,7 @@ trackId: 3090
 
 1 mile = 63360 inches
 
-```
+```txt
 Input  : 5
 Output : 316800
 ```
