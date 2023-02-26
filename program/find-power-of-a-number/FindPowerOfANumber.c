@@ -11,7 +11,16 @@ int main()
     int num = 0;
     int expo = 0;
 
-    int is_good =scanf("%d%d",num,expo);
+    int is_good =scanf("%d%d",&num,&expo);
+
+    if(is_good != 2)
+    {
+        return -1;
+    }
+
+    printf("%d\n",PowerOf(num,expo));
+
+    return 0;
 }
 
 
