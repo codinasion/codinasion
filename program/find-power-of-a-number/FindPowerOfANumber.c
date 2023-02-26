@@ -15,6 +15,7 @@ int main()
 
     if(is_good != 2)
     {
+        printf("scanf failed\n");
         return -1;
     }
 
