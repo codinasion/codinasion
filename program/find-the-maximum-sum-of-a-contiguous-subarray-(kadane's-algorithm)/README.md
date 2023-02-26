@@ -7,7 +7,7 @@ trackId: 3918
 
 Kadane's algorithm is used to find the maximum sum of a contiguous subarray within a one-dimensional array of numbers. For example, for the sequence of values `−2, 1, −3, 4, −1, 2, 1, −5, 4;` the contiguous subarray with the largest sum is `4, −1, 2, 1,` with sum `6`.
 
-```
+```txt
 Input  : [1, 2, 3, -2, 5]
 Output : 9
 ```
