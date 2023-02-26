@@ -7,7 +7,7 @@ trackId: 432
 
 Area of square = `Side`^2
 
-```
+```txt
 Side : 2
 
 Area : 4
