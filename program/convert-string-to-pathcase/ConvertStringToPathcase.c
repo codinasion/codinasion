@@ -28,9 +28,25 @@ int main()
     ConvertStringToPathcase(str);
 
     printf("%s\n",str);
+
+    return 0;
 }
 
 void ConvertStringToPathcase(char *str)
 {
-    
+
+    while(*str != '\0')
+    {
+        if(*str == ' ')
+        {
+            *str = '_';
+        }
+
+        if(*str >= 'A' && *str <= 'Z')
+        {
+            *str += 32;
+        }
+
+        ++str;
+    }
 }
