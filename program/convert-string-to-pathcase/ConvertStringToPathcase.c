@@ -46,7 +46,7 @@ void ConvertStringToPathcase(char *str)
     {
         if(*str == ' ')
         {
-            *str = '_';
+            *str = '/';
         }
 
         if(*str >= 'A' && *str <= 'Z')
