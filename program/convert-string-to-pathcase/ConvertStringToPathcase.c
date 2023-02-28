@@ -1,25 +1,30 @@
+#define _POSIX_C_SOURCE 200809L
 #include <stdio.h> /* printf, scanf */
 #include <stdlib.h> /* fgets, malloc, free */
+
+
 void ConvertStringToPathcase(char *str);
 
 
 int main()
 {
     char *str = NULL;
-    char *tmp = NULL;
-    int size = 0;
+    int is_good = 0;
+    size_t size = 0;
 
-    if(scanf("%d",&size) != 1)
+    if(scanf("%lu",&size) != 1)
     {
         return -1;
     }
-
+    
     str = (char *)malloc(sizeof(char) * size);
-    tmp = str;
 
-    tmp = fgets(str,size,stdin);
+    /* discard \n of scanf so i can give getline new input */
+    scanf("%c", (char *) stdin);
+    
+    is_good = getline(&str,&size,stdin);
 
-    if(tmp == NULL)
+    if(is_good == -1)
     {
         free(str);
         return -1;
@@ -28,6 +33,8 @@ int main()
     ConvertStringToPathcase(str);
 
     printf("%s\n",str);
+
+    free(str);
 
     return 0;
 }
