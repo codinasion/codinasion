@@ -1,14 +1,14 @@
 #include <stdio.h> /* printf, scanf */
 
 /*assuming that num and exponent are positive and natural*/
-int PowerOf(num,expo);
+int PowerOf(int num,int expo);
 
 int main()
 {
     int num =0;
     int expo =0;
 
-    if(scanf("%d %d",&num, expo) != 2)
+    if(scanf("%d %d",&num, &expo) != 2)
     {
         return -1;
     }
