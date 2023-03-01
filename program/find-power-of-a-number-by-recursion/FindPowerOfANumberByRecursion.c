@@ -19,7 +19,7 @@ int main()
 
 }
 
-int PowerOf(num,expo)
+int PowerOf(int num,int expo)
 {
     if(expo == 1)
     {
