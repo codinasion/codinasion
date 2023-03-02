@@ -24,6 +24,8 @@ int main()
 
     printf("%d\n",FindSum(arr,size));
 
+    free(arr);
+
     return 0;
 }
 
@@ -36,6 +38,7 @@ void InitArr(int *arr,int size)
     {
         if(scanf("%d",arr + i)!= 1)
         {
+            free(arr);
             exit(1);
         }
     }
