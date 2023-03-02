@@ -25,5 +25,10 @@ int main()
 
 int FindSum(int *arr,int size)
 {
+    if (size == 1)
+    {
+        return arr[0];
+    }
 
+    return arr[size -1] + FindSum(arr,size -1);
 }
