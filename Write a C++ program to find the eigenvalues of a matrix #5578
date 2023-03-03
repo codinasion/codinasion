@@ -1,0 +1,89 @@
+#include <iostream>
+#include <cmath>
+#include <vector>
+
+using namespace std;
+
+const double EPSILON = 0.00001; // tolerance for convergence
+
+// function to calculate the magnitude of a vector
+double magnitude(const vector<double>& v) {
+    double sum = 0.0;
+    for (double x : v) {
+        sum += x * x;
+    }
+    return sqrt(sum);
+}
+
+// function to normalize a vector
+void normalize(vector<double>& v) {
+    double mag = magnitude(v);
+    for (double& x : v) {
+        x /= mag;
+    }
+}
+
+// function to multiply a matrix by a vector
+vector<double> matrix_vector_product(const vector<vector<double>>& A, const vector<double>& v) {
+    int n = A.size();
+    vector<double> result(n, 0.0);
+    for (int i = 0; i < n; i++) {
+        double sum = 0.0;
+        for (int j = 0; j < n; j++) {
+            sum += A[i][j] * v[j];
+        }
+        result[i] = sum;
+    }
+    return result;
+}
+
+// function to find the eigenvalues of a matrix using the eigenvalue decomposition method
+vector<double> eigenvalues(const vector<vector<double>>& A) {
+    int n = A.size();
+    vector<vector<double>> Q(n, vector<double>(n, 0.0)); // eigenvectors
+    vector<vector<double>> R = A; // working matrix
+
+    // perform QR decomposition with Gram-Schmidt orthogonalization
+    for (int i = 0; i < n - 1; i++) {
+        vector<double> v = R[i];
+        for (int j = 0; j < i; j++) {
+            double dot = 0.0;
+            for (int k = 0; k < n; k++) {
+                dot += Q[k][j] * R[i][k];
+            }
+            for (int k = 0; k < n; k++) {
+                v[k] -= dot * Q[k][j];
+            }
+        }
+        normalize(v);
+        Q[i] = v;
+        R[i] = matrix_vector_product(Q, A[i]);
+    }
+    Q[n-1] = R[n-1];
+    R[n-1] = matrix_vector_product(Q, A[n-1]);
+
+    // perform QR iteration until convergence
+    vector<double> eigenvalues(n);
+    for (int i = 0; i < n; i++) {
+        eigenvalues[i] = R[i][i];
+    }
+    while (true) {
+        // perform QR decomposition of R
+        for (int i = 0; i < n - 1; i++) {
+            double c = R[i][i];
+            double s = R[i+1][i];
+            double r = sqrt(c*c + s*s);
+            double cos_theta = c / r;
+            double sin_theta = s / r;
+            for (int j = 0; j < n; j++) {
+                double a = R[i][j];
+                double b = R[i+1][j];
+                R[i][j] = cos_theta * a + sin_theta * b;
+                R[i+1][j] = -sin_theta * a + cos_theta * b;
+            }
+        }
+
+        // check for convergence
+        double sum = 0.0;
+        for (int i = 1; i < n; i++) {
+            sum += abs
