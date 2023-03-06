@@ -3,8 +3,9 @@ import java.util.Scanner
 
 fun main(args: Array<String>) {
   val scanner = Scanner(System.`in`)
-  val number = scanner.nextDouble()
+  val base = scanner.nextDouble()
+  val height = scanner.nextDouble()
 
-  val cube = number * number * number
-  println(cube)
+  val area = 0.5 * base * height
+  println(area)
 }
