@@ -1,1 +1,1 @@
-print(round(float(input())/12, 2))
+print(round(float(input()) / 12, 2))
