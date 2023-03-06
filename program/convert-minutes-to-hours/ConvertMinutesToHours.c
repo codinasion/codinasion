@@ -11,7 +11,7 @@ int main()
         return -1;
     }
 
-    printf("%d\n",minutes);
+    printf("%d\n",ConvertMinToHours(minutes));
 
     return 0;
 }
