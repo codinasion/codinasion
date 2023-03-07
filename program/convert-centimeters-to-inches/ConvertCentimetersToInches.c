@@ -1,6 +1,6 @@
 #include <stdio.h> /* printf, scanf */
 
-int ConvertToInches(float cm);
+float ConvertToInches(float cm);
 
 int main()
 {
@@ -11,13 +11,13 @@ int main()
         return -1;
     }
 
-    printf("%d\n",ConvertToInches(cm));
+    printf("%f\n",ConvertToInches(cm));
 
     return 0;
 }
 
 
-int ConvertToInches(float cm)
+float ConvertToInches(float cm)
 {
-    return (int) (cm / 2.54);
+    return cm / 2.54;
 }
