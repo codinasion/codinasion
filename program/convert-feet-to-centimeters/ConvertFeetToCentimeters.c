@@ -1,23 +1,23 @@
 #include <stdio.h> /*printf, scanf*/
 
-float ConvertToCm(int feet);
+double ConvertToCm(double feet);
 
 int main()
 {
-    int feet = 0;
+    double feet = 0;
 
-    if(1 != scanf("%d",&feet))
+    if(1 != scanf("%lf",&feet))
     {
         return -1;
     }
 
-    printf("%d\n",ConvertToCm(feet));
+    printf("%.1f\n",ConvertToCm(feet));
 
     return 0;
 }
 
 
-float ConvertToCm(int feet)
+double ConvertToCm(double feet)
 {
     return feet * 30.48;
 }
