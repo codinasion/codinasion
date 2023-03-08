@@ -19,5 +19,5 @@ int main()
 
 float ConvertToCm(int feet)
 {
-
+    return feet * 30.48;
 }
