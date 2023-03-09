@@ -1,20 +1,26 @@
-#include <stdio.h> /* printf, scanf */
+#define _POSIX_C_SOURCE 200809L /* for getline*/
+
+#include <stdio.h> /* printf */
+#include <stdlib.h> /* size_t, free */
 #include <string.h> /* strlen */
+
 void ConvertToTitleCase(char *str);
 
 
 int main()
 {
-    char str[100] = {0};
+    size_t size = 100;
+    char *str = NULL;
 
-    if(scanf("%s",str) != 1)
-    {
-        return -1;
-    }
+    getline(&str,&size,stdin);
 
     ConvertToTitleCase(str);
 
     printf("%s\n",str);
+
+    free(str);
+
+    return 0;
 }
 
 
@@ -27,7 +33,7 @@ void ConvertToTitleCase(char *str)
 
     if((str[i] >= 'a') && str[i] <= 'z')
     {
-        str[i] += 32;
+        str[i] -= 32;
     }
 
     for(i = 0; i < len; ++i)
@@ -39,7 +45,8 @@ void ConvertToTitleCase(char *str)
 
         else if(((str[i] >= 'a') && str[i] <= 'z')&& is_space)
         {
-            str[i] += 32;
+            str[i] -= 32;
+            is_space = 0;
         }
     }
 }
