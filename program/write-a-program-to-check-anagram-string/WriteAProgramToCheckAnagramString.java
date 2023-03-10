@@ -18,9 +18,14 @@ class WriteAProgramToCheckAnagramString{
 
 }
 	public static boolean isAnagram(String str1, String str2) {
+
+		// Convert strings to lowercase for case sensitive strings
+		String lowerStr1 = str1.toLowerCase();
+		String lowerStr2 = str2.toLowerCase();
+
 		// Convert strings to character arrays
-		char[] arr1 = str1.toCharArray();
-		char[] arr2 = str2.toCharArray();
+		char[] arr1 = lowerStr1.toCharArray();
+		char[] arr2 = lowerStr2.toCharArray();
 
 		// Sort character arrays
 		Arrays.sort(arr1);
