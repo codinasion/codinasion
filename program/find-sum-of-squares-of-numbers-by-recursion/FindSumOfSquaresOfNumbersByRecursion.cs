@@ -9,6 +9,10 @@ class sumOfSquares {
   } 
 
   static void Main(string[] args) {
-    Console.WriteLine("Sum of squares of first 5 natural numbers: " + Sum(5));
+    string n;int res;
+    Console.WriteLine("Enter a Number: ");
+    n = Console.ReadLine();
+    res=Convert.ToInt32(n);
+    Console.WriteLine("Sum of squares of first "+res+" natural numbers: " + Sum(res));
   }
 }
