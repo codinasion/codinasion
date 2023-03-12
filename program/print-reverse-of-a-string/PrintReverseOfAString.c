@@ -22,7 +22,6 @@ int main()
 
     PrintReverseOfAString(str);
 
-
     free(str);
 
     return 0;
@@ -30,5 +29,11 @@ int main()
 
 void PrintReverseOfAString(char *str)
 {
+    int size = strlen(str);
+    int i = 0;
 
+    for(i = size;i >= 0; --i)
+    {
+        printf("%c",str[i]);
+    }
 }
