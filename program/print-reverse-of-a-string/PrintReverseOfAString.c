@@ -10,13 +10,9 @@ void PrintReverseOfAString(char *);
 
 int main()
 {
-    size_t size = 0;
+    size_t size = 100;
 
     char *str = NULL;
-
-    printf("Enter the size of the arr\n");
-
-    scanf("%d",&size);
 
     getline(&str,&size,stdin);
 
