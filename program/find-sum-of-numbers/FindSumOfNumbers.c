@@ -50,7 +50,7 @@ void InitArr(int *arr,int size)
 int FindSum(int *arr,int size)
 {
     int ret = 0;
-    size_t i = 0;
+    int i = 0;
 
     for(i = 0; i < size; ++i)
     {
