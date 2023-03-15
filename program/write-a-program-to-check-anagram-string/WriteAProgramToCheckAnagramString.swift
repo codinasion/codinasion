@@ -1,5 +1,6 @@
 func sortedString(str: String) -> String {
-    let str1 = str.sorted();
+    let strlower = str.lowercased()
+    let str1 = strlower.sorted()
     let str2 = String(str1)
     return str2
 }
@@ -15,6 +16,6 @@ func AreAnagram(str1: String, str2: String) -> Void{
     }
 }
 
-AreAnaGram(str1: "listen", str2: "siklent")
+AreAnagram(str1: "listen", str2: "silent")
 
 
