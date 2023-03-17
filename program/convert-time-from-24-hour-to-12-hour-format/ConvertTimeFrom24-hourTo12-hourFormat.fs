@@ -11,3 +11,6 @@ let convertTo12HourFormat (time : string) =
         elif hour > 12 then hour - 12
         else hour
     sprintf "%d:%s:%s%s" hourIn12HourFormat minute second meridiem
+
+let conversion = convertTo12HourFormat "12:05:45"
+printfn "%s" conversion
