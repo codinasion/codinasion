@@ -9,10 +9,7 @@ int main()
     /* assuming string won't be greater then 100 chars */
     char str[100] = {0};
 
-    if(scanf("%s",str) != 1)
-    {
-        return -1;
-    }
+    fgets(str,100,stdin);
 
     if(isPangram(str))
     {
@@ -35,7 +32,7 @@ int isPangram(char *str)
 
     for(i = 0; i < strlen(str); ++i)
     {
-        idx = tolower(str[i]) -'a';
+        idx = tolower(str[i]) - 'a';
         
         if(idx >= 0 && idx <= 25)
         {
