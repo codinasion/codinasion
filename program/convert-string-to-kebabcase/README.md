@@ -7,7 +7,7 @@ trackId: 2449
 
 Kebabcase is a style of writing in which all letters are lowercase and spaces are replaced with hyphens.
 
-```
+```txt
 Input  : "hello world"
 Output : "hello-world"
 ```

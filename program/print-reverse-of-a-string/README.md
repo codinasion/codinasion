@@ -7,7 +7,7 @@ trackId: 912
 
 Reverse of a string is the string with the characters in reverse order. For example, the reverse of "hello" is "olleh".
 
-```
+```txt
 Input  : abcd
 Output : dcba
 ```
