@@ -23,8 +23,8 @@ void main() {
 	
 	int flag = isAnagram(s1,s2);
 	if(flag == 1)
-		printf("%s and %s are anagrams\n",s1,s1);
+		printf("%s and %s are anagrams\n",s1,s2);
 	else
-		printf("%s and %s are not anagrams\n",s1,s1);
+		printf("%s and %s are not anagrams\n",s1,s2);
 	
 }
