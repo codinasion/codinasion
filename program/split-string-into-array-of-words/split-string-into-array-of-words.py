@@ -1,1 +1,1 @@
-print(input().split(' '))
+print(input().split(" "))
