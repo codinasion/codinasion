@@ -1,9 +1,8 @@
 # convert fahrenheit to celsius
 
 
-
 def convertFahrenheitToCelsius(fahrenheit):
-    return (fahrenheit - 32) * (5/9)
+    return (fahrenheit - 32) * (5 / 9)
 
 
 if __name__ == "__main__":
