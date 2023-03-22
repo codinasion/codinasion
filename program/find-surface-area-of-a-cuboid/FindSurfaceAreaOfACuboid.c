@@ -11,6 +11,6 @@ int main()
     printf("Height: ");
     scanf("%d", &Height);
 
-    Surfacearea = 2 * (Length * Width + Length * Height + Width * Height);
+    Surfacearea = 2 * ((Length * Width) + (Length * Height) + (Width * Height));
     printf("Surface area: %d", Surfacearea);
 }
