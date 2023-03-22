@@ -2,6 +2,8 @@ name: Collect Program Data
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: "0 0/6 * * *"
 
 jobs:
   collect_program_data:
@@ -16,6 +18,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.REPO_TOKEN }}
 
       ##########  Get Date  ##########
       - name: Get Date
@@ -38,6 +42,29 @@ jobs:
         if: steps.cache-node-modules.outputs.cache-hit != 'true'
         run: |
           yarn
+
+      ##########  Rename program files  ##########
+      - name: Rename Program Files
+        run: |
+          python3 scripts/rename_files.py
+
+      - name: Move Program Files
+        run: |
+          mkdir -p temp
+          mv program/ temp/
+
+      - name: Commit Rename Program Files
+        uses: crazy-max/ghaction-github-pages@v3.0.0
+        with:
+          target_branch: master
+          build_dir: temp
+          keep_history: true # <-- Don't touch it
+          committer: Harsh Raj <harshraj8843@users.noreply.github.com>
+          author: Harsh Raj <harshraj8843@users.noreply.github.com>
+          commit_message: |
+            rename program files
+        env:
+          GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
 
       ##########  collect program data  ##########
       - name: Collect Program Data

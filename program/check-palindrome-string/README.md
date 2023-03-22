@@ -7,7 +7,7 @@ trackId: 1538
 
 Palindrome string is a string that is same when read from left to right and right to left. For example, "aba" is a palindrome string, "abc" is not.
 
-```
+```txt
 Input  : abba
 Output : Palindrome String
 ```
