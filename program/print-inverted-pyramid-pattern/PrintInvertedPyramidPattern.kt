@@ -1,8 +1,8 @@
 fun main() {
-    printFlyod(5);
+    printInvertedPyramid(5);
 }
 
-fun printFlyod(rows: Int){
+fun printInvertedPyramid(rows: Int){
     for (i in rows downTo 1) {
         for (j in 1..i) {
             print("$j ")
