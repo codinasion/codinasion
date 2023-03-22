@@ -1,13 +1,10 @@
-def convert_string_to_consonantcase(str):
-  solution = ''
-  for letter in str:
-    if letter not in ['a','e','i','o','u']:
-      solution += letter.upper()
-    else:
-      solution += letter
+# Python program to convert a string to consonantcase
+def consonantCase(a: str):
+    new_str = ""
+    for i in a:
+        new_str += i.lower() if i in ["a", "e", "i", "o", "u"] else i.upper()
+    return new_str
 
-  return solution
 
-##example
-user_input = input("Enter the string : ")
-print(convert_string_to_consonantcase(user_input))
+x = input("Enter a string : ")
+print("Consonant Case of", x, " is ", consonantCase(x))

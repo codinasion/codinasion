@@ -7,7 +7,7 @@ trackId: 2506
 
 Titlecase is a style of writing in which the first letter of each word is capitalized.
 
-```
+```txt
 Input  : "hello world"
 Output : "Hello World"
 ```
