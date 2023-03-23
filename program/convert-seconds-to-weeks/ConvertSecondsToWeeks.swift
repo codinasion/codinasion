@@ -1,7 +1,7 @@
 import Swift
 import Foundation
 
-var minutes = 50400;
+var seconds = 3024000;
 
-var weeks = minutes / 10080 ;
+var weeks = seconds / 604800 ;
 print("Weeks: ", weeks)
