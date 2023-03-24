@@ -576,6 +576,15 @@
     "created": true
   },
   {
+    "title": "convert pound to kilogram",
+    "description": "Write a program to convert pound to kilogram\n\n1 pound = 0.453592 kg\r\n\r\n```\r\nInput  : 1\r\nOutput : 0.453592\r\n```\n",
+    "contributor": "Aranarora",
+    "createdAt": "2023-03-24T07:09:34.900Z",
+    "createdIssueNumber": "6863",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Convert Rupees to Paise",
     "description": "Write a program to convert rupees to paise\n\n```\r\nInput  ( Rs ) : 1\r\nOutput ( Ps ) : 100\r\n```\n",
     "contributor": "harshraj8843",
