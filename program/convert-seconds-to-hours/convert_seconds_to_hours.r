@@ -1,4 +1,3 @@
-seconds <- as.integer(readline("Enter seconds: "))
-hours <- seconds / 3600
-print(paste0(seconds, " seconds = ", hours, " hours"))
-
+seconds = 432000
+days = seconds / 86400
+cat("days: ", days)
