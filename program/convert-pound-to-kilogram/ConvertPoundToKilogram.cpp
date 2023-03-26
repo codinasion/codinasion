@@ -1,19 +1,13 @@
-#include <iostream>
+#include<bits/stdc++.h>
 using namespace std;
+ 
+ 
+ int main(){
+int n;
+    cout<<"enter the value in pound"<<endl;
+cin>>n;
+cout<<"the value in kilogram ="<<.43592*n<<"kg"<<endl;
 
-int main() {
-    double pounds, kilograms;
-    const double CONVERSION_FACTOR = 0.453592;
 
-    // Get input from user
-    cout << "Enter weight in pounds: ";
-    cin >> pounds;
-
-    // Convert pounds to kilograms
-    kilograms = pounds * CONVERSION_FACTOR;
-
-    // Display result
-    cout << pounds << " pounds is equal to " << kilograms << " kilograms." << endl;
-
-    return 0;
-}
+     return 0;
+ }
