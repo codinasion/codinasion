@@ -1,6 +1,6 @@
 object Main extends App {
-    var a = 10
-    var b = 20
+    var a = scala.io.StdIn.readInt()
+    var b = scala.io.StdIn.readInt()
     
     println("Before Swapping a = " +a+ " b =" +b)
 
