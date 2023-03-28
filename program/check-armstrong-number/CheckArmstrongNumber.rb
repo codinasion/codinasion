@@ -13,8 +13,7 @@ def isArmstrong( number )
     return result
 end
 
-numbers = [123, 6, 1634, 2328]
+puts "Enter a number"
+number=STDIN.gets.to_i
 
-for number in numbers
-    puts "#{number} is an Armstrong number? #{isArmstrong(number)}"
-end
+puts "#{number} is an Armstrong number? #{isArmstrong(number)}"
