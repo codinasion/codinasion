@@ -9,8 +9,8 @@ public class AddTwoMatrices {
   public static void main(String[] args) {
     int size = 4;
 
-    // Declare the object and initialize with
-    // predefined standard input object
+    // Declare the object and initialize with predefined standard input object
+
     Scanner input = new Scanner(System.in);
 
     // Create matrix A
