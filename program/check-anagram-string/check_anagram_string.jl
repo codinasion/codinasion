@@ -17,7 +17,7 @@ function is_anagram(str1::String, str2::String)
 end
 
 # Example usage
-println("Enter 2 Strings")
+println("Enter 2 Strings") #take input
 str1 = readline()
 str2 = readline()
 
