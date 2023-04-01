@@ -2,6 +2,7 @@ showArr :: Show a => [a] -> String
 showArr [x] = show x
 showArr (x:xs) = show x ++ " " ++ showArr xs
 
+
 printArr :: Show a => [a] -> IO ()
 printArr = (putStrLn . showArr)
 
