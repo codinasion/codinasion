@@ -10,4 +10,6 @@ for folder_name in folder_names:
     file_names = os.listdir("program/" + folder_name)
     extensions = list(map(lambda x: x.split(".")[1], file_names))
     if len(set(extensions)) < len(extensions):
-        warning(f"There is duplicated extensions in {folder_name}")
+        warning(
+            f"There is duplicated extensions in {folder_name} -> {set([x for x in extensions if extensions.count(x) > 1])}"
+        )
