@@ -2,30 +2,33 @@
 
 using namespace std;
 
-bool isPal(string text) {
-    string tmp;
+bool isPal (string text)
+{
 
-    for (int i = text.size() - 1; i >= 0; i--) {
-        tmp += text[i];
-    }
-
-    if (tmp == text) {
-        return true;
-    } else {
-        return false;
-    }
+  int n = text.length ();
+    
+  for (int i = 0; i < n / 2; i++)
+  {
+    if (text[i] != text[n - i - 1])
+      return false;
+  }
+  return true;
 }
 
-int main() {
-    string text = "abba";
+int main ()
+{
+  string text = "abba";
 
-    if (isPal(text)) {
-        cout << "Palindrome String" << endl;
-        return 0;
-    } else {
-        cout << "Not a Palindrome String" << endl;
-        return 1;
+  if (isPal (text))
+    {
+      cout << "Palindrome String" << endl;
+      return 0;
+    }
+  else
+    {
+      cout << "Not a Palindrome String" << endl;
+      return 1;
     }
 
-    return 1;
+  return 1;
 }
