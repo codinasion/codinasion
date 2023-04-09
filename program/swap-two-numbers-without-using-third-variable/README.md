@@ -5,7 +5,7 @@ trackId: 4060
 
 ## Write a program to swap two numbers without using third variable
 
-```
+```txt
 Input  : 10 20
 Output : 20 10
 ```

@@ -1,12 +1,12 @@
-function average_of_numbers(arr: any, length: number, i: number): any {
-    if (i === length - 1) {
-      return arr[i];
-    }
-    else if (i === 0) return (arr[i] + average_of_numbers(arr, length, i + 1)) / length;
-  
-    else return arr[i] + average_of_numbers(arr, length, i + 1);
+function average_of_numbers(arr: number[]): number {
+  if (arr.length === 1) {
+    return arr[0];
   }
-  
-  let array = [1, 2, 3, 4, 5];
-  let i = 0;
-  console.log(average_of_numbers(array, array.length, i));
+  const innerArray: number[] = arr.slice(1);
+  return (
+    (arr[0] + average_of_numbers(innerArray) * innerArray.length) / arr.length
+  );
+}
+
+let array = [1, 2, 3, 4, 5];
+console.log(average_of_numbers(array));

@@ -7,7 +7,7 @@ trackId: 1004
 
 1 week = 7 days = 168 hours = 10080 minutes
 
-```
+```txt
 Input  : 50400
 Output : 5
 ```

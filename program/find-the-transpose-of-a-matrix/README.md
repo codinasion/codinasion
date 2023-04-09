@@ -7,7 +7,7 @@ trackId: 3142
 
 The transpose of a matrix is an operator which flips a matrix over its diagonal, that is it switches the row and column indices of the matrix by producing another matrix denoted as A<sup>T</sup>.
 
-```
+```txt
 Input  :
 1 2 3
 4 5 6

@@ -7,7 +7,7 @@ trackId: 756
 
 Area of right angled triangle = 0.5 × `Base` × `Height`
 
-```
+```txt
 Base   : 2
 Height : 3
 

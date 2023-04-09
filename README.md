@@ -16,7 +16,7 @@ An open source codebase for sharing programming solutions.
 
 > **Note** We accept `assignment based` contributions only. Please read [CONTRIBUTING.md][9] for more details.
 >
-> Comment `!assign` on the issue you want to contribute to.
+> Comment `!assign` on any good first issue you want to contribute to.
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/codinasion/.github/master/assets/rainbow-hr.png" alt="rainbow hr" width="100%" height="70%">

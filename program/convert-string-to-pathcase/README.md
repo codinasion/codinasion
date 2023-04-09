@@ -7,7 +7,7 @@ trackId: 2744
 
 Pathcase is a style of writing in which all letters are lowercase and spaces are replaced with forward slashes.
 
-```
+```txt
 Input  : "hello world"
 Output : "hello/world"
 ```

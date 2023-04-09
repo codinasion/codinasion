@@ -7,7 +7,7 @@ trackId: 1761
 
 Vowel check is a simple program to check whether a character is a vowel or not.
 
-```
+```txt
 Input  : a
 Output : Vowel
 ```

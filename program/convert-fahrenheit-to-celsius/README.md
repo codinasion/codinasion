@@ -5,9 +5,9 @@ trackId: 5013
 
 ## Write a program to convert fahrenheit to celsius
 
-celcius = (fahrenheit - 32) * 5/9
+celsius = (fahrenheit - 32) * 5/9
 
-```
+```txt
 Input ( F )  : -40
 Output ( C ) : -40
 ```

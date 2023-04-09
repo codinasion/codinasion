@@ -9,7 +9,6 @@ Created on Sun Oct  9 16:08:39 2022
 
 
 def convert(s: str) -> int:  # function that will do the needful
-
     num = 0  # Initialize an integer variable
 
     # Iterate through all the characters of the string

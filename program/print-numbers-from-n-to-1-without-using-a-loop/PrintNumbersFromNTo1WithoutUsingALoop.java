@@ -1,4 +1,4 @@
-public class PrintNumbersFrom1ToNWithoutUsingALoop {
+public class PrintNumbersFromNTo1WithoutUsingALoop {
     public static void main(String[] args) {
         print1ToN(5);
     }

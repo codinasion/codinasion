@@ -7,7 +7,7 @@ trackId: 2391
 
 Area of rectangle = `Length` × `Width`
 
-```
+```txt
 Length : 2
 Width  : 3
 
