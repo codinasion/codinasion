@@ -140,3 +140,4 @@ target/
 project/
 
 .venv
+.DS_Store
