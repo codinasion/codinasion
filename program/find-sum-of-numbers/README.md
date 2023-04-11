@@ -5,7 +5,7 @@ trackId: 956
 
 ## Write a program to find sum of numbers
 
-```
+```txt
 Input  : 1 2 3 4 5
 Output : 15
 ```

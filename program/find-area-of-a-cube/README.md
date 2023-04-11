@@ -7,7 +7,7 @@ trackId: 3258
 
 Area of cube = 6 × `Side`^2
 
-```
+```txt
 Side : 2
 
 Area : 24

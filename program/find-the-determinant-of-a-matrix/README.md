@@ -7,7 +7,7 @@ trackId: 3422
 
 The determinant of a square matrix is a scalar value that can be computed from the elements of the matrix. The determinant of a matrix A is denoted as det(A) or |A|.
 
-```
+```txt
 Input  :
 1 2 3
 4 5 6

@@ -7,7 +7,7 @@ trackId: 2659
 
 Combination is a selection of objects from a group such that (unlike permutations) the order of selection does not matter. The number of combinations on n objects taken r at a time is given by the formula n!/(r!(n-r)!) = n(n-1)(n-2)...(n-r+1)/r!
 
-```
+```txt
 Input  : 5, 2
 Output : 10
 ```

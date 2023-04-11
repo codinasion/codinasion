@@ -7,7 +7,7 @@ trackId: 3193
 
 Factorial of N = N *(N-1)* (N-2) *...* 1
 
-```
+```txt
 Input  : 5
 Output : 120
 ```

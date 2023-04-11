@@ -5,7 +5,7 @@ trackId: 1686
 
 ## Write a program to print multiplication table
 
-```
+```txt
 Input  : 2
 
 2 x 1 = 2

@@ -8,7 +8,7 @@
 main = do
  let num_of_weeks = 5
  let total_seconds = num_of_weeks * 604800
- putStrLn "Sum of two numbers is:"
+ putStrLn "Total no of seconds is:"
  print (total_seconds)
 
 

@@ -7,7 +7,7 @@ trackId: 2281
 
 fahrerheit = (celsius * 9/5) + 32
 
-```
+```txt
 Input ( C )  : -40
 Output ( F ) : -40
 ```

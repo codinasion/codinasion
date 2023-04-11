@@ -7,7 +7,7 @@ trackId: 1512
 
 Check that the given character is an alphabet or not (a-z, A-Z).
 
-```
+```txt
 Input  : a
 Output : Alphabet
 ```

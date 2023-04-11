@@ -7,7 +7,7 @@ trackId: 5337
 
 formula: n(n+1)/2
 
-```
+```txt
 Input  : 5
 Output : 15
 ```

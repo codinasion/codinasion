@@ -7,7 +7,7 @@ trackId: 2344
 
 The cofactor of an element a<sub>ij</sub> of a square matrix A is the determinant of the minor of A obtained by deleting the ith row and jth column of A. The cofactor of a matrix A is the matrix of cofactors of A.
 
-```
+```txt
 Input  :
 1 2 3
 4 5 6

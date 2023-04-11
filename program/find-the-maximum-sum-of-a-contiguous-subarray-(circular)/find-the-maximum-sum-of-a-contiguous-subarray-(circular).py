@@ -2,7 +2,6 @@
 
 
 def max_cont_sum(a, n):
-
     # Corner Case
     if n == 1:
         return a[0]
@@ -20,7 +19,6 @@ def max_cont_sum(a, n):
 
     # Concept of Kadane's Algorithm
     for i in range(1, n):
-
         # Kadane's Algorithm to find Maximum subarray sum.
         current_maximum = max(current_maximum + a[i], a[i])
         max_so_far = max(max_so_far, current_maximum)

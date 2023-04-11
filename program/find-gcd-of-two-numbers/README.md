@@ -7,7 +7,7 @@ trackId: 2860
 
 GCD (Greatest Common Divisor) of two numbers is the largest number that divides both of them. A simple way to find GCD is to factorize both numbers and multiply common factors.
 
-```
+```txt
 Input  : 12 18
 Output : 6
 ```

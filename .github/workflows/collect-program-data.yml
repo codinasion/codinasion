@@ -19,7 +19,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
         with:
-          token: ${{ secrets.PUSH_TOKEN }}
+          token: ${{ secrets.REPO_TOKEN }}
 
       ##########  Get Date  ##########
       - name: Get Date
@@ -64,7 +64,7 @@ jobs:
           commit_message: |
             rename program files
         env:
-          GITHUB_TOKEN: ${{ secrets.PUSH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
 
       ##########  collect program data  ##########
       - name: Collect Program Data
