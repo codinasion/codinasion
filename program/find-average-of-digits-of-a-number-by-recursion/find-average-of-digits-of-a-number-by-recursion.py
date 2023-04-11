@@ -4,4 +4,5 @@ def average_of_digits(n):
     digits = [int(d) for d in str(n)]
     return sum(digits) / len(digits)
 
+
 print(average_of_digits(123))
