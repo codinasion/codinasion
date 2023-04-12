@@ -99,21 +99,21 @@ for issue in issues:
                             f"Unassigned @{latest_assignment_event['actor']['login']} successfully !!!"
                         )
 
-#                         Don't notify users unnecessarily
-#                         # Comment on the Issue about the Unassignment
-#                         comment_url = f"https://api.github.com/repos/{REPO_OWNER}/{REPO_NAME}/issues/{issue_number}/comments"
-#                         comment_response = requests.post(
-#                             comment_url,
-#                             headers={"Authorization": f"Bearer {REPO_TOKEN}"},
-#                             json={
-#                                 "body": f"""Hey @{latest_assignment_event['actor']['login']},\n\nThis issue has been assigned to you for more than 15 days.\n\nWe are unassigning you from this issue.\n\nIf you are still interested in contributing to this issue, please get auto-assigned on the issue by commenting `!assign` again.\n\nThanks for your contributions :)"""
-#                             },
-#                         )
+                        # Don't notify users unnecessarily
+                        # # Comment on the Issue about the Unassignment
+                        # comment_url = f"https://api.github.com/repos/{REPO_OWNER}/{REPO_NAME}/issues/{issue_number}/comments"
+                        # comment_response = requests.post(
+                        #     comment_url,
+                        #     headers={"Authorization": f"Bearer {REPO_TOKEN}"},
+                        #     json={
+                        #         "body": f"""Hey @{latest_assignment_event['actor']['login']},\n\nThis issue has been assigned to you for more than 15 days.\n\nWe are unassigning you from this issue.\n\nIf you are still interested in contributing to this issue, please get auto-assigned on the issue by commenting `!assign` again.\n\nThanks for your contributions :)"""
+                        #     },
+                        # )
 
-#                         if comment_response.status_code == 201:
-#                             print("Commented successfully !!!")
-#                         else:
-#                             print("Error while commenting !!!")
+                        # if comment_response.status_code == 201:
+                        #     print("Commented successfully !!!")
+                        # else:
+                        #     print("Error while commenting !!!")
                     else:
                         print("Error while unassigning !!!")
 

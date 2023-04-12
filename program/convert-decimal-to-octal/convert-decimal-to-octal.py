@@ -1,11 +1,9 @@
 def decimal_to_octal(n):
-
     # Store the remainders in this array
     octal = []
 
     # Repeatedly divide until quotient is 0
     while n != 0:
-
         # Store the remainder in the octal array
         octal.append(n % 8)
 
