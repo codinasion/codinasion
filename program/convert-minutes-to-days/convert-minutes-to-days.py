@@ -1,5 +1,4 @@
 def ConvertSectoDay(n):
-
     seconds = n * 60
 
     days = seconds // (24 * 3600)
