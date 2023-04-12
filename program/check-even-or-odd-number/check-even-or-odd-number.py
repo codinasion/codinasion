@@ -3,7 +3,11 @@
 
 # Solution
 def checkEven(num):
-    return (num % 2) == 0
+    if(num>0):
+        return (num % 2) == 0
+    else:
+        print("Please give number greater than 0")
+        
 
 
 isEven = checkEven(3)
