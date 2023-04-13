@@ -129,7 +129,6 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
-
 ######################
 **.class
 **.exe
@@ -141,3 +140,5 @@ project/
 
 .venv
 .DS_Store
+.idea
+.vscode

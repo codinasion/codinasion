@@ -1,11 +1,11 @@
 using System;
-class Demo {
+class DecimalToOctal {
    public static void Main() {
       int decVal, quot, i = 1, j;
       int[] octalVal = new int[80];
-      decVal = 10;
+      Console.WriteLine("Enter a Decimal Number: ");
+      decVal = Convert.ToInt32(Console.ReadLine());
       quot = decVal;
-      Console.WriteLine("Enter a Decimal Number:{0}",decVal);
       while (quot!= 0) {
          octalVal[i++] = quot % 8;
          quot = quot / 8;
