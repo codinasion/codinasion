@@ -3,7 +3,7 @@
 import java.util.*;
 import java.lang.*;
 
-public class findapseriessum {
+public class FindSumOfApSeries {
     public static int APsum(int a1, int n1, int d1) {
         int sumofap = 0;
         for (int i = 0; i < n1; i++) {
