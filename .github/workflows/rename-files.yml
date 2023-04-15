@@ -10,6 +10,10 @@ on:
       - "scripts/**"
       - ".github/workflows/rename-files.yml"
 
+concurrency:
+  group: rename-files
+  cancel-in-progress: true
+
 jobs:
   rename_files:
     if: github.repository == 'codinasion/program'

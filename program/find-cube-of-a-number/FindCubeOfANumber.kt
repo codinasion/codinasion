@@ -1,15 +1,10 @@
+import kotlin.math.PI
 import java.util.Scanner
 
-fun main(){
-  print("Enter number : ")
- 
-  // Creates an instance which takes input from standard input (keyboard)
-    val reader = Scanner(System.`in`)
+fun main(args: Array<String>) {
+  val scanner = Scanner(System.`in`)
+  val number = scanner.nextDouble()
 
-    // nextInt() reads the next integer from the keyboard
-    var num:Int = reader.nextInt()
-
-  val cube = num * num * num
-
-  println("Cube  = ${cube}")
+  val cube = number * number * number
+  println(cube)
 }
