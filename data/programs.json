@@ -576,6 +576,15 @@
     "created": true
   },
   {
+    "title": "convert pound to kilogram",
+    "description": "Write a program to convert pound to kilogram\n\n1 pound = 0.453592 kg\r\n\r\n```\r\nInput  : 1\r\nOutput : 0.453592\r\n```\n",
+    "contributor": "Aranarora",
+    "createdAt": "2023-03-24T07:09:34.900Z",
+    "createdIssueNumber": "6863",
+    "publishedAt": "2023-03-24T07:11:16.361Z",
+    "created": true
+  },
+  {
     "title": "Convert Rupees to Paise",
     "description": "Write a program to convert rupees to paise\n\n```\r\nInput  ( Rs ) : 1\r\nOutput ( Ps ) : 100\r\n```\n",
     "contributor": "harshraj8843",
@@ -1485,6 +1494,15 @@
     "created": true
   },
   {
+    "title": "Find weekend days from number of years",
+    "description": "Write a program to find weekend days from number of years\n\nWeekend means Saturday & Sunday together. In total, we have 52 weeks in a year. So there are 52 weekends in a year. So, in normal we have 104 Weekend Days.\r\n\r\n```\r\nInput  : 1 \r\nOutput : 104\r\n```\n",
+    "contributor": "Aranarora",
+    "createdAt": "2023-03-24T07:25:42.254Z",
+    "createdIssueNumber": "6864",
+    "publishedAt": "2023-03-24T07:27:08.881Z",
+    "created": true
+  },
+  {
     "title": "Merge two strings",
     "description": "Write a program to merge two strings\n\n```\r\nInput  : ABC DEF\r\nOutput : ABCDEF\r\n```\n",
     "contributor": "harshraj8843",
@@ -1761,6 +1779,15 @@
     "createdAt": "2022-09-29T13:31:33.500Z",
     "createdIssueNumber": "273",
     "publishedAt": "2022-10-14T10:14:30.348Z",
+    "created": true
+  },
+  {
+    "title": "Write a program to check anagram string",
+    "description": "Write a program to write a program to check anagram string\n\nTwo strings are said to be anagrams if they make a meaningful word by rearranging or shuffling the letters of the string. In other words, we can say that two strings are anagrams if they contain the same characters but in different order.\r\n\r\n```\r\nInput:  listen\r\nOutput: silent\r\n```\n",
+    "contributor": "sahdev77",
+    "createdAt": "2023-03-09T13:12:07.294Z",
+    "createdIssueNumber": "5987",
+    "publishedAt": "2023-03-09T13:13:23.617Z",
     "created": true
   }
 ]
