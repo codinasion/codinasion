@@ -333,6 +333,15 @@
     "created": true
   },
   {
+    "title": "convert fahrenheit to kelvin",
+    "description": "Write a program to convert fahrenheit to kelvin\n\n(1°F − 32) × 5/9 + 273.15 = 255.928K\r\n\r\n```\r\nInput  : 1\r\nOutput : 255.928\r\n```\n",
+    "contributor": "KyleMcIndoe",
+    "createdAt": "2023-04-20T13:31:18.853Z",
+    "createdIssueNumber": "7328",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Convert feet to centimeters",
     "description": "Write a program to convert feet to centimeters\n\n1 foot = 30.48 centimeters\r\n\r\n```\r\nInput  : 5\r\nOutput : 152.4\r\n```\n",
     "contributor": "harshraj8843",
