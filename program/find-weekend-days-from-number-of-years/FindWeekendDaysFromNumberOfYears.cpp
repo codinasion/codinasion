@@ -1,15 +1,8 @@
-#include <iostream> 
+#include<iostream>
 using namespace std;
-
-int main(){
-
-    int years, weekends;
-
-    cout << "Enter number of years : ";
-    cin >> years;
-
-    weekends = years * 52 * 2;
-    cout << weekends;
-
-    return 0;
+int main()
+{
+int year;
+ cin>>year*104;
+  return 0;
 }
