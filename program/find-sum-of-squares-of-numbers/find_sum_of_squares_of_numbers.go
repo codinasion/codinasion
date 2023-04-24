@@ -3,8 +3,11 @@ package main
 import "fmt"
 
 func findSumOfSquaresOfNumbers(arr []int) int {
-   n := len(arr)
-   return (n * (n + 1) * (2 * n + 1)) / 6
+   sum := 0
+   for e := range arr {
+      sum += e * e
+   }
+   return sum
 }
 
 func main(){
