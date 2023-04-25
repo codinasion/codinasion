@@ -1,6 +1,10 @@
-let compoundInterest principal interest time : int =
-  principal * pown (1 + interest) time
+let interest = 10.0  
+let time = 5.0       
+let principal = 1000.0     
 
-let ci = compoundInterest 1000 10 5
+let compound principal interest time = 
+      principal * ((1.0 + interest/100.0) ** (time))
+       
+let res = compound principal interest time
 
-printfn "Compound interest : %d" ci
+printfn "Compound interest : %.2f" res
