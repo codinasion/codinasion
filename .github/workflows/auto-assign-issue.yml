@@ -3,9 +3,12 @@ on:
   issue_comment:
     types: [created]
 
+permissions:
+  issues: write
+
 jobs:
   auto_track:
-    if: startsWith(github.event.comment.body, '!assign')
+    if: startsWith(github.event.comment.body, '!assign') && github.repository == 'codinasion/program'
 
     runs-on: ubuntu-latest
 
