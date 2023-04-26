@@ -1,6 +1,8 @@
 import json
 import os
 
+from check_duplicate_file_extensions import check_duplicate_file_extensions
+
 # read language data
 language_data = json.load(open("data/languages.json", "r"))
 
@@ -88,3 +90,7 @@ for folder_name in folder_names:
                     )
     except:
         raise Exception("Error in renaming files")
+
+Check_flag = check_duplicate_file_extensions()
+if Check_flag:
+    raise Exception("There is duplicated extensions in the program folder")
