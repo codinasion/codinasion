@@ -9,8 +9,14 @@ double ConvertFahrenheitToKelvin(double fahrenheit)
 
 int main()
 {
-    cout << "1 : " << ConvertFahrenheitToKelvin(1) << endl;
-    cout << "0 : " << ConvertFahrenheitToKelvin(0) << endl;
-    cout << "1000 : " << ConvertFahrenheitToKelvin(1000) << endl;
-    cout << "-50 : " << ConvertFahrenheitToKelvin(-50) << endl;
+    string input;
+    cout << "enter a number to convert from ('exit' to exit): ";
+    getline(cin, input);
+    while (input != "exit")
+    {
+        double fern = stod(input);
+        cout << ConvertFahrenheitToKelvin(fern) << endl;
+        getline(cin, input);
+    }
+    return 0;
 }
