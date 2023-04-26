@@ -1,4 +1,6 @@
-func fahrenheitToKelvin(fahrenheit: Double) -> Double {
-    let kelvin = (fahrenheit + 459.67) * 5/9
-    return kelvin
-}
+import Swift
+import Foundation
+
+print("Input: ")
+var fahrenheit = Double(readLine()!)!
+print("Output: ", ((fahrenheit + 459.67) * 5/9))
