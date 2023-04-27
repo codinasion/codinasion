@@ -25,6 +25,3 @@ def check_duplicate_file_extensions():
         print("There is no duplicated extensions in the program folder")
 
     return flag
-
-
-check_duplicate_file_extensions()
