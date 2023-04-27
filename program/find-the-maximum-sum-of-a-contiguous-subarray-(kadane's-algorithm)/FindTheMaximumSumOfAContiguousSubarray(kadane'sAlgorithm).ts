@@ -17,5 +17,5 @@ function maximumContiguousSum(arr: number[]): number {
 }
 
 
-let arr:number[] = [-2, -3, 4, -1, -2, 1, 5, -3];
+const arr:number[] = [-2, -3, 4, -1, -2, 1, 5, -3];
 console.log(maximumContiguousSum(arr));   //7
