@@ -3,7 +3,7 @@ function convertDaysToHours(days: number) {
     // 5 days = ? hours
     // 5 days = 5 * 24 = 120 hours
 
-    let hours = days * 24;
+    const hours = days * 24;
     console.log(hours);
 }
 
