@@ -4,7 +4,7 @@ function convertHoursToWeeks(hours: number) {
     // 168x = 840
     // x = 840 / 168
 
-    let weeks = hours / 168;
+    const weeks = hours / 168;
     return weeks;
 }
 

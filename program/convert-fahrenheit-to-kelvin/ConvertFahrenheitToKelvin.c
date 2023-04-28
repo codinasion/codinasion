@@ -1,23 +1,16 @@
 #include <stdio.h>
 
-/*
- * Functions to convert Fahrenheit to Kelvin
- */
-double convert_tmp(double f_tmp)
+double ConvertFahrenheitToKelvin(double fahrenheit)
 {
-        double k_tmp = ((((f_tmp-32)*5) / 9)) + 273.15;
-        return k_tmp;
+    return (fahrenheit + 459.67) * (5.0 / 9.0);
 }
 
 int main()
 {
-        double f_tmp;
-        printf("Enter the Fahrenheit tmp: ");
-        scanf("%lf", &f_tmp);
+    printf("1 (should convert to 255.928): %f\n", ConvertFahrenheitToKelvin(1));
+    printf("0 (should convert to 255.372): %f\n", ConvertFahrenheitToKelvin(0));
+    printf("1000 (should convert to 810.928): %f\n", ConvertFahrenheitToKelvin(1000));
+    printf("-50 (should convert to 227.594): %f\n", ConvertFahrenheitToKelvin(-50));
 
-        double k_tmp = convert_tmp(f_tmp);
-
-        printf("Kelvin tmp: %lf\n", k_tmp);
-
-        return 0;
+    return 0;
 }
