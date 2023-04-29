@@ -1,5 +1,5 @@
-function weekendsInYear(year: Number): Number{
-    const weekendDays: Number = 104;
+function weekendsInYear(year: number): number{
+    const weekendDays: number = 104;
     if(year<=0){
         console.log(`Please enter valid year: ${year} invalid`)
     }else if(isNaN(year)){
