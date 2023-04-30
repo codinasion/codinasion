@@ -2,7 +2,7 @@ import java.util.Scanner
 
 fun main(){
   print("Enter number of weeks : ")
- 
+
   // Creates an instance which takes input from standard input (keyboard)
     val reader = Scanner(System.`in`)
 
