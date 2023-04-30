@@ -4,7 +4,7 @@ func sortedString(str: String) -> String {
     return str2
 }
 
-func AreAnagram(str1: String, str2: String) -> Void{
+func AreAnagram(str1: String, str2: String){
     let str1lowerCase = str1.lowercased()
     let str2lowerCase = str2.lowercased()
     let str1 = sortedString(str: str1lowerCase)
