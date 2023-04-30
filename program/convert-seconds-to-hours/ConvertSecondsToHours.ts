@@ -1,12 +1,12 @@
 function secondsToHMS(d: number):string {
     d = Number(d);
-    var h = Math.floor(d / 3600);
-    var m = Math.floor(d % 3600 / 60);
-    var s = Math.floor(d % 3600 % 60);
+    const h = Math.floor(d / 3600);
+    const m = Math.floor(d % 3600 / 60);
+    const s = Math.floor(d % 3600 % 60);
 
-    var hourDisplay = h > 0 ? h + (h === 1 ? " hour, " : " hours, ") : "";
-    var minDisplay = m > 0 ? m + (m === 1 ? " minute, " : " minutes, ") : "";
-    var secDisplay = s > 0 ? s + (s === 1 ? " second" : " seconds") : "";
+    const hourDisplay = h > 0 ? h + (h === 1 ? " hour, " : " hours, ") : "";
+    const minDisplay = m > 0 ? m + (m === 1 ? " minute, " : " minutes, ") : "";
+    const secDisplay = s > 0 ? s + (s === 1 ? " second" : " seconds") : "";
     return hourDisplay + minDisplay + secDisplay; 
 }
 
