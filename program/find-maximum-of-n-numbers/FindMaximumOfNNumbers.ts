@@ -1,7 +1,7 @@
 function findMaximumOfNNumbers(...args: Array<number>) {
-    let numbers = [...args]
+    const numbers = [...args]
     let max = 0
-    for (let x of numbers) {
+    for (const x of numbers) {
         if (x > max) max = x
     }
 
