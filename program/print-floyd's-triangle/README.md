@@ -7,7 +7,7 @@ trackId: 5487
 
 Floyd's triangle is a right-angled triangle of natural numbers, used in computer science as an example of a space-filling curve. It is named after Robert Floyd. It is defined by filling the rows of the triangle with consecutive numbers, starting with a 1 in the top left corner.
 
-```
+```txt
 Input  : 5
 
 Output : 

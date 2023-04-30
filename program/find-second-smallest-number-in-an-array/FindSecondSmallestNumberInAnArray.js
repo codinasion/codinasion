@@ -55,14 +55,14 @@ function findSecondSmallestNumberInAnArray(nums) {
     for(let i = 0; i < nums.length; i++) {
         if(nums[i] < firstSmallest) {
             firstSmallest = nums[i]; 
-        }; 
-    }; 
+        } 
+    } 
     for(let i = 0; i < nums.length; i++) {
         if(nums[i] < secondSmallest && nums[i] > firstSmallest) {
             secondSmallest = nums[i]; 
-        }; 
-    };
+        } 
+    }
     return secondSmallest;
-};
+}
 
 console.log(findSecondSmallestNumberInAnArray([1,2,3,4,5])); 

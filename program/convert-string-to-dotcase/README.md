@@ -7,7 +7,7 @@ trackId: 2422
 
 Dotcase is a style of writing in which all letters are lowercase and spaces are replaced with periods.
 
-```
+```txt
 Input  : "hello world"
 Output : "hello.world"
 ```

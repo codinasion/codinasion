@@ -8,7 +8,7 @@ public class ConvertCentimetersToFeet {
 	
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter the number of centimeters: ");
+        System.out.print("Enter length in Centimeters: ");
         double centimeters = scanner.nextDouble();
         double feets = centimetersToFeet(centimeters);
         System.out.println(centimeters + " centimeters is equal to " + feets + " feets.");

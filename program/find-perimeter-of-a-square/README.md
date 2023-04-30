@@ -7,7 +7,7 @@ trackId: 4239
 
 Perimeter of square = 4 × `Side`
 
-```
+```txt
 Side : 2
 
 Perimeter : 8

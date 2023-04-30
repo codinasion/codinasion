@@ -5,7 +5,7 @@ trackId: 5444
 
 ## Write a program to cylindrically rotate a matrix by 90 degrees
 
-```
+```txt
 Input  :
 1 2 3
 4 5 6

@@ -7,7 +7,7 @@ trackId: 3060
 
 Digital root of a number is the recursive sum of its digits until we get a single digit number.
 
-```
+```txt
 Input  : 1234
 Output : 1
 ```

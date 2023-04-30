@@ -7,7 +7,7 @@ trackId: 1735
 
 Perimeter of rectangle = 2 × (`Length` + `Width`)
 
-```
+```txt
 Length : 2
 Width  : 3
 

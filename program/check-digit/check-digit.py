@@ -1,6 +1,7 @@
 # Checks if the input number
 num = input("Enter a number: ")
 
+
 # Solution
 def checDigit(num):
     try:

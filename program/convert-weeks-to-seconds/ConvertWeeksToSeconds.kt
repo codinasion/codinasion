@@ -9,7 +9,7 @@ import java.util.Scanner
 
 fun main(){
   print("Enter number of weeks : ")
- 
+
   // Creates an instance which takes input from standard input (keyboard)
     val reader = Scanner(System.`in`)
 
@@ -21,4 +21,4 @@ fun main(){
   println("Total Minutes in given weaks is ${total_seconds_in_weaks}")
 }
 
-// contributed by technical amanjeet 
+// contributed by technical amanjeet

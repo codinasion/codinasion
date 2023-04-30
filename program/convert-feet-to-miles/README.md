@@ -7,7 +7,7 @@ trackId: 377
 
 1 mile = 5280 feet
 
-```
+```txt
 Input  : 26400
 Output : 5
 ```

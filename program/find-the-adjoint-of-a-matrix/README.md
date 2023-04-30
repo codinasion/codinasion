@@ -7,7 +7,7 @@ trackId: 4037
 
 The adjoint of a square matrix A is the transpose of the matrix of cofactors of A. The adjoint of a matrix A is denoted as A<sup>\*</sup>.
 
-```
+```txt
 Input  :
 1 2 3
 4 5 6

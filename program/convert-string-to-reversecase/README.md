@@ -7,7 +7,7 @@ trackId: 5163
 
 Reversecase is a style of writing in which all lowercase letters are converted to uppercase and all uppercase letters are converted to lowercase.
 
-```
+```txt
 Input  : "hello world"
 Output : "HELLO WORLD"
 ```
