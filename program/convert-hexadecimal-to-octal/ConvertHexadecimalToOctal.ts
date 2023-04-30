@@ -3,5 +3,5 @@ function convertHexadecimalToOctal(hex: string) : string{
     return decimal.toString(8);
 }
 
-let input = 'A';
+const input = 'A';
 console.log(`Hexadecimal '${input}' in octal is: '${convertHexadecimalToOctal(input)}'`);
