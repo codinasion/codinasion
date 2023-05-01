@@ -1107,6 +1107,15 @@
     "created": true
   },
   {
+    "title": "find roots of quadratic equation",
+    "description": "Write a program to find roots of quadratic equation\n\nUse the quadratic formula to find the roots of the quadratic equation\r\n\r\nx = $\\(-b &plusmn \\sqrt\\(b^2 - 4ac\\)\\)/2a$\r\n\r\nThe input will be the coefficients of $x^2$, $x$, and the constant $c$.\r\n\r\n```\r\nInput  : 1 2 1\r\nOutput : -1 -1\r\n```\n",
+    "contributor": "PavanKumarCB",
+    "createdAt": "2023-05-01T10:52:57.722Z",
+    "createdIssueNumber": "7464",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Find second largest number in an array",
     "description": "Write a program to find second largest number in an array\n\n```\nInput  : [1, 2, 3, 4, 5]\nOutput : 4\n```",
     "contributor": "harshraj8843",
