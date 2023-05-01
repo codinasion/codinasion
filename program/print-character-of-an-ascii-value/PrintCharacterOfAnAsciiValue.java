@@ -1,13 +1,16 @@
 import java.util.Scanner;
-public class AsciiValue {
 
-	public static void main(String[] args)
-	{
+public class PrintCharacterOfAnAsciiValue {
+    public static void main(String[] args) {
 
-	Scanner sc = new Scanner(System.in);
-	System.out.println("Enter the Character:");
-  char ch = sc.next().charAt(0);
-int asciiVal= ch;
-		System.out.println("The ASCII value  is: " + asciiVal);
-	}
-}
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Enter a value to find corresponding character");
+        int number = input.nextInt();
+
+        char asciiChar = (char)number;
+        System.out.println("The character for ASCII value " + number + " is: " + asciiChar);
+
+        input.close();
+    }
+  }
