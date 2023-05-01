@@ -3,7 +3,7 @@
 // function to convert decimal to binary
 function decToBinaryTS(n: number) {
   // array to store binary number
-  let binaryNum: number[] = new Array(32);
+  const binaryNum: number[] = new Array(32);
 
   // counter for binary array
   let i = 0;
@@ -19,5 +19,5 @@ function decToBinaryTS(n: number) {
 }
 
 // Driver program to test above function
-let test = 10;
+const test = 10;
 decToBinaryTS(test);
