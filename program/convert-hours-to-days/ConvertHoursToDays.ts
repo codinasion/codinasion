@@ -1,5 +1,5 @@
 function convertHoursToDays (hours: number): number {
-    let days=hours/24;
+    const days=hours/24;
     return days;
 }
 
