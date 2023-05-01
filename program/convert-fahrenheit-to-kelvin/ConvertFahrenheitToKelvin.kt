@@ -1,8 +1,8 @@
 fun main() {
-    
+
     print("Enter temperature in Fahrenheit: ")
     val fahrenheit = readLine()?.toDoubleOrNull()
-  
+
     if (fahrenheit == null) {
         println("Invalid input. Please enter a valid number.")
         return
