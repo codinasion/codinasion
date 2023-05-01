@@ -1,8 +1,8 @@
 function findSecondLargestNumberInAnArray(inputArray: Array<number>): number {
     if(inputArray instanceof Array && inputArray.length) {
-        let maxNum: number = Math.max(...inputArray)
+        const maxNum: number = Math.max(...inputArray)
 
-        let indexOfMaxNum: number = inputArray.indexOf(maxNum)
+        const indexOfMaxNum: number = inputArray.indexOf(maxNum)
 
         inputArray.splice(indexOfMaxNum, 1)
 
