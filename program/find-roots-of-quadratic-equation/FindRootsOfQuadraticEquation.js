@@ -8,5 +8,11 @@ function findQuadEquationRoots(a, b, c) {
     if (descriminant < 0) throw new Error('No Solution!')
 
     const solutionPart2 = descriminant ** 0.5 / 2*a
-    return [solutionPart1 + solutionPart2, solutionPart1 - solutionPart2] 
+    
+    const solutions = [solutionPart1 + solutionPart2, solutionPart1 - solutionPart2]
+
+    return solutions
 }
+
+const solutions = findQuadEquationRoots(1, -5, 6)
+console.log(solutions)
