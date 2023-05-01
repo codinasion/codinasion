@@ -1,4 +1,4 @@
-var averageOfDigits = function (num : number, digitsCount: number, digitsSum: number) {
+const averageOfDigits = function (num : number, digitsCount: number, digitsSum: number) {
     if (digitsCount === void 0) { digitsCount = 0; }
     if (digitsSum === void 0) { digitsSum = 0; }
     if (num < 10) {
@@ -7,7 +7,7 @@ var averageOfDigits = function (num : number, digitsCount: number, digitsSum: nu
         return (digitsSum / digitsCount);
     }
     else {
-        var digit: number = num % 10;
+        const digit: number = num % 10;
         digitsCount++;
         digitsSum += digit;
         num = Math.floor(num / 10);
