@@ -1,138 +1,61 @@
-// Function to get cofactor of mat[p][q] in temp[][]. n is current dimension of mat[][]
+// Functions:
 
-function getCofactor(mat: number[][], temp: number[][], p: number, q: number) {
-    let i = 0, j = 0, n = mat.length
-
-    // Looping for each element of the matrix
-    for (let row = 0; row < n; row++) {
-        for (let col = 0; col < n; col++) {
-            // Copying into temporary matrix only those element
-            // which are not in given row and column
-            if (row !== p && col !== q) {
-                temp[i][j++] = mat[row][col];
-
-                // Row is filled, so increase row index and
-                // reset col index
-                if (j === n - 1) {
-                    j = 0;
-                    i++;
-                }
+// returns the minor for every element in matrix
+// and applies cofactor sign to minor
+function minorAndSign(matrix: number[][], row: number, column: number)
+{
+    const detNums: number[] = [];
+    let detNumIdx = 0;
+    for (let i = 0; i < matrix.length; i++) {
+        for (let j = 0; j < matrix.length; j++) {
+            if ((i) !== row && (j) !== column) {
+                detNums[detNumIdx] = matrix[i][j];
+                detNumIdx++;
             }
         }
     }
+    // apply cofactor sign
+    if ((row+column) % 2 !== 0) {
+        return (detNums[1]*detNums[2] - detNums[0]*detNums[3])
+    }
+    return (detNums[0]*detNums[3] - detNums[1]*detNums[2])
 }
 
-// Recursive function for finding determinant of matrix. n is current dimension of mat[][]. 
-
-function getDeterminant(mat: number[][], n: number) {
-    // Base case : if matrix contains single element
-    if (n === 1) return mat[0][0];
-
-    let det = 0; // Initialize determinant result
-    const l = mat.length;
-    const temp: number[][] = new Array(l);// To store cofactors
-
-    for (let i = 0; i < l; i++) {
-        temp[i] = new Array(l);
+// print matrix
+function printMatrix(matrix: number[][]) {
+    for (let row = 0; row < matrix.length; row++) {
+        console.log(matrix[row]);
     }
-
-    let sign = 1; // To store sign multiplier
-
-    // Iterate for each element of first row
-    for (let f = 0; f < n; f++) {
-        // Getting Cofactor of mat[0][f]
-        getCofactor(mat, temp, 0, f);
-        det += sign * mat[0][f] * getDeterminant(temp, n - 1);
-
-        // terms are to be added with alternate sign
-        sign = -sign;
-    }
-
-    return det;
 }
 
-// Function to get adjoint of mat[l][l] in adj[l][l].
-function getAdjoint(mat: number[][]) {
-    const l = mat.length;
-    const adj: number[][] = new Array(l);
-    for (let i = 0; i < l; i++) {
-        adj[i] = new Array(l);
-    }
+// Main:
 
-    if (l === 1) {
-        adj[0][0] = 1;
-        return adj;
-    }
+// No html file, so set matrix values here
+const matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]]
 
-    // temp is used to store cofactors of mat[][]
-    let sign = 1;
-    const temp: number[][] = new Array(l);
+// get determinant
+const det = matrix[0][0]*minorAndSign(matrix, 0, 0)
+                + matrix[0][1]*minorAndSign(matrix, 0, 1)
+                + matrix[0][2]*minorAndSign(matrix, 0, 2)
 
-    for (let i = 0; i < l; i++) {
-        temp[i] = new Array(l);
-    }
-
-    for (let i = 0; i < l; i++) {
-        for (let j = 0; j < l; j++) {
-            // Get cofactor of mat[i][j]
-            getCofactor(mat, temp, i, j);
-
-            // sign of adj[j][i] positive if sum of row
-            // and column indexes is even.
-            sign = ((i + j) % 2 === 0) ? 1 : -1;
-
-            // Interchanging rows and columns to get the
-            // transpose of the cofactor matrix
-            adj[j][i] = (sign) * (getDeterminant(temp, l - 1));
-        }
-    }
-
-    return adj;
+if (det === 0) {
+    console.log("Matrix is not invertible");
 }
-
-// Function to get inverse of mat[l][l] in inverse[l][l].
-function getInverse(mat: number[][]) {
-    const det = getDeterminant(mat, mat.length);
-    if (!det) return [[]]; // !det means that det === 0 => the matrix is not invertible
-
-    const l = mat.length;
-
-    const inverse: number[][] = new Array(l);
-    for (let i = 0; i < l; i++) {
-        inverse[i] = new Array(l);
-    }
-
-    // Find adjoint
-    const adj = getAdjoint(mat);
-
-    // Find Inverse using formula "inverse(mat) = adj(mat)/det(mat)"
-    for (let i = 0; i < l; i++)
-        for (let j = 0; j < l; j++)
-            inverse[i][j] = adj[i][j] / det;
-
-    return inverse
-}
-
-function printMat(mat: number[][]) {
-    let matRepr = '[';
-    for (let i = 0; i < mat.length; i++) {
-        matRepr += '\n\t[';
-        for (let j = 0; j < mat[i].length; j++) {
-            matRepr += mat[i][j];
-            if (j < mat[i].length - 1) matRepr += ', ';
-            else matRepr += ']';
-        }
-    }
-    matRepr += '\n]';
-    console.log(matRepr);
-}
-
-const mat = [[1, 2, 3], [4, 5, 6], [7, 2, 9]];
-console.log('Original matrix:');
-printMat(mat);
-const inverse = getInverse(mat);
-if (!inverse[0].length) console.log('Matrix is not invertible!')
 else {
-    console.log('Inverse matrix:');
-    printMat(getInverse(mat));
+    // For each element:
+    //  get minor with cofactor sign
+    //  divide by determinant
+    //  put on other side of diagonal
+    const invMatrix:number[][] = [[], [], []]
+
+    for (let i = 0; i < 3; i++) {
+        for (let j = 0; j < 3; j++) {
+            const minor = minorAndSign(matrix, i, j);
+            invMatrix[j][i] = minor/det; // put on other side of diagonal
+        }
+    }
+    printMatrix(invMatrix);
 }
