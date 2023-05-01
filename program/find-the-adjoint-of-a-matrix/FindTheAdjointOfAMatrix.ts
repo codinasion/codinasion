@@ -1,7 +1,8 @@
 // Function to get cofactor of mat[p][q] in temp[][]. n is current dimension of mat[][]
 
 function getCofactor(mat: number[][], temp: number[][], p: number, q: number) {
-    let i = 0, j = 0, n = mat.length
+    let i = 0, j = 0;
+    const n = mat.length;
 
     // Looping for each element of the matrix
     for (let row = 0; row < n; row++) {
@@ -93,19 +94,19 @@ function getAdjoint(mat: number[][]) {
 function printMat(mat: number[][]) {
     let matRepr = '[';
     for (let i = 0; i < mat.length; i++) {
-      matRepr += '\n\t[';
-      for(let j = 0; j < mat[i].length; j++) {
-        matRepr += mat[i][j];
-        if (j < mat[i].length - 1) matRepr += ', ';
-        else matRepr += ']';
-      }
+        matRepr += '\n\t[';
+        for (let j = 0; j < mat[i].length; j++) {
+            matRepr += mat[i][j];
+            if (j < mat[i].length - 1) matRepr += ', ';
+            else matRepr += ']';
+        }
     }
     matRepr += '\n]';
     console.log(matRepr);
-  }
-  
-  const mat = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
-  console.log('Original matrix:');
-  printMat(mat);
-  console.log('Adjoint matrix:');
-  printMat(getAdjoint(mat));
+}
+
+const mat = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+console.log('Original matrix:');
+printMat(mat);
+console.log('Adjoint matrix:');
+printMat(getAdjoint(mat));
