@@ -1,7 +1,8 @@
 // Function to get cofactor of mat[p][q] in temp[][]. n is current dimension of mat[][]
 
 function getCofactor(mat: number[][], temp: number[][], p: number, q: number) {
-    let i = 0, j = 0, n = mat.length
+    let i = 0, j = 0;
+    const n = mat.length;
 
     // Looping for each element of the matrix
     for (let row = 0; row < n; row++) {
@@ -90,29 +91,6 @@ function getAdjoint(mat: number[][]) {
     return adj;
 }
 
-// Function to get inverse of mat[l][l] in inverse[l][l].
-function getInverse(mat: number[][]) {
-    const det = getDeterminant(mat, mat.length);
-    if (!det) return [[]]; // !det means that det === 0 => the matrix is not invertible
-
-    const l = mat.length;
-
-    const inverse: number[][] = new Array(l);
-    for (let i = 0; i < l; i++) {
-        inverse[i] = new Array(l);
-    }
-
-    // Find adjoint
-    const adj = getAdjoint(mat);
-
-    // Find Inverse using formula "inverse(mat) = adj(mat)/det(mat)"
-    for (let i = 0; i < l; i++)
-        for (let j = 0; j < l; j++)
-            inverse[i][j] = adj[i][j] / det;
-
-    return inverse
-}
-
 function printMat(mat: number[][]) {
     let matRepr = '[';
     for (let i = 0; i < mat.length; i++) {
@@ -127,12 +105,8 @@ function printMat(mat: number[][]) {
     console.log(matRepr);
 }
 
-const mat = [[1, 2, 3], [4, 5, 6], [7, 2, 9]];
+const mat = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
 console.log('Original matrix:');
 printMat(mat);
-const inverse = getInverse(mat);
-if (!inverse[0].length) console.log('Matrix is not invertible!')
-else {
-    console.log('Inverse matrix:');
-    printMat(getInverse(mat));
-}
+console.log('Adjoint matrix:');
+printMat(getAdjoint(mat));
