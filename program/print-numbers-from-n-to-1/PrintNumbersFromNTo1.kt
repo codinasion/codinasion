@@ -19,7 +19,7 @@ fun main(args: Array<String>) {
       print(i.toString() + " ")
 
       i = i - 1
-    } 
+    }
 }
 
-// Contributed by Technical Amanjeet 
+// Contributed by Technical Amanjeet
