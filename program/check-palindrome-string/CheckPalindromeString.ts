@@ -1,7 +1,7 @@
 
 const checkPalindromeString = (text: string) => {
     text = text.toLowerCase();
-    let n = text.length;
+    const n = text.length;
     let low = 0;
     let high = n - 1;
 
@@ -20,7 +20,7 @@ const checkPalindromeString = (text: string) => {
  * text = "abba"
  */
 
-let string = "abba";
+const string = "abba";
 if (checkPalindromeString(string)) {
     console.log("Palindrome String");
 } else {

@@ -4,7 +4,7 @@ import Foundation
 func printNumber(original:Int, n: Int) -> Int {
    print(original - n)
    if(n == 0) {
-     return 0;
+     return 0
    }
    return printNumber(original: original, n: n-1)
 }
