@@ -24,7 +24,7 @@ function minorAndSign(matrix: number[][], row: number, column: number)
 // returns the determinant of a matrix with dimensions n*n 
 function getDeterminant(matrix: number[][], n: number) {
     if (n === 1) return matrix[0][0]
-    let l = matrix.length
+    const l = matrix.length
     const tempMat = []
 }
 
@@ -60,7 +60,7 @@ else {
     
     for (let i = 0; i < 3; i++) {
         for (let j = 0; j < 3; j++) {
-            let minor = minorAndSign(matrix, i, j);
+            const minor = minorAndSign(matrix, i, j);
             invMatrix[j][i] = minor/det; // put on other side of diagonal
         }
     }
