@@ -1,0 +1,5 @@
+println("Enter value in seconds: ")
+seconds = readline()
+seconds = parse(Int, seconds)
+minutes = round((seconds / 60); digits = 2)
+println(seconds, " seconds equals ", minutes, " minutes")

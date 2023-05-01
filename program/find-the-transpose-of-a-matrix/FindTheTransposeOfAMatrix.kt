@@ -3,7 +3,7 @@ fun main(args: Array<String>) {
     val column = 3
     val matrix = arrayOf(intArrayOf(2, 3, 4), intArrayOf(5, 6, 4))
 
-    
+
     display(matrix)
 
     // Transpose the matrix
