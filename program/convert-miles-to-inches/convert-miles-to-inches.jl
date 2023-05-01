@@ -1,0 +1,5 @@
+println("Enter value in miles: ")
+miles = readline()
+miles = parse(Float64, miles)
+inches = round((miles * 63360); digits=2)
+println(miles, " miles equals ", inches, " inches")

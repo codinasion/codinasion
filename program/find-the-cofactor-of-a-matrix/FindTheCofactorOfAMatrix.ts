@@ -1,8 +1,8 @@
-function minorAndSign(matrix: Number[], row: Number, column: Number) {
+function minorAndSign(matrix: number[], row: number, column: number) {
     const detNums = [];
-    let detNumIdx: Number = 0;
-    for (let i: Number = 0; i < 3; i++) {
-        for (let j: Number = 0; j < 3; j++) {
+    let detNumIdx: number = 0;
+    for (let i: number = 0; i < 3; i++) {
+        for (let j: number = 0; j < 3; j++) {
             if ((i != row) && (j != column)) {
                 detNums[detNumIdx] = matrix[i][j];
                 detNumIdx += 1;
@@ -17,7 +17,7 @@ function minorAndSign(matrix: Number[], row: Number, column: Number) {
 }
 
 function printMatrix(matrix) {
-    for (let row: Number = 0; row < 3; row++) {
+    for (let row: number = 0; row < 3; row++) {
         console.log(matrix[row]);
     }
 }
@@ -29,9 +29,9 @@ const matrix = [
 
 const coFacMatrix = [[], [], []]
 
-for (let i: Number = 0; i < 3; i++) {
-    for (let j: Number = 0; j < 3; j++) {
-        let minor: Number = minorAndSign(matrix, i, j);
+for (let i: number = 0; i < 3; i++) {
+    for (let j: number = 0; j < 3; j++) {
+        const minor: number = minorAndSign(matrix, i, j);
         coFacMatrix[i][j] = minor;
     }
 }
