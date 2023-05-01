@@ -4,7 +4,7 @@ import java.util.*
 
 
 fun main(args: Array<String>) {
-    
+
     val scanner = Scanner(System.`in`)
 
     //Input Character
@@ -12,7 +12,7 @@ fun main(args: Array<String>) {
     val char = scanner.next()[0]
 
     when {
-        char.isDigit() -> 
+        char.isDigit() ->
         char.isLetter() ->
         else -> println("Special Character")
     }

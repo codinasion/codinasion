@@ -3,13 +3,13 @@
 * @returns {number} the converted number in decimal 
 */
 
-function convertBinaryToDecimal(binaryNumber: Number){
+function convertBinaryToDecimal(binaryNumber: number){
     const digitsArray = binaryNumber.toString().split('')
 
     const numberOfDigits = digitsArray.length
 
     const multiplicatedDigits = digitsArray.map((digit: string, index: number) => {
-        let power = numberOfDigits - index - 1
+        const power = numberOfDigits - index - 1
         return parseInt(digit) * Math.pow(2, power)
     })
 
