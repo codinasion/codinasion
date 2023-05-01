@@ -5,7 +5,7 @@ function inchesToMiles(inches: number) {
     // 63360 x = 316800
     // x = 316800 / 63360
 
-    let miles = inches / 63360;
+    const miles = inches / 63360;
     return miles;
 }
 
