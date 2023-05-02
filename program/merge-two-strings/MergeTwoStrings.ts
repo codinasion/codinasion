@@ -1,4 +1,4 @@
-const MergeTwoStrings = (s1: String, s2: String): String => {
+const MergeTwoStrings = (s1: string, s2: string): string => {
     return s1.concat(s2.toString());
 }
 export default MergeTwoStrings;

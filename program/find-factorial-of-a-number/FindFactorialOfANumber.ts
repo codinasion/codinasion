@@ -4,7 +4,7 @@ const findFactorial = (n: number) => {
   if (n == 0 || n == 1) {
     return result;
   } else if (n > 1) {
-    for (var i = n; i >= 1; i--) {
+    for (let i = n; i >= 1; i--) {
       result = result * i;
     }
     return result;
