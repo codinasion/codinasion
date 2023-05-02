@@ -1,5 +1,5 @@
 import java.util.Scanner
- 
+
 fun main() {
     val input = Scanner(System.`in`)
     print("Enter a string: ")
@@ -7,4 +7,4 @@ fun main() {
     var splitString = string.split(" ")
     print(splitString)
 }
- 
+
