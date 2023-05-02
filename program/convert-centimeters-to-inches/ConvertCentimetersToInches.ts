@@ -4,5 +4,5 @@ console.log(`cm:${cm} = in:${cmToIn(cm)}`);
 
 function cmToIn(cm: any){
 	 
-    return cm/2.54;;
+    return cm/2.54;
 }
