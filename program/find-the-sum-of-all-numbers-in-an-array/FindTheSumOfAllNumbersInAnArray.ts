@@ -1,7 +1,7 @@
 function findSumOfAllNumbersInAnArray(...args: Array<number>) {
-    let numbers = [...args]
+    const numbers = [...args]
     let sum = 0
-    for (let x of numbers) {
+    for (const x of numbers) {
         sum = sum + x
     }
 
