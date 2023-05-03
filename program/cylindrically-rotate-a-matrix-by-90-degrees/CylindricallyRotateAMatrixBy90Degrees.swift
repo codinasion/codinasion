@@ -15,7 +15,7 @@ func rotate90Clockwise(_ matrix: [[Int]]) -> [[Int]] {
 	return rotated
 }
 
-func printMatrix(_ matrix: [[Int]]) -> Void {
+func printMatrix(_ matrix: [[Int]]) {
 	for r in 0 ..< matrix.count {
 		for c in 0 ..< matrix.count {
 			print(matrix[r][c], terminator: " ")
