@@ -333,6 +333,15 @@
     "created": true
   },
   {
+    "title": "convert fahrenheit to kelvin",
+    "description": "Write a program to convert fahrenheit to kelvin\n\n(1°F − 32) × 5/9 + 273.15 = 255.928K\r\n\r\n```\r\nInput  : 1\r\nOutput : 255.928\r\n```\n",
+    "contributor": "KyleMcIndoe",
+    "createdAt": "2023-04-20T13:31:18.853Z",
+    "createdIssueNumber": "7328",
+    "publishedAt": "2023-04-20T13:32:47.635Z",
+    "created": true
+  },
+  {
     "title": "Convert feet to centimeters",
     "description": "Write a program to convert feet to centimeters\n\n1 foot = 30.48 centimeters\r\n\r\n```\r\nInput  : 5\r\nOutput : 152.4\r\n```\n",
     "contributor": "harshraj8843",
@@ -573,6 +582,15 @@
     "createdAt": "2022-09-29T06:46:03.074Z",
     "createdIssueNumber": "152",
     "publishedAt": "2022-10-02T16:09:44.376Z",
+    "created": true
+  },
+  {
+    "title": "convert pound to kilogram",
+    "description": "Write a program to convert pound to kilogram\n\n1 pound = 0.453592 kg\r\n\r\n```\r\nInput  : 1\r\nOutput : 0.453592\r\n```\n",
+    "contributor": "Aranarora",
+    "createdAt": "2023-03-24T07:09:34.900Z",
+    "createdIssueNumber": "6863",
+    "publishedAt": "2023-03-24T07:11:16.361Z",
     "created": true
   },
   {
@@ -1089,6 +1107,15 @@
     "created": true
   },
   {
+    "title": "find roots of quadratic equation",
+    "description": "Write a program to find roots of quadratic equation\n\nUse the quadratic formula to find the roots of the quadratic equation\r\n\r\nx = $\\(-b &plusmn \\sqrt\\(b^2 - 4ac\\)\\)/2a$\r\n\r\nThe input will be the coefficients of $x^2$, $x$, and the constant $c$.\r\n\r\n```\r\nInput  : 1 2 1\r\nOutput : -1 -1\r\n```\n",
+    "contributor": "PavanKumarCB",
+    "createdAt": "2023-05-01T10:52:57.722Z",
+    "createdIssueNumber": "7464",
+    "publishedAt": "2023-05-01T10:53:47.972Z",
+    "created": true
+  },
+  {
     "title": "Find second largest number in an array",
     "description": "Write a program to find second largest number in an array\n\n```\nInput  : [1, 2, 3, 4, 5]\nOutput : 4\n```",
     "contributor": "harshraj8843",
@@ -1482,6 +1509,15 @@
     "createdAt": "2022-09-28T03:25:18.178Z",
     "createdIssueNumber": "62",
     "publishedAt": "2022-09-28T03:26:16.258Z",
+    "created": true
+  },
+  {
+    "title": "Find weekend days from number of years",
+    "description": "Write a program to find weekend days from number of years\n\nWeekend means Saturday & Sunday together. In total, we have 52 weeks in a year. So there are 52 weekends in a year. So, in normal we have 104 Weekend Days.\r\n\r\n```\r\nInput  : 1 \r\nOutput : 104\r\n```\n",
+    "contributor": "Aranarora",
+    "createdAt": "2023-03-24T07:25:42.254Z",
+    "createdIssueNumber": "6864",
+    "publishedAt": "2023-03-24T07:27:08.881Z",
     "created": true
   },
   {

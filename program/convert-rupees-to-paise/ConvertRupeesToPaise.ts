@@ -1,5 +1,5 @@
 function rupeesToPaise(rupees: number): number {
-  let paise: number = rupees * 100;
+  const paise: number = rupees * 100;
 
   return paise;
 }
