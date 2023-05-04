@@ -7,9 +7,9 @@ var number = Int(readLine()!)!
 print("Enter power: ")
 var power = Int(readLine()!)!
 
-var result = 1;
+var result = 1
 for val in 1...power {
-  result = result * number;
+  result = result * number
 }
 
 print("Result: ", result)
