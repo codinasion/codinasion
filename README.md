@@ -1,3 +1,8 @@
+<table align="right">
+ <tr><td><a href="https://github.com/isyuricunha/program/blob/master/README.md">:us: English</a></td></tr>
+ <tr><td><a href="https://github.com/isyuricunha/program/blob/master/readme-pt-br.md">:brazil: Português</a></td></tr>
+</table>
+
 <h2 align="center">Program</h2>
 
 <div align="center">

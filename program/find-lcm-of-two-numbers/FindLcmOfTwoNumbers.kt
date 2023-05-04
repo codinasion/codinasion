@@ -7,7 +7,7 @@ fun main(args: Array<String>) {
   var myResult: Int
 
    myResult = if (input1 > input2) input1 else input2
-   
+
    while (true) {
       if (myResult % input1 == 0 && myResult % input2 == 0) {
          println("The LCM is $myResult.")
