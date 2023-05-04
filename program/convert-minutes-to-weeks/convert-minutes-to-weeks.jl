@@ -1,0 +1,6 @@
+println("Enter value in minutes: ")
+minutes = readline()
+minutes = parse(Int, minutes)
+weeks = round((minutes / 10080); digits = 0)
+weeks = convert(Int, weeks)
+println(minutes, " minutes equals ", weeks, " complete weeks")
