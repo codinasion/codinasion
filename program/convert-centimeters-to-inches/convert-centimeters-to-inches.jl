@@ -1,0 +1,5 @@
+println("Enter value in centimeters: ")
+cm = readline()
+cm = parse(Float64, cm)
+inches = round((cm / 2.54); digits = 2)
+println(cm, " centimeters equals ", inches, " inches")
