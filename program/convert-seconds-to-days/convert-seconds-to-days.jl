@@ -1,0 +1,6 @@
+println("Enter value in seconds: ")
+seconds = readline()
+seconds = parse(Int, seconds)
+days = round(seconds / 86400)
+days = convert(Int, days)
+println(seconds, " seconds equals ", days, " days")
