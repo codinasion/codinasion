@@ -7,7 +7,7 @@
 const checkPangramString = (string: string) => {
     string = string.toLowerCase();
 
-    let len: number = string.length;
+    const len: number = string.length;
     const alphabets: string = "abcdefghijklmnopqrstuvwxyz";
     const aplhabetsArray: string[] = alphabets.split("");
 
@@ -24,7 +24,7 @@ const checkPangramString = (string: string) => {
         return "Pangram sentence";
     } else {
         return "Not a pangram sentence";
-    };
+    }
 };
 
 // Test Case

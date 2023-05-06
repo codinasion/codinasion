@@ -1,6 +1,6 @@
 function stringToCamelcase(str: string): string {   
     let i:number = 0;
-    let splitstr:string[] = str.split('');
+    const splitstr:string[] = str.split('');
         
     while(i<splitstr.length){
         if(splitstr[i] === ' '){
@@ -13,5 +13,5 @@ function stringToCamelcase(str: string): string {
 }
 
 
-let str:string = "hello world";            
+const str:string = "hello world";            
 console.log(stringToCamelcase(str));    // "helloWorld"
