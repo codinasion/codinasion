@@ -1,0 +1,6 @@
+println("Enter value in seconds: ")
+seconds = readline()
+seconds = parse(Int, seconds)
+weeks = round(seconds / 604800)
+weeks = convert(Int, weeks)
+println(seconds, " seconds equals ", weeks, " complete weeks")
