@@ -1,0 +1,5 @@
+println("Enter value in kilometers: ")
+km = readline()
+km = parse(Float64, km)
+miles = round((km / 1.609); digits = 2)
+println(km, " kilometers equals ", miles, " miles")
