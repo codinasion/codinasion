@@ -1,6 +1,6 @@
 function checkSpecialCharacter(str: string) {
     let isSpecialCharacter = "false";
-    let format = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
+    const format = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
     
     if(format.test(str)) {
         isSpecialCharacter = "true";

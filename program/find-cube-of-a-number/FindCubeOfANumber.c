@@ -10,6 +10,6 @@ int main()
     int inputNumber;
     printf("Enter a number to get its cube\n");
     scanf("%d", &inputNumber);
-    printf("Input : %d \nOutput: %d", inputNumber, cubeOfNumber(inputNumber));
+    printf("Input : %d \nOutput: %d\n", inputNumber, cubeOfNumber(inputNumber));
     return 0;
 }
