@@ -8,6 +8,6 @@ fun main(args: Array<String>) {
     val side = scanner.nextDouble()
 
     val areaCube = 6*Math.pow(side, 2.toDouble())
-    
+
     println("Cube Surface Area on Side ($side) is :$areaCube")
 }
