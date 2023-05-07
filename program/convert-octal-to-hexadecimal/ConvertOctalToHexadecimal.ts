@@ -1,11 +1,11 @@
 function octalToDecimal(n:any){
-    var num = n;
-    var dec_value = 0;
-    var base = 1;
+    const num = n;
+    let dec_value = 0;
+    let base = 1;
    
-    var temp = num;
+    let temp = num;
     while (temp > 0){
-        var last_digit = temp % 10;
+        const last_digit = temp % 10;
         temp = Math.floor(temp / 10);
         dec_value += last_digit * base;
    
@@ -15,10 +15,10 @@ function octalToDecimal(n:any){
 }
 
 function decToHexa(n:any){
-    var hexaDeciNum = new Array(100);
-    var i = 0;
+    const hexaDeciNum = new Array(100);
+    let i = 0;
     while(n != 0){   
-        var temp  = 0;
+        let temp  = 0;
         temp = n % 16;
         
         if (temp < 10){
@@ -31,15 +31,15 @@ function decToHexa(n:any){
         }
         n = Math.floor(n / 16);
     }
-    var ans = "";
-    for(var j = i - 1; j >= 0; j--){
+    let ans = "";
+    for(let j = i - 1; j >= 0; j--){
         ans += String.fromCharCode(hexaDeciNum[j]);
     }
     return ans;
 }
 
-var hexnum;
-var decnum, octnum;
+let hexnum;
+let decnum, octnum;
 
 octnum = 12;
      
