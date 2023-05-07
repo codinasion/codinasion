@@ -1,7 +1,7 @@
 function convertTimeTo24Hours(time: string) {
-    let splitDate = time.split(":");
-    let parsedDate = parseInt(splitDate[0]);
-    let ampm = splitDate[2].replace(/[^a-zA-Z]+/g, '');
+    const splitDate = time.split(":");
+    const parsedDate = parseInt(splitDate[0]);
+    const ampm = splitDate[2].replace(/[^a-zA-Z]+/g, '');
     let convertedDate = 0;
 
     if(ampm === "PM") {
