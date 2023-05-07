@@ -1,6 +1,6 @@
 function addTwoMatrices(matrix1: number[][], matrix2: number[][]) {
     console.log('summing..')
-    var sum: number[][] = [];
+    const sum: number[][] = [];
     for (let i = 0; i < matrix1.length; i++) {
         sum[i] = []
         for (let j = 0; j < matrix1[i].length; j++) {
