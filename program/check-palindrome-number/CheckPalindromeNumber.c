@@ -19,8 +19,8 @@ int main()
     printf("Enter a number :");
     scanf("%d", &n);
     if (isPalindrome(n))
-        printf("is a palindrome");
+        printf("Palindrome Number");
     else
-        printf("is Not a palindrome");
+        printf("Not a Palindrome Number");
     return 0;
 }
