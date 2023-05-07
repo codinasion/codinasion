@@ -1,0 +1,5 @@
+println("Enter value in meters: ")
+meters = readline()
+meters = parse(Float64, meters)
+miles = round((meters / 1609); digits = 2)
+println(meters, " meters equals ", miles, " miles")

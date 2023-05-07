@@ -1,5 +1,5 @@
 function feetToMiles (feet: number): number {
-    let miles=feet/5280;
+    const miles=feet/5280;
     return miles;
 }
 
