@@ -1,5 +1,5 @@
 function sum_sq(array:any) {
-  var sum = 0, 
+  let sum = 0, 
       i = array.length;
   while (i--) 
    sum += Math.pow(array[i], 2);
