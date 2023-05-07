@@ -1,4 +1,3 @@
-
 // Write a Swift program to convert weeks to seconds
 
 // 1 week = 7 days = 168 hours = 10080 minutes = 604800 seconds

@@ -1,0 +1,6 @@
+println("Enter value in minutes: ")
+minutes = readline()
+minutes = parse(Int, minutes)
+hours = round(minutes / 60)
+hours = convert(Int, hours)
+println(minutes, " minutes equals ", hours, " hours")
