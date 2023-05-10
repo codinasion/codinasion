@@ -1,0 +1,21 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Discussions
+    url: https://github.com/orgs/codinasion/discussions
+    about: For any query, ask here.
+
+  - name: Discord
+    url: https://discord.gg/PzNmxsrXTX
+    about: Connect with all the maintainers and awesome contributors.
+
+  - name: Twitter
+    url: https://twitter.com/codinasion
+    about: Follow us on Twitter for updates.
+
+  - name: Email
+    url: mailto:codinasion@gmail.com
+    about: Send us an email for any query.
+
+  - name: Website
+    url: https://codinasion.org
+    about: Visit our website for more information.
