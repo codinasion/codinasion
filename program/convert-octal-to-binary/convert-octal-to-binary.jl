@@ -1,0 +1,5 @@
+println("Enter a octal number: ") 
+x = readline()
+y = parse(Int, x, base=8)
+y = string(y, base=2)
+println("Binary of ", x, ": ", y)
