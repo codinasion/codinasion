@@ -1,11 +1,11 @@
 fun main() {
-    
+
     val n: Long = 101001
-    
+
     var binary = n
     var octal = 0
     var decimal = 0
-    
+
     var i = 0
 
     while (binary.toInt() != 0) {
@@ -21,6 +21,6 @@ fun main() {
         decimal /= 8
         i *= 10
     }
-  
+
     println("$n = $octal")
 }
