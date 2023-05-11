@@ -1,5 +1,5 @@
 function stringToPathCase(str: any) {
-    let toPathcase = str.split('');
+    const toPathcase = str.split('');
     console.log(toPathcase);
     for (let i = 0; i < toPathcase.length; i++) {
                                           
