@@ -34,7 +34,6 @@ func sentenceCase(str string) string {
 			}
 		}
 	}
-
 	return newString
 }
 
