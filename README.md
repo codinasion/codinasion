@@ -1,8 +1,3 @@
-<table align="right">
- <tr><td><a href="https://github.com/isyuricunha/program/blob/master/README.md">:us: English</a></td></tr>
- <tr><td><a href="https://github.com/isyuricunha/program/blob/master/readme-pt-br.md">:brazil: Português</a></td></tr>
-</table>
-
 <h2 align="center">Program</h2>
 
 <div align="center">
@@ -11,7 +6,21 @@ An open source codebase for sharing programming solutions.
 
 [![License][1]][2] [![Github Repo Size][3]][4] [![Github Contributors][5]][6] [![Github Last Commit][7]][8]
 
+<a href="https://vercel.com/?utm_source=codinasion&utm_campaign=oss" target="_blank">
+  <img src="https://raw.githubusercontent.com/codinasion/codinasion/master/public/powered-by-vercel.svg" alt="Powered By Vercel" width="170">
+</a>
+
 </div>
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/codinasion/.github/master/assets/rainbow-hr.png" alt="rainbow hr" width="100%" height="70%">
+</div>
+
+<br/>
+
+Read this `Readme` in other languages:
+
+<kbd>[<img title="English" alt="English" src="https://cdn.staticaly.com/gh/hjnilsson/country-flags/master/svg/us.svg" width="22">](https://github.com/isyuricunha/program/blob/master/README.md)</kbd> <kbd>[<img title="Português" alt="Português" src="https://cdn.staticaly.com/gh/hjnilsson/country-flags/master/svg/br.svg" width="22">](https://github.com/isyuricunha/program/blob/master/readme-pt-br.md)</kbd>
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/codinasion/.github/master/assets/rainbow-hr.png" alt="rainbow hr" width="100%" height="70%">
