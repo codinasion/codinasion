@@ -7,7 +7,7 @@ trackId: 3694
 
 Check if a given date is valid or not.
 
-```
+```txt
 Input  : 2019-02-29
 Output : False
 ```

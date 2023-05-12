@@ -7,7 +7,7 @@ trackId: 1926
 
 Surface area of cube = 6 × `Side`^2
 
-```
+```txt
 Side : 2
 
 Surface area : 24

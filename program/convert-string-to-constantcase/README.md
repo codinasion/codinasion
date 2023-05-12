@@ -7,7 +7,7 @@ trackId: 3966
 
 Constantcase is a style of writing in which all letters are uppercase and spaces are replaced with underscores.
 
-```
+```txt
 Input  : "hello world"
 Output : "HELLO_WORLD"
 ```

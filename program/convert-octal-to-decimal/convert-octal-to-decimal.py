@@ -1,12 +1,10 @@
 def octalToDecimal(n):
-
     num = n
     dec_value = 0
     base = 1
 
     temp = num
     while temp:
-
         last_digit = temp % 10
         temp = int(temp / 10)
 

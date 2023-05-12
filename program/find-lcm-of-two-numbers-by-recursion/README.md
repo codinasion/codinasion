@@ -7,7 +7,7 @@ trackId: 405
 
 LCM (Least Common Multiple) of two numbers is the smallest number that can be divided by both numbers. For example, the LCM of 15 and 20 is 60 and LCM of 10 and 15 is 30.
 
-```
+```txt
 Input  : 12 18
 Output : 36
 ```

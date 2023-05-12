@@ -7,7 +7,7 @@ trackId: 782
 
 Factorial of a number is the product of all the numbers from 1 to that number. For example, factorial of 5 is 5\*4\*3\*2\*1 = 120.
 
-```
+```txt
 Input  : 5
 Output : 120
 ```

@@ -14,7 +14,7 @@ To convert an octal number to binary, we can use the following algorithm:
 1. Convert the octal number to decimal.
 2. Convert the decimal number to binary.
 
-```
+```txt
 Input  : 12
 Output : 1010
 ```

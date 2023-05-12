@@ -7,7 +7,7 @@ trackId: 4334
 
 Check if given character is lower case (a-z).
 
-```
+```txt
 Input  : a
 Output : Lower Case
 ```

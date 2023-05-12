@@ -7,7 +7,7 @@ trackId: 699
 
 Area of circle = π × `Radius`^2
 
-```
+```txt
 Radius : 2
 
 Area : 12.566370614359172

@@ -1,0 +1,5 @@
+println("Enter value in celsius: ")
+celsius = readline()
+celsius = parse(Float64, celsius)
+fahrenheit = round((celsius * 9/5) + 32; digits = 2)
+println(celsius, " °C equals ", fahrenheit, " °F")
