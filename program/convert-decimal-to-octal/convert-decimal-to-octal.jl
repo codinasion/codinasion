@@ -1,5 +1,5 @@
-println("Enter a binay number: ") 
+println("Enter a decimal number: ") 
 x = readline()
-y = parse(Int, x, base=2)
+y = parse(Int, x)
 y = string(y, base=8)
 println("Octal of ", x, ": ", y)
