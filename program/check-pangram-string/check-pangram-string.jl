@@ -7,4 +7,8 @@ function ispangram(input::AbstractString)
     isempty(letters)
 end
 
-println(ispangram("The quick brown fox jumps over the lazy dog"))
+if ispangram("The quick brown fox jumps over the lazy dog")
+  println("Pangram")
+else
+ println("Not a Pangram")
+end
