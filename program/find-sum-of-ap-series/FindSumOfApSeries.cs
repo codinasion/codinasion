@@ -14,4 +14,17 @@ public class FindSumOfApSeries
         int n_th_term = a + ((n - 1) * d);
         return n * ((a + n_th_term) / 2);
     }
+
+    public static void Main()
+    {
+        int firstTerm, n, d;
+        Console.WriteLine("Enter the first term : ");
+        firstTerm = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Enter the position of the wanted sum (n value) : ");
+        n = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Enter the constant between each term : ");
+        d = Convert.ToInt32(Console.ReadLine());
+        
+        Console.WriteLine(sumOfApSeries(firstTerm,n,d));
+    }
 }
