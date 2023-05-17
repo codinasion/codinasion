@@ -1,8 +1,8 @@
 # Python program to find maximum contiguous subarray
 
+
 # Function to find the maximum contiguous subarray
 def maxSubArraySum(a, size):
-
     max_so_far = a[0]
     max_ending_here = a[0]
 
