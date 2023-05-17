@@ -11,7 +11,7 @@ public class FindSumOfApSeries
     /// <returns>The sum of an arithmetic sequence at the n-th term</returns>
     public static int sumOfApSeries(int a, int n, int d)
     {
-        int n_th_term = a + (n - 1) * d;
+        int n_th_term = a + ((n - 1) * d);
         return n * ((a + n_th_term) / 2);
     }
 }
