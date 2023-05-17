@@ -19,4 +19,10 @@ public class ConvertStringToDotcase
     {
         return s.ToLower().Replace(' ', '.');
     }
+
+	public static void Main() {
+	    Console.WriteLine("Enter a string :");
+	    string demoInput = Console.ReadLine();
+	    Console.WriteLine(convertStringToDotcase(demoInput));
+	}
 }
