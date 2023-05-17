@@ -8,7 +8,7 @@ public class ConvertStringToDotcase
     /// <example>
     /// <code>
     /// // Usage
-    /// Console.WriteLine(convertStringToDotcase("hello world"));
+    /// Console.WriteLine(convertStringToDotcase("Hello World"));
     /// // Output
     /// hello.world
     /// </code>
@@ -17,6 +17,6 @@ public class ConvertStringToDotcase
     /// <returns></returns>
     public static string convertStringToDotcase(string s)
     {
-        return s.Replace(' ', '.');
+        return s.ToLower().Replace(' ', '.');
     }
 }
