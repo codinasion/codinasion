@@ -1,4 +1,4 @@
-﻿namespace a;
+﻿using System;
 
 public class FindSumOfApSeries
 {
