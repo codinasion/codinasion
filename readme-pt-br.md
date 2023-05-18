@@ -50,9 +50,7 @@ Se você está procurando uma maneira de contribuir, você pode analisar nossas 
 
 ## Junte-se a nós nas discussões
 
-Usamos as Discussões do GitHub para falar sobre todos os tipos de tópicos relacionados à documentação e a este site. Por exemplo: se você precisa de ajuda para solucionar um problema em um PR, tem uma nova ideia incrível ou quer compartilhar algo incrível, junte-se a nós nas [disc
-
-ussões][11].
+Usamos as Discussões do GitHub para falar sobre todos os tipos de tópicos relacionados à documentação e a este site. Por exemplo: se você precisa de ajuda para solucionar um problema em um PR, tem uma nova ideia incrível ou quer compartilhar algo incrível, junte-se a nós nas [discussões][11].
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/codinasion/.github/master/assets/rainbow-hr.png" alt="separador colorido" width="100%" height="70%">
