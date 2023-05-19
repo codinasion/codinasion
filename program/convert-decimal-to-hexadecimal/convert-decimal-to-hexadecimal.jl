@@ -1,0 +1,5 @@
+println("Enter a decimal number: ") 
+x = readline()
+y = parse(Int, x)
+y = string(y, base=16)
+println("Hexadecimal of ", x, ": ", uppercase(y))
