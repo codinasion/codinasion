@@ -1,0 +1,5 @@
+print("Enter first number : ")
+a = parse(Int, readline(stdin))
+print("Enter second number : ")
+b = parse(Int, readline(stdin))
+println("Power of given number: ", a ^ b)
