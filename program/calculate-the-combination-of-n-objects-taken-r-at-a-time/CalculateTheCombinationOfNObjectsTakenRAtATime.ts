@@ -2,7 +2,7 @@
 // n!/(r!(n-r)!) = n(n-1)(n-2)...(n-r+1)/r!
 
 function rng(a: number, b: number): number {
-    var total = a,i = a;
+    let total = a,i = a;
  
   while (i++< b) {
     total*=i;

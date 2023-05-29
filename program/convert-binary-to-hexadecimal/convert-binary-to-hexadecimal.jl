@@ -1,0 +1,5 @@
+println("Enter a binary number: ") 
+x = readline()
+y = parse(Int, x, base=2)
+y = string(y, base=16)
+println("Hexadecimal of ", x, ": ", uppercase(y))
