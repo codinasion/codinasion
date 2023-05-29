@@ -1,21 +1,14 @@
-import java.util.Scanner
+fun main(args: Array<String>) {
+    val base = 2
+    val powerRaised = 3
+    val result = power(base, powerRaised)
 
-fun power(base: Int, exp: Int): Int {
-    var result = 1
-    var i = exp
-
-    while (i > 0) {
-        result *= base
-        i -= 1
-    }
-
-    return result
+    println("$base^$powerRaised = $result")
 }
 
-fun main() {
-    val inputReader = Scanner(System.`in`)
-    val base = inputReader.nextInt()
-    val exponent = inputReader.nextInt()
-
-    println(power(base, exponent))
+fun power(base: Int, powerRaised: Int): Int {
+    if (powerRaised != 0)
+        return base * power(base, powerRaised - 1)
+    else
+        return 1
 }
