@@ -1,0 +1,18 @@
+{
+  "name": "program",
+  "version": "1.0.0",
+  "main": "action.js",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "dependencies": {
+    "@actions/core": "^1.9.1",
+    "date-fns": "^2.29.3",
+    "gray-matter": "^4.0.3",
+    "node-fetch": "^3.2.10",
+    "remark": "^14.0.2",
+    "remark-html": "^15.0.1"
+  }
+}

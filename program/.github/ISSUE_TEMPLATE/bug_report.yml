@@ -1,0 +1,50 @@
+name: 🐛Bug Report
+description: File a bug report here
+title: "[BUG]: "
+labels: ["bug"]
+assignees: ["harshraj8843"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report 🤗
+        Make sure there aren't any open/closed issues for this topic 😃
+
+        For any query, ask in [Discussions](https://github.com/orgs/codinasion/discussions)
+
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: Description of the bug
+      description: Give a brief description of what happened and what should have happened
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Steps To Reproduce
+      description: Steps to reproduce the behavior.
+      placeholder: |
+        1. Go to '...'
+        2. Click on '...'
+        3. Scroll down to '...'
+        4. See the error
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-information
+    attributes:
+      label: Additional Information
+      description: |
+        Please provide any additional information such as logs, screenshots, links, and scenarios in which the bug occurs to facilitate resolving the issue.
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: This project has a Code of Conduct that all participants are expected to understand and follow.
+      options:
+        - label: I have read and agree to the project's [Code of Conduct](https://github.com/codinasion/.github/blob/master/CODE_OF_CONDUCT.md)
+          required: true

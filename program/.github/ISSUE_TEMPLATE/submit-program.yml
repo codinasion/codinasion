@@ -1,0 +1,32 @@
+name: Submit Program
+description: Submit a new program
+title: "[ADD PROGRAM]: "
+labels: ["add-program"]
+assignees: ["harshraj8843"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Hey Geek !!!** 
+
+        This is an open source repository.
+
+        * For any query, ask in [Discussions](https://github.com/orgs/codinasion/discussions)
+        * Check to make sure someone hasn't already opened a similar [issue](https://github.com/codinasion/program/issues).
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Give us a brief description of the program e.g. Title, Input, Output, etc.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: This project has a Code of Conduct that all participants are expected to understand and follow.
+      options:
+        - label: I have read and agree to the project's [Code of Conduct](https://github.com/codinasion/.github/blob/master/CODE_OF_CONDUCT.md)
+          required: true

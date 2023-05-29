@@ -1,0 +1,34 @@
+name: Unassign Issues
+on:
+  workflow_dispatch:
+
+jobs:
+  unassign_issues:
+    # Not a fork
+    if: github.repository == 'codinasion/program'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Cache PIP packages
+        id: cache-pip-packages
+        uses: actions/cache@v2
+        with:
+          path: scripts/.venv
+          key: pip-packages-${{ hashFiles('scripts/requirements.txt') }}
+
+      - name: Install PIP packages
+        if: steps.cache-pip-packages.outputs.cache-hit != 'true'
+        run: |
+          cd scripts
+          python3 -m venv .venv
+          source .venv/bin/activate
+          pip install -r requirements.txt
+
+      - name: Unassign Issues
+        run: |
+          cd scripts
+          source .venv/bin/activate
+          python3 unassign_users.py "${{ secrets.REPO_TOKEN }}"
