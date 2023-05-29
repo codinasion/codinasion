@@ -1,0 +1,36 @@
+{
+  "name": "codinasion",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev  --port 3000",
+    "build": "next build",
+    "postbuild": "next-sitemap",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@giscus/react": "^2.2.8",
+    "@next/env": "^13.4.2",
+    "assets": "workspace:*",
+    "data": "workspace:*",
+    "next": "^13.4.1",
+    "next-sitemap": "^4.0.9",
+    "next-themes": "^0.2.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.8.0",
+    "shared": "workspace:*",
+    "sharp": "^0.32.1"
+  },
+  "devDependencies": {
+    "@types/node": "20.2.5",
+    "@types/react": "^18.2.5",
+    "@types/react-dom": "18.2.4",
+    "autoprefixer": "10.4.14",
+    "eslint-config-custom": "workspace:*",
+    "postcss": "8.4.23",
+    "tailwindcss": "3.3.2",
+    "typescript": "^4.9.4"
+  }
+}

@@ -1,0 +1,34 @@
+name: ✨Feature Request
+description: Request a new feature or enhancement
+labels: ["enhancement"]
+title: "[FEAT]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please make sure this feature request hasn't been already submitted by someone by looking through other open/closed issues
+
+        For any query, ask in [Discussions](https://github.com/orgs/codinasion/discussions)
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Give us a brief description of the feature or enhancement you would like
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-information
+    attributes:
+      label: Additional Information
+      description: Give us some additional information on the feature request like proposed solutions, links, screenshots, etc.
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: This project has a Code of Conduct that all participants are expected to understand and follow.
+      options:
+        - label: I have read and agree to the project's [Code of Conduct](https://github.com/codinasion/codinasion/blob/master/CODE_OF_CONDUCT.md)
+          required: true

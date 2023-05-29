@@ -1,0 +1,5 @@
+{
+  "extends": "tsconfig/npm.json",
+  "include": ["."],
+  "exclude": ["dist", "build", "node_modules"]
+}

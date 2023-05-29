@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://codinasion.org
+
+# Sitemaps
+Sitemap: https://codinasion.org/sitemap.xml

@@ -12,7 +12,6 @@ coverage
 .next/
 out/
 build
-.swc/
 
 # misc
 .DS_Store
@@ -24,6 +23,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # local env files
+.env
 .env.local
 .env.development.local
 .env.test.local
@@ -32,5 +32,8 @@ yarn-error.log*
 # turbo
 .turbo
 
-# ui
+# vercel
+.vercel
+
+# packages
 dist/
