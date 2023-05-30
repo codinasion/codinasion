@@ -1,4 +1,5 @@
 packages:
   - "apps/*"
   - "assets"
+  - "bots/**/*"
   - "packages/**/*"
