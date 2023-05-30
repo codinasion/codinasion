@@ -34,7 +34,7 @@ When we merge those changes, they should be deployed to the live site within 24 
 
 ---
 
-[1]: https://github.com/codinasion/program/issues/new?assignees=&labels=%F0%9F%93%9D+content&template=submit-program.yml "Ask/Add a program"
+[1]: https://github.com/codinasion/program/issues/new?assignees=&labels=%F0%9F%93%9D+content&template=submit_program.yml "Ask/Add a program"
 [2]: https://github.com/codinasion/program/issues "Issues"
 [3]: ./CONTRIBUTING.md#make-changes "Make changes"
 [4]: ./CONTRIBUTING.md#solve-an-issue "Solve an Issue"

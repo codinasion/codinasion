@@ -20,7 +20,7 @@ Uma base de código aberto para compartilhar soluções de programação.
 
 Leia este `Readme` em outros idiomas:
 
-<kbd>[<img title="Inglês" alt="Inglês" src="https://cdn.staticaly.com/gh/hjnilsson/country-flags/master/svg/us.svg" width="22">](https://github.com/isyuricunha/program/blob/master/README.md)</kbd> <kbd>[<img title="Português" alt="Português" src="https://cdn.staticaly.com/gh/hjnilsson/country-flags/master/svg/br.svg" width="22">](https://github.com/isyuricunha/program/blob/master/readme-pt-br.md)</kbd>
+<kbd>[<img title="Inglês" alt="Inglês" src="https://cdn.staticaly.com/gh/hjnilsson/country-flags/master/svg/us.svg" width="22">](https://github.com/codinasion/codinasion/blob/master/program/README.md)</kbd> <kbd>[<img title="Português" alt="Português" src="https://cdn.staticaly.com/gh/hjnilsson/country-flags/master/svg/br.svg" width="22">](https://github.com/codinasion/codinasion/blob/master/program/README-pt-br.md)</kbd>
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/codinasion/.github/master/assets/rainbow-hr.png" alt="separador colorido" width="100%" height="70%">
