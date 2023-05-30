@@ -1,5 +1,5 @@
 packages:
   - "apps/*"
   - "assets"
-  - "bots/**/*"
+  - "github-bots/*"
   - "packages/**/*"
