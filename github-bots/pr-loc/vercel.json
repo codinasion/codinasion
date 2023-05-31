@@ -1,8 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "regions": [
-    "bom1"
-  ],
+  "regions": ["bom1"],
   "functions": {
     "api/**": {
       "memory": 1024,
