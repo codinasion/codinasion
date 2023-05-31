@@ -120,6 +120,19 @@ importers:
         specifier: ^12.2.4
         version: 12.2.4
 
+  github-bots/pr-loc:
+    dependencies:
+      probot:
+        specifier: ^12.2.4
+        version: 12.2.4
+    devDependencies:
+      '@types/node':
+        specifier: ^18.0.0
+        version: 18.0.0
+      typescript:
+        specifier: ^4.1.3
+        version: 4.9.4
+
   packages/config/eslint-config-custom:
     dependencies:
       eslint-config-next:
