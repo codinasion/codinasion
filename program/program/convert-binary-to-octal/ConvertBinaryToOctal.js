@@ -1,6 +1,6 @@
-function binaryToOctal (num) {
-   let octalValue = parseInt(num, 2).toString(8);
-   return octalValue;
+function binaryToOctal(num) {
+  let octalValue = parseInt(num, 2).toString(8);
+  return octalValue;
 }
 
 binaryToOctal(1010);

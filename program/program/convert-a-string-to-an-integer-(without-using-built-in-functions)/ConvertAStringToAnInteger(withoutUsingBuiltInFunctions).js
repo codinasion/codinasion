@@ -1,7 +1,7 @@
 function convertStringToInteger(str) {
   let [isNegative, result, num] = [false, str, 0];
 
-  if (result[0] === '-') {
+  if (result[0] === "-") {
     isNegative = true;
     result = result.slice(1);
   }
@@ -15,10 +15,18 @@ function convertStringToInteger(str) {
   return isNegative ? num * -1 : num;
 }
 
-const str = '123';
+const str = "123";
 console.log(`Input: ${str}, type: ${typeof str}`);
-console.log(`Output: ${convertStringToInteger(str)}, type: ${typeof convertStringToInteger(str)}`);
+console.log(
+  `Output: ${convertStringToInteger(
+    str
+  )}, type: ${typeof convertStringToInteger(str)}`
+);
 
-const strWithNegative = '-123';
+const strWithNegative = "-123";
 console.log(`Input: ${strWithNegative}, type: ${typeof strWithNegative}`);
-console.log(`Output: ${convertStringToInteger(strWithNegative)}, type: ${typeof convertStringToInteger(strWithNegative)}`);
+console.log(
+  `Output: ${convertStringToInteger(
+    strWithNegative
+  )}, type: ${typeof convertStringToInteger(strWithNegative)}`
+);

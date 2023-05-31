@@ -1,5 +1,5 @@
 function decimalToOctal(num: number) {
-    return num.toString(8);
+  return num.toString(8);
 }
 
-console.log("Decimal to Octal conversion", decimalToOctal(10))
+console.log("Decimal to Octal conversion", decimalToOctal(10));

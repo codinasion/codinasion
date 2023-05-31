@@ -1,5 +1,5 @@
 function getVolumeOfACuboid(length, width, height) {
-    return length * width * height
+  return length * width * height;
 }
 const length = 2;
 const width = 3;

@@ -1,12 +1,12 @@
 function toSnakeCase(str) {
   // Replace any non-word characters with underscores
-  let snakeCase = str.replace(/\W+/g, '_');
+  let snakeCase = str.replace(/\W+/g, "_");
 
   // Convert to lowercase
   snakeCase = snakeCase.toLowerCase();
 
   // Remove underscores from the beginning and end of the string
-  snakeCase = snakeCase.replace(/^_+|_+$/g, '');
+  snakeCase = snakeCase.replace(/^_+|_+$/g, "");
 
   return snakeCase;
 }

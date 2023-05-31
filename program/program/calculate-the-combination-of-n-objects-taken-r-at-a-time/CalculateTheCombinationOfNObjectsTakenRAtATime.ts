@@ -2,23 +2,22 @@
 // n!/(r!(n-r)!) = n(n-1)(n-2)...(n-r+1)/r!
 
 function rng(a: number, b: number): number {
-    let total = a,i = a;
- 
-  while (i++< b) {
-    total*=i;
+  let total = a,
+    i = a;
+
+  while (i++ < b) {
+    total *= i;
   }
-    return total;
+  return total;
 }
 
 function cbn(n: number, r: number): number {
-    if (n==r || r==0) 
-    {
-      return 1;
-    }
-    else {
-        r=(r < n-r) ? n-r : r;
-        return rng(r+1, n)/rng(1, n-r)
-    }
+  if (n == r || r == 0) {
+    return 1;
+  } else {
+    r = r < n - r ? n - r : r;
+    return rng(r + 1, n) / rng(1, n - r);
+  }
 }
 
 console.log(cbn(5, 2));

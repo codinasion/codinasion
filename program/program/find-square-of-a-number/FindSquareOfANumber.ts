@@ -1,5 +1,5 @@
 function FindSquareOfANumber(num: number) {
-    return num ** 2;
+  return num ** 2;
 }
 
 const number = 5;

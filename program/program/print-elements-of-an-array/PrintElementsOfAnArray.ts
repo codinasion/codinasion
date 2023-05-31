@@ -1,5 +1,5 @@
 function printElementsOfAnArray(array: any[]): void {
-    console.log(...array)
+  console.log(...array);
 }
 
-printElementsOfAnArray(['1', '2', '3', '4'])
+printElementsOfAnArray(["1", "2", "3", "4"]);

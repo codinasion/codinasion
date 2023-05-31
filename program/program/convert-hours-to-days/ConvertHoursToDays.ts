@@ -1,6 +1,6 @@
-function convertHoursToDays (hours: number): number {
-    const days=hours/24;
-    return days;
+function convertHoursToDays(hours: number): number {
+  const days = hours / 24;
+  return days;
 }
 
 // Test Cases

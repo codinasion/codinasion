@@ -1,6 +1,6 @@
-const revArr = (arr) =>{
-    arr.reverse()
-    console.log(arr);
-}
+const revArr = (arr) => {
+  arr.reverse();
+  console.log(arr);
+};
 
-revArr([1,2,3,4,5])
+revArr([1, 2, 3, 4, 5]);

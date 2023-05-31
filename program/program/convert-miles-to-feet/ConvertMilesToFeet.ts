@@ -1,6 +1,6 @@
-export type Miles = number
-export type Feets = number
+export type Miles = number;
+export type Feets = number;
 
 export function convertMilesToFeet(miles: Miles): Feets {
-    return miles * 5280
+  return miles * 5280;
 }

@@ -1,6 +1,5 @@
-
 const simpleInterest = (principal, interest, time) => {
-    return (principal * interest * time) / 100;
-}
+  return (principal * interest * time) / 100;
+};
 
-console.log(simpleInterest)
+console.log(simpleInterest);

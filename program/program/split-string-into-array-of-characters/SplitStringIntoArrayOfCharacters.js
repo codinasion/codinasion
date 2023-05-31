@@ -1,16 +1,14 @@
 function splitStringIntoArrayOfCharacters(str) {
+  // Method 1
+  let charArray = str.split("");
+  console.log(charArray);
 
-    // Method 1
-    let charArray = str.split('');
-    console.log(charArray);
-    
-    
-    // Method 2
-    let charArray = [];
-    for (let i = 0; i < str.length; i++) {
-        charArray.push(str[i]);
-    }
-    console.log(charArray);
+  // Method 2
+  let charArray = [];
+  for (let i = 0; i < str.length; i++) {
+    charArray.push(str[i]);
+  }
+  console.log(charArray);
 }
 
-splitStringIntoArrayOfCharacters("Hello World")
+splitStringIntoArrayOfCharacters("Hello World");

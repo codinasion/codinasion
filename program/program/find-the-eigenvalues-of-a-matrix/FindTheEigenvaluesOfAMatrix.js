@@ -11,8 +11,6 @@ const matrix = [
 variable `eigenvalues`. */
 const { values } = eigs(matrix);
 /* Rounding the eigenvalues to 15 decimal places. */
-const eigenvalues = values.map() (
-  round(num, 15)
-);
+const eigenvalues = values.map()(round(num, 15));
 
 console.log(eigenvalues); // Expected: [ 1e-15, -1.116843969807044, 16.116843969807043 ]

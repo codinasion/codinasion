@@ -1,6 +1,6 @@
 function poundToKilogram(pounds: number): number {
   const kilogram: number = pounds * 0.453592;
-  return kilogram
+  return kilogram;
 }
 const pounds = prompt("Enter weight in pounds:");
-console.log(poundToKilogram(pounds))
+console.log(poundToKilogram(pounds));

@@ -1,7 +1,7 @@
 /**
  *
- * @name This program convert minutes to hours 
- * @param {number} minutes 
+ * @name This program convert minutes to hours
+ * @param {number} minutes
  * @returns {number}
  *
  * @example
@@ -9,13 +9,13 @@
  * const hours1 = ConvertMinutesToHours(60) // 1
  * const hours2 = ConvertMinutesToHours(120) // 2
  * ```
- * 
+ *
  * @author Tanishq Singh
  */
 function ConvertMinutesToHours(minutes: number): number {
-	const minutesInHour = 60;
+  const minutesInHour = 60;
 
-	return minutes / minutesInHour;
+  return minutes / minutesInHour;
 }
 
 // Console Tests

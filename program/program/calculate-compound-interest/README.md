@@ -5,7 +5,7 @@ trackId: 1354
 
 ## Write a program to calculate compound interest
 
-Compound interest = principal amount * (1 + rate of interest) ^ time
+Compound interest = principal amount \* (1 + rate of interest) ^ time
 
 ```txt
 Principal : 1000

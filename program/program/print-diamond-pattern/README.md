@@ -8,7 +8,7 @@ trackId: 4665
 ```txt
 Input  : 5
 
-Output : 
+Output :
     *
    ***
   *****

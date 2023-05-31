@@ -1,4 +1,4 @@
 function convertCentimetersToFeet(centimeters) {
-  return centimeters / 30.48
+  return centimeters / 30.48;
 }
-console.log(convertCentimetersToFeet(152.4))
+console.log(convertCentimetersToFeet(152.4));

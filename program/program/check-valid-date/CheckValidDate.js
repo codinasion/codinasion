@@ -1,7 +1,11 @@
 let date = prompt("Enter a date (YYYY-MM-DD): ");
 
 function isValidDate(date) {
-  return date && Object.prototype.toString.call(date) === '[object Date]' && !isNaN(date);
+  return (
+    date &&
+    Object.prototype.toString.call(date) === "[object Date]" &&
+    !isNaN(date)
+  );
 }
 
 date = new Date(date);

@@ -5,7 +5,7 @@ trackId: 5293
 
 ## Write a program to calculate simple interest
 
-Simple interest = (principal amount * rate of interest * time) / 100
+Simple interest = (principal amount _ rate of interest _ time) / 100
 
 ```txt
 Principal : 1000

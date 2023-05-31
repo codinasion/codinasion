@@ -12,79 +12,79 @@ function numberToEnglish(n) {
     i,
     word,
     words,
-    and = 'and';
+    and = "and";
 
   /* Remove spaces and commas */
-  string = string.replace(/[, ]/g, '');
+  string = string.replace(/[, ]/g, "");
 
   /* Is number zero? */
   if (parseInt(string) === 0) {
-    return 'zero';
+    return "zero";
   }
 
   /* Array of units as words */
   units = [
-    '',
-    'one',
-    'two',
-    'three',
-    'four',
-    'five',
-    'six',
-    'seven',
-    'eight',
-    'nine',
-    'ten',
-    'eleven',
-    'twelve',
-    'thirteen',
-    'fourteen',
-    'fifteen',
-    'sixteen',
-    'seventeen',
-    'eighteen',
-    'nineteen',
+    "",
+    "one",
+    "two",
+    "three",
+    "four",
+    "five",
+    "six",
+    "seven",
+    "eight",
+    "nine",
+    "ten",
+    "eleven",
+    "twelve",
+    "thirteen",
+    "fourteen",
+    "fifteen",
+    "sixteen",
+    "seventeen",
+    "eighteen",
+    "nineteen",
   ];
 
   /* Array of tens as words */
   tens = [
-    '',
-    '',
-    'twenty',
-    'thirty',
-    'forty',
-    'fifty',
-    'sixty',
-    'seventy',
-    'eighty',
-    'ninety',
+    "",
+    "",
+    "twenty",
+    "thirty",
+    "forty",
+    "fifty",
+    "sixty",
+    "seventy",
+    "eighty",
+    "ninety",
   ];
 
   /* Array of scales as words */
   scales = [
-    '',
-    'thousand',
-    'million',
-    'billion',
-    'trillion',
-    'quadrillion',
-    'quintillion',
-    'sextillion',
-    'septillion',
-    'octillion',
-    'nonillion',
-    'decillion',
-    'undecillion',
-    'duodecillion',
-    'tredecillion',
-    'quatttuor-decillion',
-    'quindecillion',
-    'sexdecillion',
-    'septen-decillion',
-    'octodecillion',
-    'novemdecillion',
-    'vigintillion',
-    'centillion',
+    "",
+    "thousand",
+    "million",
+    "billion",
+    "trillion",
+    "quadrillion",
+    "quintillion",
+    "sextillion",
+    "septillion",
+    "octillion",
+    "nonillion",
+    "decillion",
+    "undecillion",
+    "duodecillion",
+    "tredecillion",
+    "quatttuor-decillion",
+    "quindecillion",
+    "sexdecillion",
+    "septen-decillion",
+    "octodecillion",
+    "novemdecillion",
+    "vigintillion",
+    "centillion",
   ];
 
   /* Split user argument into 3 digit chunks from right to left */
@@ -98,7 +98,7 @@ function numberToEnglish(n) {
   /* Check if function has enough scale words to be able to stringify the user argument */
   chunksLen = chunks.length;
   if (chunksLen > scales.length) {
-    return '';
+    return "";
   }
 
   /* Stringify each integer in each chunk */
@@ -108,7 +108,7 @@ function numberToEnglish(n) {
 
     if (chunk) {
       /* Split chunk into array of individual integers */
-      ints = chunks[i].split('').reverse().map(parseFloat);
+      ints = chunks[i].split("").reverse().map(parseFloat);
 
       /* If tens integer is 1, i.e. 10, then add 10 to units integer */
       if (ints[1] === 1) {
@@ -140,17 +140,17 @@ function numberToEnglish(n) {
 
       /* Add hundreds word if array item exists */
       if ((word = units[ints[2]])) {
-        words.push(word + ' hundred');
+        words.push(word + " hundred");
       }
     }
   }
 
-  return words.reverse().join(' ');
+  return words.reverse().join(" ");
 }
 
 // - - - - - Tests - - - - - -
 function test(v) {
-  var sep = 'string' == typeof v ? '"' : '';
+  var sep = "string" == typeof v ? '"' : "";
   console.log(numberToEnglish(v));
 }
 

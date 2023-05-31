@@ -5,7 +5,7 @@ trackId: 3193
 
 ## Write a program to find factorial of a number
 
-Factorial of N = N *(N-1)* (N-2) *...* 1
+Factorial of N = N _(N-1)_ (N-2) _..._ 1
 
 ```txt
 Input  : 5

@@ -3,4 +3,4 @@ function poundToKilogram(pounds) {
   return kilogram;
 }
 
-console.log(poundToKilogram(1))
+console.log(poundToKilogram(1));

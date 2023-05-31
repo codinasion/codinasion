@@ -1,5 +1,5 @@
 const stringToInteger = (str: string): number => {
-    return parseInt(str)
-}
+  return parseInt(str);
+};
 
-console.log(stringToInteger("123")); 
+console.log(stringToInteger("123"));

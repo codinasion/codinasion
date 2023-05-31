@@ -8,11 +8,10 @@ function convertToHex(decimalNumber) {
     remainder = quotient % 16;
     quotient = Math.floor(quotient / 16);
 
-    if (remainder > 0)
-      remaindersSequence.push(remainder);
+    if (remainder > 0) remaindersSequence.push(remainder);
   } while (remainder !== 0);
 
-  return remaindersSequence.reverse().join(' ');
+  return remaindersSequence.reverse().join(" ");
 }
 
 console.log(convertToHex(1500));

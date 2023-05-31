@@ -1,3 +1,3 @@
 const convertStringToUpperCase = (string) => {
-    return string.toUpperCase()
-}
+  return string.toUpperCase();
+};

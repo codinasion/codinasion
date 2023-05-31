@@ -3,6 +3,6 @@ function convertHoursToDays(hours) {
 }
 
 const hours = 120;
-console.log(`Input: ${hours} ${hours > 1 ? 'hours' : 'hour'}`);
+console.log(`Input: ${hours} ${hours > 1 ? "hours" : "hour"}`);
 const result = convertHoursToDays(hours);
-console.log(`Output: ${result} ${result > 1 ? 'days' : 'day'}`);
+console.log(`Output: ${result} ${result > 1 ? "days" : "day"}`);

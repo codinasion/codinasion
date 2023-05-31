@@ -5,7 +5,7 @@ trackId: 5098
 
 ## Write a program to find power of a number
 
-Power of a number is the result of multiplying a number by itself a certain number of times. For example, 2^3 = 2 * 2 * 2 = 8. The number 2 is the base and 3 is the exponent.
+Power of a number is the result of multiplying a number by itself a certain number of times. For example, 2^3 = 2 _ 2 _ 2 = 8. The number 2 is the base and 3 is the exponent.
 
 ```txt
 Input  : 2 3

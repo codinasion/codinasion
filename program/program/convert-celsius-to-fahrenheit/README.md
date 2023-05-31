@@ -5,7 +5,7 @@ trackId: 2281
 
 ## Write a program to convert celsius to fahrenheit
 
-fahrerheit = (celsius * 9/5) + 32
+fahrerheit = (celsius \* 9/5) + 32
 
 ```txt
 Input ( C )  : -40

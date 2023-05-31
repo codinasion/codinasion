@@ -1,5 +1,5 @@
 function FindSquareRootOfANumber(num: number) {
-    return Math.sqrt(num);
+  return Math.sqrt(num);
 }
 
 const number = 5;

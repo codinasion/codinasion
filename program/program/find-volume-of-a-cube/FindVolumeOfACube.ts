@@ -1,5 +1,5 @@
 function FindVolumeOfACube(edge: number): number {
-	return edge * edge * edge;
+  return edge * edge * edge;
 }
 
 // Console Test

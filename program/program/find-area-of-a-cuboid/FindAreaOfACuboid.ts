@@ -1,9 +1,9 @@
 /**
  *
- * @name This program returns the area of a cuboid 
- * @param {number} height 
- * @param {number} width 
- * @param {number} length 
+ * @name This program returns the area of a cuboid
+ * @param {number} height
+ * @param {number} width
+ * @param {number} length
  * @returns {number}
  *
  * @example
@@ -11,11 +11,15 @@
  * const area1: number = FindAreaOfACuboid(3, 2, 4) // 52
  * const area2: number = FindAreaOfACuboid(43, 1, 82) // 7302
  * ```
- * 
+ *
  * @author Tanishq Singh
  */
-function FindAreaOfACuboid(height: number, width: number, length: number): number {
-	return 2 * ((length * width) + (length * height) + (width * height));
+function FindAreaOfACuboid(
+  height: number,
+  width: number,
+  length: number
+): number {
+  return 2 * (length * width + length * height + width * height);
 }
 
 // Console Tests

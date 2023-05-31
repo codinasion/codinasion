@@ -7,9 +7,8 @@ const num = 5;
 
 let i = num;
 
-for ( i = num; i > 0; i--) 
-{
-	console.log(i);
+for (i = num; i > 0; i--) {
+  console.log(i);
 }
 
-// contributed by Technical Amanjeet 
+// contributed by Technical Amanjeet

@@ -4,7 +4,7 @@ const letters = new Map([
   ["12", "C"],
   ["13", "D"],
   ["14", "E"],
-  ["15", "F"]
+  ["15", "F"],
 ]);
 
 const decimalToHexadecimal = (number: number): string => {

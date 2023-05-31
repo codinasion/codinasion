@@ -1,7 +1,7 @@
 /**
  *
- * @name This program convert kilometrs to miles 
- * @param {number} kilometers 
+ * @name This program convert kilometrs to miles
+ * @param {number} kilometers
  * @returns {number}
  *
  * @example
@@ -9,10 +9,11 @@
  * const mile1 = ConvertKilometersToMiles(8.04672) // 5
  * const mile2 = ConvertKilometersToMiles(16.08) // 10
  * ```
- * 
+ *
  * @author Tanishq Singh
  */
-const ConvertKilometersToMiles = (kilometers: number): number => kilometers * 0.621371;
+const ConvertKilometersToMiles = (kilometers: number): number =>
+  kilometers * 0.621371;
 
 // Console Tests
 console.log("Number of miles in 1.6 kilometers: ");

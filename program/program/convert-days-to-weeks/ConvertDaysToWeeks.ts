@@ -1,7 +1,7 @@
 /**
  *
- * @name This program convert days to week 
- * @param {number} days 
+ * @name This program convert days to week
+ * @param {number} days
  * @returns {number}
  *
  * @example
@@ -9,7 +9,7 @@
  * const weeks1 = ConvertDaysToWeeks(35) // 7
  * const weeks2 = ConvertDaysToWeeks(7) // 1
  * ```
- * 
+ *
  * @author Tanishq Singh
  */
 const ConvertDaysToWeeks = (days: number): number => days / 7;

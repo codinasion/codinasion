@@ -4,8 +4,8 @@
  * @returns {number} converstion of miles to inches
  */
 
-const ONE_MILE_PER_INCH:number = 63360;
+const ONE_MILE_PER_INCH: number = 63360;
 
 export function convertMilesToInches(miles: number): number {
-    return miles * ONE_MILE_PER_INCH
+  return miles * ONE_MILE_PER_INCH;
 }

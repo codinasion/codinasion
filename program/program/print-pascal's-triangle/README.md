@@ -10,7 +10,7 @@ Pascal's triangle is a triangular array of the binomial coefficients. Write a fu
 ```txt
 Input  : 5
 
-Output : 
+Output :
         1
        1 1
       1 2 1

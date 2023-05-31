@@ -6,7 +6,7 @@
 const n: number = 5;
 
 for (let i = n; i > 0; i--) {
-	console.log(i);
+  console.log(i);
 }
 
 // contributed by Irad Doron :)

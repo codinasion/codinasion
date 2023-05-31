@@ -39,30 +39,30 @@ Pseudocode
 Time: O(n) we iterate over input array twice at O(2n) -> O(n)
 Space: O(1) no extra memory needed 
 
-*/ 
+*/
 
 // function findSecondSmallestNumberInAnArray(nums) {
 //     // edge case: if input array is empty we return 0
-//     if(nums.length === 0) return 0; 
-//     nums.sort((a, b) => a - b); 
-//     return nums[1]; 
+//     if(nums.length === 0) return 0;
+//     nums.sort((a, b) => a - b);
+//     return nums[1];
 // };
 
 function findSecondSmallestNumberInAnArray(nums) {
-    if(nums.length === 0) return 0; 
-    let firstSmallest = Infinity; 
-    let secondSmallest = Infinity; 
-    for(let i = 0; i < nums.length; i++) {
-        if(nums[i] < firstSmallest) {
-            firstSmallest = nums[i]; 
-        } 
-    } 
-    for(let i = 0; i < nums.length; i++) {
-        if(nums[i] < secondSmallest && nums[i] > firstSmallest) {
-            secondSmallest = nums[i]; 
-        } 
+  if (nums.length === 0) return 0;
+  let firstSmallest = Infinity;
+  let secondSmallest = Infinity;
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] < firstSmallest) {
+      firstSmallest = nums[i];
     }
-    return secondSmallest;
+  }
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] < secondSmallest && nums[i] > firstSmallest) {
+      secondSmallest = nums[i];
+    }
+  }
+  return secondSmallest;
 }
 
-console.log(findSecondSmallestNumberInAnArray([1,2,3,4,5])); 
+console.log(findSecondSmallestNumberInAnArray([1, 2, 3, 4, 5]));

@@ -3,5 +3,5 @@ function FindCubeOfANumber(num) {
 }
 
 const number = 2;
-console.log('Input  :', number);
-console.log('Output :', FindCubeOfANumber(number));
+console.log("Input  :", number);
+console.log("Output :", FindCubeOfANumber(number));

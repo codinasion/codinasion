@@ -5,14 +5,14 @@
  *
  * @example
  * ```js
- * const _int   = CheckIntegerOrFloat(2) // Integer 
+ * const _int   = CheckIntegerOrFloat(2) // Integer
  * const _float = CheckIntegerOrFloat(3.21) // Float
  * ```
  *
  * @author Tanishq Singh
  */
 function CheckIntegerOrFloat(number) {
-	return number % 1 === 0 ? "Integer" : "Float";
+  return number % 1 === 0 ? "Integer" : "Float";
 }
 
 // Console Tests

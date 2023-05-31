@@ -1,10 +1,9 @@
 function printNumbers(n) {
-    if (n === 0) {
-      return;
-    }
-    printNumbers(n - 1);
-    console.log(n);
+  if (n === 0) {
+    return;
   }
-  
-  printNumbers(5);
-  
+  printNumbers(n - 1);
+  console.log(n);
+}
+
+printNumbers(5);

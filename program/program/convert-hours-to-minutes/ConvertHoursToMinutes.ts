@@ -9,13 +9,13 @@
  * const minutes1: number = ConvertHoursToMinutes(3) // 180
  * const minutes2: number = ConvertHoursToMinutes(1.5) // 90
  * ```
- * 
+ *
  * @author Tanishq Singh
  */
 function ConvertHoursToMinutes(hours: number): number {
-	const minutesInHour = 60;
+  const minutesInHour = 60;
 
-	return hours * minutesInHour;
+  return hours * minutesInHour;
 }
 
 // Console Tests

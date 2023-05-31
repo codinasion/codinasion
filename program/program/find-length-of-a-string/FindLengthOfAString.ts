@@ -1,5 +1,5 @@
 function findLengthOfAString(text: string): number {
-    return text.length
+  return text.length;
 }
 
-console.log("Length of given text is:", findLengthOfAString('abcd'))
+console.log("Length of given text is:", findLengthOfAString("abcd"));

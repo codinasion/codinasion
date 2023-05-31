@@ -1,7 +1,7 @@
 /**
  *
- * @name This program convert seconds to weeks 
- * @param {number} seconds 
+ * @name This program convert seconds to weeks
+ * @param {number} seconds
  * @returns {number}
  *
  * @example
@@ -11,8 +11,8 @@
  * ```
  */
 function ConvertSecondsToWeeks(seconds: number): number {
-	const secondsInWeek = 60 * 60  * 24 * 7;
-	return seconds / secondsInWeek;
+  const secondsInWeek = 60 * 60 * 24 * 7;
+  return seconds / secondsInWeek;
 }
 
 // Console Tests

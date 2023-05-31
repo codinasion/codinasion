@@ -10,7 +10,7 @@ Floyd's triangle is a right-angled triangle of natural numbers, used in computer
 ```txt
 Input  : 5
 
-Output : 
+Output :
 1
 2 3
 4 5 6

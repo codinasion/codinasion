@@ -1,4 +1,4 @@
-function convertDaysToWeek(days){
-    return days/7;
+function convertDaysToWeek(days) {
+  return days / 7;
 }
-console.log(convertDaysToWeek(35))
+console.log(convertDaysToWeek(35));

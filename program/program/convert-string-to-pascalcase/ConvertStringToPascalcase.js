@@ -10,6 +10,6 @@ const pascalCase = (string) => {
       .replace(new RegExp(/\w/), (s) => s.toUpperCase());
   }
   const newText = toPascalCase(string);
-  
-  return newText
+
+  return newText;
 };

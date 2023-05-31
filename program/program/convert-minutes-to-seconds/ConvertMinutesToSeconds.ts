@@ -11,16 +11,15 @@
  * ```
  */
 function ConvertMinutesToSecondsTS(minutes: number) {
-    return minutes * 60;
-  }
-  
-  // Console Tests
-  console.log("Number of seconds in 5 minutes.");
-  console.log("That is" + ConvertMinutesToSecondsTS(5) + "// 300");
-  
-  console.log("Number of seconds in 15 minutes.");
-  console.log("That is" + ConvertMinutesToSecondsTS(15) + "// 900");
-  
-  console.log("Number of seconds in 2.5 minutes.");
-  console.log("That is" + ConvertMinutesToSecondsTS(2.5) + "// 150");
-  
+  return minutes * 60;
+}
+
+// Console Tests
+console.log("Number of seconds in 5 minutes.");
+console.log("That is" + ConvertMinutesToSecondsTS(5) + "// 300");
+
+console.log("Number of seconds in 15 minutes.");
+console.log("That is" + ConvertMinutesToSecondsTS(15) + "// 900");
+
+console.log("Number of seconds in 2.5 minutes.");
+console.log("That is" + ConvertMinutesToSecondsTS(2.5) + "// 150");
