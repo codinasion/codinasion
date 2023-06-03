@@ -36,7 +36,7 @@ console.log(languageData.name); // Python
 console.log(languageData.fileExtension[0]); // py
 console.log(languageData.namingConvention); // snake_case
 console.log(languageData.prismTag); // python
-console.log(languageData.logo); // https://github.com/codinasion/codinasion/assets/54644599/84788b04-f9ca-4201-b8fa-b097610ab2cf
+console.log(languageData.logo); // https://raw.githubusercontent.com/codinasion/codinasion/master/assets/language/Python.png
 ```
 
 ```js
@@ -53,7 +53,7 @@ console.log(languageData.name); // C#
 console.log(languageData.fileExtension[0]); // cs
 console.log(languageData.namingConvention); // PascalCase
 console.log(languageData.prismTag); // csharp
-console.log(languageData.logo); // https://github.com/codinasion/codinasion/assets/54644599/7c1c6b28-37ba-4871-afe0-3c8faee97b45
+console.log(languageData.logo); // https://raw.githubusercontent.com/codinasion/codinasion/master/assets/language/C%23.png
 ```
 
 ### `renameFile`

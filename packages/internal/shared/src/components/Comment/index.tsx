@@ -13,9 +13,9 @@ export default function Comment() {
         <Giscus
           id="giscus-comments"
           repo={`codinasion/codinasion`}
-          repoId={`R_kgDOJnS4Cw`}
+          repoId={`R_kgDOJoOK7Q`}
           category={`Comment`}
-          categoryId={`DIC_kwDOJnS4C84CWvB5`}
+          categoryId={`DIC_kwDOJoOK7c4CW73y`}
           mapping={`url`}
           strict={`1`}
           reactionsEnabled={`1`}

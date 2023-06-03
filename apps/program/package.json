@@ -1,0 +1,43 @@
+{
+  "name": "program",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev  --port 3002",
+    "build": "next build",
+    "postbuild": "next-sitemap",
+    "serve": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@codinasion/language-data": "workspace:*",
+    "@giscus/react": "^2.2.8",
+    "@next/env": "^13.4.2",
+    "assets": "workspace:*",
+    "data": "workspace:*",
+    "next": "13.4.4",
+    "next-sitemap": "^4.0.9",
+    "next-themes": "^0.2.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.8.0",
+    "react-markdown": "^8.0.7",
+    "react-syntax-highlighter": "^15.5.0",
+    "rehype-raw": "^6.1.1",
+    "remark-gfm": "^3.0.1",
+    "shared": "workspace:*",
+    "sharp": "^0.32.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.9",
+    "@types/node": "20.2.5",
+    "@types/react": "^18.2.5",
+    "@types/react-dom": "18.2.4",
+    "@types/react-syntax-highlighter": "^15.5.6",
+    "autoprefixer": "10.4.14",
+    "eslint-config-custom": "workspace:*",
+    "postcss": "8.4.23",
+    "tailwindcss": "3.3.2",
+    "typescript": "5.1.3"
+  }
+}

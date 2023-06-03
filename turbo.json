@@ -2,6 +2,7 @@
   "$schema": "https://turbo.build/schema.json",
   "globalDependencies": ["**/.env.*local", "**/.env.*dev", "**/.env"],
   "globalEnv": [
+    "CODINASION_API_URL",
     "GITHUB_API_URL",
     "GITHUB_GRAPHQL_API_URL",
     "GITHUB_TOKEN",

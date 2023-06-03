@@ -1,13 +1,14 @@
 import { NextResponse } from "next/server";
 
-export async function GET(request: Request,
+export async function GET(
+  request: Request,
   {
     params,
   }: {
     params: { language: string };
-  }) {
-
-    const language = params.language;
+  }
+) {
+  const language = params.language;
 
   const res = await fetch(
     `https://raw.githubusercontent.com/codinasion/ScriptHQ/program-data/languages/${language}.json`,
