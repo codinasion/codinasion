@@ -9,7 +9,6 @@ import { Breadcrumb, Comment } from "@/shared";
 import ProgramDetail from "@/components/Program/ProgramDetail";
 import AvailableSolutionCard from "@/components/Program/AvailableSolutionCard";
 import ContributorsCard from "@/components/Program/ContributorsCard";
-import Ads from "@/components/Ads";
 
 ////////////////////////////////////////////////////////////////////////////////
 // https://beta.nextjs.org/docs/api-reference/metadata#generatemetadata-function
@@ -115,8 +114,6 @@ export default async function ProgramDetailPage({
         <div className="md:col-span-2">
           <AvailableSolutionCard ProgramData={ProgramData} />
           <ContributorsCard ProgramData={ProgramData} />
-
-          <Ads />
         </div>
       </div>
     </>

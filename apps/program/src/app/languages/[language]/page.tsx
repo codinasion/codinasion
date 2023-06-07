@@ -8,7 +8,6 @@ import { Breadcrumb, Comment } from "@/shared";
 
 import ProgramCard from "@/components/Program/ProgramCard";
 import ProgramLanguageCard from "@/components/Program/ProgramLanguageCard";
-import Ads from "@/components/Ads";
 
 ////////////////////////////////////////////////////////////////////////////////
 // https://beta.nextjs.org/docs/api-reference/metadata#generatemetadata-function
@@ -109,8 +108,6 @@ export default async function ProgramLanguagePage({
         </div>
         <div className="md:col-span-2">
           <ProgramLanguageCard languages={ProgramLanguageData} />
-
-          <Ads />
         </div>
       </div>
     </>

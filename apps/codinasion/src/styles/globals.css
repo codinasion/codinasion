@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer components {
-  .card_bg {
-    @apply bg-slate-100 dark:bg-slate-700 border border-slate-200 dark:border-slate-800;
+  .hover-up {
+    @apply transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105;
   }
 }

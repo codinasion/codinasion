@@ -3,8 +3,6 @@ import "shared/styles.css";
 
 import Script from "next/script";
 
-import Layout from "@/layouts";
-
 import { SiteMetadata } from "@/data";
 
 import Favicon from "assets/favicon/favicon.ico";
@@ -12,6 +10,7 @@ import AppleTouchIcon from "assets/favicon/apple-touch-icon.png";
 import ShortcutIcon from "assets/favicon/favicon-16x16.png";
 import Logo from "assets/codinasion.png";
 import Manifest from "assets/favicon/manifest.json";
+import Layout from "@/layouts";
 
 export const metadata = {
   title: SiteMetadata.title,

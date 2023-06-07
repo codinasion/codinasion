@@ -1,6 +1,8 @@
+const siteUrl = "https://codinasion.org";
+
 /** @type {import('next-sitemap').IConfig} */
 const config = {
-  siteUrl: "https://codinasion.org",
+  siteUrl: siteUrl,
   generateRobotsTxt: true,
   exclude: [],
   robotsTxtOptions: {
