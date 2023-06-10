@@ -17,6 +17,7 @@ import Projects from "./projects";
 import CodinasionLogo from "assets/codinasion.png";
 import BgLight from "@/public/Img/bg_light.png";
 import BgDark from "@/public/Img/bg_dark.png";
+import VercelLogo from "assets/vercel.svg";
 
 export default function Home() {
   const [isMount, setMount] = useState<boolean>(false);
@@ -92,15 +93,33 @@ export default function Home() {
 
       <Projects />
 
-      <section className="p-3 mt-5 xl:container mx-auto w-full relative text-center md:text-end font-bold">
-        Designed by{" "}
-        <Link
-          href="https://github.com/0ME9A"
-          externalIcon={false}
-          className="text-lime-600 dark:text-lime-600 hover:text-lime-800 dark:hover:text-lime-500"
-        >
-          @0ME9A
-        </Link>
+      <section className="p-3 mt-5 xl:container mx-auto w-full relative font-bold">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10">
+          <div className="flex-col gap-2 text-center md:text-start inline-block">
+            Powered by{" "}
+            <Link
+              href="https://vercel.com/?utm_source=codinasion&utm_campaign=oss"
+              externalIcon={false}
+            >
+              <Image
+                src={VercelLogo}
+                width={80}
+                alt="Vercel"
+                className="inline pb-1"
+              />
+            </Link>
+          </div>
+          <div className="flex-col gap-2 text-center md:text-end inline-block">
+            Designed by{" "}
+            <Link
+              href="https://github.com/0ME9A"
+              externalIcon={false}
+              className="text-lime-600 dark:text-lime-600 hover:text-lime-800 dark:hover:text-lime-500"
+            >
+              @0ME9A
+            </Link>
+          </div>
+        </div>
       </section>
     </>
   );

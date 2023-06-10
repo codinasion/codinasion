@@ -1,34 +1,98 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center">Codinasion</h1>
 
-## Getting Started
+<div align="center">
 
-First, run the development server:
+Collaborate, Create, Innovate: Together with Open Source ❤️
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+[![Codinasion](https://img.shields.io/badge/HTTPS-codinasion.org-brightgreen "Codinasion")](https://codinasion.org "Codinasion") [![License](https://img.shields.io/github/license/codinasion/codinasion)](https://github.com/codinasion/codinasion/blob/master/LICENSE.md "MIT License") [![Github Sponsors](https://img.shields.io/github/sponsors/codinasion?color=light_green&label=Sponsors "Our Sponsors")](https://github.com/sponsors/codinasion)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<a href="https://vercel.com/?utm_source=codinasion&utm_campaign=oss" target="_blank">
+  <img src="https://raw.githubusercontent.com/codinasion/codinasion/master/assets/powered-by-vercel.svg" alt="Powered By Vercel" width="170">
+</a>
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+</div>
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+<div align="center">
+  <img src="https://raw.githubusercontent.com/codinasion/codinasion/master/assets/rainbow-hr.png" alt="rainbow hr" width="100%" height="70%">
+</div>
 
-## Learn More
+## How to setup
 
-To learn more about Next.js, take a look at the following resources:
+1. Fork this repository
+2. Clone the forked repository
+3. Install dependencies
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   ```bash
+   pnpm install
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+4. Build all projects (for **1st time** only)
 
-## Deploy on Vercel
+   ```bash
+   pnpm all
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+5. Run the development server
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+   ```bash
+   pnpm run dev --filter codinasion
+   ```
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/codinasion/codinasion/master/assets/rainbow-hr.png" alt="rainbow hr" width="100%" height="70%">
+</div>
+
+<br>
+
+See full documentation about `Turbo Repo` at https://turbo.build/repo
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/codinasion/codinasion/master/assets/rainbow-hr.png" alt="rainbow hr" width="100%" height="70%">
+</div>
+
+## Contributing
+
+If you're looking for a way to contribute, you can scan through our existing issues for something to work on.
+We want to make contributing to this project as easy and transparent as possible, and we are grateful to the community for contributing bug fixes and improvements. Read our [Contributing Guide](https://github.com/codinasion/codinasion/blob/master/CONTRIBUTING.md) on how you can take part in improving Codinasion.
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/codinasion/codinasion/master/assets/rainbow-hr.png" alt="rainbow hr" width="100%" height="70%">
+</div>
+
+## Join us in discussions
+
+We use GitHub Discussions to talk about all sorts of topics related to documentation and this site. For example: if you'd like help troubleshooting a PR, have a great new idea, or want to share something amazing, join us in the [discussions](https://github.com/orgs/codinasion/discussions).
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/codinasion/codinasion/master/assets/rainbow-hr.png" alt="rainbow hr" width="100%" height="70%">
+</div>
+
+<br>
+
+<table>
+  <tr>
+    <td>
+    <img align="left" src="https://raw.githubusercontent.com/codinasion/codinasion/master/assets/octocat.png" width="190">
+    <h3>Thanks for contributing :purple_heart:</h3>
+    <ul>
+      <li>Thanks for all your contributions and efforts</li>
+      <li>We thank you for being part of our :sparkles: commUnity :sparkles: !</li>
+    </ul>
+    <img width="900" height="0">
+    </td>
+  </tr>
+</table>
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/codinasion/codinasion/master/assets/rainbow-hr.png" alt="rainbow hr" width="100%" height="70%">
+</div>
+
+<br/>
+
+<p align="center">
+Made with 💖 by Codinasion
+</p>
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/codinasion/codinasion/master/assets/rainbow-hr.png" alt="rainbow hr" width="100%" height="70%">
+</div>

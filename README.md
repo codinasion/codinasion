@@ -4,10 +4,14 @@
 
 Collaborate, Create, Innovate: Together with Open Source ❤️
 
-[![License](https://img.shields.io/github/license/codinasion/codinasion)](https://github.com/codinasion/codinasion/blob/master/LICENSE.md "MIT License") [![Github Repo Size](https://img.shields.io/github/repo-size/codinasion/codinasion "Repo Size")](https://github.com/codinasion/codinasion) [![Github Contributors](https://img.shields.io/github/contributors/codinasion/codinasion "Contributors")](https://github.com/codinasion/codinasion/graphs/contributors) [![Github Last Commit](https://img.shields.io/github/last-commit/codinasion/codinasion "Last Commit")](https://github.com/codinasion/codinasion/graphs/commit-activity)
+[![License](https://img.shields.io/github/license/codinasion/codinasion)](https://github.com/codinasion/codinasion/blob/master/LICENSE.md "MIT License") [![Github Repo Size](https://img.shields.io/github/repo-size/codinasion/codinasion "Repo Size")](https://github.com/codinasion/codinasion) [![Github Sponsors](https://img.shields.io/github/sponsors/codinasion?color=light_green&label=Sponsors "Our Sponsors")](https://github.com/sponsors/codinasion)
+
+![Issues](https://img.shields.io/github/issues/codinasion/codinasion?label=Issues) [![Github Contributors](https://img.shields.io/github/contributors/codinasion/codinasion "Contributors")](https://github.com/codinasion/codinasion/graphs/contributors) [![Github Last Commit](https://img.shields.io/github/last-commit/codinasion/codinasion "Last Commit")](https://github.com/codinasion/codinasion/graphs/commit-activity)
+
+![Good First Issues](https://img.shields.io/github/issues/codinasion/codinasion/good%20first%20issue?label=Good%20First%20Issues)
 
 <a href="https://vercel.com/?utm_source=codinasion&utm_campaign=oss" target="_blank">
-  <img src="assets/powered-by-vercel.svg" alt="Powered By Vercel" width="170">
+  <img src="https://raw.githubusercontent.com/codinasion/codinasion/master/assets/powered-by-vercel.svg" alt="Powered By Vercel" width="170">
 </a>
 
 </div>
@@ -40,6 +44,8 @@ Collaborate, Create, Innovate: Together with Open Source ❤️
   <img src="https://raw.githubusercontent.com/codinasion/codinasion/master/assets/rainbow-hr.png" alt="rainbow hr" width="100%" height="70%">
 </div>
 
+<br>
+
 See full documentation about `Turbo Repo` at https://turbo.build/repo
 
 <div align="center">
@@ -49,7 +55,7 @@ See full documentation about `Turbo Repo` at https://turbo.build/repo
 ## Contributing
 
 If you're looking for a way to contribute, you can scan through our existing issues for something to work on.
-We want to make contributing to this project as easy and transparent as possible, and we are grateful to the community for contributing bug fixes and improvements. Read our [Contributing Guide](CONTRIBUTING.md) on how you can take part in improving Codinasion.
+We want to make contributing to this project as easy and transparent as possible, and we are grateful to the community for contributing bug fixes and improvements. Read our [Contributing Guide](https://github.com/codinasion/codinasion/blob/master/CONTRIBUTING.md) on how you can take part in improving Codinasion.
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/codinasion/codinasion/master/assets/rainbow-hr.png" alt="rainbow hr" width="100%" height="70%">
@@ -92,14 +98,3 @@ Made with 💖 by Codinasion
 <div align="center">
   <img src="https://raw.githubusercontent.com/codinasion/codinasion/master/assets/rainbow-hr.png" alt="rainbow hr" width="100%" height="70%">
 </div>
-
-[1]: https://img.shields.io/github/license/codinasion/codinasion
-[2]: https://github.com/codinasion/codinasion/blob/master/LICENSE.md "License"
-[3]: https://img.shields.io/github/repo-size/codinasion/codinasion "Repo Size"
-[4]: https://github.com/codinasion/codinasion
-[5]: https://img.shields.io/github/contributors/codinasion/codinasion "Contributors"
-[6]: https://github.com/codinasion/codinasion/graphs/contributors
-[7]: https://img.shields.io/github/last-commit/codinasion/codinasion "Last Commit"
-[8]: https://github.com/codinasion/codinasion/graphs/commit-activity
-[9]: ./CONTRIBUTING.md "Contributing Guide"
-[10]: https://github.com/codinasion/codinasion/discussions "Discussions"

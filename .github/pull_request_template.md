@@ -6,16 +6,20 @@ Please make sure that the pull request is limited to one type (docs, feature, et
 
 ## 📑 Description
 
+copilot:summary
+
+## 🐞 Related Issue
+
 <!-- If this pull request closes an issue, please mention the issue number below 👇🏻 -->
 <!-- For example, use Issue Number like => Closes #404 -->
 <!-- Or, use Issue Url like => Closes https://github.com/OWNER/REPO/issues/404 -->
 
 Closes #<!-- Issue number here -->
 
----
+## 📋 Explanation of changes
 
-<!-- Don't change anything below this line -->
-<!-- This section is reserved for Copilot for PRs -->
-<!-- More information: https://githubnext.com/projects/copilot-for-pull-requests -->
+copilot:walkthrough
 
-copilot:all
+copilot:poem
+
+<!-- GitHub Copilot: https://githubnext.com/projects/copilot-for-pull-requests -->

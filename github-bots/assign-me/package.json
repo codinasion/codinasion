@@ -4,8 +4,8 @@
   "private": true,
   "description": "Assign 'good first issue' to new contributors, by using the '!assign' comment",
   "author": "Harsh Raj",
-  "license": "ISC",
-  "homepage": "https://github.com/codinasion/codinasion",
+  "license": "MIT",
+  "homepage": "https://github.com/codinasion/codinasion/tree/master/github-bots/assign-me",
   "keywords": [
     "assign-me"
   ],

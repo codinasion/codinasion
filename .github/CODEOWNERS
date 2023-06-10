@@ -1,1 +1,27 @@
-* @harshraj8843
+# These owners will be the default owners for everything in
+# the repo. Unless a later match takes precedence,
+*                       @harshraj8843
+
+
+# Code owners for 'program' folder
+/program/program/       @codinasion/program
+
+
+# Code owners for Website(s) and api(s)
+/apps/                  @codinasion/web-dev     @harshraj8843
+
+
+# Code owners for Github Bot(s)
+/github-bots/           @codinasion/github-bot  @harshraj8843
+
+
+# Code owners for npm package(s)
+/packages/npm/          @codinasion/npm         @harshraj8843
+
+
+# Code owners for README and translations
+**/README*.md           @codinasion/README      @harshraj8843
+**/readme*.md           @codinasion/README      @harshraj8843
+
+
+# End of CODEOWNERS file.

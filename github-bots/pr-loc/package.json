@@ -2,10 +2,10 @@
   "name": "pr-loc",
   "version": "0.0.0",
   "private": true,
-  "description": "A Probot app",
+  "description": "A GitHub BOT to display the number of lines of code changed in a Pull Request.",
   "author": "Harsh Raj",
-  "license": "ISC",
-  "homepage": "https://github.com//",
+  "license": "MIT",
+  "homepage": "https://github.com/codinasion/codinasion/tree/master/github-bots/pr-loc",
   "keywords": [
     "probot",
     "github",
