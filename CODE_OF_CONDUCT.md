@@ -1,5 +1,9 @@
 # Contributor Covenant Code of Conduct
 
+Read this `Code of Conduct` in another language:
+
+<kbd>[<img title="English" alt="English" src="https://cdn.staticaly.com/gh/hjnilsson/country-flags/master/svg/us.svg" width="22">](https://github.com/codinasion/codinasion/blob/master/CODE_OF_CONDUCT.md)</kbd> <kbd>[<img title="Português" alt="Português" src="https://cdn.staticaly.com/gh/hjnilsson/country-flags/master/svg/br.svg" width="22">](https://github.com/codinasion/codinasion/blob/master/CODE_OF_CONDUCT-pt-br.md)</kbd>
+
 ## Our Pledge
 
 We as members, contributors, and leaders pledge to make participation in our
