@@ -1,0 +1,1811 @@
+[
+  {
+    "title": "Add two matrices",
+    "description": "Write a program to add two matrices\n\nMatrix addition is the process of adding two matrices by adding the corresponding elements of the two matrices. Two matrices must have an equal number of rows and columns to be added.\n\n```\nInput  :\n1 2 3\n4 5 6\n7 8 9\n\n1 2 3\n4 5 6\n7 8 9\n\nOutput :\n2 4 6\n8 10 12\n14 16 18\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "2022-10-16T06:21:07.948Z",
+    "created": true
+  },
+  {
+    "title": "Calculate compound interest",
+    "description": "Write a program to calculate compound interest\n\nCompound interest = principal amount * (1 + rate of interest) ^ time\r\n\r\n```\r\nPrincipal : 1000\r\nRate      : 10\r\nTime      : 5\r\n\r\nCompound interest : 1610.51\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T13:24:58.172Z",
+    "createdIssueNumber": "268",
+    "publishedAt": "2022-10-03T23:28:20.512Z",
+    "created": true
+  },
+  {
+    "title": "Calculate simple interest",
+    "description": "Write a program to calculate simple interest\n\nSimple interest = principal amount * rate of interest * time\r\n\r\n```\r\nPrincipal : 1000\r\nRate      : 10\r\nTime      : 5\r\n\r\nSimple interest : 500\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T13:24:31.700Z",
+    "createdIssueNumber": "267",
+    "publishedAt": "2022-12-09T15:08:51.610Z",
+    "created": true
+  },
+  {
+    "title": "Calculate the combination of n objects taken r at a time",
+    "description": "Write a program to calculate the combination of n objects taken r at a time\n\nCombination is a selection of objects from a group such that (unlike permutations) the order of selection does not matter. The number of combinations on n objects taken r at a time is given by the formula n!/(r!(n-r)!) = n(n-1)(n-2)...(n-r+1)/r!\n\n```\nInput  : 5, 2\nOutput : 10\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "2022-10-09T22:16:27.458Z",
+    "created": true
+  },
+  {
+    "title": "Calculate the permutation of n objects taken r at a time",
+    "description": "Write a program to calculate the permutation of n objects taken r at a time\n\nPermutation is an arrangement of objects in a particular order. The number of permutations on n objects taken r at a time is given by the formula n!/(n-r)!\n\n```\nInput  : 5, 2\nOutput : 20\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "2022-10-14T20:13:47.956Z",
+    "created": true
+  },
+  {
+    "title": "Check Alphabet",
+    "description": "Write a program to check alphabet\n\nCheck that the given character is an alphabet or not (a-z, A-Z).\r\n\r\n```\r\nInput  : a\r\nOutput : Alphabet\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T07:54:40.784Z",
+    "createdIssueNumber": "173",
+    "publishedAt": "2022-10-04T08:32:09.812Z",
+    "created": true
+  },
+  {
+    "title": "Check Armstrong Number",
+    "description": "Write a program to check armstrong number\n\nAn Armstrong number is a number that is equal to the sum of cubes of its digits.\r\n\r\n```\r\nInput  : 153\r\nOutput : Armstrong Number\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T07:04:27.863Z",
+    "createdIssueNumber": "167",
+    "publishedAt": "2022-10-03T12:58:44.434Z",
+    "created": true
+  },
+  {
+    "title": "Check Consonant",
+    "description": "Write a program to check consonant\n\nCheck if a character is a consonant.\r\n\r\n```\r\nInput  : b\r\nOutput : Consonant\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T07:53:29.025Z",
+    "createdIssueNumber": "172",
+    "publishedAt": "2022-10-03T05:48:33.715Z",
+    "created": true
+  },
+  {
+    "title": "Check Digit",
+    "description": "Write a program to check digit\n\nCheck wether given character is a digit (0-9).\r\n\r\n```\r\nInput  : 1\r\nOutput : Digit\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T07:56:34.515Z",
+    "createdIssueNumber": "174",
+    "publishedAt": "2022-10-10T16:26:40.857Z",
+    "created": true
+  },
+  {
+    "title": "Check Even or Odd number",
+    "description": "Write a program to check even or odd number\n\n```\r\nInput  : 3\r\nOutput : Odd Number\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T06:41:14.020Z",
+    "createdIssueNumber": "147",
+    "publishedAt": "2022-10-04T02:07:14.987Z",
+    "created": true
+  },
+  {
+    "title": "Check integer or float",
+    "description": "Write a program to check integer or float\n\n```\nInput  : 1\nOutput : Integer\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "2022-10-16T04:09:46.814Z",
+    "created": true
+  },
+  {
+    "title": "Check Leap Year",
+    "description": "Write a program to check leap year\n\nLeap years are years that are divisible by 4, but not by 100, unless they are also divisible by 400. For example, 1996 is a leap year, but 1900 is not. Write a function that takes a year as a parameter and returns True if the year is a leap year, False otherwise.\r\n\r\n```\r\nInput  : 2016\r\nOutput : Leap Year\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T07:51:16.431Z",
+    "createdIssueNumber": "170",
+    "publishedAt": "2022-10-12T01:53:38.110Z",
+    "created": true
+  },
+  {
+    "title": "Check Lower Case",
+    "description": "Write a program to check lower case\n\nCheck if given character is lower case (a-z).\r\n\r\n```\r\nInput  : a\r\nOutput : Lower Case\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T08:00:12.709Z",
+    "createdIssueNumber": "177",
+    "publishedAt": "2022-10-15T10:12:33.470Z",
+    "created": true
+  },
+  {
+    "title": "Check Palindrome Number",
+    "description": "Write a program to check palindrome number\n\nPalindrome numbers are the numbers for which reverse is exactly same as the original number. For example, 121 is palindrome, but 123 is not palindrome.\r\n\r\n```\r\nInput  : 121\r\nOutput : Palindrome Number\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T07:47:13.719Z",
+    "createdIssueNumber": "168",
+    "publishedAt": "2022-10-05T05:50:47.599Z",
+    "created": true
+  },
+  {
+    "title": "Check Palindrome String",
+    "description": "Write a program to check palindrome string\n\nPalindrome string is a string that is same when read from left to right and right to left. For example, \"aba\" is a palindrome string, \"abc\" is not.\r\n\r\n```\r\nInput  : abba\r\nOutput : Palindrome String\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T07:50:20.489Z",
+    "createdIssueNumber": "169",
+    "publishedAt": "2022-10-04T09:26:45.878Z",
+    "created": true
+  },
+  {
+    "title": "Check Pangram String",
+    "description": "Write a program to check pangram string\n\nA pangram is a sentence containing every letter in the English Alphabet.\r\n\r\n```\r\nInput  : The quick brown fox jumps over the lazy dog\r\nOutput : Pangram sentence\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T07:01:22.249Z",
+    "createdIssueNumber": "165",
+    "publishedAt": "2022-10-03T14:05:36.568Z",
+    "created": true
+  },
+  {
+    "title": "Check Prime Number",
+    "description": "Write a program to check prime number\n\nA prime number is a natural number greater than 1 that has no positive divisors other than 1 and itself.\r\n\r\n```\r\nInput  : 5\r\nOutput : Prime Number\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T06:57:17.847Z",
+    "createdIssueNumber": "166",
+    "publishedAt": "2022-10-04T20:28:20.408Z",
+    "created": true
+  },
+  {
+    "title": "Check Special Character",
+    "description": "Write a program to check special character\n\nCheck if given character is a special character (not a letter or a number).\r\n\r\n```\r\nInput  : @\r\nOutput : Special Character\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T07:57:38.136Z",
+    "createdIssueNumber": "175",
+    "publishedAt": "2022-10-10T18:27:07.913Z",
+    "created": true
+  },
+  {
+    "title": "Check Upper Case",
+    "description": "Write a program to check upper case\n\nCheck if the given character is upper case (A-Z).\r\n\r\n```\r\nInput  : A\r\nOutput : Upper Case\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T07:59:25.711Z",
+    "createdIssueNumber": "176",
+    "publishedAt": "2022-10-03T08:37:40.538Z",
+    "created": true
+  },
+  {
+    "title": "Check valid Date",
+    "description": "Write a program to check valid date\n\nCheck if a given date is valid or not.\n\n```\nInput  : 2019-02-29\nOutput : False\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "2022-10-13T04:12:52.851Z",
+    "created": true
+  },
+  {
+    "title": "Check Vowel",
+    "description": "Write a program to check vowel\n\nVowel check is a simple program to check whether a character is a vowel or not.\r\n\r\n```\r\nInput  : a\r\nOutput : Vowel\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T07:52:20.496Z",
+    "createdIssueNumber": "171",
+    "publishedAt": "2022-10-04T17:40:28.178Z",
+    "created": true
+  },
+  {
+    "title": "Convert a string to an integer",
+    "description": "Write a program to convert a string to an integer\n\n```\nInput  : \"123\"\nOutput : 123\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "2022-10-15T16:16:37.339Z",
+    "created": true
+  },
+  {
+    "title": "Convert a string to an integer (without using built-in functions)",
+    "description": "Write a program to convert a string to an integer (without using built-in functions)\n\n```\nInput  : \"123\"\nOutput : 123\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "2022-10-09T10:17:54.696Z",
+    "created": true
+  },
+  {
+    "title": "Convert binary to decimal",
+    "description": "Write a program to convert binary to decimal\n\nBinary is a base-2 number system. It uses only two digits: 0 and 1. The digits are called bits. A bit is the smallest unit of information in a computer. A bit can be either 0 or 1. A bit can be used to represent a single value, such as 0 or 1, or it can be used to represent a single state, such as on or off.\r\n\r\nTo convert a binary number to decimal, we can use the following algorithm:\r\n\r\n1. Multiply the first bit by 2^0.\r\n2. Multiply the second bit by 2^1.\r\n3. Multiply the third bit by 2^2.\r\n4. Multiply the fourth bit by 2^3.\r\n5. Repeat steps 3 and 4 until the last bit.\r\n6. Add the results of all the multiplications.\r\n7. The decimal number is the sum of all the multiplications.\r\n\r\n```\r\nInput  : 1010\r\nOutput : 10\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T12:25:39.755Z",
+    "createdIssueNumber": "219",
+    "publishedAt": "2022-10-05T04:01:13.806Z",
+    "created": true
+  },
+  {
+    "title": "Convert binary to hexadecimal",
+    "description": "Write a program to convert binary to hexadecimal\n\nBinary is a base-2 number system. It uses only two digits: 0 and 1. The digits are called bits. A bit is the smallest unit of information in a computer. A bit can be either 0 or 1. A bit can be used to represent a single value, such as 0 or 1, or it can be used to represent a single state, such as on or off.\r\n\r\nHexadecimal is a base-16 number system. It uses sixteen digits: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, and F. The digits are called hexits. A hexit is the smallest unit of information in a computer. A hexit can be used to represent a single value, such as 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, or F, or it can be used to represent a single state, such as on or off.\r\n\r\nTo convert a binary number to hexadecimal, we can use the following algorithm:\r\n\r\n1. Convert the binary number to decimal.\r\n2. Convert the decimal number to hexadecimal.\r\n\r\n```\r\nInput  : 1010\r\nOutput : A\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T12:32:58.049Z",
+    "createdIssueNumber": "223",
+    "publishedAt": "2022-10-02T21:25:07.670Z",
+    "created": true
+  },
+  {
+    "title": "Convert binary to octal",
+    "description": "Write a program to convert binary to octal\n\nBinary is a base-2 number system. It uses only two digits: 0 and 1. The digits are called bits. A bit is the smallest unit of information in a computer. A bit can be either 0 or 1. A bit can be used to represent a single value, such as 0 or 1, or it can be used to represent a single state, such as on or off.\r\n\r\nOctal is a base-8 number system. It uses only eight digits: 0, 1, 2, 3, 4, 5, 6, and 7. The digits are called octits. An octit is the smallest unit of information in a computer. An octit can be used to represent a single value, such as 0, 1, 2, 3, 4, 5, 6, or 7, or it can be used to represent a single state, such as on or off.\r\n\r\nTo convert a binary number to octal, we can use the following algorithm:\r\n\r\n1. Convert the binary number to decimal.\r\n2. Convert the decimal number to octal.\r\n\r\n```\r\nInput  : 1010\r\nOutput : 12\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T12:31:54.519Z",
+    "createdIssueNumber": "222",
+    "publishedAt": "2022-10-02T03:37:53.852Z",
+    "created": true
+  },
+  {
+    "title": "Convert Celsius to Fahrenheit",
+    "description": "Write a program to convert celsius to fahrenheit\n\nfahrerheit = (celsius * 9/5) + 32\r\n\r\n```\r\nInput ( C )  : -40\r\nOutput ( F ) : -40\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T06:42:37.474Z",
+    "createdIssueNumber": "148",
+    "publishedAt": "2022-10-08T08:27:42.005Z",
+    "created": true
+  },
+  {
+    "title": "Convert centimeters to feet",
+    "description": "Write a program to convert centimeters to feet\n\n1 foot = 30.48 centimeters\r\n\r\n```\r\nInput  : 152.4\r\nOutput : 5\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T13:13:05.844Z",
+    "createdIssueNumber": "255",
+    "publishedAt": "2022-10-09T01:39:43.562Z",
+    "created": true
+  },
+  {
+    "title": "Convert centimeters to inches",
+    "description": "Write a program to convert centimeters to inches\n\n1 inch = 2.54 centimeters\r\n\r\n```\r\nInput  : 12.7\r\nOutput : 5\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T13:14:01.236Z",
+    "createdIssueNumber": "257",
+    "publishedAt": "2022-10-12T06:30:15.969Z",
+    "created": true
+  },
+  {
+    "title": "Convert days to hours",
+    "description": "Write a program to convert days to hours\n\n1 day = 24 hours\r\n\r\n```\r\nInput  : 5\r\nOutput : 120\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T12:48:47.593Z",
+    "createdIssueNumber": "234",
+    "publishedAt": "2022-10-15T04:08:42.790Z",
+    "created": true
+  },
+  {
+    "title": "Convert days to minutes",
+    "description": "Write a program to convert days to minutes\n\n1 day = 24 hours = 1440 minutes\r\n\r\n```\r\nInput  : 5\r\nOutput : 7200\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T12:50:00.377Z",
+    "createdIssueNumber": "236",
+    "publishedAt": "2022-10-04T04:10:58.951Z",
+    "created": true
+  },
+  {
+    "title": "Convert days to seconds",
+    "description": "Write a program to convert days to seconds\n\n1 day = 24 hours = 1440 minutes = 86400 seconds\r\n\r\n```\r\nInput  : 5\r\nOutput : 432000\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T12:51:06.085Z",
+    "createdIssueNumber": "238",
+    "publishedAt": "2022-10-04T23:27:18.798Z",
+    "created": true
+  },
+  {
+    "title": "Convert days to weeks",
+    "description": "Write a program to convert days to weeks\n\n1 week = 7 days\r\n\r\n```\r\nInput  : 35\r\nOutput : 5\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T12:53:04.305Z",
+    "createdIssueNumber": "241",
+    "publishedAt": "2022-10-15T14:13:35.254Z",
+    "created": true
+  },
+  {
+    "title": "Convert decimal to binary",
+    "description": "Write a program to convert decimal to binary\n\nBinary is a base-2 number system. It uses only two digits: 0 and 1. The digits are called bits. A bit is the smallest unit of information in a computer. A bit can be either 0 or 1. A bit can be used to represent a single value, such as 0 or 1, or it can be used to represent a single state, such as on or off.\r\n\r\nTo convert a decimal number to binary, we can use the following algorithm:\r\n\r\n1. Divide the decimal number by 2.\r\n2. Write down the remainder.\r\n3. Divide the quotient by 2.\r\n4. Write down the remainder.\r\n5. Repeat steps 3 and 4 until the quotient is 0.\r\n6. The binary number is the sequence of remainders written in reverse order.\r\n\r\n```\r\nInput  : 10\r\nOutput : 1010\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T12:21:36.552Z",
+    "createdIssueNumber": "216",
+    "publishedAt": "2022-10-13T14:21:25.366Z",
+    "created": true
+  },
+  {
+    "title": "Convert decimal to hexadecimal",
+    "description": "Write a program to convert decimal to hexadecimal\n\nHexadecimal is a base-16 number system. It uses sixteen digits: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, and F. The digits are called hexits. A hexit is the smallest unit of information in a computer. A hexit can be used to represent a single value, such as 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, or F, or it can be used to represent a single state, such as on or off.\r\n\r\nTo convert a decimal number to hexadecimal, we can use the following algorithm:\r\n\r\n1. Divide the decimal number by 16.\r\n2. Write down the remainder.\r\n3. Divide the quotient by 16.\r\n4. Write down the remainder.\r\n5. Repeat steps 3 and 4 until the quotient is 0.\r\n6. The hexadecimal number is the sequence of remainders written in reverse order.\r\n\r\n```\r\nInput  : 10\r\nOutput : A\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T12:24:25.635Z",
+    "createdIssueNumber": "218",
+    "publishedAt": "2022-10-13T18:21:56.949Z",
+    "created": true
+  },
+  {
+    "title": "Convert decimal to octal",
+    "description": "Write a program to convert decimal to octal\n\nOctal is a base-8 number system. It uses only eight digits: 0, 1, 2, 3, 4, 5, 6, and 7. The digits are called octits. An octit is the smallest unit of information in a computer. An octit can be used to represent a single value, such as 0, 1, 2, 3, 4, 5, 6, or 7, or it can be used to represent a single state, such as on or off.\r\n\r\nTo convert a decimal number to octal, we can use the following algorithm:\r\n\r\n1. Divide the decimal number by 8.\r\n2. Write down the remainder.\r\n3. Divide the quotient by 8.\r\n4. Write down the remainder.\r\n5. Repeat steps 3 and 4 until the quotient is 0.\r\n6. The octal number is the sequence of remainders written in reverse order.\r\n\r\n```\r\nInput  : 10\r\nOutput : 12\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T12:23:20.593Z",
+    "createdIssueNumber": "217",
+    "publishedAt": "2022-10-02T23:31:41.425Z",
+    "created": true
+  },
+  {
+    "title": "Convert Fahrenheit to Celsius",
+    "description": "Write a program to convert fahrenheit to celsius\n\ncelcius = (fahrenheit - 32) * 5/9\r\n\r\n```\r\nInput ( F )  : -40\r\nOutput ( C ) : -40\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T06:43:28.759Z",
+    "createdIssueNumber": "149",
+    "publishedAt": "2022-12-09T05:14:20.446Z",
+    "created": true
+  },
+  {
+    "title": "convert fahrenheit to kelvin",
+    "description": "Write a program to convert fahrenheit to kelvin\n\n(1°F − 32) × 5/9 + 273.15 = 255.928K\r\n\r\n```\r\nInput  : 1\r\nOutput : 255.928\r\n```\n",
+    "contributor": "KyleMcIndoe",
+    "createdAt": "2023-04-20T13:31:18.853Z",
+    "createdIssueNumber": "7328",
+    "publishedAt": "2023-04-20T13:32:47.635Z",
+    "created": true
+  },
+  {
+    "title": "Convert feet to centimeters",
+    "description": "Write a program to convert feet to centimeters\n\n1 foot = 30.48 centimeters\r\n\r\n```\r\nInput  : 5\r\nOutput : 152.4\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T13:11:03.436Z",
+    "createdIssueNumber": "254",
+    "publishedAt": "2022-10-10T20:18:50.091Z",
+    "created": true
+  },
+  {
+    "title": "Convert feet to inches",
+    "description": "Write a program to convert feet to inches\n\n1 foot = 12 inches\r\n\r\n```\r\nInput  : 5\r\nOutput : 60\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T13:10:06.097Z",
+    "createdIssueNumber": "252",
+    "publishedAt": "2022-12-10T06:11:22.943Z",
+    "created": true
+  },
+  {
+    "title": "Convert feet to miles",
+    "description": "Write a program to convert feet to miles\n\n1 mile = 5280 feet\r\n\r\n```\r\nInput  : 26400\r\nOutput : 5\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T13:19:15.681Z",
+    "createdIssueNumber": "263",
+    "publishedAt": "2022-10-01T20:07:48.509Z",
+    "created": true
+  },
+  {
+    "title": "Convert hexadecimal to binary",
+    "description": "Write a program to convert hexadecimal to binary\n\nHexadecimal is a base-16 number system. It uses sixteen digits: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, and F. The digits are called hexits. A hexit is the smallest unit of information in a computer. A hexit can be used to represent a single value, such as 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, or F, or it can be used to represent a single state, such as on or off.\r\n\r\nBinary is a base-2 number system. It uses only two digits: 0 and 1. The digits are called bits. A bit is the smallest unit of information in a computer. A bit can be either 0 or 1. A bit can be used to represent a single value, such as 0 or 1, or it can be used to represent a single state, such as on or off.\r\n\r\nTo convert a hexadecimal number to binary, we can use the following algorithm:\r\n\r\n1. Convert the hexadecimal number to decimal.\r\n2. Convert the decimal number to binary.\r\n\r\n```\r\nInput  : A\r\nOutput : 1010\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T12:42:52.512Z",
+    "createdIssueNumber": "226",
+    "publishedAt": "",
+    "created": true
+  },
+  {
+    "title": "Convert hexadecimal to decimal",
+    "description": "Write a program to convert hexadecimal to decimal\n\nHexadecimal is a base-16 number system. It uses sixteen digits: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, and F. The digits are called hexits. A hexit is the smallest unit of information in a computer. A hexit can be used to represent a single value, such as 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, or F, or it can be used to represent a single state, such as on or off.\r\n\r\nTo convert a hexadecimal number to decimal, we can use the following algorithm:\r\n\r\n1. Multiply the first hexit by 16^0.\r\n2. Multiply the second hexit by 16^1.\r\n3. Multiply the third hexit by 16^2.\r\n4. Multiply the fourth hexit by 16^3.\r\n5. Repeat steps 3 and 4 until the last hexit.\r\n6. Add the results of all the multiplications.\r\n7. The decimal number is the sum of all the multiplications.\r\n\r\n```\r\nInput  : A\r\nOutput : 10\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T12:30:59.655Z",
+    "createdIssueNumber": "221",
+    "publishedAt": "2022-10-04T13:59:04.427Z",
+    "created": true
+  },
+  {
+    "title": "Convert hexadecimal to octal",
+    "description": "Write a program to convert hexadecimal to octal\n\nHexadecimal is a base-16 number system. It uses sixteen digits: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, and F. The digits are called hexits. A hexit is the smallest unit of information in a computer. A hexit can be used to represent a single value, such as 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, or F, or it can be used to represent a single state, such as on or off.\r\n\r\nOctal is a base-8 number system. It uses only eight digits: 0, 1, 2, 3, 4, 5, 6, and 7. The digits are called octits. An octit is the smallest unit of information in a computer. An octit can be used to represent a single value, such as 0, 1, 2, 3, 4, 5, 6, or 7, or it can be used to represent a single state, such as on or off.\r\n\r\nTo convert a hexadecimal number to octal, we can use the following algorithm:\r\n\r\n1. Convert the hexadecimal number to decimal.\r\n2. Convert the decimal number to octal.\r\n\r\n```\r\nInput  : A\r\nOutput : 12\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T12:43:34.797Z",
+    "createdIssueNumber": "227",
+    "publishedAt": "2022-10-04T05:45:05.014Z",
+    "created": true
+  },
+  {
+    "title": "Convert hours to days",
+    "description": "Write a program to convert hours to days\n\n1 day = 24 hours\r\n\r\n```\r\nInput  : 120\r\nOutput : 5\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T12:49:20.094Z",
+    "createdIssueNumber": "235",
+    "publishedAt": "2022-10-09T20:17:44.875Z",
+    "created": true
+  },
+  {
+    "title": "Convert hours to minutes",
+    "description": "Write a program to convert hours to minutes\n\n1 hour = 60 minutes\r\n\r\n```\r\nInput  : 5\r\nOutput : 300\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T12:46:09.363Z",
+    "createdIssueNumber": "230",
+    "publishedAt": "2022-10-16T14:13:38.554Z",
+    "created": true
+  },
+  {
+    "title": "Convert hours to seconds",
+    "description": "Write a program to convert hours to seconds\n\n1 hour = 60 minutes = 3600 seconds\r\n\r\n```\r\nInput  : 5\r\nOutput : 18000\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T12:47:26.978Z",
+    "createdIssueNumber": "232",
+    "publishedAt": "2022-10-03T09:34:29.267Z",
+    "created": true
+  },
+  {
+    "title": "Convert hours to weeks",
+    "description": "Write a program to convert hours to weeks\n\n1 week = 7 days = 168 hours\r\n\r\n```\r\nInput  : 840\r\nOutput : 5\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T12:58:26.022Z",
+    "createdIssueNumber": "243",
+    "publishedAt": "2022-10-04T11:20:05.512Z",
+    "created": true
+  },
+  {
+    "title": "Convert inches to centimeters",
+    "description": "Write a program to convert inches to centimeters\n\n1 inch = 2.54 centimeters\r\n\r\n```\r\nInput  : 5\r\nOutput : 12.7\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T13:13:28.248Z",
+    "createdIssueNumber": "256",
+    "publishedAt": "2022-10-02T10:07:34.840Z",
+    "created": true
+  },
+  {
+    "title": "Convert inches to feet",
+    "description": "Write a program to convert inches to feet\n\n1 foot = 12 inches\r\n\r\n```\r\nInput  : 60\r\nOutput : 5\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T13:10:25.408Z",
+    "createdIssueNumber": "253",
+    "publishedAt": "2022-12-10T07:08:03.560Z",
+    "created": true
+  },
+  {
+    "title": "Convert inches to miles",
+    "description": "Write a program to convert inches to miles\n\n1 mile = 63360 inches\r\n\r\n```\r\nInput  : 316800\r\nOutput : 5\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T13:20:30.861Z",
+    "createdIssueNumber": "265",
+    "publishedAt": "2022-10-03T10:32:04.787Z",
+    "created": true
+  },
+  {
+    "title": "Convert kilometers to miles",
+    "description": "Write a program to convert kilometers to miles\n\n1 mile = 1.609 kilometers\r\n\r\n```\r\nInput  : 8.04672\r\nOutput : 5\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T13:16:22.848Z",
+    "createdIssueNumber": "259",
+    "publishedAt": "2022-10-14T06:43:24.975Z",
+    "created": true
+  },
+  {
+    "title": "Convert meters to miles",
+    "description": "Write a program to convert meters to miles\n\n1 mile = 1609 meters\r\n\r\n```\r\nInput  : 8046.72\r\nOutput : 5\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T13:17:43.243Z",
+    "createdIssueNumber": "261",
+    "publishedAt": "2022-09-29T13:39:48.821Z",
+    "created": true
+  },
+  {
+    "title": "Convert miles to feet",
+    "description": "Write a program to convert miles to feet\n\n1 mile = 5280 feet\r\n\r\n```\r\nInput  : 5\r\nOutput : 26400\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T13:18:20.323Z",
+    "createdIssueNumber": "262",
+    "publishedAt": "2022-10-01T18:09:00.881Z",
+    "created": true
+  },
+  {
+    "title": "Convert miles to inches",
+    "description": "Write a program to convert miles to inches\n\n1 mile = 63360 inches\r\n\r\n```\r\nInput  : 5\r\nOutput : 316800\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T13:19:55.114Z",
+    "createdIssueNumber": "264",
+    "publishedAt": "2022-10-11T06:40:24.452Z",
+    "created": true
+  },
+  {
+    "title": "Convert miles to kilometers",
+    "description": "Write a program to convert miles to kilometers\n\n1 mile = 1.609 kilometers\r\n\r\n```\r\nInput  : 5\r\nOutput : 8.04672\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T13:15:52.112Z",
+    "createdIssueNumber": "258",
+    "publishedAt": "2022-10-03T07:34:39.558Z",
+    "created": true
+  },
+  {
+    "title": "Convert miles to meters",
+    "description": "Write a program to convert miles to meters\n\n1 mile = 1609 meters\r\n\r\n```\r\nInput  : 5\r\nOutput : 8046.72\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T13:16:54.513Z",
+    "createdIssueNumber": "260",
+    "publishedAt": "2022-10-13T10:14:36.917Z",
+    "created": true
+  },
+  {
+    "title": "Convert minutes to days",
+    "description": "Write a program to convert minutes to days\n\n1 day = 24 hours = 1440 minutes\r\n\r\n```\r\nInput  : 7200\r\nOutput : 5\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T12:50:29.602Z",
+    "createdIssueNumber": "237",
+    "publishedAt": "2022-10-15T08:16:47.047Z",
+    "created": true
+  },
+  {
+    "title": "Convert minutes to hours",
+    "description": "Write a program to convert minutes to hours\n\n1 hour = 60 minutes\r\n\r\n```\r\nInput  : 300\r\nOutput : 5\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T12:46:46.750Z",
+    "createdIssueNumber": "231",
+    "publishedAt": "2022-10-12T12:35:07.130Z",
+    "created": true
+  },
+  {
+    "title": "Convert minutes to seconds",
+    "description": "Write a program to convert minutes to seconds\n\n1 minute = 60 seconds\r\n\r\n```\r\nInput  : 5\r\nOutput : 300\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T12:44:45.276Z",
+    "createdIssueNumber": "228",
+    "publishedAt": "2022-10-04T22:24:13.976Z",
+    "created": true
+  },
+  {
+    "title": "Convert minutes to weeks",
+    "description": "Write a program to convert minutes to weeks\n\n1 week = 7 days = 168 hours = 10080 minutes\r\n\r\n```\r\nInput  : 50400\r\nOutput : 5\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T13:04:41.859Z",
+    "createdIssueNumber": "245",
+    "publishedAt": "2022-10-03T02:18:42.908Z",
+    "created": true
+  },
+  {
+    "title": "Convert octal to binary",
+    "description": "Write a program to convert octal to binary\n\nOctal is a base-8 number system. It uses only eight digits: 0, 1, 2, 3, 4, 5, 6, and 7. The digits are called octits. An octit is the smallest unit of information in a computer. An octit can be used to represent a single value, such as 0, 1, 2, 3, 4, 5, 6, or 7, or it can be used to represent a single state, such as on or off.\r\n\r\nBinary is a base-2 number system. It uses only two digits: 0 and 1. The digits are called bits. A bit is the smallest unit of information in a computer. A bit can be either 0 or 1. A bit can be used to represent a single value, such as 0 or 1, or it can be used to represent a single state, such as on or off.\r\n\r\nTo convert an octal number to binary, we can use the following algorithm:\r\n\r\n1. Convert the octal number to decimal.\r\n2. Convert the decimal number to binary.\r\n\r\n```\r\nInput  : 12\r\nOutput : 1010\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T12:34:08.570Z",
+    "createdIssueNumber": "224",
+    "publishedAt": "2022-10-16T01:17:00.243Z",
+    "created": true
+  },
+  {
+    "title": "Convert octal to decimal",
+    "description": "Write a program to convert octal to decimal\n\nOctal is a base-8 number system. It uses only eight digits: 0, 1, 2, 3, 4, 5, 6, and 7. The digits are called octits. An octit is the smallest unit of information in a computer. An octit can be used to represent a single value, such as 0, 1, 2, 3, 4, 5, 6, or 7, or it can be used to represent a single state, such as on or off.\r\n\r\nTo convert an octal number to decimal, we can use the following algorithm:\r\n\r\n1. Multiply the first octit by 8^0.\r\n2. Multiply the second octit by 8^1.\r\n3. Multiply the third octit by 8^2.\r\n4. Multiply the fourth octit by 8^3.\r\n5. Repeat steps 3 and 4 until the last octit.\r\n6. Add the results of all the multiplications.\r\n7. The decimal number is the sum of all the multiplications.\r\n\r\n```\r\nInput  : 12\r\nOutput : 10\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T12:27:33.532Z",
+    "createdIssueNumber": "220",
+    "publishedAt": "",
+    "created": true
+  },
+  {
+    "title": "Convert octal to hexadecimal",
+    "description": "Write a program to convert octal to hexadecimal\n\nOctal is a base-8 number system. It uses only eight digits: 0, 1, 2, 3, 4, 5, 6, and 7. The digits are called octits. An octit is the smallest unit of information in a computer. An octit can be used to represent a single value, such as 0, 1, 2, 3, 4, 5, 6, or 7, or it can be used to represent a single state, such as on or off.\r\n\r\nHexadecimal is a base-16 number system. It uses sixteen digits: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, and F. The digits are called hexits. A hexit is the smallest unit of information in a computer. A hexit can be used to represent a single value, such as 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, or F, or it can be used to represent a single state, such as on or off.\r\n\r\nTo convert an octal number to hexadecimal, we can use the following algorithm:\r\n\r\n1. Convert the octal number to decimal.\r\n2. Convert the decimal number to hexadecimal.\r\n\r\n```\r\nInput  : 12\r\nOutput : A\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T12:34:55.558Z",
+    "createdIssueNumber": "225",
+    "publishedAt": "2022-10-01T23:08:07.799Z",
+    "created": true
+  },
+  {
+    "title": "Convert Paise to Rupees",
+    "description": "Write a program to convert paise to rupees\n\n```\r\nInput  ( Ps ) : 100\r\nOutput ( Rs ) : 1\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T06:46:03.074Z",
+    "createdIssueNumber": "152",
+    "publishedAt": "2022-10-02T16:09:44.376Z",
+    "created": true
+  },
+  {
+    "title": "convert pound to kilogram",
+    "description": "Write a program to convert pound to kilogram\n\n1 pound = 0.453592 kg\r\n\r\n```\r\nInput  : 1\r\nOutput : 0.453592\r\n```\n",
+    "contributor": "Aranarora",
+    "createdAt": "2023-03-24T07:09:34.900Z",
+    "createdIssueNumber": "6863",
+    "publishedAt": "2023-03-24T07:11:16.361Z",
+    "created": true
+  },
+  {
+    "title": "Convert Rupees to Paise",
+    "description": "Write a program to convert rupees to paise\n\n```\r\nInput  ( Rs ) : 1\r\nOutput ( Ps ) : 100\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T06:45:26.153Z",
+    "createdIssueNumber": "151",
+    "publishedAt": "2022-12-09T12:16:17.867Z",
+    "created": true
+  },
+  {
+    "title": "Convert seconds to days",
+    "description": "Write a program to convert seconds to days\n\n1 day = 24 hours = 1440 minutes = 86400 seconds\r\n\r\n```\r\nInput  : 432000\r\nOutput : 5\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T12:51:47.443Z",
+    "createdIssueNumber": "239",
+    "publishedAt": "2022-10-12T22:17:13.026Z",
+    "created": true
+  },
+  {
+    "title": "Convert seconds to hours",
+    "description": "Write a program to convert seconds to hours\n\n1 hour = 60 minutes = 3600 seconds\r\n\r\n```\r\nInput  : 18000\r\nOutput : 5\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T12:48:14.802Z",
+    "createdIssueNumber": "233",
+    "publishedAt": "2022-10-13T06:37:25.264Z",
+    "created": true
+  },
+  {
+    "title": "Convert seconds to minutes",
+    "description": "Write a program to convert seconds to minutes\n\n1 minute = 60 seconds\r\n\r\n```\r\nInput  : 300\r\nOutput : 5\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T12:45:20.619Z",
+    "createdIssueNumber": "229",
+    "publishedAt": "2022-10-01T19:08:15.032Z",
+    "created": true
+  },
+  {
+    "title": "Convert seconds to weeks",
+    "description": "Write a program to convert seconds to weeks\n\n1 week = 7 days = 168 hours = 10080 minutes = 604800 seconds\r\n\r\n```\r\nInput  : 3024000\r\nOutput : 5\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T13:06:03.951Z",
+    "createdIssueNumber": "247",
+    "publishedAt": "2022-10-12T20:19:23.328Z",
+    "created": true
+  },
+  {
+    "title": "Convert string to alternatingcase",
+    "description": "Write a program to convert string to alternatingcase\n\nAlternatingcase is a style of writing in which each letter is converted to its opposite case.\n\n```\nInput  : \"hello world\"\nOutput : \"hElLo WoRlD\"\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "2022-12-09T16:12:12.945Z",
+    "created": true
+  },
+  {
+    "title": "Convert string to camelcase",
+    "description": "Write a program to convert string to camelcase\n\nCamelcase is a style of writing in which the first letter of each word is capitalized except the first word.\n\n```\nInput  : \"hello world\"\nOutput : \"helloWorld\"\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "2022-10-11T16:27:14.908Z",
+    "created": true
+  },
+  {
+    "title": "Convert string to consonantcase",
+    "description": "Write a program to convert string to consonantcase\n\nConsonantcase is a style of writing in which all consonants are converted to uppercase and all vowels are converted to lowercase.\n\n```\nInput  : \"hello world\"\nOutput : \"HELlo WORLD\"\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "2022-12-09T08:11:55.976Z",
+    "created": true
+  },
+  {
+    "title": "Convert string to constantcase",
+    "description": "Write a program to convert string to constantcase\n\nConstantcase is a style of writing in which all letters are uppercase and spaces are replaced with underscores.\n\n```\nInput  : \"hello world\"\nOutput : \"HELLO_WORLD\"\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "2022-10-14T01:20:15.145Z",
+    "created": true
+  },
+  {
+    "title": "Convert string to dotcase",
+    "description": "Write a program to convert string to dotcase\n\nDotcase is a style of writing in which all letters are lowercase and spaces are replaced with periods.\n\n```\nInput  : \"hello world\"\nOutput : \"hello.world\"\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "2022-10-09T06:24:06.387Z",
+    "created": true
+  },
+  {
+    "title": "Convert string to kebabcase",
+    "description": "Write a program to convert string to kebabcase\n\nKebabcase is a style of writing in which all letters are lowercase and spaces are replaced with hyphens.\n\n```\nInput  : \"hello world\"\nOutput : \"hello-world\"\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "2022-10-09T08:20:58.754Z",
+    "created": true
+  },
+  {
+    "title": "Convert string to lowercase",
+    "description": "Write a program to convert string to lowercase\n\n```\nInput  : \"Hello World\"\nOutput : \"hello world\"\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "2022-10-10T01:45:56.068Z",
+    "created": true
+  },
+  {
+    "title": "Convert string to pascalcase",
+    "description": "Write a program to convert string to pascalcase\n\nPascalcase is a style of writing in which the first letter of each word is capitalized.\n\n```\nInput  : \"hello world\"\nOutput : \"HelloWorld\"\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "2022-10-14T12:26:59.358Z",
+    "created": true
+  },
+  {
+    "title": "Convert string to pathcase",
+    "description": "Write a program to convert string to pathcase\n\nPathcase is a style of writing in which all letters are lowercase and spaces are replaced with forward slashes.\n\n```\nInput  : \"hello world\"\nOutput : \"hello/world\"\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "2022-10-10T06:44:11.800Z",
+    "created": true
+  },
+  {
+    "title": "Convert string to reversecase",
+    "description": "Write a program to convert string to reversecase\n\nReversecase is a style of writing in which all lowercase letters are converted to uppercase and all uppercase letters are converted to lowercase.\n\n```\nInput  : \"hello world\"\nOutput : \"HELLO WORLD\"\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "2022-12-09T09:09:04.669Z",
+    "created": true
+  },
+  {
+    "title": "Convert string to sentencecase",
+    "description": "Write a program to convert string to sentencecase\n\nSentencecase is a style of writing in which the first letter of the first word is capitalized.\n\n```\nInput  : \"hello world\"\nOutput : \"Hello world\"\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "2022-12-09T05:23:33.885Z",
+    "created": true
+  },
+  {
+    "title": "Convert string to snakecase",
+    "description": "Write a program to convert string to snakecase\n\nSnakecase is a style of writing in which all letters are lowercase and spaces are replaced with underscores.\n\n```\nInput  : \"hello world\"\nOutput : \"hello_world\"\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "2022-10-11T08:25:54.405Z",
+    "created": true
+  },
+  {
+    "title": "Convert string to titlecase",
+    "description": "Write a program to convert string to titlecase\n\nTitlecase is a style of writing in which the first letter of each word is capitalized.\n\n```\nInput  : \"hello world\"\nOutput : \"Hello World\"\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "2022-10-09T12:30:43.600Z",
+    "created": true
+  },
+  {
+    "title": "Convert string to uppercase",
+    "description": "Write a program to convert string to uppercase\n\n```\nInput  : \"Hello World\"\nOutput : \"HELLO WORLD\"\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "2022-10-12T14:34:59.559Z",
+    "created": true
+  },
+  {
+    "title": "Convert string to vowelcase",
+    "description": "Write a program to convert string to vowelcase\n\nVowelcase is a style of writing in which all vowels are converted to uppercase and all consonants are converted to lowercase.\n\n```\nInput  : \"hello world\"\nOutput : \"heLLO worLd\"\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "2022-12-09T04:02:11.615Z",
+    "created": true
+  },
+  {
+    "title": "Convert time from 12-hour to 24-hour format",
+    "description": "Write a program to convert time from 12-hour to 24-hour format\n\n```\nInput  : 12:05:45PM\nOutput : 12:05:45\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "2022-10-13T12:25:49.639Z",
+    "created": true
+  },
+  {
+    "title": "Convert time from 24-hour to 12-hour format",
+    "description": "Write a program to convert time from 24-hour to 12-hour format\n\n```\nInput  : 12:05:45\nOutput : 12:05:45PM\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "2022-10-15T06:24:02.466Z",
+    "created": true
+  },
+  {
+    "title": "Convert weeks to days",
+    "description": "Write a program to convert weeks to days\n\n1 week = 7 days\r\n\r\n```\r\nInput  : 5\r\nOutput : 35\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T12:52:24.104Z",
+    "createdIssueNumber": "240",
+    "publishedAt": "2022-12-10T02:09:55.769Z",
+    "created": true
+  },
+  {
+    "title": "Convert weeks to hours",
+    "description": "Write a program to convert weeks to hours\n\n1 week = 7 days = 168 hours\r\n\r\n```\r\nInput  : 5\r\nOutput : 840\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T12:57:54.488Z",
+    "createdIssueNumber": "242",
+    "publishedAt": "2022-10-04T06:35:48.498Z",
+    "created": true
+  },
+  {
+    "title": "Convert weeks to minutes",
+    "description": "Write a program to convert weeks to minutes\n\n1 week = 7 days = 168 hours = 10080 minutes\r\n\r\n```\r\nInput  : 5\r\nOutput : 50400\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T13:04:06.696Z",
+    "createdIssueNumber": "244",
+    "publishedAt": "2022-10-03T06:45:46.716Z",
+    "created": true
+  },
+  {
+    "title": "Convert weeks to seconds",
+    "description": "Write a program to convert weeks to seconds\n\n1 week = 7 days = 168 hours = 10080 minutes = 604800 seconds\r\n\r\n```\r\nInput  : 5\r\nOutput : 3024000\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T13:05:15.975Z",
+    "createdIssueNumber": "246",
+    "publishedAt": "2022-10-11T01:27:02.839Z",
+    "created": true
+  },
+  {
+    "title": "Cylindrically rotate a matrix by 90 degrees",
+    "description": "Write a program to cylindrically rotate a matrix by 90 degrees\n\n```\nInput  :\n1 2 3\n4 5 6\n7 8 9\n\nOutput :\n7 4 1\n8 5 2\n9 6 3\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "2022-12-09T22:08:41.275Z",
+    "created": true
+  },
+  {
+    "title": "Divide two numbers",
+    "description": "Write a program to divide two numbers\n\n```\r\nInput  : 2 4\r\nOutput : 0.5\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-28T03:32:54.411Z",
+    "createdIssueNumber": "83",
+    "publishedAt": "2022-09-28T09:30:59.258Z",
+    "created": true
+  },
+  {
+    "title": "Find area of a circle",
+    "description": "Write a program to find area of a circle\n\nArea of circle = π × `Radius`^2\r\n\r\n```\r\nRadius : 2\r\n\r\nArea : 12.566370614359172\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T06:51:14.286Z",
+    "createdIssueNumber": "157",
+    "publishedAt": "2022-10-02T12:13:42.379Z",
+    "created": true
+  },
+  {
+    "title": "Find area of a cube",
+    "description": "Write a program to find area of a cube\n\nArea of cube = 6 × `Side`^2\r\n\r\n```\r\nSide : 2\r\n\r\nArea : 24\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T06:52:29.859Z",
+    "createdIssueNumber": "159",
+    "publishedAt": "2022-10-11T18:23:20.340Z",
+    "created": true
+  },
+  {
+    "title": "Find area of a cuboid",
+    "description": "Write a program to find area of a cuboid\n\nArea of cuboid = 2 × (`Length` × `Width` + `Length` × `Height` + `Width` × `Height`)\r\n\r\n```\r\nLength : 2\r\nWidth  : 3\r\nHeight : 4\r\n\r\nArea : 52\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T06:52:55.954Z",
+    "createdIssueNumber": "160",
+    "publishedAt": "2022-10-09T16:22:49.654Z",
+    "created": true
+  },
+  {
+    "title": "Find area of a rectangle",
+    "description": "Write a program to find area of a rectangle\n\nArea of rectangle = `Length` × `Width`\r\n\r\n```\r\nLength : 2\r\nWidth  : 3\r\n\r\nArea : 6\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T06:48:21.795Z",
+    "createdIssueNumber": "155",
+    "publishedAt": "2022-10-09T04:27:54.678Z",
+    "created": true
+  },
+  {
+    "title": "Find area of a right angled triangle",
+    "description": "Write a program to find area of a right angled triangle\n\nArea of right angled triangle = 0.5 × `Base` × `Height`\r\n\r\n```\r\nBase   : 2\r\nHeight : 3\r\n\r\nArea : 3\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T06:50:41.454Z",
+    "createdIssueNumber": "156",
+    "publishedAt": "2022-10-02T14:08:30.183Z",
+    "created": true
+  },
+  {
+    "title": "Find area of a square",
+    "description": "Write a program to find area of a square\n\nArea of square = `Side`^2\r\n\r\n```\r\nSide : 2\r\n\r\nArea : 4\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T06:51:53.695Z",
+    "createdIssueNumber": "158",
+    "publishedAt": "2022-10-01T22:07:07.006Z",
+    "created": true
+  },
+  {
+    "title": "Find average of digits of a number",
+    "description": "Write a program to find average of digits of a number\n\nAverage of digits of a number is the sum of all digits divided by the number of digits.\r\n\r\n```\r\nInput  : 123\r\nOutput : 2\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T08:03:24.306Z",
+    "createdIssueNumber": "180",
+    "publishedAt": "2022-10-11T20:20:03.995Z",
+    "created": true
+  },
+  {
+    "title": "Find average of digits of a number by recursion",
+    "description": "Write a program to find average of digits of a number by recursion\n\nAverage of digits of a number is the sum of digits of the number divided by the number of digits in the number. For example, the average of digits of 123 is 6. The sum of digits of 123 is 6 and the number of digits in 123 is 3. So, the average of digits of 123 is 6/3 = 2.\r\n\r\n```\r\nInput  : 123\r\nOutput : 2\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T08:04:51.344Z",
+    "createdIssueNumber": "181",
+    "publishedAt": "2022-12-09T18:11:13.874Z",
+    "created": true
+  },
+  {
+    "title": "Find average of numbers",
+    "description": "Write a program to find average of numbers\n\nAverage of numbers is the sum of all numbers divided by the number of numbers.\r\n\r\n```\r\nInput  : 1 2 3 4 5\r\nOutput : 3\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T08:21:00.873Z",
+    "createdIssueNumber": "193",
+    "publishedAt": "2022-10-04T21:21:26.773Z",
+    "created": true
+  },
+  {
+    "title": "Find average of numbers by recursion",
+    "description": "Write a program to find average of numbers by recursion\n\nAverage of numbers is the sum of all numbers divided by the number of numbers. For example, the average of 1, 2, 3, 4, 5 is 3. The average of 1, 2, 3, 4, 5, 6 is 3.5.\r\n\r\nAverage of numbers can be calculated by recursion. The average of numbers is the sum of the first number and the average of the rest of the numbers. The average of the rest of the numbers is the sum of the second number and the average of the rest of the numbers. The average of the rest of the numbers is the sum of the third number and the average of the rest of the numbers. And so on.\r\n\r\n```\r\nInput  : 1 2 3 4 5\r\nOutput : 3\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T08:22:24.149Z",
+    "createdIssueNumber": "194",
+    "publishedAt": "2022-10-16T12:22:51.709Z",
+    "created": true
+  },
+  {
+    "title": "Find Cube of a number",
+    "description": "Write a program to find cube of a number\n\n```\r\nInput  : 2\r\nOutput : 8\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-27T21:43:39.842Z",
+    "createdIssueNumber": "41",
+    "publishedAt": "2022-09-28T09:35:46.495Z",
+    "created": true
+  },
+  {
+    "title": "Find cube root of a number",
+    "description": "Write a program to find cube root of a number\n\n```\nInput  : 27\nOutput : 3\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "2022-10-14T22:12:13.077Z",
+    "created": true
+  },
+  {
+    "title": "Find Digital Root of a number",
+    "description": "Write a program to find digital root of a number\n\nDigital root of a number is the recursive sum of its digits until we get a single digit number.\r\n\r\n```\r\nInput  : 1234\r\nOutput : 1\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T13:22:50.941Z",
+    "createdIssueNumber": "266",
+    "publishedAt": "2022-10-11T04:09:19.551Z",
+    "created": true
+  },
+  {
+    "title": "Find factorial of a number",
+    "description": "Write a program to find factorial of a number\n\nFactorial of N = N *(N-1)* (N-2) *...* 1\r\n\r\n```\r\nInput  : 5\r\nOutput : 120\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T06:40:07.478Z",
+    "createdIssueNumber": "146",
+    "publishedAt": "2022-10-11T14:29:15.817Z",
+    "created": true
+  },
+  {
+    "title": "Find factorial of a number by recursion",
+    "description": "Write a program to find factorial of a number by recursion\n\nFactorial of a number is the product of all the numbers from 1 to that number. For example, factorial of 5 is 5\\*4\\*3\\*2\\*1 = 120.\r\n\r\n```\r\nInput  : 5\r\nOutput : 120\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T11:36:37.409Z",
+    "createdIssueNumber": "196",
+    "publishedAt": "2022-10-02T15:07:26.925Z",
+    "created": true
+  },
+  {
+    "title": "Find GCD of two numbers",
+    "description": "Write a program to find gcd of two numbers\n\nGCD (Greatest Common Divisor) of two numbers is the largest number that divides both of them. A simple way to find GCD is to factorize both numbers and multiply common factors.\r\n\r\n```\r\nInput  : 12 18\r\nOutput : 6\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T08:13:29.945Z",
+    "createdIssueNumber": "186",
+    "publishedAt": "2022-10-10T12:37:57.479Z",
+    "created": true
+  },
+  {
+    "title": "Find GCD of two numbers by recursion",
+    "description": "Write a program to find gcd of two numbers by recursion\n\nGCD (Greatest Common Divisor) of two numbers is the largest number that divides both of them. A simple way to find GCD is to factorize both numbers and multiply common factors.\r\n\r\n```\r\nInput  : 12 18\r\nOutput : 6\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T08:15:35.450Z",
+    "createdIssueNumber": "188",
+    "publishedAt": "2022-12-09T10:09:45.404Z",
+    "created": true
+  },
+  {
+    "title": "Find largest and smallest numbers in an array",
+    "description": "Write a program to find largest and smallest numbers in an array\n\n```\nInput  : [1, 2, 3, 4, 5]\nOutput : 5, 1\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "2022-10-08T01:49:30.293Z",
+    "created": true
+  },
+  {
+    "title": "Find largest number in an array",
+    "description": "Write a program to find largest number in an array\n\n```\nInput  : [1, 2, 3, 4, 5]\nOutput : 5\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "2022-10-10T14:36:45.111Z",
+    "created": true
+  },
+  {
+    "title": "Find LCM of two numbers",
+    "description": "Write a program to find lcm of two numbers\n\nLCM (Least Common Multiple) of two numbers is the smallest number which can be divided by both numbers. For example, the LCM of 15 and 20 is 60 and LCM of 10 and 15 is 30.\r\n\r\n```\r\nInput  : 12 18\r\nOutput : 36\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T08:14:50.215Z",
+    "createdIssueNumber": "187",
+    "publishedAt": "2022-10-03T11:25:11.588Z",
+    "created": true
+  },
+  {
+    "title": "Find LCM of two numbers by recursion",
+    "description": "Write a program to find lcm of two numbers by recursion\n\nLCM (Least Common Multiple) of two numbers is the smallest number that can be divided by both numbers. For example, the LCM of 15 and 20 is 60 and LCM of 10 and 15 is 30.\r\n\r\n```\r\nInput  : 12 18\r\nOutput : 36\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T08:16:30.708Z",
+    "createdIssueNumber": "189",
+    "publishedAt": "2022-10-01T21:06:35.447Z",
+    "created": true
+  },
+  {
+    "title": "Find length of a string",
+    "description": "Write a program to find length of a string\n\n```\r\nInput  : abcd\r\nOutput : 4\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T06:44:31.887Z",
+    "createdIssueNumber": "150",
+    "publishedAt": "2022-12-10T03:09:20.949Z",
+    "created": true
+  },
+  {
+    "title": "Find maximum of n numbers",
+    "description": "Write a program to find maximum of n numbers\n\n```\r\nInput  : 10 20 30 40 50\r\nOutput : 50\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T13:32:26.150Z",
+    "createdIssueNumber": "275",
+    "publishedAt": "2022-10-02T11:06:18.585Z",
+    "created": true
+  },
+  {
+    "title": "Find minimum of n numbers",
+    "description": "Write a program to find minimum of n numbers\n\n```\r\nInput  : 10 20 30 40 50\r\nOutput : 10\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T13:32:54.779Z",
+    "createdIssueNumber": "276",
+    "publishedAt": "2022-10-13T08:17:26.095Z",
+    "created": true
+  },
+  {
+    "title": "Find negative of a number",
+    "description": "Write a program to find negative of a number\n\n```\r\nInput  : 5\r\nOutput : -5\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T06:47:49.757Z",
+    "createdIssueNumber": "154",
+    "publishedAt": "2022-10-04T19:24:06.206Z",
+    "created": true
+  },
+  {
+    "title": "Find perimeter of a rectangle",
+    "description": "Write a program to find perimeter of a rectangle\n\nPerimeter of rectangle = 2 × (`Length` + `Width`)\r\n\r\n```\r\nLength : 2\r\nWidth  : 3\r\n\r\nPerimeter : 10\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T06:53:32.599Z",
+    "createdIssueNumber": "161",
+    "publishedAt": "2022-10-04T16:36:28.186Z",
+    "created": true
+  },
+  {
+    "title": "Find perimeter of a square",
+    "description": "Write a program to find perimeter of a square\n\nPerimeter of square = 4 × `Side`\r\n\r\n```\r\nSide : 2\r\n\r\nPerimeter : 8\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T06:54:46.263Z",
+    "createdIssueNumber": "162",
+    "publishedAt": "2022-10-15T01:13:44.622Z",
+    "created": true
+  },
+  {
+    "title": "Find power of a number",
+    "description": "Write a program to find power of a number\n\nPower of a number is the result of multiplying a number by itself a certain number of times. For example, 2^3 = 2 * 2 * 2 = 8. The number 2 is the base and 3 is the exponent.\r\n\r\n```\r\nInput  : 2 3\r\nOutput : 8\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T08:17:53.554Z",
+    "createdIssueNumber": "190",
+    "publishedAt": "2022-12-09T06:12:23.638Z",
+    "created": true
+  },
+  {
+    "title": "Find power of a number by recursion",
+    "description": "Write a program to find power of a number by recursion\n\nPower of a number is calculated by multiplying the number by itself for the given number of times. For example, 2^3 = 2 * 2 * 2 = 8.\r\n\r\nPower of a number can be calculated by recursion. The formula is:\r\n\r\n```math\r\nx^n = x * x^{n-1}\r\n```\r\n\r\n```\r\nInput  : 2 3\r\nOutput : 8\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T08:19:25.769Z",
+    "createdIssueNumber": "191",
+    "publishedAt": "2022-10-02T05:02:57.205Z",
+    "created": true
+  },
+  {
+    "title": "find roots of quadratic equation",
+    "description": "Write a program to find roots of quadratic equation\n\nUse the quadratic formula to find the roots of the quadratic equation\r\n\r\nx = $\\(-b &plusmn \\sqrt\\(b^2 - 4ac\\)\\)/2a$\r\n\r\nThe input will be the coefficients of $x^2$, $x$, and the constant $c$.\r\n\r\n```\r\nInput  : 1 2 1\r\nOutput : -1 -1\r\n```\n",
+    "contributor": "PavanKumarCB",
+    "createdAt": "2023-05-01T10:52:57.722Z",
+    "createdIssueNumber": "7464",
+    "publishedAt": "2023-05-01T10:53:47.972Z",
+    "created": true
+  },
+  {
+    "title": "Find second largest number in an array",
+    "description": "Write a program to find second largest number in an array\n\n```\nInput  : [1, 2, 3, 4, 5]\nOutput : 4\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "2022-10-12T16:32:33.089Z",
+    "created": true
+  },
+  {
+    "title": "Find second smallest number in an array",
+    "description": "Write a program to find second smallest number in an array\n\n```\nInput  : [1, 2, 3, 4, 5]\nOutput : 2\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "2022-10-15T22:11:47.044Z",
+    "created": true
+  },
+  {
+    "title": "Find smallest element in a matrix",
+    "description": "Write a program to find smallest element in a matrix\n\n```\r\nInput :\r\n4 7 3\r\n9 4 2\r\n0 6 4\r\n\r\nOutput : 0\r\n```\n",
+    "contributor": "ShubhraSuman",
+    "createdAt": "2022-12-09T03:52:32.511Z",
+    "createdIssueNumber": "2882",
+    "publishedAt": "2022-12-09T07:08:16.613Z",
+    "created": true
+  },
+  {
+    "title": "Find smallest number in an array",
+    "description": "Write a program to find smallest number in an array\n\n```\nInput  : [1, 2, 3, 4, 5]\nOutput : 1\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "2022-10-13T22:15:05.169Z",
+    "created": true
+  },
+  {
+    "title": "Find square of a number",
+    "description": "Write a program to find square of a number\n\n```\r\nInput  : 5\r\nOutput : 25\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-27T21:31:25.340Z",
+    "createdIssueNumber": "23",
+    "publishedAt": "2022-09-27T21:44:26.893Z",
+    "created": true
+  },
+  {
+    "title": "Find square root of a number",
+    "description": "Write a program to find square root of a number\n\nSquare root of a number is the number that when multiplied by itself gives the original number. For example, square root of 4 is 2 because 2 * 2 = 4. Similarly, square root of 9 is 3 because 3 * 3 = 9.\r\n\r\n```\r\nInput  : 4\r\nOutput : 2\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T08:20:10.549Z",
+    "createdIssueNumber": "192",
+    "publishedAt": "2022-10-12T18:25:48.262Z",
+    "created": true
+  },
+  {
+    "title": "Find sum of AP series",
+    "description": "Write a program to find sum of ap series\n\nAn arithmetic progression (AP) is a sequence of numbers such that the difference of any two consecutive terms is a constant. The nth term of an AP is given by the formula a<sub>n</sub> = a<sub>1</sub> + (n-1)d where a<sub>1</sub> is the first term and d is the common difference.\n\n```\nInput  : 2, 5, 3\nOutput : 20\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "2022-10-15T12:23:03.721Z",
+    "created": true
+  },
+  {
+    "title": "Find sum of cubes of numbers",
+    "description": "Write a program to find sum of cubes of numbers\n\nSuppose you have a list of numbers, and you want to find the sum of the cubes of those numbers. For example, if you have the list `[1, 2, 3]`, you want to find the sum of the cubes of those numbers, which is `1^3 + 2^3 + 3^3 = 36`.\r\n\r\n```\r\nInput  : 1 2 3 4 5\r\nOutput : 225\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T11:41:02.547Z",
+    "createdIssueNumber": "201",
+    "publishedAt": "2022-10-02T17:16:53.170Z",
+    "created": true
+  },
+  {
+    "title": "Find sum of cubes of numbers by recursion",
+    "description": "Write a program to find sum of cubes of numbers by recursion\n\n```\r\nInput  : 1 2 3 4 5\r\nOutput : 225\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T12:07:01.313Z",
+    "createdIssueNumber": "202",
+    "publishedAt": "2022-10-04T18:35:44.602Z",
+    "created": true
+  },
+  {
+    "title": "Find sum of digits of a number",
+    "description": "Write a program to find sum of digits of a number\n\nSuppose you have a number `n` and you want to find the sum of its digits. For example, if `n = 123`, then the sum of its digits is `1 + 2 + 3 = 6`.\r\n\r\n```\r\nInput  : 123\r\nOutput : 6\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T08:01:18.688Z",
+    "createdIssueNumber": "178",
+    "publishedAt": "2022-12-09T20:09:28.196Z",
+    "created": true
+  },
+  {
+    "title": "Find sum of digits of a number by recursion",
+    "description": "Write a program to find sum of digits of a number by recursion\n\nSuppose we have a number `n` and we want to find the sum of its digits. For example, if `n = 123`, then the sum of its digits is `1 + 2 + 3 = 6`.\r\n\r\nRecursion is a method of solving a problem where the solution depends on solutions to smaller instances of the same problem. In this case, we can use recursion to find the sum of digits of a number.\r\n\r\n```\r\nInput  : 123\r\nOutput : 6\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T08:02:32.240Z",
+    "createdIssueNumber": "179",
+    "publishedAt": "2022-10-02T13:29:48.017Z",
+    "created": true
+  },
+  {
+    "title": "Find sum of GP series",
+    "description": "Write a program to find sum of gp series\n\nA geometric progression (GP) is a sequence of numbers where each term after the first is found by multiplying the previous one by a fixed, non-zero number called the common ratio. The nth term of a GP is given by the formula a<sub>n</sub> = a<sub>1</sub>r<sup>n-1</sup> where a<sub>1</sub> is the first term and r is the common ratio.\n\n```\nInput  : 2, 3, 3\nOutput : 54\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "2022-12-09T05:07:40.157Z",
+    "created": true
+  },
+  {
+    "title": "Find sum of n natural numbers",
+    "description": "Write a program to find sum of n natural numbers\n\n```\r\nInput  : 5\r\nOutput : 15\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T12:09:41.024Z",
+    "createdIssueNumber": "203",
+    "publishedAt": "2022-10-04T10:25:55.301Z",
+    "created": true
+  },
+  {
+    "title": "Find sum of n natural numbers by recursion",
+    "description": "Write a program to find sum of n natural numbers by recursion\n\n```\r\nInput  : 5\r\nOutput : 15\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T12:10:22.837Z",
+    "createdIssueNumber": "204",
+    "publishedAt": "2022-10-10T10:17:51.658Z",
+    "created": true
+  },
+  {
+    "title": "Find sum of n natural numbers using formula",
+    "description": "Write a program to find sum of n natural numbers using formula\n\nformula: n(n+1)/2\r\n\r\n```\r\nInput  : 5\r\nOutput : 15\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T12:11:10.067Z",
+    "createdIssueNumber": "205",
+    "publishedAt": "2022-12-09T17:08:41.542Z",
+    "created": true
+  },
+  {
+    "title": "Find sum of numbers",
+    "description": "Write a program to find sum of numbers\n\n```\r\nInput  : 1 2 3 4 5\r\nOutput : 15\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T11:37:50.259Z",
+    "createdIssueNumber": "197",
+    "publishedAt": "2022-10-02T22:27:24.615Z",
+    "created": true
+  },
+  {
+    "title": "Find sum of numbers by recursion",
+    "description": "Write a program to find sum of numbers by recursion\n\n```\r\nInput  : 1 2 3 4 5\r\nOutput : 15\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T11:38:26.588Z",
+    "createdIssueNumber": "198",
+    "publishedAt": "2022-10-11T22:17:35.051Z",
+    "created": true
+  },
+  {
+    "title": "Find sum of squares of numbers",
+    "description": "Write a program to find sum of squares of numbers\n\nSuppose you have a list of numbers, and you want to find the sum of the squares of those numbers. For example, if you have the list `[1, 2, 3]`, you want to find the sum of the squares of those numbers, which is `1^2 + 2^2 + 3^2 = 14`.\r\n\r\n```\r\nInput  : 1 2 3 4 5\r\nOutput : 55\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T11:39:27.599Z",
+    "createdIssueNumber": "199",
+    "publishedAt": "2022-12-09T13:16:41.475Z",
+    "created": true
+  },
+  {
+    "title": "Find sum of squares of numbers by recursion",
+    "description": "Write a program to find sum of squares of numbers by recursion\n\n```\r\nInput  : 1 2 3 4 5\r\nOutput : 55\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T11:40:12.361Z",
+    "createdIssueNumber": "200",
+    "publishedAt": "2022-10-02T00:52:18.572Z",
+    "created": true
+  },
+  {
+    "title": "Find surface area of a cone",
+    "description": "Write a program to find surface area of a cone\n\nSurface area of cone = π × `Radius` × (`Radius` + `Slant Height`)\r\n\r\n```\r\nRadius       : 2\r\nSlant Height : 3\r\n\r\nSurface area : 50.26548245743669\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T12:17:07.223Z",
+    "createdIssueNumber": "213",
+    "publishedAt": "2022-10-16T08:15:54.907Z",
+    "created": true
+  },
+  {
+    "title": "Find surface area of a cube",
+    "description": "Write a program to find surface area of a cube\n\nSurface area of cube = 6 × `Side`^2\r\n\r\n```\r\nSide : 2\r\n\r\nSurface area : 24\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T12:18:29.036Z",
+    "createdIssueNumber": "215",
+    "publishedAt": "2022-10-05T02:06:39.508Z",
+    "created": true
+  },
+  {
+    "title": "Find surface area of a cuboid",
+    "description": "Write a program to find surface area of a cuboid\n\nSurface area of cuboid = 2 × (`Length` × `Width` + `Length` × `Height` + `Width` × `Height`)\r\n\r\n```\r\nLength : 2\r\nWidth  : 3\r\nHeight : 4\r\n\r\nSurface area : 52\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T12:17:42.829Z",
+    "createdIssueNumber": "214",
+    "publishedAt": "2022-10-15T20:13:04.746Z",
+    "created": true
+  },
+  {
+    "title": "Find surface area of a cylinder",
+    "description": "Write a program to find surface area of a cylinder\n\nSurface area of cylinder = 2 × π × `Radius` × `Height`\r\n\r\n```\r\nRadius : 2\r\nHeight : 3\r\n\r\nSurface area : 62.83185307179586\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T12:16:37.404Z",
+    "createdIssueNumber": "212",
+    "publishedAt": "2022-12-09T05:17:53.039Z",
+    "created": true
+  },
+  {
+    "title": "Find surface area of a sphere",
+    "description": "Write a program to find surface area of a sphere\n\nSurface area of sphere = 4 × π × `Radius`^2\r\n\r\n```\r\nRadius : 2\r\n\r\nSurface area : 50.26548245743669\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T12:15:26.705Z",
+    "createdIssueNumber": "211",
+    "publishedAt": "2022-10-10T22:18:20.765Z",
+    "created": true
+  },
+  {
+    "title": "Find the adjoint of a matrix",
+    "description": "Write a program to find the adjoint of a matrix\n\nThe adjoint of a square matrix A is the transpose of the matrix of cofactors of A. The adjoint of a matrix A is denoted as A<sup>\\*</sup>.\n\n```\nInput  :\n1 2 3\n4 5 6\n7 8 9\n\nOutput :\n[[-3, 6, -3], [6, -12, 6], [-3, 6, -3]]\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "2022-10-14T08:19:08.301Z",
+    "created": true
+  },
+  {
+    "title": "Find the average of all numbers in an array",
+    "description": "Write a program to find the average of all numbers in an array\n\n```\nInput  : [1, 2, 3, 4, 5]\nOutput : 3\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "2022-12-09T03:53:43.949Z",
+    "created": true
+  },
+  {
+    "title": "Find the cofactor of a matrix",
+    "description": "Write a program to find the cofactor of a matrix\n\nThe cofactor of an element a<sub>ij</sub> of a square matrix A is the determinant of the minor of A obtained by deleting the ith row and jth column of A. The cofactor of a matrix A is the matrix of cofactors of A.\n\n```\nInput  :\n1 2 3\n4 5 6\n7 8 9\n\nOutput :\n[[-3, 6, -3], [6, -12, 6], [-3, 6, -3]]\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "2022-10-08T20:24:41.570Z",
+    "created": true
+  },
+  {
+    "title": "Find the determinant of a matrix",
+    "description": "Write a program to find the determinant of a matrix\n\nThe determinant of a square matrix is a scalar value that can be computed from the elements of the matrix. The determinant of a matrix A is denoted as det(A) or |A|.\n\n```\nInput  :\n1 2 3\n4 5 6\n7 8 9\n\nOutput :\n0\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "2022-10-12T08:21:32.599Z",
+    "created": true
+  },
+  {
+    "title": "Find the eigenvalues of a matrix",
+    "description": "Write a program to find the eigenvalues of a matrix\n\nThe eigenvalues and eigenvectors of a linear transformation are the values and vectors that determine the transformation. The eigenvalues of a matrix A are the values λ for which the matrix equation Av = λv has a non-trivial solution.\n\n```\nInput  :\n1 2 3\n4 5 6\n7 8 9\n\nOutput :\n16.116843969807043\n-1.1168439698070427\n0.9999999999999998\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "2022-12-10T05:08:01.644Z",
+    "created": true
+  },
+  {
+    "title": "Find the eigenvectors of a matrix",
+    "description": "Write a program to find the eigenvectors of a matrix\n\nThe eigenvalues and eigenvectors of a linear transformation are the values and vectors that determine the transformation. The eigenvectors of a matrix A are the vectors v for which the matrix equation Av = λv has a non-trivial solution.\n\n```\nInput  :\n1 2 3\n4 5 6\n7 8 9\n\nOutput :\n[[-0.23197068724628608, -0.7858302387246789, 0.4082482904638631],\n [-0.5253220933012334, -0.08675134095039447, -0.8164965809277261],\n [-0.8186734993561807, 0.6123275568238899, 0.4082482904638631]]\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "2022-10-11T12:35:56.836Z",
+    "created": true
+  },
+  {
+    "title": "Find the inverse of a",
+    "description": "Write a program to find the inverse of a\n\nThe inverse of a square matrix A is another square matrix B such that the product of A and B is the identity matrix I. The inverse of A is denoted as A<sup>-1</sup>.\n\n```\nInput  :\n1 2 3\n4 5 6\n7 8 9\n\nOutput :\n-0.16666666666666666 0.3333333333333333 -0.16666666666666666\n0.3333333333333333 -0.6666666666666666 0.3333333333333333\n-0.16666666666666666 0.3333333333333333 -0.16666666666666666\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "2022-12-09T14:08:10.708Z",
+    "created": true
+  },
+  {
+    "title": "Find the maximum sum of a contiguous subarray",
+    "description": "Write a program to find the maximum sum of a contiguous subarray\n\nMaximum subarray problem is the task of finding the contiguous subarray within a one-dimensional array of numbers which has the largest sum. For example, for the sequence of values `−2, 1, −3, 4, −1, 2, 1, −5, 4;` the contiguous subarray with the largest sum is `4, −1, 2, 1,` with sum `6`.\n\n```\nInput  : [-2, -3, 4, -1, -2, 1, 5, -3]\nOutput : 7\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "2022-10-14T18:17:00.603Z",
+    "created": true
+  },
+  {
+    "title": "Find the maximum sum of a contiguous subarray (Circular)",
+    "description": "Write a program to find the maximum sum of a contiguous subarray (circular)\n\nMaximum sum of a circular subarray is the task of finding the contiguous subarray within a circular one-dimensional array of numbers which has the largest sum. For example, for the sequence of values `10, -3, -4, 7, 6, 5, -4, -1;` the contiguous subarray with the largest sum is `7, 6, 5,` with sum `18`.\n\n```\nInput  : [8, -8, 9, -9, 10, -11, 12]\nOutput : 22\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "2022-10-08T12:38:33.727Z",
+    "created": true
+  },
+  {
+    "title": "Find the maximum sum of a contiguous subarray (Kadane's Algorithm)",
+    "description": "Write a program to find the maximum sum of a contiguous subarray (kadane's algorithm)\n\nKadane's algorithm is used to find the maximum sum of a contiguous subarray within a one-dimensional array of numbers. For example, for the sequence of values `−2, 1, −3, 4, −1, 2, 1, −5, 4;` the contiguous subarray with the largest sum is `4, −1, 2, 1,` with sum `6`.\n\n```\nInput  : [1, 2, 3, -2, 5]\nOutput : 9\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "2022-10-13T20:14:13.578Z",
+    "created": true
+  },
+  {
+    "title": "Find the rank of a matrix",
+    "description": "Write a program to find the rank of a matrix\n\nThe rank of a matrix is the dimension of the vector space generated by its columns. The rank of a matrix is also equal to the dimension of the vector space generated by its rows. The rank of a matrix is also equal to the number of pivots in its reduced row echelon form.\n\n```\nInput  :\n1 2 3\n4 5 6\n7 8 9\n\nOutput :\n2\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "2022-10-12T04:05:08.235Z",
+    "created": true
+  },
+  {
+    "title": "Find the sum of all numbers in an array",
+    "description": "Write a program to find the sum of all numbers in an array\n\n```\nInput  : [1, 2, 3, 4, 5]\nOutput : 15\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "2022-10-08T04:43:40.647Z",
+    "created": true
+  },
+  {
+    "title": "Find the trace of a matrix",
+    "description": "Write a program to find the trace of a matrix\n\nThe trace of a square matrix is the sum of the elements on the main diagonal (from the upper left to the lower right).\n\n```\nInput  :\n1 2 3\n4 5 6\n7 8 9\n\nOutput :\n15\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "2022-10-16T10:12:42.027Z",
+    "created": true
+  },
+  {
+    "title": "Find the transpose of a matrix",
+    "description": "Write a program to find the transpose of a matrix\n\nThe transpose of a matrix is an operator which flips a matrix over its diagonal, that is it switches the row and column indices of the matrix by producing another matrix denoted as A<sup>T</sup>.\n\n```\nInput  :\n1 2 3\n4 5 6\n7 8 9\n\nOutput :\n1 4 7\n2 5 8\n3 6 9\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "2022-10-11T10:19:08.772Z",
+    "created": true
+  },
+  {
+    "title": "Find volume of a cone",
+    "description": "Write a program to find volume of a cone\n\nVolume of cone = 1/3 × π × `Radius`^2 × `Height`\r\n\r\n```\r\nRadius : 2\r\nHeight : 3\r\n\r\nVolume : 25.132741228718345\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T12:13:25.509Z",
+    "createdIssueNumber": "208",
+    "publishedAt": "2022-10-13T16:19:28.395Z",
+    "created": true
+  },
+  {
+    "title": "Find volume of a cube",
+    "description": "Write a program to find volume of a cube\n\nVolume of cube = `Side`^3\r\n\r\n```\r\nSide : 2\r\n\r\nVolume : 8\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T12:14:29.299Z",
+    "createdIssueNumber": "210",
+    "publishedAt": "2022-10-10T08:27:39.226Z",
+    "created": true
+  },
+  {
+    "title": "Find volume of a cuboid",
+    "description": "Write a program to find volume of a cuboid\n\nVolume of a cuboid = `Length` × `Width` × `Height`\r\n\r\n```\r\nLength : 2\r\nWidth  : 3\r\nHeight : 4\r\n\r\nVolume : 24\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-27T21:34:33.608Z",
+    "createdIssueNumber": "25",
+    "publishedAt": "2022-09-28T07:02:37.503Z",
+    "created": true
+  },
+  {
+    "title": "Find volume of a cylinder",
+    "description": "Write a program to find volume of a cylinder\n\nVolume of cylinder = π × `Radius`^2 × `Height`\r\n\r\n```\r\nRadius : 2\r\nHeight : 3\r\n\r\nVolume : 37.69911184307752\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T12:12:29.216Z",
+    "createdIssueNumber": "207",
+    "publishedAt": "2022-12-09T19:07:59.607Z",
+    "created": true
+  },
+  {
+    "title": "Find volume of a sphere",
+    "description": "Write a program to find volume of a sphere\n\nVolume of sphere = 4/3 × π × `Radius`^3\r\n\r\n```\r\nRadius : 2\r\n\r\nVolume : 33.510321638291124\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T12:11:51.744Z",
+    "createdIssueNumber": "206",
+    "publishedAt": "2022-10-02T19:23:28.460Z",
+    "created": true
+  },
+  {
+    "title": "Find volume of cube",
+    "description": "Write a program to find volume of cube\n\nVolume of cube = (edge of cube)^3\r\n\r\n```\r\nInput  : 2\r\nOutput : 8\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-28T03:25:18.178Z",
+    "createdIssueNumber": "62",
+    "publishedAt": "2022-09-28T03:26:16.258Z",
+    "created": true
+  },
+  {
+    "title": "Find weekend days from number of years",
+    "description": "Write a program to find weekend days from number of years\n\nWeekend means Saturday & Sunday together. In total, we have 52 weeks in a year. So there are 52 weekends in a year. So, in normal we have 104 Weekend Days.\r\n\r\n```\r\nInput  : 1 \r\nOutput : 104\r\n```\n",
+    "contributor": "Aranarora",
+    "createdAt": "2023-03-24T07:25:42.254Z",
+    "createdIssueNumber": "6864",
+    "publishedAt": "2023-03-24T07:27:08.881Z",
+    "created": true
+  },
+  {
+    "title": "Merge two strings",
+    "description": "Write a program to merge two strings\n\n```\r\nInput  : ABC DEF\r\nOutput : ABCDEF\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T13:29:16.057Z",
+    "createdIssueNumber": "271",
+    "publishedAt": "2022-12-09T21:08:23.997Z",
+    "created": true
+  },
+  {
+    "title": "Print all prime numbers between two numbers",
+    "description": "Write a program to print all prime numbers between two numbers\n\n```\r\nInput  : 10 20\r\nOutput : 11 13 17 19\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T13:31:56.609Z",
+    "createdIssueNumber": "274",
+    "publishedAt": "2022-10-03T15:33:26.625Z",
+    "created": true
+  },
+  {
+    "title": "Print ASCII value of a character",
+    "description": "Write a program to print ascii value of a character\n\nASCII value is the numeric representation of a character. For example, the ASCII value of the character 'A' is 65. The ASCII value of the character 'a' is 97. The ASCII value of the character '0' is 48. The ASCII value of the character ' ' is 32.\r\n\r\n```\r\nInput  : A\r\nOutput : 65\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T13:07:18.152Z",
+    "createdIssueNumber": "248",
+    "publishedAt": "2022-10-14T16:19:40.217Z",
+    "created": true
+  },
+  {
+    "title": "Print ASCII value of a string",
+    "description": "Write a program to print ascii value of a string\n\nASCII value is the numeric representation of a character. For example, the ASCII value of the character 'A' is 65. The ASCII value of the character 'a' is 97. The ASCII value of the character '0' is 48. The ASCII value of the character ' ' is 32.\r\n\r\n```\r\nInput  : ABC\r\nOutput : 65 66 67\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T13:08:26.135Z",
+    "createdIssueNumber": "250",
+    "publishedAt": "",
+    "created": true
+  },
+  {
+    "title": "Print character of an ASCII value",
+    "description": "Write a program to print character of an ascii value\n\nASCII value is the numeric representation of a character. For example, the ASCII value of the character 'A' is 65. The ASCII value of the character 'a' is 97. The ASCII value of the character '0' is 48. The ASCII value of the character ' ' is 32.\r\n\r\n```\r\nInput  : 65\r\nOutput : A\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T13:07:55.843Z",
+    "createdIssueNumber": "249",
+    "publishedAt": "2022-10-03T04:05:10.085Z",
+    "created": true
+  },
+  {
+    "title": "Print diamond pattern",
+    "description": "Write a program to print diamond pattern\n\n```\nInput  : 5\n\nOutput : \n    *\n   ***\n  *****\n *******\n*********\n *******\n  *****\n   ***\n    *\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "2022-10-16T16:17:11.403Z",
+    "created": true
+  },
+  {
+    "title": "Print elements of an array",
+    "description": "Write a program to print elements of an array\n\n```\nInput  : [1, 2, 3, 4, 5]\nOutput : 1 2 3 4 5\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "2022-12-09T23:09:04.482Z",
+    "created": true
+  },
+  {
+    "title": "Print Fibonacci series by recursion",
+    "description": "Write a program to print fibonacci series by recursion\n\n```\r\nInput  : 5\r\nOutput : 0 1 1 2 3\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T06:55:20.907Z",
+    "createdIssueNumber": "163",
+    "publishedAt": "2022-10-04T07:30:42.299Z",
+    "created": true
+  },
+  {
+    "title": "Print Fibonacci series without recursion",
+    "description": "Write a program to print fibonacci series without recursion\n\n```\r\nInput  : 5\r\nOutput : 0 1 1 2 3\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T06:56:18.727Z",
+    "createdIssueNumber": "164",
+    "publishedAt": "2022-10-06T10:29:41.273Z",
+    "created": true
+  },
+  {
+    "title": "Print Floyd's triangle",
+    "description": "Write a program to print floyd's triangle\n\nFloyd's triangle is a right-angled triangle of natural numbers, used in computer science as an example of a space-filling curve. It is named after Robert Floyd. It is defined by filling the rows of the triangle with consecutive numbers, starting with a 1 in the top left corner.\n\n```\nInput  : 5\n\nOutput : \n1\n2 3\n4 5 6\n7 8 9 10\n11 12 13 14 15\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "2022-12-10T00:43:20.590Z",
+    "created": true
+  },
+  {
+    "title": "Print Hello World",
+    "description": "Write a program to print hello world\n\n### Desciption\r\n\r\n```\r\nHello World !!!\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-24T14:50:48.226Z",
+    "createdIssueNumber": "1",
+    "publishedAt": "2022-09-24T14:51:59.093Z",
+    "created": true
+  },
+  {
+    "title": "Print inverted pyramid pattern",
+    "description": "Write a program to print inverted pyramid pattern\n\n```\r\nInput   : 5\r\n\r\nOutput : \r\n1 2 3 4 5\r\n1 2 3 4 \r\n1 2 3\r\n1 2\r\n1\r\n```\n",
+    "contributor": "PraaneshSelvaraj",
+    "createdAt": "2022-12-09T03:57:12.300Z",
+    "createdIssueNumber": "4717",
+    "publishedAt": "2022-12-09T05:08:35.128Z",
+    "created": true
+  },
+  {
+    "title": "Print Multiplication Table",
+    "description": "Write a program to print multiplication table\n\n```\r\nInput  : 2\r\n\r\n2 x 1 = 2\r\n2 x 2 = 4\r\n2 x 3 = 6\r\n2 x 4 = 8\r\n2 x 5 = 10\r\n2 x 6 = 12\r\n2 x 7 = 14\r\n2 x 8 = 16\r\n2 x 9 = 18\r\n2 x 10 = 20\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T06:47:23.267Z",
+    "createdIssueNumber": "153",
+    "publishedAt": "2022-10-04T14:42:32.074Z",
+    "created": true
+  },
+  {
+    "title": "Print number to words",
+    "description": "Write a program to print number to words\n\n```\r\nInput  : 123456789\r\nOutput : One Hundred Twenty Three Million Four Hundred Fifty Six Thousand Seven Hundred Eighty Nine\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T13:26:05.628Z",
+    "createdIssueNumber": "269",
+    "publishedAt": "2022-10-09T18:19:54.709Z",
+    "created": true
+  },
+  {
+    "title": "Print number to words in Indian numbering system",
+    "description": "Write a program to print number to words in indian numbering system\n\n```\r\nInput  : 123456789\r\nOutput : One Hundred Twenty Three Crore Forty Five Lakh Sixty Seven Thousand Eight Hundred Ninety\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T13:26:34.277Z",
+    "createdIssueNumber": "270",
+    "publishedAt": "2022-10-03T16:46:24.447Z",
+    "created": true
+  },
+  {
+    "title": "Print numbers from 1 to n",
+    "description": "Write a program to print numbers from 1 to n\n\n```\nInput  : 5\nOutput : 1 2 3 4 5\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "2022-12-09T11:07:37.708Z",
+    "created": true
+  },
+  {
+    "title": "Print numbers from 1 to n without using a loop",
+    "description": "Write a program to print numbers from 1 to n without using a loop\n\n```\nInput  : 5\nOutput : 1 2 3 4 5\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "2022-12-09T05:27:57.281Z",
+    "created": true
+  },
+  {
+    "title": "Print numbers from n to 1",
+    "description": "Write a program to print numbers from n to 1\n\n```\nInput  : 5\nOutput : 5 4 3 2 1\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "2022-10-10T04:12:33.006Z",
+    "created": true
+  },
+  {
+    "title": "Print numbers from n to 1 without using a loop",
+    "description": "Write a program to print numbers from n to 1 without using a loop\n\n```\nInput  : 5\nOutput : 5 4 3 2 1\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "2022-10-15T18:14:34.791Z",
+    "created": true
+  },
+  {
+    "title": "Print Pascal's triangle",
+    "description": "Write a program to print pascal's triangle\n\nPascal's triangle is a triangular array of the binomial coefficients. Write a function that takes an integer value `n` as input and prints first `n` lines of the Pascal's triangle.\n\n```\nInput  : 5\n\nOutput : \n        1\n       1 1\n      1 2 1\n     1 3 3 1\n    1 4 6 4 1\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "2022-10-14T04:18:09.388Z",
+    "created": true
+  },
+  {
+    "title": "Print Pattern 1",
+    "description": "Write a program to print pattern 1\n\n```\r\nInput  : 5\r\n\r\nOutput :\r\n1\r\n1 2 \r\n1 2 3\r\n1 2 3 4\r\n1 2 3 4 5\r\n```\n",
+    "contributor": "PraaneshSelvaraj",
+    "createdAt": "2022-10-07T13:32:43.003Z",
+    "createdIssueNumber": "2153",
+    "publishedAt": "2022-10-14T14:31:40.379Z",
+    "created": true
+  },
+  {
+    "title": "Print reverse of a number",
+    "description": "Write a program to print reverse of a number\n\nReverse of a number is the number obtained by reversing the digits of the original number. For example, the reverse of 123 is 321. The reverse of 100 is 1. The reverse of 1000 is 1.\r\n\r\n```\r\nInput  : 123\r\nOutput : 321\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T08:06:10.300Z",
+    "createdIssueNumber": "182",
+    "publishedAt": "2022-10-12T10:20:22.277Z",
+    "created": true
+  },
+  {
+    "title": "Print reverse of a number by recursion",
+    "description": "Write a program to print reverse of a number by recursion\n\nReverse of a number is the number obtained by reversing the digits of the original number. For example, reverse of 123 is 321. The recursive solution is to print the last digit of the number and then call the function recursively to print the remaining digits.\r\n\r\n```\r\nInput  : 123\r\nOutput : 321\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T08:07:00.362Z",
+    "createdIssueNumber": "183",
+    "publishedAt": "2022-12-10T04:10:45.000Z",
+    "created": true
+  },
+  {
+    "title": "Print reverse of a string",
+    "description": "Write a program to print reverse of a string\n\nReverse of a string is the string with the characters in reverse order. For example, the reverse of \"hello\" is \"olleh\".\r\n\r\n```\r\nInput  : abcd\r\nOutput : dcba\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T08:08:17.306Z",
+    "createdIssueNumber": "184",
+    "publishedAt": "2022-10-02T20:29:20.646Z",
+    "created": true
+  },
+  {
+    "title": "Print reverse of a string by recursion",
+    "description": "Write a program to print reverse of a string by recursion\n\nReverse of a string is the string with characters in reverse order. For example, reverse of \"GeeksQuiz\" is \"ziuQskeeG\".\r\n\r\n```\r\nInput  : abcd\r\nOutput : dcba\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T08:08:41.523Z",
+    "createdIssueNumber": "185",
+    "publishedAt": "2022-10-02T06:17:59.869Z",
+    "created": true
+  },
+  {
+    "title": "Print string of ASCII values",
+    "description": "Write a program to print string of ascii values\n\nASCII value is the numeric representation of a character. For example, the ASCII value of the character 'A' is 65. The ASCII value of the character 'a' is 97. The ASCII value of the character '0' is 48. The ASCII value of the character ' ' is 32.\r\n\r\n```\r\nInput  : 65 66 67\r\nOutput : ABC\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T13:09:04.673Z",
+    "createdIssueNumber": "251",
+    "publishedAt": "2022-10-04T12:52:26.101Z",
+    "created": true
+  },
+  {
+    "title": "Reverse an array",
+    "description": "Write a program to reverse an array\n\n```\nInput  : [1, 2, 3, 4, 5]\nOutput : [5, 4, 3, 2, 1]\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "2022-12-09T05:02:53.780Z",
+    "created": true
+  },
+  {
+    "title": "Split string into array of characters",
+    "description": "Write a program to split string into array of characters\n\n```\nInput  : \"hello world\"\nOutput : [\"h\", \"e\", \"l\", \"l\", \"o\", \" \", \"w\", \"o\", \"r\", \"l\", \"d\"]\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "2022-10-09T14:16:24.919Z",
+    "created": true
+  },
+  {
+    "title": "Split string into array of words",
+    "description": "Write a program to split string into array of words\n\n```\nInput  : \"hello world\"\nOutput : [\"hello\", \"world\"]\n```",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-10-07T18:46:27.887768Z",
+    "createdIssueNumber": "0",
+    "publishedAt": "2022-12-10T08:11:09.767Z",
+    "created": true
+  },
+  {
+    "title": "Swap two numbers",
+    "description": "Write a program to swap two numbers\n\n```\r\nInput  : 10 20\r\nOutput : 20 10\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T13:31:01.383Z",
+    "createdIssueNumber": "272",
+    "publishedAt": "2022-10-04T15:27:37.379Z",
+    "created": true
+  },
+  {
+    "title": "Swap two numbers without using third variable",
+    "description": "Write a program to swap two numbers without using third variable\n\n```\r\nInput  : 10 20\r\nOutput : 20 10\r\n```\n",
+    "contributor": "harshraj8843",
+    "createdAt": "2022-09-29T13:31:33.500Z",
+    "createdIssueNumber": "273",
+    "publishedAt": "2022-10-14T10:14:30.348Z",
+    "created": true
+  },
+  {
+    "title": "Write a program to check anagram string",
+    "description": "Write a program to write a program to check anagram string\n\nTwo strings are said to be anagrams if they make a meaningful word by rearranging or shuffling the letters of the string. In other words, we can say that two strings are anagrams if they contain the same characters but in different order.\r\n\r\n```\r\nInput:  listen\r\nOutput: silent\r\n```\n",
+    "contributor": "sahdev77",
+    "createdAt": "2023-03-09T13:12:07.294Z",
+    "createdIssueNumber": "5987",
+    "publishedAt": "2023-03-09T13:13:23.617Z",
+    "created": true
+  }
+]
