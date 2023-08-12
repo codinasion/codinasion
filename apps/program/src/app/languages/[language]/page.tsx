@@ -90,7 +90,7 @@ export default async function ProgramLanguagePage({
       {/* Main */}
       <div className="grid grid-cols-1 md:grid-cols-6 gap-8">
         <div className="md:col-span-4">
-          {ProgramData.length > 0 ? (
+          {ProgramData?.length > 0 ? (
             ProgramData.map((program: ProgramListType) => (
               <ProgramCard
                 key={program.slug}

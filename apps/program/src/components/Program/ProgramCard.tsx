@@ -38,7 +38,7 @@ export default function ProgramCard({
             <HiUsers className="inline-block text-gray-500 dark:text-gray-300" />{" "}
             <span className="text-xs">Contributors :</span>{" "}
             <span className="text-xs">
-              <b>{ProgramData.contributors.length}</b>
+              <b>{ProgramData.contributors?.length}</b>
             </span>
           </div>
           <div>

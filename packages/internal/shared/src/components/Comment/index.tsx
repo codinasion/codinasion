@@ -12,10 +12,10 @@ export default function Comment() {
       <div className="my-10 mx-5">
         <Giscus
           id="giscus-comments"
-          repo={`codinasion/codinasion`}
-          repoId={`R_kgDOJoOK7Q`}
-          category={`Comment`}
-          categoryId={`DIC_kwDOJoOK7c4CW73y`}
+          repo={`codinasion/comments`}
+          repoId={`R_kgDOJ76xDQ`}
+          category={`General`}
+          categoryId={`DIC_kwDOJ76xDc4CX6UJ`}
           mapping={`url`}
           strict={`1`}
           reactionsEnabled={`1`}
