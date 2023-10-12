@@ -36,7 +36,7 @@
     "@types/react-syntax-highlighter": "^15.5.6",
     "autoprefixer": "10.4.14",
     "eslint-config-custom": "workspace:*",
-    "postcss": "8.4.23",
+    "postcss": "8.4.31",
     "tailwindcss": "3.3.2",
     "typescript": "5.1.3"
   }
