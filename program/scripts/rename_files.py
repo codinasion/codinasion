@@ -1,11 +1,17 @@
 import json
 import os
 
+from check_unknown_extensions import check_unknown_extensions
 from check_duplicate_file_extensions import check_duplicate_file_extensions
+from check_file_names import check_file_names
+
+Check_flag = check_unknown_extensions()
+if Check_flag:
+    raise Exception("::End:: ❌ There is unknown extensions in the program folder")
 
 Check_flag = check_duplicate_file_extensions()
 if Check_flag:
-    raise Exception("::Start:: There is duplicated extensions in the program folder")
+    raise Exception("::End:: ❌ There is duplicated extensions in the program folder")
 
 # read language data
 language_data = json.load(open("data/languages.json", "r"))
@@ -95,6 +101,7 @@ for folder_name in folder_names:
     except:
         raise Exception("Error in renaming files")
 
-Check_flag = check_duplicate_file_extensions()
+
+Check_flag = check_file_names()
 if Check_flag:
-    raise Exception("::End:: There is duplicated extensions in the program folder")
+    raise Exception("::End:: ❌ There is space or quote in file names")
