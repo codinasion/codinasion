@@ -1,14 +1,16 @@
-object AlternatingCase {
-  def toAlternatingCase(s: String): String = {
-    s.zipWithIndex.map { case (char, index) =>
-      if (index % 2 == 0) char.toLower
-      else char.toUpper
-    }.mkString
-  }
+fun alternatingCase(input: String): String {
+    return input.mapIndexed { index, char ->
+        if (index % 2 == 0) {
+            char.toLowerCase()
+        } else {
+            char.toUpperCase()
+        }
+    }.joinToString("")
+}
 
-  def main(args: Array[String]): Unit = {
-    val inputString = "hello world"
-    val outputString = toAlternatingCase(inputString)
-    println(outputString)
-  }
+fun main() {
+    println("Enter a string: ")
+    val inputString = readLine() ?: ""
+    val convertedString = alternatingCase(inputString)
+    println("Alternating Case String: $convertedString")
 }
