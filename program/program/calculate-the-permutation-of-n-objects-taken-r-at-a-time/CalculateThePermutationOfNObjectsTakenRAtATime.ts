@@ -8,7 +8,7 @@ function permutations(total: number, sample: number): number {
     return factorial(total) / factorial(total - sample);
   } else {
     throw new Error(
-      `ERROR: supplied total > sample; permutations(total=${total}, sample=${sample})`
+      `ERROR: supplied total > sample; permutations(total=${total}, sample=${sample})`,
     );
   }
 }

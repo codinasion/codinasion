@@ -5,5 +5,5 @@ function convertHexadecimalToOctal(hex) {
 
 let input = "A";
 console.log(
-  `Hexadecimal '${input}' in octal is: '${convertHexadecimalToOctal(input)}'`
+  `Hexadecimal '${input}' in octal is: '${convertHexadecimalToOctal(input)}'`,
 );

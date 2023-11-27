@@ -14,18 +14,21 @@ However, if the sentence contains proper nouns or acronyms, they should also be 
 Here are some examples of converting strings to sentence cases:
 
 Example 1:
+
 ```txt
 Input  : "john and jane went to new york to visit the museum of modern art (moma)"
 Output : "John and Jane went to New York to visit the Museum of Modern Art (MoMA)"
 ```
 
 Example 2:
+
 ```txt
 Input  : "the united nations (un) is an international organization"
 Output : "The United Nations (UN) is an international organization"
 ```
 
 Example 3:
+
 ```txt
 Input  : "the cat is sleeping; however, the dog is awake"
 Output : "The cat is sleeping; however, the dog is awake"

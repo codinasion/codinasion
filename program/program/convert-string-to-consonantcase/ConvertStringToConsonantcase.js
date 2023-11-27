@@ -4,7 +4,7 @@ const consonantCase = (str) => {
     .split("")
     .reduce(
       (a, c) => a + (/[aeiou]/i.test(c) ? c.toLowerCase() : c.toUpperCase()),
-      ""
+      "",
     );
 };
 

@@ -1,5 +1,5 @@
 console.log(
-  "JavaScript program to convert miles to feet \n 1 mile = 5280 feet"
+  "JavaScript program to convert miles to feet \n 1 mile = 5280 feet",
 );
 
 const milesToFeet = (num) => {

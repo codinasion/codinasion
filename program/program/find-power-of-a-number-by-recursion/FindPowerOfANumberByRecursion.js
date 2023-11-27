@@ -2,7 +2,7 @@ export function findPowerOfANumberByRecursion(
   number,
   power,
   poweredNumber = number,
-  counter = 1
+  counter = 1,
 ) {
   if (power === 0) return 1;
 
@@ -12,6 +12,6 @@ export function findPowerOfANumberByRecursion(
     number,
     power,
     poweredNumber * number,
-    ++counter
+    ++counter,
   );
 }

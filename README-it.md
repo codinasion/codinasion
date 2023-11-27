@@ -19,7 +19,7 @@ Collabora, Crea, Innovazione: Insieme con l'Open Source ❤️
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/codinasion/codinasion/master/assets/rainbow-hr.png" alt="linea colorata" width="100%" height="70%">
-</div> 
+</div>
 
 <br>
 
@@ -39,14 +39,17 @@ Leggi questo `Readme` in un'altra lingua:
 
    ```bash
    pnpm install
-Avvia il server di sviluppo
+   ```
 
-bash
-Copy code
- pnpm run dev
- # oppure, avvia un progetto specifico
- pnpm run dev --filter web
-Nota: Ulteriori informazioni possono essere trovate nel README del progetto specifico
+4. Avvia il server di sviluppo
+
+   ```bash
+   pnpm run dev
+   # oppure, avvia un progetto specifico
+   pnpm run dev --filter web
+   ```
+
+> Nota: Ulteriori informazioni possono essere trovate nel README del progetto specifico
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/codinasion/codinasion/master/assets/rainbow-hr.png" alt="rainbow hr" width="100%" height="70%">
@@ -93,4 +96,4 @@ Realizzato con 💖 da Codinasion
 </p>
 <div align="center">
   <img src="https://raw.githubusercontent.com/codinasion/codinasion/master/assets/rainbow-hr.png" alt="rainbow hr" width="100%" height="70%">
-</div> 
+</div>

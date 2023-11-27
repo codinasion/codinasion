@@ -5,7 +5,7 @@ function FindSumOfSquaresOfNumbersByRecursion(number) {
   return (
     Number(number.split(" ", 1)) ** 2 +
     FindSumOfSquaresOfNumbersByRecursion(
-      number.substring(number.indexOf(" ") + 1, number.length)
+      number.substring(number.indexOf(" ") + 1, number.length),
     )
   );
 }

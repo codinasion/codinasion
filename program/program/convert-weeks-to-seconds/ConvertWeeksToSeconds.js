@@ -1,4 +1,4 @@
-function convertWeeksToSeconds(weeks: number) {
+function convertWeeksToSeconds(weeks) {
   // 1 day = 24 * 3600 = 86400 seconds
   // 1 week = 7 * 86400 = 604800 seconds
   // therefore, 5 weeks has 5 * 604800 seconds = 3024000

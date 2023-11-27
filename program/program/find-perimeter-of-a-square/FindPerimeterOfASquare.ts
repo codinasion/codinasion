@@ -4,5 +4,7 @@ const getPerimeterOfSquare = (side: number): number => {
 
 const side = 23;
 console.log(
-  `The perimeter of the square of side ${side} is ${getPerimeterOfSquare(side)}`
+  `The perimeter of the square of side ${side} is ${getPerimeterOfSquare(
+    side,
+  )}`,
 );

@@ -1,17 +1,20 @@
-"use client";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
-import { ThemeProvider } from "next-themes";
-
-interface Props {
+interface LayoutProps {
   children: React.ReactNode;
 }
 
-export default function Layout({ children }: Props) {
+export default function Layout({ children }: LayoutProps): JSX.Element {
   return (
     <>
-      <ThemeProvider enableSystem={true} attribute="class">
-        <main className="w-full min-h-screen ">{children}</main>
-      </ThemeProvider>
+      <section className="mx-auto max-w-3xl px-4 sm:px-6 xl:max-w-5xl xl:px-0">
+        <div className="flex h-screen flex-col justify-between font-sans">
+          <Navbar />
+          <main className="mb-auto">{children}</main>
+          <Footer />
+        </div>
+      </section>
     </>
   );
 }

@@ -7,5 +7,5 @@ function FindPerimeterOfARectangle(length, width) {
 
 console.log(
   "Perimeter of rectangle is ",
-  FindPerimeterOfARectangle(5, 2) + "cm"
+  FindPerimeterOfARectangle(5, 2) + "cm",
 );

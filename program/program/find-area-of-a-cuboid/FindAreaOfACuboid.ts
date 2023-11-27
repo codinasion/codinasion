@@ -17,7 +17,7 @@
 function FindAreaOfACuboid(
   height: number,
   width: number,
-  length: number
+  length: number,
 ): number {
   return 2 * (length * width + length * height + width * height);
 }

@@ -16,7 +16,7 @@
 function FindSurfaceAreaOfACuboid(
   length: number,
   width: number,
-  height: number
+  height: number,
 ): number {
   const area = 2 * (length * width + width * height + height * length);
 

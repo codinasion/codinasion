@@ -4,7 +4,7 @@ const vowelCase = (str) => {
     .split("")
     .reduce(
       (a, c) => a + (/[aeiou]/i.test(c) ? c.toUpperCase() : c.toLowerCase()),
-      ""
+      "",
     );
 };
 

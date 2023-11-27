@@ -15,10 +15,6 @@
 /github-bots/           @codinasion/github-bot  @harshraj8843
 
 
-# Code owners for npm package(s)
-/packages/npm/          @codinasion/npm         @harshraj8843
-
-
 # Code owners for README and translations
 **/README*.md           @codinasion/README      @harshraj8843
 **/readme*.md           @codinasion/README      @harshraj8843

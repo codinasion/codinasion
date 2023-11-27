@@ -1,7 +1,7 @@
 const averageOfDigits = function (
   num: number,
   digitsCount: number,
-  digitsSum: number
+  digitsSum: number,
 ) {
   if (digitsCount === void 0) {
     digitsCount = 0;

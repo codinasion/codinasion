@@ -12,11 +12,11 @@ function ConvertMinutesToDays(minutes) {
 
 // Console Tests
 console.log(
-  "How many days is 7,200 minutes? " + ConvertMinutesToDays(7200) + " days"
+  "How many days is 7,200 minutes? " + ConvertMinutesToDays(7200) + " days",
 );
 console.log(
-  "How many days is 21,600 minutes? " + ConvertMinutesToDays(21600) + " days"
+  "How many days is 21,600 minutes? " + ConvertMinutesToDays(21600) + " days",
 );
 console.log(
-  "How many days is 525,600 minutes? " + ConvertMinutesToDays(525600) + " days"
+  "How many days is 525,600 minutes? " + ConvertMinutesToDays(525600) + " days",
 );

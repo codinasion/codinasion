@@ -1,0 +1,15 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# Load config (variables)
+. "$(dirname -- "$0")/config.sh"
+
+echo ""
+echo "${RED}${CDR}${NC}: Commit completed."
+echo "${GREEN}${CC}${NC}: Roger. We confirm commit completed."
+
+echo ""
+echo "${RED}${CDR}${NC}: Good deal."
+echo "${RED}${CDR}${NC}: Shutdown."
+echo "${GREEN}${CC}${NC}: Roger. Shutdown."
+echo ""

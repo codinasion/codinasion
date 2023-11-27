@@ -1,7 +1,7 @@
 const simpleInterest = (
   principal: number,
   interest: number,
-  time: number
+  time: number,
 ): number => {
   return (principal * interest * time) / 100;
 };

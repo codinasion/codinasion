@@ -19,14 +19,14 @@ const str = "123";
 console.log(`Input: ${str}, type: ${typeof str}`);
 console.log(
   `Output: ${convertStringToInteger(
-    str
-  )}, type: ${typeof convertStringToInteger(str)}`
+    str,
+  )}, type: ${typeof convertStringToInteger(str)}`,
 );
 
 const strWithNegative = "-123";
 console.log(`Input: ${strWithNegative}, type: ${typeof strWithNegative}`);
 console.log(
   `Output: ${convertStringToInteger(
-    strWithNegative
-  )}, type: ${typeof convertStringToInteger(strWithNegative)}`
+    strWithNegative,
+  )}, type: ${typeof convertStringToInteger(strWithNegative)}`,
 );

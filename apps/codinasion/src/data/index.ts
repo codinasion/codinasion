@@ -1,3 +1,3 @@
-import { default as SiteMetadata } from "./SiteMetadata";
-
-export { SiteMetadata };
+export * from "./footer";
+export * from "./navbar";
+export * from "./sitemetadata";

@@ -4,7 +4,7 @@ const convertToConsonantcase = (input: string) => {
     .toLowerCase()
     .split("")
     .map((letter: string) =>
-      vowels.includes(letter) ? letter : letter.toUpperCase()
+      vowels.includes(letter) ? letter : letter.toUpperCase(),
     )
     .join("");
 };

@@ -1,7 +1,7 @@
 function calculateCompoundInterest(
   principal: number,
   rate: number,
-  time: number
+  time: number,
 ): number {
   const compoundFactor: number = 1 + rate / 100;
 

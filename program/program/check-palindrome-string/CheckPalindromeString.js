@@ -4,5 +4,5 @@ function checkPalindromeString(str) {
 }
 
 console.log(
-  checkPalindromeString("abba") ? "Palindrome String" : "Not Palindrome String"
+  checkPalindromeString("abba") ? "Palindrome String" : "Not Palindrome String",
 );

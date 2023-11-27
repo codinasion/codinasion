@@ -1,9 +1,0 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@layer components {
-  .card_bg {
-    @apply bg-slate-100 dark:bg-slate-700 border border-slate-200 dark:border-slate-800;
-  }
-}

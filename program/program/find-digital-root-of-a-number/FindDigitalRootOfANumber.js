@@ -1,4 +1,4 @@
-function findDigitalRoot(num: any): number {
+function findDigitalRoot(num) {
   let digitalRoot = 0;
 
   if (num != 0) {

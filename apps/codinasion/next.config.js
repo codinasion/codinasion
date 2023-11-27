@@ -1,7 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  transpilePackages: ["data"],
-
   images: {
     remotePatterns: [
       {
@@ -16,7 +14,15 @@ const nextConfig = {
         protocol: "https",
         hostname: "user-images.githubusercontent.com",
       },
+      {
+        protocol: "https",
+        hostname: "avatars.githubusercontent.com",
+      },
     ],
+  },
+
+  redirects: async () => {
+    return [];
   },
 };
 

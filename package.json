@@ -1,26 +1,30 @@
 {
+  "name": "codinasion",
   "private": true,
   "scripts": {
-    "clean": "turbo clean",
-    "dev": "dotenv -- turbo run dev --concurrency 16",
-    "lint": "turbo run lint",
-    "build": "turbo run build",
-    "build:local": "dotenv -- turbo run build",
-    "test": "turbo run test",
+    "prepare": "husky install",
+    "clone-submodules": "npx vercel-submodules --all",
+    "lint": "turbo lint",
+    "dev": "dotenv -- turbo dev",
+    "build": "turbo build",
+    "build:local": "dotenv -- turbo build",
+    "test": "turbo test",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,md,mdx,json}\"",
-    "all": "turbo lint && pnpm build:local && pnpm test && pnpm format",
-    "publish-packages": "pnpm build:local && turbo run lint test && changeset version && changeset publish"
+    "all": "pnpm clone-submodules && pnpm format && turbo lint && pnpm build:local && pnpm test"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.26.1",
-    "@turbo/gen": "^1.9.7",
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@changesets/cli": "latest",
     "dotenv-cli": "latest",
-    "eslint": "^7.32.0",
-    "eslint-config-custom": "workspace:*",
-    "prettier": "^2.7.1",
-    "prettier-plugin-tailwindcss": "^0.1.11",
-    "turbo": "^1.9.9"
+    "husky": "latest",
+    "prettier": "latest",
+    "prettier-plugin-tailwindcss": "latest",
+    "turbo": "latest",
+    "vercel-submodules": "^1.0.10"
   },
-  "packageManager": "pnpm@7.15.0",
-  "name": "codinasion"
+  "packageManager": "pnpm@8.9.0",
+  "engines": {
+    "node": ">=18"
+  }
 }

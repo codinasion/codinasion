@@ -1,4 +1,4 @@
-function convertTimeTo24Hours(time: string) {
+function convertTimeTo24Hours(time) {
   let splitDate = time.split(":");
   let parsedDate = parseInt(splitDate[0]);
   let ampm = splitDate[2].replace(/[^a-zA-Z]+/g, "");

@@ -12,7 +12,7 @@ function convertBinaryToDecimal(binaryNumber: number) {
     (digit: string, index: number) => {
       const power = numberOfDigits - index - 1;
       return parseInt(digit) * Math.pow(2, power);
-    }
+    },
   );
 
   const resultSum = multiplicatedDigits.reduce((total, accumulator) => {

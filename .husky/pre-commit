@@ -1,0 +1,69 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# Load config (variables)
+. "$(dirname -- "$0")/config.sh"
+
+echo ""
+echo "${BLUE}INFO${NC}: Running ${YELLOW}pre-commit${NC} hook"
+
+echo ""
+echo "${RED}${CDR}${NC}: Roger. Check."
+echo "${GREEN}${CC}${NC}: Roger. We got a Pre-commit hook."
+echo "${GREEN}${CC}${NC}: ${CDR}, this is ${CC}. You are GO for Pre-commit hook."
+echo "${RED}${CDR}${NC}: Roger. I'm on it."
+echo "${GREEN}${CC}${NC}: Roger. Pre-commit hook started."
+
+echo ""
+echo "${RED}${CDR}${NC}: Installing all dependencies"
+pnpm install 1>/dev/null
+echo "${GREEN}${CC}${NC}: ${CDR}, ${CC}. Installation confirmed; You're looking good."
+
+echo ""
+echo "${RED}${CDR}${NC}: Linting code"
+pnpm lint 1>/dev/null
+echo "${GREEN}${CC}${NC}: We confirm linting."
+
+echo ""
+echo "${RED}${CDR}${NC}: Roger."
+echo "${RED}${CDR}${NC}: Testing code"
+pnpm test 1>/dev/null
+echo "${GREEN}${CC}${NC}: Roger. We confirm testing."
+
+echo ""
+echo "${RED}${CDR}${NC}: Formatting code"
+pnpm format 1>/dev/null
+echo "${GREEN}${CC}${NC}: Roger. We confirm formatting."
+
+echo ""
+echo "${RED}${CDR}${NC}: Checking for unstaged changes"
+if ! git diff --quiet --exit-code; then
+    echo "${GREEN}${CC}${NC}: Roger. We confirm ${RED}there are unstaged changes${NC}."
+    echo "${GREEN}${CC}${NC}: Please stage your changes."
+    echo ""
+    echo "${BLUE}INFO${NC}: Commit aborted."
+    echo ""
+    exit 1
+fi
+echo "${GREEN}${CC}${NC}: Roger. We confirm no unstaged changes."
+
+echo ""
+echo "${RED}${CDR}${NC}: Checking for branch"
+if [ "$(git rev-parse --abbrev-ref HEAD)" = "master" ]; then
+    echo "${GREEN}${CC}${NC}: Roger. We confirm ${RED}you are on master${NC}."
+    echo "${GREEN}${CC}${NC}: Please checkout to another branch."
+    echo ""
+    echo "${BLUE}INFO${NC}: Commit aborted."
+    echo ""
+    exit 1
+fi
+echo "${GREEN}${CC}${NC}: Roger. We confirm you are not on master."
+
+echo ""
+echo "${RED}${CDR}${NC}: Pre-commit hook finished"
+echo "${GREEN}${CC}${NC}: ${CDR}, this is ${CC}. Pre-commit hook finished."
+echo "${GREEN}${CC}${NC}: You are GO for commit."
+
+echo ""
+echo "${RED}${CDR}${NC}: Roger. I'm on it."
+echo "${GREEN}${CC}${NC}: Roger. Commit started."

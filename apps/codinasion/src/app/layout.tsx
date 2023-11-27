@@ -1,27 +1,78 @@
 import "@/styles/globals.css";
-import "shared/styles.css";
-
-import Script from "next/script";
-
+import type { Metadata } from "next";
+import { Space_Grotesk } from "next/font/google";
+import Favicon from "@/public/favicon.ico";
+import AppleTouchIcon from "@/public/apple-touch-icon.png";
+import ShortcutIcon from "@/public/favicon-16x16.png";
+import { ThemeProviders } from "./theme-providers";
+import Layout from "@/layouts";
 import { SiteMetadata } from "@/data";
 
-import Favicon from "assets/favicon/favicon.ico";
-import AppleTouchIcon from "assets/favicon/apple-touch-icon.png";
-import ShortcutIcon from "assets/favicon/favicon-16x16.png";
-import Logo from "assets/codinasion.png";
-import Manifest from "assets/favicon/manifest.json";
-import Layout from "@/layouts";
+const space_grotesk = Space_Grotesk({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-space-grotesk",
+});
 
-export const metadata = {
+export const metadata: Metadata = {
+  metadataBase: new URL(SiteMetadata.site_url),
+
   title: SiteMetadata.title,
   description: SiteMetadata.description,
 
-  manifest: Manifest,
+  manifest: "/manifest.json",
+
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: SiteMetadata.title,
+  },
+  formatDetection: {
+    telephone: false,
+  },
   icons: {
     icon: Favicon.src,
     shortcut: ShortcutIcon.src,
     apple: AppleTouchIcon.src,
-    android: Logo.src,
+  },
+
+  keywords: [
+    "codinasion",
+    "code",
+    "program",
+    "open source",
+    "good fisrt issue",
+  ],
+
+  openGraph: {
+    title: SiteMetadata.title,
+    description: SiteMetadata.description,
+    url: SiteMetadata.site_url,
+    siteName: SiteMetadata.title,
+    images: [
+      // TODO: add og image
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: SiteMetadata.title,
+    description: SiteMetadata.description,
+    siteId: SiteMetadata.twitter_userid,
+    creator: `@${SiteMetadata.twitter_username}`,
+    creatorId: SiteMetadata.twitter_userid,
+    images: [
+      // TODO: add twitter image
+    ],
+  },
+
+  archives: [SiteMetadata.github_url],
+  category: "technology",
+
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 
@@ -29,26 +80,28 @@ export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
-}) {
+}): JSX.Element {
   return (
-    <html lang="en">
-      {/* <!-- Google tag (gtag.js) --> */}
-      <Script
-        src="https://www.googletagmanager.com/gtag/js?id=G-X1PJY1SDDM"
-        strategy="afterInteractive"
+    <html
+      lang="en"
+      className={`${space_grotesk.variable} scroll-smooth`}
+      suppressHydrationWarning
+    >
+      <meta
+        name="theme-color"
+        media="(prefers-color-scheme: light)"
+        content="#fff"
       />
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
+      <meta
+        name="theme-color"
+        media="(prefers-color-scheme: dark)"
+        content="#000"
+      />
 
-          gtag('config', 'G-X1PJY1SDDM');
-        `}
-      </Script>
-
-      <body className="bg-primary-light dark:bg-primary-dark text-neutral-700 dark:text-neutral-300">
-        <Layout>{children}</Layout>
+      <body className="bg-white text-black antialiased dark:bg-gray-950 dark:text-white">
+        <ThemeProviders>
+          <Layout>{children}</Layout>
+        </ThemeProviders>
       </body>
     </html>
   );

@@ -1,22 +1,15 @@
 {
   "$schema": "https://turbo.build/schema.json",
-  "globalDependencies": ["**/.env.*local", "**/.env.*dev", "**/.env"],
-  "globalEnv": [
-    "CODINASION_API_URL",
-    "GITHUB_API_URL",
-    "GITHUB_GRAPHQL_API_URL",
-    "GITHUB_TOKEN",
-    "GRAPHQL_TOKEN"
-  ],
+  "globalDependencies": ["**/.env.*local"],
+  "globalEnv": [],
   "pipeline": {
     "dev": {
       "cache": false,
       "persistent": true
     },
-    "clean": {
-      "cache": false
+    "lint": {
+      "dependsOn": ["^lint"]
     },
-    "lint": {},
     "build": {
       "dependsOn": ["^build"],
       "outputs": ["dist/**", ".next/**", "!.next/cache/**"]
@@ -25,8 +18,9 @@
       "dependsOn": ["^build"],
       "outputs": ["dist/**", ".next/**", "!.next/cache/**"]
     },
-    "test": {},
-    "all": {},
-    "check-types": {}
+    "test": {
+      "dependsOn": ["^test"]
+    },
+    "all": {}
   }
 }

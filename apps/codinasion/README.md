@@ -4,7 +4,7 @@
 
 Collaborate, Create, Innovate: Together with Open Source ❤️
 
-[![Codinasion](https://img.shields.io/badge/HTTPS-codinasion.org-brightgreen "Codinasion")](https://codinasion.org "Codinasion") [![License](https://img.shields.io/github/license/codinasion/codinasion)](https://github.com/codinasion/codinasion/blob/master/LICENSE.md "MIT License") [![Github Sponsors](https://img.shields.io/github/sponsors/codinasion?color=light_green&label=Sponsors "Our Sponsors")](https://github.com/sponsors/codinasion)
+[![Codinasion](https://img.shields.io/badge/HTTPS-codinasion.org-brightgreen "Codinasion")](https://codinasion.org "Codinasion") [![License](https://img.shields.io/github/license/codinasion/codinasion)](https://github.com/codinasion/codinasion/blob/master/LICENSE.md "MIT License")
 
 <a href="https://vercel.com/?utm_source=codinasion&utm_campaign=oss" target="_blank">
   <img src="https://raw.githubusercontent.com/codinasion/codinasion/master/assets/powered-by-vercel.svg" alt="Powered By Vercel" width="170">
