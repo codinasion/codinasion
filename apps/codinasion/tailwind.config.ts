@@ -20,7 +20,7 @@ const config: Config = {
         primary: colors.blue,
         gray: colors.gray,
       },
-      // @ts-ignore
+      // @ts-expect-error - We know this exists
       typography: ({ theme }) => ({
         DEFAULT: {
           css: {

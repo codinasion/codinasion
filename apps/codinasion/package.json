@@ -3,12 +3,13 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --port 3000",
+    "dev": "next dev --turbo --port 3000",
     "build": "next build",
     "serve": "next start",
     "lint": "eslint . --max-warnings 0"
   },
   "dependencies": {
+    "moment": "^2.29.4",
     "next": "14.0.3",
     "next-themes": "^0.2.1",
     "react": "^18",

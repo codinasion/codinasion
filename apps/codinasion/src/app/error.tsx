@@ -1,16 +1,27 @@
 "use client";
 
-import { useEffect } from "react";
+import Link from "@/components/Link";
 
-export default function ErrorPage({
-  error,
-}: {
-  error: Error;
-  reset: () => void;
-}): JSX.Element {
-  useEffect(() => {
-    // TODO: Log error
-  }, [error]);
-
-  return <>500</>;
+export default function ErrorPage() {
+  return (
+    <div className="flex flex-col items-start justify-start md:mt-24 md:flex-row md:items-center md:justify-center md:space-x-6">
+      <div className="space-x-2 pb-8 pt-6 md:space-y-5">
+        <h1 className="text-6xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 md:border-r-2 md:px-6 md:text-8xl md:leading-14">
+          500
+        </h1>
+      </div>
+      <div className="max-w-md">
+        <p className="mb-4 text-xl font-bold leading-normal md:text-2xl">
+          Oops! Something went wrong.
+        </p>
+        <p className="mb-8">Refresh the page, or try again later.</p>
+        <Link
+          href="/"
+          className="focus:shadow-outline-blue inline rounded-lg border border-transparent bg-blue-600 px-4 py-2 text-sm font-medium leading-5 text-white shadow transition-colors duration-150 hover:bg-blue-700 focus:outline-none dark:hover:bg-blue-500"
+        >
+          Back to homepage
+        </Link>
+      </div>
+    </div>
+  );
 }

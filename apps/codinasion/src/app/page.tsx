@@ -20,7 +20,7 @@ export default function Page(): JSX.Element {
           <p className="mt-10 text-lg leading-8 text-gray-500 dark:text-gray-400 sm:text-center">
             Our{" "}
             <Link
-              className="text-indigo-600 dark:text-indigo-600 hover:text-indigo-700 dark:hover:text-indigo-500 rounded-md mx-1 p-1 bg-slate-300 dark:bg-slate-900"
+              className="text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-500 rounded-md mx-1 p-1 bg-slate-300 dark:bg-slate-900"
               href="https://github.com/codinasion/codinasion"
             >
               GitHub repo
