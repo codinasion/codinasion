@@ -2,7 +2,7 @@
 
 A collection of useful TypeScript functions and classes.
 
-![NPM Version](https://img.shields.io/npm/v/codinasion?color=33cd56&logo=npm) ![Downloads](https://img.shields.io/npm/dm/codinasion?logo=docusign&label=Downloads) ![LICENSE](https://img.shields.io/npm/l/codinasion?logo=googledocs&logoColor=lightgray&label=LICENSE)
+![NPM Version](https://img.shields.io/npm/v/codinasion?color=33cd56&logo=npm) ![Downloads](https://img.shields.io/npm/dm/codinasion?logo=docusign&label=Downloads&logoColor=white) ![LICENSE](https://img.shields.io/npm/l/codinasion?logo=googledocs&logoColor=white&label=LICENSE)
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/codinasion/codinasion/master/assets/rainbow-hr.png" alt="rainbow hr" width="100%" height="70%">

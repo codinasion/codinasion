@@ -1,10 +1,10 @@
 {
-  "name": "codinasion",
-  "version": "1.0.0",
+  "name": "@codinasion/language-data",
+  "version": "1.1.0",
   "publishConfig": {
     "access": "public"
   },
-  "description": "A collection of useful TypeScript functions and classes",
+  "description": "Get data about programming languages",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
@@ -41,7 +41,12 @@
   },
   "keywords": [
     "codinasion",
-    "typescript"
+    "programming",
+    "language",
+    "data",
+    "typescript",
+    "functions",
+    "utils"
   ],
   "tsup": {
     "treeshake": true,

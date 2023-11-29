@@ -2,7 +2,7 @@
 
 Typescript configurations for Codinasion projects.
 
-![NPM Version](https://img.shields.io/npm/v/%40codinasion%2Ftypescript-config?color=33cd56&logo=npm) ![Downloads](https://img.shields.io/npm/dm/%40codinasion%2Ftypescript-config?logo=docusign&label=Downloads) ![LICENSE](https://img.shields.io/npm/l/%40codinasion%2Ftypescript-config?logo=googledocs&logoColor=lightgray&label=LICENSE)
+![NPM Version](https://img.shields.io/npm/v/%40codinasion%2Ftypescript-config?color=33cd56&logo=npm) ![Downloads](https://img.shields.io/npm/dm/%40codinasion%2Ftypescript-config?logo=docusign&label=Downloads&logoColor=white) ![LICENSE](https://img.shields.io/npm/l/%40codinasion%2Ftypescript-config?logo=googledocs&logoColor=white&label=LICENSE)
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/codinasion/codinasion/master/assets/rainbow-hr.png" alt="rainbow hr" width="100%" height="70%">

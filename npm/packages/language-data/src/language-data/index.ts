@@ -1,0 +1,1 @@
+../../../codinasion/src/language-data/index.ts
