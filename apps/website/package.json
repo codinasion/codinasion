@@ -1,5 +1,5 @@
 {
-  "name": "codinasion",
+  "name": "website",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -19,8 +19,8 @@
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^14.0.2",
-    "@repo/eslint-config": "workspace:*",
-    "@repo/typescript-config": "workspace:*",
+    "@codinasion/eslint-config": "workspace:*",
+    "@codinasion/typescript-config": "workspace:*",
     "@types/eslint": "^8.44.7",
     "@types/node": "^20",
     "@types/react": "^18",

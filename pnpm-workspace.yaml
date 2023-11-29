@@ -1,4 +1,10 @@
 packages:
+  # include
   - "apps/*"
   - "assets"
-  - "packages/*"
+  - "config/**"
+  - "npm/**"
+
+  # exclude
+  - "!**/.next/**"
+  - "!**/node_modules/**"
