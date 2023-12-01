@@ -224,10 +224,10 @@ importers:
   npm/packages/codinasion:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.1
+        specifier: 1.0.2
         version: link:../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.1
+        specifier: 1.0.2
         version: link:../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -251,10 +251,10 @@ importers:
   npm/packages/dsa/dsa:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.1
+        specifier: 1.0.2
         version: link:../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.1
+        specifier: 1.0.2
         version: link:../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -278,10 +278,10 @@ importers:
   npm/packages/dsa/queue:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.1
+        specifier: 1.0.2
         version: link:../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.1
+        specifier: 1.0.2
         version: link:../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -305,10 +305,10 @@ importers:
   npm/packages/dsa/search/binary-search:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.1
+        specifier: 1.0.2
         version: link:../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.1
+        specifier: 1.0.2
         version: link:../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -332,10 +332,10 @@ importers:
   npm/packages/dsa/search/linear-search:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.1
+        specifier: 1.0.2
         version: link:../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.1
+        specifier: 1.0.2
         version: link:../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -359,10 +359,10 @@ importers:
   npm/packages/dsa/sort/bubble-sort:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.1
+        specifier: 1.0.2
         version: link:../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.1
+        specifier: 1.0.2
         version: link:../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -386,10 +386,10 @@ importers:
   npm/packages/dsa/sort/counting-sort:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.1
+        specifier: 1.0.2
         version: link:../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.1
+        specifier: 1.0.2
         version: link:../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -413,10 +413,10 @@ importers:
   npm/packages/dsa/sort/heap-sort:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.1
+        specifier: 1.0.2
         version: link:../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.1
+        specifier: 1.0.2
         version: link:../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -440,10 +440,10 @@ importers:
   npm/packages/dsa/sort/insertion-sort:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.1
+        specifier: 1.0.2
         version: link:../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.1
+        specifier: 1.0.2
         version: link:../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -467,10 +467,10 @@ importers:
   npm/packages/dsa/sort/merge-sort:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.1
+        specifier: 1.0.2
         version: link:../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.1
+        specifier: 1.0.2
         version: link:../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -494,10 +494,10 @@ importers:
   npm/packages/dsa/sort/quick-sort:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.1
+        specifier: 1.0.2
         version: link:../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.1
+        specifier: 1.0.2
         version: link:../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -521,10 +521,10 @@ importers:
   npm/packages/dsa/sort/radix-sort:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.1
+        specifier: 1.0.2
         version: link:../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.1
+        specifier: 1.0.2
         version: link:../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -548,10 +548,10 @@ importers:
   npm/packages/dsa/sort/selection-sort:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.1
+        specifier: 1.0.2
         version: link:../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.1
+        specifier: 1.0.2
         version: link:../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -575,10 +575,10 @@ importers:
   npm/packages/dsa/stack:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.1
+        specifier: 1.0.2
         version: link:../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.1
+        specifier: 1.0.2
         version: link:../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -602,10 +602,10 @@ importers:
   npm/packages/language-data:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.1
+        specifier: 1.0.2
         version: link:../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.1
+        specifier: 1.0.2
         version: link:../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10

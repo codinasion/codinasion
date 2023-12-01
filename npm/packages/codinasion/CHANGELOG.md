@@ -1,5 +1,11 @@
 # codinasion
 
+## 1.0.2
+
+### Patch Changes
+
+- 2a4ebd8: Add DSA
+
 ## 1.0.1
 
 ### Patch Changes

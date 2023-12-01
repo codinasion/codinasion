@@ -1,5 +1,11 @@
 # @codinasion/typescript-config
 
+## 1.0.2
+
+### Patch Changes
+
+- 2a4ebd8: Update symlink (soft -> hard)
+
 ## 1.0.1
 
 ### Patch Changes
