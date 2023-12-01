@@ -4,11 +4,9 @@
 
 Collaborate, Create, Innovate: Together with Open Source ❤️
 
-[![License](https://img.shields.io/github/license/codinasion/codinasion)](https://github.com/codinasion/codinasion/blob/master/LICENSE.md "MIT License") [![Github Repo Size](https://img.shields.io/github/repo-size/codinasion/codinasion "Repo Size")](https://github.com/codinasion/codinasion) [![Github Sponsors](https://img.shields.io/github/sponsors/codinasion?color=light_green&label=Sponsors "Our Sponsors")](https://github.com/sponsors/codinasion)
+[![License](https://img.shields.io/github/license/codinasion/codinasion)](https://github.com/codinasion/codinasion/blob/master/LICENSE.md "MIT License") [![Github Repo Size](https://img.shields.io/github/repo-size/codinasion/codinasion "Repo Size")](https://github.com/codinasion/codinasion)
 
-![Issues](https://img.shields.io/github/issues/codinasion/codinasion?label=Issues) [![Github Contributors](https://img.shields.io/github/contributors/codinasion/codinasion "Contributors")](https://github.com/codinasion/codinasion/graphs/contributors) [![Github Last Commit](https://img.shields.io/github/last-commit/codinasion/codinasion "Last Commit")](https://github.com/codinasion/codinasion/graphs/commit-activity)
-
-![Good First Issues](https://img.shields.io/github/issues/codinasion/codinasion/good%20first%20issue?label=Good%20First%20Issues)
+![Good First Issues](https://img.shields.io/github/issues/codinasion/codinasion/good%20first%20issue?label=Good%20First%20Issues) [![Github Contributors](https://img.shields.io/github/contributors/codinasion/codinasion "Contributors")](https://github.com/codinasion/codinasion/graphs/contributors) [![Github Last Commit](https://img.shields.io/github/last-commit/codinasion/codinasion "Last Commit")](https://github.com/codinasion/codinasion/graphs/commit-activity)
 
 <a href="https://vercel.com/?utm_source=codinasion&utm_campaign=oss" target="_blank">
   <img src="https://raw.githubusercontent.com/codinasion/codinasion/master/assets/powered-by-vercel.svg" alt="Powered By Vercel" width="170">
@@ -25,39 +23,7 @@ Collaborate, Create, Innovate: Together with Open Source ❤️
 
 Read this `Readme` in another language:
 
-<kbd>[<img title="English" alt="English" src="https://cdn.staticaly.com/gh/hjnilsson/country-flags/master/svg/us.svg" width="22">](https://github.com/codinasion/codinasion/blob/master/README.md)</kbd> <kbd>[<img title="Português" alt="Português" src="https://cdn.staticaly.com/gh/hjnilsson/country-flags/master/svg/br.svg" width="22">](https://github.com/codinasion/codinasion/blob/master/README-pt-br.md)</kbd> <kbd>[<img title="Français" alt="Français" src="https://cdn.staticaly.com/gh/hjnilsson/country-flags/master/svg/fr.svg" width="22">](https://github.com/codinasion/codinasion/blob/master/README-fr.md)</kbd> <kbd>[<img title="Italiano" alt="Italiano" src="https://cdn.staticaly.com/gh/hjnilsson/country-flags/master/svg/it.svg" width="22">](https://github.com/codinasion/codinasion/blob/master/README-it.md)</kbd>
-
-<div align="center">
-  <img src="https://raw.githubusercontent.com/codinasion/codinasion/master/assets/rainbow-hr.png" alt="rainbow hr" width="100%" height="70%">
-</div>
-
-## How to setup
-
-1. Fork this repository
-2. Clone the forked repository
-3. Install dependencies
-
-   ```bash
-   pnpm install
-   ```
-
-4. Run the development server
-
-   ```bash
-    pnpm run dev
-    # or, run a specific project
-    pnpm run dev --filter web
-   ```
-
-> **Note** More information can be found in the specific project's README
-
-<div align="center">
-  <img src="https://raw.githubusercontent.com/codinasion/codinasion/master/assets/rainbow-hr.png" alt="rainbow hr" width="100%" height="70%">
-</div>
-
-<br>
-
-See full documentation about `Turbo Repo` at https://turbo.build/repo
+<kbd>[<img title="English" alt="English" src="https://cdn.statically.io/gh/hjnilsson/country-flags/master/svg/us.svg" width="22">](https://github.com/codinasion/codinasion/blob/master/README.md)</kbd> <kbd>[<img title="Português" alt="Português" src="https://cdn.statically.io/gh/hjnilsson/country-flags/master/svg/br.svg" width="22">](https://github.com/codinasion/codinasion/blob/master/README-pt-br.md)</kbd> <kbd>[<img title="Français" alt="Français" src="https://cdn.statically.io/gh/hjnilsson/country-flags/master/svg/fr.svg" width="22">](https://github.com/codinasion/codinasion/blob/master/README-fr.md)</kbd> <kbd>[<img title="Italiano" alt="Italiano" src="https://cdn.statically.io/gh/hjnilsson/country-flags/master/svg/it.svg" width="22">](https://github.com/codinasion/codinasion/blob/master/README-it.md)</kbd>
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/codinasion/codinasion/master/assets/rainbow-hr.png" alt="rainbow hr" width="100%" height="70%">
@@ -75,6 +41,14 @@ We want to make contributing to this project as easy and transparent as possible
 ## Join us in discussions
 
 We use GitHub Discussions to talk about all sorts of topics related to documentation and this site. For example: if you'd like help troubleshooting a PR, have a great new idea, or want to share something amazing, join us in the [discussions](https://github.com/orgs/codinasion/discussions).
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/codinasion/codinasion/master/assets/rainbow-hr.png" alt="rainbow hr" width="100%" height="70%">
+</div>
+
+## Sponsors & Backers
+
+![Sponsors](https://raw.githubusercontent.com/codinasion/sponsors/sponsors/sponsors.svg)
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/codinasion/codinasion/master/assets/rainbow-hr.png" alt="rainbow hr" width="100%" height="70%">
@@ -103,7 +77,7 @@ We use GitHub Discussions to talk about all sorts of topics related to documenta
 <br/>
 
 <p align="center">
-Made with 💖 by Codinasion
+Made with 💖 by <a href="https://github.com/codinasion"><b>Codinasion</b></a>
 </p>
 
 <div align="center">
