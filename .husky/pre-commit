@@ -17,7 +17,8 @@ echo "${GREEN}${CC}${NC}: Roger. Pre-commit hook started."
 echo ""
 echo "${RED}${CDR}${NC}: Installing all dependencies"
 # pnpm install 1>/dev/null
-pnpm install
+pnpm install --no-frozen-lockfile
+git add pnpm-lock.yaml
 echo "${GREEN}${CC}${NC}: ${CDR}, ${CC}. Installation confirmed; You're looking good."
 
 # Check if apps folder files are changed
