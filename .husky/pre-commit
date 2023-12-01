@@ -16,8 +16,7 @@ echo "${GREEN}${CC}${NC}: Roger. Pre-commit hook started."
 
 echo ""
 echo "${RED}${CDR}${NC}: Installing all dependencies"
-# pnpm install 1>/dev/null
-pnpm install --no-frozen-lockfile
+pnpm install --no-frozen-lockfile 1>/dev/null
 git add pnpm-lock.yaml
 echo "${GREEN}${CC}${NC}: ${CDR}, ${CC}. Installation confirmed; You're looking good."
 
