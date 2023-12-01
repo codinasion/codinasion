@@ -1,1 +1,2 @@
-../../../codinasion/src/language-data/index.ts
+export * from "./language-data";
+export * from "./type";

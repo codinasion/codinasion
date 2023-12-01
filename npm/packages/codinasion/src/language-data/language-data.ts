@@ -2,11 +2,11 @@ import { LanguageData } from "./data";
 import type { LanguageDataType, GetLanguageDataInputType } from "./type";
 
 /**
- * Get an array of language data objects based on the provided input.
- * @param name - The name of the language.
- * @param fileExtension - The file extension of the language.
- * @param prismTag - The Prism tag of the language.
- * @returns An array of language data objects.
+ * Retrieves language data based on the provided input.
+ * @param name - The name of the language (optional).
+ * @param fileExtension - The file extension associated with the language (optional).
+ * @param prismTag - The Prism tag associated with the language (optional).
+ * @returns An array of language data matching the provided input.
  */
 export function GetLanguageData({
   name,

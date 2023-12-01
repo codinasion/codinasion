@@ -19,21 +19,45 @@ echo "${RED}${CDR}${NC}: Installing all dependencies"
 pnpm install 1>/dev/null
 echo "${GREEN}${CC}${NC}: ${CDR}, ${CC}. Installation confirmed; You're looking good."
 
-echo ""
-echo "${RED}${CDR}${NC}: Linting code"
-pnpm lint 1>/dev/null
-echo "${GREEN}${CC}${NC}: We confirm linting."
+# Check if apps folder files are changed
+if git diff --cached --name-only | grep -q "^apps/"; then
+    echo ""
+    echo "${BLUE}INFO${NC}: Changes in ${YELLOW}apps${NC} folder detected."
+    echo "${BLUE}INFO${NC}: Executing ${GREEN}${PROTO_APPS}${NC} for ${YELLOW}pre-commit${NC} hook."
+    echo ""
+    echo "${RED}${CDR}${NC}: Linting code"
+    pnpm lint:apps 1>/dev/null
+    echo "${GREEN}${CC}${NC}: We confirm linting."
+    echo ""
+    echo "${RED}${CDR}${NC}: Roger."
+    echo "${RED}${CDR}${NC}: Testing code"
+    pnpm test:apps 1>/dev/null
+    echo "${GREEN}${CC}${NC}: Roger. We confirm testing."
+    echo ""
+    echo "${RED}${CDR}${NC}: Formatting code"
+    pnpm format:apps 1>/dev/null
+    echo "${GREEN}${CC}${NC}: Roger. We confirm formatting."
+fi
 
-echo ""
-echo "${RED}${CDR}${NC}: Roger."
-echo "${RED}${CDR}${NC}: Testing code"
-pnpm test 1>/dev/null
-echo "${GREEN}${CC}${NC}: Roger. We confirm testing."
-
-echo ""
-echo "${RED}${CDR}${NC}: Formatting code"
-pnpm format 1>/dev/null
-echo "${GREEN}${CC}${NC}: Roger. We confirm formatting."
+# Check if "npm" or "config" folder files are changed (any one of them)
+if git diff --cached --name-only | grep -q "^npm/" || git diff --cached --name-only | grep -q "^config/"; then
+    echo ""
+    echo "${BLUE}INFO${NC}: Changes in ${YELLOW}packages${NC} detected."
+    echo "${BLUE}INFO${NC}: Executing ${GREEN}${PROTO_NPM}${NC} for ${YELLOW}pre-commit${NC} hook."
+    echo ""
+    echo "${RED}${CDR}${NC}: Linting code"
+    pnpm lint:packages 1>/dev/null
+    echo "${GREEN}${CC}${NC}: We confirm linting."
+    echo ""
+    echo "${RED}${CDR}${NC}: Roger."
+    echo "${RED}${CDR}${NC}: Testing code"
+    pnpm test:packages 1>/dev/null
+    echo "${GREEN}${CC}${NC}: Roger. We confirm testing."
+    echo ""
+    echo "${RED}${CDR}${NC}: Formatting code"
+    pnpm format:packages 1>/dev/null
+    echo "${GREEN}${CC}${NC}: Roger. We confirm formatting."
+fi
 
 echo ""
 echo "${RED}${CDR}${NC}: Checking for unstaged changes"
