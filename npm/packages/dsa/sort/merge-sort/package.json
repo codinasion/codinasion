@@ -67,7 +67,7 @@
     "test": "jest --config jestconfig.json --maxWorkers=50% --passWithNoTests"
   },
   "devDependencies": {
-    "@codinasion/eslint-config": "1.0.2",
+    "@codinasion/eslint-config": "1.0.3",
     "@codinasion/typescript-config": "1.0.2",
     "@types/jest": "^29.5.10",
     "@types/node": "^20.10.0",
