@@ -52,7 +52,7 @@ jobs:
         uses: crazy-max/ghaction-github-pages@v3.0.0
         with:
           target_branch: "program-data"
-          build_dir: action/program-data
+          build_dir: program-data
           keep_history: false
           committer: Harsh Raj <harshraj8843@users.noreply.github.com>
           author: Harsh Raj <harshraj8843@users.noreply.github.com>

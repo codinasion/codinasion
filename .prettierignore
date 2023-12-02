@@ -1,5 +1,5 @@
 pnpm-lock.yaml
 .next
 dist
-action/program-data/
+program-data/
 program/program

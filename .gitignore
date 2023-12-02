@@ -39,4 +39,4 @@ yarn-error.log*
 # packages
 dist/
 !action/dist/
-action/program-data/
+program-data/

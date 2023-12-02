@@ -73,37 +73,37 @@ if git diff --cached --name-only | grep -q "^apps/" || git diff --cached --name-
         pnpm build --filter action 1>/dev/null
         echo "${GREEN}${CC}${NC}: We confirm dist/ building."
     fi
-
-    echo ""
-    echo "${RED}${CDR}${NC}: Checking for unstaged changes"
-    if ! git diff --quiet --exit-code; then
-        echo "${GREEN}${CC}${NC}: Roger. We confirm ${RED}there are unstaged changes${NC}."
-        echo "${GREEN}${CC}${NC}: Please stage your changes."
-        echo ""
-        echo "${BLUE}INFO${NC}: Commit aborted."
-        echo ""
-        exit 1
-    fi
-    echo "${GREEN}${CC}${NC}: Roger. We confirm no unstaged changes."
-
-    echo ""
-    echo "${RED}${CDR}${NC}: Checking for branch"
-    if [ "$(git rev-parse --abbrev-ref HEAD)" = "master" ]; then
-        echo "${GREEN}${CC}${NC}: Roger. We confirm ${RED}you are on master${NC}."
-        echo "${GREEN}${CC}${NC}: Please checkout to another branch."
-        echo ""
-        echo "${BLUE}INFO${NC}: Commit aborted."
-        echo ""
-        exit 1
-    fi
-    echo "${GREEN}${CC}${NC}: Roger. We confirm you are not on master."
-
-    echo ""
-    echo "${RED}${CDR}${NC}: Pre-commit hook finished"
-    echo "${GREEN}${CC}${NC}: ${CDR}, this is ${CC}. Pre-commit hook finished."
-    echo "${GREEN}${CC}${NC}: You are GO for commit."
-
-    echo ""
-    echo "${RED}${CDR}${NC}: Roger. I'm on it."
-    echo "${GREEN}${CC}${NC}: Roger. Commit started."
 fi
+
+echo ""
+echo "${RED}${CDR}${NC}: Checking for unstaged changes"
+if ! git diff --quiet --exit-code; then
+    echo "${GREEN}${CC}${NC}: Roger. We confirm ${RED}there are unstaged changes${NC}."
+    echo "${GREEN}${CC}${NC}: Please stage your changes."
+    echo ""
+    echo "${BLUE}INFO${NC}: Commit aborted."
+    echo ""
+    exit 1
+fi
+echo "${GREEN}${CC}${NC}: Roger. We confirm no unstaged changes."
+
+echo ""
+echo "${RED}${CDR}${NC}: Checking for branch"
+if [ "$(git rev-parse --abbrev-ref HEAD)" = "master" ]; then
+    echo "${GREEN}${CC}${NC}: Roger. We confirm ${RED}you are on master${NC}."
+    echo "${GREEN}${CC}${NC}: Please checkout to another branch."
+    echo ""
+    echo "${BLUE}INFO${NC}: Commit aborted."
+    echo ""
+    exit 1
+fi
+echo "${GREEN}${CC}${NC}: Roger. We confirm you are not on master."
+
+echo ""
+echo "${RED}${CDR}${NC}: Pre-commit hook finished"
+echo "${GREEN}${CC}${NC}: ${CDR}, this is ${CC}. Pre-commit hook finished."
+echo "${GREEN}${CC}${NC}: You are GO for commit."
+
+echo ""
+echo "${RED}${CDR}${NC}: Roger. I'm on it."
+echo "${GREEN}${CC}${NC}: Roger. Commit started."
