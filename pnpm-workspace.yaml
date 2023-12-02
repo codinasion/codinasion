@@ -1,5 +1,6 @@
 packages:
   # include
+  - "action"
   - "apps/*"
   - "assets"
   - "config/**"

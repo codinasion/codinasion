@@ -4,8 +4,20 @@ on:
   workflow_dispatch:
   push:
     branches: ["master"]
+    paths:
+      - "apps/**"
+      - "config/**"
+      - "npm/**"
+      - "package.json"
+      - "pnpm-lock.yaml"
   pull_request:
     types: [opened, synchronize]
+    paths:
+      - "apps/**"
+      - "config/**"
+      - "npm/**"
+      - "package.json"
+      - "pnpm-lock.yaml"
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 

@@ -1,0 +1,23 @@
+name: "action"
+description: "Codinasion GitHub Actions"
+author: "Codinasion"
+
+# Define your inputs here.
+inputs:
+  GITHUB_TOKEN:
+    description: "`content: read` GitHub Token"
+    required: true
+
+  TRIGGER_COLLECT_PROGRAM_DATA:
+    description: "Trigger collect program data"
+    required: true
+    default: "false"
+
+  TEST:
+    description: "is test?"
+    required: true
+    default: "false"
+
+runs:
+  using: node20
+  main: dist/index.js

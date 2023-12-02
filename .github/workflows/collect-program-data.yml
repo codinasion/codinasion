@@ -1,0 +1,62 @@
+name: Collect Program Data
+
+on:
+  schedule:
+    - cron: "7 0 * * *"
+  workflow_dispatch:
+    inputs:
+      TEST:
+        description: "This is a test ?"
+        required: true
+        type: boolean
+        default: false
+
+jobs:
+  collect-program-data:
+    name: Collect Program Data
+
+    runs-on: "ubuntu-latest"
+
+    steps:
+      - name: Checkout
+        id: checkout
+        uses: actions/checkout@v4
+
+      - name: Check Program Files
+        run: |
+          cd program/
+          python3 scripts/rename_files.py
+
+      - name: Collect Program Data
+        id: collect-program-data
+        uses: ./action/
+        with:
+          TEST: ${{ inputs.TEST || 'false' }}
+
+          # Trigger
+          TRIGGER_COLLECT_PROGRAM_DATA: true
+
+          # Secrets
+          GITHUB_TOKEN: ${{ secrets.CODINASION_GITHUB_TOKEN }}
+
+      - name: Get Time
+        if: github.event.inputs.TEST == 'false'
+        id: time
+        uses: nanzm/get-time-action@master
+        with:
+          timeZone: UTC+5.5
+          format: "YYYY-MM-DD-HH-mm-ss"
+
+      - name: Commit Program Data
+        if: github.event.inputs.TEST == 'false'
+        uses: crazy-max/ghaction-github-pages@v3.0.0
+        with:
+          target_branch: "program-data"
+          build_dir: action/program-data
+          keep_history: false
+          committer: Harsh Raj <harshraj8843@users.noreply.github.com>
+          author: Harsh Raj <harshraj8843@users.noreply.github.com>
+          commit_message: |
+            Collect Program Data - ${{ steps.time.outputs.time }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
