@@ -1,10 +1,15 @@
 import type { MetadataRoute } from "next";
-import { SiteMetadata, LanguageList } from "@/data";
+import {
+  SiteMetadata,
+  LanguageList,
+  GetProgramList,
+  GetProgramLanguageList,
+} from "@/data";
 import { EncodeURL as EncodeLanguage } from "@/utils";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Add default pages
-  const routes = [""].map((route) => ({
+  const routes = ["", "program"].map((route) => ({
     url: `${SiteMetadata.site_url}/${route}`,
     lastModified: new Date(),
     changeFrequency: "daily" as "daily",
@@ -21,5 +26,30 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.9,
   }));
 
-  return [...routes, ...goodfirstissuesRoutes];
+  // /program/:slug
+  const programList = await GetProgramList();
+  const programRoutes = programList.map((program) => ({
+    url: `${SiteMetadata.site_url}/program/${program.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "daily" as "daily",
+    priority: 0.9,
+  }));
+
+  // /program/languages/:language
+  const programLanguageList = await GetProgramLanguageList();
+  const programLanguageRoutes = programLanguageList.map((language) => ({
+    url: `${SiteMetadata.site_url}/program/languages/${EncodeLanguage(
+      language,
+    )}`,
+    lastModified: new Date(),
+    changeFrequency: "daily" as "daily",
+    priority: 0.9,
+  }));
+
+  return [
+    ...routes,
+    ...goodfirstissuesRoutes,
+    ...programRoutes,
+    ...programLanguageRoutes,
+  ];
 }

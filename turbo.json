@@ -1,7 +1,11 @@
 {
   "$schema": "https://turbo.build/schema.json",
   "globalDependencies": ["**/.env.*local"],
-  "globalEnv": ["GITHUB_API_URL", "CODINASION_GITHUB_TOKEN"],
+  "globalEnv": [
+    "GITHUB_API_URL",
+    "CODINASION_GITHUB_TOKEN",
+    "PROGRAM_DATA_URL"
+  ],
   "pipeline": {
     "dev": {
       "cache": false,

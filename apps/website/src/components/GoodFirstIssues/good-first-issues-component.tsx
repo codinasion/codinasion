@@ -7,12 +7,12 @@ import GoodFirstIssueFilterByLabelComponent from "./good-first-issue-filter-by-l
 import { ScrollToTop } from "@/utils";
 import type { GoodFirstIssueType, GoodFirstIssueLabelDataType } from "@/types";
 
-type Props = {
+interface Props {
   language: string | null;
   goodFirstIssues: GoodFirstIssueType[];
   goodFirstIssueLabelsData: GoodFirstIssueLabelDataType[];
   goodFirstIssuesPerPage: number;
-};
+}
 
 export default function GoodFirstIssuesComponent({
   language,
