@@ -8,7 +8,7 @@
 
 
 # Code owners for Website(s) and api(s)
-/apps/                  @codinasion/web-dev     @harshraj8843
+/website/                  @codinasion/web-dev     @harshraj8843
 
 
 # Code owners for Github Bot(s)
