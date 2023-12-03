@@ -40,7 +40,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.CODINASION_GITHUB_TOKEN }}
 
       - name: Get Time
-        if: github.event.inputs.TEST == 'false'
+        if: github.event_name == 'workflow_dispatch' || github.event.inputs.TEST == 'false'
         id: time
         uses: nanzm/get-time-action@master
         with:
@@ -48,7 +48,7 @@ jobs:
           format: "YYYY-MM-DD-HH-mm-ss"
 
       - name: Commit Program Data
-        if: github.event.inputs.TEST == 'false'
+        if: github.event_name == 'workflow_dispatch' || github.event.inputs.TEST == 'false'
         uses: crazy-max/ghaction-github-pages@v3.0.0
         with:
           target_branch: "program-data"
