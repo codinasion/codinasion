@@ -23,7 +23,7 @@ Colabore, Crie, Inove: Juntos com o Open Source ❤️
 
 Leia este `Readme` em outras linguagens:
 
-<kbd>[<img title="English" alt="English" src="https://cdn.statically.io/gh/hjnilsson/country-flags/master/svg/us.svg" width="22">](https://github.com/codinasion/codinasion/blob/master/README.md)</kbd> <kbd>[<img title="Português" alt="Português" src="https://cdn.statically.io/gh/hjnilsson/country-flags/master/svg/br.svg" width="22">](https://github.com/codinasion/codinasion/blob/master/README-pt-br.md)</kbd> <kbd>[<img title="Français" alt="Français" src="https://cdn.statically.io/gh/hjnilsson/country-flags/master/svg/fr.svg" width="22">](https://github.com/codinasion/codinasion/blob/master/README-fr.md)</kbd> <kbd>[<img title="Italiano" alt="Italiano" src="https://cdn.statically.io/gh/hjnilsson/country-flags/master/svg/it.svg" width="22">](https://github.com/codinasion/codinasion/blob/master/README-it.md)</kbd>
+<kbd>[<img title="English" alt="English" src="https://cdn.statically.io/gh/hjnilsson/country-flags/master/svg/us.svg" width="22">](https://github.com/codinasion/codinasion/blob/master/README.md)</kbd> <kbd>[<img title="Português" alt="Português" src="https://cdn.statically.io/gh/hjnilsson/country-flags/master/svg/br.svg" width="22">](https://github.com/codinasion/codinasion/blob/master/translations/README-pt-br.md)</kbd> <kbd>[<img title="Français" alt="Français" src="https://cdn.statically.io/gh/hjnilsson/country-flags/master/svg/fr.svg" width="22">](https://github.com/codinasion/codinasion/blob/master/translations/README-fr.md)</kbd> <kbd>[<img title="Italiano" alt="Italiano" src="https://cdn.statically.io/gh/hjnilsson/country-flags/master/svg/it.svg" width="22">](https://github.com/codinasion/codinasion/blob/master/translations/README-it.md)</kbd>
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/codinasion/codinasion/master/assets/rainbow-hr.png" alt="linha colorida" width="100%" height="70%">
@@ -32,7 +32,7 @@ Leia este `Readme` em outras linguagens:
 ## Contribuindo
 
 Se você procura uma forma de contribuir, você pode verificar nossos problemas existentes para encontrar algo para trabalhar.
-Queremos tornar a contribuição para este projeto o mais fácil e transparente possível, e somos gratos à comunidade por contribuir com correções de bugs e melhorias. Leia nosso [Guia de Contribuição](https://github.com/codinasion/codinasion/blob/master/CONTRIBUTING-pt-br.md) sobre como você pode participar da melhoria do Codinasion.
+Queremos tornar a contribuição para este projeto o mais fácil e transparente possível, e somos gratos à comunidade por contribuir com correções de bugs e melhorias. Leia nosso [Guia de Contribuição](https://github.com/codinasion/codinasion/blob/master/translations/CONTRIBUTING-pt-br.md) sobre como você pode participar da melhoria do Codinasion.
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/codinasion/codinasion/master/assets/rainbow-hr.png" alt="linha colorida" width="100%" height="70%">
