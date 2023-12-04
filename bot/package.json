@@ -1,0 +1,22 @@
+{
+  "name": "bot",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "probot run ./app.js"
+  },
+  "dependencies": {
+    "probot": "^12.2.4"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "nock": "^13.0.5",
+    "smee-client": "^1.2.2"
+  },
+  "engines": {
+    "node": ">= 10.13.0"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}

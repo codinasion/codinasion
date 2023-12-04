@@ -2,6 +2,7 @@ packages:
   # include
   - "action"
   - "assets"
+  - "bot"
   - "config/**"
   - "npm/**"
   - "og"
