@@ -21,7 +21,7 @@
     "@typescript-eslint/eslint-plugin": "^6.12.0",
     "@typescript-eslint/parser": "^6.12.0",
     "@vercel/ncc": "^0.38.1",
-    "dotenv": "^16.0.3",
+    "dotenv": "16.3.1",
     "eslint": "^8.54.0",
     "eslint-plugin-github": "^4.10.1",
     "eslint-plugin-jsonc": "^2.10.0",

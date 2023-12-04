@@ -1,0 +1,11 @@
+{
+  "name": "og",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "@sparticuz/chromium": "92.0.0",
+    "dotenv": "16.3.1",
+    "jimp": "^0.22.10",
+    "puppeteer-core": "10.0.0"
+  }
+}

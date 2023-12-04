@@ -4,6 +4,7 @@ packages:
   - "assets"
   - "config/**"
   - "npm/**"
+  - "og"
   - "website"
 
   # exclude
