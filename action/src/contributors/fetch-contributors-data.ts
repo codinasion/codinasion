@@ -80,7 +80,16 @@ export default async function FetchContributorsData({
 
     core.debug(`Total contributors fetched: ${contributors.length}`);
 
-    return contributors;
+    // Remove [BOT] users from contributors list
+    const filteredContributors = contributors.filter(
+      (contributor) => contributor.login.includes("[bot]") === false,
+    );
+
+    core.debug(
+      `Total contributors excluding bots: ${filteredContributors.length}`,
+    );
+
+    return filteredContributors;
   } catch (error) {
     core.setFailed(
       error instanceof Error ? error.message : "Unknown error occurred",

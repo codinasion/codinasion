@@ -29,8 +29,8 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="flex flex-col items-center">
-        <div className="mb-5 flex flex-wrap items-center gap-8 text-sm text-gray-400 hover:text-gray-500 dark:text-gray-500 hover:dark:text-gray-400">
+      <div className="flex flex-col items-center mb-5">
+        <div className="flex flex-wrap items-center gap-x-8 gap-y-2 text-sm text-gray-400 hover:text-gray-500 dark:text-gray-500 hover:dark:text-gray-400">
           {FooterLinksData.map((FooterLink) => (
             <Link
               key={FooterLink.title}
