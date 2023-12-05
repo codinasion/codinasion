@@ -1,9 +1,13 @@
 import Link from "@/components/Link";
+import ContributorsSection from "@/components/Contributors/contributors-section";
+import { GetContributorsList } from "@/data";
 
-export default function Page(): JSX.Element {
+export default async function Page(): Promise<JSX.Element> {
+  const contributors = await GetContributorsList();
+
   return (
     <div className="relative md:py-10 px-6 lg:px-8">
-      <div className="mx-auto max-w-3xl pt-5 md:pt-10 pb-10 sm:pt-20 sm:pb-10">
+      <div className="mx-auto max-w-4xl pt-5 md:pt-10 pb-10 sm:pt-20 sm:pb-10">
         <div>
           <h1 className="text-4xl font-bold tracking-tight sm:text-center sm:text-6xl">
             Codinasion
@@ -38,6 +42,13 @@ export default function Page(): JSX.Element {
             </Link>
           </div>
         </div>
+      </div>
+      <div className="mt-20">
+        <ContributorsSection
+          contributors={contributors}
+          previewOnly={true}
+          shuffleContributors={true}
+        />
       </div>
     </div>
   );

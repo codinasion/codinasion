@@ -34,6 +34,7 @@ export default function ProgramLanguageComponent({
                   className="w-16 rounded shadow-lg"
                   height={128}
                   width={128}
+                  priority
                 />
               </Link>
             </div>

@@ -27,6 +27,7 @@ export default function PoweredByVercel(): JSX.Element {
           height={20}
           width={80}
           alt="Vercel Light Logo"
+          priority
         />
       ) : (
         <Image
@@ -35,6 +36,7 @@ export default function PoweredByVercel(): JSX.Element {
           height={20}
           width={80}
           alt="Vercel Dark Logo"
+          priority
         />
       )}
     </Link>

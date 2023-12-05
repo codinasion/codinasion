@@ -1,4 +1,5 @@
 import { FaUserAstronaut } from "react-icons/fa";
+import { Tooltip } from "flowbite-react";
 import Link from "@/components/Link";
 import Image from "@/components/Image";
 
@@ -20,15 +21,18 @@ export default function ProgramContributorsComponent({
         <div className="py-2 flex flex-wrap">
           {programContributors.map((github_username: string) => (
             <div key={github_username} className="m-1">
-              <Link href={`https://github.com/${github_username}`}>
-                <Image
-                  src={`https://github.com/${github_username}.png`}
-                  alt={github_username}
-                  className="w-16 h-16 rounded-xl shadow-lg m-0.5"
-                  height={128}
-                  width={128}
-                />
-              </Link>
+              <Tooltip key={github_username} content={github_username}>
+                <Link href={`https://github.com/${github_username}`}>
+                  <Image
+                    src={`https://github.com/${github_username}.png`}
+                    alt={github_username}
+                    className="w-16 h-16 rounded-xl shadow-lg m-0.5"
+                    height={128}
+                    width={128}
+                    priority
+                  />
+                </Link>
+              </Tooltip>
             </div>
           ))}
         </div>

@@ -4,7 +4,8 @@
   "globalEnv": [
     "GITHUB_API_URL",
     "CODINASION_GITHUB_TOKEN",
-    "PROGRAM_DATA_URL"
+    "PROGRAM_DATA_URL",
+    "CONTRIBUTORS_DATA_URL"
   ],
   "pipeline": {
     "dev": {

@@ -3,7 +3,10 @@ import { fontFamily } from "tailwindcss/defaultTheme";
 import colors from "tailwindcss/colors";
 
 const config: Config = {
-  content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
+  content: [
+    "./node_modules/flowbite-react/**/*.js",
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
   darkMode: "class",
   theme: {
     extend: {
@@ -60,6 +63,6 @@ const config: Config = {
       }),
     },
   },
-  plugins: [require("@tailwindcss/typography")],
+  plugins: [require("flowbite/plugin"), require("@tailwindcss/typography")],
 };
 export default config;
