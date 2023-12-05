@@ -1834,6 +1834,71 @@ function isLoopbackAddress(host) {
 
 /***/ }),
 
+/***/ 8359:
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __nccwpck_require__) => {
+
+(function () {
+  (__nccwpck_require__(8374).config)(
+    Object.assign(
+      {},
+      __nccwpck_require__(6360),
+      __nccwpck_require__(9996)(process.argv)
+    )
+  )
+})()
+
+
+/***/ }),
+
+/***/ 9996:
+/***/ ((module) => {
+
+const re = /^dotenv_config_(encoding|path|debug|override|DOTENV_KEY)=(.+)$/
+
+module.exports = function optionMatcher (args) {
+  return args.reduce(function (acc, cur) {
+    const matches = cur.match(re)
+    if (matches) {
+      acc[matches[1]] = matches[2]
+    }
+    return acc
+  }, {})
+}
+
+
+/***/ }),
+
+/***/ 6360:
+/***/ ((module) => {
+
+// ../config.js accepts options via environment variables
+const options = {}
+
+if (process.env.DOTENV_CONFIG_ENCODING != null) {
+  options.encoding = process.env.DOTENV_CONFIG_ENCODING
+}
+
+if (process.env.DOTENV_CONFIG_PATH != null) {
+  options.path = process.env.DOTENV_CONFIG_PATH
+}
+
+if (process.env.DOTENV_CONFIG_DEBUG != null) {
+  options.debug = process.env.DOTENV_CONFIG_DEBUG
+}
+
+if (process.env.DOTENV_CONFIG_OVERRIDE != null) {
+  options.override = process.env.DOTENV_CONFIG_OVERRIDE
+}
+
+if (process.env.DOTENV_CONFIG_DOTENV_KEY != null) {
+  options.DOTENV_KEY = process.env.DOTENV_CONFIG_DOTENV_KEY
+}
+
+module.exports = options
+
+
+/***/ }),
+
 /***/ 8374:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
@@ -9571,6 +9636,7279 @@ if (process.env.NODE_DEBUG && /\btunnel\b/.test(process.env.NODE_DEBUG)) {
   debug = function() {};
 }
 exports.debug = debug; // for test
+
+
+/***/ }),
+
+/***/ 5879:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.FormDataHelper = void 0;
+const helpers_1 = __nccwpck_require__(522);
+// This class is partially inspired by https://github.com/form-data/form-data/blob/master/lib/form_data.js
+// All credits to their authors.
+class FormDataHelper {
+    constructor() {
+        this._boundary = '';
+        this._chunks = [];
+    }
+    bodyAppend(...values) {
+        const allAsBuffer = values.map(val => val instanceof Buffer ? val : Buffer.from(val));
+        this._chunks.push(...allAsBuffer);
+    }
+    append(field, value, contentType) {
+        const convertedValue = value instanceof Buffer ? value : value.toString();
+        const header = this.getMultipartHeader(field, convertedValue, contentType);
+        this.bodyAppend(header, convertedValue, FormDataHelper.LINE_BREAK);
+    }
+    getHeaders() {
+        return {
+            'content-type': 'multipart/form-data; boundary=' + this.getBoundary(),
+        };
+    }
+    /** Length of form-data (including footer length). */
+    getLength() {
+        return this._chunks.reduce((acc, cur) => acc + cur.length, this.getMultipartFooter().length);
+    }
+    getBuffer() {
+        const allChunks = [...this._chunks, this.getMultipartFooter()];
+        const totalBuffer = Buffer.alloc(this.getLength());
+        let i = 0;
+        for (const chunk of allChunks) {
+            for (let j = 0; j < chunk.length; i++, j++) {
+                totalBuffer[i] = chunk[j];
+            }
+        }
+        return totalBuffer;
+    }
+    getBoundary() {
+        if (!this._boundary) {
+            this.generateBoundary();
+        }
+        return this._boundary;
+    }
+    generateBoundary() {
+        // This generates a 50 character boundary similar to those used by Firefox.
+        let boundary = '--------------------------';
+        for (let i = 0; i < 24; i++) {
+            boundary += Math.floor(Math.random() * 10).toString(16);
+        }
+        this._boundary = boundary;
+    }
+    getMultipartHeader(field, value, contentType) {
+        // In this lib no need to guess more the content type, octet stream is ok of buffers
+        if (!contentType) {
+            contentType = value instanceof Buffer ? FormDataHelper.DEFAULT_CONTENT_TYPE : '';
+        }
+        const headers = {
+            'Content-Disposition': ['form-data', `name="${field}"`],
+            'Content-Type': contentType,
+        };
+        let contents = '';
+        for (const [prop, header] of Object.entries(headers)) {
+            // skip nullish headers.
+            if (!header.length) {
+                continue;
+            }
+            contents += prop + ': ' + (0, helpers_1.arrayWrap)(header).join('; ') + FormDataHelper.LINE_BREAK;
+        }
+        return '--' + this.getBoundary() + FormDataHelper.LINE_BREAK + contents + FormDataHelper.LINE_BREAK;
+    }
+    getMultipartFooter() {
+        if (this._footerChunk) {
+            return this._footerChunk;
+        }
+        return this._footerChunk = Buffer.from('--' + this.getBoundary() + '--' + FormDataHelper.LINE_BREAK);
+    }
+}
+exports.FormDataHelper = FormDataHelper;
+FormDataHelper.LINE_BREAK = '\r\n';
+FormDataHelper.DEFAULT_CONTENT_TYPE = 'application/octet-stream';
+
+
+/***/ }),
+
+/***/ 8761:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.OAuth1Helper = void 0;
+const crypto = __importStar(__nccwpck_require__(6113));
+class OAuth1Helper {
+    constructor(options) {
+        this.nonceLength = 32;
+        this.consumerKeys = options.consumerKeys;
+    }
+    static percentEncode(str) {
+        return encodeURIComponent(str)
+            .replace(/!/g, '%21')
+            .replace(/\*/g, '%2A')
+            .replace(/'/g, '%27')
+            .replace(/\(/g, '%28')
+            .replace(/\)/g, '%29');
+    }
+    hash(base, key) {
+        return crypto
+            .createHmac('sha1', key)
+            .update(base)
+            .digest('base64');
+    }
+    authorize(request, accessTokens = {}) {
+        const oauthInfo = {
+            oauth_consumer_key: this.consumerKeys.key,
+            oauth_nonce: this.getNonce(),
+            oauth_signature_method: 'HMAC-SHA1',
+            oauth_timestamp: this.getTimestamp(),
+            oauth_version: '1.0',
+        };
+        if (accessTokens.key !== undefined) {
+            oauthInfo.oauth_token = accessTokens.key;
+        }
+        if (!request.data) {
+            request.data = {};
+        }
+        oauthInfo.oauth_signature = this.getSignature(request, accessTokens.secret, oauthInfo);
+        return oauthInfo;
+    }
+    toHeader(oauthInfo) {
+        const sorted = sortObject(oauthInfo);
+        let header_value = 'OAuth ';
+        for (const element of sorted) {
+            if (element.key.indexOf('oauth_') !== 0) {
+                continue;
+            }
+            header_value += OAuth1Helper.percentEncode(element.key) + '="' + OAuth1Helper.percentEncode(element.value) + '",';
+        }
+        return {
+            // Remove the last ,
+            Authorization: header_value.slice(0, header_value.length - 1),
+        };
+    }
+    getNonce() {
+        const wordCharacters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+        let result = '';
+        for (let i = 0; i < this.nonceLength; i++) {
+            result += wordCharacters[Math.trunc(Math.random() * wordCharacters.length)];
+        }
+        return result;
+    }
+    getTimestamp() {
+        return Math.trunc(new Date().getTime() / 1000);
+    }
+    getSignature(request, tokenSecret, oauthInfo) {
+        return this.hash(this.getBaseString(request, oauthInfo), this.getSigningKey(tokenSecret));
+    }
+    getSigningKey(tokenSecret) {
+        return OAuth1Helper.percentEncode(this.consumerKeys.secret) + '&' + OAuth1Helper.percentEncode(tokenSecret || '');
+    }
+    getBaseString(request, oauthInfo) {
+        return request.method.toUpperCase() + '&'
+            + OAuth1Helper.percentEncode(this.getBaseUrl(request.url)) + '&'
+            + OAuth1Helper.percentEncode(this.getParameterString(request, oauthInfo));
+    }
+    getParameterString(request, oauthInfo) {
+        const baseStringData = sortObject(percentEncodeData(mergeObject(oauthInfo, mergeObject(request.data, deParamUrl(request.url)))));
+        let dataStr = '';
+        for (const { key, value } of baseStringData) {
+            // check if the value is an array
+            // this means that this key has multiple values
+            if (value && Array.isArray(value)) {
+                // sort the array first
+                value.sort();
+                let valString = '';
+                // serialize all values for this key: e.g. formkey=formvalue1&formkey=formvalue2
+                value.forEach((item, i) => {
+                    valString += key + '=' + item;
+                    if (i < value.length) {
+                        valString += '&';
+                    }
+                });
+                dataStr += valString;
+            }
+            else {
+                dataStr += key + '=' + value + '&';
+            }
+        }
+        // Remove the last character
+        return dataStr.slice(0, dataStr.length - 1);
+    }
+    getBaseUrl(url) {
+        return url.split('?')[0];
+    }
+}
+exports.OAuth1Helper = OAuth1Helper;
+exports["default"] = OAuth1Helper;
+// Helper functions //
+function mergeObject(obj1, obj2) {
+    return {
+        ...obj1 || {},
+        ...obj2 || {},
+    };
+}
+function sortObject(data) {
+    return Object.keys(data)
+        .sort()
+        .map(key => ({ key, value: data[key] }));
+}
+function deParam(string) {
+    const split = string.split('&');
+    const data = {};
+    for (const coupleKeyValue of split) {
+        const [key, value = ''] = coupleKeyValue.split('=');
+        // check if the key already exists
+        // this can occur if the QS part of the url contains duplicate keys like this: ?formkey=formvalue1&formkey=formvalue2
+        if (data[key]) {
+            // the key exists already
+            if (!Array.isArray(data[key])) {
+                // replace the value with an array containing the already present value
+                data[key] = [data[key]];
+            }
+            // and add the new found value to it
+            data[key].push(decodeURIComponent(value));
+        }
+        else {
+            // it doesn't exist, just put the found value in the data object
+            data[key] = decodeURIComponent(value);
+        }
+    }
+    return data;
+}
+function deParamUrl(url) {
+    const tmp = url.split('?');
+    if (tmp.length === 1)
+        return {};
+    return deParam(tmp[1]);
+}
+function percentEncodeData(data) {
+    const result = {};
+    for (const key in data) {
+        let value = data[key];
+        // check if the value is an array
+        if (value && Array.isArray(value)) {
+            value = value.map(v => OAuth1Helper.percentEncode(v));
+        }
+        else {
+            value = OAuth1Helper.percentEncode(value);
+        }
+        result[OAuth1Helper.percentEncode(key)] = value;
+    }
+    return result;
+}
+
+
+/***/ }),
+
+/***/ 9115:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.OAuth2Helper = void 0;
+const crypto = __importStar(__nccwpck_require__(6113));
+class OAuth2Helper {
+    static getCodeVerifier() {
+        return this.generateRandomString(128);
+    }
+    static getCodeChallengeFromVerifier(verifier) {
+        return this.escapeBase64Url(crypto
+            .createHash('sha256')
+            .update(verifier)
+            .digest('base64'));
+    }
+    static getAuthHeader(clientId, clientSecret) {
+        const key = encodeURIComponent(clientId) + ':' + encodeURIComponent(clientSecret);
+        return Buffer.from(key).toString('base64');
+    }
+    static generateRandomString(length) {
+        let text = '';
+        const possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-._~';
+        for (let i = 0; i < length; i++) {
+            text += possible[Math.floor(Math.random() * possible.length)];
+        }
+        return text;
+    }
+    static escapeBase64Url(string) {
+        return string.replace(/=/g, '').replace(/\+/g, '-').replace(/\//g, '_');
+    }
+}
+exports.OAuth2Helper = OAuth2Helper;
+
+
+/***/ }),
+
+/***/ 3819:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.RequestHandlerHelper = void 0;
+const https_1 = __nccwpck_require__(5687);
+const settings_1 = __nccwpck_require__(5432);
+const TweetStream_1 = __importDefault(__nccwpck_require__(4874));
+const types_1 = __nccwpck_require__(1400);
+const zlib = __importStar(__nccwpck_require__(9796));
+const events_1 = __nccwpck_require__(2361);
+class RequestHandlerHelper {
+    constructor(requestData) {
+        this.requestData = requestData;
+        this.requestErrorHandled = false;
+        this.responseData = [];
+    }
+    /* Request helpers */
+    get hrefPathname() {
+        const url = this.requestData.url;
+        return url.hostname + url.pathname;
+    }
+    isCompressionDisabled() {
+        return !this.requestData.compression || this.requestData.compression === 'identity';
+    }
+    isFormEncodedEndpoint() {
+        return this.requestData.url.href.startsWith('https://api.twitter.com/oauth/');
+    }
+    /* Error helpers */
+    createRequestError(error) {
+        if (settings_1.TwitterApiV2Settings.debug) {
+            settings_1.TwitterApiV2Settings.logger.log('Request error:', error);
+        }
+        return new types_1.ApiRequestError('Request failed.', {
+            request: this.req,
+            error,
+        });
+    }
+    createPartialResponseError(error, abortClose) {
+        const res = this.res;
+        let message = `Request failed with partial response with HTTP code ${res.statusCode}`;
+        if (abortClose) {
+            message += ' (connection abruptly closed)';
+        }
+        else {
+            message += ' (parse error)';
+        }
+        return new types_1.ApiPartialResponseError(message, {
+            request: this.req,
+            response: this.res,
+            responseError: error,
+            rawContent: Buffer.concat(this.responseData).toString(),
+        });
+    }
+    formatV1Errors(errors) {
+        return errors
+            .map(({ code, message }) => `${message} (Twitter code ${code})`)
+            .join(', ');
+    }
+    formatV2Error(error) {
+        return `${error.title}: ${error.detail} (see ${error.type})`;
+    }
+    createResponseError({ res, data, rateLimit, code }) {
+        var _a;
+        if (settings_1.TwitterApiV2Settings.debug) {
+            settings_1.TwitterApiV2Settings.logger.log(`Request failed with code ${code}, data:`, data);
+            settings_1.TwitterApiV2Settings.logger.log('Response headers:', res.headers);
+        }
+        // Errors formatting.
+        let errorString = `Request failed with code ${code}`;
+        if ((_a = data === null || data === void 0 ? void 0 : data.errors) === null || _a === void 0 ? void 0 : _a.length) {
+            const errors = data.errors;
+            if ('code' in errors[0]) {
+                errorString += ' - ' + this.formatV1Errors(errors);
+            }
+            else {
+                errorString += ' - ' + this.formatV2Error(data);
+            }
+        }
+        return new types_1.ApiResponseError(errorString, {
+            code,
+            data,
+            headers: res.headers,
+            request: this.req,
+            response: res,
+            rateLimit,
+        });
+    }
+    /* Response helpers */
+    getResponseDataStream(res) {
+        if (this.isCompressionDisabled()) {
+            return res;
+        }
+        const contentEncoding = (res.headers['content-encoding'] || 'identity').trim().toLowerCase();
+        if (contentEncoding === 'br') {
+            const brotli = zlib.createBrotliDecompress({
+                flush: zlib.constants.BROTLI_OPERATION_FLUSH,
+                finishFlush: zlib.constants.BROTLI_OPERATION_FLUSH,
+            });
+            res.pipe(brotli);
+            return brotli;
+        }
+        if (contentEncoding === 'gzip') {
+            const gunzip = zlib.createGunzip({
+                flush: zlib.constants.Z_SYNC_FLUSH,
+                finishFlush: zlib.constants.Z_SYNC_FLUSH,
+            });
+            res.pipe(gunzip);
+            return gunzip;
+        }
+        if (contentEncoding === 'deflate') {
+            const inflate = zlib.createInflate({
+                flush: zlib.constants.Z_SYNC_FLUSH,
+                finishFlush: zlib.constants.Z_SYNC_FLUSH,
+            });
+            res.pipe(inflate);
+            return inflate;
+        }
+        return res;
+    }
+    detectResponseType(res) {
+        var _a, _b;
+        // Auto parse if server responds with JSON body
+        if (((_a = res.headers['content-type']) === null || _a === void 0 ? void 0 : _a.includes('application/json')) || ((_b = res.headers['content-type']) === null || _b === void 0 ? void 0 : _b.includes('application/problem+json'))) {
+            return 'json';
+        }
+        // f-e oauth token endpoints
+        else if (this.isFormEncodedEndpoint()) {
+            return 'url';
+        }
+        return 'text';
+    }
+    getParsedResponse(res) {
+        const data = this.responseData;
+        const mode = this.requestData.forceParseMode || this.detectResponseType(res);
+        if (mode === 'buffer') {
+            return Buffer.concat(data);
+        }
+        else if (mode === 'text') {
+            return Buffer.concat(data).toString();
+        }
+        else if (mode === 'json') {
+            const asText = Buffer.concat(data).toString();
+            return asText.length ? JSON.parse(asText) : undefined;
+        }
+        else if (mode === 'url') {
+            const asText = Buffer.concat(data).toString();
+            const formEntries = {};
+            for (const [item, value] of new URLSearchParams(asText)) {
+                formEntries[item] = value;
+            }
+            return formEntries;
+        }
+        else {
+            // mode === 'none'
+            return undefined;
+        }
+    }
+    getRateLimitFromResponse(res) {
+        let rateLimit = undefined;
+        if (res.headers['x-rate-limit-limit']) {
+            rateLimit = {
+                limit: Number(res.headers['x-rate-limit-limit']),
+                remaining: Number(res.headers['x-rate-limit-remaining']),
+                reset: Number(res.headers['x-rate-limit-reset']),
+            };
+            if (res.headers['x-app-limit-24hour-limit']) {
+                rateLimit.day = {
+                    limit: Number(res.headers['x-app-limit-24hour-limit']),
+                    remaining: Number(res.headers['x-app-limit-24hour-remaining']),
+                    reset: Number(res.headers['x-app-limit-24hour-reset']),
+                };
+            }
+            if (this.requestData.rateLimitSaver) {
+                this.requestData.rateLimitSaver(rateLimit);
+            }
+        }
+        return rateLimit;
+    }
+    /* Request event handlers */
+    onSocketEventHandler(reject, cleanupListener, socket) {
+        const onClose = this.onSocketCloseHandler.bind(this, reject);
+        socket.on('close', onClose);
+        cleanupListener.on('complete', () => socket.off('close', onClose));
+    }
+    onSocketCloseHandler(reject) {
+        this.req.removeAllListeners('timeout');
+        const res = this.res;
+        if (res) {
+            // Response ok, res.close/res.end can handle request ending
+            return;
+        }
+        if (!this.requestErrorHandled) {
+            return reject(this.createRequestError(new Error('Socket closed without any information.')));
+        }
+        // else: other situation
+    }
+    requestErrorHandler(reject, requestError) {
+        var _a, _b;
+        (_b = (_a = this.requestData).requestEventDebugHandler) === null || _b === void 0 ? void 0 : _b.call(_a, 'request-error', { requestError });
+        this.requestErrorHandled = true;
+        reject(this.createRequestError(requestError));
+    }
+    timeoutErrorHandler() {
+        this.requestErrorHandled = true;
+        this.req.destroy(new Error('Request timeout.'));
+    }
+    /* Response event handlers */
+    classicResponseHandler(resolve, reject, res) {
+        this.res = res;
+        const dataStream = this.getResponseDataStream(res);
+        // Register the response data
+        dataStream.on('data', chunk => this.responseData.push(chunk));
+        dataStream.on('end', this.onResponseEndHandler.bind(this, resolve, reject));
+        dataStream.on('close', this.onResponseCloseHandler.bind(this, resolve, reject));
+        // Debug handlers
+        if (this.requestData.requestEventDebugHandler) {
+            this.requestData.requestEventDebugHandler('response', { res });
+            res.on('aborted', error => this.requestData.requestEventDebugHandler('response-aborted', { error }));
+            res.on('error', error => this.requestData.requestEventDebugHandler('response-error', { error }));
+            res.on('close', () => this.requestData.requestEventDebugHandler('response-close', { data: this.responseData }));
+            res.on('end', () => this.requestData.requestEventDebugHandler('response-end'));
+        }
+    }
+    onResponseEndHandler(resolve, reject) {
+        const rateLimit = this.getRateLimitFromResponse(this.res);
+        let data;
+        try {
+            data = this.getParsedResponse(this.res);
+        }
+        catch (e) {
+            reject(this.createPartialResponseError(e, false));
+            return;
+        }
+        // Handle bad error codes
+        const code = this.res.statusCode;
+        if (code >= 400) {
+            reject(this.createResponseError({ data, res: this.res, rateLimit, code }));
+            return;
+        }
+        if (settings_1.TwitterApiV2Settings.debug) {
+            settings_1.TwitterApiV2Settings.logger.log(`[${this.requestData.options.method} ${this.hrefPathname}]: Request succeeds with code ${this.res.statusCode}`);
+            settings_1.TwitterApiV2Settings.logger.log('Response body:', data);
+        }
+        resolve({
+            data,
+            headers: this.res.headers,
+            rateLimit,
+        });
+    }
+    onResponseCloseHandler(resolve, reject) {
+        const res = this.res;
+        if (res.aborted) {
+            // Try to parse the request (?)
+            try {
+                this.getParsedResponse(this.res);
+                // Ok, try to resolve normally the request
+                return this.onResponseEndHandler(resolve, reject);
+            }
+            catch (e) {
+                // Parse error, just drop with content
+                return reject(this.createPartialResponseError(e, true));
+            }
+        }
+        if (!res.complete) {
+            return reject(this.createPartialResponseError(new Error('Response has been interrupted before response could be parsed.'), true));
+        }
+        // else: end has been called
+    }
+    streamResponseHandler(resolve, reject, res) {
+        const code = res.statusCode;
+        if (code < 400) {
+            if (settings_1.TwitterApiV2Settings.debug) {
+                settings_1.TwitterApiV2Settings.logger.log(`[${this.requestData.options.method} ${this.hrefPathname}]: Request succeeds with code ${res.statusCode} (starting stream)`);
+            }
+            const dataStream = this.getResponseDataStream(res);
+            // HTTP code ok, consume stream
+            resolve({ req: this.req, res: dataStream, originalResponse: res, requestData: this.requestData });
+        }
+        else {
+            // Handle response normally, can only rejects
+            this.classicResponseHandler(() => undefined, reject, res);
+        }
+    }
+    /* Wrappers for request lifecycle */
+    debugRequest() {
+        const url = this.requestData.url;
+        settings_1.TwitterApiV2Settings.logger.log(`[${this.requestData.options.method} ${this.hrefPathname}]`, this.requestData.options);
+        if (url.search) {
+            settings_1.TwitterApiV2Settings.logger.log('Request parameters:', [...url.searchParams.entries()].map(([key, value]) => `${key}: ${value}`));
+        }
+        if (this.requestData.body) {
+            settings_1.TwitterApiV2Settings.logger.log('Request body:', this.requestData.body);
+        }
+    }
+    buildRequest() {
+        var _a;
+        const url = this.requestData.url;
+        const auth = url.username ? `${url.username}:${url.password}` : undefined;
+        const headers = (_a = this.requestData.options.headers) !== null && _a !== void 0 ? _a : {};
+        if (this.requestData.compression === true || this.requestData.compression === 'brotli') {
+            headers['accept-encoding'] = 'br;q=1.0, gzip;q=0.8, deflate;q=0.5, *;q=0.1';
+        }
+        else if (this.requestData.compression === 'gzip') {
+            headers['accept-encoding'] = 'gzip;q=1, deflate;q=0.5, *;q=0.1';
+        }
+        else if (this.requestData.compression === 'deflate') {
+            headers['accept-encoding'] = 'deflate;q=1, *;q=0.1';
+        }
+        if (settings_1.TwitterApiV2Settings.debug) {
+            this.debugRequest();
+        }
+        this.req = (0, https_1.request)({
+            ...this.requestData.options,
+            // Define URL params manually, addresses dependencies error https://github.com/PLhery/node-twitter-api-v2/issues/94
+            host: url.hostname,
+            port: url.port || undefined,
+            path: url.pathname + url.search,
+            protocol: url.protocol,
+            auth,
+            headers,
+        });
+    }
+    registerRequestEventDebugHandlers(req) {
+        req.on('close', () => this.requestData.requestEventDebugHandler('close'));
+        req.on('abort', () => this.requestData.requestEventDebugHandler('abort'));
+        req.on('socket', socket => {
+            this.requestData.requestEventDebugHandler('socket', { socket });
+            socket.on('error', error => this.requestData.requestEventDebugHandler('socket-error', { socket, error }));
+            socket.on('connect', () => this.requestData.requestEventDebugHandler('socket-connect', { socket }));
+            socket.on('close', withError => this.requestData.requestEventDebugHandler('socket-close', { socket, withError }));
+            socket.on('end', () => this.requestData.requestEventDebugHandler('socket-end', { socket }));
+            socket.on('lookup', (...data) => this.requestData.requestEventDebugHandler('socket-lookup', { socket, data }));
+            socket.on('timeout', () => this.requestData.requestEventDebugHandler('socket-timeout', { socket }));
+        });
+    }
+    makeRequest() {
+        this.buildRequest();
+        return new Promise((_resolve, _reject) => {
+            // Hooks to call when promise is fulfulled to cleanup the socket (shared between requests)
+            const resolve = value => {
+                cleanupListener.emit('complete');
+                _resolve(value);
+            };
+            const reject = value => {
+                cleanupListener.emit('complete');
+                _reject(value);
+            };
+            const cleanupListener = new events_1.EventEmitter();
+            const req = this.req;
+            // Handle request errors
+            req.on('error', this.requestErrorHandler.bind(this, reject));
+            req.on('socket', this.onSocketEventHandler.bind(this, reject, cleanupListener));
+            req.on('response', this.classicResponseHandler.bind(this, resolve, reject));
+            if (this.requestData.options.timeout) {
+                req.on('timeout', this.timeoutErrorHandler.bind(this));
+            }
+            // Debug handlers
+            if (this.requestData.requestEventDebugHandler) {
+                this.registerRequestEventDebugHandlers(req);
+            }
+            if (this.requestData.body) {
+                req.write(this.requestData.body);
+            }
+            req.end();
+        });
+    }
+    async makeRequestAsStream() {
+        const { req, res, requestData, originalResponse } = await this.makeRequestAndResolveWhenReady();
+        return new TweetStream_1.default(requestData, { req, res, originalResponse });
+    }
+    makeRequestAndResolveWhenReady() {
+        this.buildRequest();
+        return new Promise((resolve, reject) => {
+            const req = this.req;
+            // Handle request errors
+            req.on('error', this.requestErrorHandler.bind(this, reject));
+            req.on('response', this.streamResponseHandler.bind(this, resolve, reject));
+            if (this.requestData.body) {
+                req.write(this.requestData.body);
+            }
+            req.end();
+        });
+    }
+}
+exports.RequestHandlerHelper = RequestHandlerHelper;
+exports["default"] = RequestHandlerHelper;
+
+
+/***/ }),
+
+/***/ 7871:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.ClientRequestMaker = void 0;
+const types_1 = __nccwpck_require__(1400);
+const TweetStream_1 = __importDefault(__nccwpck_require__(4874));
+const helpers_1 = __nccwpck_require__(5899);
+const helpers_2 = __nccwpck_require__(522);
+const oauth1_helper_1 = __importDefault(__nccwpck_require__(8761));
+const request_handler_helper_1 = __importDefault(__nccwpck_require__(3819));
+const request_param_helper_1 = __importDefault(__nccwpck_require__(2222));
+const oauth2_helper_1 = __nccwpck_require__(9115);
+class ClientRequestMaker {
+    constructor(settings) {
+        this.rateLimits = {};
+        this.clientSettings = {};
+        if (settings) {
+            this.clientSettings = settings;
+        }
+    }
+    /** @deprecated - Switch to `@twitter-api-v2/plugin-rate-limit` */
+    getRateLimits() {
+        return this.rateLimits;
+    }
+    saveRateLimit(originalUrl, rateLimit) {
+        this.rateLimits[originalUrl] = rateLimit;
+    }
+    /** Send a new request and returns a wrapped `Promise<TwitterResponse<T>`. */
+    async send(requestParams) {
+        var _a, _b, _c, _d, _e;
+        // Pre-request config hooks
+        if ((_a = this.clientSettings.plugins) === null || _a === void 0 ? void 0 : _a.length) {
+            const possibleResponse = await this.applyPreRequestConfigHooks(requestParams);
+            if (possibleResponse) {
+                return possibleResponse;
+            }
+        }
+        const args = this.getHttpRequestArgs(requestParams);
+        const options = {
+            method: args.method,
+            headers: args.headers,
+            timeout: requestParams.timeout,
+            agent: this.clientSettings.httpAgent,
+        };
+        const enableRateLimitSave = requestParams.enableRateLimitSave !== false;
+        if (args.body) {
+            request_param_helper_1.default.setBodyLengthHeader(options, args.body);
+        }
+        // Pre-request hooks
+        if ((_b = this.clientSettings.plugins) === null || _b === void 0 ? void 0 : _b.length) {
+            await this.applyPreRequestHooks(requestParams, args, options);
+        }
+        let request = new request_handler_helper_1.default({
+            url: args.url,
+            options,
+            body: args.body,
+            rateLimitSaver: enableRateLimitSave ? this.saveRateLimit.bind(this, args.rawUrl) : undefined,
+            requestEventDebugHandler: requestParams.requestEventDebugHandler,
+            compression: (_d = (_c = requestParams.compression) !== null && _c !== void 0 ? _c : this.clientSettings.compression) !== null && _d !== void 0 ? _d : true,
+            forceParseMode: requestParams.forceParseMode,
+        })
+            .makeRequest();
+        if ((0, helpers_1.hasRequestErrorPlugins)(this)) {
+            request = this.applyResponseErrorHooks(requestParams, args, options, request);
+        }
+        const response = await request;
+        // Post-request hooks
+        if ((_e = this.clientSettings.plugins) === null || _e === void 0 ? void 0 : _e.length) {
+            const responseOverride = await this.applyPostRequestHooks(requestParams, args, options, response);
+            if (responseOverride) {
+                return responseOverride.value;
+            }
+        }
+        return response;
+    }
+    sendStream(requestParams) {
+        var _a, _b;
+        // Pre-request hooks
+        if (this.clientSettings.plugins) {
+            this.applyPreStreamRequestConfigHooks(requestParams);
+        }
+        const args = this.getHttpRequestArgs(requestParams);
+        const options = {
+            method: args.method,
+            headers: args.headers,
+            agent: this.clientSettings.httpAgent,
+        };
+        const enableRateLimitSave = requestParams.enableRateLimitSave !== false;
+        const enableAutoConnect = requestParams.autoConnect !== false;
+        if (args.body) {
+            request_param_helper_1.default.setBodyLengthHeader(options, args.body);
+        }
+        const requestData = {
+            url: args.url,
+            options,
+            body: args.body,
+            rateLimitSaver: enableRateLimitSave ? this.saveRateLimit.bind(this, args.rawUrl) : undefined,
+            payloadIsError: requestParams.payloadIsError,
+            compression: (_b = (_a = requestParams.compression) !== null && _a !== void 0 ? _a : this.clientSettings.compression) !== null && _b !== void 0 ? _b : true,
+        };
+        const stream = new TweetStream_1.default(requestData);
+        if (!enableAutoConnect) {
+            return stream;
+        }
+        return stream.connect();
+    }
+    /* Token helpers */
+    initializeToken(token) {
+        if (typeof token === 'string') {
+            this.bearerToken = token;
+        }
+        else if (typeof token === 'object' && 'appKey' in token) {
+            this.consumerToken = token.appKey;
+            this.consumerSecret = token.appSecret;
+            if (token.accessToken && token.accessSecret) {
+                this.accessToken = token.accessToken;
+                this.accessSecret = token.accessSecret;
+            }
+            this._oauth = this.buildOAuth();
+        }
+        else if (typeof token === 'object' && 'username' in token) {
+            const key = encodeURIComponent(token.username) + ':' + encodeURIComponent(token.password);
+            this.basicToken = Buffer.from(key).toString('base64');
+        }
+        else if (typeof token === 'object' && 'clientId' in token) {
+            this.clientId = token.clientId;
+            this.clientSecret = token.clientSecret;
+        }
+    }
+    getActiveTokens() {
+        if (this.bearerToken) {
+            return {
+                type: 'oauth2',
+                bearerToken: this.bearerToken,
+            };
+        }
+        else if (this.basicToken) {
+            return {
+                type: 'basic',
+                token: this.basicToken,
+            };
+        }
+        else if (this.consumerSecret && this._oauth) {
+            return {
+                type: 'oauth-1.0a',
+                appKey: this.consumerToken,
+                appSecret: this.consumerSecret,
+                accessToken: this.accessToken,
+                accessSecret: this.accessSecret,
+            };
+        }
+        else if (this.clientId) {
+            return {
+                type: 'oauth2-user',
+                clientId: this.clientId,
+            };
+        }
+        return { type: 'none' };
+    }
+    buildOAuth() {
+        if (!this.consumerSecret || !this.consumerToken)
+            throw new Error('Invalid consumer tokens');
+        return new oauth1_helper_1.default({
+            consumerKeys: { key: this.consumerToken, secret: this.consumerSecret },
+        });
+    }
+    getOAuthAccessTokens() {
+        if (!this.accessSecret || !this.accessToken)
+            return;
+        return {
+            key: this.accessToken,
+            secret: this.accessSecret,
+        };
+    }
+    /* Plugin helpers */
+    getPlugins() {
+        var _a;
+        return (_a = this.clientSettings.plugins) !== null && _a !== void 0 ? _a : [];
+    }
+    hasPlugins() {
+        var _a;
+        return !!((_a = this.clientSettings.plugins) === null || _a === void 0 ? void 0 : _a.length);
+    }
+    async applyPluginMethod(method, args) {
+        var _a;
+        let returnValue;
+        for (const plugin of this.getPlugins()) {
+            const value = await ((_a = plugin[method]) === null || _a === void 0 ? void 0 : _a.call(plugin, args));
+            if (value && value instanceof types_1.TwitterApiPluginResponseOverride) {
+                returnValue = value;
+            }
+        }
+        return returnValue;
+    }
+    /* Request helpers */
+    writeAuthHeaders({ headers, bodyInSignature, url, method, query, body }) {
+        headers = { ...headers };
+        if (this.bearerToken) {
+            headers.Authorization = 'Bearer ' + this.bearerToken;
+        }
+        else if (this.basicToken) {
+            // Basic auth, to request a bearer token
+            headers.Authorization = 'Basic ' + this.basicToken;
+        }
+        else if (this.clientId && this.clientSecret) {
+            // Basic auth with clientId + clientSecret
+            headers.Authorization = 'Basic ' + oauth2_helper_1.OAuth2Helper.getAuthHeader(this.clientId, this.clientSecret);
+        }
+        else if (this.consumerSecret && this._oauth) {
+            // Merge query and body
+            const data = bodyInSignature ? request_param_helper_1.default.mergeQueryAndBodyForOAuth(query, body) : query;
+            const auth = this._oauth.authorize({
+                url: url.toString(),
+                method,
+                data,
+            }, this.getOAuthAccessTokens());
+            headers = { ...headers, ...this._oauth.toHeader(auth) };
+        }
+        return headers;
+    }
+    getUrlObjectFromUrlString(url) {
+        // Add protocol to URL if needed
+        if (!url.startsWith('http')) {
+            url = 'https://' + url;
+        }
+        // Convert URL to object that will receive all URL modifications
+        return new URL(url);
+    }
+    getHttpRequestArgs({ url: stringUrl, method, query: rawQuery = {}, body: rawBody = {}, headers, forceBodyMode, enableAuth, params, }) {
+        let body = undefined;
+        method = method.toUpperCase();
+        headers = headers !== null && headers !== void 0 ? headers : {};
+        // Add user agent header (Twitter recommends it)
+        if (!headers['x-user-agent']) {
+            headers['x-user-agent'] = 'Node.twitter-api-v2';
+        }
+        const url = this.getUrlObjectFromUrlString(stringUrl);
+        // URL without query string to save as endpoint name
+        const rawUrl = url.origin + url.pathname;
+        // Apply URL parameters
+        if (params) {
+            request_param_helper_1.default.applyRequestParametersToUrl(url, params);
+        }
+        // Build a URL without anything in QS, and QSP in query
+        const query = request_param_helper_1.default.formatQueryToString(rawQuery);
+        request_param_helper_1.default.moveUrlQueryParamsIntoObject(url, query);
+        // Delete undefined parameters
+        if (!(rawBody instanceof Buffer)) {
+            (0, helpers_2.trimUndefinedProperties)(rawBody);
+        }
+        // OAuth signature should not include parameters when using multipart.
+        const bodyType = forceBodyMode !== null && forceBodyMode !== void 0 ? forceBodyMode : request_param_helper_1.default.autoDetectBodyType(url);
+        // If undefined or true, enable auth by headers
+        if (enableAuth !== false) {
+            // OAuth needs body signature only if body is URL encoded.
+            const bodyInSignature = ClientRequestMaker.BODY_METHODS.has(method) && bodyType === 'url';
+            headers = this.writeAuthHeaders({ headers, bodyInSignature, method, query, url, body: rawBody });
+        }
+        if (ClientRequestMaker.BODY_METHODS.has(method)) {
+            body = request_param_helper_1.default.constructBodyParams(rawBody, headers, bodyType) || undefined;
+        }
+        request_param_helper_1.default.addQueryParamsToUrl(url, query);
+        return {
+            rawUrl,
+            url,
+            method,
+            headers,
+            body,
+        };
+    }
+    /* Plugin helpers */
+    async applyPreRequestConfigHooks(requestParams) {
+        var _a;
+        const url = this.getUrlObjectFromUrlString(requestParams.url);
+        for (const plugin of this.getPlugins()) {
+            const result = await ((_a = plugin.onBeforeRequestConfig) === null || _a === void 0 ? void 0 : _a.call(plugin, {
+                client: this,
+                url,
+                params: requestParams,
+            }));
+            if (result) {
+                return result;
+            }
+        }
+    }
+    applyPreStreamRequestConfigHooks(requestParams) {
+        var _a;
+        const url = this.getUrlObjectFromUrlString(requestParams.url);
+        for (const plugin of this.getPlugins()) {
+            (_a = plugin.onBeforeStreamRequestConfig) === null || _a === void 0 ? void 0 : _a.call(plugin, {
+                client: this,
+                url,
+                params: requestParams,
+            });
+        }
+    }
+    async applyPreRequestHooks(requestParams, computedParams, requestOptions) {
+        await this.applyPluginMethod('onBeforeRequest', {
+            client: this,
+            url: this.getUrlObjectFromUrlString(requestParams.url),
+            params: requestParams,
+            computedParams,
+            requestOptions,
+        });
+    }
+    async applyPostRequestHooks(requestParams, computedParams, requestOptions, response) {
+        return await this.applyPluginMethod('onAfterRequest', {
+            client: this,
+            url: this.getUrlObjectFromUrlString(requestParams.url),
+            params: requestParams,
+            computedParams,
+            requestOptions,
+            response,
+        });
+    }
+    applyResponseErrorHooks(requestParams, computedParams, requestOptions, promise) {
+        return promise.catch(helpers_1.applyResponseHooks.bind(this, requestParams, computedParams, requestOptions));
+    }
+}
+exports.ClientRequestMaker = ClientRequestMaker;
+ClientRequestMaker.BODY_METHODS = new Set(['POST', 'PUT', 'PATCH']);
+
+
+/***/ }),
+
+/***/ 2222:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.RequestParamHelpers = void 0;
+const form_data_helper_1 = __nccwpck_require__(5879);
+const oauth1_helper_1 = __importDefault(__nccwpck_require__(8761));
+/* Helpers functions that are specific to this class but do not depends on instance */
+class RequestParamHelpers {
+    static formatQueryToString(query) {
+        const formattedQuery = {};
+        for (const prop in query) {
+            if (typeof query[prop] === 'string') {
+                formattedQuery[prop] = query[prop];
+            }
+            else if (typeof query[prop] !== 'undefined') {
+                formattedQuery[prop] = String(query[prop]);
+            }
+        }
+        return formattedQuery;
+    }
+    static autoDetectBodyType(url) {
+        if (url.pathname.startsWith('/2/') || url.pathname.startsWith('/labs/2/')) {
+            // oauth2 takes url encoded
+            if (url.password.startsWith('/2/oauth2')) {
+                return 'url';
+            }
+            // Twitter API v2 has JSON-encoded requests for everything else
+            return 'json';
+        }
+        if (url.hostname === 'upload.twitter.com') {
+            if (url.pathname === '/1.1/media/upload.json') {
+                return 'form-data';
+            }
+            // json except for media/upload command, that is form-data.
+            return 'json';
+        }
+        const endpoint = url.pathname.split('/1.1/', 2)[1];
+        if (this.JSON_1_1_ENDPOINTS.has(endpoint)) {
+            return 'json';
+        }
+        return 'url';
+    }
+    static addQueryParamsToUrl(url, query) {
+        const queryEntries = Object.entries(query);
+        if (queryEntries.length) {
+            let search = '';
+            for (const [key, value] of queryEntries) {
+                search += (search.length ? '&' : '?') + `${oauth1_helper_1.default.percentEncode(key)}=${oauth1_helper_1.default.percentEncode(value)}`;
+            }
+            url.search = search;
+        }
+    }
+    static constructBodyParams(body, headers, mode) {
+        if (body instanceof Buffer) {
+            return body;
+        }
+        if (mode === 'json') {
+            if (!headers['content-type']) {
+                headers['content-type'] = 'application/json;charset=UTF-8';
+            }
+            return JSON.stringify(body);
+        }
+        else if (mode === 'url') {
+            if (!headers['content-type']) {
+                headers['content-type'] = 'application/x-www-form-urlencoded;charset=UTF-8';
+            }
+            if (Object.keys(body).length) {
+                return new URLSearchParams(body)
+                    .toString()
+                    .replace(/\*/g, '%2A'); // URLSearchParams doesnt encode '*', but Twitter wants it encoded.
+            }
+            return '';
+        }
+        else if (mode === 'raw') {
+            throw new Error('You can only use raw body mode with Buffers. To give a string, use Buffer.from(str).');
+        }
+        else {
+            const form = new form_data_helper_1.FormDataHelper();
+            for (const parameter in body) {
+                form.append(parameter, body[parameter]);
+            }
+            if (!headers['content-type']) {
+                const formHeaders = form.getHeaders();
+                headers['content-type'] = formHeaders['content-type'];
+            }
+            return form.getBuffer();
+        }
+    }
+    static setBodyLengthHeader(options, body) {
+        var _a;
+        options.headers = (_a = options.headers) !== null && _a !== void 0 ? _a : {};
+        if (typeof body === 'string') {
+            options.headers['content-length'] = Buffer.byteLength(body);
+        }
+        else {
+            options.headers['content-length'] = body.length;
+        }
+    }
+    static isOAuthSerializable(item) {
+        return !(item instanceof Buffer);
+    }
+    static mergeQueryAndBodyForOAuth(query, body) {
+        const parameters = {};
+        for (const prop in query) {
+            parameters[prop] = query[prop];
+        }
+        if (this.isOAuthSerializable(body)) {
+            for (const prop in body) {
+                const bodyProp = body[prop];
+                if (this.isOAuthSerializable(bodyProp)) {
+                    parameters[prop] = typeof bodyProp === 'object' && bodyProp !== null && 'toString' in bodyProp
+                        ? bodyProp.toString()
+                        : bodyProp;
+                }
+            }
+        }
+        return parameters;
+    }
+    static moveUrlQueryParamsIntoObject(url, query) {
+        for (const [param, value] of url.searchParams) {
+            query[param] = value;
+        }
+        // Remove the query string
+        url.search = '';
+        return url;
+    }
+    /**
+     * Replace URL parameters available in pathname, like `:id`, with data given in `parameters`:
+     * `https://twitter.com/:id.json` + `{ id: '20' }` => `https://twitter.com/20.json`
+     */
+    static applyRequestParametersToUrl(url, parameters) {
+        url.pathname = url.pathname.replace(/:([A-Z_-]+)/ig, (fullMatch, paramName) => {
+            if (parameters[paramName] !== undefined) {
+                return String(parameters[paramName]);
+            }
+            return fullMatch;
+        });
+        return url;
+    }
+}
+exports.RequestParamHelpers = RequestParamHelpers;
+RequestParamHelpers.JSON_1_1_ENDPOINTS = new Set([
+    'direct_messages/events/new.json',
+    'direct_messages/welcome_messages/new.json',
+    'direct_messages/welcome_messages/rules/new.json',
+    'media/metadata/create.json',
+    'collections/entries/curate.json',
+]);
+exports["default"] = RequestParamHelpers;
+
+
+/***/ }),
+
+/***/ 6957:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const request_maker_mixin_1 = __nccwpck_require__(7871);
+const helpers_1 = __nccwpck_require__(522);
+const globals_1 = __nccwpck_require__(3420);
+/**
+ * Base class for Twitter instances
+ */
+class TwitterApiBase {
+    constructor(token, settings = {}) {
+        this._currentUser = null;
+        this._currentUserV2 = null;
+        if (token instanceof TwitterApiBase) {
+            this._requestMaker = token._requestMaker;
+        }
+        else {
+            this._requestMaker = new request_maker_mixin_1.ClientRequestMaker(settings);
+            this._requestMaker.initializeToken(token);
+        }
+    }
+    /* Prefix/Token handling */
+    setPrefix(prefix) {
+        this._prefix = prefix;
+    }
+    cloneWithPrefix(prefix) {
+        const clone = this.constructor(this);
+        clone.setPrefix(prefix);
+        return clone;
+    }
+    getActiveTokens() {
+        return this._requestMaker.getActiveTokens();
+    }
+    /* Rate limit cache / Plugins */
+    getPlugins() {
+        return this._requestMaker.getPlugins();
+    }
+    getPluginOfType(type) {
+        return this.getPlugins().find(plugin => plugin instanceof type);
+    }
+    /**
+     * @deprecated - Migrate to plugin `@twitter-api-v2/plugin-rate-limit`
+     *
+     * Tells if you hit the Twitter rate limit for {endpoint}.
+     * (local data only, this should not ask anything to Twitter)
+     */
+    hasHitRateLimit(endpoint) {
+        var _a;
+        if (this.isRateLimitStatusObsolete(endpoint)) {
+            return false;
+        }
+        return ((_a = this.getLastRateLimitStatus(endpoint)) === null || _a === void 0 ? void 0 : _a.remaining) === 0;
+    }
+    /**
+     * @deprecated - Migrate to plugin `@twitter-api-v2/plugin-rate-limit`
+     *
+     * Tells if you hit the returned Twitter rate limit for {endpoint} has expired.
+     * If client has no saved rate limit data for {endpoint}, this will gives you `true`.
+     */
+    isRateLimitStatusObsolete(endpoint) {
+        const rateLimit = this.getLastRateLimitStatus(endpoint);
+        if (rateLimit === undefined) {
+            return true;
+        }
+        // Timestamps are exprimed in seconds, JS works with ms
+        return (rateLimit.reset * 1000) < Date.now();
+    }
+    /**
+     * @deprecated - Migrate to plugin `@twitter-api-v2/plugin-rate-limit`
+     *
+     * Get the last obtained Twitter rate limit information for {endpoint}.
+     * (local data only, this should not ask anything to Twitter)
+     */
+    getLastRateLimitStatus(endpoint) {
+        const endpointWithPrefix = endpoint.match(/^https?:\/\//) ? endpoint : (this._prefix + endpoint);
+        return this._requestMaker.getRateLimits()[endpointWithPrefix];
+    }
+    /* Current user cache */
+    /** Get cached current user. */
+    getCurrentUserObject(forceFetch = false) {
+        if (!forceFetch && this._currentUser) {
+            if (this._currentUser.value) {
+                return Promise.resolve(this._currentUser.value);
+            }
+            return this._currentUser.promise;
+        }
+        this._currentUser = (0, helpers_1.sharedPromise)(() => this.get('account/verify_credentials.json', { tweet_mode: 'extended' }, { prefix: globals_1.API_V1_1_PREFIX }));
+        return this._currentUser.promise;
+    }
+    /**
+     * Get cached current user from v2 API.
+     * This can only be the slimest available `UserV2` object, with only `id`, `name` and `username` properties defined.
+     *
+     * To get a customized `UserV2Result`, use `.v2.me()`
+     *
+     * OAuth2 scopes: `tweet.read` & `users.read`
+     */
+    getCurrentUserV2Object(forceFetch = false) {
+        if (!forceFetch && this._currentUserV2) {
+            if (this._currentUserV2.value) {
+                return Promise.resolve(this._currentUserV2.value);
+            }
+            return this._currentUserV2.promise;
+        }
+        this._currentUserV2 = (0, helpers_1.sharedPromise)(() => this.get('users/me', undefined, { prefix: globals_1.API_V2_PREFIX }));
+        return this._currentUserV2.promise;
+    }
+    async get(url, query = {}, { fullResponse, prefix = this._prefix, ...rest } = {}) {
+        if (prefix)
+            url = prefix + url;
+        const resp = await this._requestMaker.send({
+            url,
+            method: 'GET',
+            query,
+            ...rest,
+        });
+        return fullResponse ? resp : resp.data;
+    }
+    async delete(url, query = {}, { fullResponse, prefix = this._prefix, ...rest } = {}) {
+        if (prefix)
+            url = prefix + url;
+        const resp = await this._requestMaker.send({
+            url,
+            method: 'DELETE',
+            query,
+            ...rest,
+        });
+        return fullResponse ? resp : resp.data;
+    }
+    async post(url, body, { fullResponse, prefix = this._prefix, ...rest } = {}) {
+        if (prefix)
+            url = prefix + url;
+        const resp = await this._requestMaker.send({
+            url,
+            method: 'POST',
+            body,
+            ...rest,
+        });
+        return fullResponse ? resp : resp.data;
+    }
+    async put(url, body, { fullResponse, prefix = this._prefix, ...rest } = {}) {
+        if (prefix)
+            url = prefix + url;
+        const resp = await this._requestMaker.send({
+            url,
+            method: 'PUT',
+            body,
+            ...rest,
+        });
+        return fullResponse ? resp : resp.data;
+    }
+    async patch(url, body, { fullResponse, prefix = this._prefix, ...rest } = {}) {
+        if (prefix)
+            url = prefix + url;
+        const resp = await this._requestMaker.send({
+            url,
+            method: 'PATCH',
+            body,
+            ...rest,
+        });
+        return fullResponse ? resp : resp.data;
+    }
+    getStream(url, query, { prefix = this._prefix, ...rest } = {}) {
+        return this._requestMaker.sendStream({
+            url: prefix ? prefix + url : url,
+            method: 'GET',
+            query,
+            ...rest,
+        });
+    }
+    postStream(url, body, { prefix = this._prefix, ...rest } = {}) {
+        return this._requestMaker.sendStream({
+            url: prefix ? prefix + url : url,
+            method: 'POST',
+            body,
+            ...rest,
+        });
+    }
+}
+exports["default"] = TwitterApiBase;
+
+
+/***/ }),
+
+/***/ 7592:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const client_base_1 = __importDefault(__nccwpck_require__(6957));
+/**
+ * Base subclient for every v1 and v2 client.
+ */
+class TwitterApiSubClient extends client_base_1.default {
+    constructor(instance) {
+        if (!(instance instanceof client_base_1.default)) {
+            throw new Error('You must instance SubTwitterApi instance from existing TwitterApi instance.');
+        }
+        super(instance);
+    }
+}
+exports["default"] = TwitterApiSubClient;
+
+
+/***/ }),
+
+/***/ 7763:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.TwitterApiReadOnly = exports.TwitterApiReadWrite = exports.TwitterApi = void 0;
+const client_v1_1 = __importDefault(__nccwpck_require__(42));
+const client_v2_1 = __importDefault(__nccwpck_require__(5328));
+const readwrite_1 = __importDefault(__nccwpck_require__(6901));
+// "Real" exported client for usage of TwitterApi.
+/**
+ * Twitter v1.1 and v2 API client.
+ */
+class TwitterApi extends readwrite_1.default {
+    /* Direct access to subclients */
+    get v1() {
+        if (this._v1)
+            return this._v1;
+        return this._v1 = new client_v1_1.default(this);
+    }
+    get v2() {
+        if (this._v2)
+            return this._v2;
+        return this._v2 = new client_v2_1.default(this);
+    }
+    /**
+     * Get a client with read/write rights.
+     */
+    get readWrite() {
+        return this;
+    }
+    /* Static helpers */
+    static getErrors(error) {
+        var _a;
+        if (typeof error !== 'object')
+            return [];
+        if (!('data' in error))
+            return [];
+        return (_a = error.data.errors) !== null && _a !== void 0 ? _a : [];
+    }
+    /** Extract another image size than obtained in a `profile_image_url` or `profile_image_url_https` field of a user object. */
+    static getProfileImageInSize(profileImageUrl, size) {
+        const lastPart = profileImageUrl.split('/').pop();
+        const sizes = ['normal', 'bigger', 'mini'];
+        let originalUrl = profileImageUrl;
+        for (const availableSize of sizes) {
+            if (lastPart.includes(`_${availableSize}`)) {
+                originalUrl = profileImageUrl.replace(`_${availableSize}`, '');
+                break;
+            }
+        }
+        if (size === 'original') {
+            return originalUrl;
+        }
+        const extPos = originalUrl.lastIndexOf('.');
+        if (extPos !== -1) {
+            const ext = originalUrl.slice(extPos + 1);
+            return originalUrl.slice(0, extPos) + '_' + size + '.' + ext;
+        }
+        else {
+            return originalUrl + '_' + size;
+        }
+    }
+}
+exports.TwitterApi = TwitterApi;
+var readwrite_2 = __nccwpck_require__(6901);
+Object.defineProperty(exports, "TwitterApiReadWrite", ({ enumerable: true, get: function () { return __importDefault(readwrite_2).default; } }));
+var readonly_1 = __nccwpck_require__(9182);
+Object.defineProperty(exports, "TwitterApiReadOnly", ({ enumerable: true, get: function () { return __importDefault(readonly_1).default; } }));
+exports["default"] = TwitterApi;
+
+
+/***/ }),
+
+/***/ 9182:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const _1 = __importDefault(__nccwpck_require__(7763));
+const client_base_1 = __importDefault(__nccwpck_require__(6957));
+const client_v1_read_1 = __importDefault(__nccwpck_require__(6878));
+const client_v2_read_1 = __importDefault(__nccwpck_require__(9600));
+const oauth2_helper_1 = __nccwpck_require__(9115);
+const request_param_helper_1 = __importDefault(__nccwpck_require__(2222));
+/**
+ * Twitter v1.1 and v2 API client.
+ */
+class TwitterApiReadOnly extends client_base_1.default {
+    /* Direct access to subclients */
+    get v1() {
+        if (this._v1)
+            return this._v1;
+        return this._v1 = new client_v1_read_1.default(this);
+    }
+    get v2() {
+        if (this._v2)
+            return this._v2;
+        return this._v2 = new client_v2_read_1.default(this);
+    }
+    /**
+     * Fetch and cache current user.
+     * This method can only be called with a OAuth 1.0a user authentication.
+     *
+     * You can use this method to test if authentication was successful.
+     * Next calls to this methods will use the cached user, unless `forceFetch: true` is given.
+     */
+    async currentUser(forceFetch = false) {
+        return await this.getCurrentUserObject(forceFetch);
+    }
+    /**
+     * Fetch and cache current user.
+     * This method can only be called with a OAuth 1.0a or OAuth2 user authentication.
+     *
+     * This can only be the slimest available `UserV2` object, with only id, name and username properties defined.
+     * To get a customized `UserV2Result`, use `.v2.me()`
+     *
+     * You can use this method to test if authentication was successful.
+     * Next calls to this methods will use the cached user, unless `forceFetch: true` is given.
+     *
+     * OAuth2 scopes: `tweet.read` & `users.read`
+     */
+    async currentUserV2(forceFetch = false) {
+        return await this.getCurrentUserV2Object(forceFetch);
+    }
+    /* Shortcuts to endpoints */
+    search(what, options) {
+        return this.v2.search(what, options);
+    }
+    /* Authentication */
+    /**
+     * Generate the OAuth request token link for user-based OAuth 1.0 auth.
+     *
+     * ```ts
+     * // Instantiate TwitterApi with consumer keys
+     * const client = new TwitterApi({ appKey: 'consumer_key', appSecret: 'consumer_secret' });
+     *
+     * const tokenRequest = await client.generateAuthLink('oob-or-your-callback-url');
+     * // redirect end-user to tokenRequest.url
+     *
+     * // Save tokenRequest.oauth_token_secret somewhere, it will be needed for next auth step.
+     * ```
+     */
+    async generateAuthLink(oauth_callback = 'oob', { authAccessType, linkMode = 'authenticate', forceLogin, screenName, } = {}) {
+        const oauthResult = await this.post('https://api.twitter.com/oauth/request_token', { oauth_callback, x_auth_access_type: authAccessType });
+        let url = `https://api.twitter.com/oauth/${linkMode}?oauth_token=${encodeURIComponent(oauthResult.oauth_token)}`;
+        if (forceLogin !== undefined) {
+            url += `&force_login=${encodeURIComponent(forceLogin)}`;
+        }
+        if (screenName !== undefined) {
+            url += `&screen_name=${encodeURIComponent(screenName)}`;
+        }
+        if (this._requestMaker.hasPlugins()) {
+            this._requestMaker.applyPluginMethod('onOAuth1RequestToken', {
+                client: this._requestMaker,
+                url,
+                oauthResult,
+            });
+        }
+        return {
+            url,
+            ...oauthResult,
+        };
+    }
+    /**
+     * Obtain access to user-based OAuth 1.0 auth.
+     *
+     * After user is redirect from your callback, use obtained oauth_token and oauth_verifier to
+     * instantiate the new TwitterApi instance.
+     *
+     * ```ts
+     * // Use the saved oauth_token_secret associated to oauth_token returned by callback
+     * const requestClient = new TwitterApi({
+     *  appKey: 'consumer_key',
+     *  appSecret: 'consumer_secret',
+     *  accessToken: 'oauth_token',
+     *  accessSecret: 'oauth_token_secret'
+     * });
+     *
+     * // Use oauth_verifier obtained from callback request
+     * const { client: userClient } = await requestClient.login('oauth_verifier');
+     *
+     * // {userClient} is a valid {TwitterApi} object you can use for future requests
+     * ```
+     */
+    async login(oauth_verifier) {
+        const tokens = this.getActiveTokens();
+        if (tokens.type !== 'oauth-1.0a')
+            throw new Error('You must setup TwitterApi instance with consumer keys to accept OAuth 1.0 login');
+        const oauth_result = await this.post('https://api.twitter.com/oauth/access_token', { oauth_token: tokens.accessToken, oauth_verifier });
+        const client = new _1.default({
+            appKey: tokens.appKey,
+            appSecret: tokens.appSecret,
+            accessToken: oauth_result.oauth_token,
+            accessSecret: oauth_result.oauth_token_secret,
+        }, this._requestMaker.clientSettings);
+        return {
+            accessToken: oauth_result.oauth_token,
+            accessSecret: oauth_result.oauth_token_secret,
+            userId: oauth_result.user_id,
+            screenName: oauth_result.screen_name,
+            client,
+        };
+    }
+    /**
+     * Enable application-only authentication.
+     *
+     * To make the request, instantiate TwitterApi with consumer and secret.
+     *
+     * ```ts
+     * const requestClient = new TwitterApi({ appKey: 'consumer', appSecret: 'secret' });
+     * const appClient = await requestClient.appLogin();
+     *
+     * // Use {appClient} to make requests
+     * ```
+     */
+    async appLogin() {
+        const tokens = this.getActiveTokens();
+        if (tokens.type !== 'oauth-1.0a')
+            throw new Error('You must setup TwitterApi instance with consumer keys to accept app-only login');
+        // Create a client with Basic authentication
+        const basicClient = new _1.default({ username: tokens.appKey, password: tokens.appSecret }, this._requestMaker.clientSettings);
+        const res = await basicClient.post('https://api.twitter.com/oauth2/token', { grant_type: 'client_credentials' });
+        // New object with Bearer token
+        return new _1.default(res.access_token, this._requestMaker.clientSettings);
+    }
+    /* OAuth 2 user authentication */
+    /**
+     * Generate the OAuth request token link for user-based OAuth 2.0 auth.
+     *
+     * - **You can only use v2 API endpoints with this authentication method.**
+     * - **You need to specify which scope you want to have when you create your auth link. Make sure it matches your needs.**
+     *
+     * See https://developer.twitter.com/en/docs/authentication/oauth-2-0/user-access-token for details.
+     *
+     * ```ts
+     * // Instantiate TwitterApi with client ID
+     * const client = new TwitterApi({ clientId: 'yourClientId' });
+     *
+     * // Generate a link to callback URL that will gives a token with tweet+user read access
+     * const link = client.generateOAuth2AuthLink('your-callback-url', { scope: ['tweet.read', 'users.read'] });
+     *
+     * // Extract props from generate link
+     * const { url, state, codeVerifier } = link;
+     *
+     * // redirect end-user to url
+     * // Save `state` and `codeVerifier` somewhere, it will be needed for next auth step.
+     * ```
+     */
+    generateOAuth2AuthLink(redirectUri, options = {}) {
+        var _a, _b;
+        if (!this._requestMaker.clientId) {
+            throw new Error('Twitter API instance is not initialized with client ID. You can find your client ID in Twitter Developer Portal. ' +
+                'Please build an instance with: new TwitterApi({ clientId: \'<yourClientId>\' })');
+        }
+        const state = (_a = options.state) !== null && _a !== void 0 ? _a : oauth2_helper_1.OAuth2Helper.generateRandomString(32);
+        const codeVerifier = oauth2_helper_1.OAuth2Helper.getCodeVerifier();
+        const codeChallenge = oauth2_helper_1.OAuth2Helper.getCodeChallengeFromVerifier(codeVerifier);
+        const rawScope = (_b = options.scope) !== null && _b !== void 0 ? _b : '';
+        const scope = Array.isArray(rawScope) ? rawScope.join(' ') : rawScope;
+        const url = new URL('https://twitter.com/i/oauth2/authorize');
+        const query = {
+            response_type: 'code',
+            client_id: this._requestMaker.clientId,
+            redirect_uri: redirectUri,
+            state,
+            code_challenge: codeChallenge,
+            code_challenge_method: 's256',
+            scope,
+        };
+        request_param_helper_1.default.addQueryParamsToUrl(url, query);
+        const result = {
+            url: url.toString(),
+            state,
+            codeVerifier,
+            codeChallenge,
+        };
+        if (this._requestMaker.hasPlugins()) {
+            this._requestMaker.applyPluginMethod('onOAuth2RequestToken', {
+                client: this._requestMaker,
+                result,
+                redirectUri,
+            });
+        }
+        return result;
+    }
+    /**
+     * Obtain access to user-based OAuth 2.0 auth.
+     *
+     * After user is redirect from your callback, use obtained code to
+     * instantiate the new TwitterApi instance.
+     *
+     * You need to obtain `codeVerifier` from a call to `.generateOAuth2AuthLink`.
+     *
+     * ```ts
+     * // Use the saved codeVerifier associated to state (present in query string of callback)
+     * const requestClient = new TwitterApi({ clientId: 'yourClientId' });
+     *
+     * const { client: userClient, refreshToken } = await requestClient.loginWithOAuth2({
+     *  code: 'codeFromQueryString',
+     *  // the same URL given to generateOAuth2AuthLink
+     *  redirectUri,
+     *  // the verifier returned by generateOAuth2AuthLink
+     *  codeVerifier,
+     * });
+     *
+     * // {userClient} is a valid {TwitterApi} object you can use for future requests
+     * // {refreshToken} is defined if 'offline.access' is in scope.
+     * ```
+     */
+    async loginWithOAuth2({ code, codeVerifier, redirectUri }) {
+        if (!this._requestMaker.clientId) {
+            throw new Error('Twitter API instance is not initialized with client ID. ' +
+                'Please build an instance with: new TwitterApi({ clientId: \'<yourClientId>\' })');
+        }
+        const accessTokenResult = await this.post('https://api.twitter.com/2/oauth2/token', {
+            code,
+            code_verifier: codeVerifier,
+            redirect_uri: redirectUri,
+            grant_type: 'authorization_code',
+            client_id: this._requestMaker.clientId,
+            client_secret: this._requestMaker.clientSecret,
+        });
+        return this.parseOAuth2AccessTokenResult(accessTokenResult);
+    }
+    /**
+     * Obtain a new access token to user-based OAuth 2.0 auth from a refresh token.
+     *
+     * ```ts
+     * const requestClient = new TwitterApi({ clientId: 'yourClientId' });
+     *
+     * const { client: userClient } = await requestClient.refreshOAuth2Token('refreshToken');
+     * // {userClient} is a valid {TwitterApi} object you can use for future requests
+     * ```
+     */
+    async refreshOAuth2Token(refreshToken) {
+        if (!this._requestMaker.clientId) {
+            throw new Error('Twitter API instance is not initialized with client ID. ' +
+                'Please build an instance with: new TwitterApi({ clientId: \'<yourClientId>\' })');
+        }
+        const accessTokenResult = await this.post('https://api.twitter.com/2/oauth2/token', {
+            refresh_token: refreshToken,
+            grant_type: 'refresh_token',
+            client_id: this._requestMaker.clientId,
+            client_secret: this._requestMaker.clientSecret,
+        });
+        return this.parseOAuth2AccessTokenResult(accessTokenResult);
+    }
+    /**
+     * Revoke a single user-based OAuth 2.0 token.
+     *
+     * You must specify its source, access token (directly after login)
+     * or refresh token (if you've called `.refreshOAuth2Token` before).
+     */
+    async revokeOAuth2Token(token, tokenType = 'access_token') {
+        if (!this._requestMaker.clientId) {
+            throw new Error('Twitter API instance is not initialized with client ID. ' +
+                'Please build an instance with: new TwitterApi({ clientId: \'<yourClientId>\' })');
+        }
+        return await this.post('https://api.twitter.com/2/oauth2/revoke', {
+            client_id: this._requestMaker.clientId,
+            client_secret: this._requestMaker.clientSecret,
+            token,
+            token_type_hint: tokenType,
+        });
+    }
+    parseOAuth2AccessTokenResult(result) {
+        const client = new _1.default(result.access_token, this._requestMaker.clientSettings);
+        const scope = result.scope.split(' ').filter(e => e);
+        return {
+            client,
+            expiresIn: result.expires_in,
+            accessToken: result.access_token,
+            scope,
+            refreshToken: result.refresh_token,
+        };
+    }
+}
+exports["default"] = TwitterApiReadOnly;
+
+
+/***/ }),
+
+/***/ 6901:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const client_v1_write_1 = __importDefault(__nccwpck_require__(2607));
+const client_v2_write_1 = __importDefault(__nccwpck_require__(5804));
+const readonly_1 = __importDefault(__nccwpck_require__(9182));
+/**
+ * Twitter v1.1 and v2 API client.
+ */
+class TwitterApiReadWrite extends readonly_1.default {
+    /* Direct access to subclients */
+    get v1() {
+        if (this._v1)
+            return this._v1;
+        return this._v1 = new client_v1_write_1.default(this);
+    }
+    get v2() {
+        if (this._v2)
+            return this._v2;
+        return this._v2 = new client_v2_write_1.default(this);
+    }
+    /**
+     * Get a client with read only rights.
+     */
+    get readOnly() {
+        return this;
+    }
+}
+exports["default"] = TwitterApiReadWrite;
+
+
+/***/ }),
+
+/***/ 3420:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.API_V1_1_STREAM_PREFIX = exports.API_V1_1_UPLOAD_PREFIX = exports.API_V1_1_PREFIX = exports.API_V2_LABS_PREFIX = exports.API_V2_PREFIX = void 0;
+exports.API_V2_PREFIX = 'https://api.twitter.com/2/';
+exports.API_V2_LABS_PREFIX = 'https://api.twitter.com/labs/2/';
+exports.API_V1_1_PREFIX = 'https://api.twitter.com/1.1/';
+exports.API_V1_1_UPLOAD_PREFIX = 'https://upload.twitter.com/1.1/';
+exports.API_V1_1_STREAM_PREFIX = 'https://stream.twitter.com/1.1/';
+
+
+/***/ }),
+
+/***/ 522:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.safeDeprecationWarning = exports.hasMultipleItems = exports.isTweetStreamV2ErrorPayload = exports.trimUndefinedProperties = exports.arrayWrap = exports.sharedPromise = void 0;
+const settings_1 = __nccwpck_require__(5432);
+function sharedPromise(getter) {
+    const sharedPromise = {
+        value: undefined,
+        promise: getter().then(val => {
+            sharedPromise.value = val;
+            return val;
+        }),
+    };
+    return sharedPromise;
+}
+exports.sharedPromise = sharedPromise;
+function arrayWrap(value) {
+    if (Array.isArray(value)) {
+        return value;
+    }
+    return [value];
+}
+exports.arrayWrap = arrayWrap;
+function trimUndefinedProperties(object) {
+    // Delete undefined parameters
+    for (const parameter in object) {
+        if (object[parameter] === undefined)
+            delete object[parameter];
+    }
+}
+exports.trimUndefinedProperties = trimUndefinedProperties;
+function isTweetStreamV2ErrorPayload(payload) {
+    // Is error only if 'errors' is present and 'data' does not exists
+    return typeof payload === 'object'
+        && 'errors' in payload
+        && !('data' in payload);
+}
+exports.isTweetStreamV2ErrorPayload = isTweetStreamV2ErrorPayload;
+function hasMultipleItems(item) {
+    if (Array.isArray(item) && item.length > 1) {
+        return true;
+    }
+    return item.toString().includes(',');
+}
+exports.hasMultipleItems = hasMultipleItems;
+const deprecationWarningsCache = new Set();
+function safeDeprecationWarning(message) {
+    if (typeof console === 'undefined' || !console.warn || !settings_1.TwitterApiV2Settings.deprecationWarnings) {
+        return;
+    }
+    const hash = `${message.instance}-${message.method}-${message.problem}`;
+    if (deprecationWarningsCache.has(hash)) {
+        return;
+    }
+    const formattedMsg = `[twitter-api-v2] Deprecation warning: In ${message.instance}.${message.method}() call` +
+        `, ${message.problem}.\n${message.resolution}.`;
+    console.warn(formattedMsg);
+    console.warn('To disable this message, import variable TwitterApiV2Settings from twitter-api-v2 and set TwitterApiV2Settings.deprecationWarnings to false.');
+    deprecationWarningsCache.add(hash);
+}
+exports.safeDeprecationWarning = safeDeprecationWarning;
+
+
+/***/ }),
+
+/***/ 3537:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports["default"] = void 0;
+var client_1 = __nccwpck_require__(7763);
+Object.defineProperty(exports, "default", ({ enumerable: true, get: function () { return __importDefault(client_1).default; } }));
+__exportStar(__nccwpck_require__(7763), exports);
+__exportStar(__nccwpck_require__(42), exports);
+__exportStar(__nccwpck_require__(5328), exports);
+__exportStar(__nccwpck_require__(79), exports);
+__exportStar(__nccwpck_require__(3407), exports);
+__exportStar(__nccwpck_require__(1400), exports);
+__exportStar(__nccwpck_require__(7474), exports);
+__exportStar(__nccwpck_require__(4874), exports);
+__exportStar(__nccwpck_require__(5432), exports);
+
+
+/***/ }),
+
+/***/ 2596:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.PreviousableTwitterPaginator = exports.TwitterPaginator = void 0;
+/** TwitterPaginator: able to get consume data from initial request, then fetch next data sequentially. */
+class TwitterPaginator {
+    // noinspection TypeScriptAbstractClassConstructorCanBeMadeProtected
+    constructor({ realData, rateLimit, instance, queryParams, sharedParams }) {
+        this._maxResultsWhenFetchLast = 100;
+        this._realData = realData;
+        this._rateLimit = rateLimit;
+        this._instance = instance;
+        this._queryParams = queryParams;
+        this._sharedParams = sharedParams;
+    }
+    get _isRateLimitOk() {
+        if (!this._rateLimit) {
+            return true;
+        }
+        const resetDate = this._rateLimit.reset * 1000;
+        if (resetDate < Date.now()) {
+            return true;
+        }
+        return this._rateLimit.remaining > 0;
+    }
+    makeRequest(queryParams) {
+        return this._instance.get(this.getEndpoint(), queryParams, { fullResponse: true, params: this._sharedParams });
+    }
+    makeNewInstanceFromResult(result, queryParams) {
+        // Construct a subclass
+        return new this.constructor({
+            realData: result.data,
+            rateLimit: result.rateLimit,
+            instance: this._instance,
+            queryParams,
+            sharedParams: this._sharedParams,
+        });
+    }
+    getEndpoint() {
+        return this._endpoint;
+    }
+    injectQueryParams(maxResults) {
+        return {
+            ...(maxResults ? { max_results: maxResults } : {}),
+            ...this._queryParams,
+        };
+    }
+    /* ---------------------- */
+    /* Real paginator methods */
+    /* ---------------------- */
+    /**
+     * Next page.
+     */
+    async next(maxResults) {
+        const queryParams = this.getNextQueryParams(maxResults);
+        const result = await this.makeRequest(queryParams);
+        return this.makeNewInstanceFromResult(result, queryParams);
+    }
+    /**
+     * Next page, but store it in current instance.
+     */
+    async fetchNext(maxResults) {
+        const queryParams = this.getNextQueryParams(maxResults);
+        const result = await this.makeRequest(queryParams);
+        // Await in case of async sub-methods
+        await this.refreshInstanceFromResult(result, true);
+        return this;
+    }
+    /**
+     * Fetch up to {count} items after current page,
+     * as long as rate limit is not hit and Twitter has some results
+     */
+    async fetchLast(count = Infinity) {
+        let queryParams = this.getNextQueryParams(this._maxResultsWhenFetchLast);
+        let resultCount = 0;
+        // Break at rate limit limit
+        while (resultCount < count && this._isRateLimitOk) {
+            const response = await this.makeRequest(queryParams);
+            await this.refreshInstanceFromResult(response, true);
+            resultCount += this.getPageLengthFromRequest(response);
+            if (this.isFetchLastOver(response)) {
+                break;
+            }
+            queryParams = this.getNextQueryParams(this._maxResultsWhenFetchLast);
+        }
+        return this;
+    }
+    get rateLimit() {
+        var _a;
+        return { ...(_a = this._rateLimit) !== null && _a !== void 0 ? _a : {} };
+    }
+    /** Get raw data returned by Twitter API. */
+    get data() {
+        return this._realData;
+    }
+    get done() {
+        return !this.canFetchNextPage(this._realData);
+    }
+    /**
+     * Iterate over currently fetched items.
+     */
+    *[Symbol.iterator]() {
+        yield* this.getItemArray();
+    }
+    /**
+     * Iterate over items "indefinitely" (until rate limit is hit / they're no more items available)
+     * This will **mutate the current instance** and fill data, metas, etc. inside this instance.
+     *
+     * If you need to handle concurrent requests, or you need to rely on immutability, please use `.fetchAndIterate()` instead.
+     */
+    async *[Symbol.asyncIterator]() {
+        yield* this.getItemArray();
+        // eslint-disable-next-line @typescript-eslint/no-this-alias
+        let paginator = this;
+        let canFetchNextPage = this.canFetchNextPage(this._realData);
+        while (canFetchNextPage && this._isRateLimitOk && paginator.getItemArray().length > 0) {
+            const next = await paginator.next(this._maxResultsWhenFetchLast);
+            // Store data into current instance [needed to access includes and meta]
+            this.refreshInstanceFromResult({ data: next._realData, headers: {}, rateLimit: next._rateLimit }, true);
+            canFetchNextPage = this.canFetchNextPage(next._realData);
+            const items = next.getItemArray();
+            yield* items;
+            paginator = next;
+        }
+    }
+    /**
+     * Iterate over items "indefinitely" without modifying the current instance (until rate limit is hit / they're no more items available)
+     *
+     * This will **NOT** mutate the current instance, meaning that current instance will not inherit from `includes` and `meta` (v2 API only).
+     * Use `Symbol.asyncIterator` (`for-await of`) to directly access items with current instance mutation.
+     */
+    async *fetchAndIterate() {
+        for (const item of this.getItemArray()) {
+            yield [item, this];
+        }
+        // eslint-disable-next-line @typescript-eslint/no-this-alias
+        let paginator = this;
+        let canFetchNextPage = this.canFetchNextPage(this._realData);
+        while (canFetchNextPage && this._isRateLimitOk && paginator.getItemArray().length > 0) {
+            const next = await paginator.next(this._maxResultsWhenFetchLast);
+            // Store data into current instance [needed to access includes and meta]
+            this.refreshInstanceFromResult({ data: next._realData, headers: {}, rateLimit: next._rateLimit }, true);
+            canFetchNextPage = this.canFetchNextPage(next._realData);
+            for (const item of next.getItemArray()) {
+                yield [item, next];
+            }
+            this._rateLimit = next._rateLimit;
+            paginator = next;
+        }
+    }
+}
+exports.TwitterPaginator = TwitterPaginator;
+/** PreviousableTwitterPaginator: a TwitterPaginator able to get consume data from both side, next and previous. */
+class PreviousableTwitterPaginator extends TwitterPaginator {
+    /**
+     * Previous page (new tweets)
+     */
+    async previous(maxResults) {
+        const queryParams = this.getPreviousQueryParams(maxResults);
+        const result = await this.makeRequest(queryParams);
+        return this.makeNewInstanceFromResult(result, queryParams);
+    }
+    /**
+     * Previous page, but in current instance.
+     */
+    async fetchPrevious(maxResults) {
+        const queryParams = this.getPreviousQueryParams(maxResults);
+        const result = await this.makeRequest(queryParams);
+        await this.refreshInstanceFromResult(result, false);
+        return this;
+    }
+}
+exports.PreviousableTwitterPaginator = PreviousableTwitterPaginator;
+exports["default"] = TwitterPaginator;
+
+
+/***/ }),
+
+/***/ 5681:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.WelcomeDmV1Paginator = exports.DmEventsV1Paginator = void 0;
+const paginator_v1_1 = __nccwpck_require__(9630);
+class DmEventsV1Paginator extends paginator_v1_1.CursoredV1Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'direct_messages/events/list.json';
+    }
+    refreshInstanceFromResult(response, isNextPage) {
+        const result = response.data;
+        this._rateLimit = response.rateLimit;
+        if (isNextPage) {
+            this._realData.events.push(...result.events);
+            this._realData.next_cursor = result.next_cursor;
+        }
+    }
+    getPageLengthFromRequest(result) {
+        return result.data.events.length;
+    }
+    getItemArray() {
+        return this.events;
+    }
+    /**
+     * Events returned by paginator.
+     */
+    get events() {
+        return this._realData.events;
+    }
+}
+exports.DmEventsV1Paginator = DmEventsV1Paginator;
+class WelcomeDmV1Paginator extends paginator_v1_1.CursoredV1Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'direct_messages/welcome_messages/list.json';
+    }
+    refreshInstanceFromResult(response, isNextPage) {
+        const result = response.data;
+        this._rateLimit = response.rateLimit;
+        if (isNextPage) {
+            this._realData.welcome_messages.push(...result.welcome_messages);
+            this._realData.next_cursor = result.next_cursor;
+        }
+    }
+    getPageLengthFromRequest(result) {
+        return result.data.welcome_messages.length;
+    }
+    getItemArray() {
+        return this.welcomeMessages;
+    }
+    get welcomeMessages() {
+        return this._realData.welcome_messages;
+    }
+}
+exports.WelcomeDmV1Paginator = WelcomeDmV1Paginator;
+
+
+/***/ }),
+
+/***/ 1879:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.ConversationDMTimelineV2Paginator = exports.OneToOneDMTimelineV2Paginator = exports.FullDMTimelineV2Paginator = exports.DMTimelineV2Paginator = void 0;
+const v2_paginator_1 = __nccwpck_require__(6630);
+class DMTimelineV2Paginator extends v2_paginator_1.TimelineV2Paginator {
+    getItemArray() {
+        return this.events;
+    }
+    /**
+     * Events returned by paginator.
+     */
+    get events() {
+        var _a;
+        return (_a = this._realData.data) !== null && _a !== void 0 ? _a : [];
+    }
+    get meta() {
+        return super.meta;
+    }
+}
+exports.DMTimelineV2Paginator = DMTimelineV2Paginator;
+class FullDMTimelineV2Paginator extends DMTimelineV2Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'dm_events';
+    }
+}
+exports.FullDMTimelineV2Paginator = FullDMTimelineV2Paginator;
+class OneToOneDMTimelineV2Paginator extends DMTimelineV2Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'dm_conversations/with/:participant_id/dm_events';
+    }
+}
+exports.OneToOneDMTimelineV2Paginator = OneToOneDMTimelineV2Paginator;
+class ConversationDMTimelineV2Paginator extends DMTimelineV2Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'dm_conversations/:dm_conversation_id/dm_events';
+    }
+}
+exports.ConversationDMTimelineV2Paginator = ConversationDMTimelineV2Paginator;
+
+
+/***/ }),
+
+/***/ 8265:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.UserFollowerIdsV1Paginator = exports.UserFollowerListV1Paginator = void 0;
+const paginator_v1_1 = __nccwpck_require__(9630);
+class UserFollowerListV1Paginator extends paginator_v1_1.CursoredV1Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'followers/list.json';
+    }
+    refreshInstanceFromResult(response, isNextPage) {
+        const result = response.data;
+        this._rateLimit = response.rateLimit;
+        if (isNextPage) {
+            this._realData.users.push(...result.users);
+            this._realData.next_cursor = result.next_cursor;
+        }
+    }
+    getPageLengthFromRequest(result) {
+        return result.data.users.length;
+    }
+    getItemArray() {
+        return this.users;
+    }
+    /**
+     * Users returned by paginator.
+     */
+    get users() {
+        return this._realData.users;
+    }
+}
+exports.UserFollowerListV1Paginator = UserFollowerListV1Paginator;
+class UserFollowerIdsV1Paginator extends paginator_v1_1.CursoredV1Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'followers/ids.json';
+        this._maxResultsWhenFetchLast = 5000;
+    }
+    refreshInstanceFromResult(response, isNextPage) {
+        const result = response.data;
+        this._rateLimit = response.rateLimit;
+        if (isNextPage) {
+            this._realData.ids.push(...result.ids);
+            this._realData.next_cursor = result.next_cursor;
+        }
+    }
+    getPageLengthFromRequest(result) {
+        return result.data.ids.length;
+    }
+    getItemArray() {
+        return this.ids;
+    }
+    /**
+     * Users IDs returned by paginator.
+     */
+    get ids() {
+        return this._realData.ids;
+    }
+}
+exports.UserFollowerIdsV1Paginator = UserFollowerIdsV1Paginator;
+
+
+/***/ }),
+
+/***/ 4185:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.UserFollowersIdsV1Paginator = exports.UserFriendListV1Paginator = void 0;
+const paginator_v1_1 = __nccwpck_require__(9630);
+class UserFriendListV1Paginator extends paginator_v1_1.CursoredV1Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'friends/list.json';
+    }
+    refreshInstanceFromResult(response, isNextPage) {
+        const result = response.data;
+        this._rateLimit = response.rateLimit;
+        if (isNextPage) {
+            this._realData.users.push(...result.users);
+            this._realData.next_cursor = result.next_cursor;
+        }
+    }
+    getPageLengthFromRequest(result) {
+        return result.data.users.length;
+    }
+    getItemArray() {
+        return this.users;
+    }
+    /**
+     * Users returned by paginator.
+     */
+    get users() {
+        return this._realData.users;
+    }
+}
+exports.UserFriendListV1Paginator = UserFriendListV1Paginator;
+class UserFollowersIdsV1Paginator extends paginator_v1_1.CursoredV1Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'friends/ids.json';
+        this._maxResultsWhenFetchLast = 5000;
+    }
+    refreshInstanceFromResult(response, isNextPage) {
+        const result = response.data;
+        this._rateLimit = response.rateLimit;
+        if (isNextPage) {
+            this._realData.ids.push(...result.ids);
+            this._realData.next_cursor = result.next_cursor;
+        }
+    }
+    getPageLengthFromRequest(result) {
+        return result.data.ids.length;
+    }
+    getItemArray() {
+        return this.ids;
+    }
+    /**
+     * Users IDs returned by paginator.
+     */
+    get ids() {
+        return this._realData.ids;
+    }
+}
+exports.UserFollowersIdsV1Paginator = UserFollowersIdsV1Paginator;
+
+
+/***/ }),
+
+/***/ 7474:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+__exportStar(__nccwpck_require__(4233), exports);
+__exportStar(__nccwpck_require__(2596), exports);
+__exportStar(__nccwpck_require__(5681), exports);
+__exportStar(__nccwpck_require__(8671), exports);
+__exportStar(__nccwpck_require__(3813), exports);
+__exportStar(__nccwpck_require__(7926), exports);
+__exportStar(__nccwpck_require__(5973), exports);
+__exportStar(__nccwpck_require__(7584), exports);
+__exportStar(__nccwpck_require__(817), exports);
+__exportStar(__nccwpck_require__(4185), exports);
+__exportStar(__nccwpck_require__(8265), exports);
+
+
+/***/ }),
+
+/***/ 7584:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.ListSubscribersV1Paginator = exports.ListMembersV1Paginator = exports.ListSubscriptionsV1Paginator = exports.ListOwnershipsV1Paginator = exports.ListMembershipsV1Paginator = void 0;
+const paginator_v1_1 = __nccwpck_require__(9630);
+class ListListsV1Paginator extends paginator_v1_1.CursoredV1Paginator {
+    refreshInstanceFromResult(response, isNextPage) {
+        const result = response.data;
+        this._rateLimit = response.rateLimit;
+        if (isNextPage) {
+            this._realData.lists.push(...result.lists);
+            this._realData.next_cursor = result.next_cursor;
+        }
+    }
+    getPageLengthFromRequest(result) {
+        return result.data.lists.length;
+    }
+    getItemArray() {
+        return this.lists;
+    }
+    /**
+     * Lists returned by paginator.
+     */
+    get lists() {
+        return this._realData.lists;
+    }
+}
+class ListMembershipsV1Paginator extends ListListsV1Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'lists/memberships.json';
+    }
+}
+exports.ListMembershipsV1Paginator = ListMembershipsV1Paginator;
+class ListOwnershipsV1Paginator extends ListListsV1Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'lists/ownerships.json';
+    }
+}
+exports.ListOwnershipsV1Paginator = ListOwnershipsV1Paginator;
+class ListSubscriptionsV1Paginator extends ListListsV1Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'lists/subscriptions.json';
+    }
+}
+exports.ListSubscriptionsV1Paginator = ListSubscriptionsV1Paginator;
+class ListUsersV1Paginator extends paginator_v1_1.CursoredV1Paginator {
+    refreshInstanceFromResult(response, isNextPage) {
+        const result = response.data;
+        this._rateLimit = response.rateLimit;
+        if (isNextPage) {
+            this._realData.users.push(...result.users);
+            this._realData.next_cursor = result.next_cursor;
+        }
+    }
+    getPageLengthFromRequest(result) {
+        return result.data.users.length;
+    }
+    getItemArray() {
+        return this.users;
+    }
+    /**
+     * Users returned by paginator.
+     */
+    get users() {
+        return this._realData.users;
+    }
+}
+class ListMembersV1Paginator extends ListUsersV1Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'lists/members.json';
+    }
+}
+exports.ListMembersV1Paginator = ListMembersV1Paginator;
+class ListSubscribersV1Paginator extends ListUsersV1Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'lists/subscribers.json';
+    }
+}
+exports.ListSubscribersV1Paginator = ListSubscribersV1Paginator;
+
+
+/***/ }),
+
+/***/ 817:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.UserListFollowedV2Paginator = exports.UserListMembershipsV2Paginator = exports.UserOwnedListsV2Paginator = void 0;
+const v2_paginator_1 = __nccwpck_require__(6630);
+class ListTimelineV2Paginator extends v2_paginator_1.TimelineV2Paginator {
+    getItemArray() {
+        return this.lists;
+    }
+    /**
+     * Lists returned by paginator.
+     */
+    get lists() {
+        var _a;
+        return (_a = this._realData.data) !== null && _a !== void 0 ? _a : [];
+    }
+    get meta() {
+        return super.meta;
+    }
+}
+class UserOwnedListsV2Paginator extends ListTimelineV2Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'users/:id/owned_lists';
+    }
+}
+exports.UserOwnedListsV2Paginator = UserOwnedListsV2Paginator;
+class UserListMembershipsV2Paginator extends ListTimelineV2Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'users/:id/list_memberships';
+    }
+}
+exports.UserListMembershipsV2Paginator = UserListMembershipsV2Paginator;
+class UserListFollowedV2Paginator extends ListTimelineV2Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'users/:id/followed_lists';
+    }
+}
+exports.UserListFollowedV2Paginator = UserListFollowedV2Paginator;
+
+
+/***/ }),
+
+/***/ 8671:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.MuteUserIdsV1Paginator = exports.MuteUserListV1Paginator = void 0;
+const paginator_v1_1 = __nccwpck_require__(9630);
+class MuteUserListV1Paginator extends paginator_v1_1.CursoredV1Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'mutes/users/list.json';
+    }
+    refreshInstanceFromResult(response, isNextPage) {
+        const result = response.data;
+        this._rateLimit = response.rateLimit;
+        if (isNextPage) {
+            this._realData.users.push(...result.users);
+            this._realData.next_cursor = result.next_cursor;
+        }
+    }
+    getPageLengthFromRequest(result) {
+        return result.data.users.length;
+    }
+    getItemArray() {
+        return this.users;
+    }
+    /**
+     * Users returned by paginator.
+     */
+    get users() {
+        return this._realData.users;
+    }
+}
+exports.MuteUserListV1Paginator = MuteUserListV1Paginator;
+class MuteUserIdsV1Paginator extends paginator_v1_1.CursoredV1Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'mutes/users/ids.json';
+        this._maxResultsWhenFetchLast = 5000;
+    }
+    refreshInstanceFromResult(response, isNextPage) {
+        const result = response.data;
+        this._rateLimit = response.rateLimit;
+        if (isNextPage) {
+            this._realData.ids.push(...result.ids);
+            this._realData.next_cursor = result.next_cursor;
+        }
+    }
+    getPageLengthFromRequest(result) {
+        return result.data.ids.length;
+    }
+    getItemArray() {
+        return this.ids;
+    }
+    /**
+     * Users IDs returned by paginator.
+     */
+    get ids() {
+        return this._realData.ids;
+    }
+}
+exports.MuteUserIdsV1Paginator = MuteUserIdsV1Paginator;
+
+
+/***/ }),
+
+/***/ 9630:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.CursoredV1Paginator = void 0;
+const TwitterPaginator_1 = __importDefault(__nccwpck_require__(2596));
+class CursoredV1Paginator extends TwitterPaginator_1.default {
+    getNextQueryParams(maxResults) {
+        var _a;
+        return {
+            ...this._queryParams,
+            cursor: (_a = this._realData.next_cursor_str) !== null && _a !== void 0 ? _a : this._realData.next_cursor,
+            ...(maxResults ? { count: maxResults } : {}),
+        };
+    }
+    isFetchLastOver(result) {
+        // If we cant fetch next page
+        return !this.canFetchNextPage(result.data);
+    }
+    canFetchNextPage(result) {
+        // If one of cursor is valid
+        return !this.isNextCursorInvalid(result.next_cursor) || !this.isNextCursorInvalid(result.next_cursor_str);
+    }
+    isNextCursorInvalid(value) {
+        return value === undefined
+            || value === 0
+            || value === -1
+            || value === '0'
+            || value === '-1';
+    }
+}
+exports.CursoredV1Paginator = CursoredV1Paginator;
+
+
+/***/ }),
+
+/***/ 3813:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.UserFavoritesV1Paginator = exports.ListTimelineV1Paginator = exports.UserTimelineV1Paginator = exports.MentionTimelineV1Paginator = exports.HomeTimelineV1Paginator = void 0;
+const TwitterPaginator_1 = __importDefault(__nccwpck_require__(2596));
+/** A generic TwitterPaginator able to consume TweetV1 timelines. */
+class TweetTimelineV1Paginator extends TwitterPaginator_1.default {
+    constructor() {
+        super(...arguments);
+        this.hasFinishedFetch = false;
+    }
+    refreshInstanceFromResult(response, isNextPage) {
+        const result = response.data;
+        this._rateLimit = response.rateLimit;
+        if (isNextPage) {
+            this._realData.push(...result);
+            // HINT: This is an approximation, as "end" of pagination cannot be safely determined without cursors.
+            this.hasFinishedFetch = result.length === 0;
+        }
+    }
+    getNextQueryParams(maxResults) {
+        const latestId = BigInt(this._realData[this._realData.length - 1].id_str);
+        return {
+            ...this.injectQueryParams(maxResults),
+            max_id: (latestId - BigInt(1)).toString(),
+        };
+    }
+    getPageLengthFromRequest(result) {
+        return result.data.length;
+    }
+    isFetchLastOver(result) {
+        return !result.data.length;
+    }
+    canFetchNextPage(result) {
+        return result.length > 0;
+    }
+    getItemArray() {
+        return this.tweets;
+    }
+    /**
+     * Tweets returned by paginator.
+     */
+    get tweets() {
+        return this._realData;
+    }
+    get done() {
+        return super.done || this.hasFinishedFetch;
+    }
+}
+// Timelines
+// Home
+class HomeTimelineV1Paginator extends TweetTimelineV1Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'statuses/home_timeline.json';
+    }
+}
+exports.HomeTimelineV1Paginator = HomeTimelineV1Paginator;
+// Mention
+class MentionTimelineV1Paginator extends TweetTimelineV1Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'statuses/mentions_timeline.json';
+    }
+}
+exports.MentionTimelineV1Paginator = MentionTimelineV1Paginator;
+// User
+class UserTimelineV1Paginator extends TweetTimelineV1Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'statuses/user_timeline.json';
+    }
+}
+exports.UserTimelineV1Paginator = UserTimelineV1Paginator;
+// Lists
+class ListTimelineV1Paginator extends TweetTimelineV1Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'lists/statuses.json';
+    }
+}
+exports.ListTimelineV1Paginator = ListTimelineV1Paginator;
+// Favorites
+class UserFavoritesV1Paginator extends TweetTimelineV1Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'favorites/list.json';
+    }
+}
+exports.UserFavoritesV1Paginator = UserFavoritesV1Paginator;
+
+
+/***/ }),
+
+/***/ 4233:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.TweetV2ListTweetsPaginator = exports.TweetV2UserLikedTweetsPaginator = exports.TweetBookmarksTimelineV2Paginator = exports.TweetUserMentionTimelineV2Paginator = exports.TweetUserTimelineV2Paginator = exports.TweetHomeTimelineV2Paginator = exports.QuotedTweetsTimelineV2Paginator = exports.TweetSearchAllV2Paginator = exports.TweetSearchRecentV2Paginator = void 0;
+const v2_paginator_1 = __nccwpck_require__(6630);
+/** A generic PreviousableTwitterPaginator able to consume TweetV2 timelines with since_id, until_id and next_token (when available). */
+class TweetTimelineV2Paginator extends v2_paginator_1.TwitterV2Paginator {
+    refreshInstanceFromResult(response, isNextPage) {
+        var _a;
+        const result = response.data;
+        const resultData = (_a = result.data) !== null && _a !== void 0 ? _a : [];
+        this._rateLimit = response.rateLimit;
+        if (!this._realData.data) {
+            this._realData.data = [];
+        }
+        if (isNextPage) {
+            this._realData.meta.oldest_id = result.meta.oldest_id;
+            this._realData.meta.result_count += result.meta.result_count;
+            this._realData.meta.next_token = result.meta.next_token;
+            this._realData.data.push(...resultData);
+        }
+        else {
+            this._realData.meta.newest_id = result.meta.newest_id;
+            this._realData.meta.result_count += result.meta.result_count;
+            this._realData.data.unshift(...resultData);
+        }
+        this.updateIncludes(result);
+    }
+    getNextQueryParams(maxResults) {
+        this.assertUsable();
+        const params = { ...this.injectQueryParams(maxResults) };
+        if (this._realData.meta.next_token) {
+            params.next_token = this._realData.meta.next_token;
+        }
+        else {
+            if (params.start_time) {
+                // until_id and start_time are forbidden together for some reason, so convert start_time to a since_id.
+                params.since_id = this.dateStringToSnowflakeId(params.start_time);
+                delete params.start_time;
+            }
+            if (params.end_time) {
+                // until_id overrides end_time, so delete it
+                delete params.end_time;
+            }
+            params.until_id = this._realData.meta.oldest_id;
+        }
+        return params;
+    }
+    getPreviousQueryParams(maxResults) {
+        this.assertUsable();
+        return {
+            ...this.injectQueryParams(maxResults),
+            since_id: this._realData.meta.newest_id,
+        };
+    }
+    getPageLengthFromRequest(result) {
+        var _a, _b;
+        return (_b = (_a = result.data.data) === null || _a === void 0 ? void 0 : _a.length) !== null && _b !== void 0 ? _b : 0;
+    }
+    isFetchLastOver(result) {
+        var _a;
+        return !((_a = result.data.data) === null || _a === void 0 ? void 0 : _a.length) || !this.canFetchNextPage(result.data);
+    }
+    canFetchNextPage(result) {
+        return !!result.meta.next_token;
+    }
+    getItemArray() {
+        return this.tweets;
+    }
+    dateStringToSnowflakeId(dateStr) {
+        const TWITTER_START_EPOCH = BigInt('1288834974657');
+        const date = new Date(dateStr);
+        if (isNaN(date.valueOf())) {
+            throw new Error('Unable to convert start_time/end_time to a valid date. A ISO 8601 DateTime is excepted, please check your input.');
+        }
+        const dateTimestamp = BigInt(date.valueOf());
+        return ((dateTimestamp - TWITTER_START_EPOCH) << BigInt('22')).toString();
+    }
+    /**
+     * Tweets returned by paginator.
+     */
+    get tweets() {
+        var _a;
+        return (_a = this._realData.data) !== null && _a !== void 0 ? _a : [];
+    }
+    get meta() {
+        return super.meta;
+    }
+}
+/** A generic PreviousableTwitterPaginator able to consume TweetV2 timelines with pagination_tokens. */
+class TweetPaginableTimelineV2Paginator extends v2_paginator_1.TimelineV2Paginator {
+    refreshInstanceFromResult(response, isNextPage) {
+        super.refreshInstanceFromResult(response, isNextPage);
+        const result = response.data;
+        if (isNextPage) {
+            this._realData.meta.oldest_id = result.meta.oldest_id;
+        }
+        else {
+            this._realData.meta.newest_id = result.meta.newest_id;
+        }
+    }
+    getItemArray() {
+        return this.tweets;
+    }
+    /**
+     * Tweets returned by paginator.
+     */
+    get tweets() {
+        var _a;
+        return (_a = this._realData.data) !== null && _a !== void 0 ? _a : [];
+    }
+    get meta() {
+        return super.meta;
+    }
+}
+// ----------------
+// - Tweet search -
+// ----------------
+class TweetSearchRecentV2Paginator extends TweetTimelineV2Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'tweets/search/recent';
+    }
+}
+exports.TweetSearchRecentV2Paginator = TweetSearchRecentV2Paginator;
+class TweetSearchAllV2Paginator extends TweetTimelineV2Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'tweets/search/all';
+    }
+}
+exports.TweetSearchAllV2Paginator = TweetSearchAllV2Paginator;
+class QuotedTweetsTimelineV2Paginator extends TweetPaginableTimelineV2Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'tweets/:id/quote_tweets';
+    }
+}
+exports.QuotedTweetsTimelineV2Paginator = QuotedTweetsTimelineV2Paginator;
+// -----------------
+// - Home timeline -
+// -----------------
+class TweetHomeTimelineV2Paginator extends TweetPaginableTimelineV2Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'users/:id/timelines/reverse_chronological';
+    }
+}
+exports.TweetHomeTimelineV2Paginator = TweetHomeTimelineV2Paginator;
+class TweetUserTimelineV2Paginator extends TweetPaginableTimelineV2Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'users/:id/tweets';
+    }
+}
+exports.TweetUserTimelineV2Paginator = TweetUserTimelineV2Paginator;
+class TweetUserMentionTimelineV2Paginator extends TweetPaginableTimelineV2Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'users/:id/mentions';
+    }
+}
+exports.TweetUserMentionTimelineV2Paginator = TweetUserMentionTimelineV2Paginator;
+// -------------
+// - Bookmarks -
+// -------------
+class TweetBookmarksTimelineV2Paginator extends TweetPaginableTimelineV2Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'users/:id/bookmarks';
+    }
+}
+exports.TweetBookmarksTimelineV2Paginator = TweetBookmarksTimelineV2Paginator;
+// ---------------------------------------------------------------------------------
+// - Tweet lists (consume tweets with pagination tokens instead of since/until id) -
+// ---------------------------------------------------------------------------------
+/** A generic TwitterPaginator able to consume TweetV2 timelines. */
+class TweetListV2Paginator extends v2_paginator_1.TimelineV2Paginator {
+    /**
+     * Tweets returned by paginator.
+     */
+    get tweets() {
+        var _a;
+        return (_a = this._realData.data) !== null && _a !== void 0 ? _a : [];
+    }
+    get meta() {
+        return super.meta;
+    }
+    getItemArray() {
+        return this.tweets;
+    }
+}
+class TweetV2UserLikedTweetsPaginator extends TweetListV2Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'users/:id/liked_tweets';
+    }
+}
+exports.TweetV2UserLikedTweetsPaginator = TweetV2UserLikedTweetsPaginator;
+class TweetV2ListTweetsPaginator extends TweetListV2Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'lists/:id/tweets';
+    }
+}
+exports.TweetV2ListTweetsPaginator = TweetV2ListTweetsPaginator;
+
+
+/***/ }),
+
+/***/ 7926:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.FriendshipsOutgoingV1Paginator = exports.FriendshipsIncomingV1Paginator = exports.UserSearchV1Paginator = void 0;
+const TwitterPaginator_1 = __importDefault(__nccwpck_require__(2596));
+const paginator_v1_1 = __nccwpck_require__(9630);
+/** A generic TwitterPaginator able to consume TweetV1 timelines. */
+class UserSearchV1Paginator extends TwitterPaginator_1.default {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'users/search.json';
+    }
+    refreshInstanceFromResult(response, isNextPage) {
+        const result = response.data;
+        this._rateLimit = response.rateLimit;
+        if (isNextPage) {
+            this._realData.push(...result);
+        }
+    }
+    getNextQueryParams(maxResults) {
+        var _a;
+        const previousPage = Number((_a = this._queryParams.page) !== null && _a !== void 0 ? _a : '1');
+        return {
+            ...this._queryParams,
+            page: previousPage + 1,
+            ...maxResults ? { count: maxResults } : {},
+        };
+    }
+    getPageLengthFromRequest(result) {
+        return result.data.length;
+    }
+    isFetchLastOver(result) {
+        return !result.data.length;
+    }
+    canFetchNextPage(result) {
+        return result.length > 0;
+    }
+    getItemArray() {
+        return this.users;
+    }
+    /**
+     * Users returned by paginator.
+     */
+    get users() {
+        return this._realData;
+    }
+}
+exports.UserSearchV1Paginator = UserSearchV1Paginator;
+class FriendshipsIncomingV1Paginator extends paginator_v1_1.CursoredV1Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'friendships/incoming.json';
+        this._maxResultsWhenFetchLast = 5000;
+    }
+    refreshInstanceFromResult(response, isNextPage) {
+        const result = response.data;
+        this._rateLimit = response.rateLimit;
+        if (isNextPage) {
+            this._realData.ids.push(...result.ids);
+            this._realData.next_cursor = result.next_cursor;
+        }
+    }
+    getPageLengthFromRequest(result) {
+        return result.data.ids.length;
+    }
+    getItemArray() {
+        return this.ids;
+    }
+    /**
+     * Users IDs returned by paginator.
+     */
+    get ids() {
+        return this._realData.ids;
+    }
+}
+exports.FriendshipsIncomingV1Paginator = FriendshipsIncomingV1Paginator;
+class FriendshipsOutgoingV1Paginator extends FriendshipsIncomingV1Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'friendships/outgoing.json';
+    }
+}
+exports.FriendshipsOutgoingV1Paginator = FriendshipsOutgoingV1Paginator;
+
+
+/***/ }),
+
+/***/ 5973:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.TweetRetweetersUsersV2Paginator = exports.TweetLikingUsersV2Paginator = exports.UserListFollowersV2Paginator = exports.UserListMembersV2Paginator = exports.UserFollowingV2Paginator = exports.UserFollowersV2Paginator = exports.UserMutingUsersV2Paginator = exports.UserBlockingUsersV2Paginator = void 0;
+const v2_paginator_1 = __nccwpck_require__(6630);
+/** A generic PreviousableTwitterPaginator able to consume UserV2 timelines. */
+class UserTimelineV2Paginator extends v2_paginator_1.TimelineV2Paginator {
+    getItemArray() {
+        return this.users;
+    }
+    /**
+     * Users returned by paginator.
+     */
+    get users() {
+        var _a;
+        return (_a = this._realData.data) !== null && _a !== void 0 ? _a : [];
+    }
+    get meta() {
+        return super.meta;
+    }
+}
+class UserBlockingUsersV2Paginator extends UserTimelineV2Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'users/:id/blocking';
+    }
+}
+exports.UserBlockingUsersV2Paginator = UserBlockingUsersV2Paginator;
+class UserMutingUsersV2Paginator extends UserTimelineV2Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'users/:id/muting';
+    }
+}
+exports.UserMutingUsersV2Paginator = UserMutingUsersV2Paginator;
+class UserFollowersV2Paginator extends UserTimelineV2Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'users/:id/followers';
+    }
+}
+exports.UserFollowersV2Paginator = UserFollowersV2Paginator;
+class UserFollowingV2Paginator extends UserTimelineV2Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'users/:id/following';
+    }
+}
+exports.UserFollowingV2Paginator = UserFollowingV2Paginator;
+class UserListMembersV2Paginator extends UserTimelineV2Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'lists/:id/members';
+    }
+}
+exports.UserListMembersV2Paginator = UserListMembersV2Paginator;
+class UserListFollowersV2Paginator extends UserTimelineV2Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'lists/:id/followers';
+    }
+}
+exports.UserListFollowersV2Paginator = UserListFollowersV2Paginator;
+class TweetLikingUsersV2Paginator extends UserTimelineV2Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'tweets/:id/liking_users';
+    }
+}
+exports.TweetLikingUsersV2Paginator = TweetLikingUsersV2Paginator;
+class TweetRetweetersUsersV2Paginator extends UserTimelineV2Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'tweets/:id/retweeted_by';
+    }
+}
+exports.TweetRetweetersUsersV2Paginator = TweetRetweetersUsersV2Paginator;
+
+
+/***/ }),
+
+/***/ 6630:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.TimelineV2Paginator = exports.TwitterV2Paginator = void 0;
+const includes_v2_helper_1 = __nccwpck_require__(79);
+const TwitterPaginator_1 = __nccwpck_require__(2596);
+/** A generic PreviousableTwitterPaginator with common v2 helper methods. */
+class TwitterV2Paginator extends TwitterPaginator_1.PreviousableTwitterPaginator {
+    updateIncludes(data) {
+        // Update errors
+        if (data.errors) {
+            if (!this._realData.errors) {
+                this._realData.errors = [];
+            }
+            this._realData.errors = [...this._realData.errors, ...data.errors];
+        }
+        // Update includes
+        if (!data.includes) {
+            return;
+        }
+        if (!this._realData.includes) {
+            this._realData.includes = {};
+        }
+        const includesRealData = this._realData.includes;
+        for (const [includeKey, includeArray] of Object.entries(data.includes)) {
+            if (!includesRealData[includeKey]) {
+                includesRealData[includeKey] = [];
+            }
+            includesRealData[includeKey] = [
+                ...includesRealData[includeKey],
+                ...includeArray,
+            ];
+        }
+    }
+    /** Throw if the current paginator is not usable. */
+    assertUsable() {
+        if (this.unusable) {
+            throw new Error('Unable to use this paginator to fetch more data, as it does not contain any metadata.' +
+                ' Check .errors property for more details.');
+        }
+    }
+    get meta() {
+        return this._realData.meta;
+    }
+    get includes() {
+        var _a;
+        if (!((_a = this._realData) === null || _a === void 0 ? void 0 : _a.includes)) {
+            return new includes_v2_helper_1.TwitterV2IncludesHelper(this._realData);
+        }
+        if (this._includesInstance) {
+            return this._includesInstance;
+        }
+        return this._includesInstance = new includes_v2_helper_1.TwitterV2IncludesHelper(this._realData);
+    }
+    get errors() {
+        var _a;
+        return (_a = this._realData.errors) !== null && _a !== void 0 ? _a : [];
+    }
+    /** `true` if this paginator only contains error payload and no metadata found to consume data. */
+    get unusable() {
+        return this.errors.length > 0 && !this._realData.meta && !this._realData.data;
+    }
+}
+exports.TwitterV2Paginator = TwitterV2Paginator;
+/** A generic TwitterV2Paginator able to consume v2 timelines that use max_results and pagination tokens. */
+class TimelineV2Paginator extends TwitterV2Paginator {
+    refreshInstanceFromResult(response, isNextPage) {
+        var _a;
+        const result = response.data;
+        const resultData = (_a = result.data) !== null && _a !== void 0 ? _a : [];
+        this._rateLimit = response.rateLimit;
+        if (!this._realData.data) {
+            this._realData.data = [];
+        }
+        if (isNextPage) {
+            this._realData.meta.result_count += result.meta.result_count;
+            this._realData.meta.next_token = result.meta.next_token;
+            this._realData.data.push(...resultData);
+        }
+        else {
+            this._realData.meta.result_count += result.meta.result_count;
+            this._realData.meta.previous_token = result.meta.previous_token;
+            this._realData.data.unshift(...resultData);
+        }
+        this.updateIncludes(result);
+    }
+    getNextQueryParams(maxResults) {
+        this.assertUsable();
+        return {
+            ...this.injectQueryParams(maxResults),
+            pagination_token: this._realData.meta.next_token,
+        };
+    }
+    getPreviousQueryParams(maxResults) {
+        this.assertUsable();
+        return {
+            ...this.injectQueryParams(maxResults),
+            pagination_token: this._realData.meta.previous_token,
+        };
+    }
+    getPageLengthFromRequest(result) {
+        var _a, _b;
+        return (_b = (_a = result.data.data) === null || _a === void 0 ? void 0 : _a.length) !== null && _b !== void 0 ? _b : 0;
+    }
+    isFetchLastOver(result) {
+        var _a;
+        return !((_a = result.data.data) === null || _a === void 0 ? void 0 : _a.length) || !this.canFetchNextPage(result.data);
+    }
+    canFetchNextPage(result) {
+        var _a;
+        return !!((_a = result.meta) === null || _a === void 0 ? void 0 : _a.next_token);
+    }
+}
+exports.TimelineV2Paginator = TimelineV2Paginator;
+
+
+/***/ }),
+
+/***/ 5899:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.applyResponseHooks = exports.hasRequestErrorPlugins = void 0;
+const types_1 = __nccwpck_require__(1400);
+/* Plugin helpers */
+function hasRequestErrorPlugins(client) {
+    var _a;
+    if (!((_a = client.clientSettings.plugins) === null || _a === void 0 ? void 0 : _a.length)) {
+        return false;
+    }
+    for (const plugin of client.clientSettings.plugins) {
+        if (plugin.onRequestError || plugin.onResponseError) {
+            return true;
+        }
+    }
+    return false;
+}
+exports.hasRequestErrorPlugins = hasRequestErrorPlugins;
+async function applyResponseHooks(requestParams, computedParams, requestOptions, error) {
+    let override;
+    if (error instanceof types_1.ApiRequestError || error instanceof types_1.ApiPartialResponseError) {
+        override = await this.applyPluginMethod('onRequestError', {
+            client: this,
+            url: this.getUrlObjectFromUrlString(requestParams.url),
+            params: requestParams,
+            computedParams,
+            requestOptions,
+            error,
+        });
+    }
+    else if (error instanceof types_1.ApiResponseError) {
+        override = await this.applyPluginMethod('onResponseError', {
+            client: this,
+            url: this.getUrlObjectFromUrlString(requestParams.url),
+            params: requestParams,
+            computedParams,
+            requestOptions,
+            error,
+        });
+    }
+    if (override && override instanceof types_1.TwitterApiPluginResponseOverride) {
+        return override.value;
+    }
+    return Promise.reject(error);
+}
+exports.applyResponseHooks = applyResponseHooks;
+
+
+/***/ }),
+
+/***/ 5432:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.TwitterApiV2Settings = void 0;
+exports.TwitterApiV2Settings = {
+    debug: false,
+    deprecationWarnings: true,
+    logger: { log: console.log.bind(console) },
+};
+
+
+/***/ }),
+
+/***/ 4874:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.TweetStream = void 0;
+const events_1 = __nccwpck_require__(2361);
+const request_handler_helper_1 = __importDefault(__nccwpck_require__(3819));
+const types_1 = __nccwpck_require__(1400);
+const TweetStreamEventCombiner_1 = __importDefault(__nccwpck_require__(9502));
+const TweetStreamParser_1 = __importStar(__nccwpck_require__(661));
+// In seconds
+const basicRetriesAttempt = [5, 15, 30, 60, 90, 120, 180, 300, 600, 900];
+// Default retry function
+const basicReconnectRetry = tryOccurrence => tryOccurrence > basicRetriesAttempt.length
+    ? 901000
+    : basicRetriesAttempt[tryOccurrence - 1] * 1000;
+class TweetStream extends events_1.EventEmitter {
+    constructor(requestData, connection) {
+        super();
+        this.requestData = requestData;
+        this.autoReconnect = false;
+        this.autoReconnectRetries = 5;
+        // 2 minutes without any Twitter signal
+        this.keepAliveTimeoutMs = 1000 * 120;
+        this.nextRetryTimeout = basicReconnectRetry;
+        this.parser = new TweetStreamParser_1.default();
+        this.connectionProcessRunning = false;
+        this.onKeepAliveTimeout = this.onKeepAliveTimeout.bind(this);
+        this.initEventsFromParser();
+        if (connection) {
+            this.req = connection.req;
+            this.res = connection.res;
+            this.originalResponse = connection.originalResponse;
+            this.initEventsFromRequest();
+        }
+    }
+    on(event, handler) {
+        return super.on(event, handler);
+    }
+    initEventsFromRequest() {
+        if (!this.req || !this.res) {
+            throw new Error('TweetStream error: You cannot init TweetStream without a request and response object.');
+        }
+        const errorHandler = (err) => {
+            this.emit(types_1.ETwitterStreamEvent.ConnectionError, err);
+            this.emit(types_1.ETwitterStreamEvent.Error, {
+                type: types_1.ETwitterStreamEvent.ConnectionError,
+                error: err,
+                message: 'Connection lost or closed by Twitter.',
+            });
+            this.onConnectionError();
+        };
+        this.req.on('error', errorHandler);
+        this.res.on('error', errorHandler);
+        // Usually, connection should not be closed by Twitter!
+        this.res.on('close', () => errorHandler(new Error('Connection closed by Twitter.')));
+        this.res.on('data', (chunk) => {
+            this.resetKeepAliveTimeout();
+            if (chunk.toString() === '\r\n') {
+                return this.emit(types_1.ETwitterStreamEvent.DataKeepAlive);
+            }
+            this.parser.push(chunk.toString());
+        });
+        // Starts the keep alive timeout
+        this.resetKeepAliveTimeout();
+    }
+    initEventsFromParser() {
+        const payloadIsError = this.requestData.payloadIsError;
+        this.parser.on(TweetStreamParser_1.EStreamParserEvent.ParsedData, (eventData) => {
+            if (payloadIsError && payloadIsError(eventData)) {
+                this.emit(types_1.ETwitterStreamEvent.DataError, eventData);
+                this.emit(types_1.ETwitterStreamEvent.Error, {
+                    type: types_1.ETwitterStreamEvent.DataError,
+                    error: eventData,
+                    message: 'Twitter sent a payload that is detected as an error payload.',
+                });
+            }
+            else {
+                this.emit(types_1.ETwitterStreamEvent.Data, eventData);
+            }
+        });
+        this.parser.on(TweetStreamParser_1.EStreamParserEvent.ParseError, (error) => {
+            this.emit(types_1.ETwitterStreamEvent.TweetParseError, error);
+            this.emit(types_1.ETwitterStreamEvent.Error, {
+                type: types_1.ETwitterStreamEvent.TweetParseError,
+                error,
+                message: 'Failed to parse stream data.',
+            });
+        });
+    }
+    resetKeepAliveTimeout() {
+        this.unbindKeepAliveTimeout();
+        if (this.keepAliveTimeoutMs !== Infinity) {
+            this.keepAliveTimeout = setTimeout(this.onKeepAliveTimeout, this.keepAliveTimeoutMs);
+        }
+    }
+    onKeepAliveTimeout() {
+        this.emit(types_1.ETwitterStreamEvent.ConnectionLost);
+        this.onConnectionError();
+    }
+    unbindTimeouts() {
+        this.unbindRetryTimeout();
+        this.unbindKeepAliveTimeout();
+    }
+    unbindKeepAliveTimeout() {
+        if (this.keepAliveTimeout) {
+            clearTimeout(this.keepAliveTimeout);
+            this.keepAliveTimeout = undefined;
+        }
+    }
+    unbindRetryTimeout() {
+        if (this.retryTimeout) {
+            clearTimeout(this.retryTimeout);
+            this.retryTimeout = undefined;
+        }
+    }
+    closeWithoutEmit() {
+        this.unbindTimeouts();
+        if (this.res) {
+            this.res.removeAllListeners();
+            // Close response silently
+            this.res.destroy();
+        }
+        if (this.req) {
+            this.req.removeAllListeners();
+            // Close connection silently
+            this.req.destroy();
+        }
+    }
+    /** Terminate connection to Twitter. */
+    close() {
+        this.emit(types_1.ETwitterStreamEvent.ConnectionClosed);
+        this.closeWithoutEmit();
+    }
+    /** Unbind all listeners, and close connection. */
+    destroy() {
+        this.removeAllListeners();
+        this.close();
+    }
+    /**
+     * Make a new request that creates a new `TweetStream` instance with
+     * the same parameters, and bind current listeners to new stream.
+     */
+    async clone() {
+        const newRequest = new request_handler_helper_1.default(this.requestData);
+        const newStream = await newRequest.makeRequestAsStream();
+        // Clone attached listeners
+        const listenerNames = this.eventNames();
+        for (const listener of listenerNames) {
+            const callbacks = this.listeners(listener);
+            for (const callback of callbacks) {
+                newStream.on(listener, callback);
+            }
+        }
+        return newStream;
+    }
+    /** Start initial stream connection, setup options on current instance and returns itself. */
+    async connect(options = {}) {
+        if (typeof options.autoReconnect !== 'undefined') {
+            this.autoReconnect = options.autoReconnect;
+        }
+        if (typeof options.autoReconnectRetries !== 'undefined') {
+            this.autoReconnectRetries = options.autoReconnectRetries === 'unlimited'
+                ? Infinity
+                : options.autoReconnectRetries;
+        }
+        if (typeof options.keepAliveTimeout !== 'undefined') {
+            this.keepAliveTimeoutMs = options.keepAliveTimeout === 'disable'
+                ? Infinity
+                : options.keepAliveTimeout;
+        }
+        if (typeof options.nextRetryTimeout !== 'undefined') {
+            this.nextRetryTimeout = options.nextRetryTimeout;
+        }
+        // Make the connection
+        this.unbindTimeouts();
+        try {
+            await this.reconnect();
+        }
+        catch (e) {
+            this.emit(types_1.ETwitterStreamEvent.ConnectError, 0);
+            this.emit(types_1.ETwitterStreamEvent.Error, {
+                type: types_1.ETwitterStreamEvent.ConnectError,
+                error: e,
+                message: 'Connect error - Initial connection just failed.',
+            });
+            // Only make a reconnection attempt if autoReconnect is true!
+            // Otherwise, let error be propagated
+            if (this.autoReconnect) {
+                this.makeAutoReconnectRetry(0, e);
+            }
+            else {
+                throw e;
+            }
+        }
+        return this;
+    }
+    /** Make a new request to (re)connect to Twitter. */
+    async reconnect() {
+        if (this.connectionProcessRunning) {
+            throw new Error('Connection process is already running.');
+        }
+        this.connectionProcessRunning = true;
+        try {
+            let initialConnection = true;
+            if (this.req) {
+                initialConnection = false;
+                this.closeWithoutEmit();
+            }
+            const { req, res, originalResponse } = await new request_handler_helper_1.default(this.requestData).makeRequestAndResolveWhenReady();
+            this.req = req;
+            this.res = res;
+            this.originalResponse = originalResponse;
+            this.emit(initialConnection ? types_1.ETwitterStreamEvent.Connected : types_1.ETwitterStreamEvent.Reconnected);
+            this.parser.reset();
+            this.initEventsFromRequest();
+        }
+        finally {
+            this.connectionProcessRunning = false;
+        }
+    }
+    async onConnectionError(retryOccurrence = 0) {
+        this.unbindTimeouts();
+        // Close the request if necessary
+        this.closeWithoutEmit();
+        // Terminate stream by events if necessary (no auto-reconnect or retries exceeded)
+        if (!this.autoReconnect) {
+            this.emit(types_1.ETwitterStreamEvent.ConnectionClosed);
+            return;
+        }
+        if (retryOccurrence >= this.autoReconnectRetries) {
+            this.emit(types_1.ETwitterStreamEvent.ReconnectLimitExceeded);
+            this.emit(types_1.ETwitterStreamEvent.ConnectionClosed);
+            return;
+        }
+        // If all other conditions fails, do a reconnect attempt
+        try {
+            this.emit(types_1.ETwitterStreamEvent.ReconnectAttempt, retryOccurrence);
+            await this.reconnect();
+        }
+        catch (e) {
+            this.emit(types_1.ETwitterStreamEvent.ReconnectError, retryOccurrence);
+            this.emit(types_1.ETwitterStreamEvent.Error, {
+                type: types_1.ETwitterStreamEvent.ReconnectError,
+                error: e,
+                message: `Reconnect error - ${retryOccurrence + 1} attempts made yet.`,
+            });
+            this.makeAutoReconnectRetry(retryOccurrence, e);
+        }
+    }
+    makeAutoReconnectRetry(retryOccurrence, error) {
+        const nextRetry = this.nextRetryTimeout(retryOccurrence + 1, error);
+        this.retryTimeout = setTimeout(() => {
+            this.onConnectionError(retryOccurrence + 1);
+        }, nextRetry);
+    }
+    async *[Symbol.asyncIterator]() {
+        const eventCombiner = new TweetStreamEventCombiner_1.default(this);
+        try {
+            while (true) {
+                if (!this.req || this.req.aborted) {
+                    throw new Error('Connection closed');
+                }
+                if (eventCombiner.hasStack()) {
+                    yield* eventCombiner.popStack();
+                }
+                const { type, payload } = await eventCombiner.nextEvent();
+                if (type === 'error') {
+                    throw payload;
+                }
+            }
+        }
+        finally {
+            eventCombiner.destroy();
+        }
+    }
+}
+exports.TweetStream = TweetStream;
+exports["default"] = TweetStream;
+
+
+/***/ }),
+
+/***/ 9502:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.TweetStreamEventCombiner = void 0;
+const events_1 = __nccwpck_require__(2361);
+const types_1 = __nccwpck_require__(1400);
+class TweetStreamEventCombiner extends events_1.EventEmitter {
+    constructor(stream) {
+        super();
+        this.stream = stream;
+        this.stack = [];
+        this.onStreamData = this.onStreamData.bind(this);
+        this.onStreamError = this.onStreamError.bind(this);
+        this.onceNewEvent = this.once.bind(this, 'event');
+        // Init events from stream
+        stream.on(types_1.ETwitterStreamEvent.Data, this.onStreamData);
+        // Ignore reconnect errors: Don't close event combiner until connection error/closed
+        stream.on(types_1.ETwitterStreamEvent.ConnectionError, this.onStreamError);
+        stream.on(types_1.ETwitterStreamEvent.TweetParseError, this.onStreamError);
+        stream.on(types_1.ETwitterStreamEvent.ConnectionClosed, this.onStreamError);
+    }
+    /** Returns a new `Promise` that will `resolve` on next event (`data` or any sort of error). */
+    nextEvent() {
+        return new Promise(this.onceNewEvent);
+    }
+    /** Returns `true` if there's something in the stack. */
+    hasStack() {
+        return this.stack.length > 0;
+    }
+    /** Returns stacked data events, and clean the stack. */
+    popStack() {
+        const stack = this.stack;
+        this.stack = [];
+        return stack;
+    }
+    /** Cleanup all the listeners attached on stream. */
+    destroy() {
+        this.removeAllListeners();
+        this.stream.off(types_1.ETwitterStreamEvent.Data, this.onStreamData);
+        this.stream.off(types_1.ETwitterStreamEvent.ConnectionError, this.onStreamError);
+        this.stream.off(types_1.ETwitterStreamEvent.TweetParseError, this.onStreamError);
+        this.stream.off(types_1.ETwitterStreamEvent.ConnectionClosed, this.onStreamError);
+    }
+    emitEvent(type, payload) {
+        this.emit('event', { type, payload });
+    }
+    onStreamError(payload) {
+        this.emitEvent('error', payload);
+    }
+    onStreamData(payload) {
+        this.stack.push(payload);
+        this.emitEvent('data', payload);
+    }
+}
+exports.TweetStreamEventCombiner = TweetStreamEventCombiner;
+exports["default"] = TweetStreamEventCombiner;
+
+
+/***/ }),
+
+/***/ 661:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.EStreamParserEvent = void 0;
+const events_1 = __nccwpck_require__(2361);
+class TweetStreamParser extends events_1.EventEmitter {
+    constructor() {
+        super(...arguments);
+        this.currentMessage = '';
+    }
+    // Code partially belongs to twitter-stream-api for this
+    // https://github.com/trygve-lie/twitter-stream-api/blob/master/lib/parser.js
+    push(chunk) {
+        this.currentMessage += chunk;
+        chunk = this.currentMessage;
+        const size = chunk.length;
+        let start = 0;
+        let offset = 0;
+        while (offset < size) {
+            // Take [offset, offset+1] inside a new string
+            if (chunk.slice(offset, offset + 2) === '\r\n') {
+                // If chunk contains \r\n after current offset,
+                // parse [start, ..., offset] as a tweet
+                const piece = chunk.slice(start, offset);
+                start = offset += 2;
+                // If empty object
+                if (!piece.length) {
+                    continue;
+                }
+                try {
+                    const payload = JSON.parse(piece);
+                    if (payload) {
+                        this.emit(EStreamParserEvent.ParsedData, payload);
+                        continue;
+                    }
+                }
+                catch (error) {
+                    this.emit(EStreamParserEvent.ParseError, error);
+                }
+            }
+            offset++;
+        }
+        this.currentMessage = chunk.slice(start, size);
+    }
+    /** Reset the currently stored message (f.e. on connection reset) */
+    reset() {
+        this.currentMessage = '';
+    }
+}
+exports["default"] = TweetStreamParser;
+var EStreamParserEvent;
+(function (EStreamParserEvent) {
+    EStreamParserEvent["ParsedData"] = "parsed data";
+    EStreamParserEvent["ParseError"] = "parse error";
+})(EStreamParserEvent = exports.EStreamParserEvent || (exports.EStreamParserEvent = {}));
+
+
+/***/ }),
+
+/***/ 4484:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
+
+/***/ }),
+
+/***/ 1803:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.ETwitterStreamEvent = void 0;
+var ETwitterStreamEvent;
+(function (ETwitterStreamEvent) {
+    ETwitterStreamEvent["Connected"] = "connected";
+    ETwitterStreamEvent["ConnectError"] = "connect error";
+    ETwitterStreamEvent["ConnectionError"] = "connection error";
+    ETwitterStreamEvent["ConnectionClosed"] = "connection closed";
+    ETwitterStreamEvent["ConnectionLost"] = "connection lost";
+    ETwitterStreamEvent["ReconnectAttempt"] = "reconnect attempt";
+    ETwitterStreamEvent["Reconnected"] = "reconnected";
+    ETwitterStreamEvent["ReconnectError"] = "reconnect error";
+    ETwitterStreamEvent["ReconnectLimitExceeded"] = "reconnect limit exceeded";
+    ETwitterStreamEvent["DataKeepAlive"] = "data keep-alive";
+    ETwitterStreamEvent["Data"] = "data event content";
+    ETwitterStreamEvent["DataError"] = "data twitter error";
+    ETwitterStreamEvent["TweetParseError"] = "data tweet parse error";
+    ETwitterStreamEvent["Error"] = "stream error";
+})(ETwitterStreamEvent = exports.ETwitterStreamEvent || (exports.ETwitterStreamEvent = {}));
+
+
+/***/ }),
+
+/***/ 2605:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.EApiV2ErrorCode = exports.EApiV1ErrorCode = exports.ApiResponseError = exports.ApiPartialResponseError = exports.ApiRequestError = exports.ETwitterApiError = void 0;
+var ETwitterApiError;
+(function (ETwitterApiError) {
+    ETwitterApiError["Request"] = "request";
+    ETwitterApiError["PartialResponse"] = "partial-response";
+    ETwitterApiError["Response"] = "response";
+})(ETwitterApiError = exports.ETwitterApiError || (exports.ETwitterApiError = {}));
+/* ERRORS INSTANCES */
+class ApiError extends Error {
+    constructor() {
+        super(...arguments);
+        this.error = true;
+    }
+}
+class ApiRequestError extends ApiError {
+    constructor(message, options) {
+        super(message);
+        this.type = ETwitterApiError.Request;
+        Error.captureStackTrace(this, this.constructor);
+        // Do not show on Node stack trace
+        Object.defineProperty(this, '_options', { value: options });
+    }
+    get request() {
+        return this._options.request;
+    }
+    get requestError() {
+        return this._options.requestError;
+    }
+    toJSON() {
+        return {
+            type: this.type,
+            error: this.requestError,
+        };
+    }
+}
+exports.ApiRequestError = ApiRequestError;
+class ApiPartialResponseError extends ApiError {
+    constructor(message, options) {
+        super(message);
+        this.type = ETwitterApiError.PartialResponse;
+        Error.captureStackTrace(this, this.constructor);
+        // Do not show on Node stack trace
+        Object.defineProperty(this, '_options', { value: options });
+    }
+    get request() {
+        return this._options.request;
+    }
+    get response() {
+        return this._options.response;
+    }
+    get responseError() {
+        return this._options.responseError;
+    }
+    get rawContent() {
+        return this._options.rawContent;
+    }
+    toJSON() {
+        return {
+            type: this.type,
+            error: this.responseError,
+        };
+    }
+}
+exports.ApiPartialResponseError = ApiPartialResponseError;
+class ApiResponseError extends ApiError {
+    constructor(message, options) {
+        super(message);
+        this.type = ETwitterApiError.Response;
+        Error.captureStackTrace(this, this.constructor);
+        // Do not show on Node stack trace
+        Object.defineProperty(this, '_options', { value: options });
+        this.code = options.code;
+        this.headers = options.headers;
+        this.rateLimit = options.rateLimit;
+        // Fix bad error data payload on some v1 endpoints (see https://github.com/PLhery/node-twitter-api-v2/issues/342)
+        if (options.data && typeof options.data === 'object' && 'error' in options.data && !options.data.errors) {
+            const data = { ...options.data };
+            data.errors = [{
+                    code: EApiV1ErrorCode.InternalError,
+                    message: data.error,
+                }];
+            this.data = data;
+        }
+        else {
+            this.data = options.data;
+        }
+    }
+    get request() {
+        return this._options.request;
+    }
+    get response() {
+        return this._options.response;
+    }
+    /** Check for presence of one of given v1/v2 error codes. */
+    hasErrorCode(...codes) {
+        const errors = this.errors;
+        // No errors
+        if (!(errors === null || errors === void 0 ? void 0 : errors.length)) {
+            return false;
+        }
+        // v1 errors
+        if ('code' in errors[0]) {
+            const v1errors = errors;
+            return v1errors.some(error => codes.includes(error.code));
+        }
+        // v2 error
+        const v2error = this.data;
+        return codes.includes(v2error.type);
+    }
+    get errors() {
+        var _a;
+        return (_a = this.data) === null || _a === void 0 ? void 0 : _a.errors;
+    }
+    get rateLimitError() {
+        return this.code === 420 || this.code === 429;
+    }
+    get isAuthError() {
+        if (this.code === 401) {
+            return true;
+        }
+        return this.hasErrorCode(EApiV1ErrorCode.AuthTimestampInvalid, EApiV1ErrorCode.AuthenticationFail, EApiV1ErrorCode.BadAuthenticationData, EApiV1ErrorCode.InvalidOrExpiredToken);
+    }
+    toJSON() {
+        return {
+            type: this.type,
+            code: this.code,
+            error: this.data,
+            rateLimit: this.rateLimit,
+            headers: this.headers,
+        };
+    }
+}
+exports.ApiResponseError = ApiResponseError;
+var EApiV1ErrorCode;
+(function (EApiV1ErrorCode) {
+    // Location errors
+    EApiV1ErrorCode[EApiV1ErrorCode["InvalidCoordinates"] = 3] = "InvalidCoordinates";
+    EApiV1ErrorCode[EApiV1ErrorCode["NoLocationFound"] = 13] = "NoLocationFound";
+    // Authentication failures
+    EApiV1ErrorCode[EApiV1ErrorCode["AuthenticationFail"] = 32] = "AuthenticationFail";
+    EApiV1ErrorCode[EApiV1ErrorCode["InvalidOrExpiredToken"] = 89] = "InvalidOrExpiredToken";
+    EApiV1ErrorCode[EApiV1ErrorCode["UnableToVerifyCredentials"] = 99] = "UnableToVerifyCredentials";
+    EApiV1ErrorCode[EApiV1ErrorCode["AuthTimestampInvalid"] = 135] = "AuthTimestampInvalid";
+    EApiV1ErrorCode[EApiV1ErrorCode["BadAuthenticationData"] = 215] = "BadAuthenticationData";
+    // Resources not found or visible
+    EApiV1ErrorCode[EApiV1ErrorCode["NoUserMatch"] = 17] = "NoUserMatch";
+    EApiV1ErrorCode[EApiV1ErrorCode["UserNotFound"] = 50] = "UserNotFound";
+    EApiV1ErrorCode[EApiV1ErrorCode["ResourceNotFound"] = 34] = "ResourceNotFound";
+    EApiV1ErrorCode[EApiV1ErrorCode["TweetNotFound"] = 144] = "TweetNotFound";
+    EApiV1ErrorCode[EApiV1ErrorCode["TweetNotVisible"] = 179] = "TweetNotVisible";
+    EApiV1ErrorCode[EApiV1ErrorCode["NotAllowedResource"] = 220] = "NotAllowedResource";
+    EApiV1ErrorCode[EApiV1ErrorCode["MediaIdNotFound"] = 325] = "MediaIdNotFound";
+    EApiV1ErrorCode[EApiV1ErrorCode["TweetNoLongerAvailable"] = 421] = "TweetNoLongerAvailable";
+    EApiV1ErrorCode[EApiV1ErrorCode["TweetViolatedRules"] = 422] = "TweetViolatedRules";
+    // Account errors
+    EApiV1ErrorCode[EApiV1ErrorCode["TargetUserSuspended"] = 63] = "TargetUserSuspended";
+    EApiV1ErrorCode[EApiV1ErrorCode["YouAreSuspended"] = 64] = "YouAreSuspended";
+    EApiV1ErrorCode[EApiV1ErrorCode["AccountUpdateFailed"] = 120] = "AccountUpdateFailed";
+    EApiV1ErrorCode[EApiV1ErrorCode["NoSelfSpamReport"] = 36] = "NoSelfSpamReport";
+    EApiV1ErrorCode[EApiV1ErrorCode["NoSelfMute"] = 271] = "NoSelfMute";
+    EApiV1ErrorCode[EApiV1ErrorCode["AccountLocked"] = 326] = "AccountLocked";
+    // Application live errors / Twitter errors
+    EApiV1ErrorCode[EApiV1ErrorCode["RateLimitExceeded"] = 88] = "RateLimitExceeded";
+    EApiV1ErrorCode[EApiV1ErrorCode["NoDMRightForApp"] = 93] = "NoDMRightForApp";
+    EApiV1ErrorCode[EApiV1ErrorCode["OverCapacity"] = 130] = "OverCapacity";
+    EApiV1ErrorCode[EApiV1ErrorCode["InternalError"] = 131] = "InternalError";
+    EApiV1ErrorCode[EApiV1ErrorCode["TooManyFollowings"] = 161] = "TooManyFollowings";
+    EApiV1ErrorCode[EApiV1ErrorCode["TweetLimitExceeded"] = 185] = "TweetLimitExceeded";
+    EApiV1ErrorCode[EApiV1ErrorCode["DuplicatedTweet"] = 187] = "DuplicatedTweet";
+    EApiV1ErrorCode[EApiV1ErrorCode["TooManySpamReports"] = 205] = "TooManySpamReports";
+    EApiV1ErrorCode[EApiV1ErrorCode["RequestLooksLikeSpam"] = 226] = "RequestLooksLikeSpam";
+    EApiV1ErrorCode[EApiV1ErrorCode["NoWriteRightForApp"] = 261] = "NoWriteRightForApp";
+    EApiV1ErrorCode[EApiV1ErrorCode["TweetActionsDisabled"] = 425] = "TweetActionsDisabled";
+    EApiV1ErrorCode[EApiV1ErrorCode["TweetRepliesRestricted"] = 433] = "TweetRepliesRestricted";
+    // Invalid request parameters
+    EApiV1ErrorCode[EApiV1ErrorCode["NamedParameterMissing"] = 38] = "NamedParameterMissing";
+    EApiV1ErrorCode[EApiV1ErrorCode["InvalidAttachmentUrl"] = 44] = "InvalidAttachmentUrl";
+    EApiV1ErrorCode[EApiV1ErrorCode["TweetTextTooLong"] = 186] = "TweetTextTooLong";
+    EApiV1ErrorCode[EApiV1ErrorCode["MissingUrlParameter"] = 195] = "MissingUrlParameter";
+    EApiV1ErrorCode[EApiV1ErrorCode["NoMultipleGifs"] = 323] = "NoMultipleGifs";
+    EApiV1ErrorCode[EApiV1ErrorCode["InvalidMediaIds"] = 324] = "InvalidMediaIds";
+    EApiV1ErrorCode[EApiV1ErrorCode["InvalidUrl"] = 407] = "InvalidUrl";
+    EApiV1ErrorCode[EApiV1ErrorCode["TooManyTweetAttachments"] = 386] = "TooManyTweetAttachments";
+    // Already sent/deleted item
+    EApiV1ErrorCode[EApiV1ErrorCode["StatusAlreadyFavorited"] = 139] = "StatusAlreadyFavorited";
+    EApiV1ErrorCode[EApiV1ErrorCode["FollowRequestAlreadySent"] = 160] = "FollowRequestAlreadySent";
+    EApiV1ErrorCode[EApiV1ErrorCode["CannotUnmuteANonMutedAccount"] = 272] = "CannotUnmuteANonMutedAccount";
+    EApiV1ErrorCode[EApiV1ErrorCode["TweetAlreadyRetweeted"] = 327] = "TweetAlreadyRetweeted";
+    EApiV1ErrorCode[EApiV1ErrorCode["ReplyToDeletedTweet"] = 385] = "ReplyToDeletedTweet";
+    // DM Errors
+    EApiV1ErrorCode[EApiV1ErrorCode["DMReceiverNotFollowingYou"] = 150] = "DMReceiverNotFollowingYou";
+    EApiV1ErrorCode[EApiV1ErrorCode["UnableToSendDM"] = 151] = "UnableToSendDM";
+    EApiV1ErrorCode[EApiV1ErrorCode["MustAllowDMFromAnyone"] = 214] = "MustAllowDMFromAnyone";
+    EApiV1ErrorCode[EApiV1ErrorCode["CannotSendDMToThisUser"] = 349] = "CannotSendDMToThisUser";
+    EApiV1ErrorCode[EApiV1ErrorCode["DMTextTooLong"] = 354] = "DMTextTooLong";
+    // Application misconfiguration
+    EApiV1ErrorCode[EApiV1ErrorCode["SubscriptionAlreadyExists"] = 355] = "SubscriptionAlreadyExists";
+    EApiV1ErrorCode[EApiV1ErrorCode["CallbackUrlNotApproved"] = 415] = "CallbackUrlNotApproved";
+    EApiV1ErrorCode[EApiV1ErrorCode["SuspendedApplication"] = 416] = "SuspendedApplication";
+    EApiV1ErrorCode[EApiV1ErrorCode["OobOauthIsNotAllowed"] = 417] = "OobOauthIsNotAllowed";
+})(EApiV1ErrorCode = exports.EApiV1ErrorCode || (exports.EApiV1ErrorCode = {}));
+var EApiV2ErrorCode;
+(function (EApiV2ErrorCode) {
+    // Request errors
+    EApiV2ErrorCode["InvalidRequest"] = "https://api.twitter.com/2/problems/invalid-request";
+    EApiV2ErrorCode["ClientForbidden"] = "https://api.twitter.com/2/problems/client-forbidden";
+    EApiV2ErrorCode["UnsupportedAuthentication"] = "https://api.twitter.com/2/problems/unsupported-authentication";
+    // Stream rules errors
+    EApiV2ErrorCode["InvalidRules"] = "https://api.twitter.com/2/problems/invalid-rules";
+    EApiV2ErrorCode["TooManyRules"] = "https://api.twitter.com/2/problems/rule-cap";
+    EApiV2ErrorCode["DuplicatedRules"] = "https://api.twitter.com/2/problems/duplicate-rules";
+    // Twitter errors
+    EApiV2ErrorCode["RateLimitExceeded"] = "https://api.twitter.com/2/problems/usage-capped";
+    EApiV2ErrorCode["ConnectionError"] = "https://api.twitter.com/2/problems/streaming-connection";
+    EApiV2ErrorCode["ClientDisconnected"] = "https://api.twitter.com/2/problems/client-disconnected";
+    EApiV2ErrorCode["TwitterDisconnectedYou"] = "https://api.twitter.com/2/problems/operational-disconnect";
+    // Resource errors
+    EApiV2ErrorCode["ResourceNotFound"] = "https://api.twitter.com/2/problems/resource-not-found";
+    EApiV2ErrorCode["ResourceUnauthorized"] = "https://api.twitter.com/2/problems/not-authorized-for-resource";
+    EApiV2ErrorCode["DisallowedResource"] = "https://api.twitter.com/2/problems/disallowed-resource";
+})(EApiV2ErrorCode = exports.EApiV2ErrorCode || (exports.EApiV2ErrorCode = {}));
+
+
+/***/ }),
+
+/***/ 1400:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+__exportStar(__nccwpck_require__(8594), exports);
+__exportStar(__nccwpck_require__(428), exports);
+__exportStar(__nccwpck_require__(2605), exports);
+__exportStar(__nccwpck_require__(3421), exports);
+__exportStar(__nccwpck_require__(1803), exports);
+__exportStar(__nccwpck_require__(4484), exports);
+__exportStar(__nccwpck_require__(4843), exports);
+
+
+/***/ }),
+
+/***/ 5074:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.TwitterApiPluginResponseOverride = void 0;
+class TwitterApiPluginResponseOverride {
+    constructor(value) {
+        this.value = value;
+    }
+}
+exports.TwitterApiPluginResponseOverride = TwitterApiPluginResponseOverride;
+
+
+/***/ }),
+
+/***/ 4843:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+__exportStar(__nccwpck_require__(5074), exports);
+
+
+/***/ }),
+
+/***/ 3421:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
+
+/***/ }),
+
+/***/ 6662:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
+
+/***/ }),
+
+/***/ 4970:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.EDirectMessageEventTypeV1 = void 0;
+// Creation of DMs
+var EDirectMessageEventTypeV1;
+(function (EDirectMessageEventTypeV1) {
+    EDirectMessageEventTypeV1["Create"] = "message_create";
+    EDirectMessageEventTypeV1["WelcomeCreate"] = "welcome_message";
+})(EDirectMessageEventTypeV1 = exports.EDirectMessageEventTypeV1 || (exports.EDirectMessageEventTypeV1 = {}));
+
+
+/***/ }),
+
+/***/ 3233:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
+
+/***/ }),
+
+/***/ 9823:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
+
+/***/ }),
+
+/***/ 8594:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+__exportStar(__nccwpck_require__(4381), exports);
+__exportStar(__nccwpck_require__(2193), exports);
+__exportStar(__nccwpck_require__(3233), exports);
+__exportStar(__nccwpck_require__(9838), exports);
+__exportStar(__nccwpck_require__(6662), exports);
+__exportStar(__nccwpck_require__(9823), exports);
+__exportStar(__nccwpck_require__(8193), exports);
+__exportStar(__nccwpck_require__(4970), exports);
+__exportStar(__nccwpck_require__(6373), exports);
+
+
+/***/ }),
+
+/***/ 6373:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
+
+/***/ }),
+
+/***/ 4381:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
+
+/***/ }),
+
+/***/ 8193:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
+
+/***/ }),
+
+/***/ 2193:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.EUploadMimeType = void 0;
+var EUploadMimeType;
+(function (EUploadMimeType) {
+    EUploadMimeType["Jpeg"] = "image/jpeg";
+    EUploadMimeType["Mp4"] = "video/mp4";
+    EUploadMimeType["Mov"] = "video/quicktime";
+    EUploadMimeType["Gif"] = "image/gif";
+    EUploadMimeType["Png"] = "image/png";
+    EUploadMimeType["Srt"] = "text/plain";
+    EUploadMimeType["Webp"] = "image/webp";
+})(EUploadMimeType = exports.EUploadMimeType || (exports.EUploadMimeType = {}));
+
+
+/***/ }),
+
+/***/ 9838:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
+
+/***/ }),
+
+/***/ 428:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+__exportStar(__nccwpck_require__(9287), exports);
+__exportStar(__nccwpck_require__(5152), exports);
+__exportStar(__nccwpck_require__(6428), exports);
+__exportStar(__nccwpck_require__(8244), exports);
+__exportStar(__nccwpck_require__(7458), exports);
+__exportStar(__nccwpck_require__(6973), exports);
+
+
+/***/ }),
+
+/***/ 6973:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
+
+/***/ }),
+
+/***/ 7458:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
+
+/***/ }),
+
+/***/ 9287:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+// ---------------
+// -- Streaming --
+// ---------------
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
+
+/***/ }),
+
+/***/ 6428:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
+
+/***/ }),
+
+/***/ 5152:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
+
+/***/ }),
+
+/***/ 8244:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
+
+/***/ }),
+
+/***/ 42:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.TwitterApiv1 = void 0;
+const globals_1 = __nccwpck_require__(3420);
+const dm_paginator_v1_1 = __nccwpck_require__(5681);
+const types_1 = __nccwpck_require__(1400);
+const client_v1_write_1 = __importDefault(__nccwpck_require__(2607));
+/**
+ * Twitter v1.1 API client with read/write/DMs rights.
+ */
+class TwitterApiv1 extends client_v1_write_1.default {
+    constructor() {
+        super(...arguments);
+        this._prefix = globals_1.API_V1_1_PREFIX;
+    }
+    /**
+     * Get a client with read/write rights.
+     */
+    get readWrite() {
+        return this;
+    }
+    /* Direct messages */
+    // Part: Sending and receiving events
+    /**
+     * Publishes a new message_create event resulting in a Direct Message sent to a specified user from the authenticating user.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/direct-messages/sending-and-receiving/api-reference/new-event
+     */
+    sendDm({ recipient_id, custom_profile_id, ...params }) {
+        const args = {
+            event: {
+                type: types_1.EDirectMessageEventTypeV1.Create,
+                [types_1.EDirectMessageEventTypeV1.Create]: {
+                    target: { recipient_id },
+                    message_data: params,
+                },
+            },
+        };
+        if (custom_profile_id) {
+            args.event[types_1.EDirectMessageEventTypeV1.Create].custom_profile_id = custom_profile_id;
+        }
+        return this.post('direct_messages/events/new.json', args, {
+            forceBodyMode: 'json',
+        });
+    }
+    /**
+     * Returns a single Direct Message event by the given id.
+     *
+     * https://developer.twitter.com/en/docs/twitter-api/v1/direct-messages/sending-and-receiving/api-reference/get-event
+     */
+    getDmEvent(id) {
+        return this.get('direct_messages/events/show.json', { id });
+    }
+    /**
+     * Deletes the direct message specified in the required ID parameter.
+     * The authenticating user must be the recipient of the specified direct message.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/direct-messages/sending-and-receiving/api-reference/delete-message-event
+     */
+    deleteDm(id) {
+        return this.delete('direct_messages/events/destroy.json', { id });
+    }
+    /**
+     * Returns all Direct Message events (both sent and received) within the last 30 days.
+     * Sorted in reverse-chronological order.
+     *
+     * https://developer.twitter.com/en/docs/twitter-api/v1/direct-messages/sending-and-receiving/api-reference/list-events
+     */
+    async listDmEvents(args = {}) {
+        const queryParams = { ...args };
+        const initialRq = await this.get('direct_messages/events/list.json', queryParams, { fullResponse: true });
+        return new dm_paginator_v1_1.DmEventsV1Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams,
+        });
+    }
+    // Part: Welcome messages (events)
+    /**
+     * Creates a new Welcome Message that will be stored and sent in the future from the authenticating user in defined circumstances.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/direct-messages/welcome-messages/api-reference/new-welcome-message
+     */
+    newWelcomeDm(name, data) {
+        const args = {
+            [types_1.EDirectMessageEventTypeV1.WelcomeCreate]: {
+                name,
+                message_data: data,
+            },
+        };
+        return this.post('direct_messages/welcome_messages/new.json', args, {
+            forceBodyMode: 'json',
+        });
+    }
+    /**
+     * Returns a Welcome Message by the given id.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/direct-messages/welcome-messages/api-reference/get-welcome-message
+     */
+    getWelcomeDm(id) {
+        return this.get('direct_messages/welcome_messages/show.json', { id });
+    }
+    /**
+     * Deletes a Welcome Message by the given id.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/direct-messages/welcome-messages/api-reference/delete-welcome-message
+     */
+    deleteWelcomeDm(id) {
+        return this.delete('direct_messages/welcome_messages/destroy.json', { id });
+    }
+    /**
+     * Updates a Welcome Message by the given ID.
+     * Updates to the welcome_message object are atomic.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/direct-messages/welcome-messages/api-reference/update-welcome-message
+     */
+    updateWelcomeDm(id, data) {
+        const args = { message_data: data };
+        return this.put('direct_messages/welcome_messages/update.json', args, {
+            forceBodyMode: 'json',
+            query: { id },
+        });
+    }
+    /**
+     * Returns all Direct Message events (both sent and received) within the last 30 days.
+     * Sorted in reverse-chronological order.
+     *
+     * https://developer.twitter.com/en/docs/twitter-api/v1/direct-messages/sending-and-receiving/api-reference/list-events
+     */
+    async listWelcomeDms(args = {}) {
+        const queryParams = { ...args };
+        const initialRq = await this.get('direct_messages/welcome_messages/list.json', queryParams, { fullResponse: true });
+        return new dm_paginator_v1_1.WelcomeDmV1Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams,
+        });
+    }
+    // Part: Welcome message (rules)
+    /**
+     * Creates a new Welcome Message Rule that determines which Welcome Message will be shown in a given conversation.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/direct-messages/welcome-messages/api-reference/new-welcome-message-rule
+     */
+    newWelcomeDmRule(welcomeMessageId) {
+        return this.post('direct_messages/welcome_messages/rules/new.json', {
+            welcome_message_rule: { welcome_message_id: welcomeMessageId },
+        }, {
+            forceBodyMode: 'json',
+        });
+    }
+    /**
+     * Returns a Welcome Message Rule by the given id.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/direct-messages/welcome-messages/api-reference/get-welcome-message-rule
+     */
+    getWelcomeDmRule(id) {
+        return this.get('direct_messages/welcome_messages/rules/show.json', { id });
+    }
+    /**
+     * Deletes a Welcome Message Rule by the given id.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/direct-messages/welcome-messages/api-reference/delete-welcome-message-rule
+     */
+    deleteWelcomeDmRule(id) {
+        return this.delete('direct_messages/welcome_messages/rules/destroy.json', { id });
+    }
+    /**
+     * Retrieves all welcome DM rules for this account.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/direct-messages/welcome-messages/api-reference/list-welcome-message-rules
+     */
+    async listWelcomeDmRules(args = {}) {
+        const queryParams = { ...args };
+        return this.get('direct_messages/welcome_messages/rules/list.json', queryParams);
+    }
+    /**
+     * Set the current showed welcome message for logged account ; wrapper for Welcome DM rules.
+     * Test if a rule already exists, delete if any, then create a rule for current message ID.
+     *
+     * If you don't have already a welcome message, create it with `.newWelcomeMessage`.
+     */
+    async setWelcomeDm(welcomeMessageId, deleteAssociatedWelcomeDmWhenDeletingRule = true) {
+        var _a;
+        const existingRules = await this.listWelcomeDmRules();
+        if ((_a = existingRules.welcome_message_rules) === null || _a === void 0 ? void 0 : _a.length) {
+            for (const rule of existingRules.welcome_message_rules) {
+                await this.deleteWelcomeDmRule(rule.id);
+                if (deleteAssociatedWelcomeDmWhenDeletingRule) {
+                    await this.deleteWelcomeDm(rule.welcome_message_id);
+                }
+            }
+        }
+        return this.newWelcomeDmRule(welcomeMessageId);
+    }
+    // Part: Read indicator
+    /**
+     * Marks a message as read in the recipient’s Direct Message conversation view with the sender.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/direct-messages/typing-indicator-and-read-receipts/api-reference/new-read-receipt
+     */
+    markDmAsRead(lastEventId, recipientId) {
+        return this.post('direct_messages/mark_read.json', {
+            last_read_event_id: lastEventId,
+            recipient_id: recipientId,
+        }, { forceBodyMode: 'url' });
+    }
+    /**
+     * Displays a visual typing indicator in the recipient’s Direct Message conversation view with the sender.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/direct-messages/typing-indicator-and-read-receipts/api-reference/new-typing-indicator
+     */
+    indicateDmTyping(recipientId) {
+        return this.post('direct_messages/indicate_typing.json', {
+            recipient_id: recipientId,
+        }, { forceBodyMode: 'url' });
+    }
+    // Part: Images
+    /**
+     * Get a single image attached to a direct message. TwitterApi client must be logged with OAuth 1.0a.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/direct-messages/message-attachments/guides/retrieving-media
+     */
+    async downloadDmImage(urlOrDm) {
+        if (typeof urlOrDm !== 'string') {
+            const attachment = urlOrDm[types_1.EDirectMessageEventTypeV1.Create].message_data.attachment;
+            if (!attachment) {
+                throw new Error('The given direct message doesn\'t contain any attachment');
+            }
+            urlOrDm = attachment.media.media_url_https;
+        }
+        const data = await this.get(urlOrDm, undefined, { forceParseMode: 'buffer', prefix: '' });
+        if (!data.length) {
+            throw new Error('Image not found. Make sure you are logged with credentials able to access direct messages, and check the URL.');
+        }
+        return data;
+    }
+}
+exports.TwitterApiv1 = TwitterApiv1;
+exports["default"] = TwitterApiv1;
+
+
+/***/ }),
+
+/***/ 6878:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const client_subclient_1 = __importDefault(__nccwpck_require__(7592));
+const globals_1 = __nccwpck_require__(3420);
+const helpers_1 = __nccwpck_require__(522);
+const client_v1_1 = __importDefault(__nccwpck_require__(42));
+const tweet_paginator_v1_1 = __nccwpck_require__(3813);
+const mutes_paginator_v1_1 = __nccwpck_require__(8671);
+const followers_paginator_v1_1 = __nccwpck_require__(8265);
+const friends_paginator_v1_1 = __nccwpck_require__(4185);
+const user_paginator_v1_1 = __nccwpck_require__(7926);
+const list_paginator_v1_1 = __nccwpck_require__(7584);
+/**
+ * Base Twitter v1 client with only read right.
+ */
+class TwitterApiv1ReadOnly extends client_subclient_1.default {
+    constructor() {
+        super(...arguments);
+        this._prefix = globals_1.API_V1_1_PREFIX;
+    }
+    /* Tweets */
+    /**
+     * Returns a single Tweet, specified by the id parameter. The Tweet's author will also be embedded within the Tweet.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/tweets/post-and-engage/api-reference/get-statuses-show-id
+     */
+    singleTweet(tweetId, options = {}) {
+        return this.get('statuses/show.json', { tweet_mode: 'extended', id: tweetId, ...options });
+    }
+    tweets(ids, options = {}) {
+        return this.post('statuses/lookup.json', { tweet_mode: 'extended', id: ids, ...options });
+    }
+    /**
+     * Returns a single Tweet, specified by either a Tweet web URL or the Tweet ID, in an oEmbed-compatible format.
+     * The returned HTML snippet will be automatically recognized as an Embedded Tweet when Twitter's widget JavaScript is included on the page.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/tweets/post-and-engage/api-reference/get-statuses-oembed
+     */
+    oembedTweet(tweetId, options = {}) {
+        return this.get('oembed', {
+            url: `https://twitter.com/i/statuses/${tweetId}`,
+            ...options,
+        }, { prefix: 'https://publish.twitter.com/' });
+    }
+    /* Tweets timelines */
+    /**
+     * Returns a collection of the most recent Tweets and Retweets posted by the authenticating user and the users they follow.
+     * The home timeline is central to how most users interact with the Twitter service.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/tweets/timelines/api-reference/get-statuses-home_timeline
+     */
+    async homeTimeline(options = {}) {
+        const queryParams = {
+            tweet_mode: 'extended',
+            ...options,
+        };
+        const initialRq = await this.get('statuses/home_timeline.json', queryParams, { fullResponse: true });
+        return new tweet_paginator_v1_1.HomeTimelineV1Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams,
+        });
+    }
+    /**
+     * Returns the 20 most recent mentions (Tweets containing a users's @screen_name) for the authenticating user.
+     * The timeline returned is the equivalent of the one seen when you view your mentions on twitter.com.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/tweets/timelines/api-reference/get-statuses-mentions_timeline
+     */
+    async mentionTimeline(options = {}) {
+        const queryParams = {
+            tweet_mode: 'extended',
+            ...options,
+        };
+        const initialRq = await this.get('statuses/mentions_timeline.json', queryParams, { fullResponse: true });
+        return new tweet_paginator_v1_1.MentionTimelineV1Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams,
+        });
+    }
+    /**
+     * Returns a collection of the most recent Tweets posted by the user indicated by the user_id parameters.
+     * User timelines belonging to protected users may only be requested when the authenticated user either "owns" the timeline or is an approved follower of the owner.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/tweets/timelines/api-reference/get-statuses-user_timeline
+     */
+    async userTimeline(userId, options = {}) {
+        const queryParams = {
+            tweet_mode: 'extended',
+            user_id: userId,
+            ...options,
+        };
+        const initialRq = await this.get('statuses/user_timeline.json', queryParams, { fullResponse: true });
+        return new tweet_paginator_v1_1.UserTimelineV1Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams,
+        });
+    }
+    /**
+     * Returns a collection of the most recent Tweets posted by the user indicated by the screen_name parameters.
+     * User timelines belonging to protected users may only be requested when the authenticated user either "owns" the timeline or is an approved follower of the owner.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/tweets/timelines/api-reference/get-statuses-user_timeline
+     */
+    async userTimelineByUsername(username, options = {}) {
+        const queryParams = {
+            tweet_mode: 'extended',
+            screen_name: username,
+            ...options,
+        };
+        const initialRq = await this.get('statuses/user_timeline.json', queryParams, { fullResponse: true });
+        return new tweet_paginator_v1_1.UserTimelineV1Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams,
+        });
+    }
+    /**
+     * Returns the most recent Tweets liked by the authenticating or specified user, 20 tweets by default.
+     * Note: favorites are now known as likes.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/tweets/post-and-engage/api-reference/get-favorites-list
+     */
+    async favoriteTimeline(userId, options = {}) {
+        const queryParams = {
+            tweet_mode: 'extended',
+            user_id: userId,
+            ...options,
+        };
+        const initialRq = await this.get('favorites/list.json', queryParams, { fullResponse: true });
+        return new tweet_paginator_v1_1.UserFavoritesV1Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams,
+        });
+    }
+    /**
+     * Returns the most recent Tweets liked by the authenticating or specified user, 20 tweets by default.
+     * Note: favorites are now known as likes.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/tweets/post-and-engage/api-reference/get-favorites-list
+     */
+    async favoriteTimelineByUsername(username, options = {}) {
+        const queryParams = {
+            tweet_mode: 'extended',
+            screen_name: username,
+            ...options,
+        };
+        const initialRq = await this.get('favorites/list.json', queryParams, { fullResponse: true });
+        return new tweet_paginator_v1_1.UserFavoritesV1Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams,
+        });
+    }
+    /* Users */
+    /**
+     * Returns a variety of information about the user specified by the required user_id or screen_name parameter.
+     * The author's most recent Tweet will be returned inline when possible.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/follow-search-get-users/api-reference/get-users-show
+     */
+    user(user) {
+        return this.get('users/show.json', { tweet_mode: 'extended', ...user });
+    }
+    /**
+     * Returns fully-hydrated user objects for up to 100 users per request,
+     * as specified by comma-separated values passed to the user_id and/or screen_name parameters.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/follow-search-get-users/api-reference/get-users-lookup
+     */
+    users(query) {
+        return this.get('users/lookup.json', { tweet_mode: 'extended', ...query });
+    }
+    /**
+     * Returns an HTTP 200 OK response code and a representation of the requesting user if authentication was successful;
+     * returns a 401 status code and an error message if not.
+     * Use this method to test if supplied user credentials are valid.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/manage-account-settings/api-reference/get-account-verify_credentials
+     */
+    verifyCredentials(options = {}) {
+        return this.get('account/verify_credentials.json', options);
+    }
+    /**
+     * Returns an array of user objects the authenticating user has muted.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/mute-block-report-users/api-reference/get-mutes-users-list
+     */
+    async listMutedUsers(options = {}) {
+        const queryParams = {
+            tweet_mode: 'extended',
+            ...options,
+        };
+        const initialRq = await this.get('mutes/users/list.json', queryParams, { fullResponse: true });
+        return new mutes_paginator_v1_1.MuteUserListV1Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams,
+        });
+    }
+    /**
+     * Returns an array of numeric user ids the authenticating user has muted.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/mute-block-report-users/api-reference/get-mutes-users-ids
+     */
+    async listMutedUserIds(options = {}) {
+        const queryParams = {
+            stringify_ids: true,
+            ...options,
+        };
+        const initialRq = await this.get('mutes/users/ids.json', queryParams, { fullResponse: true });
+        return new mutes_paginator_v1_1.MuteUserIdsV1Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams,
+        });
+    }
+    /**
+     * Returns an array of user objects of friends of the specified user.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/follow-search-get-users/api-reference/get-friends-list
+     */
+    async userFriendList(options = {}) {
+        const queryParams = {
+            ...options,
+        };
+        const initialRq = await this.get('friends/list.json', queryParams, { fullResponse: true });
+        return new friends_paginator_v1_1.UserFriendListV1Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams,
+        });
+    }
+    /**
+     * Returns an array of user objects of followers of the specified user.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/follow-search-get-users/api-reference/get-followers-list
+     */
+    async userFollowerList(options = {}) {
+        const queryParams = {
+            ...options,
+        };
+        const initialRq = await this.get('followers/list.json', queryParams, { fullResponse: true });
+        return new followers_paginator_v1_1.UserFollowerListV1Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams,
+        });
+    }
+    /**
+     * Returns an array of numeric user ids of followers of the specified user.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/follow-search-get-users/api-reference/get-followers-ids
+     */
+    async userFollowerIds(options = {}) {
+        const queryParams = {
+            stringify_ids: true,
+            ...options,
+        };
+        const initialRq = await this.get('followers/ids.json', queryParams, { fullResponse: true });
+        return new followers_paginator_v1_1.UserFollowerIdsV1Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams,
+        });
+    }
+    /**
+     * Returns an array of numeric user ids of friends of the specified user.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/follow-search-get-users/api-reference/get-friends-ids
+     */
+    async userFollowingIds(options = {}) {
+        const queryParams = {
+            stringify_ids: true,
+            ...options,
+        };
+        const initialRq = await this.get('friends/ids.json', queryParams, { fullResponse: true });
+        return new friends_paginator_v1_1.UserFollowersIdsV1Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams,
+        });
+    }
+    /**
+     * Provides a simple, relevance-based search interface to public user accounts on Twitter.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/follow-search-get-users/api-reference/get-users-search
+     */
+    async searchUsers(query, options = {}) {
+        const queryParams = {
+            q: query,
+            tweet_mode: 'extended',
+            page: 1,
+            ...options,
+        };
+        const initialRq = await this.get('users/search.json', queryParams, { fullResponse: true });
+        return new user_paginator_v1_1.UserSearchV1Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams,
+        });
+    }
+    /* Friendship API */
+    /**
+     * Returns detailed information about the relationship between two arbitrary users.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/follow-search-get-users/api-reference/get-friendships-show
+     */
+    friendship(sources) {
+        return this.get('friendships/show.json', sources);
+    }
+    /**
+     * Returns the relationships of the authenticating user to the comma-separated list of up to 100 screen_names or user_ids provided.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/follow-search-get-users/api-reference/get-friendships-lookup
+     */
+    friendships(friendships) {
+        return this.get('friendships/lookup.json', friendships);
+    }
+    /**
+     * Returns a collection of user_ids that the currently authenticated user does not want to receive retweets from.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/follow-search-get-users/api-reference/get-friendships-no_retweets-ids
+     */
+    friendshipsNoRetweets() {
+        return this.get('friendships/no_retweets/ids.json', { stringify_ids: true });
+    }
+    /**
+     * Returns a collection of numeric IDs for every user who has a pending request to follow the authenticating user.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/follow-search-get-users/api-reference/get-friendships-incoming
+     */
+    async friendshipsIncoming(options = {}) {
+        const queryParams = {
+            stringify_ids: true,
+            ...options,
+        };
+        const initialRq = await this.get('friendships/incoming.json', queryParams, { fullResponse: true });
+        return new user_paginator_v1_1.FriendshipsIncomingV1Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams,
+        });
+    }
+    /**
+     * Returns a collection of numeric IDs for every protected user for whom the authenticating user has a pending follow request.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/follow-search-get-users/api-reference/get-friendships-outgoing
+     */
+    async friendshipsOutgoing(options = {}) {
+        const queryParams = {
+            stringify_ids: true,
+            ...options,
+        };
+        const initialRq = await this.get('friendships/outgoing.json', queryParams, { fullResponse: true });
+        return new user_paginator_v1_1.FriendshipsOutgoingV1Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams,
+        });
+    }
+    /* Account/user API */
+    /**
+     * Get current account settings for authenticating user.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/manage-account-settings/api-reference/get-account-settings
+     */
+    accountSettings() {
+        return this.get('account/settings.json');
+    }
+    /**
+     * Returns a map of the available size variations of the specified user's profile banner.
+     * If the user has not uploaded a profile banner, a HTTP 404 will be served instead.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/manage-account-settings/api-reference/get-users-profile_banner
+     */
+    userProfileBannerSizes(params) {
+        return this.get('users/profile_banner.json', params);
+    }
+    /* Lists */
+    /**
+     * Returns the specified list. Private lists will only be shown if the authenticated user owns the specified list.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/create-manage-lists/api-reference/get-lists-show
+     */
+    list(options) {
+        return this.get('lists/show.json', { tweet_mode: 'extended', ...options });
+    }
+    /**
+     * Returns all lists the authenticating or specified user subscribes to, including their own.
+     * If no user is given, the authenticating user is used.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/create-manage-lists/api-reference/get-lists-list
+     */
+    lists(options = {}) {
+        return this.get('lists/list.json', { tweet_mode: 'extended', ...options });
+    }
+    /**
+     * Returns the members of the specified list. Private list members will only be shown if the authenticated user owns the specified list.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/create-manage-lists/api-reference/get-lists-members
+     */
+    async listMembers(options = {}) {
+        const queryParams = {
+            tweet_mode: 'extended',
+            ...options,
+        };
+        const initialRq = await this.get('lists/members.json', queryParams, { fullResponse: true });
+        return new list_paginator_v1_1.ListMembersV1Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams,
+        });
+    }
+    /**
+     * Check if the specified user is a member of the specified list.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/create-manage-lists/api-reference/get-lists-members-show
+     */
+    listGetMember(options) {
+        return this.get('lists/members/show.json', { tweet_mode: 'extended', ...options });
+    }
+    /**
+     * Returns the lists the specified user has been added to.
+     * If user_id or screen_name are not provided, the memberships for the authenticating user are returned.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/create-manage-lists/api-reference/get-lists-memberships
+     */
+    async listMemberships(options = {}) {
+        const queryParams = {
+            tweet_mode: 'extended',
+            ...options,
+        };
+        const initialRq = await this.get('lists/memberships.json', queryParams, { fullResponse: true });
+        return new list_paginator_v1_1.ListMembershipsV1Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams,
+        });
+    }
+    /**
+     * Returns the lists owned by the specified Twitter user. Private lists will only be shown if the authenticated user is also the owner of the lists.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/create-manage-lists/api-reference/get-lists-ownerships
+     */
+    async listOwnerships(options = {}) {
+        const queryParams = {
+            tweet_mode: 'extended',
+            ...options,
+        };
+        const initialRq = await this.get('lists/ownerships.json', queryParams, { fullResponse: true });
+        return new list_paginator_v1_1.ListOwnershipsV1Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams,
+        });
+    }
+    /**
+     * Returns a timeline of tweets authored by members of the specified list. Retweets are included by default.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/create-manage-lists/api-reference/get-lists-statuses
+     */
+    async listStatuses(options) {
+        const queryParams = {
+            tweet_mode: 'extended',
+            ...options,
+        };
+        const initialRq = await this.get('lists/statuses.json', queryParams, { fullResponse: true });
+        return new tweet_paginator_v1_1.ListTimelineV1Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams,
+        });
+    }
+    /**
+     * Returns the subscribers of the specified list. Private list subscribers will only be shown if the authenticated user owns the specified list.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/create-manage-lists/api-reference/get-lists-subscribers
+     */
+    async listSubscribers(options = {}) {
+        const queryParams = {
+            tweet_mode: 'extended',
+            ...options,
+        };
+        const initialRq = await this.get('lists/subscribers.json', queryParams, { fullResponse: true });
+        return new list_paginator_v1_1.ListSubscribersV1Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams,
+        });
+    }
+    /**
+     * Check if the specified user is a subscriber of the specified list. Returns the user if they are a subscriber.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/create-manage-lists/api-reference/get-lists-subscribers-show
+     */
+    listGetSubscriber(options) {
+        return this.get('lists/subscribers/show.json', { tweet_mode: 'extended', ...options });
+    }
+    /**
+     * Obtain a collection of the lists the specified user is subscribed to, 20 lists per page by default.
+     * Does not include the user's own lists.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/create-manage-lists/api-reference/get-lists-subscriptions
+     */
+    async listSubscriptions(options = {}) {
+        const queryParams = {
+            tweet_mode: 'extended',
+            ...options,
+        };
+        const initialRq = await this.get('lists/subscriptions.json', queryParams, { fullResponse: true });
+        return new list_paginator_v1_1.ListSubscriptionsV1Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams,
+        });
+    }
+    /* Media upload API */
+    /**
+     * The STATUS command (this method) is used to periodically poll for updates of media processing operation.
+     * After the STATUS command response returns succeeded, you can move on to the next step which is usually create Tweet with media_id.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/media/upload-media/api-reference/get-media-upload-status
+     */
+    mediaInfo(mediaId) {
+        return this.get('media/upload.json', {
+            command: 'STATUS',
+            media_id: mediaId,
+        }, { prefix: globals_1.API_V1_1_UPLOAD_PREFIX });
+    }
+    filterStream({ autoConnect, ...params } = {}) {
+        const parameters = {};
+        for (const [key, value] of Object.entries(params)) {
+            if (key === 'follow' || key === 'track') {
+                parameters[key] = value.toString();
+            }
+            else if (key === 'locations') {
+                const locations = value;
+                parameters.locations = (0, helpers_1.arrayWrap)(locations).map(loc => `${loc.lng},${loc.lat}`).join(',');
+            }
+            else {
+                parameters[key] = value;
+            }
+        }
+        const streamClient = this.stream;
+        return streamClient.postStream('statuses/filter.json', parameters, { autoConnect });
+    }
+    sampleStream({ autoConnect, ...params } = {}) {
+        const streamClient = this.stream;
+        return streamClient.getStream('statuses/sample.json', params, { autoConnect });
+    }
+    /**
+     * Create a client that is prefixed with `https//stream.twitter.com` instead of classic API URL.
+     */
+    get stream() {
+        const copiedClient = new client_v1_1.default(this);
+        copiedClient.setPrefix(globals_1.API_V1_1_STREAM_PREFIX);
+        return copiedClient;
+    }
+    /* Trends API */
+    /**
+     * Returns the top 50 trending topics for a specific id, if trending information is available for it.
+     * Note: The id parameter for this endpoint is the "where on earth identifier" or WOEID, which is a legacy identifier created by Yahoo and has been deprecated.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/trends/trends-for-location/api-reference/get-trends-place
+     */
+    trendsByPlace(woeId, options = {}) {
+        return this.get('trends/place.json', { id: woeId, ...options });
+    }
+    /**
+     * Returns the locations that Twitter has trending topic information for.
+     * The response is an array of "locations" that encode the location's WOEID
+     * and some other human-readable information such as a canonical name and country the location belongs in.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/trends/locations-with-trending-topics/api-reference/get-trends-available
+     */
+    trendsAvailable() {
+        return this.get('trends/available.json');
+    }
+    /**
+     * Returns the locations that Twitter has trending topic information for, closest to a specified location.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/trends/locations-with-trending-topics/api-reference/get-trends-closest
+     */
+    trendsClosest(lat, long) {
+        return this.get('trends/closest.json', { lat, long });
+    }
+    /* Geo API */
+    /**
+     * Returns all the information about a known place.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/geo/place-information/api-reference/get-geo-id-place_id
+     */
+    geoPlace(placeId) {
+        return this.get('geo/id/:place_id.json', undefined, { params: { place_id: placeId } });
+    }
+    /**
+     * Search for places that can be attached to a Tweet via POST statuses/update.
+     * This request will return a list of all the valid places that can be used as the place_id when updating a status.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/geo/places-near-location/api-reference/get-geo-search
+     */
+    geoSearch(options) {
+        return this.get('geo/search.json', options);
+    }
+    /**
+     * Given a latitude and a longitude, searches for up to 20 places that can be used as a place_id when updating a status.
+     * This request is an informative call and will deliver generalized results about geography.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/geo/places-near-location/api-reference/get-geo-reverse_geocode
+     */
+    geoReverseGeoCode(options) {
+        return this.get('geo/reverse_geocode.json', options);
+    }
+    /* Developer utilities */
+    /**
+     * Returns the current rate limits for methods belonging to the specified resource families.
+     * Each API resource belongs to a "resource family" which is indicated in its method documentation.
+     * The method's resource family can be determined from the first component of the path after the resource version.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/developer-utilities/rate-limit-status/api-reference/get-application-rate_limit_status
+     */
+    rateLimitStatuses(...resources) {
+        return this.get('application/rate_limit_status.json', { resources });
+    }
+    /**
+     * Returns the list of languages supported by Twitter along with the language code supported by Twitter.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/developer-utilities/supported-languages/api-reference/get-help-languages
+     */
+    supportedLanguages() {
+        return this.get('help/languages.json');
+    }
+}
+exports["default"] = TwitterApiv1ReadOnly;
+
+
+/***/ }),
+
+/***/ 2607:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const fs = __importStar(__nccwpck_require__(7147));
+const globals_1 = __nccwpck_require__(3420);
+const helpers_1 = __nccwpck_require__(522);
+const types_1 = __nccwpck_require__(1400);
+const client_v1_read_1 = __importDefault(__nccwpck_require__(6878));
+const media_helpers_v1_1 = __nccwpck_require__(5690);
+const UPLOAD_ENDPOINT = 'media/upload.json';
+/**
+ * Base Twitter v1 client with read/write rights.
+ */
+class TwitterApiv1ReadWrite extends client_v1_read_1.default {
+    constructor() {
+        super(...arguments);
+        this._prefix = globals_1.API_V1_1_PREFIX;
+    }
+    /**
+     * Get a client with only read rights.
+     */
+    get readOnly() {
+        return this;
+    }
+    /* Tweet API */
+    /**
+     * Post a new tweet.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/tweets/post-and-engage/api-reference/post-statuses-update
+     */
+    tweet(status, payload = {}) {
+        const queryParams = {
+            status,
+            tweet_mode: 'extended',
+            ...payload,
+        };
+        return this.post('statuses/update.json', queryParams);
+    }
+    /**
+     * Quote an existing tweet.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/tweets/post-and-engage/api-reference/post-statuses-update
+     */
+    async quote(status, quotingStatusId, payload = {}) {
+        const url = 'https://twitter.com/i/statuses/' + quotingStatusId;
+        return this.tweet(status, { ...payload, attachment_url: url });
+    }
+    /**
+     * Post a series of tweets.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/tweets/post-and-engage/api-reference/post-statuses-update
+     */
+    async tweetThread(tweets) {
+        const postedTweets = [];
+        for (const tweet of tweets) {
+            // Retrieve the last sent tweet
+            const lastTweet = postedTweets.length ? postedTweets[postedTweets.length - 1] : null;
+            // Build the tweet query params
+            const queryParams = { ...(typeof tweet === 'string' ? ({ status: tweet }) : tweet) };
+            // Reply to an existing tweet if needed
+            const inReplyToId = lastTweet ? lastTweet.id_str : queryParams.in_reply_to_status_id;
+            const status = queryParams.status;
+            if (inReplyToId) {
+                postedTweets.push(await this.reply(status, inReplyToId, queryParams));
+            }
+            else {
+                postedTweets.push(await this.tweet(status, queryParams));
+            }
+        }
+        return postedTweets;
+    }
+    /**
+     * Reply to an existing tweet. Shortcut to `.tweet` with tweaked parameters.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/tweets/post-and-engage/api-reference/post-statuses-update
+     */
+    reply(status, in_reply_to_status_id, payload = {}) {
+        return this.tweet(status, {
+            auto_populate_reply_metadata: true,
+            in_reply_to_status_id,
+            ...payload,
+        });
+    }
+    /**
+     * Delete an existing tweet belonging to you.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/tweets/post-and-engage/api-reference/post-statuses-destroy-id
+     */
+    deleteTweet(tweetId) {
+        return this.post('statuses/destroy/:id.json', { tweet_mode: 'extended' }, { params: { id: tweetId } });
+    }
+    /* User API */
+    /**
+     * Report the specified user as a spam account to Twitter.
+     * Additionally, optionally performs the equivalent of POST blocks/create on behalf of the authenticated user.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/mute-block-report-users/api-reference/post-users-report_spam
+     */
+    reportUserAsSpam(options) {
+        return this.post('users/report_spam.json', { tweet_mode: 'extended', ...options });
+    }
+    /**
+     * Turn on/off Retweets and device notifications from the specified user.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/follow-search-get-users/api-reference/post-friendships-update
+     */
+    updateFriendship(options) {
+        return this.post('friendships/update.json', options);
+    }
+    /**
+     * Follow the specified user.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/follow-search-get-users/api-reference/post-friendships-create
+     */
+    createFriendship(options) {
+        return this.post('friendships/create.json', options);
+    }
+    /**
+     * Unfollow the specified user.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/follow-search-get-users/api-reference/post-friendships-destroy
+     */
+    destroyFriendship(options) {
+        return this.post('friendships/destroy.json', options);
+    }
+    /* Account API */
+    /**
+     * Update current account settings for authenticating user.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/manage-account-settings/api-reference/get-account-settings
+     */
+    updateAccountSettings(options) {
+        return this.post('account/settings.json', options);
+    }
+    /**
+     * Sets some values that users are able to set under the "Account" tab of their settings page.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/manage-account-settings/api-reference/post-account-update_profile
+     */
+    updateAccountProfile(options) {
+        return this.post('account/update_profile.json', options);
+    }
+    /**
+     * Uploads a profile banner on behalf of the authenticating user.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/manage-account-settings/api-reference/post-account-update_profile_banner
+     */
+    async updateAccountProfileBanner(file, options = {}) {
+        const queryParams = {
+            banner: await (0, media_helpers_v1_1.readFileIntoBuffer)(file),
+            ...options,
+        };
+        return this.post('account/update_profile_banner.json', queryParams, { forceBodyMode: 'form-data' });
+    }
+    /**
+     * Updates the authenticating user's profile image.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/manage-account-settings/api-reference/post-account-update_profile_image
+     */
+    async updateAccountProfileImage(file, options = {}) {
+        const queryParams = {
+            tweet_mode: 'extended',
+            image: await (0, media_helpers_v1_1.readFileIntoBuffer)(file),
+            ...options,
+        };
+        return this.post('account/update_profile_image.json', queryParams, { forceBodyMode: 'form-data' });
+    }
+    /**
+     * Removes the uploaded profile banner for the authenticating user.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/manage-account-settings/api-reference/post-account-remove_profile_banner
+     */
+    removeAccountProfileBanner() {
+        return this.post('account/remove_profile_banner.json');
+    }
+    /* Lists */
+    /**
+     * Creates a new list for the authenticated user.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/create-manage-lists/api-reference/post-lists-create
+     */
+    createList(options) {
+        return this.post('lists/create.json', { tweet_mode: 'extended', ...options });
+    }
+    /**
+     * Updates the specified list. The authenticated user must own the list to be able to update it.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/create-manage-lists/api-reference/post-lists-update
+     */
+    updateList(options) {
+        return this.post('lists/update.json', { tweet_mode: 'extended', ...options });
+    }
+    /**
+     * Deletes the specified list. The authenticated user must own the list to be able to destroy it.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/create-manage-lists/api-reference/post-lists-destroy
+     */
+    removeList(options) {
+        return this.post('lists/destroy.json', { tweet_mode: 'extended', ...options });
+    }
+    /**
+     * Adds multiple members to a list, by specifying a comma-separated list of member ids or screen names.
+     * If you add a single `user_id` or `screen_name`, it will target `lists/members/create.json`, otherwise
+     * it will target `lists/members/create_all.json`.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/create-manage-lists/api-reference/post-lists-members-create_all
+     */
+    addListMembers(options) {
+        const hasMultiple = (options.user_id && (0, helpers_1.hasMultipleItems)(options.user_id)) || (options.screen_name && (0, helpers_1.hasMultipleItems)(options.screen_name));
+        const endpoint = hasMultiple ? 'lists/members/create_all.json' : 'lists/members/create.json';
+        return this.post(endpoint, options);
+    }
+    /**
+     * Removes multiple members to a list, by specifying a comma-separated list of member ids or screen names.
+     * If you add a single `user_id` or `screen_name`, it will target `lists/members/destroy.json`, otherwise
+     * it will target `lists/members/destroy_all.json`.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/create-manage-lists/api-reference/post-lists-members-destroy_all
+     */
+    removeListMembers(options) {
+        const hasMultiple = (options.user_id && (0, helpers_1.hasMultipleItems)(options.user_id)) || (options.screen_name && (0, helpers_1.hasMultipleItems)(options.screen_name));
+        const endpoint = hasMultiple ? 'lists/members/destroy_all.json' : 'lists/members/destroy.json';
+        return this.post(endpoint, options);
+    }
+    /**
+     * Subscribes the authenticated user to the specified list.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/create-manage-lists/api-reference/post-lists-subscribers-create
+     */
+    subscribeToList(options) {
+        return this.post('lists/subscribers/create.json', { tweet_mode: 'extended', ...options });
+    }
+    /**
+     * Unsubscribes the authenticated user of the specified list.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/create-manage-lists/api-reference/post-lists-subscribers-destroy
+     */
+    unsubscribeOfList(options) {
+        return this.post('lists/subscribers/destroy.json', { tweet_mode: 'extended', ...options });
+    }
+    /* Media upload API */
+    /**
+     * This endpoint can be used to provide additional information about the uploaded media_id.
+     * This feature is currently only supported for images and GIFs.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/media/upload-media/api-reference/post-media-metadata-create
+     */
+    createMediaMetadata(mediaId, metadata) {
+        return this.post('media/metadata/create.json', { media_id: mediaId, ...metadata }, { prefix: globals_1.API_V1_1_UPLOAD_PREFIX, forceBodyMode: 'json' });
+    }
+    /**
+     * Use this endpoint to associate uploaded subtitles to an uploaded video. You can associate subtitles to video before or after Tweeting.
+     * **To obtain subtitle media ID, you must upload each subtitle file separately using `.uploadMedia()` method.**
+     *
+     * https://developer.twitter.com/en/docs/twitter-api/v1/media/upload-media/api-reference/post-media-subtitles-create
+     */
+    createMediaSubtitles(mediaId, subtitles) {
+        return this.post('media/subtitles/create.json', { media_id: mediaId, media_category: 'TweetVideo', subtitle_info: { subtitles } }, { prefix: globals_1.API_V1_1_UPLOAD_PREFIX, forceBodyMode: 'json' });
+    }
+    /**
+     * Use this endpoint to dissociate subtitles from a video and delete the subtitles. You can dissociate subtitles from a video before or after Tweeting.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/media/upload-media/api-reference/post-media-subtitles-delete
+     */
+    deleteMediaSubtitles(mediaId, ...languages) {
+        return this.post('media/subtitles/delete.json', {
+            media_id: mediaId,
+            media_category: 'TweetVideo',
+            subtitle_info: { subtitles: languages.map(lang => ({ language_code: lang })) },
+        }, { prefix: globals_1.API_V1_1_UPLOAD_PREFIX, forceBodyMode: 'json' });
+    }
+    /**
+     * Upload a media (JPG/PNG/GIF/MP4/MOV/WEBP) or subtitle (SRT) to Twitter and return the media_id to use in tweet/DM send.
+     *
+     * @param file If `string`, filename is supposed.
+     * A `Buffer` is a raw file.
+     * `fs.promises.FileHandle` or `number` are file pointers.
+     *
+     * @param options.type File type (Enum 'jpg' | 'longmp4' | 'mp4' | 'mov | 'png' | 'gif' | 'srt' | 'webp').
+     * If filename is given, it could be guessed with file extension, otherwise this parameter is mandatory.
+     * If type is not part of the enum, it will be used as mime type.
+     *
+     * Type `longmp4` is **required** is you try to upload a video higher than 140 seconds.
+     *
+     * @param options.chunkLength Maximum chunk length sent to Twitter. Default goes to 1 MB.
+     *
+     * @param options.additionalOwners Other user IDs allowed to use the returned media_id. Default goes to none.
+     *
+     * @param options.maxConcurrentUploads Maximum uploaded chunks in the same time. Default goes to 3.
+     *
+     * @param options.target Target type `tweet` or `dm`. Defaults to `tweet`.
+     * You must specify it if you send a media to use in DMs.
+     */
+    async uploadMedia(file, options = {}) {
+        var _a;
+        const chunkLength = (_a = options.chunkLength) !== null && _a !== void 0 ? _a : (1024 * 1024);
+        const { fileHandle, mediaCategory, fileSize, mimeType } = await this.getUploadMediaRequirements(file, options);
+        // Get the file handle (if not buffer)
+        try {
+            // Finally! We can send INIT message.
+            const mediaData = await this.post(UPLOAD_ENDPOINT, {
+                command: 'INIT',
+                total_bytes: fileSize,
+                media_type: mimeType,
+                media_category: mediaCategory,
+                additional_owners: options.additionalOwners,
+                shared: options.shared ? true : undefined,
+            }, { prefix: globals_1.API_V1_1_UPLOAD_PREFIX });
+            // Upload the media chunk by chunk
+            await this.mediaChunkedUpload(fileHandle, chunkLength, mediaData.media_id_string, options.maxConcurrentUploads);
+            // Finalize media
+            const fullMediaData = await this.post(UPLOAD_ENDPOINT, {
+                command: 'FINALIZE',
+                media_id: mediaData.media_id_string,
+            }, { prefix: globals_1.API_V1_1_UPLOAD_PREFIX });
+            if (fullMediaData.processing_info && fullMediaData.processing_info.state !== 'succeeded') {
+                // Must wait if video is still computed
+                await this.awaitForMediaProcessingCompletion(fullMediaData);
+            }
+            // Video is ready, return media_id
+            return fullMediaData.media_id_string;
+        }
+        finally {
+            // Close file if any
+            if (typeof file === 'number') {
+                // eslint-disable-next-line @typescript-eslint/no-empty-function
+                fs.close(file, () => { });
+            }
+            else if (typeof fileHandle === 'object' && !(fileHandle instanceof Buffer)) {
+                fileHandle.close();
+            }
+        }
+    }
+    async awaitForMediaProcessingCompletion(fullMediaData) {
+        var _a;
+        // eslint-disable-next-line no-constant-condition
+        while (true) {
+            fullMediaData = await this.mediaInfo(fullMediaData.media_id_string);
+            const { processing_info } = fullMediaData;
+            if (!processing_info || processing_info.state === 'succeeded') {
+                // Ok, completed!
+                return;
+            }
+            if ((_a = processing_info.error) === null || _a === void 0 ? void 0 : _a.code) {
+                const { name, message } = processing_info.error;
+                throw new Error(`Failed to process media: ${name} - ${message}.`);
+            }
+            if (processing_info.state === 'failed') {
+                // No error data
+                throw new Error('Failed to process the media.');
+            }
+            if (processing_info.check_after_secs) {
+                // Await for given seconds
+                await (0, media_helpers_v1_1.sleepSecs)(processing_info.check_after_secs);
+            }
+            else {
+                // No info; Await for 5 seconds
+                await (0, media_helpers_v1_1.sleepSecs)(5);
+            }
+        }
+    }
+    async getUploadMediaRequirements(file, { mimeType, type, target, longVideo } = {}) {
+        // Get the file handle (if not buffer)
+        let fileHandle;
+        try {
+            fileHandle = await (0, media_helpers_v1_1.getFileHandle)(file);
+            // Get the mimetype
+            const realMimeType = (0, media_helpers_v1_1.getMimeType)(file, type, mimeType);
+            // Get the media category
+            let mediaCategory;
+            // If explicit longmp4 OR explicit MIME type and not DM target
+            if (realMimeType === types_1.EUploadMimeType.Mp4 && ((!mimeType && !type && target !== 'dm') || longVideo)) {
+                mediaCategory = 'amplify_video';
+            }
+            else {
+                mediaCategory = (0, media_helpers_v1_1.getMediaCategoryByMime)(realMimeType, target !== null && target !== void 0 ? target : 'tweet');
+            }
+            return {
+                fileHandle,
+                mediaCategory,
+                fileSize: await (0, media_helpers_v1_1.getFileSizeFromFileHandle)(fileHandle),
+                mimeType: realMimeType,
+            };
+        }
+        catch (e) {
+            // Close file if any
+            if (typeof file === 'number') {
+                // eslint-disable-next-line @typescript-eslint/no-empty-function
+                fs.close(file, () => { });
+            }
+            else if (typeof fileHandle === 'object' && !(fileHandle instanceof Buffer)) {
+                fileHandle.close();
+            }
+            throw e;
+        }
+    }
+    async mediaChunkedUpload(fileHandle, chunkLength, mediaId, maxConcurrentUploads = 3) {
+        // Send chunk by chunk
+        let chunkIndex = 0;
+        if (maxConcurrentUploads < 1) {
+            throw new RangeError('Bad maxConcurrentUploads parameter.');
+        }
+        // Creating a buffer for doing file stuff (if we don't have one)
+        const buffer = fileHandle instanceof Buffer ? undefined : Buffer.alloc(chunkLength);
+        // Sliced/filled buffer returned for each part
+        let readBuffer;
+        // Needed to know when we should stop reading the file
+        let nread;
+        // Needed to use the buffer object (file handles always "remembers" file position)
+        let offset = 0;
+        [readBuffer, nread] = await (0, media_helpers_v1_1.readNextPartOf)(fileHandle, chunkLength, offset, buffer);
+        offset += nread;
+        // Handle max concurrent uploads
+        const currentUploads = new Set();
+        // Read buffer until file is completely read
+        while (nread) {
+            const mediaBufferPart = readBuffer.slice(0, nread);
+            // Sent part if part has something inside
+            if (mediaBufferPart.length) {
+                const request = this.post(UPLOAD_ENDPOINT, {
+                    command: 'APPEND',
+                    media_id: mediaId,
+                    segment_index: chunkIndex,
+                    media: mediaBufferPart,
+                }, { prefix: globals_1.API_V1_1_UPLOAD_PREFIX });
+                currentUploads.add(request);
+                request.then(() => {
+                    currentUploads.delete(request);
+                });
+                chunkIndex++;
+            }
+            if (currentUploads.size >= maxConcurrentUploads) {
+                // Await for first promise to be finished
+                await Promise.race(currentUploads);
+            }
+            [readBuffer, nread] = await (0, media_helpers_v1_1.readNextPartOf)(fileHandle, chunkLength, offset, buffer);
+            offset += nread;
+        }
+        await Promise.all([...currentUploads]);
+    }
+}
+exports["default"] = TwitterApiv1ReadWrite;
+
+
+/***/ }),
+
+/***/ 5690:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.readNextPartOf = exports.sleepSecs = exports.getMediaCategoryByMime = exports.getMimeType = exports.getFileSizeFromFileHandle = exports.getFileHandle = exports.readFileIntoBuffer = void 0;
+const fs = __importStar(__nccwpck_require__(7147));
+const helpers_1 = __nccwpck_require__(522);
+const types_1 = __nccwpck_require__(1400);
+async function readFileIntoBuffer(file) {
+    const handle = await getFileHandle(file);
+    if (typeof handle === 'number') {
+        return new Promise((resolve, reject) => {
+            fs.readFile(handle, (err, data) => {
+                if (err) {
+                    return reject(err);
+                }
+                resolve(data);
+            });
+        });
+    }
+    else if (handle instanceof Buffer) {
+        return handle;
+    }
+    else {
+        return handle.readFile();
+    }
+}
+exports.readFileIntoBuffer = readFileIntoBuffer;
+function getFileHandle(file) {
+    if (typeof file === 'string') {
+        return fs.promises.open(file, 'r');
+    }
+    else if (typeof file === 'number') {
+        return file;
+    }
+    else if (typeof file === 'object' && !(file instanceof Buffer)) {
+        return file;
+    }
+    else if (!(file instanceof Buffer)) {
+        throw new Error('Given file is not valid, please check its type.');
+    }
+    else {
+        return file;
+    }
+}
+exports.getFileHandle = getFileHandle;
+async function getFileSizeFromFileHandle(fileHandle) {
+    // Get the file size
+    if (typeof fileHandle === 'number') {
+        const stats = await new Promise((resolve, reject) => {
+            fs.fstat(fileHandle, (err, stats) => {
+                if (err)
+                    reject(err);
+                resolve(stats);
+            });
+        });
+        return stats.size;
+    }
+    else if (fileHandle instanceof Buffer) {
+        return fileHandle.length;
+    }
+    else {
+        return (await fileHandle.stat()).size;
+    }
+}
+exports.getFileSizeFromFileHandle = getFileSizeFromFileHandle;
+function getMimeType(file, type, mimeType) {
+    if (typeof mimeType === 'string') {
+        return mimeType;
+    }
+    else if (typeof file === 'string' && !type) {
+        return getMimeByName(file);
+    }
+    else if (typeof type === 'string') {
+        return getMimeByType(type);
+    }
+    throw new Error('You must specify type if file is a file handle or Buffer.');
+}
+exports.getMimeType = getMimeType;
+function getMimeByName(name) {
+    if (name.endsWith('.jpeg') || name.endsWith('.jpg'))
+        return types_1.EUploadMimeType.Jpeg;
+    if (name.endsWith('.png'))
+        return types_1.EUploadMimeType.Png;
+    if (name.endsWith('.webp'))
+        return types_1.EUploadMimeType.Webp;
+    if (name.endsWith('.gif'))
+        return types_1.EUploadMimeType.Gif;
+    if (name.endsWith('.mpeg4') || name.endsWith('.mp4'))
+        return types_1.EUploadMimeType.Mp4;
+    if (name.endsWith('.mov') || name.endsWith('.mov'))
+        return types_1.EUploadMimeType.Mov;
+    if (name.endsWith('.srt'))
+        return types_1.EUploadMimeType.Srt;
+    (0, helpers_1.safeDeprecationWarning)({
+        instance: 'TwitterApiv1ReadWrite',
+        method: 'uploadMedia',
+        problem: 'options.mimeType is missing and filename couldn\'t help to resolve MIME type, so it will fallback to image/jpeg',
+        resolution: 'If you except to give filenames without extensions, please specify explicitlty the MIME type using options.mimeType',
+    });
+    return types_1.EUploadMimeType.Jpeg;
+}
+function getMimeByType(type) {
+    (0, helpers_1.safeDeprecationWarning)({
+        instance: 'TwitterApiv1ReadWrite',
+        method: 'uploadMedia',
+        problem: 'you\'re using options.type',
+        resolution: 'Remove options.type argument and migrate to options.mimeType which takes the real MIME type. ' +
+            'If you\'re using type=longmp4, add options.longVideo alongside of mimeType=EUploadMimeType.Mp4',
+    });
+    if (type === 'gif')
+        return types_1.EUploadMimeType.Gif;
+    if (type === 'jpg')
+        return types_1.EUploadMimeType.Jpeg;
+    if (type === 'png')
+        return types_1.EUploadMimeType.Png;
+    if (type === 'webp')
+        return types_1.EUploadMimeType.Webp;
+    if (type === 'srt')
+        return types_1.EUploadMimeType.Srt;
+    if (type === 'mp4' || type === 'longmp4')
+        return types_1.EUploadMimeType.Mp4;
+    if (type === 'mov')
+        return types_1.EUploadMimeType.Mov;
+    return type;
+}
+function getMediaCategoryByMime(name, target) {
+    if (name === types_1.EUploadMimeType.Mp4 || name === types_1.EUploadMimeType.Mov)
+        return target === 'tweet' ? 'TweetVideo' : 'DmVideo';
+    if (name === types_1.EUploadMimeType.Gif)
+        return target === 'tweet' ? 'TweetGif' : 'DmGif';
+    if (name === types_1.EUploadMimeType.Srt)
+        return 'Subtitles';
+    else
+        return target === 'tweet' ? 'TweetImage' : 'DmImage';
+}
+exports.getMediaCategoryByMime = getMediaCategoryByMime;
+function sleepSecs(seconds) {
+    return new Promise(resolve => setTimeout(resolve, seconds * 1000));
+}
+exports.sleepSecs = sleepSecs;
+async function readNextPartOf(file, chunkLength, bufferOffset = 0, buffer) {
+    if (file instanceof Buffer) {
+        const rt = file.slice(bufferOffset, bufferOffset + chunkLength);
+        return [rt, rt.length];
+    }
+    if (!buffer) {
+        throw new Error('Well, we will need a buffer to store file content.');
+    }
+    let bytesRead;
+    if (typeof file === 'number') {
+        bytesRead = await new Promise((resolve, reject) => {
+            fs.read(file, buffer, 0, chunkLength, bufferOffset, (err, nread) => {
+                if (err)
+                    reject(err);
+                resolve(nread);
+            });
+        });
+    }
+    else {
+        const res = await file.read(buffer, 0, chunkLength, bufferOffset);
+        bytesRead = res.bytesRead;
+    }
+    return [buffer, bytesRead];
+}
+exports.readNextPartOf = readNextPartOf;
+
+
+/***/ }),
+
+/***/ 3407:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.TwitterApiv2Labs = void 0;
+const globals_1 = __nccwpck_require__(3420);
+const client_v2_labs_write_1 = __importDefault(__nccwpck_require__(9925));
+/**
+ * Twitter v2 labs client with all rights (read/write/DMs)
+ */
+class TwitterApiv2Labs extends client_v2_labs_write_1.default {
+    constructor() {
+        super(...arguments);
+        this._prefix = globals_1.API_V2_LABS_PREFIX;
+    }
+    /**
+     * Get a client with read/write rights.
+     */
+    get readWrite() {
+        return this;
+    }
+}
+exports.TwitterApiv2Labs = TwitterApiv2Labs;
+exports["default"] = TwitterApiv2Labs;
+
+
+/***/ }),
+
+/***/ 8948:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const client_subclient_1 = __importDefault(__nccwpck_require__(7592));
+const globals_1 = __nccwpck_require__(3420);
+/**
+ * Base Twitter v2 labs client with only read right.
+ */
+class TwitterApiv2LabsReadOnly extends client_subclient_1.default {
+    constructor() {
+        super(...arguments);
+        this._prefix = globals_1.API_V2_LABS_PREFIX;
+    }
+}
+exports["default"] = TwitterApiv2LabsReadOnly;
+
+
+/***/ }),
+
+/***/ 9925:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const globals_1 = __nccwpck_require__(3420);
+const client_v2_labs_read_1 = __importDefault(__nccwpck_require__(8948));
+/**
+ * Base Twitter v2 labs client with read/write rights.
+ */
+class TwitterApiv2LabsReadWrite extends client_v2_labs_read_1.default {
+    constructor() {
+        super(...arguments);
+        this._prefix = globals_1.API_V2_LABS_PREFIX;
+    }
+    /**
+     * Get a client with only read rights.
+     */
+    get readOnly() {
+        return this;
+    }
+}
+exports["default"] = TwitterApiv2LabsReadWrite;
+
+
+/***/ }),
+
+/***/ 5328:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.TwitterApiv2 = void 0;
+const globals_1 = __nccwpck_require__(3420);
+const client_v2_write_1 = __importDefault(__nccwpck_require__(5804));
+const client_v2_labs_1 = __importDefault(__nccwpck_require__(3407));
+/**
+ * Twitter v2 client with all rights (read/write/DMs)
+ */
+class TwitterApiv2 extends client_v2_write_1.default {
+    constructor() {
+        super(...arguments);
+        this._prefix = globals_1.API_V2_PREFIX;
+        /** API endpoints */
+    }
+    /* Sub-clients */
+    /**
+     * Get a client with read/write rights.
+     */
+    get readWrite() {
+        return this;
+    }
+    /**
+     * Get a client for v2 labs endpoints.
+     */
+    get labs() {
+        if (this._labs)
+            return this._labs;
+        return this._labs = new client_v2_labs_1.default(this);
+    }
+}
+exports.TwitterApiv2 = TwitterApiv2;
+exports["default"] = TwitterApiv2;
+
+
+/***/ }),
+
+/***/ 9600:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const client_subclient_1 = __importDefault(__nccwpck_require__(7592));
+const globals_1 = __nccwpck_require__(3420);
+const paginators_1 = __nccwpck_require__(7474);
+const client_v2_labs_read_1 = __importDefault(__nccwpck_require__(8948));
+const user_paginator_v2_1 = __nccwpck_require__(5973);
+const helpers_1 = __nccwpck_require__(522);
+const dm_paginator_v2_1 = __nccwpck_require__(1879);
+/**
+ * Base Twitter v2 client with only read right.
+ */
+class TwitterApiv2ReadOnly extends client_subclient_1.default {
+    constructor() {
+        super(...arguments);
+        this._prefix = globals_1.API_V2_PREFIX;
+    }
+    /* Sub-clients */
+    /**
+     * Get a client for v2 labs endpoints.
+     */
+    get labs() {
+        if (this._labs)
+            return this._labs;
+        return this._labs = new client_v2_labs_read_1.default(this);
+    }
+    async search(queryOrOptions, options = {}) {
+        const queryParams = typeof queryOrOptions === 'string' ?
+            { ...options, query: queryOrOptions } :
+            { ...queryOrOptions };
+        const initialRq = await this.get('tweets/search/recent', queryParams, { fullResponse: true });
+        return new paginators_1.TweetSearchRecentV2Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams,
+        });
+    }
+    /**
+     * The full-archive search endpoint returns the complete history of public Tweets matching a search query;
+     * since the first Tweet was created March 26, 2006.
+     *
+     * This endpoint is only available to those users who have been approved for the Academic Research product track.
+     * https://developer.twitter.com/en/docs/twitter-api/tweets/search/api-reference/get-tweets-search-all
+     */
+    async searchAll(query, options = {}) {
+        const queryParams = { ...options, query };
+        const initialRq = await this.get('tweets/search/all', queryParams, { fullResponse: true });
+        return new paginators_1.TweetSearchAllV2Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams,
+        });
+    }
+    /**
+     * Returns a variety of information about a single Tweet specified by the requested ID.
+     * https://developer.twitter.com/en/docs/twitter-api/tweets/lookup/api-reference/get-tweets-id
+     *
+     * OAuth2 scope: `users.read`, `tweet.read`
+     */
+    singleTweet(tweetId, options = {}) {
+        return this.get('tweets/:id', options, { params: { id: tweetId } });
+    }
+    /**
+     * Returns a variety of information about tweets specified by list of IDs.
+     * https://developer.twitter.com/en/docs/twitter-api/tweets/lookup/api-reference/get-tweets
+     *
+     * OAuth2 scope: `users.read`, `tweet.read`
+     */
+    tweets(tweetIds, options = {}) {
+        return this.get('tweets', { ids: tweetIds, ...options });
+    }
+    /**
+     * The recent Tweet counts endpoint returns count of Tweets from the last seven days that match a search query.
+     * OAuth2 Bearer auth only.
+     * https://developer.twitter.com/en/docs/twitter-api/tweets/counts/api-reference/get-tweets-counts-recent
+     */
+    tweetCountRecent(query, options = {}) {
+        return this.get('tweets/counts/recent', { query, ...options });
+    }
+    /**
+     * This endpoint is only available to those users who have been approved for the Academic Research product track.
+     * The full-archive search endpoint returns the complete history of public Tweets matching a search query;
+     * since the first Tweet was created March 26, 2006.
+     * OAuth2 Bearer auth only.
+     * **This endpoint has pagination, yet it is not supported by bundled paginators. Use `next_token` to fetch next page.**
+     * https://developer.twitter.com/en/docs/twitter-api/tweets/counts/api-reference/get-tweets-counts-all
+     */
+    tweetCountAll(query, options = {}) {
+        return this.get('tweets/counts/all', { query, ...options });
+    }
+    async tweetRetweetedBy(tweetId, options = {}) {
+        const { asPaginator, ...parameters } = options;
+        const initialRq = await this.get('tweets/:id/retweeted_by', parameters, {
+            fullResponse: true,
+            params: { id: tweetId },
+        });
+        if (!asPaginator) {
+            return initialRq.data;
+        }
+        return new user_paginator_v2_1.TweetRetweetersUsersV2Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams: parameters,
+            sharedParams: { id: tweetId },
+        });
+    }
+    async tweetLikedBy(tweetId, options = {}) {
+        const { asPaginator, ...parameters } = options;
+        const initialRq = await this.get('tweets/:id/liking_users', parameters, {
+            fullResponse: true,
+            params: { id: tweetId },
+        });
+        if (!asPaginator) {
+            return initialRq.data;
+        }
+        return new user_paginator_v2_1.TweetLikingUsersV2Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams: parameters,
+            sharedParams: { id: tweetId },
+        });
+    }
+    /**
+     * Allows you to retrieve a collection of the most recent Tweets and Retweets posted by you and users you follow, also known as home timeline.
+     * This endpoint returns up to the last 3200 Tweets.
+     * https://developer.twitter.com/en/docs/twitter-api/tweets/timelines/api-reference/get-users-id-reverse-chronological
+     *
+     * OAuth 2 scopes: `tweet.read` `users.read`
+     */
+    async homeTimeline(options = {}) {
+        const meUser = await this.getCurrentUserV2Object();
+        const initialRq = await this.get('users/:id/timelines/reverse_chronological', options, {
+            fullResponse: true,
+            params: { id: meUser.data.id },
+        });
+        return new paginators_1.TweetHomeTimelineV2Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams: options,
+            sharedParams: { id: meUser.data.id },
+        });
+    }
+    /**
+     * Returns Tweets composed by a single user, specified by the requested user ID.
+     * By default, the most recent ten Tweets are returned per request.
+     * Using pagination, the most recent 3,200 Tweets can be retrieved.
+     * https://developer.twitter.com/en/docs/twitter-api/tweets/timelines/api-reference/get-users-id-tweets
+     */
+    async userTimeline(userId, options = {}) {
+        const initialRq = await this.get('users/:id/tweets', options, {
+            fullResponse: true,
+            params: { id: userId },
+        });
+        return new paginators_1.TweetUserTimelineV2Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams: options,
+            sharedParams: { id: userId },
+        });
+    }
+    /**
+     * Returns Tweets mentioning a single user specified by the requested user ID.
+     * By default, the most recent ten Tweets are returned per request.
+     * Using pagination, up to the most recent 800 Tweets can be retrieved.
+     * https://developer.twitter.com/en/docs/twitter-api/tweets/timelines/api-reference/get-users-id-mentions
+     */
+    async userMentionTimeline(userId, options = {}) {
+        const initialRq = await this.get('users/:id/mentions', options, {
+            fullResponse: true,
+            params: { id: userId },
+        });
+        return new paginators_1.TweetUserMentionTimelineV2Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams: options,
+            sharedParams: { id: userId },
+        });
+    }
+    /**
+     * Returns Quote Tweets for a Tweet specified by the requested Tweet ID.
+     * https://developer.twitter.com/en/docs/twitter-api/tweets/quote-tweets/api-reference/get-tweets-id-quote_tweets
+     *
+     * OAuth2 scopes: `users.read` `tweet.read`
+     */
+    async quotes(tweetId, options = {}) {
+        const initialRq = await this.get('tweets/:id/quote_tweets', options, {
+            fullResponse: true,
+            params: { id: tweetId },
+        });
+        return new paginators_1.QuotedTweetsTimelineV2Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams: options,
+            sharedParams: { id: tweetId },
+        });
+    }
+    /* Bookmarks */
+    /**
+     * Allows you to get information about a authenticated user’s 800 most recent bookmarked Tweets.
+     * https://developer.twitter.com/en/docs/twitter-api/tweets/bookmarks/api-reference/get-users-id-bookmarks
+     *
+     * OAuth2 scopes: `users.read` `tweet.read` `bookmark.read`
+     */
+    async bookmarks(options = {}) {
+        const user = await this.getCurrentUserV2Object();
+        const initialRq = await this.get('users/:id/bookmarks', options, {
+            fullResponse: true,
+            params: { id: user.data.id },
+        });
+        return new paginators_1.TweetBookmarksTimelineV2Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams: options,
+            sharedParams: { id: user.data.id },
+        });
+    }
+    /* Users */
+    /**
+     * Returns information about an authorized user.
+     * https://developer.twitter.com/en/docs/twitter-api/users/lookup/api-reference/get-users-me
+     *
+     * OAuth2 scopes: `tweet.read` & `users.read`
+     */
+    me(options = {}) {
+        return this.get('users/me', options);
+    }
+    /**
+     * Returns a variety of information about a single user specified by the requested ID.
+     * https://developer.twitter.com/en/docs/twitter-api/users/lookup/api-reference/get-users-id
+     */
+    user(userId, options = {}) {
+        return this.get('users/:id', options, { params: { id: userId } });
+    }
+    /**
+     * Returns a variety of information about one or more users specified by the requested IDs.
+     * https://developer.twitter.com/en/docs/twitter-api/users/lookup/api-reference/get-users
+     */
+    users(userIds, options = {}) {
+        const ids = Array.isArray(userIds) ? userIds.join(',') : userIds;
+        return this.get('users', { ...options, ids });
+    }
+    /**
+     * Returns a variety of information about a single user specified by their username.
+     * https://developer.twitter.com/en/docs/twitter-api/users/lookup/api-reference/get-users-by-username-username
+     */
+    userByUsername(username, options = {}) {
+        return this.get('users/by/username/:username', options, { params: { username } });
+    }
+    /**
+     * Returns a variety of information about one or more users specified by their usernames.
+     * https://developer.twitter.com/en/docs/twitter-api/users/lookup/api-reference/get-users-by
+     *
+     * OAuth2 scope: `users.read`, `tweet.read`
+     */
+    usersByUsernames(usernames, options = {}) {
+        usernames = Array.isArray(usernames) ? usernames.join(',') : usernames;
+        return this.get('users/by', { ...options, usernames });
+    }
+    async followers(userId, options = {}) {
+        const { asPaginator, ...parameters } = options;
+        const params = { id: userId };
+        if (!asPaginator) {
+            return this.get('users/:id/followers', parameters, { params });
+        }
+        const initialRq = await this.get('users/:id/followers', parameters, { fullResponse: true, params });
+        return new user_paginator_v2_1.UserFollowersV2Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams: parameters,
+            sharedParams: params,
+        });
+    }
+    async following(userId, options = {}) {
+        const { asPaginator, ...parameters } = options;
+        const params = { id: userId };
+        if (!asPaginator) {
+            return this.get('users/:id/following', parameters, { params });
+        }
+        const initialRq = await this.get('users/:id/following', parameters, { fullResponse: true, params });
+        return new user_paginator_v2_1.UserFollowingV2Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams: parameters,
+            sharedParams: params,
+        });
+    }
+    /**
+     * Allows you to get information about a user’s liked Tweets.
+     * https://developer.twitter.com/en/docs/twitter-api/tweets/likes/api-reference/get-users-id-liked_tweets
+     */
+    async userLikedTweets(userId, options = {}) {
+        const params = { id: userId };
+        const initialRq = await this.get('users/:id/liked_tweets', options, { fullResponse: true, params });
+        return new paginators_1.TweetV2UserLikedTweetsPaginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams: { ...options },
+            sharedParams: params,
+        });
+    }
+    /**
+     * Returns a list of users who are blocked by the authenticating user.
+     * https://developer.twitter.com/en/docs/twitter-api/users/blocks/api-reference/get-users-blocking
+     */
+    async userBlockingUsers(userId, options = {}) {
+        const params = { id: userId };
+        const initialRq = await this.get('users/:id/blocking', options, { fullResponse: true, params });
+        return new user_paginator_v2_1.UserBlockingUsersV2Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams: { ...options },
+            sharedParams: params,
+        });
+    }
+    /**
+     * Returns a list of users who are muted by the authenticating user.
+     * https://developer.twitter.com/en/docs/twitter-api/users/mutes/api-reference/get-users-muting
+     */
+    async userMutingUsers(userId, options = {}) {
+        const params = { id: userId };
+        const initialRq = await this.get('users/:id/muting', options, { fullResponse: true, params });
+        return new user_paginator_v2_1.UserMutingUsersV2Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams: { ...options },
+            sharedParams: params,
+        });
+    }
+    /* Lists */
+    /**
+     * Returns the details of a specified List.
+     * https://developer.twitter.com/en/docs/twitter-api/lists/list-lookup/api-reference/get-lists-id
+     */
+    list(id, options = {}) {
+        return this.get('lists/:id', options, { params: { id } });
+    }
+    /**
+     * Returns all Lists owned by the specified user.
+     * https://developer.twitter.com/en/docs/twitter-api/lists/list-lookup/api-reference/get-users-id-owned_lists
+     */
+    async listsOwned(userId, options = {}) {
+        const params = { id: userId };
+        const initialRq = await this.get('users/:id/owned_lists', options, { fullResponse: true, params });
+        return new paginators_1.UserOwnedListsV2Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams: { ...options },
+            sharedParams: params,
+        });
+    }
+    /**
+     * Returns all Lists a specified user is a member of.
+     * https://developer.twitter.com/en/docs/twitter-api/lists/list-members/api-reference/get-users-id-list_memberships
+     */
+    async listMemberships(userId, options = {}) {
+        const params = { id: userId };
+        const initialRq = await this.get('users/:id/list_memberships', options, { fullResponse: true, params });
+        return new paginators_1.UserListMembershipsV2Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams: { ...options },
+            sharedParams: params,
+        });
+    }
+    /**
+     * Returns all Lists a specified user follows.
+     * https://developer.twitter.com/en/docs/twitter-api/lists/list-follows/api-reference/get-users-id-followed_lists
+     */
+    async listFollowed(userId, options = {}) {
+        const params = { id: userId };
+        const initialRq = await this.get('users/:id/followed_lists', options, { fullResponse: true, params });
+        return new paginators_1.UserListFollowedV2Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams: { ...options },
+            sharedParams: params,
+        });
+    }
+    /**
+     * Returns a list of Tweets from the specified List.
+     * https://developer.twitter.com/en/docs/twitter-api/lists/list-tweets/api-reference/get-lists-id-tweets
+     */
+    async listTweets(listId, options = {}) {
+        const params = { id: listId };
+        const initialRq = await this.get('lists/:id/tweets', options, { fullResponse: true, params });
+        return new paginators_1.TweetV2ListTweetsPaginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams: { ...options },
+            sharedParams: params,
+        });
+    }
+    /**
+     * Returns a list of users who are members of the specified List.
+     * https://developer.twitter.com/en/docs/twitter-api/lists/list-members/api-reference/get-lists-id-members
+     */
+    async listMembers(listId, options = {}) {
+        const params = { id: listId };
+        const initialRq = await this.get('lists/:id/members', options, { fullResponse: true, params });
+        return new user_paginator_v2_1.UserListMembersV2Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams: { ...options },
+            sharedParams: params,
+        });
+    }
+    /**
+     * Returns a list of users who are followers of the specified List.
+     * https://developer.twitter.com/en/docs/twitter-api/lists/list-follows/api-reference/get-lists-id-followers
+     */
+    async listFollowers(listId, options = {}) {
+        const params = { id: listId };
+        const initialRq = await this.get('lists/:id/followers', options, { fullResponse: true, params });
+        return new user_paginator_v2_1.UserListFollowersV2Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams: { ...options },
+            sharedParams: params,
+        });
+    }
+    /* Direct messages */
+    /**
+     * Returns a list of Direct Messages for the authenticated user, both sent and received.
+     * Direct Message events are returned in reverse chronological order.
+     * Supports retrieving events from the previous 30 days.
+     *
+     * OAuth 2 scopes: `dm.read`, `tweet.read`, `user.read`
+     *
+     * https://developer.twitter.com/en/docs/twitter-api/direct-messages/lookup/api-reference/get-dm_events
+     */
+    async listDmEvents(options = {}) {
+        const initialRq = await this.get('dm_events', options, { fullResponse: true });
+        return new dm_paginator_v2_1.FullDMTimelineV2Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams: { ...options },
+        });
+    }
+    /**
+     * Returns a list of Direct Messages (DM) events within a 1-1 conversation with the user specified in the participant_id path parameter.
+     * Messages are returned in reverse chronological order.
+     *
+     * OAuth 2 scopes: `dm.read`, `tweet.read`, `user.read`
+     *
+     * https://developer.twitter.com/en/docs/twitter-api/direct-messages/lookup/api-reference/get-dm_conversations-dm_conversation_id-dm_events
+     */
+    async listDmEventsWithParticipant(participantId, options = {}) {
+        const params = { participant_id: participantId };
+        const initialRq = await this.get('dm_conversations/with/:participant_id/dm_events', options, { fullResponse: true, params });
+        return new dm_paginator_v2_1.OneToOneDMTimelineV2Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams: { ...options },
+            sharedParams: params,
+        });
+    }
+    /**
+     * Returns a list of Direct Messages within a conversation specified in the dm_conversation_id path parameter.
+     * Messages are returned in reverse chronological order.
+     *
+     * OAuth 2 scopes: `dm.read`, `tweet.read`, `user.read`
+     *
+     * https://developer.twitter.com/en/docs/twitter-api/direct-messages/lookup/api-reference/get-dm_conversations-dm_conversation_id-dm_events
+     */
+    async listDmEventsOfConversation(dmConversationId, options = {}) {
+        const params = { dm_conversation_id: dmConversationId };
+        const initialRq = await this.get('dm_conversations/:dm_conversation_id/dm_events', options, { fullResponse: true, params });
+        return new dm_paginator_v2_1.ConversationDMTimelineV2Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams: { ...options },
+            sharedParams: params,
+        });
+    }
+    /* Spaces */
+    /**
+     * Get a single space by ID.
+     * https://developer.twitter.com/en/docs/twitter-api/spaces/lookup/api-reference/get-spaces-id
+     *
+     * OAuth2 scopes: `tweet.read`, `users.read`, `space.read`.
+     */
+    space(spaceId, options = {}) {
+        return this.get('spaces/:id', options, { params: { id: spaceId } });
+    }
+    /**
+     * Get spaces using their IDs.
+     * https://developer.twitter.com/en/docs/twitter-api/spaces/lookup/api-reference/get-spaces
+     *
+     * OAuth2 scopes: `tweet.read`, `users.read`, `space.read`.
+     */
+    spaces(spaceIds, options = {}) {
+        return this.get('spaces', { ids: spaceIds, ...options });
+    }
+    /**
+     * Get spaces using their creator user ID(s). (no pagination available)
+     * https://developer.twitter.com/en/docs/twitter-api/spaces/lookup/api-reference/get-spaces-by-creator-ids
+     *
+     * OAuth2 scopes: `tweet.read`, `users.read`, `space.read`.
+     */
+    spacesByCreators(creatorIds, options = {}) {
+        return this.get('spaces/by/creator_ids', { user_ids: creatorIds, ...options });
+    }
+    /**
+     * Search through spaces using multiple params. (no pagination available)
+     * https://developer.twitter.com/en/docs/twitter-api/spaces/search/api-reference/get-spaces-search
+     */
+    searchSpaces(options) {
+        return this.get('spaces/search', options);
+    }
+    /**
+    * Returns a list of user who purchased a ticket to the requested Space.
+    * You must authenticate the request using the Access Token of the creator of the requested Space.
+    *
+    * **OAuth 2.0 Access Token required**
+    *
+    * https://developer.twitter.com/en/docs/twitter-api/spaces/lookup/api-reference/get-spaces-id-buyers
+    *
+    * OAuth2 scopes: `tweet.read`, `users.read`, `space.read`.
+    */
+    spaceBuyers(spaceId, options = {}) {
+        return this.get('spaces/:id/buyers', options, { params: { id: spaceId } });
+    }
+    /**
+     * Returns Tweets shared in the requested Spaces.
+     * https://developer.twitter.com/en/docs/twitter-api/spaces/lookup/api-reference/get-spaces-id-tweets
+     *
+     * OAuth2 scope: `users.read`, `tweet.read`, `space.read`
+     */
+    spaceTweets(spaceId, options = {}) {
+        return this.get('spaces/:id/tweets', options, { params: { id: spaceId } });
+    }
+    searchStream({ autoConnect, ...options } = {}) {
+        return this.getStream('tweets/search/stream', options, { payloadIsError: helpers_1.isTweetStreamV2ErrorPayload, autoConnect });
+    }
+    /**
+     * Return a list of rules currently active on the streaming endpoint, either as a list or individually.
+     * https://developer.twitter.com/en/docs/twitter-api/tweets/filtered-stream/api-reference/get-tweets-search-stream-rules
+     */
+    streamRules(options = {}) {
+        return this.get('tweets/search/stream/rules', options);
+    }
+    updateStreamRules(options, query = {}) {
+        return this.post('tweets/search/stream/rules', options, { query });
+    }
+    sampleStream({ autoConnect, ...options } = {}) {
+        return this.getStream('tweets/sample/stream', options, { payloadIsError: helpers_1.isTweetStreamV2ErrorPayload, autoConnect });
+    }
+    sample10Stream({ autoConnect, ...options } = {}) {
+        return this.getStream('tweets/sample10/stream', options, { payloadIsError: helpers_1.isTweetStreamV2ErrorPayload, autoConnect });
+    }
+    /* Batch compliance */
+    /**
+     * Returns a list of recent compliance jobs.
+     * https://developer.twitter.com/en/docs/twitter-api/compliance/batch-compliance/api-reference/get-compliance-jobs
+     */
+    complianceJobs(options) {
+        return this.get('compliance/jobs', options);
+    }
+    /**
+     * Get a single compliance job with the specified ID.
+     * https://developer.twitter.com/en/docs/twitter-api/compliance/batch-compliance/api-reference/get-compliance-jobs-id
+     */
+    complianceJob(jobId) {
+        return this.get('compliance/jobs/:id', undefined, { params: { id: jobId } });
+    }
+    /**
+     * Creates a new compliance job for Tweet IDs or user IDs, send your file, await result and parse it into an array.
+     * You can run one batch job at a time. Returns the created job, but **not the job result!**.
+     *
+     * You can obtain the result (**after job is completed**) with `.complianceJobResult`.
+     * https://developer.twitter.com/en/docs/twitter-api/compliance/batch-compliance/api-reference/post-compliance-jobs
+     */
+    async sendComplianceJob(jobParams) {
+        const job = await this.post('compliance/jobs', { type: jobParams.type, name: jobParams.name });
+        // Send the IDs
+        const rawIdsBody = jobParams.ids instanceof Buffer ? jobParams.ids : Buffer.from(jobParams.ids.join('\n'));
+        // Upload the IDs
+        await this.put(job.data.upload_url, rawIdsBody, {
+            forceBodyMode: 'raw',
+            enableAuth: false,
+            headers: { 'Content-Type': 'text/plain' },
+            prefix: '',
+        });
+        return job;
+    }
+    /**
+     * Get the result of a running or completed job, obtained through `.complianceJob`, `.complianceJobs` or `.sendComplianceJob`.
+     * If job is still running (`in_progress`), it will await until job is completed. **This could be quite long!**
+     * https://developer.twitter.com/en/docs/twitter-api/compliance/batch-compliance/api-reference/post-compliance-jobs
+     */
+    async complianceJobResult(job) {
+        let runningJob = job;
+        while (runningJob.status !== 'complete') {
+            if (runningJob.status === 'expired' || runningJob.status === 'failed') {
+                throw new Error('Job failed to be completed.');
+            }
+            await new Promise(resolve => setTimeout(resolve, 3500));
+            runningJob = (await this.complianceJob(job.id)).data;
+        }
+        // Download and parse result
+        const result = await this.get(job.download_url, undefined, {
+            enableAuth: false,
+            prefix: '',
+        });
+        return result
+            .trim()
+            .split('\n')
+            .filter(line => line)
+            .map(line => JSON.parse(line));
+    }
+}
+exports["default"] = TwitterApiv2ReadOnly;
+
+
+/***/ }),
+
+/***/ 5804:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const globals_1 = __nccwpck_require__(3420);
+const client_v2_read_1 = __importDefault(__nccwpck_require__(9600));
+const client_v2_labs_write_1 = __importDefault(__nccwpck_require__(9925));
+/**
+ * Base Twitter v2 client with read/write rights.
+ */
+class TwitterApiv2ReadWrite extends client_v2_read_1.default {
+    constructor() {
+        super(...arguments);
+        this._prefix = globals_1.API_V2_PREFIX;
+    }
+    /* Sub-clients */
+    /**
+     * Get a client with only read rights.
+     */
+    get readOnly() {
+        return this;
+    }
+    /**
+     * Get a client for v2 labs endpoints.
+     */
+    get labs() {
+        if (this._labs)
+            return this._labs;
+        return this._labs = new client_v2_labs_write_1.default(this);
+    }
+    /* Tweets */
+    /**
+     * Hides or unhides a reply to a Tweet.
+     * https://developer.twitter.com/en/docs/twitter-api/tweets/hide-replies/api-reference/put-tweets-id-hidden
+     */
+    hideReply(tweetId, makeHidden) {
+        return this.put('tweets/:id/hidden', { hidden: makeHidden }, { params: { id: tweetId } });
+    }
+    /**
+     * Causes the user ID identified in the path parameter to Like the target Tweet.
+     * https://developer.twitter.com/en/docs/twitter-api/tweets/likes/api-reference/post-users-user_id-likes
+     *
+     * **Note**: You must specify the currently logged user ID ; you can obtain it through v1.1 API.
+     */
+    like(loggedUserId, targetTweetId) {
+        return this.post('users/:id/likes', { tweet_id: targetTweetId }, { params: { id: loggedUserId } });
+    }
+    /**
+     * Allows a user or authenticated user ID to unlike a Tweet.
+     * The request succeeds with no action when the user sends a request to a user they're not liking the Tweet or have already unliked the Tweet.
+     * https://developer.twitter.com/en/docs/twitter-api/tweets/likes/api-reference/delete-users-id-likes-tweet_id
+     *
+     * **Note**: You must specify the currently logged user ID ; you can obtain it through v1.1 API.
+     */
+    unlike(loggedUserId, targetTweetId) {
+        return this.delete('users/:id/likes/:tweet_id', undefined, {
+            params: { id: loggedUserId, tweet_id: targetTweetId },
+        });
+    }
+    /**
+     * Causes the user ID identified in the path parameter to Retweet the target Tweet.
+     * https://developer.twitter.com/en/docs/twitter-api/tweets/retweets/api-reference/post-users-id-retweets
+     *
+     * **Note**: You must specify the currently logged user ID ; you can obtain it through v1.1 API.
+     */
+    retweet(loggedUserId, targetTweetId) {
+        return this.post('users/:id/retweets', { tweet_id: targetTweetId }, { params: { id: loggedUserId } });
+    }
+    /**
+     * Allows a user or authenticated user ID to remove the Retweet of a Tweet.
+     * The request succeeds with no action when the user sends a request to a user they're not Retweeting the Tweet or have already removed the Retweet of.
+     * https://developer.twitter.com/en/docs/twitter-api/tweets/retweets/api-reference/delete-users-id-retweets-tweet_id
+     *
+     * **Note**: You must specify the currently logged user ID ; you can obtain it through v1.1 API.
+     */
+    unretweet(loggedUserId, targetTweetId) {
+        return this.delete('users/:id/retweets/:tweet_id', undefined, {
+            params: { id: loggedUserId, tweet_id: targetTweetId },
+        });
+    }
+    tweet(status, payload = {}) {
+        if (typeof status === 'object') {
+            payload = status;
+        }
+        else {
+            payload = { text: status, ...payload };
+        }
+        return this.post('tweets', payload);
+    }
+    /**
+     * Reply to a Tweet on behalf of an authenticated user.
+     * https://developer.twitter.com/en/docs/twitter-api/tweets/manage-tweets/api-reference/post-tweets
+     */
+    reply(status, toTweetId, payload = {}) {
+        var _a;
+        const reply = { in_reply_to_tweet_id: toTweetId, ...(_a = payload.reply) !== null && _a !== void 0 ? _a : {} };
+        return this.post('tweets', { text: status, ...payload, reply });
+    }
+    /**
+     * Quote an existing Tweet on behalf of an authenticated user.
+     * https://developer.twitter.com/en/docs/twitter-api/tweets/manage-tweets/api-reference/post-tweets
+     */
+    quote(status, quotedTweetId, payload = {}) {
+        return this.tweet(status, { ...payload, quote_tweet_id: quotedTweetId });
+    }
+    /**
+     * Post a series of tweets.
+     * https://developer.twitter.com/en/docs/twitter-api/tweets/manage-tweets/api-reference/post-tweets
+     */
+    async tweetThread(tweets) {
+        var _a, _b;
+        const postedTweets = [];
+        for (const tweet of tweets) {
+            // Retrieve the last sent tweet
+            const lastTweet = postedTweets.length ? postedTweets[postedTweets.length - 1] : null;
+            // Build the tweet query params
+            const queryParams = { ...(typeof tweet === 'string' ? ({ text: tweet }) : tweet) };
+            // Reply to an existing tweet if needed
+            const inReplyToId = lastTweet ? lastTweet.data.id : (_a = queryParams.reply) === null || _a === void 0 ? void 0 : _a.in_reply_to_tweet_id;
+            const status = (_b = queryParams.text) !== null && _b !== void 0 ? _b : '';
+            if (inReplyToId) {
+                postedTweets.push(await this.reply(status, inReplyToId, queryParams));
+            }
+            else {
+                postedTweets.push(await this.tweet(status, queryParams));
+            }
+        }
+        return postedTweets;
+    }
+    /**
+     * Allows a user or authenticated user ID to delete a Tweet
+     * https://developer.twitter.com/en/docs/twitter-api/tweets/manage-tweets/api-reference/delete-tweets-id
+     */
+    deleteTweet(tweetId) {
+        return this.delete('tweets/:id', undefined, {
+            params: {
+                id: tweetId,
+            },
+        });
+    }
+    /* Bookmarks */
+    /**
+     * Causes the user ID of an authenticated user identified in the path parameter to Bookmark the target Tweet provided in the request body.
+     * https://developer.twitter.com/en/docs/twitter-api/tweets/bookmarks/api-reference/post-users-id-bookmarks
+     *
+     * OAuth2 scopes: `users.read` `tweet.read` `bookmark.write`
+     */
+    async bookmark(tweetId) {
+        const user = await this.getCurrentUserV2Object();
+        return this.post('users/:id/bookmarks', { tweet_id: tweetId }, { params: { id: user.data.id } });
+    }
+    /**
+     * Allows a user or authenticated user ID to remove a Bookmark of a Tweet.
+     * https://developer.twitter.com/en/docs/twitter-api/tweets/bookmarks/api-reference/delete-users-id-bookmarks-tweet_id
+     *
+     * OAuth2 scopes: `users.read` `tweet.read` `bookmark.write`
+     */
+    async deleteBookmark(tweetId) {
+        const user = await this.getCurrentUserV2Object();
+        return this.delete('users/:id/bookmarks/:tweet_id', undefined, { params: { id: user.data.id, tweet_id: tweetId } });
+    }
+    /* Users */
+    /**
+     * Allows a user ID to follow another user.
+     * If the target user does not have public Tweets, this endpoint will send a follow request.
+     * https://developer.twitter.com/en/docs/twitter-api/users/follows/api-reference/post-users-source_user_id-following
+     *
+     * OAuth2 scope: `follows.write`
+     *
+     * **Note**: You must specify the currently logged user ID ; you can obtain it through v1.1 API.
+     */
+    follow(loggedUserId, targetUserId) {
+        return this.post('users/:id/following', { target_user_id: targetUserId }, { params: { id: loggedUserId } });
+    }
+    /**
+     * Allows a user ID to unfollow another user.
+     * https://developer.twitter.com/en/docs/twitter-api/users/follows/api-reference/delete-users-source_id-following
+     *
+     * OAuth2 scope: `follows.write`
+     *
+     * **Note**: You must specify the currently logged user ID ; you can obtain it through v1.1 API.
+     */
+    unfollow(loggedUserId, targetUserId) {
+        return this.delete('users/:source_user_id/following/:target_user_id', undefined, {
+            params: { source_user_id: loggedUserId, target_user_id: targetUserId },
+        });
+    }
+    /**
+     * Causes the user (in the path) to block the target user.
+     * The user (in the path) must match the user context authorizing the request.
+     * https://developer.twitter.com/en/docs/twitter-api/users/blocks/api-reference/post-users-user_id-blocking
+     *
+     * **Note**: You must specify the currently logged user ID; you can obtain it through v1.1 API.
+     */
+    block(loggedUserId, targetUserId) {
+        return this.post('users/:id/blocking', { target_user_id: targetUserId }, { params: { id: loggedUserId } });
+    }
+    /**
+     * Allows a user or authenticated user ID to unblock another user.
+     * https://developer.twitter.com/en/docs/twitter-api/users/blocks/api-reference/delete-users-user_id-blocking
+     *
+     * **Note**: You must specify the currently logged user ID ; you can obtain it through v1.1 API.
+     */
+    unblock(loggedUserId, targetUserId) {
+        return this.delete('users/:source_user_id/blocking/:target_user_id', undefined, {
+            params: { source_user_id: loggedUserId, target_user_id: targetUserId },
+        });
+    }
+    /**
+     * Allows an authenticated user ID to mute the target user.
+     * https://developer.twitter.com/en/docs/twitter-api/users/mutes/api-reference/post-users-user_id-muting
+     *
+     * **Note**: You must specify the currently logged user ID ; you can obtain it through v1.1 API.
+     */
+    mute(loggedUserId, targetUserId) {
+        return this.post('users/:id/muting', { target_user_id: targetUserId }, { params: { id: loggedUserId } });
+    }
+    /**
+     * Allows an authenticated user ID to unmute the target user.
+     * The request succeeds with no action when the user sends a request to a user they're not muting or have already unmuted.
+     * https://developer.twitter.com/en/docs/twitter-api/users/mutes/api-reference/delete-users-user_id-muting
+     *
+     * **Note**: You must specify the currently logged user ID ; you can obtain it through v1.1 API.
+     */
+    unmute(loggedUserId, targetUserId) {
+        return this.delete('users/:source_user_id/muting/:target_user_id', undefined, {
+            params: { source_user_id: loggedUserId, target_user_id: targetUserId },
+        });
+    }
+    /* Lists */
+    /**
+     * Creates a new list for the authenticated user.
+     * https://developer.twitter.com/en/docs/twitter-api/lists/manage-lists/api-reference/post-lists
+     */
+    createList(options) {
+        return this.post('lists', options);
+    }
+    /**
+     * Updates the specified list. The authenticated user must own the list to be able to update it.
+     * https://developer.twitter.com/en/docs/twitter-api/lists/manage-lists/api-reference/put-lists-id
+     */
+    updateList(listId, options = {}) {
+        return this.put('lists/:id', options, { params: { id: listId } });
+    }
+    /**
+     * Deletes the specified list. The authenticated user must own the list to be able to destroy it.
+     * https://developer.twitter.com/en/docs/twitter-api/lists/manage-lists/api-reference/delete-lists-id
+     */
+    removeList(listId) {
+        return this.delete('lists/:id', undefined, { params: { id: listId } });
+    }
+    /**
+     * Adds a member to a list.
+     * https://developer.twitter.com/en/docs/twitter-api/lists/manage-lists/api-reference/post-lists-id-members
+     */
+    addListMember(listId, userId) {
+        return this.post('lists/:id/members', { user_id: userId }, { params: { id: listId } });
+    }
+    /**
+     * Remember a member to a list.
+     * https://developer.twitter.com/en/docs/twitter-api/lists/manage-lists/api-reference/delete-lists-id-members-user_id
+     */
+    removeListMember(listId, userId) {
+        return this.delete('lists/:id/members/:user_id', undefined, { params: { id: listId, user_id: userId } });
+    }
+    /**
+     * Subscribes the authenticated user to the specified list.
+     * https://developer.twitter.com/en/docs/twitter-api/lists/manage-lists/api-reference/post-users-id-followed-lists
+     */
+    subscribeToList(loggedUserId, listId) {
+        return this.post('users/:id/followed_lists', { list_id: listId }, { params: { id: loggedUserId } });
+    }
+    /**
+     * Unsubscribes the authenticated user to the specified list.
+     * https://developer.twitter.com/en/docs/twitter-api/lists/manage-lists/api-reference/delete-users-id-followed-lists-list_id
+     */
+    unsubscribeOfList(loggedUserId, listId) {
+        return this.delete('users/:id/followed_lists/:list_id', undefined, { params: { id: loggedUserId, list_id: listId } });
+    }
+    /**
+     * Enables the authenticated user to pin a List.
+     * https://developer.twitter.com/en/docs/twitter-api/lists/manage-lists/api-reference/post-users-id-pinned-lists
+     */
+    pinList(loggedUserId, listId) {
+        return this.post('users/:id/pinned_lists', { list_id: listId }, { params: { id: loggedUserId } });
+    }
+    /**
+     * Enables the authenticated user to unpin a List.
+     * https://developer.twitter.com/en/docs/twitter-api/lists/manage-lists/api-reference/delete-users-id-pinned-lists-list_id
+     */
+    unpinList(loggedUserId, listId) {
+        return this.delete('users/:id/pinned_lists/:list_id', undefined, { params: { id: loggedUserId, list_id: listId } });
+    }
+    /* Direct messages */
+    /**
+     * Creates a Direct Message on behalf of an authenticated user, and adds it to the specified conversation.
+     * https://developer.twitter.com/en/docs/twitter-api/direct-messages/manage/api-reference/post-dm_conversations-dm_conversation_id-messages
+     */
+    sendDmInConversation(conversationId, message) {
+        return this.post('dm_conversations/:dm_conversation_id/messages', message, { params: { dm_conversation_id: conversationId } });
+    }
+    /**
+     * Creates a one-to-one Direct Message and adds it to the one-to-one conversation.
+     * This method either creates a new one-to-one conversation or retrieves the current conversation and adds the Direct Message to it.
+     * https://developer.twitter.com/en/docs/twitter-api/direct-messages/manage/api-reference/post-dm_conversations-with-participant_id-messages
+     */
+    sendDmToParticipant(participantId, message) {
+        return this.post('dm_conversations/with/:participant_id/messages', message, { params: { participant_id: participantId } });
+    }
+    /**
+     * Creates a new group conversation and adds a Direct Message to it on behalf of an authenticated user.
+     * https://developer.twitter.com/en/docs/twitter-api/direct-messages/manage/api-reference/post-dm_conversations
+     */
+    createDmConversation(options) {
+        return this.post('dm_conversations', options);
+    }
+}
+exports["default"] = TwitterApiv2ReadWrite;
+
+
+/***/ }),
+
+/***/ 79:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.TwitterV2IncludesHelper = void 0;
+/**
+ * Provide helpers for `.includes` of a v2 API result.
+ * Needed expansions for a method to work are specified (*`like this`*).
+ */
+class TwitterV2IncludesHelper {
+    constructor(result) {
+        this.result = result;
+    }
+    /* Tweets */
+    get tweets() {
+        return TwitterV2IncludesHelper.tweets(this.result);
+    }
+    static tweets(result) {
+        var _a, _b;
+        return (_b = (_a = result.includes) === null || _a === void 0 ? void 0 : _a.tweets) !== null && _b !== void 0 ? _b : [];
+    }
+    tweetById(id) {
+        return TwitterV2IncludesHelper.tweetById(this.result, id);
+    }
+    static tweetById(result, id) {
+        return this.tweets(result).find(tweet => tweet.id === id);
+    }
+    /** Retweet associated with the given tweet (*`referenced_tweets.id`*) */
+    retweet(tweet) {
+        return TwitterV2IncludesHelper.retweet(this.result, tweet);
+    }
+    /** Retweet associated with the given tweet (*`referenced_tweets.id`*) */
+    static retweet(result, tweet) {
+        var _a;
+        const retweetIds = ((_a = tweet.referenced_tweets) !== null && _a !== void 0 ? _a : [])
+            .filter(ref => ref.type === 'retweeted')
+            .map(ref => ref.id);
+        return this.tweets(result).find(t => retweetIds.includes(t.id));
+    }
+    /** Quoted tweet associated with the given tweet (*`referenced_tweets.id`*) */
+    quote(tweet) {
+        return TwitterV2IncludesHelper.quote(this.result, tweet);
+    }
+    /** Quoted tweet associated with the given tweet (*`referenced_tweets.id`*) */
+    static quote(result, tweet) {
+        var _a;
+        const quoteIds = ((_a = tweet.referenced_tweets) !== null && _a !== void 0 ? _a : [])
+            .filter(ref => ref.type === 'quoted')
+            .map(ref => ref.id);
+        return this.tweets(result).find(t => quoteIds.includes(t.id));
+    }
+    /** Tweet whose has been answered by the given tweet (*`referenced_tweets.id`*) */
+    repliedTo(tweet) {
+        return TwitterV2IncludesHelper.repliedTo(this.result, tweet);
+    }
+    /** Tweet whose has been answered by the given tweet (*`referenced_tweets.id`*) */
+    static repliedTo(result, tweet) {
+        var _a;
+        const repliesIds = ((_a = tweet.referenced_tweets) !== null && _a !== void 0 ? _a : [])
+            .filter(ref => ref.type === 'replied_to')
+            .map(ref => ref.id);
+        return this.tweets(result).find(t => repliesIds.includes(t.id));
+    }
+    /** Tweet author user object of the given tweet (*`author_id`* or *`referenced_tweets.id.author_id`*) */
+    author(tweet) {
+        return TwitterV2IncludesHelper.author(this.result, tweet);
+    }
+    /** Tweet author user object of the given tweet (*`author_id`* or *`referenced_tweets.id.author_id`*) */
+    static author(result, tweet) {
+        const authorId = tweet.author_id;
+        return authorId ? this.users(result).find(u => u.id === authorId) : undefined;
+    }
+    /** Tweet author user object of the tweet answered by the given tweet (*`in_reply_to_user_id`*) */
+    repliedToAuthor(tweet) {
+        return TwitterV2IncludesHelper.repliedToAuthor(this.result, tweet);
+    }
+    /** Tweet author user object of the tweet answered by the given tweet (*`in_reply_to_user_id`*) */
+    static repliedToAuthor(result, tweet) {
+        const inReplyUserId = tweet.in_reply_to_user_id;
+        return inReplyUserId ? this.users(result).find(u => u.id === inReplyUserId) : undefined;
+    }
+    /* Users */
+    get users() {
+        return TwitterV2IncludesHelper.users(this.result);
+    }
+    static users(result) {
+        var _a, _b;
+        return (_b = (_a = result.includes) === null || _a === void 0 ? void 0 : _a.users) !== null && _b !== void 0 ? _b : [];
+    }
+    userById(id) {
+        return TwitterV2IncludesHelper.userById(this.result, id);
+    }
+    static userById(result, id) {
+        return this.users(result).find(u => u.id === id);
+    }
+    /** Pinned tweet of the given user (*`pinned_tweet_id`*) */
+    pinnedTweet(user) {
+        return TwitterV2IncludesHelper.pinnedTweet(this.result, user);
+    }
+    /** Pinned tweet of the given user (*`pinned_tweet_id`*) */
+    static pinnedTweet(result, user) {
+        return user.pinned_tweet_id ? this.tweets(result).find(t => t.id === user.pinned_tweet_id) : undefined;
+    }
+    /* Medias */
+    get media() {
+        return TwitterV2IncludesHelper.media(this.result);
+    }
+    static media(result) {
+        var _a, _b;
+        return (_b = (_a = result.includes) === null || _a === void 0 ? void 0 : _a.media) !== null && _b !== void 0 ? _b : [];
+    }
+    /** Medias associated with the given tweet (*`attachments.media_keys`*) */
+    medias(tweet) {
+        return TwitterV2IncludesHelper.medias(this.result, tweet);
+    }
+    /** Medias associated with the given tweet (*`attachments.media_keys`*) */
+    static medias(result, tweet) {
+        var _a, _b;
+        const keys = (_b = (_a = tweet.attachments) === null || _a === void 0 ? void 0 : _a.media_keys) !== null && _b !== void 0 ? _b : [];
+        return this.media(result).filter(m => keys.includes(m.media_key));
+    }
+    /* Polls */
+    get polls() {
+        return TwitterV2IncludesHelper.polls(this.result);
+    }
+    static polls(result) {
+        var _a, _b;
+        return (_b = (_a = result.includes) === null || _a === void 0 ? void 0 : _a.polls) !== null && _b !== void 0 ? _b : [];
+    }
+    /** Poll associated with the given tweet (*`attachments.poll_ids`*) */
+    poll(tweet) {
+        return TwitterV2IncludesHelper.poll(this.result, tweet);
+    }
+    /** Poll associated with the given tweet (*`attachments.poll_ids`*) */
+    static poll(result, tweet) {
+        var _a, _b;
+        const pollIds = (_b = (_a = tweet.attachments) === null || _a === void 0 ? void 0 : _a.poll_ids) !== null && _b !== void 0 ? _b : [];
+        if (pollIds.length) {
+            const pollId = pollIds[0];
+            return this.polls(result).find(p => p.id === pollId);
+        }
+        return undefined;
+    }
+    /* Places */
+    get places() {
+        return TwitterV2IncludesHelper.places(this.result);
+    }
+    static places(result) {
+        var _a, _b;
+        return (_b = (_a = result.includes) === null || _a === void 0 ? void 0 : _a.places) !== null && _b !== void 0 ? _b : [];
+    }
+    /** Place associated with the given tweet (*`geo.place_id`*) */
+    place(tweet) {
+        return TwitterV2IncludesHelper.place(this.result, tweet);
+    }
+    /** Place associated with the given tweet (*`geo.place_id`*) */
+    static place(result, tweet) {
+        var _a;
+        const placeId = (_a = tweet.geo) === null || _a === void 0 ? void 0 : _a.place_id;
+        return placeId ? this.places(result).find(p => p.id === placeId) : undefined;
+    }
+    /* Lists */
+    /** List owner of the given list (*`owner_id`*) */
+    listOwner(list) {
+        return TwitterV2IncludesHelper.listOwner(this.result, list);
+    }
+    /** List owner of the given list (*`owner_id`*) */
+    static listOwner(result, list) {
+        const creatorId = list.owner_id;
+        return creatorId ? this.users(result).find(p => p.id === creatorId) : undefined;
+    }
+    /* Spaces */
+    /** Creator of the given space (*`creator_id`*) */
+    spaceCreator(space) {
+        return TwitterV2IncludesHelper.spaceCreator(this.result, space);
+    }
+    /** Creator of the given space (*`creator_id`*) */
+    static spaceCreator(result, space) {
+        const creatorId = space.creator_id;
+        return creatorId ? this.users(result).find(p => p.id === creatorId) : undefined;
+    }
+    /** Current hosts of the given space (*`host_ids`*) */
+    spaceHosts(space) {
+        return TwitterV2IncludesHelper.spaceHosts(this.result, space);
+    }
+    /** Current hosts of the given space (*`host_ids`*) */
+    static spaceHosts(result, space) {
+        var _a;
+        const hostIds = (_a = space.host_ids) !== null && _a !== void 0 ? _a : [];
+        return this.users(result).filter(u => hostIds.includes(u.id));
+    }
+    /** Current speakers of the given space (*`speaker_ids`*) */
+    spaceSpeakers(space) {
+        return TwitterV2IncludesHelper.spaceSpeakers(this.result, space);
+    }
+    /** Current speakers of the given space (*`speaker_ids`*) */
+    static spaceSpeakers(result, space) {
+        var _a;
+        const speakerIds = (_a = space.speaker_ids) !== null && _a !== void 0 ? _a : [];
+        return this.users(result).filter(u => speakerIds.includes(u.id));
+    }
+    /** Current invited users of the given space (*`invited_user_ids`*) */
+    spaceInvitedUsers(space) {
+        return TwitterV2IncludesHelper.spaceInvitedUsers(this.result, space);
+    }
+    /** Current invited users of the given space (*`invited_user_ids`*) */
+    static spaceInvitedUsers(result, space) {
+        var _a;
+        const invitedUserIds = (_a = space.invited_user_ids) !== null && _a !== void 0 ? _a : [];
+        return this.users(result).filter(u => invitedUserIds.includes(u.id));
+    }
+}
+exports.TwitterV2IncludesHelper = TwitterV2IncludesHelper;
 
 
 /***/ }),
@@ -34258,6 +41596,72 @@ exports["default"] = CollectProgramData;
 
 /***/ }),
 
+/***/ 1141:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const core = __importStar(__nccwpck_require__(6108));
+const tweet_gfi_data_1 = __importDefault(__nccwpck_require__(862));
+const dotenv_1 = __importDefault(__nccwpck_require__(8374));
+dotenv_1.default.config();
+async function TweetGFIData() {
+    try {
+        (0, tweet_gfi_data_1.default)({
+            TWITTER_APP_KEY: core.getInput("TWITTER_APP_KEY") || process.env.TWITTER_APP_KEY || "",
+            TWITTER_APP_SECRET: core.getInput("TWITTER_APP_SECRET") ||
+                process.env.TWITTER_APP_SECRET ||
+                "",
+            TWITTER_ACCESS_TOKEN: core.getInput("TWITTER_ACCESS_TOKEN") ||
+                process.env.TWITTER_ACCESS_TOKEN ||
+                "",
+            TWITTER_ACCESS_SECRET: core.getInput("TWITTER_ACCESS_SECRET") ||
+                process.env.TWITTER_ACCESS_SECRET ||
+                "",
+            GITHUB_TOKEN: core.getInput("GITHUB_TOKEN") ||
+                process.env.CODINASION_GITHUB_TOKEN ||
+                "",
+            TEST: core.getInput("TEST") || "true",
+        });
+    }
+    catch (error) {
+        core.setFailed(error instanceof Error ? error.message : "Unknown error occurred");
+    }
+}
+exports["default"] = TweetGFIData;
+// // Test the function
+// TweetGFIData();
+
+
+/***/ }),
+
 /***/ 6902:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
@@ -34456,6 +41860,7 @@ exports.run = void 0;
 const core = __importStar(__nccwpck_require__(6108));
 const collect_program_data_1 = __importDefault(__nccwpck_require__(1949));
 const collect_contributors_data_1 = __importDefault(__nccwpck_require__(3364));
+const tweet_gfi_data_1 = __importDefault(__nccwpck_require__(1141));
 /**
  * The main function for the action.
  * @returns {Promise<void>} Resolves when the action is complete.
@@ -34469,6 +41874,10 @@ async function run() {
         const TRIGGER_COLLECT_CONTRIBUTORS_DATA = core.getInput("TRIGGER_COLLECT_CONTRIBUTORS_DATA");
         if (TRIGGER_COLLECT_CONTRIBUTORS_DATA === "true") {
             await (0, collect_contributors_data_1.default)();
+        }
+        const TRIGGER_TWEET_GFI_DATA = core.getInput("TRIGGER_TWEET_GFI_DATA");
+        if (TRIGGER_TWEET_GFI_DATA === "true") {
+            await (0, tweet_gfi_data_1.default)();
         }
     }
     catch (error) {
@@ -34865,6 +42274,206 @@ async function FetchProgramList({ GITHUB_USERNAME, PROGRAM_REPONAME, PROGRAM_PAT
     return [];
 }
 exports["default"] = FetchProgramList;
+
+
+/***/ }),
+
+/***/ 5595:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.LanguageList = void 0;
+const LanguageList = [
+    "Python",
+    "C++",
+    "C",
+    "Java",
+    "C#",
+    "Ruby",
+    "Go",
+    "Kotlin",
+];
+exports.LanguageList = LanguageList;
+
+
+/***/ }),
+
+/***/ 9832:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const core = __importStar(__nccwpck_require__(6108));
+const node_fetch_1 = __importDefault(__nccwpck_require__(5360));
+__nccwpck_require__(8359);
+const utils_1 = __nccwpck_require__(1911);
+const data_1 = __nccwpck_require__(5595);
+async function FetchGFIData({ GITHUB_TOKEN, }) {
+    try {
+        // Fetch latest Good First Issues from Github API
+        const perPage = 1;
+        const page = 1;
+        const randomLanguage = data_1.LanguageList[Math.floor(Math.random() * data_1.LanguageList.length)];
+        const requestURL = `https://api.github.com/search/issues?q=is%3Aissue+label%3A%22good+first+issue%22+label%3A${(0, utils_1.EncodeURI)(randomLanguage)}+state:open+no%3Aassignee&sort=updated&order=desc&per_page=${perPage}&page=${page}`;
+        // core.debug(`Request URL: ${requestURL}`)
+        const response = await (0, node_fetch_1.default)(requestURL, {
+            method: "GET",
+            headers: {
+                Authorization: `Bearer ${GITHUB_TOKEN}`,
+            },
+        });
+        if (!response.ok) {
+            throw new Error(`Failed to fetch Good First Issues: ${response.statusText}`);
+        }
+        const data = await response.json();
+        const goodFirstIssue = data.items[0];
+        return goodFirstIssue;
+    }
+    catch (error) {
+        core.setFailed(error instanceof Error ? error.message : "Unknown error occurred");
+    }
+    return {};
+}
+exports["default"] = FetchGFIData;
+
+
+/***/ }),
+
+/***/ 862:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const core = __importStar(__nccwpck_require__(6108));
+__nccwpck_require__(8359);
+const twitter_api_v2_1 = __nccwpck_require__(3537);
+const fetch_gfi_data_1 = __importDefault(__nccwpck_require__(9832));
+async function TweetGFIData({ GITHUB_TOKEN, TWITTER_APP_KEY, TWITTER_APP_SECRET, TWITTER_ACCESS_TOKEN, TWITTER_ACCESS_SECRET, TEST, }) {
+    try {
+        // Fetch latest Good First Issues from Github API
+        const goodFirstIssue = await (0, fetch_gfi_data_1.default)({
+            GITHUB_TOKEN,
+        });
+        const issue_title = goodFirstIssue.title;
+        const issue_html_url = goodFirstIssue.html_url;
+        const issue_labels = goodFirstIssue.labels
+            .slice(0, 5)
+            .map((label) => `#${label.name
+            .toLowerCase()
+            .replace(/ /g, "")
+            .replace(/-/g, "")
+            .replace(/#/g, "sharp")
+            .replace(/\+/g, "plus")}`)
+            .join(" ");
+        core.debug(`Good First Issue: ${issue_title}`);
+        core.debug(`Good First Issue URL: ${issue_html_url}`);
+        core.debug(`Good First Issue Labels: ${issue_labels}`);
+        const tweet_text = `🚀 New to open source? Check out this "Good First Issue"! 💻
+
+${issue_title}
+
+${issue_html_url}
+
+🛠️ ${issue_labels}`;
+        core.debug(`Tweet Text: ${tweet_text}`);
+        if (TEST === "true") {
+            return;
+        }
+        // Tweet Good First Issue
+        core.debug(`Tweeting Good First Issue...`);
+        const twitterClient = new twitter_api_v2_1.TwitterApi({
+            appKey: TWITTER_APP_KEY,
+            appSecret: TWITTER_APP_SECRET,
+            accessToken: TWITTER_ACCESS_TOKEN,
+            accessSecret: TWITTER_ACCESS_SECRET,
+        });
+        const rwClient = twitterClient.readWrite;
+        try {
+            await rwClient.v2.tweet({
+                text: tweet_text,
+            });
+            core.debug(`Successfully tweeted Good First Issue`);
+        }
+        catch (error) {
+            throw new Error(`Failed to tweet Good First Issue: ${error}`);
+        }
+    }
+    catch (error) {
+        core.setFailed(error instanceof Error ? error.message : "Unknown error occurred");
+    }
+}
+exports["default"] = TweetGFIData;
+
+
+/***/ }),
+
+/***/ 1911:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.EncodeURI = void 0;
+function EncodeURI(str) {
+    return encodeURIComponent(str);
+}
+exports.EncodeURI = EncodeURI;
 
 
 /***/ }),

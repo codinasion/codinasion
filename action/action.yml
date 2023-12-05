@@ -18,6 +18,31 @@ inputs:
     required: true
     default: "false"
 
+  TRIGGER_TWEET_GFI_DATA:
+    description: "Trigger tweet GFI data"
+    required: true
+    default: "false"
+
+  TWITTER_APP_KEY:
+    description: "twitter app key"
+    required: true
+    default: ""
+
+  TWITTER_APP_SECRET:
+    description: "twitter app secret"
+    required: true
+    default: ""
+
+  TWITTER_ACCESS_TOKEN:
+    description: "twitter access token"
+    required: true
+    default: ""
+
+  TWITTER_ACCESS_SECRET:
+    description: "twitter access secret"
+    required: true
+    default: ""
+
   TEST:
     description: "is test?"
     required: true
