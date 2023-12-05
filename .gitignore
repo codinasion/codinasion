@@ -26,7 +26,6 @@ coverage
 out/
 build
 
-
 # Debug
 npm-debug.log*
 yarn-debug.log*
@@ -41,3 +40,4 @@ dist/
 !action/dist/
 program-data/
 contributors-data/
+trending-repos.png

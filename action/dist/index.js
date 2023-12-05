@@ -41662,6 +41662,69 @@ exports["default"] = TweetGFIData;
 
 /***/ }),
 
+/***/ 3230:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const core = __importStar(__nccwpck_require__(6108));
+const tweet_trending_repos_data_1 = __importDefault(__nccwpck_require__(7502));
+const dotenv_1 = __importDefault(__nccwpck_require__(8374));
+dotenv_1.default.config();
+async function TweetTrendingReposData() {
+    try {
+        (0, tweet_trending_repos_data_1.default)({
+            TWITTER_APP_KEY: core.getInput("TWITTER_APP_KEY") || process.env.TWITTER_APP_KEY || "",
+            TWITTER_APP_SECRET: core.getInput("TWITTER_APP_SECRET") ||
+                process.env.TWITTER_APP_SECRET ||
+                "",
+            TWITTER_ACCESS_TOKEN: core.getInput("TWITTER_ACCESS_TOKEN") ||
+                process.env.TWITTER_ACCESS_TOKEN ||
+                "",
+            TWITTER_ACCESS_SECRET: core.getInput("TWITTER_ACCESS_SECRET") ||
+                process.env.TWITTER_ACCESS_SECRET ||
+                "",
+            TEST: core.getInput("TEST") || "true",
+        });
+    }
+    catch (error) {
+        core.setFailed(error instanceof Error ? error.message : "Unknown error occurred");
+    }
+}
+exports["default"] = TweetTrendingReposData;
+// // Test the function
+// TweetTrendingReposData();
+
+
+/***/ }),
+
 /***/ 6902:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
@@ -41864,6 +41927,7 @@ const core = __importStar(__nccwpck_require__(6108));
 const collect_program_data_1 = __importDefault(__nccwpck_require__(1949));
 const collect_contributors_data_1 = __importDefault(__nccwpck_require__(3364));
 const tweet_gfi_data_1 = __importDefault(__nccwpck_require__(1141));
+const tweet_trending_repos_data_1 = __importDefault(__nccwpck_require__(3230));
 /**
  * The main function for the action.
  * @returns {Promise<void>} Resolves when the action is complete.
@@ -41881,6 +41945,10 @@ async function run() {
         const TRIGGER_TWEET_GFI_DATA = core.getInput("TRIGGER_TWEET_GFI_DATA");
         if (TRIGGER_TWEET_GFI_DATA === "true") {
             await (0, tweet_gfi_data_1.default)();
+        }
+        const TRIGGER_TWEET_TRENDING_REPOS_DATA = core.getInput("TRIGGER_TWEET_TRENDING_REPOS_DATA");
+        if (TRIGGER_TWEET_TRENDING_REPOS_DATA === "true") {
+            await (0, tweet_trending_repos_data_1.default)();
         }
     }
     catch (error) {
@@ -42277,6 +42345,163 @@ async function FetchProgramList({ GITHUB_USERNAME, PROGRAM_REPONAME, PROGRAM_PAT
     return [];
 }
 exports["default"] = FetchProgramList;
+
+
+/***/ }),
+
+/***/ 6654:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const core = __importStar(__nccwpck_require__(6108));
+const node_fetch_1 = __importDefault(__nccwpck_require__(5360));
+__nccwpck_require__(8359);
+async function FetchTrendingReposData() {
+    try {
+        // Source: https://github.com/alisoft/github-trending-api
+        const TRENDING_REPOS_API_URL = "https://api.gitterapp.com";
+        // Fetch trending repos
+        const response = await (0, node_fetch_1.default)(TRENDING_REPOS_API_URL, {
+            method: "GET",
+        });
+        if (!response.ok) {
+            throw new Error(`Failed to fetch trending repos with status code: ${response.status}`);
+        }
+        const data = await response.json();
+        core.debug(`Total trending repos fetched: ${data.length}`);
+        return data;
+    }
+    catch (error) {
+        core.setFailed(error instanceof Error ? error.message : "Unknown error occurred");
+    }
+    return [];
+}
+exports["default"] = FetchTrendingReposData;
+
+
+/***/ }),
+
+/***/ 7502:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const core = __importStar(__nccwpck_require__(6108));
+const fs_1 = __importDefault(__nccwpck_require__(7147));
+const node_fetch_1 = __importDefault(__nccwpck_require__(5360));
+__nccwpck_require__(8359);
+const twitter_api_v2_1 = __nccwpck_require__(3537);
+const fetch_trending_repos_data_1 = __importDefault(__nccwpck_require__(6654));
+async function TweetTrendingReposData({ TWITTER_APP_KEY, TWITTER_APP_SECRET, TWITTER_ACCESS_TOKEN, TWITTER_ACCESS_SECRET, TEST, }) {
+    try {
+        const OG_IMAGE_URL = "https://og-codinasion.vercel.app/github/trending/repos";
+        // Fetch trending repos
+        const trendingRepos = await (0, fetch_trending_repos_data_1.default)();
+        // Generate trending repos og image
+        core.debug(`Generating trending repos og image...`);
+        const ogImageResponse = await (0, node_fetch_1.default)(OG_IMAGE_URL, {
+            method: "GET",
+        });
+        if (!ogImageResponse.ok) {
+            throw new Error(`Failed to generate trending repos og image: ${ogImageResponse.statusText}`);
+        }
+        // Save og image buffer to image file
+        const ogImage = await ogImageResponse.buffer();
+        const imageFile = "./trending-repos.png";
+        fs_1.default.writeFileSync(imageFile, ogImage);
+        const tweet_text = `🚀 Here are the top trending GitHub repositories:
+
+🥇 ${trendingRepos[0].url} 🌟
+🥈 ${trendingRepos[1].url} 🌟
+🥉 ${trendingRepos[2].url} 🌟
+
+Dive in and get inspired 🛠️ #GitHub #TrendingRepos`;
+        core.debug(`Tweet text: ${tweet_text}`);
+        if (TEST === "true") {
+            return;
+        }
+        // Tweet trending repos
+        core.debug(`Tweeting trending repos...`);
+        const twitterClient = new twitter_api_v2_1.TwitterApi({
+            appKey: TWITTER_APP_KEY,
+            appSecret: TWITTER_APP_SECRET,
+            accessToken: TWITTER_ACCESS_TOKEN,
+            accessSecret: TWITTER_ACCESS_SECRET,
+        });
+        const rwClient = twitterClient.readWrite;
+        try {
+            const mediaId = await twitterClient.v1.uploadMedia(imageFile);
+            core.debug(`Successfully uploaded media: ${mediaId}`);
+            await rwClient.v2.tweet({
+                text: tweet_text,
+                media: { media_ids: [mediaId] },
+            });
+            core.debug(`Successfully tweeted trending repos`);
+        }
+        catch (error) {
+            throw new Error(`Failed to tweet trending repos: ${error}`);
+        }
+    }
+    catch (error) {
+        core.setFailed(error instanceof Error ? error.message : "Unknown error occurred");
+    }
+}
+exports["default"] = TweetTrendingReposData;
 
 
 /***/ }),

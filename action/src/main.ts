@@ -2,6 +2,7 @@ import * as core from "@actions/core";
 import CollectProgramData from "./action/collect-program-data";
 import CollectContributorsData from "./action/collect-contributors-data";
 import TweetGFIData from "./action/tweet-gfi-data";
+import TweetTrendingReposData from "./action/tweet-trending-repos-data";
 
 /**
  * The main function for the action.
@@ -28,6 +29,13 @@ export async function run(): Promise<void> {
     );
     if (TRIGGER_TWEET_GFI_DATA === "true") {
       await TweetGFIData();
+    }
+
+    const TRIGGER_TWEET_TRENDING_REPOS_DATA: string = core.getInput(
+      "TRIGGER_TWEET_TRENDING_REPOS_DATA",
+    );
+    if (TRIGGER_TWEET_TRENDING_REPOS_DATA === "true") {
+      await TweetTrendingReposData();
     }
   } catch (error) {
     // Fail the workflow run if an error occurs

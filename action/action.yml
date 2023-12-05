@@ -23,6 +23,11 @@ inputs:
     required: true
     default: "false"
 
+  TRIGGER_TWEET_TRENDING_REPOS_DATA:
+    description: "Trigger tweet trending repos data"
+    required: true
+    default: "false"
+
   TWITTER_APP_KEY:
     description: "twitter app key"
     required: true
