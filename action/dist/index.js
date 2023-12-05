@@ -34137,6 +34137,67 @@ exports.GetLanguageData = r;
 
 /***/ }),
 
+/***/ 3364:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const core = __importStar(__nccwpck_require__(6108));
+const collect_contributors_data_1 = __importDefault(__nccwpck_require__(6902));
+const dotenv_1 = __importDefault(__nccwpck_require__(8374));
+dotenv_1.default.config();
+async function CollectContributorsData() {
+    try {
+        (0, collect_contributors_data_1.default)({
+            REPOS_LIST: [
+                "codinasion/codinasion",
+                "codinasion-archive/codinasion-programme",
+            ],
+            CONTRIBUTOR_OUTPUT_PATH: "contributors-data",
+            GITHUB_TOKEN: core.getInput("GITHUB_TOKEN") ||
+                process.env.CODINASION_GITHUB_TOKEN ||
+                "",
+            TEST: core.getInput("TEST") || "true",
+        });
+    }
+    catch (error) {
+        core.setFailed(error instanceof Error ? error.message : "Unknown error occurred");
+    }
+}
+exports["default"] = CollectContributorsData;
+// // Test the function
+// CollectContributorsData();
+
+
+/***/ }),
+
 /***/ 1949:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
@@ -34197,6 +34258,168 @@ exports["default"] = CollectProgramData;
 
 /***/ }),
 
+/***/ 6902:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const core = __importStar(__nccwpck_require__(6108));
+const fs_1 = __importDefault(__nccwpck_require__(7147));
+const fetch_contributors_data_1 = __importDefault(__nccwpck_require__(8334));
+async function CollectContributorsData({ REPOS_LIST, CONTRIBUTOR_OUTPUT_PATH, GITHUB_TOKEN, TEST, }) {
+    try {
+        // Fetch contributors from Github API
+        const contributors = await (0, fetch_contributors_data_1.default)({
+            REPOS_LIST,
+            GITHUB_TOKEN,
+            TEST,
+        });
+        if (TEST !== "true") {
+            // create github contributors data folder
+            await fs_1.default.promises.mkdir(CONTRIBUTOR_OUTPUT_PATH, { recursive: true });
+            const contributorList = [];
+            for (const contributor of contributors) {
+                if (contributorList.some((e) => e === contributor.login)) {
+                    continue;
+                }
+                else {
+                    contributorList.push(contributor.login);
+                }
+            }
+            // Write contributors to file
+            await fs_1.default.promises.writeFile(`${CONTRIBUTOR_OUTPUT_PATH}/contributors.json`, JSON.stringify(contributorList, null, 2));
+        }
+    }
+    catch (error) {
+        core.setFailed(error instanceof Error ? error.message : "Unknown error occurred");
+    }
+}
+exports["default"] = CollectContributorsData;
+
+
+/***/ }),
+
+/***/ 8334:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const core = __importStar(__nccwpck_require__(6108));
+const node_fetch_1 = __importDefault(__nccwpck_require__(5360));
+async function FetchContributorsData({ REPOS_LIST, GITHUB_TOKEN, TEST, }) {
+    try {
+        // Fetch contributors from Github API
+        const contributors = [];
+        for (const repo of REPOS_LIST) {
+            core.debug(`Fetching contributors for ${repo}...`);
+            const contributor_per_page = 100;
+            let page = 1;
+            // eslint-disable-next-line no-constant-condition
+            while (true) {
+                let response;
+                if (GITHUB_TOKEN === "") {
+                    response = await (0, node_fetch_1.default)(`https://api.github.com/repos/${repo}/contributors?page=${page}&per_page=${contributor_per_page}`, {
+                        method: "GET",
+                        headers: {
+                            "Content-Type": "application/json",
+                        },
+                    });
+                }
+                else {
+                    response = await (0, node_fetch_1.default)(`https://api.github.com/repos/${repo}/contributors?page=${page}&per_page=${contributor_per_page}`, {
+                        method: "GET",
+                        headers: {
+                            Authorization: `Bearer ${GITHUB_TOKEN}`,
+                            "Content-Type": "application/json",
+                        },
+                    });
+                }
+                if (!response.ok) {
+                    throw new Error(`Failed to fetch contributors: ${response.statusText}`);
+                }
+                const responseData = await response.json();
+                const contributorsResponse = responseData;
+                core.debug(`Contributors fetched: ${contributorsResponse.length}`);
+                contributors.push(...contributorsResponse);
+                if (contributorsResponse.length < contributor_per_page) {
+                    break;
+                }
+                page++;
+                if (TEST === "true") {
+                    break;
+                }
+            }
+            if (TEST === "true") {
+                break;
+            }
+        }
+        core.debug(`Total contributors fetched: ${contributors.length}`);
+        return contributors;
+    }
+    catch (error) {
+        core.setFailed(error instanceof Error ? error.message : "Unknown error occurred");
+    }
+    return [];
+}
+exports["default"] = FetchContributorsData;
+
+
+/***/ }),
+
 /***/ 7290:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
@@ -34232,6 +34455,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.run = void 0;
 const core = __importStar(__nccwpck_require__(6108));
 const collect_program_data_1 = __importDefault(__nccwpck_require__(1949));
+const collect_contributors_data_1 = __importDefault(__nccwpck_require__(3364));
 /**
  * The main function for the action.
  * @returns {Promise<void>} Resolves when the action is complete.
@@ -34241,6 +34465,10 @@ async function run() {
         const TRIGGER_COLLECT_PROGRAM_DATA = core.getInput("TRIGGER_COLLECT_PROGRAM_DATA");
         if (TRIGGER_COLLECT_PROGRAM_DATA === "true") {
             await (0, collect_program_data_1.default)();
+        }
+        const TRIGGER_COLLECT_CONTRIBUTORS_DATA = core.getInput("TRIGGER_COLLECT_CONTRIBUTORS_DATA");
+        if (TRIGGER_COLLECT_CONTRIBUTORS_DATA === "true") {
+            await (0, collect_contributors_data_1.default)();
         }
     }
     catch (error) {

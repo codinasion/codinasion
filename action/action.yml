@@ -13,6 +13,11 @@ inputs:
     required: true
     default: "false"
 
+  TRIGGER_COLLECT_CONTRIBUTORS_DATA:
+    description: "Trigger collect contributors data"
+    required: true
+    default: "false"
+
   TEST:
     description: "is test?"
     required: true

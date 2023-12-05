@@ -40,3 +40,4 @@ yarn-error.log*
 dist/
 !action/dist/
 program-data/
+contributors-data/
