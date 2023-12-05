@@ -42342,8 +42342,10 @@ async function FetchGFIData({ GITHUB_TOKEN, }) {
         // Fetch latest Good First Issues from Github API
         const perPage = 1;
         const page = 1;
+        // randomly select "updated" or "created"
+        const searchMode = Math.floor(Math.random() * 2) === 0 ? "updated" : "created";
         const randomLanguage = data_1.LanguageList[Math.floor(Math.random() * data_1.LanguageList.length)];
-        const requestURL = `https://api.github.com/search/issues?q=is%3Aissue+label%3A%22good+first+issue%22+label%3A${(0, utils_1.EncodeURI)(randomLanguage)}+state:open+no%3Aassignee&sort=updated&order=desc&per_page=${perPage}&page=${page}`;
+        const requestURL = `https://api.github.com/search/issues?q=is%3Aissue+label%3A%22good+first+issue%22+label%3A${(0, utils_1.EncodeURI)(randomLanguage)}+state:open+no%3Aassignee&sort=${searchMode}&order=desc&per_page=${perPage}&page=${page}`;
         // core.debug(`Request URL: ${requestURL}`)
         const response = await (0, node_fetch_1.default)(requestURL, {
             method: "GET",

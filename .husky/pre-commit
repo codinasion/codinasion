@@ -72,6 +72,10 @@ if git diff --cached --name-only | grep -q "^website/" || git diff --cached --na
         echo "${RED}${CDR}${NC}: Building code"
         pnpm build --filter action 1>/dev/null
         echo "${GREEN}${CC}${NC}: We confirm dist/ building."
+        echo ""
+        echo "${RED}${CDR}${NC}: Formatting code"
+        pnpm format:action 1>/dev/null
+        echo "${GREEN}${CC}${NC}: Roger. We confirm formatting."
     fi
 fi
 

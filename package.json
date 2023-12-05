@@ -23,6 +23,7 @@
     "format:website": "prettier --write \"website/**/*.{js,jsx,ts,tsx,md,mdx,json,yml,yaml}\"",
     "format:packages": "prettier --write \"npm/packages/**/*.{js,jsx,ts,tsx,md,mdx,json,yml,yaml}\"",
     "format:examples": "prettier --write \"npm/examples/**/*.{js,jsx,ts,tsx,md,mdx,json,yml,yaml}\"",
+    "format:action": "prettier --write \"action/**/*.{js,jsx,ts,tsx,md,mdx,json,yml,yaml}\"",
     "all": "pnpm clone-submodules && pnpm format && turbo lint && pnpm build:local && pnpm test",
     "all:website": "pnpm format:website && pnpm lint:website && pnpm build:local:website && pnpm test:website",
     "all:packages": "pnpm format:packages && pnpm lint:packages && pnpm build:packages && pnpm test:packages",
