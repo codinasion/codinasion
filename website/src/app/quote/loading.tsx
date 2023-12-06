@@ -1,4 +1,4 @@
-import QuoteLoadingComponent from "@/components/Quotes/quote-loading-component";
+import QuoteLoadingComponent from "@/components/Quote/quote-loading-component";
 
 export default function LoadingPage(): JSX.Element {
   return (

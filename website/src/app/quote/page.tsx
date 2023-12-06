@@ -1,5 +1,13 @@
-import QuoteComponent from "@/components/Quotes/quote-component";
+import { Metadata } from "next";
+import QuoteComponent from "@/components/Quote/quote-component";
 import { GetQuoteData } from "@/data";
+
+export const revalidate = 0;
+
+export const metadata: Metadata = {
+  title: "Quote",
+  description: "Get a Random Quote. Quote API available at: api/quote",
+};
 
 export default async function Page(): Promise<JSX.Element> {
   const QuoteData = await GetQuoteData();
