@@ -28,6 +28,11 @@ inputs:
     required: true
     default: "false"
 
+  TRIGGER_TWEET_QUOTE_DATA:
+    description: "Trigger tweet quote data"
+    required: true
+    default: "false"
+
   TWITTER_APP_KEY:
     description: "twitter app key"
     required: true

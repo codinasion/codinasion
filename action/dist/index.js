@@ -41662,6 +41662,69 @@ exports["default"] = TweetGFIData;
 
 /***/ }),
 
+/***/ 6379:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const core = __importStar(__nccwpck_require__(6108));
+const tweet_quote_data_1 = __importDefault(__nccwpck_require__(4838));
+const dotenv_1 = __importDefault(__nccwpck_require__(8374));
+dotenv_1.default.config();
+async function TweetQuoteData() {
+    try {
+        (0, tweet_quote_data_1.default)({
+            TWITTER_APP_KEY: core.getInput("TWITTER_APP_KEY") || process.env.TWITTER_APP_KEY || "",
+            TWITTER_APP_SECRET: core.getInput("TWITTER_APP_SECRET") ||
+                process.env.TWITTER_APP_SECRET ||
+                "",
+            TWITTER_ACCESS_TOKEN: core.getInput("TWITTER_ACCESS_TOKEN") ||
+                process.env.TWITTER_ACCESS_TOKEN ||
+                "",
+            TWITTER_ACCESS_SECRET: core.getInput("TWITTER_ACCESS_SECRET") ||
+                process.env.TWITTER_ACCESS_SECRET ||
+                "",
+            TEST: core.getInput("TEST") || "true",
+        });
+    }
+    catch (error) {
+        core.setFailed(error instanceof Error ? error.message : "Unknown error occurred");
+    }
+}
+exports["default"] = TweetQuoteData;
+// // Test the function
+// TweetQuoteData();
+
+
+/***/ }),
+
 /***/ 3230:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
@@ -41928,6 +41991,7 @@ const collect_program_data_1 = __importDefault(__nccwpck_require__(1949));
 const collect_contributors_data_1 = __importDefault(__nccwpck_require__(3364));
 const tweet_gfi_data_1 = __importDefault(__nccwpck_require__(1141));
 const tweet_trending_repos_data_1 = __importDefault(__nccwpck_require__(3230));
+const tweet_quote_data_1 = __importDefault(__nccwpck_require__(6379));
 /**
  * The main function for the action.
  * @returns {Promise<void>} Resolves when the action is complete.
@@ -41949,6 +42013,10 @@ async function run() {
         const TRIGGER_TWEET_TRENDING_REPOS_DATA = core.getInput("TRIGGER_TWEET_TRENDING_REPOS_DATA");
         if (TRIGGER_TWEET_TRENDING_REPOS_DATA === "true") {
             await (0, tweet_trending_repos_data_1.default)();
+        }
+        const TRIGGER_TWEET_QUOTE_DATA = core.getInput("TRIGGER_TWEET_QUOTE_DATA");
+        if (TRIGGER_TWEET_QUOTE_DATA === "true") {
+            await (0, tweet_quote_data_1.default)();
         }
     }
     catch (error) {
@@ -42704,6 +42772,138 @@ function EncodeURI(str) {
     return encodeURIComponent(str);
 }
 exports.EncodeURI = EncodeURI;
+
+
+/***/ }),
+
+/***/ 4097:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const core = __importStar(__nccwpck_require__(6108));
+const node_fetch_1 = __importDefault(__nccwpck_require__(5360));
+async function FetchQuoteData() {
+    try {
+        // Fetch quote data
+        // Source: https://github.com/lukePeavey/quotable
+        const response = await (0, node_fetch_1.default)("https://api.quotable.io/quotes/random", {
+            method: "GET",
+        });
+        if (!response.ok) {
+            throw new Error(`Failed to fetch Quote data: ${response.statusText}`);
+        }
+        const data = (await response.json());
+        return data[0];
+    }
+    catch (error) {
+        core.setFailed(error instanceof Error ? error.message : "Unknown error occurred");
+    }
+    return {};
+}
+exports["default"] = FetchQuoteData;
+
+
+/***/ }),
+
+/***/ 4838:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const core = __importStar(__nccwpck_require__(6108));
+__nccwpck_require__(8359);
+const twitter_api_v2_1 = __nccwpck_require__(3537);
+const fetch_quote_data_1 = __importDefault(__nccwpck_require__(4097));
+async function TweetQuoteData({ TWITTER_APP_KEY, TWITTER_APP_SECRET, TWITTER_ACCESS_TOKEN, TWITTER_ACCESS_SECRET, TEST, }) {
+    try {
+        // Fetch quote data
+        const quote = await (0, fetch_quote_data_1.default)();
+        const tweet_text = `🙶 ${quote.content} 🙷
+
+- ${quote.author}`;
+        core.debug(`Tweet Text: ${tweet_text}`);
+        if (TEST === "true") {
+            return;
+        }
+        // Tweet quote data
+        core.debug(`Tweeting quote data...`);
+        const twitterClient = new twitter_api_v2_1.TwitterApi({
+            appKey: TWITTER_APP_KEY,
+            appSecret: TWITTER_APP_SECRET,
+            accessToken: TWITTER_ACCESS_TOKEN,
+            accessSecret: TWITTER_ACCESS_SECRET,
+        });
+        const rwClient = twitterClient.readWrite;
+        try {
+            await rwClient.v2.tweet({
+                text: tweet_text,
+            });
+            core.debug(`Successfully tweeted quote data!`);
+        }
+        catch (error) {
+            throw new Error(`Failed to tweet quote data: ${error}`);
+        }
+    }
+    catch (error) {
+        core.setFailed(error instanceof Error ? error.message : "Unknown error occurred");
+    }
+}
+exports["default"] = TweetQuoteData;
 
 
 /***/ }),
