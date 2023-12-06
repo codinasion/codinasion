@@ -33,6 +33,11 @@ inputs:
     required: true
     default: "false"
 
+  TRIGGER_TWEET_MEME:
+    description: "Trigger tweet meme"
+    required: true
+    default: "false"
+
   TWITTER_APP_KEY:
     description: "twitter app key"
     required: true

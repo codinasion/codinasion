@@ -1834,71 +1834,6 @@ function isLoopbackAddress(host) {
 
 /***/ }),
 
-/***/ 8359:
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __nccwpck_require__) => {
-
-(function () {
-  (__nccwpck_require__(8374).config)(
-    Object.assign(
-      {},
-      __nccwpck_require__(6360),
-      __nccwpck_require__(9996)(process.argv)
-    )
-  )
-})()
-
-
-/***/ }),
-
-/***/ 9996:
-/***/ ((module) => {
-
-const re = /^dotenv_config_(encoding|path|debug|override|DOTENV_KEY)=(.+)$/
-
-module.exports = function optionMatcher (args) {
-  return args.reduce(function (acc, cur) {
-    const matches = cur.match(re)
-    if (matches) {
-      acc[matches[1]] = matches[2]
-    }
-    return acc
-  }, {})
-}
-
-
-/***/ }),
-
-/***/ 6360:
-/***/ ((module) => {
-
-// ../config.js accepts options via environment variables
-const options = {}
-
-if (process.env.DOTENV_CONFIG_ENCODING != null) {
-  options.encoding = process.env.DOTENV_CONFIG_ENCODING
-}
-
-if (process.env.DOTENV_CONFIG_PATH != null) {
-  options.path = process.env.DOTENV_CONFIG_PATH
-}
-
-if (process.env.DOTENV_CONFIG_DEBUG != null) {
-  options.debug = process.env.DOTENV_CONFIG_DEBUG
-}
-
-if (process.env.DOTENV_CONFIG_OVERRIDE != null) {
-  options.override = process.env.DOTENV_CONFIG_OVERRIDE
-}
-
-if (process.env.DOTENV_CONFIG_DOTENV_KEY != null) {
-  options.DOTENV_KEY = process.env.DOTENV_CONFIG_DOTENV_KEY
-}
-
-module.exports = options
-
-
-/***/ }),
-
 /***/ 8374:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
@@ -41662,6 +41597,69 @@ exports["default"] = TweetGFIData;
 
 /***/ }),
 
+/***/ 2579:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const core = __importStar(__nccwpck_require__(6108));
+const tweet_meme_1 = __importDefault(__nccwpck_require__(5869));
+const dotenv_1 = __importDefault(__nccwpck_require__(8374));
+dotenv_1.default.config();
+async function TweetMeme() {
+    try {
+        (0, tweet_meme_1.default)({
+            TWITTER_APP_KEY: core.getInput("TWITTER_APP_KEY") || process.env.TWITTER_APP_KEY || "",
+            TWITTER_APP_SECRET: core.getInput("TWITTER_APP_SECRET") ||
+                process.env.TWITTER_APP_SECRET ||
+                "",
+            TWITTER_ACCESS_TOKEN: core.getInput("TWITTER_ACCESS_TOKEN") ||
+                process.env.TWITTER_ACCESS_TOKEN ||
+                "",
+            TWITTER_ACCESS_SECRET: core.getInput("TWITTER_ACCESS_SECRET") ||
+                process.env.TWITTER_ACCESS_SECRET ||
+                "",
+            TEST: core.getInput("TEST") || "true",
+        });
+    }
+    catch (error) {
+        core.setFailed(error instanceof Error ? error.message : "Unknown error occurred");
+    }
+}
+exports["default"] = TweetMeme;
+// // Test the function
+// TweetMeme();
+
+
+/***/ }),
+
 /***/ 6379:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
@@ -41992,6 +41990,7 @@ const collect_contributors_data_1 = __importDefault(__nccwpck_require__(3364));
 const tweet_gfi_data_1 = __importDefault(__nccwpck_require__(1141));
 const tweet_trending_repos_data_1 = __importDefault(__nccwpck_require__(3230));
 const tweet_quote_data_1 = __importDefault(__nccwpck_require__(6379));
+const tweet_meme_1 = __importDefault(__nccwpck_require__(2579));
 /**
  * The main function for the action.
  * @returns {Promise<void>} Resolves when the action is complete.
@@ -42017,6 +42016,10 @@ async function run() {
         const TRIGGER_TWEET_QUOTE_DATA = core.getInput("TRIGGER_TWEET_QUOTE_DATA");
         if (TRIGGER_TWEET_QUOTE_DATA === "true") {
             await (0, tweet_quote_data_1.default)();
+        }
+        const TRIGGER_TWEET_MEME = core.getInput("TRIGGER_TWEET_MEME");
+        if (TRIGGER_TWEET_MEME === "true") {
+            await (0, tweet_meme_1.default)();
         }
     }
     catch (error) {
@@ -42451,7 +42454,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const core = __importStar(__nccwpck_require__(6108));
 const node_fetch_1 = __importDefault(__nccwpck_require__(5360));
-__nccwpck_require__(8359);
 async function FetchTrendingReposData() {
     try {
         // Source: https://github.com/alisoft/github-trending-api
@@ -42512,7 +42514,6 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 const core = __importStar(__nccwpck_require__(6108));
 const fs_1 = __importDefault(__nccwpck_require__(7147));
 const node_fetch_1 = __importDefault(__nccwpck_require__(5360));
-__nccwpck_require__(8359);
 const twitter_api_v2_1 = __nccwpck_require__(3537);
 const fetch_trending_repos_data_1 = __importDefault(__nccwpck_require__(6654));
 async function TweetTrendingReposData({ TWITTER_APP_KEY, TWITTER_APP_SECRET, TWITTER_ACCESS_TOKEN, TWITTER_ACCESS_SECRET, TEST, }) {
@@ -42630,7 +42631,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const core = __importStar(__nccwpck_require__(6108));
 const node_fetch_1 = __importDefault(__nccwpck_require__(5360));
-__nccwpck_require__(8359);
 const utils_1 = __nccwpck_require__(1911);
 const data_1 = __nccwpck_require__(5595);
 async function FetchGFIData({ GITHUB_TOKEN, }) {
@@ -42699,7 +42699,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const core = __importStar(__nccwpck_require__(6108));
-__nccwpck_require__(8359);
 const twitter_api_v2_1 = __nccwpck_require__(3537);
 const fetch_gfi_data_1 = __importDefault(__nccwpck_require__(9832));
 async function TweetGFIData({ GITHUB_TOKEN, TWITTER_APP_KEY, TWITTER_APP_SECRET, TWITTER_ACCESS_TOKEN, TWITTER_ACCESS_SECRET, TEST, }) {
@@ -42772,6 +42771,93 @@ function EncodeURI(str) {
     return encodeURIComponent(str);
 }
 exports.EncodeURI = EncodeURI;
+
+
+/***/ }),
+
+/***/ 5869:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const core = __importStar(__nccwpck_require__(6108));
+const fs_1 = __importDefault(__nccwpck_require__(7147));
+const node_fetch_1 = __importDefault(__nccwpck_require__(5360));
+const twitter_api_v2_1 = __nccwpck_require__(3537);
+async function TweetMeme({ TWITTER_APP_KEY, TWITTER_APP_SECRET, TWITTER_ACCESS_TOKEN, TWITTER_ACCESS_SECRET, TEST, }) {
+    try {
+        const MEME_IMAGE_URL = "https://codinasion.tech/api/meme/image";
+        // Generate meme image
+        core.debug(`Generating meme image...`);
+        const memeImageResponse = await (0, node_fetch_1.default)(MEME_IMAGE_URL, {
+            method: "GET",
+        });
+        if (!memeImageResponse.ok) {
+            throw new Error(`Failed to generate meme image: ${memeImageResponse.statusText}`);
+        }
+        // Save meme image buffer to image file
+        const memeImage = await memeImageResponse.buffer();
+        const imageFile = "./meme.png";
+        fs_1.default.writeFileSync(imageFile, memeImage);
+        const tweet_text = `#programming #memes #funny #funnymemes #coding`;
+        core.debug(`Tweet text: ${tweet_text}`);
+        if (TEST === "true") {
+            return;
+        }
+        // Tweet meme
+        core.debug(`Tweeting meme...`);
+        const twitterClient = new twitter_api_v2_1.TwitterApi({
+            appKey: TWITTER_APP_KEY,
+            appSecret: TWITTER_APP_SECRET,
+            accessToken: TWITTER_ACCESS_TOKEN,
+            accessSecret: TWITTER_ACCESS_SECRET,
+        });
+        const rwClient = twitterClient.readWrite;
+        try {
+            const mediaId = await twitterClient.v1.uploadMedia(imageFile);
+            core.debug(`Successfully uploaded media: ${mediaId}`);
+            await rwClient.v2.tweet({
+                text: tweet_text,
+                media: { media_ids: [mediaId] },
+            });
+            core.debug(`Successfully tweeted meme`);
+        }
+        catch (error) {
+            throw new Error(`Failed to tweet meme: ${error}`);
+        }
+    }
+    catch (error) {
+        core.setFailed(error instanceof Error ? error.message : "Unknown error occurred");
+    }
+}
+exports["default"] = TweetMeme;
 
 
 /***/ }),
@@ -42866,7 +42952,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const core = __importStar(__nccwpck_require__(6108));
-__nccwpck_require__(8359);
 const twitter_api_v2_1 = __nccwpck_require__(3537);
 const fetch_quote_data_1 = __importDefault(__nccwpck_require__(4097));
 async function TweetQuoteData({ TWITTER_APP_KEY, TWITTER_APP_SECRET, TWITTER_ACCESS_TOKEN, TWITTER_ACCESS_SECRET, TEST, }) {

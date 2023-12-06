@@ -1,5 +1,4 @@
 import * as core from "@actions/core";
-import "dotenv/config";
 import { TwitterApi } from "twitter-api-v2";
 import FetchGFIData from "./fetch-gfi-data";
 import type { GoodFirstIssueType } from "./types";

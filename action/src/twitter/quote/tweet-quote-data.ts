@@ -1,5 +1,4 @@
 import * as core from "@actions/core";
-import "dotenv/config";
 import { TwitterApi } from "twitter-api-v2";
 import FetchQuoteData from "./fetch-quote-data";
 import type { QuoteType } from "./types";

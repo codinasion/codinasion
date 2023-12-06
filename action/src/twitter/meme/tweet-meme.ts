@@ -2,11 +2,9 @@ import * as core from "@actions/core";
 import fs from "fs";
 import fetch from "node-fetch";
 import { TwitterApi } from "twitter-api-v2";
-import FetchTrendingReposData from "./fetch-trending-repos-data";
 import type { Response } from "node-fetch";
-import type { TrendingRepoType } from "./types";
 
-export default async function TweetTrendingReposData({
+export default async function TweetMeme({
   TWITTER_APP_KEY,
   TWITTER_APP_SECRET,
   TWITTER_ACCESS_TOKEN,
@@ -20,36 +18,26 @@ export default async function TweetTrendingReposData({
   TEST: string;
 }): Promise<void> {
   try {
-    const OG_IMAGE_URL =
-      "https://og-codinasion.vercel.app/github/trending/repos";
+    const MEME_IMAGE_URL = "https://codinasion.tech/api/meme/image";
 
-    // Fetch trending repos
-    const trendingRepos: TrendingRepoType[] = await FetchTrendingReposData();
-
-    // Generate trending repos og image
-    core.debug(`Generating trending repos og image...`);
-    const ogImageResponse: Response = await fetch(OG_IMAGE_URL, {
+    // Generate meme image
+    core.debug(`Generating meme image...`);
+    const memeImageResponse: Response = await fetch(MEME_IMAGE_URL, {
       method: "GET",
     });
 
-    if (!ogImageResponse.ok) {
+    if (!memeImageResponse.ok) {
       throw new Error(
-        `Failed to generate trending repos og image: ${ogImageResponse.statusText}`,
+        `Failed to generate meme image: ${memeImageResponse.statusText}`,
       );
     }
 
-    // Save og image buffer to image file
-    const ogImage: Buffer = await ogImageResponse.buffer();
-    const imageFile = "./trending-repos.png";
-    fs.writeFileSync(imageFile, ogImage);
+    // Save meme image buffer to image file
+    const memeImage: Buffer = await memeImageResponse.buffer();
+    const imageFile = "./meme.png";
+    fs.writeFileSync(imageFile, memeImage);
 
-    const tweet_text = `🚀 Here are the top trending GitHub repositories:
-
-🥇 ${trendingRepos[0].url} 🌟
-🥈 ${trendingRepos[1].url} 🌟
-🥉 ${trendingRepos[2].url} 🌟
-
-Dive in and get inspired 🛠️ #GitHub #TrendingRepos`;
+    const tweet_text = `#programming #memes #funny #funnymemes #coding`;
 
     core.debug(`Tweet text: ${tweet_text}`);
 
@@ -57,8 +45,8 @@ Dive in and get inspired 🛠️ #GitHub #TrendingRepos`;
       return;
     }
 
-    // Tweet trending repos
-    core.debug(`Tweeting trending repos...`);
+    // Tweet meme
+    core.debug(`Tweeting meme...`);
 
     const twitterClient = new TwitterApi({
       appKey: TWITTER_APP_KEY,
@@ -79,9 +67,9 @@ Dive in and get inspired 🛠️ #GitHub #TrendingRepos`;
         media: { media_ids: [mediaId] },
       });
 
-      core.debug(`Successfully tweeted trending repos`);
+      core.debug(`Successfully tweeted meme`);
     } catch (error) {
-      throw new Error(`Failed to tweet trending repos: ${error}`);
+      throw new Error(`Failed to tweet meme: ${error}`);
     }
   } catch (error) {
     core.setFailed(

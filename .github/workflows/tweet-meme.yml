@@ -1,8 +1,8 @@
-name: Tweet Trending Repos Data
+name: Tweet Meme
 
 on:
   schedule:
-    - cron: "7 19 * * *"
+    - cron: "17 2/3 * * *"
   workflow_dispatch:
     inputs:
       TEST:
@@ -12,8 +12,8 @@ on:
         default: false
 
 jobs:
-  tweet-trending-repos-data:
-    name: Tweet Trending Repos Data
+  tweet-meme:
+    name: Tweet Meme
 
     runs-on: "ubuntu-latest"
 
@@ -22,14 +22,14 @@ jobs:
         id: checkout
         uses: actions/checkout@v4
 
-      - name: Tweet Trending Repos Data
-        id: tweet-trending-repos-data
+      - name: Tweet Meme
+        id: tweet-meme
         uses: ./action/
         with:
           TEST: ${{ inputs.TEST || 'false' }}
 
           # Trigger
-          TRIGGER_TWEET_TRENDING_REPOS_DATA: true
+          TRIGGER_TWEET_MEME: true
 
           # Secrets
           GITHUB_TOKEN: ${{ secrets.CODINASION_GITHUB_TOKEN }}

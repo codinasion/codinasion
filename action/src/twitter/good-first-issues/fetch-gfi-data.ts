@@ -1,7 +1,6 @@
 import * as core from "@actions/core";
 import fetch from "node-fetch";
 import type { Response } from "node-fetch";
-import "dotenv/config";
 import { EncodeURI } from "./utils";
 import { LanguageList } from "./data";
 import type { GoodFirstIssueType } from "./types";

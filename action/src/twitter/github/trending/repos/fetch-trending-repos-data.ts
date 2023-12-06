@@ -1,6 +1,5 @@
 import * as core from "@actions/core";
 import fetch from "node-fetch";
-import "dotenv/config";
 import type { Response } from "node-fetch";
 import type { TrendingRepoType } from "./types";
 
