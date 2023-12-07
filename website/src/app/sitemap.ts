@@ -9,14 +9,19 @@ import { EncodeURL as EncodeLanguage } from "@/utils";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Add default pages
-  const routes = ["", "program", "quote", "meme", "contributors"].map(
-    (route) => ({
-      url: `${SiteMetadata.site_url}/${route}`,
-      lastModified: new Date(),
-      changeFrequency: "daily" as "daily",
-      priority: 1,
-    }),
-  );
+  const routes = [
+    "",
+    "program",
+    "quote",
+    "meme",
+    "contributors",
+    "trending-repos",
+  ].map((route) => ({
+    url: `${SiteMetadata.site_url}/${route}`,
+    lastModified: new Date(),
+    changeFrequency: "daily" as "daily",
+    priority: 1,
+  }));
 
   // /good-first-issues/:language & /good-first-issues
   const goodfirstissuesRoutes = [""].concat(LanguageList).map((language) => ({
