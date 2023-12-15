@@ -1519,13 +1519,13 @@ importers:
     dependencies:
       '@tailwindcss/typography':
         specifier: ^0.5.10
-        version: 0.5.10(tailwindcss@3.3.5)
+        version: 0.5.10(tailwindcss@3.3.6)
       flowbite:
         specifier: ^2.2.0
         version: 2.2.0
       flowbite-react:
         specifier: ^0.7.0
-        version: 0.7.0(@types/react@18.2.41)(esbuild@0.19.8)(next@14.0.3)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.3.5)
+        version: 0.7.0(@types/react@18.2.41)(esbuild@0.19.8)(next@14.0.3)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.3.6)
       moment:
         specifier: ^2.29.4
         version: 2.29.4
@@ -1600,8 +1600,8 @@ importers:
         specifier: ^8
         version: 8.4.32
       tailwindcss:
-        specifier: ^3.3.0
-        version: 3.3.5
+        specifier: ^3.3.6
+        version: 3.3.6
       typescript:
         specifier: ^5.2.2
         version: 5.3.2
@@ -4515,7 +4515,7 @@ packages:
       defer-to-connect: 2.0.1
     dev: false
 
-  /@tailwindcss/typography@0.5.10(tailwindcss@3.3.5):
+  /@tailwindcss/typography@0.5.10(tailwindcss@3.3.6):
     resolution: {integrity: sha512-Pe8BuPJQJd3FfRnm6H0ulKIGoMEQS+Vq01R6M5aCrFB/ccR/shT+0kXLjouGC1gFLm9hopTFN+DMP0pfwRWzPw==}
     peerDependencies:
       tailwindcss: '>=3.0.0 || insiders'
@@ -4524,7 +4524,7 @@ packages:
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       postcss-selector-parser: 6.0.10
-      tailwindcss: 3.3.5
+      tailwindcss: 3.3.6
     dev: false
 
   /@tokenizer/token@0.3.0:
@@ -7756,7 +7756,7 @@ packages:
     resolution: {integrity: sha512-36yxDn5H7OFZQla0/jFJmbIKTdZAQHngCedGxiMmpNfEZM0sdEeT+WczLQrjK6D7o2aiyLYDnkw0R3JK0Qv1RQ==}
     dev: true
 
-  /flowbite-react@0.7.0(@types/react@18.2.41)(esbuild@0.19.8)(next@14.0.3)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.3.5):
+  /flowbite-react@0.7.0(@types/react@18.2.41)(esbuild@0.19.8)(next@14.0.3)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.3.6):
     resolution: {integrity: sha512-QWFtfkTAfiF8kRnpeeokU1Ip8p+unFJeDIbceNNEFwDAPiLVTZKmsa3Xz32KQk+s5KLHJU1EkH3bwikTwPbDSg==}
     peerDependencies:
       react: ^18
@@ -7775,7 +7775,7 @@ packages:
       react-markdown: 9.0.1(@types/react@18.2.41)(react@18.2.0)
       sharp: 0.32.6
       tailwind-merge: 2.1.0
-      tailwindcss: 3.3.5
+      tailwindcss: 3.3.6
     transitivePeerDependencies:
       - '@effect-ts/otel-node'
       - '@types/react'
@@ -13460,8 +13460,8 @@ packages:
       '@babel/runtime': 7.23.5
     dev: false
 
-  /tailwindcss@3.3.5:
-    resolution: {integrity: sha512-5SEZU4J7pxZgSkv7FP1zY8i2TIAOooNZ1e/OGtxIEv6GltpoiXUqWvLy89+a10qYTB1N5Ifkuw9lqQkN9sscvA==}
+  /tailwindcss@3.3.6:
+    resolution: {integrity: sha512-AKjF7qbbLvLaPieoKeTjG1+FyNZT6KaJMJPFeQyLfIp7l82ggH1fbHJSsYIvnbTFQOlkh+gBYpyby5GT1LIdLw==}
     engines: {node: '>=14.0.0'}
     hasBin: true
     dependencies:
