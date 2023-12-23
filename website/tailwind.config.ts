@@ -1,68 +1,24 @@
 import type { Config } from "tailwindcss";
-import { fontFamily } from "tailwindcss/defaultTheme";
-import colors from "tailwindcss/colors";
 
 const config: Config = {
-  content: [
-    "./node_modules/flowbite-react/**/*.js",
-    "./src/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+  content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
+
   darkMode: "class",
-  theme: {
-    extend: {
-      lineHeight: {
-        11: "2.75rem",
-        12: "3rem",
-        13: "3.25rem",
-        14: "3.5rem",
-      },
-      fontFamily: {
-        sans: ["var(--font-space-grotesk)", ...fontFamily.sans],
-      },
-      colors: {
-        primary: colors.blue,
-        gray: colors.gray,
-      },
-      // @ts-expect-error - We know this exists
-      typography: ({ theme }) => ({
-        DEFAULT: {
-          css: {
-            a: {
-              color: theme("colors.primary.500"),
-              "&:hover": {
-                color: `${theme("colors.primary.600")}`,
-              },
-              code: { color: theme("colors.primary.400") },
-            },
-            "h1,h2": {
-              fontWeight: "700",
-              letterSpacing: theme("letterSpacing.tight"),
-            },
-            h3: {
-              fontWeight: "600",
-            },
-            code: {
-              color: theme("colors.indigo.500"),
-            },
-          },
-        },
-        invert: {
-          css: {
-            a: {
-              color: theme("colors.primary.500"),
-              "&:hover": {
-                color: `${theme("colors.primary.400")}`,
-              },
-              code: { color: theme("colors.primary.400") },
-            },
-            "h1,h2,h3,h4,h5,h6": {
-              color: theme("colors.gray.100"),
-            },
-          },
-        },
-      }),
-    },
+
+  theme: {},
+
+  plugins: [require("@tailwindcss/typography"), require("daisyui")],
+
+  // daisyUI config (optional - here are the default values)
+  daisyui: {
+    themes: ["light", "dark"], // false: only light + dark | true: all themes | array: specific themes like this ["light", "dark", "cupcake"]
+    darkTheme: "dark", // name of one of the included themes for dark mode
+    base: true, // applies background color and foreground color for root element by default
+    styled: true, // include daisyUI colors and design decisions for all components
+    utils: true, // adds responsive and modifier utility classes
+    prefix: "", // prefix for daisyUI classnames (components, modifiers and responsive class names. Not colors)
+    logs: true, // Shows info about daisyUI version and used config in the console when building your CSS
+    themeRoot: ":root", // The element that receives theme color CSS variables
   },
-  plugins: [require("flowbite/plugin"), require("@tailwindcss/typography")],
 };
 export default config;

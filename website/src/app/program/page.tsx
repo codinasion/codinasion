@@ -1,13 +1,19 @@
 import { Metadata } from "next";
+import SEO from "@/components/SEO";
 import PageTitle from "@/components/PageTitle";
 import ProgramComponent from "@/components/Program/program-component";
 import { GetProgramList, GetProgramLanguageList } from "@/data";
 import { PROGRAM_LIST_PER_PAGE } from "./default";
 
-export const metadata: Metadata = {
-  title: "Program",
-  description: "An open-source codebase for sharing programming solutions.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const LanguageList = await GetProgramLanguageList();
+
+  return SEO({
+    title: "Program",
+    description: "An open-source codebase for sharing programming solutions.",
+    keywords: ["codinasion", "program", "open source", ...LanguageList],
+  });
+}
 
 export default async function ProgramPage(): Promise<JSX.Element> {
   /////////////////////////////////////////////////////////////////////////////

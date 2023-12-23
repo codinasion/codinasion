@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import SEO from "@/components/SEO";
 import Image from "@/components/Image";
 import Link from "@/components/Link";
 import PageTitle from "@/components/PageTitle";
@@ -6,11 +7,14 @@ import { GetMemeData } from "@/data";
 
 export const revalidate = 0;
 
-export const metadata: Metadata = {
-  title: "Meme",
-  description:
-    "Get a Random Programming Meme. Meme API available at: api/meme ( data ) or, api/meme/image ( image )",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  return SEO({
+    title: "Meme",
+    description:
+      "Get a Random Programming Meme. Meme API available at: api/meme ( data ) or, api/meme/image ( image )",
+    keywords: ["codinasion", "meme", "programming", "random", "api"],
+  });
+}
 
 export default async function Page(): Promise<JSX.Element> {
   const MemeData = await GetMemeData();
@@ -33,11 +37,11 @@ export default async function Page(): Promise<JSX.Element> {
       <div className="mt-24">
         <span>
           Meme API available at:{" "}
-          <Link href="/api/meme" className="underline">
+          <Link href="/api/meme" className="link link-hover">
             api/meme
           </Link>{" "}
           ( data ) or,{" "}
-          <Link href="/api/meme/image" className="underline">
+          <Link href="/api/meme/image" className="link link-hover">
             api/meme/image
           </Link>{" "}
           ( image )

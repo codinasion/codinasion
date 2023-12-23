@@ -5,7 +5,7 @@ import {
   GetProgramList,
   GetProgramLanguageList,
 } from "@/data";
-import { EncodeURL as EncodeLanguage } from "@/utils";
+import { EncodeProgramURL as EncodeLanguage } from "@/utils";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Add default pages

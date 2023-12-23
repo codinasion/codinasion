@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
+import SEO from "@/components/SEO";
 import ProgramDetailComponent from "@/components/Program/program-detail-component";
-import { SiteMetadata, GetProgramList, GetProgramData } from "@/data";
+import { GetProgramList, GetProgramData } from "@/data";
 import type { ProgramDataType, ProgramListType } from "@/types";
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -18,37 +19,14 @@ export async function generateMetadata({
   const title = programData.title;
   const description = programData.description;
 
-  return {
+  return SEO({
     title,
     description,
 
     keywords: ["codinasion", "program", "open source"].concat(
       programData.languages.map((language) => language),
     ),
-
-    openGraph: {
-      title,
-      description,
-      url: `${SiteMetadata.site_url}/program/${slug}`,
-      siteName: SiteMetadata.title,
-      images: [
-        // TODO: Add og:image for program language page
-      ],
-      locale: "en_US",
-      type: "website",
-    },
-    twitter: {
-      card: "summary_large_image",
-      title,
-      description,
-      siteId: SiteMetadata.twitter_userid,
-      creator: `@${SiteMetadata.twitter_username}`,
-      creatorId: SiteMetadata.twitter_userid,
-      images: [
-        // TODO: Add twitter:image for program language page
-      ],
-    },
-  };
+  });
 }
 // End of metadata generation
 //////////////////////////////////////////////////////////////////////////////

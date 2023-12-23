@@ -20,6 +20,13 @@ export function ConvertToTitleCase(str: string): string {
     .join(" ");
 }
 
+export function ConvertToKebabCase(str: string): string {
+  return str
+    .toLowerCase()
+    .replace(/[^a-zA-Z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
 export function ConvertKebabCaseToTitleCase(str: string): string {
   return ConvertToTitleCase(str.replace(/-/g, " "));
 }

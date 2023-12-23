@@ -1,50 +1,50 @@
-import { SiteMetadata } from "@/data";
-import { NavbarLinksData } from "@/data";
-import Logo from "@/public/codinasion.png";
 import Link from "@/components/Link";
-import Image from "@/components/Image";
-import MobileNav from "./MobileNav";
-import ThemeSwitch from "./ThemeSwitch";
+import ThemeSwitch from "./theme-switch";
+import { NavbarLinksData } from "@/data";
 
-export default function Navbar() {
+export default function NavbarComponent() {
   return (
-    <header className="flex items-center justify-between py-10">
-      <div>
-        <Link href="/" aria-label={SiteMetadata.title}>
-          <div className="flex items-center justify-between">
-            <div className="mr-3">
-              <Image
-                src={Logo}
-                alt="Logo"
-                width={48}
-                height={48}
-                className="rounded"
-                priority
+    <div className="navbar bg-base-100">
+      <div className="navbar-start">
+        <div className="dropdown">
+          <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h16M4 18h7"
               />
-            </div>
-            {typeof SiteMetadata.title === "string" ? (
-              <div className="hidden h-6 text-2xl font-semibold sm:block">
-                {SiteMetadata.title}
-              </div>
-            ) : (
-              SiteMetadata.title
-            )}
+            </svg>
           </div>
+          <ul
+            tabIndex={0}
+            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-200 rounded-box w-52"
+          >
+            {NavbarLinksData.map((link, index) => (
+              <li key={index}>
+                <Link href={link.href}>{link.title}</Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+      <div className="navbar-center">
+        <Link href="/">
+          <span className="font-extrabold text-2xl text-primary-500">
+            CODINASION
+          </span>
         </Link>
       </div>
-      <div className="flex items-center space-x-4 leading-5 sm:space-x-6">
-        {NavbarLinksData.filter((link) => link.href !== "/").map((link) => (
-          <Link
-            key={link.title}
-            href={link.href}
-            className="hidden font-medium text-gray-900 dark:text-gray-100 sm:block"
-          >
-            {link.title}
-          </Link>
-        ))}
+      <div className="navbar-end">
         <ThemeSwitch />
-        <MobileNav />
       </div>
-    </header>
+    </div>
   );
 }

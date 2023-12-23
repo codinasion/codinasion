@@ -49,12 +49,10 @@ export default function CodeBlock({ children }: Props) {
             <button
               key={index}
               onClick={(e) => handleChange(e, index)}
-              className={`btn text-sm font-bold mx-1 mb-1 py-1 px-2 rounded-md ${
-                value === index
-                  ? "bg-[#10b981] dark:bg-[#10b981] cursor-default"
-                  : "bg-[#6ee7b7] dark:bg-[#047857] cursor-pointer"
+              className={`btn btn-sm text-sm font-bold mx-1 mb-1 px-2 rounded-md ${
+                value === index ? "bg-base-300" : "btn-success"
               }`}
-              disabled={value === index}
+              // disabled={value === index}
             >
               {
                 // @ts-expect-error - object is possibly undefined

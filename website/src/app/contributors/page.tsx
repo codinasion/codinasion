@@ -1,11 +1,16 @@
 import type { Metadata } from "next";
+import SEO from "@/components/SEO";
 import ContributorsSection from "@/components/Contributors/contributors-section";
 import { GetContributorsList } from "@/data";
 
-export const metadata: Metadata = {
-  title: "Contributors",
-  description: "A list of all the contributors to the website and the project.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  return SEO({
+    title: "Contributors",
+    description:
+      "A list of all the contributors to the website and the project.",
+    keywords: ["codinasion", "contributors", "open source", "community"],
+  });
+}
 
 export default async function Page(): Promise<JSX.Element> {
   const contributors = await GetContributorsList();

@@ -35,7 +35,7 @@ export default function TrendingReposComponent({
 
   return (
     <div className="flex flex-col md:flex-row sm:space-x-10">
-      <div>
+      <div className="w-full">
         <ul>
           {displayTrendingRepos.map((repo) => (
             <li key={repo.author + repo.name} className="pb-5">
@@ -45,7 +45,7 @@ export default function TrendingReposComponent({
         </ul>
       </div>
 
-      <div className="space-y-5">
+      <div className="space-y-5 min-w-[320px]">
         <TrendingReposFilterByLanguageComponent
           trendingReposLanguagesData={trendingReposLanguagesData}
           selectedLanguage={selectedLanguage}

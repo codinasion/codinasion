@@ -1,8 +1,8 @@
-export function EncodeURL(language: string): string {
+export function EncodeProgramURL(language: string): string {
   return language.replace(/\+/g, "-plus").replace(/#/g, "-sharp").toLowerCase();
 }
 
-export function DecodeURL(language: string): string {
+export function DecodeProgramURL(language: string): string {
   return language
     .replace(/-plus/g, "+")
     .replace(/-sharp/g, "#")

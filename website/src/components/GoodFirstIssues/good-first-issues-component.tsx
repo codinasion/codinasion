@@ -60,7 +60,7 @@ export default function GoodFirstIssuesComponent({
 
   return (
     <div className="flex flex-col md:flex-row sm:space-x-10">
-      <div>
+      <div className="w-full">
         <ul>
           {displayGoodFirstIssues.map((goodFirstIssue) => (
             <li key={goodFirstIssue.id} className="pb-5">
@@ -77,7 +77,7 @@ export default function GoodFirstIssuesComponent({
         ) : null}
       </div>
 
-      <div className="space-y-5">
+      <div className="space-y-5 min-w-[320px]">
         <GoodFirstIssueBrowseByLanguageComponent language={language} />
 
         <GoodFirstIssueFilterByLabelComponent

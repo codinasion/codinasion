@@ -21,7 +21,7 @@ export default function ProgramComponent({
 }: Props): JSX.Element {
   return (
     <div className="flex flex-col md:flex-row sm:space-x-10">
-      <div>
+      <div className="w-full">
         <ul>
           {displayProgramList.map((program) => (
             <li key={program.slug} className="pb-5">
@@ -39,7 +39,7 @@ export default function ProgramComponent({
         )}
       </div>
 
-      <div className="space-y-5">
+      <div className="space-y-5 min-w-[320px]">
         <ProgramLanguageComponent
           programLanguageListData={programLanguageListData}
         />

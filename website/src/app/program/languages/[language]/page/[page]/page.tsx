@@ -1,7 +1,38 @@
+import { Metadata } from "next";
+import SEO from "@/components/SEO";
 import PageTitle from "@/components/PageTitle";
 import ProgramComponent from "@/components/Program/program-component";
 import { GetProgramLanguageProgramList, GetProgramLanguageList } from "@/data";
 import { PROGRAM_LIST_PER_PAGE } from "../../../../default";
+
+////////////////////////////////////////////////////////////////////////////////
+// https://beta.nextjs.org/docs/api-reference/metadata#generatemetadata-function
+// Generate metadata for this page
+export async function generateMetadata({
+  params,
+}: {
+  params: { language: string };
+}): Promise<Metadata> {
+  const language = params.language;
+
+  const title = `${language
+    .replace(/-sharp/g, "#")
+    .replace(/-plus/g, "+")
+    .replace(/\w\S*/g, (w) =>
+      w.replace(/^\w/, (c) => c.toUpperCase()),
+    )} | Program`;
+  const description =
+    "An open-source codebase for sharing programming solutions.";
+
+  return SEO({
+    title,
+    description,
+
+    keywords: ["codinasion", "program", "open source", language],
+  });
+}
+// End of metadata generation
+////////////////////////////////////////////////////////////////////////////////
 
 // https://beta.nextjs.org/docs/data-fetching/generating-static-params
 // Make this page statically generated, with dynamic params

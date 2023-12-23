@@ -1,62 +1,39 @@
-// Code Highlight Component
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-
-// Theme
 import { dracula } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
-type Props = {
-  inline: boolean;
+export interface CodeProps {
   className: string;
-  children: any;
-  [key: string]: any;
-};
+  children: string;
+  [key: string]: unknown;
+}
 
-function Code({ inline, className, children, ...props }: Props) {
-  const match = /language-(\w+)/.exec(className || "");
+function Code({ className, children, ...props }: CodeProps): JSX.Element {
+  const match = /language-(?<temp1>\w+)/.exec(className || "");
+  const language = match ? match[1] : "text";
+  const inline = !className.startsWith("language-");
 
-  // If code has proper language tag
-  return !inline && match ? (
-    <>
-      <SyntaxHighlighter
-        language={match[1]}
-        style={dracula}
-        lineProps={{ style: { whiteSpace: "pre-wrap", flexWrap: "wrap" } }}
-        wrapLines={false}
-        PreTag="div"
-        // showLineNumbers={true}
-        customStyle={{
-          margin: "0rem",
-        }}
-        {...props}
-      >
-        {String(children).replace(/\n$/, "")}
-      </SyntaxHighlighter>
-    </>
-  ) : !inline && !match ? (
-    // If code doesn't have any language tag
-    <>
-      <SyntaxHighlighter
-        language={"text"}
-        style={dracula}
-        lineProps={{ style: { whiteSpace: "pre-wrap", flexWrap: "wrap" } }}
-        wrapLines={false}
-        PreTag="div"
-        // showLineNumbers={true}
-        customStyle={{
-          margin: "0rem",
-        }}
-        {...props}
-      >
-        {String(children).replace(/\n$/, "")}
-      </SyntaxHighlighter>
-    </>
+  return !inline ? (
+    <SyntaxHighlighter
+      customStyle={{
+        margin: "0rem",
+        paddingTop: "1rem",
+        borderTopLeftRadius: "0px",
+        borderTopRightRadius: "0px",
+      }}
+      language={language}
+      lineProps={{ style: { whiteSpace: "pre-wrap", flexWrap: "wrap" } }}
+      style={dracula}
+      wrapLines={false}
+      {...props}
+      PreTag="div"
+    >
+      {String(children.trim()).replace(/\n$/, "")}
+    </SyntaxHighlighter>
   ) : (
     // Inline code
-    <>
-      <kbd className="bg-gray-300 dark:bg-gray-800 rounded-md px-2 pt-1 font-mono break-words">
-        {String(children).replace(/\n$/, "")}
-      </kbd>
-    </>
+    <kbd className="bg-base-300 rounded-md px-2 pt-1 font-mono break-words">
+      {String(children.trim()).replace(/\n$/, "")}
+    </kbd>
   );
 }
 

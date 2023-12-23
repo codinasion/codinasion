@@ -1,13 +1,17 @@
 import { Metadata } from "next";
+import SEO from "@/components/SEO";
 import QuoteComponent from "@/components/Quote/quote-component";
 import { GetQuoteData } from "@/data";
 
 export const revalidate = 0;
 
-export const metadata: Metadata = {
-  title: "Quote",
-  description: "Get a Random Quote. Quote API available at: api/quote",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  return SEO({
+    title: "Quote",
+    description: "Get a Random Quote. Quote API available at: api/quote",
+    keywords: ["codinasion", "quote", "random", "api"],
+  });
+}
 
 export default async function Page(): Promise<JSX.Element> {
   const QuoteData = await GetQuoteData();

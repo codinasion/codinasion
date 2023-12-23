@@ -1,10 +1,10 @@
 import "@/styles/globals.css";
-import type { Metadata } from "next";
+
+import Script from "next/script";
+import type { Metadata, Viewport } from "next";
 import { Space_Grotesk } from "next/font/google";
-import Favicon from "@/public/favicon.ico";
-import AppleTouchIcon from "@/public/apple-touch-icon.png";
-import ShortcutIcon from "@/public/favicon-16x16.png";
-import { ThemeProviders } from "./theme-providers";
+import SEO from "@/components/SEO";
+import ThemeProviders from "./theme-providers";
 import Layout from "@/layouts";
 import { SiteMetadata } from "@/data";
 
@@ -17,8 +17,9 @@ const space_grotesk = Space_Grotesk({
 export const metadata: Metadata = {
   metadataBase: new URL(SiteMetadata.site_url),
 
-  title: SiteMetadata.title,
-  description: SiteMetadata.description,
+  ...SEO({
+    title: SiteMetadata.title,
+  }),
 
   manifest: "/manifest.json",
 
@@ -27,44 +28,23 @@ export const metadata: Metadata = {
     statusBarStyle: "default",
     title: SiteMetadata.title,
   },
+
   formatDetection: {
     telephone: false,
   },
+
   icons: {
-    icon: Favicon.src,
-    shortcut: ShortcutIcon.src,
-    apple: AppleTouchIcon.src,
+    icon: [
+      { url: "/favicon-32x32.png", type: "image/png", sizes: "32x32" },
+      { url: "/favicon-16x16.png", type: "image/png", sizes: "16x16" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
   },
 
-  keywords: [
-    "codinasion",
-    "code",
-    "program",
-    "open source",
-    "good fisrt issue",
-  ],
-
-  openGraph: {
-    title: SiteMetadata.title,
-    description: SiteMetadata.description,
-    url: SiteMetadata.site_url,
-    siteName: SiteMetadata.title,
-    images: [
-      // TODO: add og image
-    ],
-    locale: "en_US",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: SiteMetadata.title,
-    description: SiteMetadata.description,
-    siteId: SiteMetadata.twitter_userid,
-    creator: `@${SiteMetadata.twitter_username}`,
-    creatorId: SiteMetadata.twitter_userid,
-    images: [
-      // TODO: add twitter image
-    ],
+  other: {
+    charSet: "utf-8",
+    lang: "en",
   },
 
   archives: [SiteMetadata.github_url],
@@ -74,6 +54,15 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+};
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#1f2937" },
+  ],
 };
 
 export default function RootLayout({
@@ -87,18 +76,14 @@ export default function RootLayout({
       className={`${space_grotesk.variable} scroll-smooth`}
       suppressHydrationWarning
     >
-      <meta
-        name="theme-color"
-        media="(prefers-color-scheme: light)"
-        content="#fff"
-      />
-      <meta
-        name="theme-color"
-        media="(prefers-color-scheme: dark)"
-        content="#000"
-      />
+      <head>{/* head tags hre... */}</head>
 
-      <body className="bg-white text-black antialiased dark:bg-gray-950 dark:text-white">
+      <body>
+        <Script id="theme-detector">{`
+const theme = document.documentElement.style.colorScheme
+document.documentElement.classList.add(theme)
+`}</Script>
+
         <ThemeProviders>
           <Layout>{children}</Layout>
         </ThemeProviders>

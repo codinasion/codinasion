@@ -11,14 +11,14 @@ export default function ProgramLanguageComponent({
   programLanguageListData,
 }: Props): JSX.Element {
   return (
-    <div className="h-auto min-w-[280px] max-w-[280px] flex-wrap overflow-auto rounded bg-gray-50 pt-5 shadow-md dark:bg-gray-900/70 dark:shadow-gray-800/40 sm:flex">
-      <div className="px-6 pb-3">
-        <h3 className="pb-3 text-center font-bold uppercase text-gray-700 dark:text-gray-300">
+    <div className="card bg-base-200 h-auto md:max-w-[300px] shadow-md">
+      <div className="card-body">
+        <h2 className="card-title pb-3">
           <FaCode className="inline h-5 w-5 pb-1 mr-2" />
           Browse by Language
-        </h3>
-
-        <div className="py-2 flex flex-wrap">
+        </h2>
+        <p className="pb-3">Browse all programs by programming language.</p>
+        <div className="card-actions flex flex-wrap">
           {programLanguageListData.map((language: string) => (
             <div key={language} className="m-1">
               <Link href={`/program/languages/${language}`}>
@@ -28,7 +28,7 @@ export default function ProgramLanguageComponent({
                       name: language
                         .replace(/-sharp/g, "#")
                         .replace(/-plus/g, "+"),
-                    })[0]?.logo || "/codinasion.png"
+                    })[0]?.logo || "/logo.png"
                   }
                   alt={language}
                   className="w-16 rounded shadow-lg"

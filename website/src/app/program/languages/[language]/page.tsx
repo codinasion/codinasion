@@ -1,11 +1,8 @@
 import type { Metadata } from "next";
+import SEO from "@/components/SEO";
 import PageTitle from "@/components/PageTitle";
 import ProgramComponent from "@/components/Program/program-component";
-import {
-  SiteMetadata,
-  GetProgramLanguageProgramList,
-  GetProgramLanguageList,
-} from "@/data";
+import { GetProgramLanguageProgramList, GetProgramLanguageList } from "@/data";
 import { PROGRAM_LIST_PER_PAGE } from "../../default";
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -27,35 +24,12 @@ export async function generateMetadata({
   const description =
     "An open-source codebase for sharing programming solutions.";
 
-  return {
+  return SEO({
     title,
     description,
 
     keywords: ["codinasion", "program", "open source", language],
-
-    openGraph: {
-      title,
-      description,
-      url: `${SiteMetadata.site_url}/program/languages/${language}`,
-      siteName: SiteMetadata.title,
-      images: [
-        // TODO: Add og:image for program language page
-      ],
-      locale: "en_US",
-      type: "website",
-    },
-    twitter: {
-      card: "summary_large_image",
-      title,
-      description,
-      siteId: SiteMetadata.twitter_userid,
-      creator: `@${SiteMetadata.twitter_username}`,
-      creatorId: SiteMetadata.twitter_userid,
-      images: [
-        // TODO: Add twitter:image for program language page
-      ],
-    },
-  };
+  });
 }
 // End of metadata generation
 ////////////////////////////////////////////////////////////////////////////////

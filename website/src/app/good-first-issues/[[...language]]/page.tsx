@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import SEO from "@/components/SEO";
 import PageTitle from "@/components/PageTitle";
 import GoodFirstIssuesComponent from "@/components/GoodFirstIssues/good-first-issues-component";
 import {
-  SiteMetadata,
   GetGoodFirstIssue,
   GetGoodFirstIssueLabelsData,
   LanguageList,
 } from "@/data";
 import {
-  EncodeURL as EncodeLanguage,
-  DecodeURL as DecodeLanguage,
+  EncodeProgramURL as EncodeLanguage,
+  DecodeProgramURL as DecodeLanguage,
   ConvertToTitleCase,
   ConvertKebabCaseToTitleCase,
 } from "@/utils";
@@ -28,7 +28,9 @@ export function generateMetadata({
   const language = params.language?.[0] ?? null;
 
   const title = language
-    ? `${ConvertKebabCaseToTitleCase(language)} | Good First Issues`
+    ? `${ConvertKebabCaseToTitleCase(
+        DecodeLanguage(language),
+      )} | Good First Issues`
     : "Good First Issues";
   const description = language
     ? `Good First Issues for ${DecodeLanguage(
@@ -36,35 +38,16 @@ export function generateMetadata({
       )}. A 'good first issue' in open source refers to a task or problem that is suitable for someone who is new to the project or open source development in general. These issues are usually relatively simple and well-defined, making them a great starting point for newcomers to get involved in open source projects. They are designed to provide a low barrier to entry, allowing beginners to learn about the project's codebase, development processes, and tools while making a meaningful contribution. Good first issues often come with clear instructions, documentation, and support from the project's community, making it easier for newcomers to get started and gain confidence in contributing to open source.`
     : "A 'good first issue' in open source refers to a task or problem that is suitable for someone who is new to the project or open source development in general. These issues are usually relatively simple and well-defined, making them a great starting point for newcomers to get involved in open source projects. They are designed to provide a low barrier to entry, allowing beginners to learn about the project's codebase, development processes, and tools while making a meaningful contribution. Good first issues often come with clear instructions, documentation, and support from the project's community, making it easier for newcomers to get started and gain confidence in contributing to open source.";
 
-  return {
+  return SEO({
     title,
     description,
-
-    keywords: ["codinasion", "good first issues", "open source"],
-
-    openGraph: {
-      title,
-      description,
-      url: `${SiteMetadata.site_url}/good-first-issues/${language ?? ""}`,
-      siteName: SiteMetadata.title,
-      images: [
-        // TODO: Add og:image for good first issues page
-      ],
-      locale: "en_US",
-      type: "website",
-    },
-    twitter: {
-      card: "summary_large_image",
-      title,
-      description,
-      siteId: SiteMetadata.twitter_userid,
-      creator: `@${SiteMetadata.twitter_username}`,
-      creatorId: SiteMetadata.twitter_userid,
-      images: [
-        // TODO: Add twitter:image for good first issues page
-      ],
-    },
-  };
+    keywords: [
+      "codinasion",
+      "good first issues",
+      "open source",
+      ...LanguageList,
+    ],
+  });
 }
 // End of metadata generation
 //////////////////////////////////////////////////////////////////////////////

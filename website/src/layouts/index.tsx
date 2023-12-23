@@ -9,14 +9,18 @@ interface LayoutProps {
 export default function Layout({ children }: LayoutProps): JSX.Element {
   return (
     <>
-      <section className="mx-auto max-w-4xl px-4 sm:px-6 xl:max-w-6xl xl:px-0">
-        <div className="flex h-screen flex-col justify-between font-sans">
-          <Navbar />
-          <main className="mb-auto">{children}</main>
-          <Footer />
-          <ScrollNavigartion />
-        </div>
-      </section>
+      <div className="relative">
+        <Navbar />
+
+        <section className="mx-auto max-w-8xl px-4 sm:px-6 xl:max-w-6xl xl:px-0">
+          <div className="flex min-h-screen flex-col justify-between font-sans">
+            <main className="my-5">{children}</main>
+          </div>
+        </section>
+
+        <Footer />
+        <ScrollNavigartion />
+      </div>
     </>
   );
 }

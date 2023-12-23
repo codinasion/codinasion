@@ -14,3 +14,10 @@ export function isValidUrl(url: string): boolean {
     return false;
   }
 }
+
+export function isValidImageUrl(url: string): boolean {
+  const imageFormats = [".jpg", ".jpeg", ".png", ".gif"];
+
+  const lowerCaseUrl = url.toLowerCase();
+  return imageFormats.some((format) => lowerCaseUrl.endsWith(format));
+}

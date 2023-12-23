@@ -1,7 +1,6 @@
 import Link from "next/link";
 import type { LinkProps } from "next/link";
 import type { AnchorHTMLAttributes } from "react";
-import { SiteMetadata } from "@/data";
 
 export default function LinkComponent({
   href,
@@ -42,11 +41,7 @@ export default function LinkComponent({
   return (
     <a
       className={className}
-      href={
-        href.includes("utm_source=") || href.startsWith("mailto:")
-          ? href
-          : `${href}?utm_source=${SiteMetadata.title}`
-      }
+      href={href}
       rel="noopener noreferrer"
       target="_blank"
       {...rest}

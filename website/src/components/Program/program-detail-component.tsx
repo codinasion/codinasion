@@ -37,10 +37,12 @@ ${codeblock}
         </MarkdownPreview>
       </div>
 
-      <div className="space-y-5">
-        <ProgramContributorsComponent
-          programContributors={programData.contributors}
-        />
+      <div className="space-y-5 min-w-[320px]">
+        <div className="md:mt-20">
+          <ProgramContributorsComponent
+            programContributors={programData.contributors}
+          />
+        </div>
       </div>
     </div>
   );
