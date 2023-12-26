@@ -79,8 +79,8 @@ importers:
         specifier: ^4.10.1
         version: 4.10.1(eslint@8.54.0)(typescript@5.3.3)
       eslint-plugin-jsonc:
-        specifier: ^2.10.0
-        version: 2.10.0(eslint@8.54.0)
+        specifier: ^2.11.2
+        version: 2.11.2(eslint@8.54.0)
       eslint-plugin-prettier:
         specifier: ^5.0.1
         version: 5.0.1(eslint-config-prettier@9.0.0)(eslint@8.54.0)(prettier@3.1.1)
@@ -6452,8 +6452,8 @@ packages:
       - typescript
     dev: true
 
-  /eslint-plugin-jsonc@2.10.0(eslint@8.54.0):
-    resolution: {integrity: sha512-9d//o6Jyh4s1RxC9fNSt1+MMaFN2ruFdXPG9XZcb/mR2KkfjADYiNL/hbU6W0Cyxfg3tS/XSFuhl5LgtMD8hmw==}
+  /eslint-plugin-jsonc@2.11.2(eslint@8.54.0):
+    resolution: {integrity: sha512-F6A0MZhIGRBPOswzzn4tJFXXkPLiLwJaMlQwz/Qj1qx+bV5MCn79vBeJh2ynMmtqqHloi54KDCnsT/KWrcCcnQ==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     peerDependencies:
       eslint: '>=6.0.0'
@@ -6461,6 +6461,8 @@ packages:
       '@eslint-community/eslint-utils': 4.4.0(eslint@8.54.0)
       eslint: 8.54.0
       eslint-compat-utils: 0.1.2(eslint@8.54.0)
+      espree: 9.6.1
+      graphemer: 1.4.0
       jsonc-eslint-parser: 2.4.0
       natural-compare: 1.4.0
     dev: true
