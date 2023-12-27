@@ -1,5 +1,11 @@
 # @codinasion/eslint-config
 
+## 1.0.4
+
+### Patch Changes
+
+- eadd657: Add string manipulation
+
 ## 1.0.3
 
 ### Patch Changes
