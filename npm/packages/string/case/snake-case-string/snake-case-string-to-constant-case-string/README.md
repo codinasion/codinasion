@@ -28,7 +28,13 @@ yarn add @codinasion/snake-case-string-to-constant-case-string
 ## Usage
 
 ```javascript
-// TODO: add usage examples
+import { SnakeCaseStringToConstantCaseString } from "@codinasion/snake-case-string-to-constant-case-string";
+
+const string = "hello_world";
+console.log(SnakeCaseStringToConstantCaseString(string));
+
+// Output
+// HELLO_WORLD
 ```
 
 <div align="center">

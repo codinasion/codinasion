@@ -28,7 +28,13 @@ yarn add @codinasion/header-case-string-to-lower-case-string
 ## Usage
 
 ```javascript
-// TODO: add usage examples
+import { HeaderCaseStringToLowerCaseString } from "@codinasion/header-case-string-to-lower-case-string";
+
+const string = "Hello-World";
+console.log(HeaderCaseStringToLowerCaseString(string));
+
+// Output
+// hello world
 ```
 
 <div align="center">

@@ -28,7 +28,13 @@ yarn add @codinasion/upper-case-string-to-path-case-string
 ## Usage
 
 ```javascript
-// TODO: add usage examples
+import { UpperCaseStringToPathCaseString } from "@codinasion/upper-case-string-to-path-case-string";
+
+const string = "HELLO WORLD";
+console.log(UpperCaseStringToPathCaseString(string));
+
+// Output
+// hello/world
 ```
 
 <div align="center">

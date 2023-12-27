@@ -28,7 +28,13 @@ yarn add @codinasion/header-case-string
 ## Usage
 
 ```javascript
-// TODO: add usage examples
+import { HeaderCaseStringToCamelCaseString } from "@codinasion/header-case-string";
+
+const string = "Hello-World";
+console.log(HeaderCaseStringToCamelCaseString(string));
+
+// Output
+// helloWorld
 ```
 
 <div align="center">

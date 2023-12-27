@@ -28,7 +28,13 @@ yarn add @codinasion/string-to-path-case
 ## Usage
 
 ```javascript
-// TODO: add usage examples
+import { StringToPathCase } from "@codinasion/string-to-path-case";
+
+const string = "hello world";
+console.log(StringToPathCase(string));
+
+// Output
+// hello/world
 ```
 
 <div align="center">

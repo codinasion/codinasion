@@ -28,7 +28,13 @@ yarn add @codinasion/sentence-case-string-to-kebab-case-string
 ## Usage
 
 ```javascript
-// TODO: add usage examples
+import { SentenceCaseStringToKebabCaseString } from "@codinasion/sentence-case-string-to-kebab-case-string";
+
+const string = "Hello world";
+console.log(SentenceCaseStringToKebabCaseString(string));
+
+// Output
+// hello-world
 ```
 
 <div align="center">

@@ -28,7 +28,13 @@ yarn add @codinasion/camel-case-string-to-dot-case-string
 ## Usage
 
 ```javascript
-// TODO: add usage examples
+import { CamelCaseStringToDotCaseString } from "@codinasion/camel-case-string-to-dot-case-string";
+
+const string = "helloWorld";
+console.log(CamelCaseStringToDotCaseString(string));
+
+// Output
+// hello.world
 ```
 
 <div align="center">

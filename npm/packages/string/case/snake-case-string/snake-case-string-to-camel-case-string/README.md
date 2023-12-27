@@ -28,7 +28,13 @@ yarn add @codinasion/snake-case-string-to-camel-case-string
 ## Usage
 
 ```javascript
-// TODO: add usage examples
+import { SnakeCaseStringToCamelCaseString } from "@codinasion/snake-case-string-to-camel-case-string";
+
+const string = "hello_world";
+console.log(SnakeCaseStringToCamelCaseString(string));
+
+// Output
+// helloWorld
 ```
 
 <div align="center">

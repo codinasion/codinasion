@@ -28,7 +28,13 @@ yarn add @codinasion/kebab-case-string-to-lower-case-string
 ## Usage
 
 ```javascript
-// TODO: add usage examples
+import { KebabCaseStringToLowerCaseString } from "@codinasion/kebab-case-string-to-lower-case-string";
+
+const string = "hello-world";
+console.log(KebabCaseStringToLowerCaseString(string));
+
+// Output
+// hello world
 ```
 
 <div align="center">

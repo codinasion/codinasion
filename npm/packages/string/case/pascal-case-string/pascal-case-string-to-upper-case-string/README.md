@@ -28,7 +28,13 @@ yarn add @codinasion/pascal-case-string-to-upper-case-string
 ## Usage
 
 ```javascript
-// TODO: add usage examples
+import { PascalCaseStringToUpperCaseString } from "@codinasion/pascal-case-string-to-upper-case-string";
+
+const string = "HelloWorld";
+console.log(PascalCaseStringToUpperCaseString(string));
+
+// Output
+// HELLO WORLD
 ```
 
 <div align="center">

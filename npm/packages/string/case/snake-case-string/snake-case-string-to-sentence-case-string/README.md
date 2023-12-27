@@ -28,7 +28,13 @@ yarn add @codinasion/snake-case-string-to-sentence-case-string
 ## Usage
 
 ```javascript
-// TODO: add usage examples
+import { SnakeCaseStringToSentenceCaseString } from "@codinasion/snake-case-string-to-sentence-case-string";
+
+const string = "hello_world";
+console.log(SnakeCaseStringToSentenceCaseString(string));
+
+// Output
+// Hello world
 ```
 
 <div align="center">

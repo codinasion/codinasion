@@ -28,7 +28,13 @@ yarn add @codinasion/title-case-string-to-lower-case-string
 ## Usage
 
 ```javascript
-// TODO: add usage examples
+import { TitleCaseStringToLowerCaseString } from "@codinasion/title-case-string-to-lower-case-string";
+
+const string = "Hello World";
+console.log(TitleCaseStringToLowerCaseString(string));
+
+// Output
+// hello world
 ```
 
 <div align="center">

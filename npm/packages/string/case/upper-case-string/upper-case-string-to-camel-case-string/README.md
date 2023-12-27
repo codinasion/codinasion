@@ -28,7 +28,13 @@ yarn add @codinasion/upper-case-string-to-camel-case-string
 ## Usage
 
 ```javascript
-// TODO: add usage examples
+import { UpperCaseStringToCamelCaseString } from "@codinasion/upper-case-string-to-camel-case-string";
+
+const string = "HELLO WORLD";
+console.log(UpperCaseStringToCamelCaseString(string));
+
+// Output
+// helloWorld
 ```
 
 <div align="center">

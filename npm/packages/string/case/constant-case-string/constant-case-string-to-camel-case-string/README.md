@@ -28,7 +28,13 @@ yarn add @codinasion/constant-case-string-to-camel-case-string
 ## Usage
 
 ```javascript
-// TODO: add usage examples
+import { ConstantCaseStringToCamelCaseString } from "@codinasion/constant-case-string-to-camel-case-string";
+
+const string = "HELLO_WORLD";
+console.log(ConstantCaseStringToCamelCaseString(string));
+
+// Output
+// helloWorld
 ```
 
 <div align="center">

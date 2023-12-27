@@ -28,7 +28,13 @@ yarn add @codinasion/title-case-string-to-constant-case-string
 ## Usage
 
 ```javascript
-// TODO: add usage examples
+import { TitleCaseStringToConstantCaseString } from "@codinasion/title-case-string-to-constant-case-string";
+
+const string = "Hello World";
+console.log(TitleCaseStringToConstantCaseString(string));
+
+// Output
+// HELLO_WORLD
 ```
 
 <div align="center">

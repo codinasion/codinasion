@@ -28,7 +28,13 @@ yarn add @codinasion/sentence-case-string-to-pascal-case-string
 ## Usage
 
 ```javascript
-// TODO: add usage examples
+import { SentenceCaseStringToPascalCaseString } from "@codinasion/sentence-case-string-to-pascal-case-string";
+
+const string = "Hello world";
+console.log(SentenceCaseStringToPascalCaseString(string));
+
+// Output
+// HelloWorld
 ```
 
 <div align="center">

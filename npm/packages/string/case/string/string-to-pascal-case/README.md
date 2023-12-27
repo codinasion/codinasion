@@ -28,7 +28,13 @@ yarn add @codinasion/string-to-pascal-case
 ## Usage
 
 ```javascript
-// TODO: add usage examples
+import { StringToPascalCase } from "@codinasion/string-to-pascal-case";
+
+const string = "hello world";
+console.log(StringToPascalCase(string));
+
+// Output
+// HelloWorld
 ```
 
 <div align="center">

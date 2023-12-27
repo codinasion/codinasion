@@ -28,7 +28,13 @@ yarn add @codinasion/lower-case-string-to-upper-case-string
 ## Usage
 
 ```javascript
-// TODO: add usage examples
+import { LowerCaseStringToUpperCaseString } from "@codinasion/lower-case-string-to-upper-case-string";
+
+const string = "hello world";
+console.log(LowerCaseStringToUpperCaseString(string));
+
+// Output
+// HELLO WORLD
 ```
 
 <div align="center">

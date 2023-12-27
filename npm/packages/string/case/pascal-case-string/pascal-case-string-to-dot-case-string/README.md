@@ -28,7 +28,13 @@ yarn add @codinasion/pascal-case-string-to-dot-case-string
 ## Usage
 
 ```javascript
-// TODO: add usage examples
+import { PascalCaseStringToDotCaseString } from "@codinasion/pascal-case-string-to-dot-case-string";
+
+const string = "HelloWorld";
+console.log(PascalCaseStringToDotCaseString(string));
+
+// Output
+// hello.world
 ```
 
 <div align="center">

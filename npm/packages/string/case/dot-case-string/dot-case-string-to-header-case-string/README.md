@@ -28,7 +28,13 @@ yarn add @codinasion/dot-case-string-to-header-case-string
 ## Usage
 
 ```javascript
-// TODO: add usage examples
+import { DotCaseStringToHeaderCaseString } from "@codinasion/dot-case-string-to-header-case-string";
+
+const string = "hello.world";
+console.log(DotCaseStringToHeaderCaseString(string));
+
+// Output
+// Hello-World
 ```
 
 <div align="center">

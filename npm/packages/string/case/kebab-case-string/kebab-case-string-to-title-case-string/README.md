@@ -28,7 +28,13 @@ yarn add @codinasion/kebab-case-string-to-title-case-string
 ## Usage
 
 ```javascript
-// TODO: add usage examples
+import { KebabCaseStringToTitleCaseString } from "@codinasion/kebab-case-string-to-title-case-string";
+
+const string = "hello-world";
+console.log(KebabCaseStringToTitleCaseString(string));
+
+// Output
+// Hello World
 ```
 
 <div align="center">

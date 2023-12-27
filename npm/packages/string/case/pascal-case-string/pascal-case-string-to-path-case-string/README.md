@@ -28,7 +28,13 @@ yarn add @codinasion/pascal-case-string-to-path-case-string
 ## Usage
 
 ```javascript
-// TODO: add usage examples
+import { PascalCaseStringToPathCaseString } from "@codinasion/pascal-case-string-to-path-case-string";
+
+const string = "HelloWorld";
+console.log(PascalCaseStringToPathCaseString(string));
+
+// Output
+// hello/world
 ```
 
 <div align="center">

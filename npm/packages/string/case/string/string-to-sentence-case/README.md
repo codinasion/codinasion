@@ -28,7 +28,13 @@ yarn add @codinasion/string-to-sentence-case
 ## Usage
 
 ```javascript
-// TODO: add usage examples
+import { StringToSentenceCase } from "@codinasion/string-to-sentence-case";
+
+const string = "hello world";
+console.log(StringToSentenceCase(string));
+
+// Output
+// Hello world
 ```
 
 <div align="center">

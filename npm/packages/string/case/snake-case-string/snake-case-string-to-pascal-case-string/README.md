@@ -28,7 +28,13 @@ yarn add @codinasion/snake-case-string-to-pascal-case-string
 ## Usage
 
 ```javascript
-// TODO: add usage examples
+import { SnakeCaseStringToPascalCaseString } from "@codinasion/snake-case-string-to-pascal-case-string";
+
+const string = "hello_world";
+console.log(SnakeCaseStringToPascalCaseString(string));
+
+// Output
+// HelloWorld
 ```
 
 <div align="center">

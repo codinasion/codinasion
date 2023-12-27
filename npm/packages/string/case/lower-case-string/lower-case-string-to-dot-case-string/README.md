@@ -28,7 +28,13 @@ yarn add @codinasion/lower-case-string-to-dot-case-string
 ## Usage
 
 ```javascript
-// TODO: add usage examples
+import { LowerCaseStringToDotCaseString } from "@codinasion/lower-case-string-to-dot-case-string";
+
+const string = "hello world";
+console.log(LowerCaseStringToDotCaseString(string));
+
+// Output
+// hello.world
 ```
 
 <div align="center">

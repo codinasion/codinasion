@@ -1,0 +1,12 @@
+{
+  "name": "camel-case-string-to-constant-case-string-example",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "find . -type f -name \"*.js\" -not -path \"./node_modules/*\" -exec sh -c 'val=$(node \"{}\"); echo \"{} ==> $val\"' \\;"
+  },
+  "devDependencies": {
+    "@codinasion/camel-case-string-to-constant-case-string": "workspace:*"
+  }
+}

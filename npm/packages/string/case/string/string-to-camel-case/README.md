@@ -28,7 +28,13 @@ yarn add @codinasion/string-to-camel-case
 ## Usage
 
 ```javascript
-// TODO: add usage examples
+import { StringToCamelCase } from "@codinasion/string-to-camel-case";
+
+const string = "hello_world";
+console.log(StringToCamelCase(string));
+
+// Output
+// helloWorld
 ```
 
 <div align="center">

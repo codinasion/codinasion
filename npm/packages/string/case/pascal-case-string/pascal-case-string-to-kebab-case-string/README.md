@@ -28,7 +28,13 @@ yarn add @codinasion/pascal-case-string-to-kebab-case-string
 ## Usage
 
 ```javascript
-// TODO: add usage examples
+import { PascalCaseStringToKebabCaseString } from "@codinasion/pascal-case-string-to-kebab-case-string";
+
+const string = "HelloWorld";
+console.log(PascalCaseStringToKebabCaseString(string));
+
+// Output
+// hello-world
 ```
 
 <div align="center">

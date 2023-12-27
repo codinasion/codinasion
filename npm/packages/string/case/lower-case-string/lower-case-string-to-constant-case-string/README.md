@@ -28,7 +28,13 @@ yarn add @codinasion/lower-case-string-to-constant-case-string
 ## Usage
 
 ```javascript
-// TODO: add usage examples
+import { LowerCaseStringToConstantCaseString } from "@codinasion/lower-case-string-to-constant-case-string";
+
+const string = "hello world";
+console.log(LowerCaseStringToConstantCaseString(string));
+
+// Output
+// HELLO_WORLD
 ```
 
 <div align="center">

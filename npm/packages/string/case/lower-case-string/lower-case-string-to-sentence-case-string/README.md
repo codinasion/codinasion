@@ -28,7 +28,13 @@ yarn add @codinasion/lower-case-string-to-sentence-case-string
 ## Usage
 
 ```javascript
-// TODO: add usage examples
+import { LowerCaseStringToSentenceCaseString } from "@codinasion/lower-case-string-to-sentence-case-string";
+
+const string = "hello world";
+console.log(LowerCaseStringToSentenceCaseString(string));
+
+// Output
+// Hello world
 ```
 
 <div align="center">

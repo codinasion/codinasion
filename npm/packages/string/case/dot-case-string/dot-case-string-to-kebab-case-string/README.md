@@ -28,7 +28,13 @@ yarn add @codinasion/dot-case-string-to-kebab-case-string
 ## Usage
 
 ```javascript
-// TODO: add usage examples
+import { DotCaseStringToKebabCaseString } from "@codinasion/dot-case-string-to-kebab-case-string";
+
+const string = "hello.world";
+console.log(DotCaseStringToKebabCaseString(string));
+
+// Output
+// hello-world
 ```
 
 <div align="center">

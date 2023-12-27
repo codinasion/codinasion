@@ -28,7 +28,13 @@ yarn add @codinasion/snake-case-string-to-header-case-string
 ## Usage
 
 ```javascript
-// TODO: add usage examples
+import { SnakeCaseStringToHeaderCaseString } from "@codinasion/snake-case-string-to-header-case-string";
+
+const string = "hello_world";
+console.log(SnakeCaseStringToHeaderCaseString(string));
+
+// Output
+// Hello-World
 ```
 
 <div align="center">

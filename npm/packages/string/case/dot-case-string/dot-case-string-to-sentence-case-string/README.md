@@ -28,7 +28,13 @@ yarn add @codinasion/dot-case-string-to-sentence-case-string
 ## Usage
 
 ```javascript
-// TODO: add usage examples
+import { DotCaseStringToSentenceCaseString } from "@codinasion/dot-case-string-to-sentence-case-string";
+
+const string = "hello.world";
+console.log(DotCaseStringToSentenceCaseString(string));
+
+// Output
+// Hello world
 ```
 
 <div align="center">

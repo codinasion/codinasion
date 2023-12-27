@@ -28,7 +28,13 @@ yarn add @codinasion/snake-case-string-to-dot-case-string
 ## Usage
 
 ```javascript
-// TODO: add usage examples
+import { SnakeCaseStringToDotCaseString } from "@codinasion/snake-case-string-to-dot-case-string";
+
+const string = "hello_world";
+console.log(SnakeCaseStringToDotCaseString(string));
+
+// Output
+// hello.world
 ```
 
 <div align="center">

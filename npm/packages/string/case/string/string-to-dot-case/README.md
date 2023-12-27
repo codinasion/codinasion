@@ -28,7 +28,13 @@ yarn add @codinasion/string-to-dot-case
 ## Usage
 
 ```javascript
-// TODO: add usage examples
+import { StringToDotCase } from "@codinasion/string-to-dot-case";
+
+const string = "hello world";
+console.log(StringToDotCase(string));
+
+// Output
+// hello.world
 ```
 
 <div align="center">

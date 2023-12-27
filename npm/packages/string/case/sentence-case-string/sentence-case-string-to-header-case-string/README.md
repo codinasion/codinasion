@@ -28,7 +28,13 @@ yarn add @codinasion/sentence-case-string-to-header-case-string
 ## Usage
 
 ```javascript
-// TODO: add usage examples
+import { SentenceCaseStringToHeaderCaseString } from "@codinasion/sentence-case-string-to-header-case-string";
+
+const string = "Hello world";
+console.log(SentenceCaseStringToHeaderCaseString(string));
+
+// Output
+// Hello-World
 ```
 
 <div align="center">

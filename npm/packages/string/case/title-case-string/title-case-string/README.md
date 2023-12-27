@@ -28,7 +28,13 @@ yarn add @codinasion/title-case-string
 ## Usage
 
 ```javascript
-// TODO: add usage examples
+import { TitleCaseStringToCamelCaseString } from "@codinasion/title-case-string";
+
+const string = "Hello World";
+console.log(TitleCaseStringToCamelCaseString(string));
+
+// Output
+// helloWorld
 ```
 
 <div align="center">

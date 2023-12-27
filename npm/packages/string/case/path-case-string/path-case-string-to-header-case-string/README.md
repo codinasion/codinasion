@@ -28,7 +28,13 @@ yarn add @codinasion/path-case-string-to-header-case-string
 ## Usage
 
 ```javascript
-// TODO: add usage examples
+import { PathCaseStringToHeaderCaseString } from "@codinasion/path-case-string-to-header-case-string";
+
+const string = "hello/world";
+console.log(PathCaseStringToHeaderCaseString(string));
+
+// Output
+// Hello-World
 ```
 
 <div align="center">

@@ -28,7 +28,13 @@ yarn add @codinasion/pascal-case-string-to-lower-case-string
 ## Usage
 
 ```javascript
-// TODO: add usage examples
+import { PascalCaseStringToLowerCaseString } from "@codinasion/pascal-case-string-to-lower-case-string";
+
+const string = "HelloWorld";
+console.log(PascalCaseStringToLowerCaseString(string));
+
+// Output
+// hello world
 ```
 
 <div align="center">

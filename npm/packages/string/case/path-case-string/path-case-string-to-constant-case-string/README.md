@@ -28,7 +28,13 @@ yarn add @codinasion/path-case-string-to-constant-case-string
 ## Usage
 
 ```javascript
-// TODO: add usage examples
+import { PathCaseStringToConstantCaseString } from "@codinasion/path-case-string-to-constant-case-string";
+
+const string = "hello/world";
+console.log(PathCaseStringToConstantCaseString(string));
+
+// Output
+// HELLO_WORLD
 ```
 
 <div align="center">

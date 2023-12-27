@@ -393,6 +393,954 @@ importers:
         specifier: workspace:*
         version: link:../../../../packages/number-system/octal/octal-to-hexadecimal
 
+  npm/examples/string/case/camel-case-string/camel-case-string-examples:
+    devDependencies:
+      '@codinasion/camel-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/camel-case-string/camel-case-string
+
+  npm/examples/string/case/camel-case-string/camel-case-string-to-constant-case-string-example:
+    devDependencies:
+      '@codinasion/camel-case-string-to-constant-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/camel-case-string/camel-case-string-to-constant-case-string
+
+  npm/examples/string/case/camel-case-string/camel-case-string-to-dot-case-string-example:
+    devDependencies:
+      '@codinasion/camel-case-string-to-dot-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/camel-case-string/camel-case-string-to-dot-case-string
+
+  npm/examples/string/case/camel-case-string/camel-case-string-to-header-case-string-example:
+    devDependencies:
+      '@codinasion/camel-case-string-to-header-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/camel-case-string/camel-case-string-to-header-case-string
+
+  npm/examples/string/case/camel-case-string/camel-case-string-to-kebab-case-string-example:
+    devDependencies:
+      '@codinasion/camel-case-string-to-kebab-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/camel-case-string/camel-case-string-to-kebab-case-string
+
+  npm/examples/string/case/camel-case-string/camel-case-string-to-lower-case-string-example:
+    devDependencies:
+      '@codinasion/camel-case-string-to-lower-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/camel-case-string/camel-case-string-to-lower-case-string
+
+  npm/examples/string/case/camel-case-string/camel-case-string-to-pascal-case-string-example:
+    devDependencies:
+      '@codinasion/camel-case-string-to-pascal-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/camel-case-string/camel-case-string-to-pascal-case-string
+
+  npm/examples/string/case/camel-case-string/camel-case-string-to-path-case-string-example:
+    devDependencies:
+      '@codinasion/camel-case-string-to-path-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/camel-case-string/camel-case-string-to-path-case-string
+
+  npm/examples/string/case/camel-case-string/camel-case-string-to-sentence-case-string-example:
+    devDependencies:
+      '@codinasion/camel-case-string-to-sentence-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/camel-case-string/camel-case-string-to-sentence-case-string
+
+  npm/examples/string/case/camel-case-string/camel-case-string-to-snake-case-string-example:
+    devDependencies:
+      '@codinasion/camel-case-string-to-snake-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/camel-case-string/camel-case-string-to-snake-case-string
+
+  npm/examples/string/case/camel-case-string/camel-case-string-to-title-case-string-example:
+    devDependencies:
+      '@codinasion/camel-case-string-to-title-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/camel-case-string/camel-case-string-to-title-case-string
+
+  npm/examples/string/case/camel-case-string/camel-case-string-to-upper-case-string-example:
+    devDependencies:
+      '@codinasion/camel-case-string-to-upper-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/camel-case-string/camel-case-string-to-upper-case-string
+
+  npm/examples/string/case/case-examples:
+    devDependencies:
+      '@codinasion/case':
+        specifier: workspace:*
+        version: link:../../../../packages/string/case/case
+
+  npm/examples/string/case/constant-case-string/constant-case-string-examples:
+    devDependencies:
+      '@codinasion/constant-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/constant-case-string/constant-case-string
+
+  npm/examples/string/case/constant-case-string/constant-case-string-to-camel-case-string-example:
+    devDependencies:
+      '@codinasion/constant-case-string-to-camel-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/constant-case-string/constant-case-string-to-camel-case-string
+
+  npm/examples/string/case/constant-case-string/constant-case-string-to-dot-case-string-example:
+    devDependencies:
+      '@codinasion/constant-case-string-to-dot-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/constant-case-string/constant-case-string-to-dot-case-string
+
+  npm/examples/string/case/constant-case-string/constant-case-string-to-header-case-string-example:
+    devDependencies:
+      '@codinasion/constant-case-string-to-header-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/constant-case-string/constant-case-string-to-header-case-string
+
+  npm/examples/string/case/constant-case-string/constant-case-string-to-kebab-case-string-example:
+    devDependencies:
+      '@codinasion/constant-case-string-to-kebab-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/constant-case-string/constant-case-string-to-kebab-case-string
+
+  npm/examples/string/case/constant-case-string/constant-case-string-to-lower-case-string-example:
+    devDependencies:
+      '@codinasion/constant-case-string-to-lower-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/constant-case-string/constant-case-string-to-lower-case-string
+
+  npm/examples/string/case/constant-case-string/constant-case-string-to-pascal-case-string-example:
+    devDependencies:
+      '@codinasion/constant-case-string-to-pascal-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/constant-case-string/constant-case-string-to-pascal-case-string
+
+  npm/examples/string/case/constant-case-string/constant-case-string-to-path-case-string-example:
+    devDependencies:
+      '@codinasion/constant-case-string-to-path-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/constant-case-string/constant-case-string-to-path-case-string
+
+  npm/examples/string/case/constant-case-string/constant-case-string-to-sentence-case-string-example:
+    devDependencies:
+      '@codinasion/constant-case-string-to-sentence-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/constant-case-string/constant-case-string-to-sentence-case-string
+
+  npm/examples/string/case/constant-case-string/constant-case-string-to-snake-case-string-example:
+    devDependencies:
+      '@codinasion/constant-case-string-to-snake-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/constant-case-string/constant-case-string-to-snake-case-string
+
+  npm/examples/string/case/constant-case-string/constant-case-string-to-title-case-string-example:
+    devDependencies:
+      '@codinasion/constant-case-string-to-title-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/constant-case-string/constant-case-string-to-title-case-string
+
+  npm/examples/string/case/constant-case-string/constant-case-string-to-upper-case-string-example:
+    devDependencies:
+      '@codinasion/constant-case-string-to-upper-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/constant-case-string/constant-case-string-to-upper-case-string
+
+  npm/examples/string/case/dot-case-string/dot-case-string-examples:
+    devDependencies:
+      '@codinasion/dot-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/dot-case-string/dot-case-string
+
+  npm/examples/string/case/dot-case-string/dot-case-string-to-camel-case-string-example:
+    devDependencies:
+      '@codinasion/dot-case-string-to-camel-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/dot-case-string/dot-case-string-to-camel-case-string
+
+  npm/examples/string/case/dot-case-string/dot-case-string-to-constant-case-string-example:
+    devDependencies:
+      '@codinasion/dot-case-string-to-constant-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/dot-case-string/dot-case-string-to-constant-case-string
+
+  npm/examples/string/case/dot-case-string/dot-case-string-to-header-case-string-example:
+    devDependencies:
+      '@codinasion/dot-case-string-to-header-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/dot-case-string/dot-case-string-to-header-case-string
+
+  npm/examples/string/case/dot-case-string/dot-case-string-to-kebab-case-string-example:
+    devDependencies:
+      '@codinasion/dot-case-string-to-kebab-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/dot-case-string/dot-case-string-to-kebab-case-string
+
+  npm/examples/string/case/dot-case-string/dot-case-string-to-lower-case-string-example:
+    devDependencies:
+      '@codinasion/dot-case-string-to-lower-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/dot-case-string/dot-case-string-to-lower-case-string
+
+  npm/examples/string/case/dot-case-string/dot-case-string-to-pascal-case-string-example:
+    devDependencies:
+      '@codinasion/dot-case-string-to-pascal-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/dot-case-string/dot-case-string-to-pascal-case-string
+
+  npm/examples/string/case/dot-case-string/dot-case-string-to-path-case-string-example:
+    devDependencies:
+      '@codinasion/dot-case-string-to-path-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/dot-case-string/dot-case-string-to-path-case-string
+
+  npm/examples/string/case/dot-case-string/dot-case-string-to-sentence-case-string-example:
+    devDependencies:
+      '@codinasion/dot-case-string-to-sentence-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/dot-case-string/dot-case-string-to-sentence-case-string
+
+  npm/examples/string/case/dot-case-string/dot-case-string-to-snake-case-string-example:
+    devDependencies:
+      '@codinasion/dot-case-string-to-snake-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/dot-case-string/dot-case-string-to-snake-case-string
+
+  npm/examples/string/case/dot-case-string/dot-case-string-to-title-case-string-example:
+    devDependencies:
+      '@codinasion/dot-case-string-to-title-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/dot-case-string/dot-case-string-to-title-case-string
+
+  npm/examples/string/case/dot-case-string/dot-case-string-to-upper-case-string-example:
+    devDependencies:
+      '@codinasion/dot-case-string-to-upper-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/dot-case-string/dot-case-string-to-upper-case-string
+
+  npm/examples/string/case/header-case-string/header-case-string-examples:
+    devDependencies:
+      '@codinasion/header-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/header-case-string/header-case-string
+
+  npm/examples/string/case/header-case-string/header-case-string-to-camel-case-string-example:
+    devDependencies:
+      '@codinasion/header-case-string-to-camel-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/header-case-string/header-case-string-to-camel-case-string
+
+  npm/examples/string/case/header-case-string/header-case-string-to-constant-case-string-example:
+    devDependencies:
+      '@codinasion/header-case-string-to-constant-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/header-case-string/header-case-string-to-constant-case-string
+
+  npm/examples/string/case/header-case-string/header-case-string-to-dot-case-string-example:
+    devDependencies:
+      '@codinasion/header-case-string-to-dot-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/header-case-string/header-case-string-to-dot-case-string
+
+  npm/examples/string/case/header-case-string/header-case-string-to-kebab-case-string-example:
+    devDependencies:
+      '@codinasion/header-case-string-to-kebab-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/header-case-string/header-case-string-to-kebab-case-string
+
+  npm/examples/string/case/header-case-string/header-case-string-to-lower-case-string-example:
+    devDependencies:
+      '@codinasion/header-case-string-to-lower-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/header-case-string/header-case-string-to-lower-case-string
+
+  npm/examples/string/case/header-case-string/header-case-string-to-pascal-case-string-example:
+    devDependencies:
+      '@codinasion/header-case-string-to-pascal-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/header-case-string/header-case-string-to-pascal-case-string
+
+  npm/examples/string/case/header-case-string/header-case-string-to-path-case-string-example:
+    devDependencies:
+      '@codinasion/header-case-string-to-path-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/header-case-string/header-case-string-to-path-case-string
+
+  npm/examples/string/case/header-case-string/header-case-string-to-sentence-case-string-example:
+    devDependencies:
+      '@codinasion/header-case-string-to-sentence-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/header-case-string/header-case-string-to-sentence-case-string
+
+  npm/examples/string/case/header-case-string/header-case-string-to-snake-case-string-example:
+    devDependencies:
+      '@codinasion/header-case-string-to-snake-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/header-case-string/header-case-string-to-snake-case-string
+
+  npm/examples/string/case/header-case-string/header-case-string-to-title-case-string-example:
+    devDependencies:
+      '@codinasion/header-case-string-to-title-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/header-case-string/header-case-string-to-title-case-string
+
+  npm/examples/string/case/header-case-string/header-case-string-to-upper-case-string-example:
+    devDependencies:
+      '@codinasion/header-case-string-to-upper-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/header-case-string/header-case-string-to-upper-case-string
+
+  npm/examples/string/case/kebab-case-string/kebab-case-string-examples:
+    devDependencies:
+      '@codinasion/kebab-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/kebab-case-string/kebab-case-string
+
+  npm/examples/string/case/kebab-case-string/kebab-case-string-to-camel-case-string-example:
+    devDependencies:
+      '@codinasion/kebab-case-string-to-camel-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/kebab-case-string/kebab-case-string-to-camel-case-string
+
+  npm/examples/string/case/kebab-case-string/kebab-case-string-to-constant-case-string-example:
+    devDependencies:
+      '@codinasion/kebab-case-string-to-constant-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/kebab-case-string/kebab-case-string-to-constant-case-string
+
+  npm/examples/string/case/kebab-case-string/kebab-case-string-to-dot-case-string-example:
+    devDependencies:
+      '@codinasion/kebab-case-string-to-dot-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/kebab-case-string/kebab-case-string-to-dot-case-string
+
+  npm/examples/string/case/kebab-case-string/kebab-case-string-to-header-case-string-example:
+    devDependencies:
+      '@codinasion/kebab-case-string-to-header-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/kebab-case-string/kebab-case-string-to-header-case-string
+
+  npm/examples/string/case/kebab-case-string/kebab-case-string-to-lower-case-string-example:
+    devDependencies:
+      '@codinasion/kebab-case-string-to-lower-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/kebab-case-string/kebab-case-string-to-lower-case-string
+
+  npm/examples/string/case/kebab-case-string/kebab-case-string-to-pascal-case-string-example:
+    devDependencies:
+      '@codinasion/kebab-case-string-to-pascal-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/kebab-case-string/kebab-case-string-to-pascal-case-string
+
+  npm/examples/string/case/kebab-case-string/kebab-case-string-to-path-case-string-example:
+    devDependencies:
+      '@codinasion/kebab-case-string-to-path-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/kebab-case-string/kebab-case-string-to-path-case-string
+
+  npm/examples/string/case/kebab-case-string/kebab-case-string-to-sentence-case-string-example:
+    devDependencies:
+      '@codinasion/kebab-case-string-to-sentence-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/kebab-case-string/kebab-case-string-to-sentence-case-string
+
+  npm/examples/string/case/kebab-case-string/kebab-case-string-to-snake-case-string-example:
+    devDependencies:
+      '@codinasion/kebab-case-string-to-snake-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/kebab-case-string/kebab-case-string-to-snake-case-string
+
+  npm/examples/string/case/kebab-case-string/kebab-case-string-to-title-case-string-example:
+    devDependencies:
+      '@codinasion/kebab-case-string-to-title-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/kebab-case-string/kebab-case-string-to-title-case-string
+
+  npm/examples/string/case/kebab-case-string/kebab-case-string-to-upper-case-string-example:
+    devDependencies:
+      '@codinasion/kebab-case-string-to-upper-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/kebab-case-string/kebab-case-string-to-upper-case-string
+
+  npm/examples/string/case/lower-case-string/lower-case-string-examples:
+    devDependencies:
+      '@codinasion/lower-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/lower-case-string/lower-case-string
+
+  npm/examples/string/case/lower-case-string/lower-case-string-to-camel-case-string-example:
+    devDependencies:
+      '@codinasion/lower-case-string-to-camel-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/lower-case-string/lower-case-string-to-camel-case-string
+
+  npm/examples/string/case/lower-case-string/lower-case-string-to-constant-case-string-example:
+    devDependencies:
+      '@codinasion/lower-case-string-to-constant-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/lower-case-string/lower-case-string-to-constant-case-string
+
+  npm/examples/string/case/lower-case-string/lower-case-string-to-dot-case-string-example:
+    devDependencies:
+      '@codinasion/lower-case-string-to-dot-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/lower-case-string/lower-case-string-to-dot-case-string
+
+  npm/examples/string/case/lower-case-string/lower-case-string-to-header-case-string-example:
+    devDependencies:
+      '@codinasion/lower-case-string-to-header-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/lower-case-string/lower-case-string-to-header-case-string
+
+  npm/examples/string/case/lower-case-string/lower-case-string-to-kebab-case-string-example:
+    devDependencies:
+      '@codinasion/lower-case-string-to-kebab-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/lower-case-string/lower-case-string-to-kebab-case-string
+
+  npm/examples/string/case/lower-case-string/lower-case-string-to-pascal-case-string-example:
+    devDependencies:
+      '@codinasion/lower-case-string-to-pascal-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/lower-case-string/lower-case-string-to-pascal-case-string
+
+  npm/examples/string/case/lower-case-string/lower-case-string-to-path-case-string-example:
+    devDependencies:
+      '@codinasion/lower-case-string-to-path-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/lower-case-string/lower-case-string-to-path-case-string
+
+  npm/examples/string/case/lower-case-string/lower-case-string-to-sentence-case-string-example:
+    devDependencies:
+      '@codinasion/lower-case-string-to-sentence-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/lower-case-string/lower-case-string-to-sentence-case-string
+
+  npm/examples/string/case/lower-case-string/lower-case-string-to-snake-case-string-example:
+    devDependencies:
+      '@codinasion/lower-case-string-to-snake-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/lower-case-string/lower-case-string-to-snake-case-string
+
+  npm/examples/string/case/lower-case-string/lower-case-string-to-title-case-string-example:
+    devDependencies:
+      '@codinasion/lower-case-string-to-title-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/lower-case-string/lower-case-string-to-title-case-string
+
+  npm/examples/string/case/lower-case-string/lower-case-string-to-upper-case-string-example:
+    devDependencies:
+      '@codinasion/lower-case-string-to-upper-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/lower-case-string/lower-case-string-to-upper-case-string
+
+  npm/examples/string/case/pascal-case-string/pascal-case-string-examples:
+    devDependencies:
+      '@codinasion/pascal-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/pascal-case-string/pascal-case-string
+
+  npm/examples/string/case/pascal-case-string/pascal-case-string-to-camel-case-string-example:
+    devDependencies:
+      '@codinasion/pascal-case-string-to-camel-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/pascal-case-string/pascal-case-string-to-camel-case-string
+
+  npm/examples/string/case/pascal-case-string/pascal-case-string-to-constant-case-string-example:
+    devDependencies:
+      '@codinasion/pascal-case-string-to-constant-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/pascal-case-string/pascal-case-string-to-constant-case-string
+
+  npm/examples/string/case/pascal-case-string/pascal-case-string-to-dot-case-string-example:
+    devDependencies:
+      '@codinasion/pascal-case-string-to-dot-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/pascal-case-string/pascal-case-string-to-dot-case-string
+
+  npm/examples/string/case/pascal-case-string/pascal-case-string-to-header-case-string-example:
+    devDependencies:
+      '@codinasion/pascal-case-string-to-header-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/pascal-case-string/pascal-case-string-to-header-case-string
+
+  npm/examples/string/case/pascal-case-string/pascal-case-string-to-kebab-case-string-example:
+    devDependencies:
+      '@codinasion/pascal-case-string-to-kebab-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/pascal-case-string/pascal-case-string-to-kebab-case-string
+
+  npm/examples/string/case/pascal-case-string/pascal-case-string-to-lower-case-string-example:
+    devDependencies:
+      '@codinasion/pascal-case-string-to-lower-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/pascal-case-string/pascal-case-string-to-lower-case-string
+
+  npm/examples/string/case/pascal-case-string/pascal-case-string-to-path-case-string-example:
+    devDependencies:
+      '@codinasion/pascal-case-string-to-path-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/pascal-case-string/pascal-case-string-to-path-case-string
+
+  npm/examples/string/case/pascal-case-string/pascal-case-string-to-sentence-case-string-example:
+    devDependencies:
+      '@codinasion/pascal-case-string-to-sentence-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/pascal-case-string/pascal-case-string-to-sentence-case-string
+
+  npm/examples/string/case/pascal-case-string/pascal-case-string-to-snake-case-string-example:
+    devDependencies:
+      '@codinasion/pascal-case-string-to-snake-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/pascal-case-string/pascal-case-string-to-snake-case-string
+
+  npm/examples/string/case/pascal-case-string/pascal-case-string-to-title-case-string-example:
+    devDependencies:
+      '@codinasion/pascal-case-string-to-title-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/pascal-case-string/pascal-case-string-to-title-case-string
+
+  npm/examples/string/case/pascal-case-string/pascal-case-string-to-upper-case-string-example:
+    devDependencies:
+      '@codinasion/pascal-case-string-to-upper-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/pascal-case-string/pascal-case-string-to-upper-case-string
+
+  npm/examples/string/case/path-case-string/path-case-string-examples:
+    devDependencies:
+      '@codinasion/path-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/path-case-string/path-case-string
+
+  npm/examples/string/case/path-case-string/path-case-string-to-camel-case-string-example:
+    devDependencies:
+      '@codinasion/path-case-string-to-camel-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/path-case-string/path-case-string-to-camel-case-string
+
+  npm/examples/string/case/path-case-string/path-case-string-to-constant-case-string-example:
+    devDependencies:
+      '@codinasion/path-case-string-to-constant-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/path-case-string/path-case-string-to-constant-case-string
+
+  npm/examples/string/case/path-case-string/path-case-string-to-dot-case-string-example:
+    devDependencies:
+      '@codinasion/path-case-string-to-dot-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/path-case-string/path-case-string-to-dot-case-string
+
+  npm/examples/string/case/path-case-string/path-case-string-to-header-case-string-example:
+    devDependencies:
+      '@codinasion/path-case-string-to-header-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/path-case-string/path-case-string-to-header-case-string
+
+  npm/examples/string/case/path-case-string/path-case-string-to-kebab-case-string-example:
+    devDependencies:
+      '@codinasion/path-case-string-to-kebab-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/path-case-string/path-case-string-to-kebab-case-string
+
+  npm/examples/string/case/path-case-string/path-case-string-to-lower-case-string-example:
+    devDependencies:
+      '@codinasion/path-case-string-to-lower-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/path-case-string/path-case-string-to-lower-case-string
+
+  npm/examples/string/case/path-case-string/path-case-string-to-pascal-case-string-example:
+    devDependencies:
+      '@codinasion/path-case-string-to-pascal-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/path-case-string/path-case-string-to-pascal-case-string
+
+  npm/examples/string/case/path-case-string/path-case-string-to-sentence-case-string-example:
+    devDependencies:
+      '@codinasion/path-case-string-to-sentence-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/path-case-string/path-case-string-to-sentence-case-string
+
+  npm/examples/string/case/path-case-string/path-case-string-to-snake-case-string-example:
+    devDependencies:
+      '@codinasion/path-case-string-to-snake-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/path-case-string/path-case-string-to-snake-case-string
+
+  npm/examples/string/case/path-case-string/path-case-string-to-title-case-string-example:
+    devDependencies:
+      '@codinasion/path-case-string-to-title-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/path-case-string/path-case-string-to-title-case-string
+
+  npm/examples/string/case/path-case-string/path-case-string-to-upper-case-string-example:
+    devDependencies:
+      '@codinasion/path-case-string-to-upper-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/path-case-string/path-case-string-to-upper-case-string
+
+  npm/examples/string/case/sentence-case-string/sentence-case-string-examples:
+    devDependencies:
+      '@codinasion/sentence-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/sentence-case-string/sentence-case-string
+
+  npm/examples/string/case/sentence-case-string/sentence-case-string-to-camel-case-string-example:
+    devDependencies:
+      '@codinasion/sentence-case-string-to-camel-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/sentence-case-string/sentence-case-string-to-camel-case-string
+
+  npm/examples/string/case/sentence-case-string/sentence-case-string-to-constant-case-string-example:
+    devDependencies:
+      '@codinasion/sentence-case-string-to-constant-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/sentence-case-string/sentence-case-string-to-constant-case-string
+
+  npm/examples/string/case/sentence-case-string/sentence-case-string-to-dot-case-string-example:
+    devDependencies:
+      '@codinasion/sentence-case-string-to-dot-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/sentence-case-string/sentence-case-string-to-dot-case-string
+
+  npm/examples/string/case/sentence-case-string/sentence-case-string-to-header-case-string-example:
+    devDependencies:
+      '@codinasion/sentence-case-string-to-header-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/sentence-case-string/sentence-case-string-to-header-case-string
+
+  npm/examples/string/case/sentence-case-string/sentence-case-string-to-kebab-case-string-example:
+    devDependencies:
+      '@codinasion/sentence-case-string-to-kebab-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/sentence-case-string/sentence-case-string-to-kebab-case-string
+
+  npm/examples/string/case/sentence-case-string/sentence-case-string-to-lower-case-string-example:
+    devDependencies:
+      '@codinasion/sentence-case-string-to-lower-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/sentence-case-string/sentence-case-string-to-lower-case-string
+
+  npm/examples/string/case/sentence-case-string/sentence-case-string-to-pascal-case-string-example:
+    devDependencies:
+      '@codinasion/sentence-case-string-to-pascal-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/sentence-case-string/sentence-case-string-to-pascal-case-string
+
+  npm/examples/string/case/sentence-case-string/sentence-case-string-to-path-case-string-example:
+    devDependencies:
+      '@codinasion/sentence-case-string-to-path-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/sentence-case-string/sentence-case-string-to-path-case-string
+
+  npm/examples/string/case/sentence-case-string/sentence-case-string-to-snake-case-string-example:
+    devDependencies:
+      '@codinasion/sentence-case-string-to-snake-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/sentence-case-string/sentence-case-string-to-snake-case-string
+
+  npm/examples/string/case/sentence-case-string/sentence-case-string-to-title-case-string-example:
+    devDependencies:
+      '@codinasion/sentence-case-string-to-title-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/sentence-case-string/sentence-case-string-to-title-case-string
+
+  npm/examples/string/case/sentence-case-string/sentence-case-string-to-upper-case-string-example:
+    devDependencies:
+      '@codinasion/sentence-case-string-to-upper-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/sentence-case-string/sentence-case-string-to-upper-case-string
+
+  npm/examples/string/case/snake-case-string/snake-case-string-examples:
+    devDependencies:
+      '@codinasion/snake-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/snake-case-string/snake-case-string
+
+  npm/examples/string/case/snake-case-string/snake-case-string-to-camel-case-string-example:
+    devDependencies:
+      '@codinasion/snake-case-string-to-camel-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/snake-case-string/snake-case-string-to-camel-case-string
+
+  npm/examples/string/case/snake-case-string/snake-case-string-to-constant-case-string-example:
+    devDependencies:
+      '@codinasion/snake-case-string-to-constant-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/snake-case-string/snake-case-string-to-constant-case-string
+
+  npm/examples/string/case/snake-case-string/snake-case-string-to-dot-case-string-example:
+    devDependencies:
+      '@codinasion/snake-case-string-to-dot-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/snake-case-string/snake-case-string-to-dot-case-string
+
+  npm/examples/string/case/snake-case-string/snake-case-string-to-header-case-string-example:
+    devDependencies:
+      '@codinasion/snake-case-string-to-header-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/snake-case-string/snake-case-string-to-header-case-string
+
+  npm/examples/string/case/snake-case-string/snake-case-string-to-kebab-case-string-example:
+    devDependencies:
+      '@codinasion/snake-case-string-to-kebab-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/snake-case-string/snake-case-string-to-kebab-case-string
+
+  npm/examples/string/case/snake-case-string/snake-case-string-to-lower-case-string-example:
+    devDependencies:
+      '@codinasion/snake-case-string-to-lower-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/snake-case-string/snake-case-string-to-lower-case-string
+
+  npm/examples/string/case/snake-case-string/snake-case-string-to-pascal-case-string-example:
+    devDependencies:
+      '@codinasion/snake-case-string-to-pascal-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/snake-case-string/snake-case-string-to-pascal-case-string
+
+  npm/examples/string/case/snake-case-string/snake-case-string-to-path-case-string-example:
+    devDependencies:
+      '@codinasion/snake-case-string-to-path-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/snake-case-string/snake-case-string-to-path-case-string
+
+  npm/examples/string/case/snake-case-string/snake-case-string-to-sentence-case-string-example:
+    devDependencies:
+      '@codinasion/snake-case-string-to-sentence-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/snake-case-string/snake-case-string-to-sentence-case-string
+
+  npm/examples/string/case/snake-case-string/snake-case-string-to-title-case-string-example:
+    devDependencies:
+      '@codinasion/snake-case-string-to-title-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/snake-case-string/snake-case-string-to-title-case-string
+
+  npm/examples/string/case/snake-case-string/snake-case-string-to-upper-case-string-example:
+    devDependencies:
+      '@codinasion/snake-case-string-to-upper-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/snake-case-string/snake-case-string-to-upper-case-string
+
+  npm/examples/string/case/string/string-to-camel-case-example:
+    devDependencies:
+      '@codinasion/string-to-camel-case':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/string/string-to-camel-case
+
+  npm/examples/string/case/string/string-to-constant-case-example:
+    devDependencies:
+      '@codinasion/string-to-constant-case':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/string/string-to-constant-case
+
+  npm/examples/string/case/string/string-to-dot-case-example:
+    devDependencies:
+      '@codinasion/string-to-dot-case':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/string/string-to-dot-case
+
+  npm/examples/string/case/string/string-to-header-case-example:
+    devDependencies:
+      '@codinasion/string-to-header-case':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/string/string-to-header-case
+
+  npm/examples/string/case/string/string-to-kebab-case-example:
+    devDependencies:
+      '@codinasion/string-to-kebab-case':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/string/string-to-kebab-case
+
+  npm/examples/string/case/string/string-to-lower-case-example:
+    devDependencies:
+      '@codinasion/string-to-lower-case':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/string/string-to-lower-case
+
+  npm/examples/string/case/string/string-to-pascal-case-example:
+    devDependencies:
+      '@codinasion/string-to-pascal-case':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/string/string-to-pascal-case
+
+  npm/examples/string/case/string/string-to-path-case-example:
+    devDependencies:
+      '@codinasion/string-to-path-case':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/string/string-to-path-case
+
+  npm/examples/string/case/string/string-to-sentence-case-example:
+    devDependencies:
+      '@codinasion/string-to-sentence-case':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/string/string-to-sentence-case
+
+  npm/examples/string/case/string/string-to-snake-case-example:
+    devDependencies:
+      '@codinasion/string-to-snake-case':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/string/string-to-snake-case
+
+  npm/examples/string/case/string/string-to-title-case-example:
+    devDependencies:
+      '@codinasion/string-to-title-case':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/string/string-to-title-case
+
+  npm/examples/string/case/string/string-to-upper-case-example:
+    devDependencies:
+      '@codinasion/string-to-upper-case':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/string/string-to-upper-case
+
+  npm/examples/string/case/title-case-string/title-case-string-examples:
+    devDependencies:
+      '@codinasion/title-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/title-case-string/title-case-string
+
+  npm/examples/string/case/title-case-string/title-case-string-to-camel-case-string-example:
+    devDependencies:
+      '@codinasion/title-case-string-to-camel-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/title-case-string/title-case-string-to-camel-case-string
+
+  npm/examples/string/case/title-case-string/title-case-string-to-constant-case-string-example:
+    devDependencies:
+      '@codinasion/title-case-string-to-constant-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/title-case-string/title-case-string-to-constant-case-string
+
+  npm/examples/string/case/title-case-string/title-case-string-to-dot-case-string-example:
+    devDependencies:
+      '@codinasion/title-case-string-to-dot-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/title-case-string/title-case-string-to-dot-case-string
+
+  npm/examples/string/case/title-case-string/title-case-string-to-header-case-string-example:
+    devDependencies:
+      '@codinasion/title-case-string-to-header-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/title-case-string/title-case-string-to-header-case-string
+
+  npm/examples/string/case/title-case-string/title-case-string-to-kebab-case-string-example:
+    devDependencies:
+      '@codinasion/title-case-string-to-kebab-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/title-case-string/title-case-string-to-kebab-case-string
+
+  npm/examples/string/case/title-case-string/title-case-string-to-lower-case-string-example:
+    devDependencies:
+      '@codinasion/title-case-string-to-lower-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/title-case-string/title-case-string-to-lower-case-string
+
+  npm/examples/string/case/title-case-string/title-case-string-to-pascal-case-string-example:
+    devDependencies:
+      '@codinasion/title-case-string-to-pascal-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/title-case-string/title-case-string-to-pascal-case-string
+
+  npm/examples/string/case/title-case-string/title-case-string-to-path-case-string-example:
+    devDependencies:
+      '@codinasion/title-case-string-to-path-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/title-case-string/title-case-string-to-path-case-string
+
+  npm/examples/string/case/title-case-string/title-case-string-to-sentence-case-string-example:
+    devDependencies:
+      '@codinasion/title-case-string-to-sentence-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/title-case-string/title-case-string-to-sentence-case-string
+
+  npm/examples/string/case/title-case-string/title-case-string-to-snake-case-string-example:
+    devDependencies:
+      '@codinasion/title-case-string-to-snake-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/title-case-string/title-case-string-to-snake-case-string
+
+  npm/examples/string/case/title-case-string/title-case-string-to-upper-case-string-example:
+    devDependencies:
+      '@codinasion/title-case-string-to-upper-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/title-case-string/title-case-string-to-upper-case-string
+
+  npm/examples/string/case/upper-case-string/upper-case-string-examples:
+    devDependencies:
+      '@codinasion/upper-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/upper-case-string/upper-case-string
+
+  npm/examples/string/case/upper-case-string/upper-case-string-to-camel-case-string-example:
+    devDependencies:
+      '@codinasion/upper-case-string-to-camel-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/upper-case-string/upper-case-string-to-camel-case-string
+
+  npm/examples/string/case/upper-case-string/upper-case-string-to-constant-case-string-example:
+    devDependencies:
+      '@codinasion/upper-case-string-to-constant-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/upper-case-string/upper-case-string-to-constant-case-string
+
+  npm/examples/string/case/upper-case-string/upper-case-string-to-dot-case-string-example:
+    devDependencies:
+      '@codinasion/upper-case-string-to-dot-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/upper-case-string/upper-case-string-to-dot-case-string
+
+  npm/examples/string/case/upper-case-string/upper-case-string-to-header-case-string-example:
+    devDependencies:
+      '@codinasion/upper-case-string-to-header-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/upper-case-string/upper-case-string-to-header-case-string
+
+  npm/examples/string/case/upper-case-string/upper-case-string-to-kebab-case-string-example:
+    devDependencies:
+      '@codinasion/upper-case-string-to-kebab-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/upper-case-string/upper-case-string-to-kebab-case-string
+
+  npm/examples/string/case/upper-case-string/upper-case-string-to-lower-case-string-example:
+    devDependencies:
+      '@codinasion/upper-case-string-to-lower-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/upper-case-string/upper-case-string-to-lower-case-string
+
+  npm/examples/string/case/upper-case-string/upper-case-string-to-pascal-case-string-example:
+    devDependencies:
+      '@codinasion/upper-case-string-to-pascal-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/upper-case-string/upper-case-string-to-pascal-case-string
+
+  npm/examples/string/case/upper-case-string/upper-case-string-to-path-case-string-example:
+    devDependencies:
+      '@codinasion/upper-case-string-to-path-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/upper-case-string/upper-case-string-to-path-case-string
+
+  npm/examples/string/case/upper-case-string/upper-case-string-to-sentence-case-string-example:
+    devDependencies:
+      '@codinasion/upper-case-string-to-sentence-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/upper-case-string/upper-case-string-to-sentence-case-string
+
+  npm/examples/string/case/upper-case-string/upper-case-string-to-snake-case-string-example:
+    devDependencies:
+      '@codinasion/upper-case-string-to-snake-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/upper-case-string/upper-case-string-to-snake-case-string
+
+  npm/examples/string/case/upper-case-string/upper-case-string-to-title-case-string-example:
+    devDependencies:
+      '@codinasion/upper-case-string-to-title-case-string':
+        specifier: workspace:*
+        version: link:../../../../../packages/string/case/upper-case-string/upper-case-string-to-title-case-string
+
+  npm/examples/string/string-examples:
+    devDependencies:
+      '@codinasion/string':
+        specifier: workspace:*
+        version: link:../../../packages/string/string
+
   npm/packages/codinasion:
     devDependencies:
       '@codinasion/eslint-config':

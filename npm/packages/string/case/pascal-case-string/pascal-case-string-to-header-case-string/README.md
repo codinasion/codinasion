@@ -28,7 +28,13 @@ yarn add @codinasion/pascal-case-string-to-header-case-string
 ## Usage
 
 ```javascript
-// TODO: add usage examples
+import { PascalCaseStringToHeaderCaseString } from "@codinasion/pascal-case-string-to-header-case-string";
+
+const string = "HelloWorld";
+console.log(PascalCaseStringToHeaderCaseString(string));
+
+// Output
+// Hello-World
 ```
 
 <div align="center">

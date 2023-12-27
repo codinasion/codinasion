@@ -28,7 +28,13 @@ yarn add @codinasion/sentence-case-string-to-upper-case-string
 ## Usage
 
 ```javascript
-// TODO: add usage examples
+import { SentenceCaseStringToUpperCaseString } from "@codinasion/sentence-case-string-to-upper-case-string";
+
+const string = "Hello world";
+console.log(SentenceCaseStringToUpperCaseString(string));
+
+// Output
+// HELLO WORLD
 ```
 
 <div align="center">

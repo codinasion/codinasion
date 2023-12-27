@@ -28,7 +28,13 @@ yarn add @codinasion/string-to-lower-case
 ## Usage
 
 ```javascript
-// TODO: add usage examples
+import { StringToLowerCase } from "@codinasion/string-to-lower-case";
+
+const string = "Hello World";
+console.log(StringToLowerCase(string));
+
+// Output
+// hello world
 ```
 
 <div align="center">

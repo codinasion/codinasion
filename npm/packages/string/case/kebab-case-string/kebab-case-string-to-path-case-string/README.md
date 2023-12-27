@@ -28,7 +28,13 @@ yarn add @codinasion/kebab-case-string-to-path-case-string
 ## Usage
 
 ```javascript
-// TODO: add usage examples
+import { KebabCaseStringToPathCaseString } from "@codinasion/kebab-case-string-to-path-case-string";
+
+const string = "hello-world";
+console.log(KebabCaseStringToPathCaseString(string));
+
+// Output
+// hello/world
 ```
 
 <div align="center">

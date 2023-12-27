@@ -28,7 +28,13 @@ yarn add @codinasion/upper-case-string-to-header-case-string
 ## Usage
 
 ```javascript
-// TODO: add usage examples
+import { UpperCaseStringToHeaderCaseString } from "@codinasion/upper-case-string-to-header-case-string";
+
+const string = "HELLO WORLD";
+console.log(UpperCaseStringToHeaderCaseString(string));
+
+// Output
+// Hello-World
 ```
 
 <div align="center">

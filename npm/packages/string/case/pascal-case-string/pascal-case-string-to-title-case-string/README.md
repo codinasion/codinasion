@@ -28,7 +28,13 @@ yarn add @codinasion/pascal-case-string-to-title-case-string
 ## Usage
 
 ```javascript
-// TODO: add usage examples
+import { PascalCaseStringToTitleCaseString } from "@codinasion/pascal-case-string-to-title-case-string";
+
+const string = "HelloWorld";
+console.log(PascalCaseStringToTitleCaseString(string));
+
+// Output
+// Hello World
 ```
 
 <div align="center">

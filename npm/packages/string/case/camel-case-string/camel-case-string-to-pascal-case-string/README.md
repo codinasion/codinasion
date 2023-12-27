@@ -28,7 +28,13 @@ yarn add @codinasion/camel-case-string-to-pascal-case-string
 ## Usage
 
 ```javascript
-// TODO: add usage examples
+import { CamelCaseStringToPascalCaseString } from "@codinasion/camel-case-string-to-pascal-case-string";
+
+const string = "helloWorld";
+console.log(CamelCaseStringToPascalCaseString(string));
+
+// Output
+// HelloWorld
 ```
 
 <div align="center">

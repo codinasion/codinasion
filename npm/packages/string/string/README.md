@@ -28,7 +28,13 @@ yarn add @codinasion/string
 ## Usage
 
 ```javascript
-// TODO: add usage examples
+import { KebabCaseStringToCamelCaseString } from "@codinasion/string";
+
+const string = "hello-world";
+console.log(KebabCaseStringToCamelCaseString(string));
+
+// Output
+// helloWorld
 ```
 
 <div align="center">

@@ -28,7 +28,13 @@ yarn add @codinasion/lower-case-string-to-path-case-string
 ## Usage
 
 ```javascript
-// TODO: add usage examples
+import { LowerCaseStringToPathCaseString } from "@codinasion/lower-case-string-to-path-case-string";
+
+const string = "hello world";
+console.log(LowerCaseStringToPathCaseString(string));
+
+// Output
+// hello/world
 ```
 
 <div align="center">

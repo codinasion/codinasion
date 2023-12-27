@@ -28,7 +28,13 @@ yarn add @codinasion/sentence-case-string-to-constant-case-string
 ## Usage
 
 ```javascript
-// TODO: add usage examples
+import { SentenceCaseStringToConstantCaseString } from "@codinasion/sentence-case-string-to-constant-case-string";
+
+const string = "Hello World";
+console.log(SentenceCaseStringToConstantCaseString(string));
+
+// Output
+// HELLO_WORLD
 ```
 
 <div align="center">

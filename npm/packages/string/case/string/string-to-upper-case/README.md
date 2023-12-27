@@ -28,7 +28,13 @@ yarn add @codinasion/string-to-upper-case
 ## Usage
 
 ```javascript
-// TODO: add usage examples
+import { StringToUpperCase } from "@codinasion/string-to-upper-case";
+
+const string = "hello world";
+console.log(StringToUpperCase(string));
+
+// Output
+// HELLO WORLD
 ```
 
 <div align="center">

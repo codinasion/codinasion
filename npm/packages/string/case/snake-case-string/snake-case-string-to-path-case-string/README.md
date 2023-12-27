@@ -28,7 +28,13 @@ yarn add @codinasion/snake-case-string-to-path-case-string
 ## Usage
 
 ```javascript
-// TODO: add usage examples
+import { SnakeCaseStringToPathCaseString } from "@codinasion/snake-case-string-to-path-case-string";
+
+const string = "hello_world";
+console.log(SnakeCaseStringToPathCaseString(string));
+
+// Output
+// hello/world
 ```
 
 <div align="center">

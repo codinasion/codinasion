@@ -28,7 +28,13 @@ yarn add @codinasion/path-case-string-to-title-case-string
 ## Usage
 
 ```javascript
-// TODO: add usage examples
+import { PathCaseStringToTitleCaseString } from "@codinasion/path-case-string-to-title-case-string";
+
+const string = "hello/world";
+console.log(PathCaseStringToTitleCaseString(string));
+
+// Output
+// Hello World
 ```
 
 <div align="center">

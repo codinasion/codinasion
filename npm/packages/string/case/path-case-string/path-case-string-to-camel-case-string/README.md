@@ -28,7 +28,13 @@ yarn add @codinasion/path-case-string-to-camel-case-string
 ## Usage
 
 ```javascript
-// TODO: add usage examples
+import { PathCaseStringToCamelCaseString } from "@codinasion/path-case-string-to-camel-case-string";
+
+const string = "hello/world";
+console.log(PathCaseStringToCamelCaseString(string));
+
+// Output
+// helloWorld
 ```
 
 <div align="center">

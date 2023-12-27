@@ -28,7 +28,13 @@ yarn add @codinasion/upper-case-string-to-constant-case-string
 ## Usage
 
 ```javascript
-// TODO: add usage examples
+import { UpperCaseStringToConstantCaseString } from "@codinasion/upper-case-string-to-constant-case-string";
+
+const string = "HELLO WORLD";
+console.log(UpperCaseStringToConstantCaseString(string));
+
+// Output
+// HELLO_WORLD
 ```
 
 <div align="center">

@@ -28,7 +28,13 @@ yarn add @codinasion/kebab-case-string-to-upper-case-string
 ## Usage
 
 ```javascript
-// TODO: add usage examples
+import { KebabCaseStringToUpperCaseString } from "@codinasion/kebab-case-string-to-upper-case-string";
+
+const string = "hello-world";
+console.log(KebabCaseStringToUpperCaseString(string));
+
+// Output
+// HELLO WORLD
 ```
 
 <div align="center">

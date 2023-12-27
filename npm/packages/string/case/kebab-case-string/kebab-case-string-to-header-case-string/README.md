@@ -28,7 +28,13 @@ yarn add @codinasion/kebab-case-string-to-header-case-string
 ## Usage
 
 ```javascript
-// TODO: add usage examples
+import { KebabCaseStringToHeaderCaseString } from "@codinasion/kebab-case-string-to-header-case-string";
+
+const string = "hello-world";
+console.log(KebabCaseStringToHeaderCaseString(string));
+
+// Output
+// Hello-World
 ```
 
 <div align="center">

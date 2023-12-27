@@ -28,7 +28,13 @@ yarn add @codinasion/constant-case-string-to-kebab-case-string
 ## Usage
 
 ```javascript
-// TODO: add usage examples
+import { ConstantCaseStringToKebabCaseString } from "@codinasion/constant-case-string-to-kebab-case-string";
+
+const string = "HELLO_WORLD";
+console.log(ConstantCaseStringToKebabCaseString(string));
+
+// Output
+// hello-world
 ```
 
 <div align="center">
