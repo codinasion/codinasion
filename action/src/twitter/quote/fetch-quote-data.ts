@@ -20,7 +20,7 @@ export default async function FetchQuoteData(): Promise<QuoteType> {
 
     const data = (await response.json()) as QuoteType[];
 
-    return data[0] as QuoteType;
+    return data[0];
   } catch (error) {
     core.setFailed(
       error instanceof Error ? error.message : "Unknown error occurred",
