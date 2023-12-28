@@ -14,7 +14,7 @@ export default function PoweredByVercel(): JSX.Element {
   useEffect(() => setMounted(true), []);
 
   if (!mounted) {
-    return <></>;
+    return <>Powered by Vercel</>;
   }
 
   return (

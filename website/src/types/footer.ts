@@ -3,4 +3,9 @@ interface FooterLinkType {
   href: string;
 }
 
-export type { FooterLinkType };
+interface FooterLinkCategoryType {
+  title: string;
+  links: FooterLinkType[];
+}
+
+export type { FooterLinkType, FooterLinkCategoryType };

@@ -10,8 +10,12 @@
   },
   "dependencies": {
     "@codinasion/language-data": "workspace:*",
+    "@docsearch/css": "3",
+    "@docsearch/react": "3",
     "@tailwindcss/typography": "^0.5.10",
     "daisyui": "^4.4.22",
+    "flowbite": "^2.2.0",
+    "flowbite-react": "^0.7.0",
     "katex": "^0.16.9",
     "moment": "^2.29.4",
     "next": "14.0.4",

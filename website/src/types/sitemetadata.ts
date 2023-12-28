@@ -12,6 +12,10 @@ interface SiteMetadataType {
   twitter_userid: string;
 
   email: string;
+
+  github_sponsor_url: string;
+  open_collective_url: string;
+  patreon_url: string;
 }
 
 export type { SiteMetadataType };

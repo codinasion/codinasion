@@ -22,7 +22,7 @@ export default function ScrollNavigartion() {
 
   return (
     <div
-      className={`fixed bottom-8 right-8 hidden flex-col gap-3 ${
+      className={`fixed bottom-10 right-5 hidden flex-col gap-3 ${
         show ? "md:flex" : "md:hidden"
       }`}
     >

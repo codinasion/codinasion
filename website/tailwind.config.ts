@@ -1,13 +1,20 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-  content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
+  content: [
+    "./node_modules/flowbite-react/**/*.js",
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
 
   darkMode: "class",
 
   theme: {},
 
-  plugins: [require("@tailwindcss/typography"), require("daisyui")],
+  plugins: [
+    require("flowbite/plugin"),
+    require("@tailwindcss/typography"),
+    require("daisyui"),
+  ],
 
   // daisyUI config (optional - here are the default values)
   daisyui: {

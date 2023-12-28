@@ -14,6 +14,10 @@ const SiteMetadata: SiteMetadataType = {
   twitter_userid: "1527970903367135232",
 
   email: "codinasion@gmail.com",
+
+  github_sponsor_url: "https://github.com/sponsors/codinasion",
+  open_collective_url: "https://opencollective.com/codinasion",
+  patreon_url: "https://www.patreon.com/Codinasion",
 };
 
 export { SiteMetadata };

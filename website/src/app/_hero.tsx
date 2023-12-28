@@ -1,24 +1,23 @@
-"use client";
-
-import Snowfall from "react-snowfall";
 import Link from "@/components/Link";
+import Image from "@/components/Image";
 
 export default function Hero() {
   return (
-    <div
-      className="hero min-h-screen rounded"
-      style={{
-        backgroundImage: "url(/christmas-bg.png)",
-      }}
-    >
-      <Snowfall />
-      <div className="hero-overlay bg-opacity-60 rounded"></div>
-      <div className="hero-content text-center text-neutral-content">
-        <div className="max-w-md">
+    <div className="hero my-5 md:my-20 bg-base-100">
+      <div className="hero-content flex-col lg:flex-row-reverse">
+        <Image
+          alt="Logo"
+          src="/logo.png"
+          className="rounded-lg shadow-2xl max-w-sm hidden lg:block"
+          width={500}
+          height={500}
+          priority={true}
+        />
+        <div className="w-full">
           <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
             Codinasion
           </h1>
-          <p className="mt-6 text-lg leading-8">
+          <p className="mt-6 text-lg leading-8 max-w-2xl">
             We&apos;re a group of open-source enthusiasts from all over the
             world, and we&apos;re here to help you start your open-source
             journey with our{" "}
@@ -27,7 +26,7 @@ export default function Hero() {
             </span>{" "}
             projects.
           </p>
-          <p className="mt-10 text-lg leading-8">
+          <p className="mt-10 text-lg leading-8 max-w-2xl">
             Our{" "}
             <Link
               className="rounded-md mx-1 p-1 font-bold text-primary bg-base-300"
@@ -44,7 +43,7 @@ export default function Hero() {
             href="https://github.com/codinasion/codinasion"
           >
             Contribute Now 🤗
-          </Link>
+          </Link>{" "}
         </div>
       </div>
     </div>
