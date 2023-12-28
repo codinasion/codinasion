@@ -1,13 +1,10 @@
-function getTheHighstSumInArr(arr) {
-  const arrToWork = arr.sort((a, b) => a - b);
-  [...new Set(arrToWork)];
-  const arrToSum = [];
-  let index = arr.length;
-  for (let i = 0; i < 4; i++) {
-    arrToSum.push(arrToWork[--index]);
+function getTheHighstSumInArr(nums) {
+  if(nums.length === 1 ) return nums[0];
+  let maxSum = Number.NEGATIVE_INFINITY;
+  let sum = 0;
+  for(let i = 0; i < nums.length; i++){
+      sum = Math.max(nums[i], nums[i] + sum)
+      maxSum = Math.max(sum, maxSum);
   }
-  const res = arrToSum.reduce((a, b) => {
-    return a + b;
-  });
-  return res;
+  return maxSum;
 }
