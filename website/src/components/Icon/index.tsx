@@ -34,7 +34,6 @@ interface TooltipProps {
 function ToolTipComponent({ kind, tooltip_text, children }: TooltipProps) {
   return (
     <Tooltip
-      animation={false}
       content={
         tooltip_text
           ? tooltip_text

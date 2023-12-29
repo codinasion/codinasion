@@ -1,6 +1,7 @@
 import Pagination from "@/components/Pagination";
 import ProgramCard from "./program-card";
 import ProgramLanguageComponent from "./program-language-component";
+import SponsorCard from "../Sponsors/sponsor-card";
 import type { ProgramListType } from "@/types";
 
 interface Props {
@@ -43,6 +44,8 @@ export default function ProgramComponent({
         <ProgramLanguageComponent
           programLanguageListData={programLanguageListData}
         />
+
+        <SponsorCard />
       </div>
     </div>
   );

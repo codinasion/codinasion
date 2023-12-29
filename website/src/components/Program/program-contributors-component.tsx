@@ -1,4 +1,5 @@
 import { FaUserAstronaut } from "react-icons/fa";
+import { Tooltip } from "flowbite-react";
 import Link from "@/components/Link";
 import Image from "@/components/Image";
 
@@ -22,7 +23,7 @@ export default function ProgramContributorsComponent({
         <div className="card-actions flex flex-wrap">
           {programContributors.map((github_username: string) => (
             <div key={github_username}>
-              <div className="tooltip" data-tip={github_username}>
+              <Tooltip content={github_username}>
                 <Link href={`https://github.com/${github_username}`}>
                   <Image
                     src={`https://github.com/${github_username}.png`}
@@ -33,7 +34,7 @@ export default function ProgramContributorsComponent({
                     priority
                   />
                 </Link>
-              </div>
+              </Tooltip>
             </div>
           ))}
         </div>

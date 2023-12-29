@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { Tooltip } from "flowbite-react";
 import Link from "@/components/Link";
 import Image from "@/components/Image";
 
@@ -70,7 +71,7 @@ export default function ContributorsSection({
           <div className="flex max-w-5xl flex-col gap-3 px-4 lg:px-8">
             <div className="flex flex-wrap items-center justify-center gap-3">
               {displayedContributors.map((contributor) => (
-                <div className="tooltip" data-tip={contributor}>
+                <Tooltip content={contributor}>
                   <Link
                     href={`https://github.com/${contributor}`}
                     rel="nofollow noreferrer noopener"
@@ -85,7 +86,7 @@ export default function ContributorsSection({
                       priority
                     />
                   </Link>
-                </div>
+                </Tooltip>
               ))}
             </div>
             <div className="flex justify-center mt-5">

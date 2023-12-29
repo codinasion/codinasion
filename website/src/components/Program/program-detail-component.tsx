@@ -1,6 +1,7 @@
 import { GetLanguageData } from "@codinasion/language-data";
 import MarkdownPreview from "@/components/MarkdownPreview";
 import ProgramContributorsComponent from "./program-contributors-component";
+import SponsorCard from "@/components/Sponsors/sponsor-card";
 import type { ProgramDataType } from "@/types";
 
 interface Props {
@@ -43,6 +44,8 @@ ${codeblock}
             programContributors={programData.contributors}
           />
         </div>
+
+        <SponsorCard />
       </div>
     </div>
   );

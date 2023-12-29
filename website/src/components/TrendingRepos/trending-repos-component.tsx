@@ -3,6 +3,7 @@
 import React from "react";
 import TrendingRepoCard from "./trending-repo-card";
 import TrendingReposFilterByLanguageComponent from "./trending-repos-filter-by-language-component";
+import SponsorCard from "@/components/Sponsors/sponsor-card";
 import { ScrollToTop } from "@/utils";
 import type { TrendingRepoType } from "@/types";
 
@@ -51,6 +52,8 @@ export default function TrendingReposComponent({
           selectedLanguage={selectedLanguage}
           onLanguageClick={handleLanguageClick}
         />
+
+        <SponsorCard />
       </div>
     </div>
   );
