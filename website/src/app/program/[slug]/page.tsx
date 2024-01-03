@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import SEO from "@/components/SEO";
+import Breadcrumb from "@/components/Breadcrumb";
 import ProgramDetailComponent from "@/components/Program/program-detail-component";
 import { GetProgramList, GetProgramData } from "@/data";
 import type { ProgramDataType, ProgramListType } from "@/types";
@@ -56,6 +57,14 @@ export default async function ProgramDetailPage({
 
   return (
     <>
+      <Breadcrumb
+        paths={[
+          { title: "Home", href: "/" },
+          { title: "Program", href: "/program" },
+          { title: programData.title },
+        ]}
+      />
+
       <ProgramDetailComponent programData={programData} />
     </>
   );
