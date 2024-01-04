@@ -35,7 +35,7 @@ jobs:
           TRIGGER_SUBMIT_PROGRAM: true
 
           # Secrets
-          GITHUB_TOKEN: ${{ secrets.CODINASION_GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.CODINASION_REPO_TOKEN }}
 
       # Create Pull Request
       - name: Create Pull Request
@@ -67,4 +67,4 @@ jobs:
           TRIGGER_SUBMIT_PROGRAM_COMMENT_CLOSE: true
 
           # Secrets
-          GITHUB_TOKEN: ${{ secrets.CODINASION_GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.CODINASION_REPO_TOKEN }}
