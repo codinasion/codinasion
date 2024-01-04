@@ -1764,6 +1764,15 @@
     "created": true
   },
   {
+    "title": "Reverse words in a string",
+    "description": "Write a program to reverse words in a string\n\n```\r\nInput  : \"Hello World\"\r\nOutput : \"World Hello\"\r\n```\n    ",
+    "contributor": "Parvezkhan0",
+    "createdAt": "2024-01-04T16:39:37.568Z",
+    "createdIssueNumber": "4946",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Split string into array of characters",
     "description": "Write a program to split string into array of characters\n\n```\nInput  : \"hello world\"\nOutput : [\"h\", \"e\", \"l\", \"l\", \"o\", \" \", \"w\", \"o\", \"r\", \"l\", \"d\"]\n```",
     "contributor": "harshraj8843",
