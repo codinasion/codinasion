@@ -80,11 +80,11 @@ export default async function SubmitProgram({
         ISSUE_NUMBER: SUBMIT_PROGRAM_ISSUE_NUMBER,
         COMMENT_BODY: `Hey @${SUBMIT_PROGRAM_USERNAME}
 
-        It seems that this program already been submitted.
-        
-        Please check the list of programs here: https://github.com/${GITHUB_USERNAME}/${GITHUB_REPONAME}/blob/master/program/data/programs.json
-        
-        Thanks for your contribution :hugs:`,
+It seems that this program already been submitted.
+
+Please check the list of programs here: https://github.com/${GITHUB_USERNAME}/${GITHUB_REPONAME}/blob/master/program/data/programs.json
+
+Thanks for your contribution :hugs:`,
       });
 
       // Close the issue

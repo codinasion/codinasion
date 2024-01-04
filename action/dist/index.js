@@ -42720,7 +42720,7 @@ async function SubmitProgramCommentClose({ GITHUB_USERNAME, GITHUB_REPONAME, GIT
             ISSUE_NUMBER: SUBMIT_PROGRAM_ISSUE_NUMBER,
             COMMENT_BODY: `Program added successfully :tada:
 
-        Thanks for your contribution :hugs:`,
+Thanks for your contribution :hugs:`,
         });
         // Close the issue
         await (0, close_issue_1.default)({
@@ -42832,11 +42832,11 @@ async function SubmitProgram({ GITHUB_USERNAME, GITHUB_REPONAME, GITHUB_TOKEN, S
                 ISSUE_NUMBER: SUBMIT_PROGRAM_ISSUE_NUMBER,
                 COMMENT_BODY: `Hey @${SUBMIT_PROGRAM_USERNAME}
 
-        It seems that this program already been submitted.
-        
-        Please check the list of programs here: https://github.com/${GITHUB_USERNAME}/${GITHUB_REPONAME}/blob/master/program/data/programs.json
-        
-        Thanks for your contribution :hugs:`,
+It seems that this program already been submitted.
+
+Please check the list of programs here: https://github.com/${GITHUB_USERNAME}/${GITHUB_REPONAME}/blob/master/program/data/programs.json
+
+Thanks for your contribution :hugs:`,
             });
             // Close the issue
             await (0, close_issue_1.default)({

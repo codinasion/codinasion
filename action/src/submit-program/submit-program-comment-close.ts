@@ -22,7 +22,7 @@ export default async function SubmitProgramCommentClose({
       ISSUE_NUMBER: SUBMIT_PROGRAM_ISSUE_NUMBER,
       COMMENT_BODY: `Program added successfully :tada:
 
-        Thanks for your contribution :hugs:`,
+Thanks for your contribution :hugs:`,
     });
 
     // Close the issue
