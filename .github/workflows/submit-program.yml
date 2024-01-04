@@ -49,7 +49,6 @@ jobs:
           branch: "accept-program-${{ github.event.issue.number }}"
           base: master
           labels: "program"
-          reviewers: harshraj8843
           add-paths: |
             program/data/programs.json
           committer: Harsh Raj <harshraj8843@users.noreply.github.com>
