@@ -42789,7 +42789,7 @@ async function SubmitProgram({ GITHUB_USERNAME, GITHUB_REPONAME, GITHUB_TOKEN, S
         // Modify issue body
         const MODIFIED_ISSUE_BODY = `Write a program to ${SUBMIT_PROGRAM_TITLE.toLowerCase()}
 
-    ${SUBMIT_PROGRAM_BODY.replace("### Description", "").trim()}
+${SUBMIT_PROGRAM_BODY.replace("### Description", "").trim()}
     `;
         core.debug(`Modified Body: ${MODIFIED_ISSUE_BODY}`);
         // Create new program data
