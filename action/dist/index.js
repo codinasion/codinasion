@@ -41531,6 +41531,125 @@ exports["default"] = CollectProgramData;
 
 /***/ }),
 
+/***/ 410:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const core = __importStar(__nccwpck_require__(6108));
+const submit_program_comment_close_1 = __importDefault(__nccwpck_require__(2144));
+const dotenv_1 = __importDefault(__nccwpck_require__(8374));
+dotenv_1.default.config();
+async function SubmitProgramCommentClose() {
+    try {
+        (0, submit_program_comment_close_1.default)({
+            GITHUB_USERNAME: "codinasion",
+            GITHUB_REPONAME: "codinasion",
+            GITHUB_TOKEN: core.getInput("GITHUB_TOKEN") ||
+                process.env.CODINASION_GITHUB_TOKEN ||
+                "",
+            SUBMIT_PROGRAM_ISSUE_NUMBER: core.getInput("SUBMIT_PROGRAM_ISSUE_NUMBER") || "",
+        });
+    }
+    catch (error) {
+        core.setFailed(error instanceof Error ? error.message : "Unknown error occurred");
+    }
+}
+exports["default"] = SubmitProgramCommentClose;
+// // Test the function
+// SubmitProgramCommentClose();
+
+
+/***/ }),
+
+/***/ 4550:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const core = __importStar(__nccwpck_require__(6108));
+const submit_program_1 = __importDefault(__nccwpck_require__(8475));
+const dotenv_1 = __importDefault(__nccwpck_require__(8374));
+dotenv_1.default.config();
+async function SubmitProgram() {
+    try {
+        (0, submit_program_1.default)({
+            GITHUB_USERNAME: "codinasion",
+            GITHUB_REPONAME: "codinasion",
+            GITHUB_TOKEN: core.getInput("GITHUB_TOKEN") ||
+                process.env.CODINASION_GITHUB_TOKEN ||
+                "",
+            SUBMIT_PROGRAM_USERNAME: core.getInput("SUBMIT_PROGRAM_USERNAME") || "",
+            SUBMIT_PROGRAM_ISSUE_NUMBER: core.getInput("SUBMIT_PROGRAM_ISSUE_NUMBER") || "",
+            SUBMIT_PROGRAM_TITLE: core.getInput("SUBMIT_PROGRAM_TITLE") || "",
+            SUBMIT_PROGRAM_BODY: core.getInput("SUBMIT_PROGRAM_BODY") || "",
+        });
+    }
+    catch (error) {
+        core.setFailed(error instanceof Error ? error.message : "Unknown error occurred");
+    }
+}
+exports["default"] = SubmitProgram;
+// // Test the function
+// SubmitProgram();
+
+
+/***/ }),
+
 /***/ 1141:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
@@ -41991,6 +42110,8 @@ const tweet_gfi_data_1 = __importDefault(__nccwpck_require__(1141));
 const tweet_trending_repos_data_1 = __importDefault(__nccwpck_require__(3230));
 const tweet_quote_data_1 = __importDefault(__nccwpck_require__(6379));
 const tweet_meme_1 = __importDefault(__nccwpck_require__(2579));
+const submit_program_1 = __importDefault(__nccwpck_require__(4550));
+const submit_program_comment_close_1 = __importDefault(__nccwpck_require__(410));
 /**
  * The main function for the action.
  * @returns {Promise<void>} Resolves when the action is complete.
@@ -42020,6 +42141,14 @@ async function run() {
         const TRIGGER_TWEET_MEME = core.getInput("TRIGGER_TWEET_MEME");
         if (TRIGGER_TWEET_MEME === "true") {
             await (0, tweet_meme_1.default)();
+        }
+        const TRIGGER_SUBMIT_PROGRAM = core.getInput("TRIGGER_SUBMIT_PROGRAM");
+        if (TRIGGER_SUBMIT_PROGRAM === "true") {
+            await (0, submit_program_1.default)();
+        }
+        const TRIGGER_SUBMIT_PROGRAM_COMMENT_CLOSE = core.getInput("TRIGGER_SUBMIT_PROGRAM_COMMENT_CLOSE");
+        if (TRIGGER_SUBMIT_PROGRAM_COMMENT_CLOSE === "true") {
+            await (0, submit_program_comment_close_1.default)();
         }
     }
     catch (error) {
@@ -42416,6 +42545,327 @@ async function FetchProgramList({ GITHUB_USERNAME, PROGRAM_REPONAME, PROGRAM_PAT
     return [];
 }
 exports["default"] = FetchProgramList;
+
+
+/***/ }),
+
+/***/ 7016:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const core = __importStar(__nccwpck_require__(6108));
+const node_fetch_1 = __importDefault(__nccwpck_require__(5360));
+async function CloseIssue({ GITHUB_USERNAME, GITHUB_REPONAME, GITHUB_TOKEN, ISSUE_NUMBER, CLOSING_LABELS, }) {
+    try {
+        const response = await (0, node_fetch_1.default)(`https://api.github.com/repos/${GITHUB_USERNAME}/${GITHUB_REPONAME}/issues/${ISSUE_NUMBER}`, {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json",
+                Authorization: `Bearer ${GITHUB_TOKEN}`,
+            },
+            body: JSON.stringify({
+                state: "closed",
+                labels: CLOSING_LABELS,
+            }),
+        });
+        if (!response.ok) {
+            core.setFailed(`Failed to close issue: ${response.statusText} (${response.status})`);
+        }
+        const responseData = await response.json();
+        core.debug(JSON.stringify(responseData));
+    }
+    catch (error) {
+        core.setFailed(error instanceof Error ? error.message : "Unknown error occurred");
+    }
+}
+exports["default"] = CloseIssue;
+
+
+/***/ }),
+
+/***/ 7841:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const core = __importStar(__nccwpck_require__(6108));
+const node_fetch_1 = __importDefault(__nccwpck_require__(5360));
+async function CreateIssueComment({ GITHUB_USERNAME, GITHUB_REPONAME, GITHUB_TOKEN, ISSUE_NUMBER, COMMENT_BODY, }) {
+    try {
+        const response = await (0, node_fetch_1.default)(`https://api.github.com/repos/${GITHUB_USERNAME}/${GITHUB_REPONAME}/issues/${ISSUE_NUMBER}/comments`, {
+            method: "POST",
+            headers: {
+                Authorization: `Bearer ${GITHUB_TOKEN}`,
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                body: COMMENT_BODY,
+            }),
+        });
+        if (!response.ok) {
+            core.setFailed(`Failed to create comment: ${response.statusText} (${response.status})`);
+        }
+        const responseData = await response.json();
+        core.debug(JSON.stringify(responseData));
+    }
+    catch (error) {
+        core.setFailed(error instanceof Error ? error.message : "Unknown error occurred");
+    }
+}
+exports["default"] = CreateIssueComment;
+
+
+/***/ }),
+
+/***/ 2144:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+/**
+ * Purpose: Notify the user & close the issue (only after pull request is created)
+ */
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const core = __importStar(__nccwpck_require__(6108));
+const create_issue_comment_1 = __importDefault(__nccwpck_require__(7841));
+const close_issue_1 = __importDefault(__nccwpck_require__(7016));
+async function SubmitProgramCommentClose({ GITHUB_USERNAME, GITHUB_REPONAME, GITHUB_TOKEN, SUBMIT_PROGRAM_ISSUE_NUMBER, }) {
+    try {
+        // Create a comment on the issue
+        await (0, create_issue_comment_1.default)({
+            GITHUB_USERNAME,
+            GITHUB_REPONAME,
+            GITHUB_TOKEN,
+            ISSUE_NUMBER: SUBMIT_PROGRAM_ISSUE_NUMBER,
+            COMMENT_BODY: `Program added successfully :tada:
+
+        Thanks for your contribution :hugs:`,
+        });
+        // Close the issue
+        await (0, close_issue_1.default)({
+            GITHUB_USERNAME,
+            GITHUB_REPONAME,
+            GITHUB_TOKEN,
+            ISSUE_NUMBER: SUBMIT_PROGRAM_ISSUE_NUMBER,
+            CLOSING_LABELS: ["submit-program", "submitted"],
+        });
+    }
+    catch (error) {
+        core.setFailed(error instanceof Error ? error.message : "Unknown error occurred");
+    }
+}
+exports["default"] = SubmitProgramCommentClose;
+
+
+/***/ }),
+
+/***/ 8475:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+/**
+ * Purpose: Aceept the program from the user and add it to the list of programs
+ */
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const core = __importStar(__nccwpck_require__(6108));
+const fs_1 = __importDefault(__nccwpck_require__(7147));
+const create_issue_comment_1 = __importDefault(__nccwpck_require__(7841));
+const close_issue_1 = __importDefault(__nccwpck_require__(7016));
+async function SubmitProgram({ GITHUB_USERNAME, GITHUB_REPONAME, GITHUB_TOKEN, SUBMIT_PROGRAM_USERNAME, SUBMIT_PROGRAM_ISSUE_NUMBER, SUBMIT_PROGRAM_TITLE, SUBMIT_PROGRAM_BODY, }) {
+    try {
+        // Debug the inputs
+        core.debug(`Issue Author: ${SUBMIT_PROGRAM_USERNAME}`);
+        core.debug(`Issue Number: ${SUBMIT_PROGRAM_ISSUE_NUMBER}`);
+        core.debug(`Title: ${SUBMIT_PROGRAM_TITLE}`);
+        core.debug(`Body: ${SUBMIT_PROGRAM_BODY}`);
+        // Modify issue body
+        const MODIFIED_ISSUE_BODY = `Write a program to ${SUBMIT_PROGRAM_TITLE.toLowerCase()}
+
+    ${SUBMIT_PROGRAM_BODY.replace("### Description", "").trim()}
+    `;
+        core.debug(`Modified Body: ${MODIFIED_ISSUE_BODY}`);
+        // Create new program data
+        const newProgramData = {
+            title: SUBMIT_PROGRAM_TITLE,
+            description: MODIFIED_ISSUE_BODY,
+            contributor: SUBMIT_PROGRAM_USERNAME,
+            createdAt: new Date().toISOString(),
+            createdIssueNumber: SUBMIT_PROGRAM_ISSUE_NUMBER,
+            publishedAt: "",
+            created: false,
+        };
+        core.debug(`New Program Data: ${JSON.stringify(newProgramData)}`);
+        // Get previous program data
+        const programDataFolderPath = "program/data";
+        // Check if the folder exists
+        if (!fs_1.default.existsSync(programDataFolderPath)) {
+            // Create the folder
+            fs_1.default.mkdirSync(programDataFolderPath);
+        }
+        // Check if the file exists
+        const programDataFilePath = `${programDataFolderPath}/programs.json`;
+        if (!fs_1.default.existsSync(programDataFilePath)) {
+            // Create the file
+            fs_1.default.writeFileSync(programDataFilePath, "[]");
+        }
+        // Read the file
+        const previousProgramData = JSON.parse(fs_1.default.readFileSync(programDataFilePath, "utf8"));
+        core.debug(`Previous Program Data: ${JSON.stringify(previousProgramData)}`);
+        // Check if the program already exists
+        const programExists = previousProgramData.find((program) => program.title === SUBMIT_PROGRAM_TITLE);
+        // If the program already exists
+        if (programExists) {
+            core.debug("Program already exists !!!");
+            // Create a comment on the issue
+            await (0, create_issue_comment_1.default)({
+                GITHUB_USERNAME,
+                GITHUB_REPONAME,
+                GITHUB_TOKEN,
+                ISSUE_NUMBER: SUBMIT_PROGRAM_ISSUE_NUMBER,
+                COMMENT_BODY: `Hey @${SUBMIT_PROGRAM_USERNAME}
+
+        It seems that this program already been submitted.
+        
+        Please check the list of programs here: https://github.com/${GITHUB_USERNAME}/${GITHUB_REPONAME}/blob/master/program/data/programs.json
+        
+        Thanks for your contribution :hugs:`,
+            });
+            // Close the issue
+            await (0, close_issue_1.default)({
+                GITHUB_USERNAME,
+                GITHUB_REPONAME,
+                GITHUB_TOKEN,
+                ISSUE_NUMBER: SUBMIT_PROGRAM_ISSUE_NUMBER,
+                CLOSING_LABELS: ["submit-program", "duplicate"],
+            });
+            // Set output as failure
+            core.setFailed("Program already exists !!!");
+            // Stop the execution
+            return;
+        }
+        // Add the new program data to the previous program data
+        previousProgramData.push(newProgramData);
+        // Sort the programs by title
+        previousProgramData.sort((a, b) => a.title.localeCompare(b.title));
+        core.debug(`New Program Data: ${JSON.stringify(previousProgramData)}`);
+        // Write the new program data to the file
+        fs_1.default.writeFileSync(programDataFilePath, JSON.stringify(previousProgramData, null, 2));
+        // Set output as success
+        core.setOutput("submit-success", "true");
+    }
+    catch (error) {
+        core.setFailed(error instanceof Error ? error.message : "Unknown error occurred");
+    }
+}
+exports["default"] = SubmitProgram;
 
 
 /***/ }),

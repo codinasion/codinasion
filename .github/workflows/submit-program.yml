@@ -1,0 +1,71 @@
+name: Submit Program
+on:
+  issues:
+    types: [labeled]
+
+jobs:
+  submit_program:
+    if: github.event.label.name == 'submit-program'
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        id: checkout
+        uses: actions/checkout@v4
+
+      - name: Issue data
+        run: |
+          echo "Issue number : ${{ github.event.issue.number }}"
+          echo "Issue title  : ${{ github.event.issue.title }}"
+          echo "Issue body   : ${{ github.event.issue.body }}"
+          echo "user         : ${{ github.event.issue.user.login }}"
+
+      # Accept Program
+      - name: Submit Program
+        id: submit-program
+        uses: ./action/
+        with:
+          SUBMIT_PROGRAM_USERNAME: ${{ github.event.issue.user.login }}
+          SUBMIT_PROGRAM_ISSUE_NUMBER: ${{ github.event.issue.number }}
+          SUBMIT_PROGRAM_TITLE: ${{ github.event.issue.title }}
+          SUBMIT_PROGRAM_BODY: ${{ github.event.issue.body }}
+
+          # Trigger
+          TRIGGER_SUBMIT_PROGRAM: true
+
+          # Secrets
+          GITHUB_TOKEN: ${{ secrets.CODINASION_GITHUB_TOKEN }}
+
+      # Create Pull Request
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v5
+        with:
+          title: "Accept Program #${{ github.event.issue.number }}"
+          body: |
+            Issue Title: ${{ github.event.issue.title }}
+
+            Issue Number: #${{ github.event.issue.number }}
+          branch: "accept-program-${{ github.event.issue.number }}"
+          base: master
+          labels: "program"
+          reviewers: harshraj8843
+          add-paths: |
+            program/data/programs.json
+          committer: Harsh Raj <harshraj8843@users.noreply.github.com>
+          author: Harsh Raj <harshraj8843@users.noreply.github.com>
+          commit-message: Accept Program - ${{ github.event.issue.number }}
+          token: ${{ secrets.CODINASION_REPO_TOKEN }}
+
+      # Comment & Close
+      - name: Comment & Close
+        if: steps.submit-program.outputs.submit-success == 'true'
+        uses: ./action/
+        with:
+          SUBMIT_PROGRAM_ISSUE_NUMBER: ${{ github.event.issue.number }}
+
+          # Trigger
+          TRIGGER_SUBMIT_PROGRAM_COMMENT_CLOSE: true
+
+          # Secrets
+          GITHUB_TOKEN: ${{ secrets.CODINASION_GITHUB_TOKEN }}

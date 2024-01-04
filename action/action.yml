@@ -38,6 +38,16 @@ inputs:
     required: true
     default: "false"
 
+  TRIGGER_SUBMIT_PROGRAM:
+    description: "Trigger submit program"
+    required: true
+    default: "false"
+
+  TRIGGER_SUBMIT_PROGRAM_COMMENT_CLOSE:
+    description: "Trigger submit program comment close"
+    required: true
+    default: "false"
+
   TWITTER_APP_KEY:
     description: "twitter app key"
     required: true
@@ -62,6 +72,26 @@ inputs:
     description: "is test?"
     required: true
     default: "false"
+
+  SUBMIT_PROGRAM_USERNAME:
+    description: "submit program username"
+    required: true
+    default: ""
+
+  SUBMIT_PROGRAM_ISSUE_NUMBER:
+    description: "submit program issue number"
+    required: true
+    default: ""
+
+  SUBMIT_PROGRAM_TITLE:
+    description: "submit program title"
+    required: true
+    default: ""
+
+  SUBMIT_PROGRAM_BODY:
+    description: "submit program body"
+    required: true
+    default: ""
 
 runs:
   using: node20

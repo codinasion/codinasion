@@ -5,6 +5,8 @@ import TweetGFIData from "./action/tweet-gfi-data";
 import TweetTrendingReposData from "./action/tweet-trending-repos-data";
 import TweetQuoteData from "./action/tweet-quote-data";
 import TweetMeme from "./action/tweet-meme";
+import SubmitProgram from "./action/submit-program";
+import SubmitProgramCommentClose from "./action/submit-program comment-close";
 
 /**
  * The main function for the action.
@@ -50,6 +52,20 @@ export async function run(): Promise<void> {
     const TRIGGER_TWEET_MEME: string = core.getInput("TRIGGER_TWEET_MEME");
     if (TRIGGER_TWEET_MEME === "true") {
       await TweetMeme();
+    }
+
+    const TRIGGER_SUBMIT_PROGRAM: string = core.getInput(
+      "TRIGGER_SUBMIT_PROGRAM",
+    );
+    if (TRIGGER_SUBMIT_PROGRAM === "true") {
+      await SubmitProgram();
+    }
+
+    const TRIGGER_SUBMIT_PROGRAM_COMMENT_CLOSE: string = core.getInput(
+      "TRIGGER_SUBMIT_PROGRAM_COMMENT_CLOSE",
+    );
+    if (TRIGGER_SUBMIT_PROGRAM_COMMENT_CLOSE === "true") {
+      await SubmitProgramCommentClose();
     }
   } catch (error) {
     // Fail the workflow run if an error occurs
