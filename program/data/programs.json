@@ -1769,8 +1769,8 @@
     "contributor": "Parvezkhan0",
     "createdAt": "2024-01-04T16:39:37.568Z",
     "createdIssueNumber": "4946",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2024-01-05T16:54:05.023Z",
+    "created": true
   },
   {
     "title": "Split string into array of characters",
