@@ -13,6 +13,9 @@ on:
 
 jobs:
   collect-program-data:
+    # run only if repo is not a fork
+    if: github.repository == 'codinasion/codinasion'
+
     name: Collect Program Data
 
     runs-on: "ubuntu-latest"

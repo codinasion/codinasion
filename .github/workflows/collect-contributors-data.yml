@@ -13,6 +13,9 @@ on:
 
 jobs:
   collect-contributors-data:
+    # run only if repo is not a fork
+    if: github.repository == 'codinasion/codinasion'
+
     name: Collect Contributors Data
 
     runs-on: "ubuntu-latest"

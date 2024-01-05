@@ -48,6 +48,16 @@ inputs:
     required: true
     default: "false"
 
+  TRIGGER_AUTO_CREATE_ISSUE:
+    description: "Trigger auto create issue"
+    required: true
+    default: "false"
+
+  TRIGGER_AUTO_TRACK_ISSUE:
+    description: "Trigger auto track issue"
+    required: true
+    default: "false"
+
   TWITTER_APP_KEY:
     description: "twitter app key"
     required: true
@@ -90,6 +100,21 @@ inputs:
 
   SUBMIT_PROGRAM_BODY:
     description: "submit program body"
+    required: true
+    default: ""
+
+  AUTO_TRACK_ISSUE_NUMBER:
+    description: "auto track issue number"
+    required: true
+    default: ""
+
+  AUTO_TRACK_ISSUE_TITLE:
+    description: "auto track issue title"
+    required: true
+    default: ""
+
+  AUTO_TRACK_ISSUE_BODY:
+    description: "auto track issue body"
     required: true
     default: ""
 

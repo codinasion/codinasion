@@ -13,6 +13,9 @@ on:
 
 jobs:
   tweet-meme:
+    # run only if repo is not a fork
+    if: github.repository == 'codinasion/codinasion'
+
     name: Tweet Meme
 
     runs-on: "ubuntu-latest"

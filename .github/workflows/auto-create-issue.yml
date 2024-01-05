@@ -1,0 +1,46 @@
+name: Auto Create Issue
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 0 * * *"
+
+jobs:
+  auto_create_issue:
+    # run only if repo is not a fork
+    if: github.repository == 'codinasion/codinasion'
+
+    name: Auto Create Issue
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        id: checkout
+        uses: actions/checkout@v4
+
+      - name: Create Issue
+        uses: ./action/
+        with:
+          # Trigger
+          TRIGGER_AUTO_CREATE_ISSUE: true
+
+          # Secrets
+          GITHUB_TOKEN: ${{ secrets.CODINASION_REPO_TOKEN }}
+
+      # Create Pull Request
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v5
+        with:
+          title: Auto Create Issue - ${{ github.run_number }}
+          body: |
+            This is an auto generated pull request after auto creating issue.
+            Issue Number: #${{ steps.create_issue.outputs.issue_number }}
+          branch: auto-create-issue-${{ github.run_number }}
+          base: master
+          add-paths: |
+            program/data/programs.json
+            program/program/**/README.md
+          committer: Harsh Raj <harshraj8843@users.noreply.github.com>
+          author: Harsh Raj <harshraj8843@users.noreply.github.com>
+          commit-message: Auto Create Issue - ${{ github.run_number }}
+          token: ${{ secrets.CODINASION_REPO_TOKEN }}

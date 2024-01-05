@@ -5,7 +5,8 @@ on:
 
 jobs:
   submit_program:
-    if: github.event.label.name == 'submit-program'
+    # run only if repo is not a fork
+    if: github.repository == 'codinasion/codinasion' && github.event.action == 'labeled' && github.event.label.name == 'submit-program'
 
     runs-on: ubuntu-latest
 

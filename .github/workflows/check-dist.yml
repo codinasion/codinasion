@@ -16,7 +16,11 @@ permissions:
 
 jobs:
   check-action-dist:
+    # run only if repo is not a fork
+    if: github.repository == 'codinasion/codinasion'
+
     name: Check action/dist/
+
     runs-on: ubuntu-latest
 
     # To use Turborepo Remote Caching, set the following environment variables for the job.

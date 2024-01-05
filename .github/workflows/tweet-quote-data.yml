@@ -13,6 +13,9 @@ on:
 
 jobs:
   tweet-quote-data:
+    # run only if repo is not a fork
+    if: github.repository == 'codinasion/codinasion'
+
     name: Tweet Quote Data
 
     runs-on: "ubuntu-latest"

@@ -13,6 +13,9 @@ on:
 
 jobs:
   tweet-gfi-data:
+    # run only if repo is not a fork
+    if: github.repository == 'codinasion/codinasion'
+
     name: Tweet GFI Data
 
     runs-on: "ubuntu-latest"

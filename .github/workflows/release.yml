@@ -15,8 +15,13 @@ concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
   release:
+    # run only if repo is not a fork
+    if: github.repository == 'codinasion/codinasion'
+
     name: Release
+
     runs-on: ubuntu-latest
+
     # To use Turborepo Remote Caching, set the following environment variables for the job.
     env:
       TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}

@@ -1,0 +1,36 @@
+name: Auto Track Issue
+on:
+  issues:
+    types: [labeled]
+
+jobs:
+  auto_track_issue:
+    # run only if repo is not a fork
+    if: github.repository == 'codinasion/codinasion' && github.event.action == 'labeled' && github.event.label.name == 'auto-track'
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        id: checkout
+        uses: actions/checkout@v4
+
+     
+      - name: Issue data
+        run: |
+          echo "Issue number : ${{ github.event.issue.number }}"
+          echo "Issue title  : ${{ github.event.issue.title }}"
+          echo "Issue body   : ${{ github.event.issue.body }}"
+
+      - name: Track Issue
+        uses: ./action/
+        with:
+          AUTO_TRACK_ISSUE_NUMBER: ${{ github.event.issue.number }}
+          AUTO_TRACK_ISSUE_TITLE: ${{ github.event.issue.title }}
+          AUTO_TRACK_ISSUE_BODY: ${{ github.event.issue.body }}
+          
+          # Trigger
+          TRIGGER_AUTO_TRACK_ISSUE: true
+
+          # Secrets
+          GITHUB_TOKEN: ${{ secrets.CODINASION_REPO_TOKEN }}
