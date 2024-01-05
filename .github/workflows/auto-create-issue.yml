@@ -19,6 +19,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Create Issue
+        id: create-issue
         uses: ./action/
         with:
           # Trigger
@@ -34,7 +35,7 @@ jobs:
           title: Auto Create Issue - ${{ github.run_number }}
           body: |
             This is an auto generated pull request after auto creating issue.
-            Issue Number: #${{ steps.create_issue.outputs.issue_number }}
+            Issue Number: #${{ steps.create-issue.outputs.issue-number }}
           branch: auto-create-issue-${{ github.run_number }}
           base: master
           add-paths: |

@@ -15,7 +15,6 @@ jobs:
         id: checkout
         uses: actions/checkout@v4
 
-     
       - name: Issue data
         run: |
           echo "Issue number : ${{ github.event.issue.number }}"
@@ -28,7 +27,7 @@ jobs:
           AUTO_TRACK_ISSUE_NUMBER: ${{ github.event.issue.number }}
           AUTO_TRACK_ISSUE_TITLE: ${{ github.event.issue.title }}
           AUTO_TRACK_ISSUE_BODY: ${{ github.event.issue.body }}
-          
+
           # Trigger
           TRIGGER_AUTO_TRACK_ISSUE: true
 

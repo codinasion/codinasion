@@ -42809,7 +42809,7 @@ trackId: ${ISSUE_NUMBER}
         // Write program README file
         fs_1.default.writeFileSync(programReadmeFilePath, programReadmeFileContent);
         // Set output
-        core.setOutput("issue_number", ISSUE_NUMBER);
+        core.setOutput("issue-number", ISSUE_NUMBER);
     }
     catch (error) {
         core.setFailed(error instanceof Error ? error.message : "Unknown error occurred");
@@ -42916,7 +42916,7 @@ async function AutoTrackIssue({ GITHUB_USERNAME, GITHUB_REPONAME, GITHUB_TOKEN, 
 
 - Fork this repository
 - Create a new branch
-- Save the solution in \`program/${FILE_NAME.toLowerCase().replace(/ /g, "-")}/${FILE}\`
+- Save the solution in \`program/program/${FILE_NAME.toLowerCase().replace(/ /g, "-")}/${FILE}\`
 - Commit the changes
 - Create a pull request
 

@@ -94,7 +94,7 @@ export default async function AutoTrackIssue({
 
 - Fork this repository
 - Create a new branch
-- Save the solution in \`program/${FILE_NAME.toLowerCase().replace(
+- Save the solution in \`program/program/${FILE_NAME.toLowerCase().replace(
         / /g,
         "-",
       )}/${FILE}\`

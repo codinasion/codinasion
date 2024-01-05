@@ -143,7 +143,7 @@ trackId: ${ISSUE_NUMBER}
     fs.writeFileSync(programReadmeFilePath, programReadmeFileContent);
 
     // Set output
-    core.setOutput("issue_number", ISSUE_NUMBER);
+    core.setOutput("issue-number", ISSUE_NUMBER);
   } catch (error) {
     core.setFailed(
       error instanceof Error ? error.message : "Unknown error occurred",
