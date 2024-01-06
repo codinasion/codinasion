@@ -1344,10 +1344,10 @@ importers:
   npm/packages/codinasion:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -1371,10 +1371,10 @@ importers:
   npm/packages/dsa/dsa:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -1398,10 +1398,10 @@ importers:
   npm/packages/dsa/queue:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -1425,10 +1425,10 @@ importers:
   npm/packages/dsa/search/binary-search:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -1452,10 +1452,10 @@ importers:
   npm/packages/dsa/search/linear-search:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -1479,10 +1479,10 @@ importers:
   npm/packages/dsa/sort/bubble-sort:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -1506,10 +1506,10 @@ importers:
   npm/packages/dsa/sort/counting-sort:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -1533,10 +1533,10 @@ importers:
   npm/packages/dsa/sort/heap-sort:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -1560,10 +1560,10 @@ importers:
   npm/packages/dsa/sort/insertion-sort:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -1587,10 +1587,10 @@ importers:
   npm/packages/dsa/sort/merge-sort:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -1614,10 +1614,10 @@ importers:
   npm/packages/dsa/sort/quick-sort:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -1641,10 +1641,10 @@ importers:
   npm/packages/dsa/sort/radix-sort:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -1668,10 +1668,10 @@ importers:
   npm/packages/dsa/sort/selection-sort:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -1695,10 +1695,10 @@ importers:
   npm/packages/dsa/stack:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -1722,10 +1722,10 @@ importers:
   npm/packages/language-data:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -1749,10 +1749,10 @@ importers:
   npm/packages/number-system/ascii/ascii:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -1776,10 +1776,10 @@ importers:
   npm/packages/number-system/ascii/ascii-to-binary:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -1803,10 +1803,10 @@ importers:
   npm/packages/number-system/ascii/ascii-to-decimal:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -1830,10 +1830,10 @@ importers:
   npm/packages/number-system/ascii/ascii-to-hexadecimal:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -1857,10 +1857,10 @@ importers:
   npm/packages/number-system/ascii/ascii-to-octal:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -1884,10 +1884,10 @@ importers:
   npm/packages/number-system/binary/binary:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -1911,10 +1911,10 @@ importers:
   npm/packages/number-system/binary/binary-to-ascii:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -1938,10 +1938,10 @@ importers:
   npm/packages/number-system/binary/binary-to-decimal:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -1965,10 +1965,10 @@ importers:
   npm/packages/number-system/binary/binary-to-hexadecimal:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -1992,10 +1992,10 @@ importers:
   npm/packages/number-system/binary/binary-to-octal:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -2019,10 +2019,10 @@ importers:
   npm/packages/number-system/decimal/decimal:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -2046,10 +2046,10 @@ importers:
   npm/packages/number-system/decimal/decimal-to-ascii:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -2073,10 +2073,10 @@ importers:
   npm/packages/number-system/decimal/decimal-to-binary:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -2100,10 +2100,10 @@ importers:
   npm/packages/number-system/decimal/decimal-to-hexadecimal:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -2127,10 +2127,10 @@ importers:
   npm/packages/number-system/decimal/decimal-to-octal:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -2154,10 +2154,10 @@ importers:
   npm/packages/number-system/hexadecimal/hexadecimal:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -2181,10 +2181,10 @@ importers:
   npm/packages/number-system/hexadecimal/hexadecimal-to-ascii:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -2208,10 +2208,10 @@ importers:
   npm/packages/number-system/hexadecimal/hexadecimal-to-binary:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -2235,10 +2235,10 @@ importers:
   npm/packages/number-system/hexadecimal/hexadecimal-to-decimal:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -2262,10 +2262,10 @@ importers:
   npm/packages/number-system/hexadecimal/hexadecimal-to-octal:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -2289,10 +2289,10 @@ importers:
   npm/packages/number-system/number-system:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -2316,10 +2316,10 @@ importers:
   npm/packages/number-system/octal/octal:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -2343,10 +2343,10 @@ importers:
   npm/packages/number-system/octal/octal-to-ascii:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -2370,10 +2370,10 @@ importers:
   npm/packages/number-system/octal/octal-to-binary:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -2397,10 +2397,10 @@ importers:
   npm/packages/number-system/octal/octal-to-decimal:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -2424,10 +2424,10 @@ importers:
   npm/packages/number-system/octal/octal-to-hexadecimal:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -2451,10 +2451,10 @@ importers:
   npm/packages/string/case/camel-case-string/camel-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -2478,10 +2478,10 @@ importers:
   npm/packages/string/case/camel-case-string/camel-case-string-to-constant-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -2505,10 +2505,10 @@ importers:
   npm/packages/string/case/camel-case-string/camel-case-string-to-dot-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -2532,10 +2532,10 @@ importers:
   npm/packages/string/case/camel-case-string/camel-case-string-to-header-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -2559,10 +2559,10 @@ importers:
   npm/packages/string/case/camel-case-string/camel-case-string-to-kebab-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -2586,10 +2586,10 @@ importers:
   npm/packages/string/case/camel-case-string/camel-case-string-to-lower-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -2613,10 +2613,10 @@ importers:
   npm/packages/string/case/camel-case-string/camel-case-string-to-pascal-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -2640,10 +2640,10 @@ importers:
   npm/packages/string/case/camel-case-string/camel-case-string-to-path-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -2667,10 +2667,10 @@ importers:
   npm/packages/string/case/camel-case-string/camel-case-string-to-sentence-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -2694,10 +2694,10 @@ importers:
   npm/packages/string/case/camel-case-string/camel-case-string-to-snake-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -2721,10 +2721,10 @@ importers:
   npm/packages/string/case/camel-case-string/camel-case-string-to-title-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -2748,10 +2748,10 @@ importers:
   npm/packages/string/case/camel-case-string/camel-case-string-to-upper-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -2775,10 +2775,10 @@ importers:
   npm/packages/string/case/case:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -2802,10 +2802,10 @@ importers:
   npm/packages/string/case/constant-case-string/constant-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -2829,10 +2829,10 @@ importers:
   npm/packages/string/case/constant-case-string/constant-case-string-to-camel-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -2856,10 +2856,10 @@ importers:
   npm/packages/string/case/constant-case-string/constant-case-string-to-dot-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -2883,10 +2883,10 @@ importers:
   npm/packages/string/case/constant-case-string/constant-case-string-to-header-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -2910,10 +2910,10 @@ importers:
   npm/packages/string/case/constant-case-string/constant-case-string-to-kebab-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -2937,10 +2937,10 @@ importers:
   npm/packages/string/case/constant-case-string/constant-case-string-to-lower-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -2964,10 +2964,10 @@ importers:
   npm/packages/string/case/constant-case-string/constant-case-string-to-pascal-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -2991,10 +2991,10 @@ importers:
   npm/packages/string/case/constant-case-string/constant-case-string-to-path-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -3018,10 +3018,10 @@ importers:
   npm/packages/string/case/constant-case-string/constant-case-string-to-sentence-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -3045,10 +3045,10 @@ importers:
   npm/packages/string/case/constant-case-string/constant-case-string-to-snake-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -3072,10 +3072,10 @@ importers:
   npm/packages/string/case/constant-case-string/constant-case-string-to-title-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -3099,10 +3099,10 @@ importers:
   npm/packages/string/case/constant-case-string/constant-case-string-to-upper-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -3126,10 +3126,10 @@ importers:
   npm/packages/string/case/dot-case-string/dot-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -3153,10 +3153,10 @@ importers:
   npm/packages/string/case/dot-case-string/dot-case-string-to-camel-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -3180,10 +3180,10 @@ importers:
   npm/packages/string/case/dot-case-string/dot-case-string-to-constant-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -3207,10 +3207,10 @@ importers:
   npm/packages/string/case/dot-case-string/dot-case-string-to-header-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -3234,10 +3234,10 @@ importers:
   npm/packages/string/case/dot-case-string/dot-case-string-to-kebab-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -3261,10 +3261,10 @@ importers:
   npm/packages/string/case/dot-case-string/dot-case-string-to-lower-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -3288,10 +3288,10 @@ importers:
   npm/packages/string/case/dot-case-string/dot-case-string-to-pascal-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -3315,10 +3315,10 @@ importers:
   npm/packages/string/case/dot-case-string/dot-case-string-to-path-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -3342,10 +3342,10 @@ importers:
   npm/packages/string/case/dot-case-string/dot-case-string-to-sentence-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -3369,10 +3369,10 @@ importers:
   npm/packages/string/case/dot-case-string/dot-case-string-to-snake-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -3396,10 +3396,10 @@ importers:
   npm/packages/string/case/dot-case-string/dot-case-string-to-title-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -3423,10 +3423,10 @@ importers:
   npm/packages/string/case/dot-case-string/dot-case-string-to-upper-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -3450,10 +3450,10 @@ importers:
   npm/packages/string/case/header-case-string/header-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -3477,10 +3477,10 @@ importers:
   npm/packages/string/case/header-case-string/header-case-string-to-camel-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -3504,10 +3504,10 @@ importers:
   npm/packages/string/case/header-case-string/header-case-string-to-constant-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -3531,10 +3531,10 @@ importers:
   npm/packages/string/case/header-case-string/header-case-string-to-dot-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -3558,10 +3558,10 @@ importers:
   npm/packages/string/case/header-case-string/header-case-string-to-kebab-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -3585,10 +3585,10 @@ importers:
   npm/packages/string/case/header-case-string/header-case-string-to-lower-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -3612,10 +3612,10 @@ importers:
   npm/packages/string/case/header-case-string/header-case-string-to-pascal-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -3639,10 +3639,10 @@ importers:
   npm/packages/string/case/header-case-string/header-case-string-to-path-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -3666,10 +3666,10 @@ importers:
   npm/packages/string/case/header-case-string/header-case-string-to-sentence-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -3693,10 +3693,10 @@ importers:
   npm/packages/string/case/header-case-string/header-case-string-to-snake-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -3720,10 +3720,10 @@ importers:
   npm/packages/string/case/header-case-string/header-case-string-to-title-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -3747,10 +3747,10 @@ importers:
   npm/packages/string/case/header-case-string/header-case-string-to-upper-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -3774,10 +3774,10 @@ importers:
   npm/packages/string/case/kebab-case-string/kebab-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -3801,10 +3801,10 @@ importers:
   npm/packages/string/case/kebab-case-string/kebab-case-string-to-camel-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -3828,10 +3828,10 @@ importers:
   npm/packages/string/case/kebab-case-string/kebab-case-string-to-constant-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -3855,10 +3855,10 @@ importers:
   npm/packages/string/case/kebab-case-string/kebab-case-string-to-dot-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -3882,10 +3882,10 @@ importers:
   npm/packages/string/case/kebab-case-string/kebab-case-string-to-header-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -3909,10 +3909,10 @@ importers:
   npm/packages/string/case/kebab-case-string/kebab-case-string-to-lower-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -3936,10 +3936,10 @@ importers:
   npm/packages/string/case/kebab-case-string/kebab-case-string-to-pascal-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -3963,10 +3963,10 @@ importers:
   npm/packages/string/case/kebab-case-string/kebab-case-string-to-path-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -3990,10 +3990,10 @@ importers:
   npm/packages/string/case/kebab-case-string/kebab-case-string-to-sentence-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -4017,10 +4017,10 @@ importers:
   npm/packages/string/case/kebab-case-string/kebab-case-string-to-snake-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -4044,10 +4044,10 @@ importers:
   npm/packages/string/case/kebab-case-string/kebab-case-string-to-title-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -4071,10 +4071,10 @@ importers:
   npm/packages/string/case/kebab-case-string/kebab-case-string-to-upper-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -4098,10 +4098,10 @@ importers:
   npm/packages/string/case/lower-case-string/lower-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -4125,10 +4125,10 @@ importers:
   npm/packages/string/case/lower-case-string/lower-case-string-to-camel-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -4152,10 +4152,10 @@ importers:
   npm/packages/string/case/lower-case-string/lower-case-string-to-constant-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -4179,10 +4179,10 @@ importers:
   npm/packages/string/case/lower-case-string/lower-case-string-to-dot-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -4206,10 +4206,10 @@ importers:
   npm/packages/string/case/lower-case-string/lower-case-string-to-header-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -4233,10 +4233,10 @@ importers:
   npm/packages/string/case/lower-case-string/lower-case-string-to-kebab-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -4260,10 +4260,10 @@ importers:
   npm/packages/string/case/lower-case-string/lower-case-string-to-pascal-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -4287,10 +4287,10 @@ importers:
   npm/packages/string/case/lower-case-string/lower-case-string-to-path-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -4314,10 +4314,10 @@ importers:
   npm/packages/string/case/lower-case-string/lower-case-string-to-sentence-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -4341,10 +4341,10 @@ importers:
   npm/packages/string/case/lower-case-string/lower-case-string-to-snake-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -4368,10 +4368,10 @@ importers:
   npm/packages/string/case/lower-case-string/lower-case-string-to-title-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -4395,10 +4395,10 @@ importers:
   npm/packages/string/case/lower-case-string/lower-case-string-to-upper-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -4422,10 +4422,10 @@ importers:
   npm/packages/string/case/pascal-case-string/pascal-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -4449,10 +4449,10 @@ importers:
   npm/packages/string/case/pascal-case-string/pascal-case-string-to-camel-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -4476,10 +4476,10 @@ importers:
   npm/packages/string/case/pascal-case-string/pascal-case-string-to-constant-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -4503,10 +4503,10 @@ importers:
   npm/packages/string/case/pascal-case-string/pascal-case-string-to-dot-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -4530,10 +4530,10 @@ importers:
   npm/packages/string/case/pascal-case-string/pascal-case-string-to-header-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -4557,10 +4557,10 @@ importers:
   npm/packages/string/case/pascal-case-string/pascal-case-string-to-kebab-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -4584,10 +4584,10 @@ importers:
   npm/packages/string/case/pascal-case-string/pascal-case-string-to-lower-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -4611,10 +4611,10 @@ importers:
   npm/packages/string/case/pascal-case-string/pascal-case-string-to-path-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -4638,10 +4638,10 @@ importers:
   npm/packages/string/case/pascal-case-string/pascal-case-string-to-sentence-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -4665,10 +4665,10 @@ importers:
   npm/packages/string/case/pascal-case-string/pascal-case-string-to-snake-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -4692,10 +4692,10 @@ importers:
   npm/packages/string/case/pascal-case-string/pascal-case-string-to-title-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -4719,10 +4719,10 @@ importers:
   npm/packages/string/case/pascal-case-string/pascal-case-string-to-upper-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -4746,10 +4746,10 @@ importers:
   npm/packages/string/case/path-case-string/path-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -4773,10 +4773,10 @@ importers:
   npm/packages/string/case/path-case-string/path-case-string-to-camel-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -4800,10 +4800,10 @@ importers:
   npm/packages/string/case/path-case-string/path-case-string-to-constant-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -4827,10 +4827,10 @@ importers:
   npm/packages/string/case/path-case-string/path-case-string-to-dot-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -4854,10 +4854,10 @@ importers:
   npm/packages/string/case/path-case-string/path-case-string-to-header-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -4881,10 +4881,10 @@ importers:
   npm/packages/string/case/path-case-string/path-case-string-to-kebab-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -4908,10 +4908,10 @@ importers:
   npm/packages/string/case/path-case-string/path-case-string-to-lower-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -4935,10 +4935,10 @@ importers:
   npm/packages/string/case/path-case-string/path-case-string-to-pascal-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -4962,10 +4962,10 @@ importers:
   npm/packages/string/case/path-case-string/path-case-string-to-sentence-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -4989,10 +4989,10 @@ importers:
   npm/packages/string/case/path-case-string/path-case-string-to-snake-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -5016,10 +5016,10 @@ importers:
   npm/packages/string/case/path-case-string/path-case-string-to-title-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -5043,10 +5043,10 @@ importers:
   npm/packages/string/case/path-case-string/path-case-string-to-upper-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -5070,10 +5070,10 @@ importers:
   npm/packages/string/case/sentence-case-string/sentence-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -5097,10 +5097,10 @@ importers:
   npm/packages/string/case/sentence-case-string/sentence-case-string-to-camel-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -5124,10 +5124,10 @@ importers:
   npm/packages/string/case/sentence-case-string/sentence-case-string-to-constant-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -5151,10 +5151,10 @@ importers:
   npm/packages/string/case/sentence-case-string/sentence-case-string-to-dot-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -5178,10 +5178,10 @@ importers:
   npm/packages/string/case/sentence-case-string/sentence-case-string-to-header-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -5205,10 +5205,10 @@ importers:
   npm/packages/string/case/sentence-case-string/sentence-case-string-to-kebab-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -5232,10 +5232,10 @@ importers:
   npm/packages/string/case/sentence-case-string/sentence-case-string-to-lower-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -5259,10 +5259,10 @@ importers:
   npm/packages/string/case/sentence-case-string/sentence-case-string-to-pascal-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -5286,10 +5286,10 @@ importers:
   npm/packages/string/case/sentence-case-string/sentence-case-string-to-path-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -5313,10 +5313,10 @@ importers:
   npm/packages/string/case/sentence-case-string/sentence-case-string-to-snake-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -5340,10 +5340,10 @@ importers:
   npm/packages/string/case/sentence-case-string/sentence-case-string-to-title-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -5367,10 +5367,10 @@ importers:
   npm/packages/string/case/sentence-case-string/sentence-case-string-to-upper-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -5394,10 +5394,10 @@ importers:
   npm/packages/string/case/snake-case-string/snake-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -5421,10 +5421,10 @@ importers:
   npm/packages/string/case/snake-case-string/snake-case-string-to-camel-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -5448,10 +5448,10 @@ importers:
   npm/packages/string/case/snake-case-string/snake-case-string-to-constant-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -5475,10 +5475,10 @@ importers:
   npm/packages/string/case/snake-case-string/snake-case-string-to-dot-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -5502,10 +5502,10 @@ importers:
   npm/packages/string/case/snake-case-string/snake-case-string-to-header-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -5529,10 +5529,10 @@ importers:
   npm/packages/string/case/snake-case-string/snake-case-string-to-kebab-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -5556,10 +5556,10 @@ importers:
   npm/packages/string/case/snake-case-string/snake-case-string-to-lower-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -5583,10 +5583,10 @@ importers:
   npm/packages/string/case/snake-case-string/snake-case-string-to-pascal-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -5610,10 +5610,10 @@ importers:
   npm/packages/string/case/snake-case-string/snake-case-string-to-path-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -5637,10 +5637,10 @@ importers:
   npm/packages/string/case/snake-case-string/snake-case-string-to-sentence-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -5664,10 +5664,10 @@ importers:
   npm/packages/string/case/snake-case-string/snake-case-string-to-title-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -5691,10 +5691,10 @@ importers:
   npm/packages/string/case/snake-case-string/snake-case-string-to-upper-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -5718,10 +5718,10 @@ importers:
   npm/packages/string/case/string/string-to-camel-case:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -5745,10 +5745,10 @@ importers:
   npm/packages/string/case/string/string-to-constant-case:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -5772,10 +5772,10 @@ importers:
   npm/packages/string/case/string/string-to-dot-case:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -5799,10 +5799,10 @@ importers:
   npm/packages/string/case/string/string-to-header-case:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -5826,10 +5826,10 @@ importers:
   npm/packages/string/case/string/string-to-kebab-case:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -5853,10 +5853,10 @@ importers:
   npm/packages/string/case/string/string-to-lower-case:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -5880,10 +5880,10 @@ importers:
   npm/packages/string/case/string/string-to-pascal-case:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -5907,10 +5907,10 @@ importers:
   npm/packages/string/case/string/string-to-path-case:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -5934,10 +5934,10 @@ importers:
   npm/packages/string/case/string/string-to-sentence-case:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -5961,10 +5961,10 @@ importers:
   npm/packages/string/case/string/string-to-snake-case:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -5988,10 +5988,10 @@ importers:
   npm/packages/string/case/string/string-to-title-case:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -6015,10 +6015,10 @@ importers:
   npm/packages/string/case/string/string-to-upper-case:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -6042,10 +6042,10 @@ importers:
   npm/packages/string/case/title-case-string/title-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -6069,10 +6069,10 @@ importers:
   npm/packages/string/case/title-case-string/title-case-string-to-camel-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -6096,10 +6096,10 @@ importers:
   npm/packages/string/case/title-case-string/title-case-string-to-constant-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -6123,10 +6123,10 @@ importers:
   npm/packages/string/case/title-case-string/title-case-string-to-dot-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -6150,10 +6150,10 @@ importers:
   npm/packages/string/case/title-case-string/title-case-string-to-header-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -6177,10 +6177,10 @@ importers:
   npm/packages/string/case/title-case-string/title-case-string-to-kebab-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -6204,10 +6204,10 @@ importers:
   npm/packages/string/case/title-case-string/title-case-string-to-lower-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -6231,10 +6231,10 @@ importers:
   npm/packages/string/case/title-case-string/title-case-string-to-pascal-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -6258,10 +6258,10 @@ importers:
   npm/packages/string/case/title-case-string/title-case-string-to-path-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -6285,10 +6285,10 @@ importers:
   npm/packages/string/case/title-case-string/title-case-string-to-sentence-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -6312,10 +6312,10 @@ importers:
   npm/packages/string/case/title-case-string/title-case-string-to-snake-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -6339,10 +6339,10 @@ importers:
   npm/packages/string/case/title-case-string/title-case-string-to-upper-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -6366,10 +6366,10 @@ importers:
   npm/packages/string/case/upper-case-string/upper-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -6393,10 +6393,10 @@ importers:
   npm/packages/string/case/upper-case-string/upper-case-string-to-camel-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -6420,10 +6420,10 @@ importers:
   npm/packages/string/case/upper-case-string/upper-case-string-to-constant-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -6447,10 +6447,10 @@ importers:
   npm/packages/string/case/upper-case-string/upper-case-string-to-dot-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -6474,10 +6474,10 @@ importers:
   npm/packages/string/case/upper-case-string/upper-case-string-to-header-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -6501,10 +6501,10 @@ importers:
   npm/packages/string/case/upper-case-string/upper-case-string-to-kebab-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -6528,10 +6528,10 @@ importers:
   npm/packages/string/case/upper-case-string/upper-case-string-to-lower-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -6555,10 +6555,10 @@ importers:
   npm/packages/string/case/upper-case-string/upper-case-string-to-pascal-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -6582,10 +6582,10 @@ importers:
   npm/packages/string/case/upper-case-string/upper-case-string-to-path-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -6609,10 +6609,10 @@ importers:
   npm/packages/string/case/upper-case-string/upper-case-string-to-sentence-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -6636,10 +6636,10 @@ importers:
   npm/packages/string/case/upper-case-string/upper-case-string-to-snake-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -6663,10 +6663,10 @@ importers:
   npm/packages/string/case/upper-case-string/upper-case-string-to-title-case-string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
@@ -6690,10 +6690,10 @@ importers:
   npm/packages/string/string:
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.4
+        specifier: 1.0.5
         version: link:../../../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.2
+        specifier: 1.0.3
         version: link:../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10

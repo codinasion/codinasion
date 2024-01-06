@@ -1,5 +1,11 @@
 # @codinasion/kebab-case-string-to-pascal-case-string
 
+## 1.0.2
+
+### Patch Changes
+
+- 1c08c0f: Update Links
+
 ## 1.0.1
 
 ### Patch Changes
