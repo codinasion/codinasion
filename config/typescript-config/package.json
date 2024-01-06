@@ -11,15 +11,15 @@
     "react-library.json"
   ],
   "license": "MIT",
-  "homepage": "https://codinasion.tech",
+  "homepage": "https://codinasion.org",
   "funding": [
-    {
-      "type": "patreon",
-      "url": "https://www.patreon.com/Codinasion"
-    },
     {
       "type": "github",
       "url": "https://github.com/sponsors/codinasion"
+    },
+    {
+      "type": "patreon",
+      "url": "https://www.patreon.com/Codinasion"
     },
     {
       "type": "opencollective",
