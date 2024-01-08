@@ -1584,6 +1584,15 @@
     "created": false
   },
   {
+    "title": "Implement Selection Sort",
+    "description": "Write a program to implement selection sort\n\nSelection sort is a sorting algorithm that selects the smallest element from an unsorted list in each iteration and places that element at the beginning of the unsorted list.\r\n\r\n### Pseudocode\r\n\r\n```\r\nprocedure selection sort \r\n   list  : array of items\r\n   n     : size of list\r\n\r\n   for i = 1 to n - 1\r\n   /* set current element as minimum*/\r\n      min = i    \r\n   \r\n      /* check the element to be minimum */\r\n\r\n      for j = i+1 to n \r\n         if list[j] < list[min] then\r\n            min = j;\r\n         end if\r\n      end for\r\n\r\n      /* swap the minimum element with the current element*/\r\n      if indexMin != i  then\r\n         swap list[min] and list[i]\r\n      end if\r\n   end for\r\n    \r\nend procedure\r\n```\r\n\r\n### Example\r\n\r\n```text\r\nInput  : [8, 5, 2, 6, 9, 3, 1, 4, 0, 7]\r\nOutput : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]\r\n```\n    ",
+    "contributor": "harshraj8843",
+    "createdAt": "2024-01-08T08:00:38.497Z",
+    "createdIssueNumber": "5093",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Implement Ternary Search",
     "description": "Write a program to implement ternary search\n\nTernary search is a divide and conquer algorithm that can be used to find an element in an array. It is similar to binary search where we divide the array into two parts but in this algorithm, we divide the given array into three parts and determine which has the key (searched element).\r\n\r\n### Pseudocode\r\n\r\n```text\r\nprocedure ternary_search\r\n   A ← sorted array\r\n   value ← value to be searched\r\n   l ← leftmost index\r\n   r ← rightmost index\r\n   \r\n   while l ≤ r do\r\n   \r\n      partition size = (r-l)/3\r\n      mid1 = l + partition_size\r\n      mid2 = r - partition_size\r\n      \r\n      if A[mid1] = value\r\n         return mid1\r\n         \r\n      if A[mid2] = value\r\n         return mid2\r\n         \r\n      if value < A[mid1]\r\n         set r = mid1 - 1\r\n         \r\n      else if value > A[mid2]\r\n         set l = mid2 + 1\r\n         \r\n      else\r\n         set l = mid1 + 1\r\n         set r = mid2 - 1\r\n         \r\n   end while\r\n   \r\n   return -1\r\nend procedure\r\n```\r\n\r\n### Example\r\n\r\n```text\r\nlist = [1,2,3,4,5]\r\nvalue = 4\r\n\r\nOutput : 3\r\n```\n    ",
     "contributor": "harshraj8843",
