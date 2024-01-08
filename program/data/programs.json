@@ -1400,8 +1400,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2024-01-08T07:01:50.469Z",
     "createdIssueNumber": "5031",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2024-01-08T07:04:02.306Z",
+    "created": true
   },
   {
     "title": "Find the maximum sum of a contiguous subarray",
