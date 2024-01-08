@@ -14,7 +14,7 @@ if Check_flag:
     raise Exception("::End:: ❌ There is duplicated extensions in the program folder")
 
 # read language data
-language_data = json.load(open("data/languages.json", "r"))
+language_data = json.load(open("program/data/languages.json", "r"))
 
 # get list of different language namingConvension from language_data
 namingConvension = list(
@@ -59,7 +59,7 @@ def ConvertToCamelCase(name):
     return name
 
 
-folder_names = os.listdir("program")
+folder_names = os.listdir("program/program")
 
 # Important flags
 rename = True
@@ -70,7 +70,7 @@ ct = 0
 
 for folder_name in folder_names:
     try:
-        file_names = os.listdir("program/" + folder_name)
+        file_names = os.listdir("program/program/" + folder_name)
         for file_name in file_names:
             temp_file_name = file_name
             file_extension = temp_file_name.split(".")[-1]
@@ -90,8 +90,8 @@ for folder_name in folder_names:
 
                     # Rename the file
                     os.rename(
-                        "program/" + folder_name + "/" + temp_file_name,
-                        "program/"
+                        "program/program/" + folder_name + "/" + temp_file_name,
+                        "program/program/"
                         + folder_name
                         + "/"
                         + new_file_name

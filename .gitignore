@@ -35,6 +35,9 @@ yarn-error.log*
 .DS_Store
 *.pem
 
+# Python
+*.pyc
+
 # packages
 dist/
 !action/dist/

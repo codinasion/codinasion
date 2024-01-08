@@ -92,6 +92,7 @@ export default async function AutoTrackIssue({
 <details>
 <summary>How to contribute</summary>
 
+- Comment \`!assign\` to assign this issue to yourself
 - Fork this repository
 - Create a new branch
 - Save the solution in \`program/program/${FILE_NAME.toLowerCase().replace(

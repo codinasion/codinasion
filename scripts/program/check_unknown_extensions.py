@@ -32,11 +32,11 @@ def check_unknown_extensions():
     flag = False
 
     # Get list of all folders in program
-    folder_names = os.listdir("program")
+    folder_names = os.listdir("program/program")
 
     for folder_name in folder_names:
         # Get list of all files in each folder
-        file_names = os.listdir("program/" + folder_name)
+        file_names = os.listdir("program/program/" + folder_name)
         for file_name in file_names:
             # Get file extension
             file_extension = file_name.split(".")[-1]
