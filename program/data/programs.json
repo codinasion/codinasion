@@ -1566,6 +1566,15 @@
     "created": true
   },
   {
+    "title": "Move all zeroes to end of array",
+    "description": "Write a program to move all zeroes to end of array\n\n```txt\r\nInput  : arr[] = {1, 2, 0, 4, 3, 0, 5, 0};\r\nOutput : arr[] = {1, 2, 4, 3, 5, 0, 0, 0};\r\n\r\nInput  : arr[] = {1, 2, 0, 0, 0, 3, 6};\r\nOutput : arr[] = {1, 2, 3, 6, 0, 0, 0};\r\n```\n    ",
+    "contributor": "harshraj8843",
+    "createdAt": "2024-01-08T07:26:58.868Z",
+    "createdIssueNumber": "5060",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Print all prime numbers between two numbers",
     "description": "Write a program to print all prime numbers between two numbers\n\n```\r\nInput  : 10 20\r\nOutput : 11 13 17 19\r\n```\n",
     "contributor": "harshraj8843",
