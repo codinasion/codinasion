@@ -1395,6 +1395,15 @@
     "created": true
   },
   {
+    "title": "Find the largest three elements in an array",
+    "description": "Write a program to find the largest three elements in an array\n\n```txt\r\nInput  : arr[] = {10, 4, 3, 50, 23, 90}\r\nOutput : 90, 50, 23\r\n\r\nInput  : arr[] = {10, 4, 3, 50, 23, 90, 1, 100, 49}\r\nOutput : 100, 90, 50\r\n```\n    ",
+    "contributor": "harshraj8843",
+    "createdAt": "2024-01-08T07:12:34.730Z",
+    "createdIssueNumber": "5055",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Find the largest two elements in an array",
     "description": "Write a program to find the largest two elements in an array\n\n```text\r\nInput: arr[] = {12, 13, 1, 10, 34, 1}\r\nOutput: The largest two elements are 34 and 13\r\n\r\nInput: arr[] = {10, 5, 10}\r\nOutput: The largest two elements are 10 and 5\r\n\r\nInput: arr[] = {10, 10, 10}\r\nOutput: The largest two elements are 10 and 10\r\n```\n    ",
     "contributor": "harshraj8843",
