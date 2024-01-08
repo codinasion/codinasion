@@ -1562,6 +1562,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2024-01-08T07:26:59.464Z",
     "createdIssueNumber": "5061",
+    "publishedAt": "",
+    "created": false
   },
   {
     "title": "Implement Binary Search",
