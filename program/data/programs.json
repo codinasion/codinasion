@@ -1557,6 +1557,15 @@
     "created": true
   },
   {
+    "title": "Implement Binary Search",
+    "description": "Write a program to implement binary search\n\nBinary search is a fast search algorithm with run-time complexity of Ο(log n). This search algorithm works on the principle of divide and conquer. For this algorithm to work properly, the data collection should be in the sorted form.\r\n\r\nBinary search looks for a particular item by comparing the middle most item of the collection. If a match occurs, then the index of item is returned. If the middle item is greater than the item, then the item is searched in the sub-array to the left of the middle item. Otherwise, the item is searched for in the sub-array to the right of the middle item. This process continues on the sub-array as well until the size of the subarray reduces to zero.\r\n\r\n### Pseudocode\r\n\r\n```text\r\nprocedure binary_search\r\n   A ← sorted array\r\n   n ← size of array\r\n   x ← value to be searched\r\n\r\n   Set lowerBound = 1\r\n   Set upperBound = n\r\n\r\n   while x not found\r\n      if upperBound < lowerBound\r\n         EXIT: x does not exists.\r\n   \r\n      set midPoint = lowerBound + ( upperBound - lowerBound ) / 2\r\n      \r\n      if A[midPoint] < x\r\n         set lowerBound = midPoint + 1\r\n         \r\n      if A[midPoint] > x\r\n         set upperBound = midPoint - 1 \r\n\r\n      if A[midPoint] = x \r\n         EXIT: x found at location midPoint\r\n   end while\r\n   \r\nend procedure\r\n```\r\n\r\n### Example\r\n\r\n```text\r\nlist = [1,2,3,4,5]\r\nvalue = 4\r\n\r\nOutput : 3\r\n```\n    ",
+    "contributor": "harshraj8843",
+    "createdAt": "2024-01-08T07:27:02.195Z",
+    "createdIssueNumber": "5062",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Implement Linear Search",
     "description": "Write a program to implement linear search\n\nLinear search is a very simple search algorithm. In this type of search, a sequential search is made over all items one by one. Every item is checked and if a match is found then that particular item is returned, otherwise the search continues till the end of the data collection.\r\n\r\nLinear search is the simplest search algorithm. For this reason, it is often called sequential search.\r\n\r\n### Pseudocode\r\n\r\n```text\r\nprocedure linear_search (list, value)\r\n\r\n   for each item in the list\r\n      if match item == value\r\n         return the item's location\r\n      end if\r\n   end for\r\n\r\nend procedure\r\n```\r\n\r\n### Example\r\n\r\n```text\r\nlist = [1,2,3,4,5]\r\nvalue = 4\r\n\r\nOutput : 3\r\n```\n    ",
     "contributor": "harshraj8843",
@@ -1566,11 +1575,11 @@
     "created": false
   },
   {
-    "title": "Implement Binary Search",
-    "description": "Write a program to implement binary search\n\nBinary search is a fast search algorithm with run-time complexity of Ο(log n). This search algorithm works on the principle of divide and conquer. For this algorithm to work properly, the data collection should be in the sorted form.\r\n\r\nBinary search looks for a particular item by comparing the middle most item of the collection. If a match occurs, then the index of item is returned. If the middle item is greater than the item, then the item is searched in the sub-array to the left of the middle item. Otherwise, the item is searched for in the sub-array to the right of the middle item. This process continues on the sub-array as well until the size of the subarray reduces to zero.\r\n\r\n### Pseudocode\r\n\r\n```text\r\nprocedure binary_search\r\n   A ← sorted array\r\n   n ← size of array\r\n   x ← value to be searched\r\n\r\n   Set lowerBound = 1\r\n   Set upperBound = n\r\n\r\n   while x not found\r\n      if upperBound < lowerBound\r\n         EXIT: x does not exists.\r\n   \r\n      set midPoint = lowerBound + ( upperBound - lowerBound ) / 2\r\n      \r\n      if A[midPoint] < x\r\n         set lowerBound = midPoint + 1\r\n         \r\n      if A[midPoint] > x\r\n         set upperBound = midPoint - 1 \r\n\r\n      if A[midPoint] = x \r\n         EXIT: x found at location midPoint\r\n   end while\r\n   \r\nend procedure\r\n```\r\n\r\n### Example\r\n\r\n```text\r\nlist = [1,2,3,4,5]\r\nvalue = 4\r\n\r\nOutput : 3\r\n```\n    ",
+    "title": "Implement Ternary Search",
+    "description": "Write a program to implement ternary search\n\nTernary search is a divide and conquer algorithm that can be used to find an element in an array. It is similar to binary search where we divide the array into two parts but in this algorithm, we divide the given array into three parts and determine which has the key (searched element).\r\n\r\n### Pseudocode\r\n\r\n```text\r\nprocedure ternary_search\r\n   A ← sorted array\r\n   value ← value to be searched\r\n   l ← leftmost index\r\n   r ← rightmost index\r\n   \r\n   while l ≤ r do\r\n   \r\n      partition size = (r-l)/3\r\n      mid1 = l + partition_size\r\n      mid2 = r - partition_size\r\n      \r\n      if A[mid1] = value\r\n         return mid1\r\n         \r\n      if A[mid2] = value\r\n         return mid2\r\n         \r\n      if value < A[mid1]\r\n         set r = mid1 - 1\r\n         \r\n      else if value > A[mid2]\r\n         set l = mid2 + 1\r\n         \r\n      else\r\n         set l = mid1 + 1\r\n         set r = mid2 - 1\r\n         \r\n   end while\r\n   \r\n   return -1\r\nend procedure\r\n```\r\n\r\n### Example\r\n\r\n```text\r\nlist = [1,2,3,4,5]\r\nvalue = 4\r\n\r\nOutput : 3\r\n```\n    ",
     "contributor": "harshraj8843",
-    "createdAt": "2024-01-08T07:27:02.195Z",
-    "createdIssueNumber": "5062",
+    "createdAt": "2024-01-08T08:00:37.646Z",
+    "createdIssueNumber": "5090",
     "publishedAt": "",
     "created": false
   },
