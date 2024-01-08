@@ -1449,6 +1449,15 @@
     "created": true
   },
   {
+    "title": "Find the smallest three elements in an array",
+    "description": "Write a program to find the smallest three elements in an array\n\n```txt\r\nInput  : arr[] = {10, 4, 3, 50, 23, 90}\r\nOutput : 3 4 10\r\n\r\nInput  : arr[] = {12, 13, 1, 10, 34, 1}\r\nOutput : 1 1 10\r\n```\n    ",
+    "contributor": "harshraj8843",
+    "createdAt": "2024-01-08T07:26:57.909Z",
+    "createdIssueNumber": "5059",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Find the smallest two elements in an array",
     "description": "Write a program to find the smallest two elements in an array\n\n```txt\r\nInput  : arr[] = {12, 13, 1, 10, 34, 1}\r\nOutput : 1 1\r\n\r\nInput  : arr[] = {10, 5, 10}\r\nOutput : 5 10\r\n```\n    ",
     "contributor": "harshraj8843",
