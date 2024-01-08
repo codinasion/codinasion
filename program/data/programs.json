@@ -1395,6 +1395,15 @@
     "created": true
   },
   {
+    "title": "Find the largest two elements in an array",
+    "description": "Write a program to find the largest two elements in an array\n\n```text\r\nInput: arr[] = {12, 13, 1, 10, 34, 1}\r\nOutput: The largest two elements are 34 and 13\r\n\r\nInput: arr[] = {10, 5, 10}\r\nOutput: The largest two elements are 10 and 5\r\n\r\nInput: arr[] = {10, 10, 10}\r\nOutput: The largest two elements are 10 and 10\r\n```\n    ",
+    "contributor": "harshraj8843",
+    "createdAt": "2024-01-08T07:01:50.469Z",
+    "createdIssueNumber": "5031",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Find the maximum sum of a contiguous subarray",
     "description": "Write a program to find the maximum sum of a contiguous subarray\n\nMaximum subarray problem is the task of finding the contiguous subarray within a one-dimensional array of numbers which has the largest sum. For example, for the sequence of values `−2, 1, −3, 4, −1, 2, 1, −5, 4;` the contiguous subarray with the largest sum is `4, −1, 2, 1,` with sum `6`.\n\n```\nInput  : [-2, -3, 4, -1, -2, 1, 5, -3]\nOutput : 7\n```",
     "contributor": "harshraj8843",
