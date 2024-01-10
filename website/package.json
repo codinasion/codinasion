@@ -14,7 +14,7 @@
     "@docsearch/react": "3",
     "@giscus/react": "^2",
     "@tailwindcss/typography": "^0.5.10",
-    "daisyui": "^4.4.22",
+    "daisyui": "^4.5.0",
     "flowbite": "^2.2.0",
     "flowbite-react": "^0.7.0",
     "katex": "^0.16.9",
