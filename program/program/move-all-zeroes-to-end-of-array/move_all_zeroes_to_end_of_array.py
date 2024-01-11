@@ -1,29 +1,17 @@
-def move_zeros_to_end(arr):
-    """
-    Moves all zeros in the array to the end while maintaining the order of non-zero elements.
+def main():
+      """
+      Python program to move all zeroes at the end of the array  
+      """
+      
+      move_zeroes([1, 2, 0, 4, 3, 0, 5, 0])
 
-    Args:
-    arr (list): A list of integers.
+def move_zeroes(seq):
+      l = 0
+      for r in range(len(seq)):
+            if seq[r]:                                          # if non-zero value
+                  seq[l], seq[r] = seq[r], seq[l]               # swap
+                  l += 1                                          # increment l
+      print(seq)
 
-    Returns:
-    list: Modified list with all zeros moved to the end.
-    """
-    if not isinstance(arr, list):
-        raise ValueError("Input must be a list")
-
-    non_zero_index = 0
-
-    for i in range(len(arr)):
-        if arr[i] != 0:
-            arr[i], arr[non_zero_index] = arr[non_zero_index], arr[i]
-            non_zero_index += 1
-
-    return arr
-
-input_string = input("Enter a list of numbers separated by commas: ")
-try:
-    user_arr = [int(num.strip()) for num in input_string.split(',')]
-except ValueError:
-    print("Invalid input. Please enter only integers separated by commas.")
-else:
-    print("Modified list:", move_zeros_to_end(user_arr))
+if __name__ == '__main__':
+      main()
