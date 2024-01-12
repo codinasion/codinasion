@@ -1562,8 +1562,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2024-01-08T07:27:02.195Z",
     "createdIssueNumber": "5062",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2024-01-12T01:34:01.202Z",
+    "created": true
   },
   {
     "title": "Implement Jump Search",
