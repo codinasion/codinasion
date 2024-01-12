@@ -17,7 +17,7 @@
   },
   "devDependencies": {
     "@codinasion/language-data": "workspace:*",
-    "@types/node": "^20.10.3",
+    "@types/node": "^20.11.0",
     "@types/node-fetch": "^2.6.3",
     "@typescript-eslint/eslint-plugin": "^6.17.0",
     "@typescript-eslint/parser": "^6.17.0",
