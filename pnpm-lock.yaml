@@ -1335,6 +1335,24 @@ importers:
         specifier: workspace:*
         version: link:../../../../../packages/string/case/upper-case-string/upper-case-string-to-title-case-string
 
+  npm/examples/string/encoding/base64-to-string-example:
+    devDependencies:
+      '@codinasion/base64-to-string':
+        specifier: workspace:*
+        version: link:../../../../packages/string/encoding/base64-to-string
+
+  npm/examples/string/encoding/encoding-examples:
+    devDependencies:
+      '@codinasion/encoding':
+        specifier: workspace:*
+        version: link:../../../../packages/string/encoding/encoding
+
+  npm/examples/string/encoding/string-to-base64-example:
+    devDependencies:
+      '@codinasion/string-to-base64':
+        specifier: workspace:*
+        version: link:../../../../packages/string/encoding/string-to-base64
+
   npm/examples/string/string-examples:
     devDependencies:
       '@codinasion/string':
@@ -6668,6 +6686,87 @@ importers:
       '@codinasion/typescript-config':
         specifier: 1.0.3
         version: link:../../../../../../config/typescript-config
+      '@types/jest':
+        specifier: ^29.5.10
+        version: 29.5.10
+      '@types/node':
+        specifier: ^20.11.0
+        version: 20.11.0
+      jest:
+        specifier: ^29.7.0
+        version: 29.7.0(@types/node@20.11.0)
+      ts-jest:
+        specifier: ^29.1.1
+        version: 29.1.1(@babel/core@7.23.3)(esbuild@0.19.8)(jest@29.7.0)(typescript@5.3.3)
+      tsup:
+        specifier: ^8.0.1
+        version: 8.0.1(typescript@5.3.3)
+      typescript:
+        specifier: ^5.3.3
+        version: 5.3.3
+
+  npm/packages/string/encoding/base64-to-string:
+    devDependencies:
+      '@codinasion/eslint-config':
+        specifier: 1.0.5
+        version: link:../../../../../config/eslint-config
+      '@codinasion/typescript-config':
+        specifier: 1.0.3
+        version: link:../../../../../config/typescript-config
+      '@types/jest':
+        specifier: ^29.5.10
+        version: 29.5.10
+      '@types/node':
+        specifier: ^20.11.0
+        version: 20.11.0
+      jest:
+        specifier: ^29.7.0
+        version: 29.7.0(@types/node@20.11.0)
+      ts-jest:
+        specifier: ^29.1.1
+        version: 29.1.1(@babel/core@7.23.3)(esbuild@0.19.8)(jest@29.7.0)(typescript@5.3.3)
+      tsup:
+        specifier: ^8.0.1
+        version: 8.0.1(typescript@5.3.3)
+      typescript:
+        specifier: ^5.3.3
+        version: 5.3.3
+
+  npm/packages/string/encoding/encoding:
+    devDependencies:
+      '@codinasion/eslint-config':
+        specifier: 1.0.5
+        version: link:../../../../../config/eslint-config
+      '@codinasion/typescript-config':
+        specifier: 1.0.3
+        version: link:../../../../../config/typescript-config
+      '@types/jest':
+        specifier: ^29.5.10
+        version: 29.5.10
+      '@types/node':
+        specifier: ^20.11.0
+        version: 20.11.0
+      jest:
+        specifier: ^29.7.0
+        version: 29.7.0(@types/node@20.11.0)
+      ts-jest:
+        specifier: ^29.1.1
+        version: 29.1.1(@babel/core@7.23.3)(esbuild@0.19.8)(jest@29.7.0)(typescript@5.3.3)
+      tsup:
+        specifier: ^8.0.1
+        version: 8.0.1(typescript@5.3.3)
+      typescript:
+        specifier: ^5.3.3
+        version: 5.3.3
+
+  npm/packages/string/encoding/string-to-base64:
+    devDependencies:
+      '@codinasion/eslint-config':
+        specifier: 1.0.5
+        version: link:../../../../../config/eslint-config
+      '@codinasion/typescript-config':
+        specifier: 1.0.3
+        version: link:../../../../../config/typescript-config
       '@types/jest':
         specifier: ^29.5.10
         version: 29.5.10
