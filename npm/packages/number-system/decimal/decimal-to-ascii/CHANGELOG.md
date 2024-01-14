@@ -1,5 +1,11 @@
 # @codinasion/decimal-to-ascii
 
+## 1.0.2
+
+### Patch Changes
+
+- 75abb7f: Update LICENSE
+
 ## 1.0.1
 
 ### Patch Changes

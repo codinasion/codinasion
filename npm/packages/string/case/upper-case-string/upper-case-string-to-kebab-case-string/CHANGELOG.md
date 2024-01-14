@@ -1,5 +1,11 @@
 # @codinasion/upper-case-string-to-kebab-case-string
 
+## 1.0.3
+
+### Patch Changes
+
+- 75abb7f: Update LICENSE
+
 ## 1.0.2
 
 ### Patch Changes

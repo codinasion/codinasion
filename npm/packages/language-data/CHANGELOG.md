@@ -1,5 +1,11 @@
 # @codinasion/language-data
 
+## 2.0.3
+
+### Patch Changes
+
+- 75abb7f: Update LICENSE
+
 ## 2.0.2
 
 ### Patch Changes

@@ -1,6 +1,6 @@
 {
   "name": "@codinasion/ascii-to-hexadecimal",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "publishConfig": {
     "access": "public"
   },
@@ -66,8 +66,8 @@
     "test": "jest --config jestconfig.json --maxWorkers=50% --passWithNoTests"
   },
   "devDependencies": {
-    "@codinasion/eslint-config": "1.0.5",
-    "@codinasion/typescript-config": "1.0.3",
+    "@codinasion/eslint-config": "1.0.6",
+    "@codinasion/typescript-config": "1.0.4",
     "@types/jest": "^29.5.10",
     "@types/node": "^20.11.0",
     "jest": "^29.7.0",

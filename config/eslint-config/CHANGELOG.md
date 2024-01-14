@@ -1,5 +1,11 @@
 # @codinasion/eslint-config
 
+## 1.0.6
+
+### Patch Changes
+
+- 75abb7f: Update LICENSE
+
 ## 1.0.5
 
 ### Patch Changes
