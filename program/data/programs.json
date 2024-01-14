@@ -1571,8 +1571,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2024-01-08T08:00:37.356Z",
     "createdIssueNumber": "5092",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2024-01-14T01:38:59.957Z",
+    "created": true
   },
   {
     "title": "Implement Linear Search",
