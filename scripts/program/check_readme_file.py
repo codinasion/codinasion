@@ -2,7 +2,7 @@ import os
 from logging import warning
 
 
-def check_file_names():
+def check_readme_file():
     flag = False
 
     folder_names = os.listdir("../program/program")
@@ -13,12 +13,13 @@ def check_file_names():
     for folder_name in folder_names:
         # print(folder_name)
         file_names = os.listdir("../program/program/" + folder_name)
-        for file_name in file_names:
-            if ("'" or '"' or " ") in file_name:
-                flag = True
-                warning(f"There is a space or a quote in {folder_name} -> {file_name}")
+
+        # if there is no README.md file
+        if "README.md" not in file_names:
+            flag = True
+            warning(f"There is no README.md file in {folder_name}")
 
     if not flag:
-        print("✅ There is no space or quote in file names")
+        print("✅ There is README.md file in all folders")
 
     return flag
