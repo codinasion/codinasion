@@ -27,7 +27,8 @@ jobs:
 
       - name: Check Program Files
         run: |
-          python3 scripts/program/rename_files.py
+          cd scripts/
+          python3 program/rename_files.py
 
       - name: Collect Program Data
         id: collect-program-data
