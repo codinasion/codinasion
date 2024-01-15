@@ -1580,8 +1580,8 @@
     "contributor": "harshraj8843",
     "createdAt": "2024-01-08T07:26:59.464Z",
     "createdIssueNumber": "5061",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2024-01-15T01:36:35.456Z",
+    "created": true
   },
   {
     "title": "Implement Selection Sort",
