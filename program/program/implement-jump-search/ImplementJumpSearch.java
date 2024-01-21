@@ -63,7 +63,7 @@ public class ImplementJumpSearch {
         else{
             System.out.println("Element found at index: "+result);
         }
-
+        scanner.close();
 
     }
 }
