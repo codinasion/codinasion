@@ -38,7 +38,7 @@
     "@codinasion/typescript-config": "workspace:*",
     "@next/eslint-plugin-next": "^14.0.2",
     "@types/eslint": "^8.56.2",
-    "@types/node": "^20.11.0",
+    "@types/node": "^20.11.1",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "@types/react-syntax-highlighter": "^15.5.11",
