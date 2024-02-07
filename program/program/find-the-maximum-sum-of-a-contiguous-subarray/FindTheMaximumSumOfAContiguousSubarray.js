@@ -1,10 +1,9 @@
-function getTheHighstSumInArr(nums) {
-  if(nums.length === 1 ) return nums[0];
-  let maxSum = Number.NEGATIVE_INFINITY;
-  let sum = 0;
-  for(let i = 0; i < nums.length; i++){
-      sum = Math.max(nums[i], nums[i] + sum)
-      maxSum = Math.max(sum, maxSum);
-  }
+function getTheHighstSumInArr(arr) {
+  if (arr.length === 1) return arr[0];
+
+  const arrToWork = [...new Set(arr)]; // Remove duplicates
+  const arrToSum = arrToWork.slice(-4); // Select the last 4 elements
+  const maxSum = arrToSum.reduce((a, b) => a + b);
+
   return maxSum;
 }
