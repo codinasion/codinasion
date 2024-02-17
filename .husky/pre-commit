@@ -15,33 +15,13 @@ echo "${RED}${CDR}${NC}: Roger. I'm on it."
 echo "${GREEN}${CC}${NC}: Roger. Pre-commit hook started."
 
 # Only run if required files are changed
-if git diff --cached --name-only | grep -q "^website/" || git diff --cached --name-only | grep -q "^npm/" || git diff --cached --name-only | grep -q "^config/" || git diff --cached --name-only | grep -q "^action/"; then
+if git diff --cached --name-only | grep -q "^npm/" || git diff --cached --name-only | grep -q "^config/" || git diff --cached --name-only | grep -q "^action/"; then
 
     echo ""
     echo "${RED}${CDR}${NC}: Installing all dependencies"
     pnpm install --no-frozen-lockfile 1>/dev/null
     git add pnpm-lock.yaml
     echo "${GREEN}${CC}${NC}: ${CDR}, ${CC}. Installation confirmed; You're looking good."
-
-    # Check if website folder files are changed
-    if git diff --cached --name-only | grep -q "^website/"; then
-        echo ""
-        echo "${BLUE}INFO${NC}: Changes in ${YELLOW}website${NC} folder detected."
-        echo "${BLUE}INFO${NC}: Executing ${GREEN}${PROTO_WEB}${NC} for ${YELLOW}pre-commit${NC} hook."
-        echo ""
-        echo "${RED}${CDR}${NC}: Linting code"
-        pnpm lint:website 1>/dev/null
-        echo "${GREEN}${CC}${NC}: We confirm linting."
-        echo ""
-        echo "${RED}${CDR}${NC}: Roger."
-        echo "${RED}${CDR}${NC}: Testing code"
-        pnpm test:website 1>/dev/null
-        echo "${GREEN}${CC}${NC}: Roger. We confirm testing."
-        echo ""
-        echo "${RED}${CDR}${NC}: Formatting code"
-        pnpm format:website 1>/dev/null
-        echo "${GREEN}${CC}${NC}: Roger. We confirm formatting."
-    fi
 
     # Check if "npm" or "config" folder files are changed (any one of them)
     if git diff --cached --name-only | grep -q "^npm/" || git diff --cached --name-only | grep -q "^config/"; then

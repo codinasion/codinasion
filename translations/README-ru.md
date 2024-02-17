@@ -84,7 +84,6 @@
   <img src="https://raw.githubusercontent.com/codinasion/codinasion/master/assets/rainbow-hr.png" alt="Цветная линия" width="100%" height="70%">
 </div>
 
-
 Юрий Кунья,
 26 лет.
 Специалист по базам данных.
