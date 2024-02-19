@@ -10,6 +10,12 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    env:
+      NUMBER: ${{ github.event.issue.number }}
+      TITLE: ${{ github.event.issue.title }}
+      BODY: ${{ github.event.issue.body }}
+      USER: ${{ github.event.issue.user.login }}
+
     steps:
       - name: Checkout
         id: checkout
@@ -17,20 +23,20 @@ jobs:
 
       - name: Issue data
         run: |
-          echo "Issue number : ${{ github.event.issue.number }}"
-          echo "Issue title  : ${{ github.event.issue.title }}"
-          echo "Issue body   : ${{ github.event.issue.body }}"
-          echo "user         : ${{ github.event.issue.user.login }}"
+          echo "Issue number : $NUMBER"
+          echo "Issue title  : $TITLE"
+          echo "Issue body   : $BODY"
+          echo "user         : $USER"
 
       # Accept Program
       - name: Submit Program
         id: submit-program
         uses: ./action/
         with:
-          SUBMIT_PROGRAM_USERNAME: ${{ github.event.issue.user.login }}
-          SUBMIT_PROGRAM_ISSUE_NUMBER: ${{ github.event.issue.number }}
-          SUBMIT_PROGRAM_TITLE: ${{ github.event.issue.title }}
-          SUBMIT_PROGRAM_BODY: ${{ github.event.issue.body }}
+          SUBMIT_PROGRAM_USERNAME: ${{ env.USER }}
+          SUBMIT_PROGRAM_ISSUE_NUMBER: ${{ env.NUMBER }}
+          SUBMIT_PROGRAM_TITLE: ${{ env.TITLE }}
+          SUBMIT_PROGRAM_BODY: ${{ env.BODY }}
 
           # Trigger
           TRIGGER_SUBMIT_PROGRAM: true
