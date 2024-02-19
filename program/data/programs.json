@@ -639,6 +639,15 @@
     "created": true
   },
   {
+    "title": "Convert standard date format to Julian date and vice-versa",
+    "description": "Write a program to convert standard date format to julian date and vice-versa\n\nA Julian date is a way of displaying a date that combines the current year with the number of days since the beginning of the year. For example, January 1, 2007 is 2007001, and December 31, 2007 is 2007365.\r\n\r\nThe first two digits of a Julian date represent the year, and the last three digits represent the number of days since the beginning of the year. For example, 21-001 represents January 1, 2021, and 22-165 represents June 14, 2022.\r\n\r\n### Example\r\n\r\n```\r\nInput  : 2023-06-10\r\nOutput : 2023160\r\n```\n    ",
+    "contributor": "magar51",
+    "createdAt": "2024-02-19T07:39:00.896Z",
+    "createdIssueNumber": "5402",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Convert string to alternatingcase",
     "description": "Write a program to convert string to alternatingcase\n\nAlternatingcase is a style of writing in which each letter is converted to its opposite case.\n\n```\nInput  : \"hello world\"\nOutput : \"hElLo WoRlD\"\n```",
     "contributor": "harshraj8843",
