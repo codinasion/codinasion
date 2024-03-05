@@ -1,15 +1,8 @@
-def largest_three_elements(array)
-  sorted_array = array.sort.reverse
-  return sorted_array[0..2]
-end
-
-puts "Enter the numbers separated by spaces:"
-input = gets.chomp
-numbers = input.split.map(&:to_i)
-
-if numbers.length < 3
-  puts "Please enter at least three numbers."
+input = [12, 13, 1, 10, 34, 1];
+if input.length() <= 2
+  print "Array should contain atleast 3 elements"
 else
-  largest = largest_three_elements(numbers)
-  puts "The largest three elements in the array are: #{largest}"
+  sort = input.sort.reverse
+  result = "#{sort[0].to_i},#{sort[1].to_i},#{sort[2].to_i}"
+  print result
 end
