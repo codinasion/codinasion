@@ -788,8 +788,8 @@
     "contributor": "magar51",
     "createdAt": "2024-03-22T14:41:08.349Z",
     "createdIssueNumber": "5514",
-    "publishedAt": "",
-    "created": false
+    "publishedAt": "2024-03-22T14:43:05.388Z",
+    "created": true
   },
   {
     "title": "Convert time from 12-hour to 24-hour format",
