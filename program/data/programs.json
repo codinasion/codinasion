@@ -783,6 +783,15 @@
     "created": true
   },
   {
+    "title": "Convert temperature from Celsius to kelvin",
+    "description": "Write a program to convert temperature from celsius to kelvin\n\n```\r\nInput  ( C ) : -40\r\nOutput ( K ) : 233.15\r\n```\n    ",
+    "contributor": "magar51",
+    "createdAt": "2024-03-22T14:41:08.349Z",
+    "createdIssueNumber": "5514",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Convert time from 12-hour to 24-hour format",
     "description": "Write a program to convert time from 12-hour to 24-hour format\n\n```\nInput  : 12:05:45PM\nOutput : 12:05:45\n```",
     "contributor": "harshraj8843",
