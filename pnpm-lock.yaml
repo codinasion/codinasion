@@ -48,8 +48,8 @@ importers:
         specifier: 2.7.0
         version: 2.7.0
       twitter-api-v2:
-        specifier: ^1.15.2
-        version: 1.15.2
+        specifier: ^1.16.1
+        version: 1.16.1
     devDependencies:
       '@codinasion/language-data':
         specifier: workspace:*
@@ -15008,8 +15008,8 @@ packages:
       turbo-windows-arm64: 1.11.3
     dev: false
 
-  /twitter-api-v2@1.15.2:
-    resolution: {integrity: sha512-iIGItwkUGsAGA6VNnULXL5dllVJ35IZQjLSTWvqSn4M7s19B6X1+pUB/ZDSJD+u6q6+FinNxy0dnDIEoCZ5x8w==}
+  /twitter-api-v2@1.16.1:
+    resolution: {integrity: sha512-76hZsRmVdFQu2MvN2oBw0RjTsYmgqnef1bWb4/Ds54CrcTXvtTZFCp3d6FMdeKp9m2PIx2l9MIJWvs5PjQN/Dw==}
     dev: false
 
   /type-check@0.4.0:
