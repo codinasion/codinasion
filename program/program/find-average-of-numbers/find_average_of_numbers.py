@@ -1,7 +1,6 @@
 lst = list(map(int, input().split(" ")))
 sum = 0
-for i in range(0, len(lst)):
+n=len(lst)
+for i in range(0, n):
     sum = sum + lst[i]
-print(sum / len(lst))
-
-# Contributed by Raghav Garg
+print(sum / n)
