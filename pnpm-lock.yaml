@@ -115,8 +115,8 @@ importers:
         specifier: ^29.7.0
         version: 29.7.0(@types/node@20.11.1)
       nock:
-        specifier: ^13.0.5
-        version: 13.4.0
+        specifier: ^13.5.4
+        version: 13.5.4
       smee-client:
         specifier: ^2.0.1
         version: 2.0.1
@@ -13092,8 +13092,8 @@ packages:
     resolution: {integrity: sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==}
     dev: false
 
-  /nock@13.4.0:
-    resolution: {integrity: sha512-W8NVHjO/LCTNA64yxAPHV/K47LpGYcVzgKd3Q0n6owhwvD0Dgoterc25R4rnZbckJEb6Loxz1f5QMuJpJnbSyQ==}
+  /nock@13.5.4:
+    resolution: {integrity: sha512-yAyTfdeNJGGBFxWdzSKCBYxs5FxLbCg5X5Q4ets974hcQzG1+qCxvIyOo4j2Ry6MUlhWVMX4OoYDefAIIwupjw==}
     engines: {node: '>= 10.13'}
     dependencies:
       debug: 4.3.4
