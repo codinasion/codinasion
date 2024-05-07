@@ -6,7 +6,7 @@
     "dev": "probot run ./app.js"
   },
   "dependencies": {
-    "probot": "^12.2.4"
+    "probot": "^13.0.2"
   },
   "devDependencies": {
     "jest": "^29.7.0",
