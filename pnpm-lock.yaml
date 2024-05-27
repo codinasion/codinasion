@@ -70,8 +70,8 @@ importers:
         specifier: ^0.38.1
         version: 0.38.1
       dotenv:
-        specifier: 16.3.1
-        version: 16.3.1
+        specifier: 16.4.5
+        version: 16.4.5
       eslint:
         specifier: ^9.2.0
         version: 9.2.0
@@ -10313,7 +10313,7 @@ packages:
     hasBin: true
     dependencies:
       cross-spawn: 7.0.3
-      dotenv: 16.3.1
+      dotenv: 16.4.5
       dotenv-expand: 10.0.0
       minimist: 1.2.8
     dev: false
@@ -10328,8 +10328,8 @@ packages:
     engines: {node: '>=12'}
     dev: true
 
-  /dotenv@16.3.1:
-    resolution: {integrity: sha512-IPzF4w4/Rd94bA9imS68tZBaYyBWSCE47V1RGuMrB94iyTOIEwRmVL2x/4An+6mETpLrKJ5hQkB8W4kFAadeIQ==}
+  /dotenv@16.4.5:
+    resolution: {integrity: sha512-ZmdL2rui+eB2YwhsWzjInR8LldtZHGDoQ1ugH85ppHKwpUHL7j7rN0Ti9NCnGiQbhaZ11FpR+7ao1dNsmduNUg==}
     engines: {node: '>=12'}
 
   /duplexer@0.1.2:
@@ -14028,7 +14028,7 @@ packages:
       '@types/express': 4.17.21
       commander: 12.0.0
       deepmerge: 4.3.1
-      dotenv: 16.3.1
+      dotenv: 16.4.5
       eventsource: 2.0.2
       express: 4.18.2
       ioredis: 5.4.1
@@ -14039,7 +14039,7 @@ packages:
       pino-http: 9.0.0
       pkg-conf: 3.1.0
       resolve: 1.22.8
-      update-dotenv: 1.1.1(dotenv@16.3.1)
+      update-dotenv: 1.1.1(dotenv@16.4.5)
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -15485,12 +15485,12 @@ packages:
       picocolors: 1.0.0
     dev: true
 
-  /update-dotenv@1.1.1(dotenv@16.3.1):
+  /update-dotenv@1.1.1(dotenv@16.4.5):
     resolution: {integrity: sha512-3cIC18In/t0X/yH793c00qqxcKD8jVCgNOPif/fGQkFpYMGecM9YAc+kaAKXuZsM2dE9I9wFI7KvAuNX22SGMQ==}
     peerDependencies:
       dotenv: '*'
     dependencies:
-      dotenv: 16.3.1
+      dotenv: 16.4.5
     dev: false
 
   /uri-js@4.4.1:
