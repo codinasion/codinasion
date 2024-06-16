@@ -1,6 +1,6 @@
 type GithubUserType = {
-  id: number;
-  login: string;
-};
+  id: number
+  login: string
+}
 
-export type { GithubUserType };
+export type { GithubUserType }

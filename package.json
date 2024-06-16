@@ -34,7 +34,7 @@
     "version-packages": "pnpm changeset version && pnpm all:packages",
     "publish-packages": "pnpm all:packages && changeset version && changeset publish"
   },
-  "packageManager": "pnpm@8.9.0",
+  "packageManager": "pnpm@9.3.0",
   "engines": {
     "node": ">=18"
   },
@@ -45,14 +45,12 @@
   },
   "dependencies": {
     "@changesets/cli": "latest",
-    "@codinasion/eslint-config": "workspace:*",
-    "@codinasion/typescript-config": "workspace:*",
     "@manypkg/cli": "latest",
     "dotenv-cli": "latest",
     "husky": "latest",
     "prettier": "latest",
     "prettier-plugin-tailwindcss": "latest",
     "turbo": "latest",
-    "vercel-submodules": "^1.0.10"
+    "vercel-submodules": "latest"
   }
 }

@@ -8,7 +8,7 @@ module.exports = {
     "eslint:recommended",
     "prettier",
     require.resolve("@vercel/style-guide/eslint/next"),
-    "eslint-config-turbo",
+    "turbo",
   ],
   globals: {
     React: true,
@@ -16,6 +16,7 @@ module.exports = {
   },
   env: {
     node: true,
+    browser: true,
   },
   plugins: ["only-warn"],
   settings: {

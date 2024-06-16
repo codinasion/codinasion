@@ -22,6 +22,7 @@ def ternary_search(arr, value):
 
     return -1
 
+
 # Example usage
 arr = [1, 2, 3, 4, 5]
 value = 4

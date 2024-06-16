@@ -11,4 +11,3 @@ def fahrenheit_to_kelvin(temp_f):
 if __name__ == "__main__":
     fahrenheit = int(input("Fahrenheit input: "))
     print("Kelvin:", fahrenheit_to_kelvin(fahrenheit))
-

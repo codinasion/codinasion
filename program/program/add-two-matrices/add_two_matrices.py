@@ -11,14 +11,20 @@ def get_matrix_input(rows, cols):
         matrix.append(row)
     return matrix
 
+
 def add_matrices(matrix1, matrix2):
     """Function to add two matrices."""
-    return [[matrix1[i][j] + matrix2[i][j] for j in range(len(matrix1[0]))] for i in range(len(matrix1))]
+    return [
+        [matrix1[i][j] + matrix2[i][j] for j in range(len(matrix1[0]))]
+        for i in range(len(matrix1))
+    ]
+
 
 def print_matrix(matrix):
     """Function to print the matrix."""
     for row in matrix:
         print(" ".join(map(str, row)))
+
 
 def main():
     rows = int(input("Enter the number of rows for the matrices: "))
@@ -33,6 +39,7 @@ def main():
     result_matrix = add_matrices(matrix1, matrix2)
     print("Result of adding Matrix 1 and Matrix 2:")
     print_matrix(result_matrix)
+
 
 if __name__ == "__main__":
     main()

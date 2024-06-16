@@ -22,7 +22,7 @@ def jump_search(arr, x, n):
     return -1
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     list = [1, 2, 3, 4, 5]
     value = 4
     n = len(list)

@@ -1,35 +1,20 @@
 {
   "$schema": "https://turbo.build/schema.json",
-  "globalDependencies": ["**/.env.*local"],
-  "globalEnv": [
-    "GITHUB_API_URL",
-    "CODINASION_GITHUB_TOKEN",
-    "PROGRAM_DATA_URL",
-    "CONTRIBUTORS_DATA_URL",
-    "TWITTER_APP_KEY",
-    "TWITTER_APP_SECRET",
-    "TWITTER_ACCESS_TOKEN",
-    "TWITTER_ACCESS_SECRET"
-  ],
-  "pipeline": {
-    "dev": {
-      "cache": false,
-      "persistent": true
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "inputs": ["$TURBO_DEFAULT$", ".env", ".env.*"],
+      "outputs": [".next/**", "!.next/cache/**"]
     },
     "lint": {
       "dependsOn": ["^lint"]
     },
-    "build": {
-      "dependsOn": ["^build"],
-      "outputs": ["dist/**", ".next/**", "!.next/cache/**"]
-    },
-    "build:local": {
-      "dependsOn": ["^build"],
-      "outputs": ["dist/**", ".next/**", "!.next/cache/**"]
+    "dev": {
+      "cache": false,
+      "persistent": true
     },
     "test": {
       "dependsOn": ["^test"]
-    },
-    "all": {}
+    }
   }
 }

@@ -1,12 +1,12 @@
 const LanguageList = [
-  "Python",
-  "C++",
-  "C",
-  "Java",
-  "C#",
-  "Ruby",
-  "Go",
-  "Kotlin",
-];
+  'Python',
+  'C++',
+  'C',
+  'Java',
+  'C#',
+  'Ruby',
+  'Go',
+  'Kotlin'
+]
 
-export { LanguageList };
+export { LanguageList }

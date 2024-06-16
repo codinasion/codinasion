@@ -6,9 +6,12 @@
 # Code owners for 'program' folder
 /program/program/       @codinasion/program
 
+# Code owners for Website(s) and api(s)
+/website/                  @codinasion/web-dev     @harshraj8843
+
 
 # Code owners for Github Bot(s)
-/github-bots/           @codinasion/github-bot  @harshraj8843
+/bot/           @codinasion/github-bot  @harshraj8843
 
 
 # Code owners for README and translations

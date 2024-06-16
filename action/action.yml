@@ -1,122 +1,132 @@
-name: "action"
-description: "Codinasion GitHub Actions"
-author: "Codinasion"
+name: 'action'
+description: 'Codinasion GitHub Actions'
+author: 'Codinasion'
 
 # Define your inputs here.
 inputs:
   GITHUB_TOKEN:
-    description: "`content: read` GitHub Token"
+    description: '`content: read` GitHub Token'
     required: true
 
   TRIGGER_COLLECT_PROGRAM_DATA:
-    description: "Trigger collect program data"
+    description: 'Trigger collect program data'
     required: true
-    default: "false"
+    default: 'false'
 
   TRIGGER_COLLECT_CONTRIBUTORS_DATA:
-    description: "Trigger collect contributors data"
+    description: 'Trigger collect contributors data'
     required: true
-    default: "false"
+    default: 'false'
 
   TRIGGER_TWEET_GFI_DATA:
-    description: "Trigger tweet GFI data"
+    description: 'Trigger tweet GFI data'
     required: true
-    default: "false"
+    default: 'false'
 
   TRIGGER_TWEET_TRENDING_REPOS_DATA:
-    description: "Trigger tweet trending repos data"
+    description: 'Trigger tweet trending repos data'
     required: true
-    default: "false"
+    default: 'false'
 
   TRIGGER_TWEET_QUOTE_DATA:
-    description: "Trigger tweet quote data"
+    description: 'Trigger tweet quote data'
     required: true
-    default: "false"
+    default: 'false'
 
   TRIGGER_TWEET_MEME:
-    description: "Trigger tweet meme"
+    description: 'Trigger tweet meme'
     required: true
-    default: "false"
+    default: 'false'
 
   TRIGGER_SUBMIT_PROGRAM:
-    description: "Trigger submit program"
+    description: 'Trigger submit program'
     required: true
-    default: "false"
+    default: 'false'
 
   TRIGGER_SUBMIT_PROGRAM_COMMENT_CLOSE:
-    description: "Trigger submit program comment close"
+    description: 'Trigger submit program comment close'
     required: true
-    default: "false"
+    default: 'false'
 
   TRIGGER_AUTO_CREATE_ISSUE:
-    description: "Trigger auto create issue"
+    description: 'Trigger auto create issue'
     required: true
-    default: "false"
+    default: 'false'
 
   TRIGGER_AUTO_TRACK_ISSUE:
-    description: "Trigger auto track issue"
+    description: 'Trigger auto track issue'
     required: true
-    default: "false"
+    default: 'false'
+
+  TRIGGER_COLLECT_TOOLS_DATA:
+    description: 'Trigger collect tools data'
+    required: true
+    default: 'false'
+
+  TRIGGER_COLLECT_BLOG_DATA:
+    description: 'Trigger collect blog data'
+    required: true
+    default: 'false'
 
   TWITTER_APP_KEY:
-    description: "twitter app key"
+    description: 'twitter app key'
     required: true
-    default: ""
+    default: ''
 
   TWITTER_APP_SECRET:
-    description: "twitter app secret"
+    description: 'twitter app secret'
     required: true
-    default: ""
+    default: ''
 
   TWITTER_ACCESS_TOKEN:
-    description: "twitter access token"
+    description: 'twitter access token'
     required: true
-    default: ""
+    default: ''
 
   TWITTER_ACCESS_SECRET:
-    description: "twitter access secret"
+    description: 'twitter access secret'
     required: true
-    default: ""
+    default: ''
 
   TEST:
-    description: "is test?"
+    description: 'is test?'
     required: true
-    default: "false"
+    default: 'false'
 
   SUBMIT_PROGRAM_USERNAME:
-    description: "submit program username"
+    description: 'submit program username'
     required: true
-    default: ""
+    default: ''
 
   SUBMIT_PROGRAM_ISSUE_NUMBER:
-    description: "submit program issue number"
+    description: 'submit program issue number'
     required: true
-    default: ""
+    default: ''
 
   SUBMIT_PROGRAM_TITLE:
-    description: "submit program title"
+    description: 'submit program title'
     required: true
-    default: ""
+    default: ''
 
   SUBMIT_PROGRAM_BODY:
-    description: "submit program body"
+    description: 'submit program body'
     required: true
-    default: ""
+    default: ''
 
   AUTO_TRACK_ISSUE_NUMBER:
-    description: "auto track issue number"
+    description: 'auto track issue number'
     required: true
-    default: ""
+    default: ''
 
   AUTO_TRACK_ISSUE_TITLE:
-    description: "auto track issue title"
+    description: 'auto track issue title'
     required: true
-    default: ""
+    default: ''
 
   AUTO_TRACK_ISSUE_BODY:
-    description: "auto track issue body"
+    description: 'auto track issue body'
     required: true
-    default: ""
+    default: ''
 
 runs:
   using: node20
