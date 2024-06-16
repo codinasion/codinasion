@@ -1,0 +1,1027 @@
+[
+  {
+    "name": "ascii",
+    "ignore": true,
+    "tags": []
+  },
+  {
+    "name": "ascii-to-binary",
+    "ignore": false,
+    "tags": ["number-system", "ascii", "binary"]
+  },
+  {
+    "name": "ascii-to-decimal",
+    "ignore": false,
+    "tags": ["number-system", "ascii", "decimal"]
+  },
+  {
+    "name": "ascii-to-hexadecimal",
+    "ignore": false,
+    "tags": ["number-system", "ascii", "hexadecimal"]
+  },
+  {
+    "name": "ascii-to-octal",
+    "ignore": false,
+    "tags": ["number-system", "ascii", "octal"]
+  },
+  {
+    "name": "base64-to-string",
+    "ignore": false,
+    "tags": ["encoding", "base64"]
+  },
+  {
+    "name": "binary",
+    "ignore": true,
+    "tags": []
+  },
+  {
+    "name": "binary-search",
+    "ignore": false,
+    "tags": ["dsa", "search", "binary-search"]
+  },
+  {
+    "name": "binary-to-ascii",
+    "ignore": false,
+    "tags": ["number-system", "binary", "ascii"]
+  },
+  {
+    "name": "binary-to-decimal",
+    "ignore": false,
+    "tags": ["number-system", "binary", "decimal"]
+  },
+  {
+    "name": "binary-to-hexadecimal",
+    "ignore": false,
+    "tags": ["number-system", "binary", "hexadecimal"]
+  },
+  {
+    "name": "binary-to-octal",
+    "ignore": false,
+    "tags": ["number-system", "binary", "octal"]
+  },
+  {
+    "name": "bubble-sort",
+    "ignore": false,
+    "tags": ["dsa", "sort", "bubble-sort"]
+  },
+  {
+    "name": "camel-case-string",
+    "ignore": true,
+    "tags": []
+  },
+  {
+    "name": "camel-case-string-to-constant-case-string",
+    "ignore": false,
+    "tags": ["case", "camel-case", "constant-case"]
+  },
+  {
+    "name": "camel-case-string-to-dot-case-string",
+    "ignore": false,
+    "tags": ["case", "camel-case", "dot-case"]
+  },
+  {
+    "name": "camel-case-string-to-header-case-string",
+    "ignore": false,
+    "tags": ["case", "camel-case", "header-case"]
+  },
+  {
+    "name": "camel-case-string-to-kebab-case-string",
+    "ignore": false,
+    "tags": ["case", "camel-case", "kebab-case"]
+  },
+  {
+    "name": "camel-case-string-to-lower-case-string",
+    "ignore": false,
+    "tags": ["case", "camel-case", "lower-case"]
+  },
+  {
+    "name": "camel-case-string-to-pascal-case-string",
+    "ignore": false,
+    "tags": ["case", "camel-case", "pascal-case"]
+  },
+  {
+    "name": "camel-case-string-to-path-case-string",
+    "ignore": false,
+    "tags": ["case", "camel-case", "path-case"]
+  },
+  {
+    "name": "camel-case-string-to-sentence-case-string",
+    "ignore": false,
+    "tags": ["case", "camel-case", "sentence-case"]
+  },
+  {
+    "name": "camel-case-string-to-snake-case-string",
+    "ignore": false,
+    "tags": ["case", "camel-case", "snake-case"]
+  },
+  {
+    "name": "camel-case-string-to-title-case-string",
+    "ignore": false,
+    "tags": ["case", "camel-case", "title-case"]
+  },
+  {
+    "name": "camel-case-string-to-upper-case-string",
+    "ignore": false,
+    "tags": ["case", "camel-case", "upper-case"]
+  },
+  {
+    "name": "case",
+    "ignore": true,
+    "tags": []
+  },
+  {
+    "name": "code",
+    "ignore": true,
+    "tags": []
+  },
+  {
+    "name": "constant-case-string",
+    "ignore": true,
+    "tags": []
+  },
+  {
+    "name": "constant-case-string-to-camel-case-string",
+    "ignore": false,
+    "tags": ["case", "constant-case", "camel-case"]
+  },
+  {
+    "name": "constant-case-string-to-dot-case-string",
+    "ignore": false,
+    "tags": ["case", "constant-case", "dot-case"]
+  },
+  {
+    "name": "constant-case-string-to-header-case-string",
+    "ignore": false,
+    "tags": ["case", "constant-case", "header-case"]
+  },
+  {
+    "name": "constant-case-string-to-kebab-case-string",
+    "ignore": false,
+    "tags": ["case", "constant-case", "kebab-case"]
+  },
+  {
+    "name": "constant-case-string-to-lower-case-string",
+    "ignore": false,
+    "tags": ["case", "constant-case", "lower-case"]
+  },
+  {
+    "name": "constant-case-string-to-pascal-case-string",
+    "ignore": false,
+    "tags": ["case", "constant-case", "pascal-case"]
+  },
+  {
+    "name": "constant-case-string-to-path-case-string",
+    "ignore": false,
+    "tags": ["case", "constant-case", "path-case"]
+  },
+  {
+    "name": "constant-case-string-to-sentence-case-string",
+    "ignore": false,
+    "tags": ["case", "constant-case", "sentence-case"]
+  },
+  {
+    "name": "constant-case-string-to-snake-case-string",
+    "ignore": false,
+    "tags": ["case", "constant-case", "snake-case"]
+  },
+  {
+    "name": "constant-case-string-to-title-case-string",
+    "ignore": false,
+    "tags": ["case", "constant-case", "title-case"]
+  },
+  {
+    "name": "constant-case-string-to-upper-case-string",
+    "ignore": false,
+    "tags": ["case", "constant-case", "upper-case"]
+  },
+  {
+    "name": "counting-sort",
+    "ignore": false,
+    "tags": ["dsa", "sort", "counting-sort"]
+  },
+  {
+    "name": "decimal",
+    "ignore": true,
+    "tags": []
+  },
+  {
+    "name": "decimal-to-ascii",
+    "ignore": false,
+    "tags": ["number-system", "decimal", "ascii"]
+  },
+  {
+    "name": "decimal-to-binary",
+    "ignore": false,
+    "tags": ["number-system", "decimal", "binary"]
+  },
+  {
+    "name": "decimal-to-hexadecimal",
+    "ignore": false,
+    "tags": ["number-system", "decimal", "hexadecimal"]
+  },
+  {
+    "name": "decimal-to-octal",
+    "ignore": false,
+    "tags": ["number-system", "decimal", "octal"]
+  },
+  {
+    "name": "dot-case-string",
+    "ignore": true,
+    "tags": []
+  },
+  {
+    "name": "dot-case-string-to-camel-case-string",
+    "ignore": false,
+    "tags": ["case", "dot-case", "camel-case"]
+  },
+  {
+    "name": "dot-case-string-to-constant-case-string",
+    "ignore": false,
+    "tags": ["case", "dot-case", "constant-case"]
+  },
+  {
+    "name": "dot-case-string-to-header-case-string",
+    "ignore": false,
+    "tags": ["case", "dot-case", "header-case"]
+  },
+  {
+    "name": "dot-case-string-to-kebab-case-string",
+    "ignore": false,
+    "tags": ["case", "dot-case", "kebab-case"]
+  },
+  {
+    "name": "dot-case-string-to-lower-case-string",
+    "ignore": false,
+    "tags": ["case", "dot-case", "lower-case"]
+  },
+  {
+    "name": "dot-case-string-to-pascal-case-string",
+    "ignore": false,
+    "tags": ["case", "dot-case", "pascal-case"]
+  },
+  {
+    "name": "dot-case-string-to-path-case-string",
+    "ignore": false,
+    "tags": ["case", "dot-case", "path-case"]
+  },
+  {
+    "name": "dot-case-string-to-sentence-case-string",
+    "ignore": false,
+    "tags": ["case", "dot-case", "sentence-case"]
+  },
+  {
+    "name": "dot-case-string-to-snake-case-string",
+    "ignore": false,
+    "tags": ["case", "dot-case", "snake-case"]
+  },
+  {
+    "name": "dot-case-string-to-title-case-string",
+    "ignore": false,
+    "tags": ["case", "dot-case", "title-case"]
+  },
+  {
+    "name": "dot-case-string-to-upper-case-string",
+    "ignore": false,
+    "tags": ["case", "dot-case", "upper-case"]
+  },
+  {
+    "name": "dsa",
+    "ignore": true,
+    "tags": []
+  },
+  {
+    "name": "encoding",
+    "ignore": true,
+    "tags": []
+  },
+  {
+    "name": "eslint-config",
+    "ignore": true,
+    "tags": []
+  },
+  {
+    "name": "header-case-string",
+    "ignore": true,
+    "tags": []
+  },
+  {
+    "name": "header-case-string-to-camel-case-string",
+    "ignore": false,
+    "tags": ["case", "header-case", "camel-case"]
+  },
+  {
+    "name": "header-case-string-to-constant-case-string",
+    "ignore": false,
+    "tags": ["case", "header-case", "constant-case"]
+  },
+  {
+    "name": "header-case-string-to-dot-case-string",
+    "ignore": false,
+    "tags": ["case", "header-case", "dot-case"]
+  },
+  {
+    "name": "header-case-string-to-kebab-case-string",
+    "ignore": false,
+    "tags": ["case", "header-case", "kebab-case"]
+  },
+  {
+    "name": "header-case-string-to-lower-case-string",
+    "ignore": false,
+    "tags": ["case", "header-case", "lower-case"]
+  },
+  {
+    "name": "header-case-string-to-pascal-case-string",
+    "ignore": false,
+    "tags": ["case", "header-case", "pascal-case"]
+  },
+  {
+    "name": "header-case-string-to-path-case-string",
+    "ignore": false,
+    "tags": ["case", "header-case", "path-case"]
+  },
+  {
+    "name": "header-case-string-to-sentence-case-string",
+    "ignore": false,
+    "tags": ["case", "header-case", "sentence-case"]
+  },
+  {
+    "name": "header-case-string-to-snake-case-string",
+    "ignore": false,
+    "tags": ["case", "header-case", "snake-case"]
+  },
+  {
+    "name": "header-case-string-to-title-case-string",
+    "ignore": false,
+    "tags": ["case", "header-case", "title-case"]
+  },
+  {
+    "name": "header-case-string-to-upper-case-string",
+    "ignore": false,
+    "tags": ["case", "header-case", "upper-case"]
+  },
+  {
+    "name": "heap-sort",
+    "ignore": false,
+    "tags": ["dsa", "sort", "heap-sort"]
+  },
+  {
+    "name": "hexadecimal",
+    "ignore": true,
+    "tags": []
+  },
+  {
+    "name": "hexadecimal-to-ascii",
+    "ignore": false,
+    "tags": ["number-system", "hexadecimal", "ascii"]
+  },
+  {
+    "name": "hexadecimal-to-binary",
+    "ignore": false,
+    "tags": ["number-system", "hexadecimal", "binary"]
+  },
+  {
+    "name": "hexadecimal-to-decimal",
+    "ignore": false,
+    "tags": ["number-system", "hexadecimal", "decimal"]
+  },
+  {
+    "name": "hexadecimal-to-octal",
+    "ignore": false,
+    "tags": ["number-system", "hexadecimal", "octal"]
+  },
+  {
+    "name": "insertion-sort",
+    "ignore": false,
+    "tags": ["dsa", "sort", "insertion-sort"]
+  },
+  {
+    "name": "kebab-case-string",
+    "ignore": true,
+    "tags": []
+  },
+  {
+    "name": "kebab-case-string-to-camel-case-string",
+    "ignore": false,
+    "tags": ["case", "kebab-case", "camel-case"]
+  },
+  {
+    "name": "kebab-case-string-to-constant-case-string",
+    "ignore": false,
+    "tags": ["case", "kebab-case", "constant-case"]
+  },
+  {
+    "name": "kebab-case-string-to-dot-case-string",
+    "ignore": false,
+    "tags": ["case", "kebab-case", "dot-case"]
+  },
+  {
+    "name": "kebab-case-string-to-header-case-string",
+    "ignore": false,
+    "tags": ["case", "kebab-case", "header-case"]
+  },
+  {
+    "name": "kebab-case-string-to-lower-case-string",
+    "ignore": false,
+    "tags": ["case", "kebab-case", "lower-case"]
+  },
+  {
+    "name": "kebab-case-string-to-pascal-case-string",
+    "ignore": false,
+    "tags": ["case", "kebab-case", "pascal-case"]
+  },
+  {
+    "name": "kebab-case-string-to-path-case-string",
+    "ignore": false,
+    "tags": ["case", "kebab-case", "path-case"]
+  },
+  {
+    "name": "kebab-case-string-to-sentence-case-string",
+    "ignore": false,
+    "tags": ["case", "kebab-case", "sentence-case"]
+  },
+  {
+    "name": "kebab-case-string-to-snake-case-string",
+    "ignore": false,
+    "tags": ["case", "kebab-case", "snake-case"]
+  },
+  {
+    "name": "kebab-case-string-to-title-case-string",
+    "ignore": false,
+    "tags": ["case", "kebab-case", "title-case"]
+  },
+  {
+    "name": "kebab-case-string-to-upper-case-string",
+    "ignore": false,
+    "tags": ["case", "kebab-case", "upper-case"]
+  },
+  {
+    "name": "language-data",
+    "ignore": true,
+    "tags": []
+  },
+  {
+    "name": "linear-search",
+    "ignore": false,
+    "tags": ["dsa", "search", "linear-search"]
+  },
+  {
+    "name": "lower-case-string",
+    "ignore": true,
+    "tags": []
+  },
+  {
+    "name": "lower-case-string-to-camel-case-string",
+    "ignore": false,
+    "tags": ["case", "lower-case", "camel-case"]
+  },
+  {
+    "name": "lower-case-string-to-constant-case-string",
+    "ignore": false,
+    "tags": ["case", "lower-case", "constant-case"]
+  },
+  {
+    "name": "lower-case-string-to-dot-case-string",
+    "ignore": false,
+    "tags": ["case", "lower-case", "dot-case"]
+  },
+  {
+    "name": "lower-case-string-to-header-case-string",
+    "ignore": false,
+    "tags": ["case", "lower-case", "header-case"]
+  },
+  {
+    "name": "lower-case-string-to-kebab-case-string",
+    "ignore": false,
+    "tags": ["case", "lower-case", "kebab-case"]
+  },
+  {
+    "name": "lower-case-string-to-pascal-case-string",
+    "ignore": false,
+    "tags": ["case", "lower-case", "pascal-case"]
+  },
+  {
+    "name": "lower-case-string-to-path-case-string",
+    "ignore": false,
+    "tags": ["case", "lower-case", "path-case"]
+  },
+  {
+    "name": "lower-case-string-to-sentence-case-string",
+    "ignore": false,
+    "tags": ["case", "lower-case", "sentence-case"]
+  },
+  {
+    "name": "lower-case-string-to-snake-case-string",
+    "ignore": false,
+    "tags": ["case", "lower-case", "snake-case"]
+  },
+  {
+    "name": "lower-case-string-to-title-case-string",
+    "ignore": false,
+    "tags": ["case", "lower-case", "title-case"]
+  },
+  {
+    "name": "lower-case-string-to-upper-case-string",
+    "ignore": false,
+    "tags": ["case", "lower-case", "upper-case"]
+  },
+  {
+    "name": "merge-sort",
+    "ignore": false,
+    "tags": ["dsa", "sort", "merge-sort"]
+  },
+  {
+    "name": "number-system",
+    "ignore": true,
+    "tags": []
+  },
+  {
+    "name": "octal",
+    "ignore": true,
+    "tags": []
+  },
+  {
+    "name": "octal-to-ascii",
+    "ignore": false,
+    "tags": ["number-system", "octal", "ascii"]
+  },
+  {
+    "name": "octal-to-binary",
+    "ignore": false,
+    "tags": ["number-system", "octal", "binary"]
+  },
+  {
+    "name": "octal-to-decimal",
+    "ignore": false,
+    "tags": ["number-system", "octal", "decimal"]
+  },
+  {
+    "name": "octal-to-hexadecimal",
+    "ignore": false,
+    "tags": ["number-system", "octal", "hexadecimal"]
+  },
+  {
+    "name": "pascal-case-string",
+    "ignore": true,
+    "tags": []
+  },
+  {
+    "name": "pascal-case-string-to-camel-case-string",
+    "ignore": false,
+    "tags": ["case", "pascal-case", "camel-case"]
+  },
+  {
+    "name": "pascal-case-string-to-constant-case-string",
+    "ignore": false,
+    "tags": ["case", "pascal-case", "constant-case"]
+  },
+  {
+    "name": "pascal-case-string-to-dot-case-string",
+    "ignore": false,
+    "tags": ["case", "pascal-case", "dot-case"]
+  },
+  {
+    "name": "pascal-case-string-to-header-case-string",
+    "ignore": false,
+    "tags": ["case", "pascal-case", "header-case"]
+  },
+  {
+    "name": "pascal-case-string-to-kebab-case-string",
+    "ignore": false,
+    "tags": ["case", "pascal-case", "kebab-case"]
+  },
+  {
+    "name": "pascal-case-string-to-lower-case-string",
+    "ignore": false,
+    "tags": ["case", "pascal-case", "lower-case"]
+  },
+  {
+    "name": "pascal-case-string-to-path-case-string",
+    "ignore": false,
+    "tags": ["case", "pascal-case", "path-case"]
+  },
+  {
+    "name": "pascal-case-string-to-sentence-case-string",
+    "ignore": false,
+    "tags": ["case", "pascal-case", "sentence-case"]
+  },
+  {
+    "name": "pascal-case-string-to-snake-case-string",
+    "ignore": false,
+    "tags": ["case", "pascal-case", "snake-case"]
+  },
+  {
+    "name": "pascal-case-string-to-title-case-string",
+    "ignore": false,
+    "tags": ["case", "pascal-case", "title-case"]
+  },
+  {
+    "name": "pascal-case-string-to-upper-case-string",
+    "ignore": false,
+    "tags": ["case", "pascal-case", "upper-case"]
+  },
+  {
+    "name": "path-case-string",
+    "ignore": true,
+    "tags": []
+  },
+  {
+    "name": "path-case-string-to-camel-case-string",
+    "ignore": false,
+    "tags": ["case", "path-case", "camel-case"]
+  },
+  {
+    "name": "path-case-string-to-constant-case-string",
+    "ignore": false,
+    "tags": ["case", "path-case", "constant-case"]
+  },
+  {
+    "name": "path-case-string-to-dot-case-string",
+    "ignore": false,
+    "tags": ["case", "path-case", "dot-case"]
+  },
+  {
+    "name": "path-case-string-to-header-case-string",
+    "ignore": false,
+    "tags": ["case", "path-case", "header-case"]
+  },
+  {
+    "name": "path-case-string-to-kebab-case-string",
+    "ignore": false,
+    "tags": ["case", "path-case", "kebab-case"]
+  },
+  {
+    "name": "path-case-string-to-lower-case-string",
+    "ignore": false,
+    "tags": ["case", "path-case", "lower-case"]
+  },
+  {
+    "name": "path-case-string-to-pascal-case-string",
+    "ignore": false,
+    "tags": ["case", "path-case", "pascal-case"]
+  },
+  {
+    "name": "path-case-string-to-sentence-case-string",
+    "ignore": false,
+    "tags": ["case", "path-case", "sentence-case"]
+  },
+  {
+    "name": "path-case-string-to-snake-case-string",
+    "ignore": false,
+    "tags": ["case", "path-case", "snake-case"]
+  },
+  {
+    "name": "path-case-string-to-title-case-string",
+    "ignore": false,
+    "tags": ["case", "path-case", "title-case"]
+  },
+  {
+    "name": "path-case-string-to-upper-case-string",
+    "ignore": false,
+    "tags": ["case", "path-case", "upper-case"]
+  },
+  {
+    "name": "queue",
+    "ignore": true,
+    "tags": []
+  },
+  {
+    "name": "quick-sort",
+    "ignore": false,
+    "tags": ["dsa", "sort", "quick-sort"]
+  },
+  {
+    "name": "radix-sort",
+    "ignore": false,
+    "tags": ["dsa", "sort", "radix-sort"]
+  },
+  {
+    "name": "selection-sort",
+    "ignore": false,
+    "tags": ["dsa", "sort", "selection-sort"]
+  },
+  {
+    "name": "sentence-case-string",
+    "ignore": true,
+    "tags": []
+  },
+  {
+    "name": "sentence-case-string-to-camel-case-string",
+    "ignore": false,
+    "tags": ["case", "sentence-case", "camel-case"]
+  },
+  {
+    "name": "sentence-case-string-to-constant-case-string",
+    "ignore": false,
+    "tags": ["case", "sentence-case", "constant-case"]
+  },
+  {
+    "name": "sentence-case-string-to-dot-case-string",
+    "ignore": false,
+    "tags": ["case", "sentence-case", "dot-case"]
+  },
+  {
+    "name": "sentence-case-string-to-header-case-string",
+    "ignore": false,
+    "tags": ["case", "sentence-case", "header-case"]
+  },
+  {
+    "name": "sentence-case-string-to-kebab-case-string",
+    "ignore": false,
+    "tags": ["case", "sentence-case", "kebab-case"]
+  },
+  {
+    "name": "sentence-case-string-to-lower-case-string",
+    "ignore": false,
+    "tags": ["case", "sentence-case", "lower-case"]
+  },
+  {
+    "name": "sentence-case-string-to-pascal-case-string",
+    "ignore": false,
+    "tags": ["case", "sentence-case", "pascal-case"]
+  },
+  {
+    "name": "sentence-case-string-to-path-case-string",
+    "ignore": false,
+    "tags": ["case", "sentence-case", "path-case"]
+  },
+  {
+    "name": "sentence-case-string-to-snake-case-string",
+    "ignore": false,
+    "tags": ["case", "sentence-case", "snake-case"]
+  },
+  {
+    "name": "sentence-case-string-to-title-case-string",
+    "ignore": false,
+    "tags": ["case", "sentence-case", "title-case"]
+  },
+  {
+    "name": "sentence-case-string-to-upper-case-string",
+    "ignore": false,
+    "tags": ["case", "sentence-case", "upper-case"]
+  },
+  {
+    "name": "snake-case-string",
+    "ignore": true,
+    "tags": []
+  },
+  {
+    "name": "snake-case-string-to-camel-case-string",
+    "ignore": false,
+    "tags": ["case", "snake-case", "camel-case"]
+  },
+  {
+    "name": "snake-case-string-to-constant-case-string",
+    "ignore": false,
+    "tags": ["case", "snake-case", "constant-case"]
+  },
+  {
+    "name": "snake-case-string-to-dot-case-string",
+    "ignore": false,
+    "tags": ["case", "snake-case", "dot-case"]
+  },
+  {
+    "name": "snake-case-string-to-header-case-string",
+    "ignore": false,
+    "tags": ["case", "snake-case", "header-case"]
+  },
+  {
+    "name": "snake-case-string-to-kebab-case-string",
+    "ignore": false,
+    "tags": ["case", "snake-case", "kebab-case"]
+  },
+  {
+    "name": "snake-case-string-to-lower-case-string",
+    "ignore": false,
+    "tags": ["case", "snake-case", "lower-case"]
+  },
+  {
+    "name": "snake-case-string-to-pascal-case-string",
+    "ignore": false,
+    "tags": ["case", "snake-case", "pascal-case"]
+  },
+  {
+    "name": "snake-case-string-to-path-case-string",
+    "ignore": false,
+    "tags": ["case", "snake-case", "path-case"]
+  },
+  {
+    "name": "snake-case-string-to-sentence-case-string",
+    "ignore": false,
+    "tags": ["case", "snake-case", "sentence-case"]
+  },
+  {
+    "name": "snake-case-string-to-title-case-string",
+    "ignore": false,
+    "tags": ["case", "snake-case", "title-case"]
+  },
+  {
+    "name": "snake-case-string-to-upper-case-string",
+    "ignore": false,
+    "tags": ["case", "snake-case", "upper-case"]
+  },
+  {
+    "name": "stack",
+    "ignore": true,
+    "tags": []
+  },
+  {
+    "name": "string",
+    "ignore": true,
+    "tags": []
+  },
+  {
+    "name": "string-to-base64",
+    "ignore": false,
+    "tags": ["encoding", "base64"]
+  },
+  {
+    "name": "string-to-camel-case",
+    "ignore": false,
+    "tags": ["case", "camel-case"]
+  },
+  {
+    "name": "string-to-constant-case",
+    "ignore": false,
+    "tags": ["case", "constant-case"]
+  },
+  {
+    "name": "string-to-dot-case",
+    "ignore": false,
+    "tags": ["case", "dot-case"]
+  },
+  {
+    "name": "string-to-header-case",
+    "ignore": false,
+    "tags": ["case", "header-case"]
+  },
+  {
+    "name": "string-to-kebab-case",
+    "ignore": false,
+    "tags": ["case", "kebab-case"]
+  },
+  {
+    "name": "string-to-lower-case",
+    "ignore": false,
+    "tags": ["case", "lower-case"]
+  },
+  {
+    "name": "string-to-pascal-case",
+    "ignore": false,
+    "tags": ["case", "pascal-case"]
+  },
+  {
+    "name": "string-to-path-case",
+    "ignore": false,
+    "tags": ["case", "path-case"]
+  },
+  {
+    "name": "string-to-sentence-case",
+    "ignore": false,
+    "tags": ["case", "sentence-case"]
+  },
+  {
+    "name": "string-to-snake-case",
+    "ignore": false,
+    "tags": ["case", "snake-case"]
+  },
+  {
+    "name": "string-to-title-case",
+    "ignore": false,
+    "tags": ["case", "title-case"]
+  },
+  {
+    "name": "string-to-upper-case",
+    "ignore": false,
+    "tags": ["case", "upper-case"]
+  },
+  {
+    "name": "title-case-string",
+    "ignore": true,
+    "tags": []
+  },
+  {
+    "name": "title-case-string-to-camel-case-string",
+    "ignore": false,
+    "tags": ["case", "title-case", "camel-case"]
+  },
+  {
+    "name": "title-case-string-to-constant-case-string",
+    "ignore": false,
+    "tags": ["case", "title-case", "constant-case"]
+  },
+  {
+    "name": "title-case-string-to-dot-case-string",
+    "ignore": false,
+    "tags": ["case", "title-case", "dot-case"]
+  },
+  {
+    "name": "title-case-string-to-header-case-string",
+    "ignore": false,
+    "tags": ["case", "title-case", "header-case"]
+  },
+  {
+    "name": "title-case-string-to-kebab-case-string",
+    "ignore": false,
+    "tags": ["case", "title-case", "kebab-case"]
+  },
+  {
+    "name": "title-case-string-to-lower-case-string",
+    "ignore": false,
+    "tags": ["case", "title-case", "lower-case"]
+  },
+  {
+    "name": "title-case-string-to-pascal-case-string",
+    "ignore": false,
+    "tags": ["case", "title-case", "pascal-case"]
+  },
+  {
+    "name": "title-case-string-to-path-case-string",
+    "ignore": false,
+    "tags": ["case", "title-case", "path-case"]
+  },
+  {
+    "name": "title-case-string-to-sentence-case-string",
+    "ignore": false,
+    "tags": ["case", "title-case", "sentence-case"]
+  },
+  {
+    "name": "title-case-string-to-snake-case-string",
+    "ignore": false,
+    "tags": ["case", "title-case", "snake-case"]
+  },
+  {
+    "name": "title-case-string-to-upper-case-string",
+    "ignore": false,
+    "tags": ["case", "title-case", "upper-case"]
+  },
+  {
+    "name": "tools",
+    "ignore": true,
+    "tags": []
+  },
+  {
+    "name": "typescript-config",
+    "ignore": true,
+    "tags": []
+  },
+  {
+    "name": "upper-case-string",
+    "ignore": true,
+    "tags": []
+  },
+  {
+    "name": "upper-case-string-to-camel-case-string",
+    "ignore": false,
+    "tags": ["case", "upper-case", "camel-case"]
+  },
+  {
+    "name": "upper-case-string-to-constant-case-string",
+    "ignore": false,
+    "tags": ["case", "upper-case", "constant-case"]
+  },
+  {
+    "name": "upper-case-string-to-dot-case-string",
+    "ignore": false,
+    "tags": ["case", "upper-case", "dot-case"]
+  },
+  {
+    "name": "upper-case-string-to-header-case-string",
+    "ignore": false,
+    "tags": ["case", "upper-case", "header-case"]
+  },
+  {
+    "name": "upper-case-string-to-kebab-case-string",
+    "ignore": false,
+    "tags": ["case", "upper-case", "kebab-case"]
+  },
+  {
+    "name": "upper-case-string-to-lower-case-string",
+    "ignore": false,
+    "tags": ["case", "upper-case", "lower-case"]
+  },
+  {
+    "name": "upper-case-string-to-pascal-case-string",
+    "ignore": false,
+    "tags": ["case", "upper-case", "pascal-case"]
+  },
+  {
+    "name": "upper-case-string-to-path-case-string",
+    "ignore": false,
+    "tags": ["case", "upper-case", "path-case"]
+  },
+  {
+    "name": "upper-case-string-to-sentence-case-string",
+    "ignore": false,
+    "tags": ["case", "upper-case", "sentence-case"]
+  },
+  {
+    "name": "upper-case-string-to-snake-case-string",
+    "ignore": false,
+    "tags": ["case", "upper-case", "snake-case"]
+  },
+  {
+    "name": "upper-case-string-to-title-case-string",
+    "ignore": false,
+    "tags": ["case", "upper-case", "title-case"]
+  }
+]
