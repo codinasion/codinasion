@@ -48857,7 +48857,7 @@ async function collect_blog_data_CollectBlogData() {
     try {
         CollectBlogData({
             GITHUB_USERNAME: 'codinasion',
-            BLOG_REPONAME: 'codinasion-private',
+            BLOG_REPONAME: 'codinasion',
             BLOG_PATH: 'content/blog/',
             BLOG_OUTPUT_PATH: 'blog-data',
             GITHUB_TOKEN: core.getInput('GITHUB_TOKEN') ||
@@ -48995,7 +48995,7 @@ async function collect_tools_data_CollectToolsData() {
     try {
         CollectToolsData({
             GITHUB_USERNAME: 'codinasion',
-            TOOLS_REPONAME: 'codinasion-private',
+            TOOLS_REPONAME: 'codinasion',
             TOOLS_PATH: 'content/tools/',
             TOOLS_OUTPUT_PATH: 'tools-data',
             GITHUB_TOKEN: core.getInput('GITHUB_TOKEN') ||

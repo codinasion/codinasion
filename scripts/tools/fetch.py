@@ -29,7 +29,7 @@ def fetch_tools(tools_data):
     # Sort tools.json by name
     tools_data = sorted(tools_data, key=lambda k: k["name"])
     with open(
-        "../website/src/app/(PRIVATE)/tools/_components/tools.json",
+        "../website/src/app/tools/_components/tools.json",
         "w",
         encoding="utf-8",
     ) as f:

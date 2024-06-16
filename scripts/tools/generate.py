@@ -6,19 +6,19 @@ def kebab_to_pascal(string):
 
 
 def generate_tools(tools_data):
-    if not os.path.exists("../website/src/app/(PRIVATE)/tools/_components/Tools"):
+    if not os.path.exists("../website/src/app/tools/_components/Tools"):
         print("🏗️  Create : Tools directory")
-        os.makedirs("../website/src/app/(PRIVATE)/tools/_components/Tools")
+        os.makedirs("../website/src/app/tools/_components/Tools")
 
     if not os.path.exists(
-        "../website/src/app/(PRIVATE)/tools/_components/Tools/Accepted"
+        "../website/src/app/tools/_components/Tools/Accepted"
     ):
         print("🏗️  Create : Tools/Accepted directory")
-        os.makedirs("../website/src/app/(PRIVATE)/tools/_components/Tools/Accepted")
+        os.makedirs("../website/src/app/tools/_components/Tools/Accepted")
 
-    if not os.path.exists("../website/src/app/(PRIVATE)/tools/_components/Tools/Temp"):
+    if not os.path.exists("../website/src/app/tools/_components/Tools/Temp"):
         print("🏗️  Create : Tools/Temp directory")
-        os.makedirs("../website/src/app/(PRIVATE)/tools/_components/Tools/Temp")
+        os.makedirs("../website/src/app/tools/_components/Tools/Temp")
 
     print("")
 
@@ -26,9 +26,9 @@ def generate_tools(tools_data):
         if tool["ignore"] is False:
             # Check if path doesn't exist, create file in temp
             if not os.path.exists(
-                f"../website/src/app/(PRIVATE)/tools/_components/Tools/Accepted/{tool['name']}.tsx"
+                f"../website/src/app/tools/_components/Tools/Accepted/{tool['name']}.tsx"
             ):
-                file_name = f"../website/src/app/(PRIVATE)/tools/_components/Tools/Temp/{tool['name']}.tsx"
+                file_name = f"../website/src/app/tools/_components/Tools/Temp/{tool['name']}.tsx"
                 function_name = kebab_to_pascal(tool["name"])
                 print(f"🏗️  Create : {file_name}")
                 with open(file_name, "w", encoding="utf-8") as f:

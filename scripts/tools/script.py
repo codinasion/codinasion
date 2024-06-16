@@ -20,7 +20,7 @@ if PURPOSE not in ["fetch", "generate", "docs"]:
 # Read Tools JSON file
 print("👀 Read : tools.json")
 with open(
-    "../website/src/app/(PRIVATE)/tools/_components/tools.json", encoding="utf-8"
+    "../website/src/app/tools/_components/tools.json", encoding="utf-8"
 ) as f:
     tools_data = json.load(f)
 print("✅ Total packages in tools.json: " + str(len(tools_data)))

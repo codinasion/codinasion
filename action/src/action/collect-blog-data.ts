@@ -8,7 +8,7 @@ export default async function CollectBlogData(): Promise<void> {
   try {
     CollectBlogDataFn({
       GITHUB_USERNAME: 'codinasion',
-      BLOG_REPONAME: 'codinasion-private',
+      BLOG_REPONAME: 'codinasion',
       BLOG_PATH: 'content/blog/',
       BLOG_OUTPUT_PATH: 'blog-data',
       GITHUB_TOKEN:

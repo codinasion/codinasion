@@ -8,7 +8,7 @@ export default async function CollectToolsData(): Promise<void> {
   try {
     CollectToolsDataFn({
       GITHUB_USERNAME: 'codinasion',
-      TOOLS_REPONAME: 'codinasion-private',
+      TOOLS_REPONAME: 'codinasion',
       TOOLS_PATH: 'content/tools/',
       TOOLS_OUTPUT_PATH: 'tools-data',
       GITHUB_TOKEN:
