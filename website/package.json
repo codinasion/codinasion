@@ -11,7 +11,7 @@
   "dependencies": {
     "@docsearch/css": "3",
     "@docsearch/react": "3",
-    "@giscus/react": "^2",
+    "@giscus/react": "^3",
     "@tailwindcss/typography": "^0.5.10",
     "codinasion": "latest",
     "daisyui": "^4.5.0",
