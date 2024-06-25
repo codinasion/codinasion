@@ -16,7 +16,7 @@
     "codinasion": "latest",
     "daisyui": "^4.5.0",
     "flowbite": "^2.2.0",
-    "flowbite-react": "^0.7.0",
+    "flowbite-react": "^0.10.1",
     "katex": "^0.16.9",
     "moment": "^2.29.4",
     "next": "14.2.4",
