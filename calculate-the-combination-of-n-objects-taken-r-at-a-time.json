@@ -1,0 +1,41 @@
+{
+  "slug": "calculate-the-combination-of-n-objects-taken-r-at-a-time",
+  "title": "Calculate The Combination Of N Objects Taken R At A Time",
+  "c": "#include<stdio.h>\n\nint factorial(int n)\n{\n    if(n==0)\n        return 1;\n    else\n        return n*factorial(n-1);\n}\n\nint main()\n{\n    int n = 5;\n    int r = 2;\n    int nCr=factorial(n)/(factorial(r)*factorial(n-r));\n    printf(\"%d\",nCr);\n    return 0;\n}",
+  "c-plus-plus": "#include <iostream>\n\nusing namespace std;\n\nint fact(int n){\n    int f=1;\n    for(int i=1;i<=n;i++) f*=i;\n    return f;\n}\n\nint main()\n{\n    int n,r;\n    cin>>n>>r;\n    int ans=(fact(n)/(fact(r)*fact(n-r)));\n    cout<<ans<<'\\n';\n    return 0;\n}\n\n// Contributed by Raghav Garg @grraghav120",
+  "c-sharp": "using System;\r\n\r\npublic class combinationOfNObjectsTakenRAtATime\r\n{\r\n    public int combination(int n, int r)\r\n    {\r\n        int factorial(int n)\r\n        {\r\n            int result;\r\n            if (n == 1)\r\n            {\r\n                return 1;\r\n            }\r\n            else\r\n            {\r\n                result = factorial(n - 1) * n;\r\n                return result;\r\n            }\r\n        }\r\n        int x = n - r;\r\n        int comb = factorial(n) / (factorial(r) * factorial(x));\r\n        return comb;\r\n    }\r\n    public static void Main(String[] args)\r\n    {\r\n        combinationOfNObjectsTakenRAtATime a = new combinationOfNObjectsTakenRAtATime();\r\n        int n = 5;\r\n        int r = 2;\r\n        Console.WriteLine(\"Input  : {0}, {1}\", n, r);\r\n        Console.WriteLine(\"Output : {0}\", a.combination(n, r));\r\n\r\n    }\r\n}",
+  "java": "class CalculateTheCombinationOfNObjectsTakenRAtATime {\n    public static void main(String[] args) {\n        int n = 5;\n        int r = 2;\n        int nCr = factorial(n) / (factorial(r) * factorial(n - r));\n        System.out.println(nCr);\n    }\n\n    public static int factorial(int n) {\n        int fact = 1;\n        for (int i = 1; i <= n; i++) {\n            fact *= i;\n        }\n        return fact;\n    }\n}",
+  "javascript": "// JavaScript program to calculate the combination of n objects taken r at a time\n// n!/(r!(n-r)!) = n(n-1)(n-2)...(n-r+1)/r!\n\nfunction range(a, b) {\n  var total = a,\n    i = a;\n\n  while (i++ < b) {\n    total *= i;\n  }\n  return total;\n}\n\nfunction combination(n, r) {\n  if (n == r || r == 0) {\n    return 1;\n  } else {\n    r = r < n - r ? n - r : r;\n    return range(r + 1, n) / range(1, n - r);\n  }\n}\n\nconsole.log(combination(5, 2));\n",
+  "swift": "class CombinationCalculator {\n    func factorial(_ n: Int) -> Int {\n        if n <= 1 {\n            return 1\n        } else {\n            return n * factorial(n - 1)\n        }\n    }\n    \n    func combination(n: Int, r: Int) -> Int {\n        if r > n || n < 0 || r < 0 {\n            return 0\n        }\n        return factorial(n) / (factorial(r) * factorial(n - r))\n    }\n}\n\n\nlet combinationCalculator = CombinationCalculator()\nlet n = 5\nlet r = 2\nlet result = combinationCalculator.combination(n: n, r: r)\nprint(\"Combination of \\(n) objects taken \\(r) at a time: \\(result)\")\n",
+  "typescript": "// JavaScript program to calculate the combination of n objects taken r at a time\n// n!/(r!(n-r)!) = n(n-1)(n-2)...(n-r+1)/r!\n\nfunction rng(a: number, b: number): number {\n  let total = a,\n    i = a;\n\n  while (i++ < b) {\n    total *= i;\n  }\n  return total;\n}\n\nfunction cbn(n: number, r: number): number {\n  if (n == r || r == 0) {\n    return 1;\n  } else {\n    r = r < n - r ? n - r : r;\n    return rng(r + 1, n) / rng(1, n - r);\n  }\n}\n\nconsole.log(cbn(5, 2));\n",
+  "description": "\n## Write a program to calculate the combination of n objects taken r at a time\n\nCombination is a selection of objects from a group such that (unlike permutations) the order of selection does not matter. The number of combinations on n objects taken r at a time is given by the formula n!/(r!(n-r)!) = n(n-1)(n-2)...(n-r+1)/r!\n\n```txt\nInput  : 5, 2\nOutput : 10\n```\n\n---\n",
+  "trackId": 2659,
+  "lastUpdated": "2024-06-16T16:59:29Z",
+  "contributors": [
+    "harshraj8843",
+    "Greeshmanth1",
+    "AMiracle-creator",
+    "Adelechka",
+    "roberanegussie",
+    "joao-vitor-souza",
+    "Larryking007",
+    "kshitijv256",
+    "PoweredByCaffein",
+    "grraghav120"
+  ],
+  "scala": "import scala.io.StdIn.readInt\n\nobject calculateTheCombinationOfNObjectsTakenRAtATime {\n  def main(args: Array[String]): Unit = {\n    val n = readInt()\n    val r = readInt()\n    println(combination(n, r))\n  }\n\n  def factorial(n: Int): BigInt = {\n    if (n == 0) 1\n    else n * factorial(n - 1)\n  }\n\n  def combination(n: Int, r: Int): BigInt = {\n    factorial(n) / (factorial(r) * factorial(n - r))\n  }\n}\n",
+  "go": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar n, r int\n\tfmt.Printf(\"Enter the value of n and r separated by space:\\t\")\n\tfmt.Scanf(\"%d %d\", &n, &r)\n\tfmt.Println(\"Input:\\t\", n, r)\n\n\t\n\tfmt.Println(\"Output:\\t\", calculateFactorial(n)/(calculateFactorial(r)*calculateFactorial(n-r)))\n}\n\nfunc calculateFactorial(n int) int {\n\tresult := 1\n\tfor n > 0 {\n\t\tresult *= n\n\t\tn--\n\t}\n\n\treturn result\n}\n",
+  "python": "def ncr(n, r):\n    if r > n:\n        return 0\n    if r == 0 or r == n:\n        return 1\n    r = min(r, n - r)  # take advantage of symmetry\n    # ncr    =    n! / (n-r)! * r!     =     n*(n-1)*(n-2)*..*(n-r+1)*(n-r)! / (n-r)! * r!     =     n*(n-1)*(n-2)*..*(n-r+1) / r!\n    numerator = 1  # (n-r)!\n    denominator = 1  # r!\n    for i in range(r):\n        numerator *= n - i\n        denominator *= i + 1\n    return numerator // denominator\n\n\nn = int(input(\"Enter the n value: \"))\nr = int(input(\"Enter the r value: \"))\nprint(\"npr value is:\", ncr(n, r))\n",
+  "languages": [
+    "c",
+    "c-plus-plus",
+    "c-sharp",
+    "java",
+    "javascript",
+    "swift",
+    "typescript",
+    "scala",
+    "go",
+    "python"
+  ]
+}

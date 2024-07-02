@@ -1,0 +1,41 @@
+{
+  "slug": "find-the-maximum-sum-of-a-contiguous-subarray-(kadanes-algorithm)",
+  "title": "Find The Maximum Sum Of A Contiguous Subarray (kadanes Algorithm)",
+  "c": "#include <stdio.h>\n\nint maximumSumOfAContiguousSubarray(int a[], int n)\n{\n    int max_sum = a[0], current_sum = 0;\n\n    for (int i = 0; i < n; i++)\n    {\n        current_sum += a[i];\n        if (current_sum > max_sum)\n        {\n            max_sum = current_sum;\n        }\n        if (current_sum < 0)\n        {\n            current_sum = 0;\n        }\n    }\n    return max_sum;\n}\nint main()\n{\n    int n;\n    scanf(\"%d\", &n);\n    int a[n];\n    for (int i = 0; i < n; i++)\n    {\n        scanf(\"%d\", &a[i]);\n    }\n    printf(\"%d\\n\", maximumSumOfAContiguousSubarray(a, n));\n    return 0;\n}",
+  "c-plus-plus": "#include <bits/stdc++.h>\nusing namespace std;\n\nint main()\n{\n    int n;cin>>n;\n    vector<int> v(n);\n    for(int i=0;i<n;i++) cin>>v[i];\n    int sum=0,maxi_sum=0;\n    for(int i=0;i<n;i++){\n        sum+=v[i];\n        maxi_sum=max(maxi_sum,sum);\n        if(sum<0) sum=0;\n    }\n    cout<<maxi_sum<<'\\n';\n    return 0;\n}\n\n//Contributed by Raghav Garg\n",
+  "c-sharp": "using System;\n\npublic class FindTheMaximumSumOfAContiguousSubArrayKadanesAlgorithm{\n\tstatic int maxSumOfAContiguousSubArray(int []a){\n\t\tint maxSum=0;\n\t\tint sum=0;\n\t\tfor(int i=0;i<a.Length;i++){\n\t\t\tsum=sum+a[i];\n\t\t\tif(sum>maxSum){\n\t\t\t\tmaxSum=sum;\n\t\t\t}\n\t\t\tif(sum<0){\n\t\t\t\tsum=0;\n\t\t\t}\n\t\t}\n\t\treturn maxSum;\n\t}\n\tpublic static void Main(string [] args){\n\t\tint []a={1, 2, 3, -2, 5};\n\t\tConsole.Write(\"Input  : \");\n\t\tfor(int i=0;i<a.Length;i++){\n\t\t    Console.Write(\"{0} \",a[i]);\n\t\t}\n\t\tConsole.WriteLine(\" \");\n\t\tConsole.WriteLine(\"Output : {0}\",maxSumOfAContiguousSubArray(a));\n\t}\n}",
+  "java": "public class FindTheMaximumSumOfAContiguousSubarray{\n//(kadane'sAlgorithm)\n    public static void main(String[] args) {\n    int[] numberArray = {-2, 1, 9, 4, -1, 2, -2, -5, 4};\n    System.out.println(\"Maximum contiguous sum is \"\n      +  maxSubArraySum(numberArray));\n  }\n  static int maxSubArraySum(int numberArray[]) \n    { \n        int max_so_far = numberArray[0]; \n        int curr_max = numberArray[0]; \n  \n        for (int i = 1; i < numberArray.length; i++) \n        { \n            curr_max = Math.max(numberArray[i], curr_max+numberArray[i]); \n            max_so_far = Math.max(max_so_far, curr_max); \n        } \n        return max_so_far; \n    } \n}\n \n\n",
+  "javascript": "function maximumContiguousSum(arr) {\n  let sum = 0;\n  let i = 0;\n  let maxsum = -Infinity;\n  while (i < arr.length) {\n    sum += arr[i];\n    maxsum = Math.max(maxsum, sum);\n    if (sum < 0) {\n      sum = 0;\n    }\n    i++;\n  }\n  return maxsum;\n}\n\nlet arr = [-2, -3, 4, -1, -2, 1, 5, -3];\nconsole.log(maximumContiguousSum(arr)); //7\n",
+  "kotlin": "import kotlin.math.max\n\nfun main() {\n    val a = intArrayOf(-2, -3, 4, -1, -2, 1, 5, -3)\n    println(maxSubArraySum(a))\n}\n\n\nfun maxSubArraySum(a: IntArray): Int {\n    val size = a.size\n    var best = Int.MIN_VALUE\n    var sum = 0\n    for (i in 0 until size) {\n        sum = max(a[i], sum + a[i])\n        best = max(best, sum)\n    }\n    return best\n}\n",
+  "ruby": "module Subarray\n\n  def self.max_sub(arr)\n    \n    max_so_far = arr.first\n    max_ending_here = 0\n    start = 0\n    stop = 0\n    playhead = 0\n    \n    arr.each_with_index do |el, i|\n\n      max_ending_here += el\n      if max_so_far < max_ending_here\n        max_so_far = max_ending_here \n        start = playhead\n        stop = i\n      end\n\n      if max_ending_here < 0\n        max_ending_here = 0 \n        playhead = i+1\n      end\n\n    end\n\n    sub_arr_length = stop - start + 1\n    sub_arr = arr[start, sub_arr_length]\n    return max_so_far, sub_arr.to_s\n\n  end\n  \nend\n\narr = [-2, 1, -3, 4, -1, 2, 1, -5, 4]\nputs Subarray.max_sub(arr)\n# => 6\n# => [4, -1, 2, 1]",
+  "swift": "class KadaneAlgorithm {\n    func maxSubarraySum(_ nums: [Int]) -> Int {\n        var maxEndingHere = nums[0]\n        var maxSoFar = nums[0]\n        \n        for i in 1..<nums.count {\n            maxEndingHere = max(nums[i], maxEndingHere + nums[i])\n            maxSoFar = max(maxSoFar, maxEndingHere)\n        }\n        \n        return maxSoFar\n    }\n}\n\nlet kadane = KadaneAlgorithm()\nlet input = [1, 2, 3, -2, 5]\nlet result = kadane.maxSubarraySum(input)\nprint(\"Maximum sum of a contiguous subarray: \\(result)\")\n",
+  "typescript": "function maximumContiguousSum(arr: number[]): number {\n  let sum: number = 0;\n  let i: number = 0;\n  let maxsum: number = -Infinity;\n\n  while (i < arr.length) {\n    sum += arr[i];\n    maxsum = Math.max(maxsum, sum);\n    if (sum < 0) {\n      sum = 0;\n    }\n    i++;\n  }\n\n  return maxsum;\n}\n\nconst arr: number[] = [-2, -3, 4, -1, -2, 1, 5, -3];\nconsole.log(maximumContiguousSum(arr)); //7\n",
+  "description": "\n## Write a program to find the maximum sum of a contiguous subarray (kadane's algorithm)\n\nKadane's algorithm is used to find the maximum sum of a contiguous subarray within a one-dimensional array of numbers. For example, for the sequence of values `−2, 1, −3, 4, −1, 2, 1, −5, 4;` the contiguous subarray with the largest sum is `4, −1, 2, 1,` with sum `6`.\n\n```txt\nInput  : [1, 2, 3, -2, 5]\nOutput : 9\n```\n\n---\n",
+  "trackId": 3918,
+  "lastUpdated": "2024-06-16T13:55:26Z",
+  "contributors": [
+    "harshraj8843",
+    "AMiracle-creator",
+    "lingalaviran",
+    "pradeepch2107"
+  ],
+  "go": "package main\n\nimport \"fmt\"\n\n// TC - O(n) | SC - O(1)\nfunc KadaneAlgorithm(array []int) int {\n\tmaxEndingHere := array[0]\n\tmaxSoFar := array[0]\n\n\tfor i := 1; i < len(array); i++ {\n\t\tnum := array[i]\n\t\tmaxEndingHere = max(num, maxEndingHere+num)\n\t\tmaxSoFar = max(maxSoFar, maxEndingHere)\n\t}\n\treturn maxSoFar\n}\n\nfunc max(a, b int) int {\n\tif a > b {\n\t\treturn a\n\t}\n\treturn b\n}\n\nfunc main() {\n\tarr1 := []int{1, 2, 3, -2, 5}\n\tarr2 := []int{2, 2, 3, 4, 5, 6, 7, 8, 9, 10}\n\tarr3 := []int{31, -2, -3, -4, -5, -6, -7, -8, -9, -10}\n\tarr4 := []int{4, 2, 3, 4, 5, 6, -20, 7, 8, 9, 10}\n\tarr5 := []int{5, 4, -6, 7, 8}\n\tfmt.Println(KadaneAlgorithm(arr1))\n\tfmt.Println(KadaneAlgorithm(arr2))\n\tfmt.Println(KadaneAlgorithm(arr3))\n\tfmt.Println(KadaneAlgorithm(arr4))\n\tfmt.Println(KadaneAlgorithm(arr5))\n}\n",
+  "php": "<?php\n\nfunction maxSubArraySum($a, $size)\n{\n\t$max_so_far = PHP_INT_MIN;\n\t$max_ending_here = 0;\n\n\tfor ($i = 0; $i < $size; $i++)\n\t{\n\t\t$max_ending_here = $max_ending_here + $a[$i];\n\t\tif ($max_so_far < $max_ending_here)\n\t\t\t$max_so_far = $max_ending_here;\n\n\t\tif ($max_ending_here < 0)\n\t\t\t$max_ending_here = 0;\n\t}\n\treturn $max_so_far;\n}\n\n$a = array(-2, -3, 4, -1, -2, 1, 5, -3);\n$n = count($a);\n$max_sum = maxSubArraySum($a, $n);\necho \"Maximum sum of contiguous subarray : \" ,$max_sum;\n\n?>\n",
+  "python": "# Python program to find maximum contiguous subarray\n\n\n# Function to find the maximum contiguous subarray\ndef maxSubArraySum(a, size):\n    max_so_far = a[0]\n    max_ending_here = a[0]\n\n    for i in range(1, size):\n        max_ending_here = max_ending_here + a[i]\n        if max_so_far < max_ending_here:\n            max_so_far = max_ending_here\n\n        if max_ending_here < 0:\n            max_ending_here = 0\n    return max_so_far\n\n\n# Driver function to check the above function\n\n\na = [-2, -3, 4, -1, -2, 1, 5, -3]\n\nprint(\"Maximum contiguous sum is\", maxSubArraySum(a, len(a)))\n",
+  "r": "kadane_algorithm <- function(arr) {\n  max_ending_here <- max_so_far <- arr[1]\n  \n  for (i in 2:length(arr)) {\n    max_ending_here <- max(arr[i], max_ending_here + arr[i])\n    max_so_far <- max(max_so_far, max_ending_here)\n  }\n  \n  return(max_so_far)\n}\n\n# Example usage:\ninput_array <- c(1, 2, 3, -2, 5)\nresult <- kadane_algorithm(input_array)\ncat(\"Output:\", result)\n",
+  "languages": [
+    "c",
+    "c-plus-plus",
+    "c-sharp",
+    "java",
+    "javascript",
+    "kotlin",
+    "ruby",
+    "swift",
+    "typescript",
+    "go",
+    "php",
+    "python",
+    "r"
+  ]
+}

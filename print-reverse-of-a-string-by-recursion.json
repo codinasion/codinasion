@@ -1,0 +1,43 @@
+{
+  "slug": "print-reverse-of-a-string-by-recursion",
+  "title": "Print Reverse Of A String By Recursion",
+  "c": "#include<stdio.h>\n#include<string.h>\nvoid reverse(char s[],int start,int end){\nif(start>=end)\nreturn ;\nchar tmp=s[end];\ns[end]=s[start];\ns[start]=tmp;\nstart++;\nend--;\nreverse(s,start,end);\n}\n int main(){\n    char s[]=\"im\";\n    int n=strlen(s);\n    reverse(s,0,n);\n    for(int i=0;i<=n;i++)\n    printf(\"%c\",s[i]);\n   \n }\n",
+  "c-plus-plus": "#include<iostream>\nusing namespace std;\nvoid reverse(string &s,int start,int end){\nif(start>=end)\nreturn ;\nswap(s[start],s[end]);\nstart++;\nend--;\nreverse(s,start,end);\n}\n int main(){\n    string s=\"\";\n    reverse(s,0,s.length()-1);\n    cout<<s;\n }\n",
+  "c-sharp": "using System;\n\npublic class ReverseStringRecursion\n{\n    public static string ReverseString(string str)\n        {\n            if ((str == null) || (str.Length <= 1))\n                return str;\n            return ReverseString(str.Substring(1)) + str[0];\n        }\n    public static void Main(string[] args)\n    {\n        string myStr=\"Hello World\";\n            string reversed = ReverseString(myStr);\n \n            Console.WriteLine(\"Original String: \" + myStr);\n            Console.WriteLine(\"Reversed String: \" + reversed);\n            Console.ReadLine();\n    }\n}\n",
+  "java": "/**\n * CONTRIBUTOR: JASMIN, RAMON EMMIEL P.\n * COUNTRY: PHILIPPINES\n * DATE: FEBRUARY 13, 2022\n */\n\npublic class PrintReverseOfAStringByRecursion {\n    public static void main(String[] args) {\n        String orig = \"abcd\";\n\n        System.out.println(\"ORIGINAL STRING: \" + orig);\n        System.out.println(\"REVERSED STRING: \" + reverseString(orig));\n    }\n    public static String reverseString(String str){\n        if (str.isEmpty()){\n            return str;\n        }\n        return reverseString(str.substring(1)) + str.charAt(0);\n    }\n}\n",
+  "javascript": "let s = \"sachin\";\n\nfunction reverse(s) {\n  if (s === \"\") return \"\";\n  else return reverse(s.substr(1)) + s.charAt(0);\n}\nconsole.log(reverse(s));\n",
+  "ruby": "def reverseRecursive(s)\n    return s if s.length <= 1\n    last = s[-1]\n    rest = s[0...-1]\n    rest = reverseRecursive(rest)\n    return last + rest\nend\n\nputs(reverseRecursive(\"abcd\"))\n",
+  "typescript": "type ReversedString<T> = T extends `${infer U}${infer R}`\n  ? `${ReversedString<R>}${U}`\n  : T;\n\nfunction printReverseOfAStringByRecursion(str: string): string {\n  if (!str.length) return \"\";\n\n  return printReverseOfAStringByRecursion(str.substring(1)) + str[0];\n}\n",
+  "description": "\n## Write a program to print reverse of a string by recursion\n\nReverse of a string is the string with characters in reverse order. For example, reverse of \"GeeksQuiz\" is \"ziuQskeeG\".\n\n```txt\nInput  : abcd\nOutput : dcba\n```\n\n---\n",
+  "trackId": 554,
+  "lastUpdated": "2023-11-24T04:10:38Z",
+  "contributors": [
+    "Rohan-Kalgutkar",
+    "harshraj8843",
+    "anandfresh",
+    "saintramon",
+    "joao-vitor-souza",
+    "vishal2376",
+    "ynbh",
+    "sksachin7z2"
+  ],
+  "scala": "object reverseString extends App {\n\nval s = \"abcd\"\nprint(reverse(s))\n\ndef reverse(s: String): String = {\nif (s.length == 1)  s\nelse reverse(s.tail) + s.head\n\n}\n}\n\n",
+  "go": "package main\nimport \"fmt\"\n\nfunc reverseText(text string, location int) string {\n\tif location >= 0 {\n\t\treturn string(text[location]) + reverseText(text, location - 1)\n\t}\n\treturn \"\"\n}\n\nfunc reverse(text string) string {\n\treturn reverseText(text, len(text) - 1)\n}\nfunc main() {\n\n\tvar text string = \"SACHIN\"\n\tfmt.Println(\"Original String: \",text,\"\\n\")\n\ttext = reverse(text)\n\tfmt.Println(\"Reversed String: \", text)\n}\n",
+  "php": "<?php\nfunction Reverse($str){\n\n    $len = strlen($str);\n    if($len == 1){\n        return $str;\n    }\n    else{\n        $len--;\n        return Reverse(substr($str,1, $len)).substr($str, 0, 1);\n    }\n}\n$str = \"Sachin\";\nprint_r(Reverse($str));\n?>\n",
+  "perl": "sub reverseString {\n    my ($str) = @_;\n\n    if (length($str) <= 1) {\n        return $str;\n    } else {\n        return reverseString(substr($str, 1)) . substr($str, 0, 1);\n    }\n}\n\nmy $inputString = \"abcd\";\nmy $outputString = reverseString($inputString);\n\nprint \"Input: $inputString\\n\";\nprint \"Output: $outputString\\n\";\n",
+  "python": "def reverse(s):\n    if len(s) == 0:\n        return s\n    else:\n        return reverse(s[1:]) + s[0]\n\n\ns = input(\"Enter the string to be reversed: \")\nprint(reverse(s))\n",
+  "languages": [
+    "c",
+    "c-plus-plus",
+    "c-sharp",
+    "java",
+    "javascript",
+    "ruby",
+    "typescript",
+    "scala",
+    "go",
+    "php",
+    "perl",
+    "python"
+  ]
+}
