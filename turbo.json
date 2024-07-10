@@ -1,19 +1,6 @@
 {
   "$schema": "https://turbo.build/schema.json",
-  "globalEnv": [
-    "GITHUB_API_URL",
-    "NPM_API_URL",
-    "CODINASION_GITHUB_TOKEN",
-    "PROGRAM_DATA_URL",
-    "CONTRIBUTORS_DATA_URL",
-    "TOOLS_DATA_URL",
-    "BLOG_DATA_URL",
-    "TWITTER_APP_KEY",
-    "TWITTER_APP_SECRET",
-    "TWITTER_ACCESS_TOKEN",
-    "TWITTER_ACCESS_SECRET",
-    "BUILD_MODE"
-  ],
+  "globalEnv": ["GITHUB_API_URL", "CODINASION_GITHUB_TOKEN"],
   "tasks": {
     "build": {
       "dependsOn": ["^build"],

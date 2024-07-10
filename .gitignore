@@ -41,8 +41,4 @@ yarn-error.log*
 # packages
 dist/
 !action/dist/
-program-data/
-contributors-data/
-trending-repos.png
-meme.png
 .venv

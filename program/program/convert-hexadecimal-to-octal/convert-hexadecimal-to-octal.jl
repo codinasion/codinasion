@@ -1,5 +1,0 @@
-println("Enter a hexadecimal number: ") 
-x = readline()
-y = parse(Int, x, base=16)
-y = string(y, base=8)
-println("Octal of ", x, ": ", y)

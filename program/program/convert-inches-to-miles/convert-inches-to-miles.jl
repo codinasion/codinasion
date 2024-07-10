@@ -1,5 +1,0 @@
-println("Enter value in inches: ")
-inches = readline()
-inches = parse(Float64, inches)
-miles = round((inches / 63360); digits = 2)
-println(inches, " inches equals ", miles, " miles")

@@ -1,5 +1,0 @@
-println("Enter value in minutes: ")
-minutes = readline()
-minutes = parse(Int, minutes)
-days = convert(Int, minutes / 1440)
-println(minutes, " minutes equals ", days, " days")

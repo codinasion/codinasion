@@ -1,6 +1,0 @@
-println("Enter value in seconds: ")
-seconds = readline()
-seconds = parse(Int, seconds)
-hours = round(seconds / 3600)
-hours = convert(Int, hours)
-println(seconds, " seconds equals ", hours, " hours")

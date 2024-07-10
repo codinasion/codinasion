@@ -1,6 +1,0 @@
-println("Enter value in hours: ")
-hours = readline()
-hours = parse(Int, hours)
-days = round(hours / 24)
-days = convert(Int, days)
-println(hours, " hours equals ", days, " days")
