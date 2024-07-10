@@ -1,10 +1,6 @@
 packages:
   # include
-  - "action"
-  - "assets"
-  - "bot"
-  - "packages/**"
-  - "website"
+  # - "packages/**"
 
   # exclude
   - "!**/.next/**"
