@@ -5,65 +5,73 @@ on:
 
 jobs:
   submit_program:
-    if: github.event.label.name == 'submit-program'
+    # run only if repo is not a fork
+    if: github.repository == 'codinasion/codinasion' && github.event.action == 'labeled' && github.event.label.name == 'submit-program'
 
     runs-on: ubuntu-latest
 
+    env:
+      NUMBER: ${{ github.event.issue.number }}
+      TITLE: ${{ github.event.issue.title }}
+      BODY: ${{ github.event.issue.body }}
+      USER: ${{ github.event.issue.user.login }}
+
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          token: ${{ secrets.REPO_TOKEN }}
-
-      - name: Cache Node Modules
-        id: cache-node-modules
-        uses: actions/cache@v2
-        with:
-          path: node_modules
-          key: node-modules-${{ hashFiles('yarn.lock') }}
-
-      - name: Yarn
-        if: steps.cache-node-modules.outputs.cache-hit != 'true'
-        run: |
-          yarn
+        id: checkout
+        uses: actions/checkout@v4
 
       - name: Issue data
         run: |
-          echo "Issue number : ${{ github.event.issue.number }}"
-          echo "Issue title  : ${{ github.event.issue.title }}"
-          echo "Issue body   : ${{ github.event.issue.body }}"
-          echo "user         : ${{ github.event.issue.user.login }}"
+          echo "Issue number : $NUMBER"
+          echo "Issue title  : $TITLE"
+          echo "Issue body   : $BODY"
+          echo "user         : $USER"
 
+      # Accept Program
       - name: Submit Program
         id: submit-program
         uses: ./action/
         with:
-          USERNAME: ${{ github.event.issue.user.login }}
-          ISSUE_NUMBER: ${{ github.event.issue.number }}
-          ISSUE_TITLE: ${{ github.event.issue.title }}
-          ISSUE_BODY: ${{ github.event.issue.body }}
-          ISSUE_LABEL: ${{ github.event.label.name }}
-          SUBMIT_PROGRAM: true
-          TOKEN: ${{ secrets.REPO_TOKEN }}
+          SUBMIT_PROGRAM_USERNAME: ${{ env.USER }}
+          SUBMIT_PROGRAM_ISSUE_NUMBER: ${{ env.NUMBER }}
+          SUBMIT_PROGRAM_TITLE: ${{ env.TITLE }}
+          SUBMIT_PROGRAM_BODY: ${{ env.BODY }}
 
-      - name: Git Pull
-        if: steps.submit-program.outputs.submit-success == 'true'
-        run: |
-          git pull
+          # Trigger
+          TRIGGER_SUBMIT_PROGRAM: true
 
-      - name: Commit Program Data
-        if: steps.submit-program.outputs.submit-success == 'true'
-        uses: EndBug/add-and-commit@v9
+          # Secrets
+          GITHUB_TOKEN: ${{ secrets.CODINASION_REPO_TOKEN }}
+
+      # Create Pull Request
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v5
         with:
-          add: "data/programs.json"
-          fetch: true
-          message: "add new program - ${{ github.event.issue.user.login }}"
+          title: "Accept Program #${{ github.event.issue.number }}"
+          body: |
+            Issue Title: ${{ github.event.issue.title }}
 
+            Issue Number: #${{ github.event.issue.number }}
+          branch: "accept-program-${{ github.event.issue.number }}"
+          base: master
+          labels: "program"
+          add-paths: |
+            program/data/programs.json
+          committer: Harsh Raj <harshraj8843@users.noreply.github.com>
+          author: Harsh Raj <harshraj8843@users.noreply.github.com>
+          commit-message: Accept Program - ${{ github.event.issue.number }}
+          token: ${{ secrets.CODINASION_REPO_TOKEN }}
+
+      # Comment & Close
       - name: Comment & Close
         if: steps.submit-program.outputs.submit-success == 'true'
         uses: ./action/
         with:
-          ISSUE_NUMBER: ${{ github.event.issue.number }}
-          ISSUE_LABEL: ${{ github.event.label.name }}
-          SUBMIT_PROGRAM_COMMENT_CLOSE: true
-          TOKEN: ${{ secrets.REPO_TOKEN }}
+          SUBMIT_PROGRAM_ISSUE_NUMBER: ${{ github.event.issue.number }}
+
+          # Trigger
+          TRIGGER_SUBMIT_PROGRAM_COMMENT_CLOSE: true
+
+          # Secrets
+          GITHUB_TOKEN: ${{ secrets.CODINASION_REPO_TOKEN }}

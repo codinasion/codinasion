@@ -1,0 +1,60 @@
+name: Collect Contributors Data
+
+on:
+  schedule:
+    - cron: "17 0 * * *"
+  workflow_dispatch:
+    inputs:
+      TEST:
+        description: "This is a test ?"
+        required: true
+        type: boolean
+        default: false
+
+jobs:
+  collect-contributors-data:
+    # run only if repo is not a fork
+    if: github.repository == 'codinasion/codinasion'
+
+    name: Collect Contributors Data
+
+    runs-on: "ubuntu-latest"
+
+    steps:
+      - name: Checkout
+        id: checkout
+        uses: actions/checkout@v4
+
+      - name: Collect Contributors Data
+        id: collect-contributors-data
+        uses: ./action/
+        with:
+          TEST: ${{ inputs.TEST || 'false' }}
+
+          # Trigger
+          TRIGGER_COLLECT_CONTRIBUTORS_DATA: true
+
+          # Secrets
+          GITHUB_TOKEN: ${{ secrets.CODINASION_GITHUB_TOKEN }}
+
+      - name: Get Time
+        if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && github.event.inputs.TEST == 'false')
+        id: time
+        uses: nanzm/get-time-action@master
+        with:
+          timeZone: UTC+5.5
+          format: "YYYY-MM-DD-HH-mm-ss"
+
+      - name: Commit Contributors Data
+        if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && github.event.inputs.TEST == 'false')
+        uses: crazy-max/ghaction-github-pages@v3.0.0
+        with:
+          target_branch: "contributors-data"
+          build_dir: contributors-data
+          keep_history: false
+          committer: Harsh Raj <harshraj8843@users.noreply.github.com>
+          author: Harsh Raj <harshraj8843@users.noreply.github.com>
+          commit_message: |
+            Collect Contributors Data - ${{ steps.time.outputs.time }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

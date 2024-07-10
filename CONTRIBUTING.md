@@ -1,6 +1,6 @@
 # Welcome to Codinasion contributing guide
 
-Thank you for investing your time in contributing to our project! Any contribution you make will be reflected on [codinasion.org][1] (WIP) :sparkles:.
+Thank you for investing your time in contributing to our project! Any contribution you make will be reflected on [codinasion.org][1] and its subdomains :sparkles:.
 
 Read our [Code of Conduct][2] to keep our community approachable and respectable.
 
@@ -17,8 +17,6 @@ To get an overview of the project, read the [README][3]. Here are some resources
 
 ## Getting started
 
-Check to see what [types of contributions][8] we accept before making changes :sparkles:.
-
 ### Issues
 
 #### Create a new issue
@@ -29,13 +27,7 @@ If you want to add or modify Codinasion content, [search if an issue already exi
 
 Scan through our [existing issues][11] to find one that interests you. You can narrow down the search using `labels` as filters.
 
-As a general rule, we accept assignment based contribution for `good first issue`. If you want to work on an issue, comment on the issue `!assign` and you will be auto assigned to the issue.
-
 ### Make Changes
-
-<!-- #### Make changes in the UI
-
-Click **Edit in GitHub** at the top of any Codinasion webpage to make small changes such as a typo, sentence fix, or a broken link. This takes you to the `.md` file where you can make your changes and [create a pull request](#pull-request) for a review. -->
 
 #### Make changes locally
 
@@ -43,19 +35,21 @@ Click **Edit in GitHub** at the top of any Codinasion webpage to make small chan
 
 2. Clone the forked repository.
 
-  ```bash
-  git clone https://github.com/your_username/program
-  ```
+   ```bash
+   git clone https://github.com/your_username/codinasion
+   ```
 
 3. Create a working branch and start with your changes!
 
-  ```bash
-  git checkout -b your-new-branch-name
-  ```
+   ```bash
+   git checkout -b your-new-branch-name
+   ```
 
-#### Add Content
+4. Make changes locally.
 
-- Add or modify program file (.py, .c, .cpp, etc) in corresponding folder.
+   - Add new features
+   - Fix bugs
+   - Improve documentation, code quality, performance, accessibility, user experience, user interface, etc...
 
 ### Commit your update
 
@@ -77,25 +71,22 @@ When you're finished with the changes, create a pull request, also known as a PR
 
 Congratulations :tada::tada: The Codinasion team thanks you :sparkles:
 
-Once your PR is merged, your contributions will be publicly visible on the codinasion.org (WIP)
-
-Now that you are part of the Codinasion community, see how else you can [contribute to codinasion][8]
+Once your PR is merged, your contributions will be publicly visible on the [codinasion.org][1]
 
 ---
 
-[1]: https://codinasion.org (Work In Progress)
-[2]: ./CODE_OF_CONDUCT.md (Code of Conduct)
-[3]: ./README.md (README)
-[4]: https://docs.github.com/en/get-started/exploring-projects-on-github/finding-ways-to-contribute-to-open-source-on-github (Finding ways to contribute to open source on GitHub)
-[5]: https://docs.github.com/en/get-started/quickstart/set-up-git (Set up Git)
-[6]: https://docs.github.com/en/get-started/quickstart/github-flow (GitHub flow)
-[7]: https://docs.github.com/en/get-started/quickstart/collaborating-with-issues-and-pull-requests (Collaborating with pull requests)
-[8]: ./types-of-contributions.md (Types of contributions)
-[9]: https://github.com/codinasion/program/issues "Issues"
-[10]: https://github.com/codinasion/program/issues/new/choose "Issue Template"
+[1]: https://codinasion.org "codinasion.org"
+[2]: ./CODE_OF_CONDUCT.md "Code of Conduct"
+[3]: ./README.md "README"
+[4]: https://docs.github.com/en/get-started/exploring-projects-on-github/finding-ways-to-contribute-to-open-source-on-github "Finding ways to contribute to open source on GitHub"
+[5]: https://docs.github.com/en/get-started/quickstart/set-up-git "Set up Git"
+[6]: https://docs.github.com/en/get-started/quickstart/github-flow "GitHub flow"
+[7]: https://docs.github.com/en/get-started/quickstart/collaborating-with-issues-and-pull-requests "Collaborating with pull requests"
+[9]: https://github.com/codinasion/codinasion/issues "Issues"
+[10]: https://github.com/codinasion/codinasion/issues/new/choose "Issue Template"
 [11]: https://github.com/search?q=is:open+user:codinasion&type=Issues "Codinasion Open Issues"
 [12]: https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue "Link PR to Issue"
-[13]: https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/allowing-changes-to-a-pull-request-branch-created-from-a-fork "Allow maintainers to edit"
+[13]: ttps://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/allowing-changes-to-a-pull-request-branch-created-from-a-fork "Allow maintainers to edit"
 [14]: https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/incorporating-feedback-in-your-pull-request "Suggest Changes"
 [15]: https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/commenting-on-a-pull-request#resolving-conversations "Mark conversation as resolved"
 [16]: https://lab.github.com/githubtraining/managing-merge-conflicts "Git Tutorial"

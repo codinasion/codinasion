@@ -2,7 +2,7 @@ name: 📄 Documentation issue
 description: Found an issue in the documentation
 title: "[DOCS]: "
 labels: ["documentation"]
-assignees: ["harshraj8843"]
+assignees: []
 body:
   - type: markdown
     attributes:

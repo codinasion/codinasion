@@ -1,0 +1,6 @@
+pnpm-lock.yaml
+.next
+dist
+program-data/
+contributors-data/
+program/program

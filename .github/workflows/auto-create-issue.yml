@@ -2,52 +2,46 @@ name: Auto Create Issue
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 0/1 * * *"
+    - cron: "17 0 * * *"
 
 jobs:
   auto_create_issue:
     # run only if repo is not a fork
-    if: github.repository == 'codinasion/program'
+    if: github.repository == 'codinasion/codinasion'
+
+    name: Auto Create Issue
+
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          token: ${{ secrets.REPO_TOKEN }}
-
-      - name: Cache Node Modules
-        id: cache-node-modules
-        uses: actions/cache@v2
-        with:
-          path: node_modules
-          key: node-modules-${{ hashFiles('yarn.lock') }}
-
-      - name: Yarn
-        if: steps.cache-node-modules.outputs.cache-hit != 'true'
-        run: |
-          yarn
+        id: checkout
+        uses: actions/checkout@v4
 
       - name: Create Issue
+        id: create-issue
         uses: ./action/
         with:
-          AUTO_CREATE_ISSUE: true
-          TOKEN: ${{ secrets.REPO_TOKEN }}
+          # Trigger
+          TRIGGER_AUTO_CREATE_ISSUE: true
 
-      - name: Git Pull
-        run: |
-          git pull
+          # Secrets
+          GITHUB_TOKEN: ${{ secrets.CODINASION_REPO_TOKEN }}
 
-      - name: Commit Program Data
-        uses: EndBug/add-and-commit@v9
+      # Create Pull Request
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v5
         with:
-          add: "data/programs.json"
-          fetch: true
-          message: "auto create issue"
-
-      - name: Commit README
-        uses: EndBug/add-and-commit@v9
-        with:
-          add: "program"
-          fetch: true
-          message: "add README.md"
+          title: Auto Create Issue - ${{ github.run_number }}
+          body: |
+            This is an auto generated pull request after auto creating issue.
+            Issue Number: #${{ steps.create-issue.outputs.issue-number }}
+          branch: auto-create-issue-${{ github.run_number }}
+          base: master
+          add-paths: |
+            program/data/programs.json
+            program/program/**/README.md
+          committer: Harsh Raj <harshraj8843@users.noreply.github.com>
+          author: Harsh Raj <harshraj8843@users.noreply.github.com>
+          commit-message: Auto Create Issue - ${{ github.run_number }}
+          token: ${{ secrets.CODINASION_REPO_TOKEN }}

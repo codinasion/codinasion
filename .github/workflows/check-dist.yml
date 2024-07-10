@@ -1,0 +1,68 @@
+name: Check action/dist/
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - "action/**"
+  pull_request:
+    paths:
+      - "action/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check-action-dist:
+    # run only if repo is not a fork
+    if: github.repository == 'codinasion/codinasion'
+
+    name: Check action/dist/
+
+    runs-on: ubuntu-latest
+
+    # To use Turborepo Remote Caching, set the following environment variables for the job.
+    env:
+      TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
+      TURBO_TEAM: ${{ vars.TURBO_TEAM }}
+
+    steps:
+      - name: Checkout
+        id: checkout
+        uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: "pnpm"
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build action/dist/ Directory
+        id: action-build
+        run: pnpm build --filter action
+
+      - name: Compare Expected and Actual Directories
+        id: diff
+        run: |
+          if [ "$(git diff --ignore-space-at-eol --text action/dist/ | wc -l)" -gt "0" ]; then
+            echo "Detected uncommitted changes after build. See status below:"
+            git diff --ignore-space-at-eol --text action/dist/
+            exit 1
+          fi
+
+      # If index.js was different than expected, upload the expected version as
+      # a workflow artifact.
+      - uses: actions/upload-artifact@v3
+        if: ${{ failure() && steps.diff.conclusion == 'failure' }}
+        with:
+          name: action-dist
+          path: action/dist/

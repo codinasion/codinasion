@@ -1,0 +1,47 @@
+{
+  "name": "@codinasion/typescript-config",
+  "version": "1.0.4",
+  "publishConfig": {
+    "access": "public"
+  },
+  "description": "Typescript configurations for Codinasion projects",
+  "files": [
+    "base.json",
+    "nextjs.json",
+    "react-library.json"
+  ],
+  "license": "MIT",
+  "homepage": "https://codinasion.org",
+  "funding": [
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/codinasion"
+    },
+    {
+      "type": "patreon",
+      "url": "https://www.patreon.com/Codinasion"
+    },
+    {
+      "type": "opencollective",
+      "url": "https://opencollective.com/codinasion"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/codinasion/codinasion.git"
+  },
+  "bugs": {
+    "url": "https://github.com/codinasion/codinasion/issues",
+    "email": "codinasion@gmail.com"
+  },
+  "author": {
+    "name": "Codinasion",
+    "email": "codinasion@gmail.com",
+    "url": "https://github.com/codinasion"
+  },
+  "keywords": [
+    "codinasion",
+    "typescript",
+    "typescript-config"
+  ]
+}

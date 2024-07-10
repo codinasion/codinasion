@@ -1,0 +1,11 @@
+packages:
+  # include
+  - "action"
+  - "assets"
+  - "bot"
+  - "packages/**"
+  - "website"
+
+  # exclude
+  - "!**/.next/**"
+  - "!**/node_modules/**"

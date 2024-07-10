@@ -1,87 +1,65 @@
 name: Collect Program Data
 
 on:
-  workflow_dispatch:
   schedule:
-    - cron: "0 0/6 * * *"
+    - cron: "7 0 * * *"
+  workflow_dispatch:
+    inputs:
+      TEST:
+        description: "This is a test ?"
+        required: true
+        type: boolean
+        default: false
 
 jobs:
-  collect_program_data:
-    if: github.repository == 'codinasion/program'
+  collect-program-data:
+    # run only if repo is not a fork
+    if: github.repository == 'codinasion/codinasion'
 
-    runs-on: ubuntu-latest
     name: Collect Program Data
 
-    permissions:
-      contents: write
+    runs-on: "ubuntu-latest"
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          token: ${{ secrets.REPO_TOKEN }}
+        id: checkout
+        uses: actions/checkout@v4
 
-      ##########  Get Date  ##########
-      - name: Get Date
-        id: date
-        uses: nanzm/get-time-action@v1.1
-        with:
-          timeZone: 5.5
-          format: "YYYY-MM-DD-hh-mm"
-
-      # Cache node_modules
-      - name: Cache Node Modules
-        id: cache-node-modules
-        uses: actions/cache@v2
-        with:
-          path: node_modules
-          key: node-modules-${{ hashFiles('yarn.lock') }}
-
-      # Install dependencies
-      - name: Yarn
-        if: steps.cache-node-modules.outputs.cache-hit != 'true'
+      - name: Check Program Files
         run: |
-          yarn
+          cd scripts/
+          python3 program/rename_files.py
 
-      ##########  Rename program files  ##########
-      - name: Rename Program Files
-        run: |
-          python3 scripts/rename_files.py
-
-      - name: Move Program Files
-        run: |
-          mkdir -p temp
-          mv program/ temp/
-
-      - name: Commit Rename Program Files
-        uses: crazy-max/ghaction-github-pages@v3.0.0
-        with:
-          target_branch: master
-          build_dir: temp
-          keep_history: true # <-- Don't touch it
-          committer: Harsh Raj <harshraj8843@users.noreply.github.com>
-          author: Harsh Raj <harshraj8843@users.noreply.github.com>
-          commit_message: |
-            rename program files
-        env:
-          GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
-
-      ##########  collect program data  ##########
       - name: Collect Program Data
+        id: collect-program-data
         uses: ./action/
         with:
-          COLLECT_PROGRAM_DATA: true
-          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TEST: ${{ inputs.TEST || 'false' }}
+
+          # Trigger
+          TRIGGER_COLLECT_PROGRAM_DATA: true
+
+          # Secrets
+          GITHUB_TOKEN: ${{ secrets.CODINASION_GITHUB_TOKEN }}
+
+      - name: Get Time
+        if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && github.event.inputs.TEST == 'false')
+        id: time
+        uses: nanzm/get-time-action@master
+        with:
+          timeZone: UTC+5.5
+          format: "YYYY-MM-DD-HH-mm-ss"
 
       - name: Commit Program Data
+        if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && github.event.inputs.TEST == 'false')
         uses: crazy-max/ghaction-github-pages@v3.0.0
         with:
-          target_branch: data
+          target_branch: "program-data"
           build_dir: program-data
           keep_history: false
           committer: Harsh Raj <harshraj8843@users.noreply.github.com>
           author: Harsh Raj <harshraj8843@users.noreply.github.com>
           commit_message: |
-            program list data - ${{ steps.date.outputs.time }}
+            Collect Program Data - ${{ steps.time.outputs.time }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
