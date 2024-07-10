@@ -24,20 +24,20 @@ procedure jump_search
       block size = block size + √n
       if prev >= n
          return not found
-         
+
    end while
-   
+
    while A[prev] < x do
       prev = prev + 1
-      
+
       if prev == min(block size, n)
          return not found
-         
+
    end while
-   
+
    if A[prev] == x
       return prev
-      
+
    return not found
 end procedure
 ```

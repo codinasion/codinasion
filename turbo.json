@@ -1,9 +1,6 @@
 {
   "$schema": "https://turbo.build/schema.json",
-  "globalEnv": [
-    "GITHUB_API_URL",
-    "CODINASION_GITHUB_TOKEN"
-  ],
+  "globalEnv": ["GITHUB_API_URL", "CODINASION_GITHUB_TOKEN"],
   "tasks": {
     "build": {
       "dependsOn": ["^build"],

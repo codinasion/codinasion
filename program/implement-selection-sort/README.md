@@ -10,17 +10,17 @@ Selection sort is a sorting algorithm that selects the smallest element from an 
 ### Pseudocode
 
 ```
-procedure selection sort 
+procedure selection sort
    list  : array of items
    n     : size of list
 
    for i = 1 to n - 1
    /* set current element as minimum*/
-      min = i    
-   
+      min = i
+
       /* check the element to be minimum */
 
-      for j = i+1 to n 
+      for j = i+1 to n
          if list[j] < list[min] then
             min = j;
          end if
@@ -31,7 +31,7 @@ procedure selection sort
          swap list[min] and list[i]
       end if
    end for
-    
+
 end procedure
 ```
 

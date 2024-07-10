@@ -15,31 +15,31 @@ procedure ternary_search
    value ← value to be searched
    l ← leftmost index
    r ← rightmost index
-   
+
    while l ≤ r do
-   
+
       partition size = (r-l)/3
       mid1 = l + partition_size
       mid2 = r - partition_size
-      
+
       if A[mid1] = value
          return mid1
-         
+
       if A[mid2] = value
          return mid2
-         
+
       if value < A[mid1]
          set r = mid1 - 1
-         
+
       else if value > A[mid2]
          set l = mid2 + 1
-         
+
       else
          set l = mid1 + 1
          set r = mid2 - 1
-         
+
    end while
-   
+
    return -1
 end procedure
 ```

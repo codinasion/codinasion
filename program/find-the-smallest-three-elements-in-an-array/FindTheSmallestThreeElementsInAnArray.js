@@ -5,12 +5,11 @@
 // Input  : arr[] = {12, 13, 1, 10, 34, 1}
 // Output : 1 1 10
 
-
-let array = [10, 4, 3, 50, 23, 90]
+let array = [10, 4, 3, 50, 23, 90];
 
 function threeSmallElements(num) {
-    num.sort((a,b) => Math.min(a - b))
-    return num.slice(0, 3)
+  num.sort((a, b) => Math.min(a - b));
+  return num.slice(0, 3);
 }
 
-console.log('the answer is', threeSmallElements(array));
+console.log("the answer is", threeSmallElements(array));

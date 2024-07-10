@@ -1,5 +1,5 @@
 function celsiusToKelvin(celsius) {
-    return celsius + 273.15;
+  return celsius + 273.15;
 }
 
 const celsius = -40;
