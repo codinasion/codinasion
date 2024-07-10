@@ -1,6 +1,0 @@
-print("Enter the radius: ")
-radius = parse(Float64, readline(stdin))
-print("Enter the height: ")
-height = parse(Float64, readline(stdin))
-area = 3.14 * radius * (radius + height)
-println("Surface area of cone: ", area)

@@ -1,5 +1,0 @@
-print("Enter the first number: ")
-num1 = parse(Float64, readline(stdin))
-print("Enter the second number: ")
-num2 = parse(Float64, readline(stdin))
-println("Output: ", num1 / num2)
