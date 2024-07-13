@@ -4,8 +4,8 @@
 # Load config (variables)
 . "$(dirname -- "$0")/config.sh"
 
-# echo ""
-# echo "${BLUE}INFO${NC}: Running ${YELLOW}pre-commit${NC} hook"
+echo ""
+echo "${BLUE}INFO${NC}: Running ${YELLOW}pre-commit${NC} hook"
 
 # echo ""
 # echo "${GREEN}INFO${NC}: ${YELLOW}Installing all dependencies${NC}"
@@ -25,11 +25,11 @@
 #     exit 1
 # fi
 
-# echo ""
-# echo "${GREEN}INFO${NC}: ${YELLOW}Checking for branch${NC}"
-# if [ "$(git rev-parse --abbrev-ref HEAD)" = "master" ]; then
-#     echo "${RED}ERROR${NC}: ${RED}you are on master${NC}."
-#     echo "${BLUE}INFO{NC}: ${YELLOW}Please checkout to another branch.${NC}"
-#     echo "${BLUE}INFO${NC}: ${YELLOW}Commit aborted.${NC}"
-#     exit 1
-# fi
+echo ""
+echo "${GREEN}INFO${NC}: ${YELLOW}Checking for branch${NC}"
+if [ "$(git rev-parse --abbrev-ref HEAD)" = "master" ]; then
+    echo "${RED}ERROR${NC}: ${RED}you are on master${NC}."
+    echo "${BLUE}INFO{NC}: ${YELLOW}Please checkout to another branch.${NC}"
+    echo "${BLUE}INFO${NC}: ${YELLOW}Commit aborted.${NC}"
+    exit 1
+fi
