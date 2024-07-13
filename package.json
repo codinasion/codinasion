@@ -1,24 +1,29 @@
 {
-  "name": "codinasion-turbo-repo",
+  "name": "codinasion",
   "private": true,
   "scripts": {
     "git-fetch-prune-verbose": "git fetch --prune --verbose",
     "git-delete-merged-branches": "git branch | grep -v \"master\" | xargs git branch -D",
-    "prepare": "husky install",
+    "prepare": "husky",
     "postinstall": "manypkg check",
     "clone-submodules": "npx vercel-submodules --all",
     "lint": "turbo lint",
+    "lint:packages": "pnpm lint --filter !./apps/* --filter !./packages/typescript-config",
     "dev": "dotenv -- turbo dev",
     "build": "dotenv -- turbo build",
+    "build:packages": "pnpm build --filter !./apps/* --filter !./packages/typescript-config",
     "test": "turbo test",
+    "test:packages": "pnpm test --filter !./apps/* --filter !./packages/typescript-config",
     "format": "source .venv/bin/activate && black . && prettier --write \"**/*.{js,jsx,ts,tsx,md,mdx,json,yml,yaml}\"",
+    "format:packages": "prettier --write \"packages/**/*.{js,jsx,ts,tsx,md,mdx,json,yml,yaml}\"",
     "all": "pnpm clone-submodules && pnpm format && turbo lint && pnpm build && pnpm test",
+    "all:packages": "pnpm format:packages && pnpm lint:packages && pnpm build:packages && pnpm test:packages",
     "version-packages": "pnpm changeset version && pnpm all:packages",
     "publish-packages": "pnpm all:packages && changeset version && changeset publish"
   },
-  "packageManager": "pnpm@9.3.0",
+  "packageManager": "pnpm@9.5.0",
   "engines": {
-    "node": ">=18"
+    "node": ">=20"
   },
   "manypkg": {
     "ignoredRules": [
@@ -26,13 +31,13 @@
     ]
   },
   "dependencies": {
-    "@changesets/cli": "latest",
-    "@manypkg/cli": "latest",
-    "dotenv-cli": "latest",
-    "husky": "latest",
-    "prettier": "latest",
-    "prettier-plugin-tailwindcss": "latest",
-    "turbo": "latest",
-    "vercel-submodules": "latest"
+    "@changesets/cli": "^2.27.7",
+    "@manypkg/cli": "^0.21.4",
+    "dotenv-cli": "^7.4.2",
+    "husky": "^9.0.11",
+    "prettier": "^3.3.2",
+    "turbo": "^2.0.6",
+    "typescript": "5.4.5",
+    "vercel-submodules": "^1.0.10"
   }
 }

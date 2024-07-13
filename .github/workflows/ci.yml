@@ -1,0 +1,61 @@
+name: Turbo CI
+
+on:
+  workflow_dispatch:
+  push:
+    branches: ["master"]
+    paths:
+      - "apps/**"
+      - "packages/**"
+      - "package.json"
+      - "pnpm-lock.yaml"
+  pull_request:
+    types: [opened, synchronize]
+    paths:
+      - "apps/**"
+      - "packages/**"
+      - "package.json"
+      - "pnpm-lock.yaml"
+
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+
+jobs:
+  build:
+    # run only if repo is not a fork
+    if: github.repository == 'codinasion/codinasion'
+
+    name: Build and Test
+
+    runs-on: ubuntu-latest
+
+    # To use Turborepo Remote Caching, set the following environment variables for the job.
+    env:
+      TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
+      TURBO_TEAM: ${{ vars.TURBO_TEAM }}
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v4
+        with:
+          cache: "pnpm"
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Lint
+        run: pnpm lint
+
+      - name: Build
+        run: pnpm build:packages
+
+      - name: Test
+        run: pnpm test
