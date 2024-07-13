@@ -1,1 +1,3 @@
-./docs/README.md
+# Codinasion
+
+Collaborate, Create, Innovate: Together with Open Source ❤️
