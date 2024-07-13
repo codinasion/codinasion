@@ -1,5 +1,0 @@
----
-"web": major
----
-
-Initial Release
