@@ -1,10 +1,10 @@
 {
-  "name": "codinasion-turbo-repo",
+  "name": "codinasion",
   "private": true,
   "scripts": {
     "git-fetch-prune-verbose": "git fetch --prune --verbose",
     "git-delete-merged-branches": "git branch | grep -v \"master\" | xargs git branch -D",
-    "prepare": "husky install",
+    "prepare": "husky",
     "postinstall": "manypkg check",
     "clone-submodules": "npx vercel-submodules --all",
     "lint": "turbo lint",
@@ -16,9 +16,9 @@
     "version-packages": "pnpm changeset version && pnpm all:packages",
     "publish-packages": "pnpm all:packages && changeset version && changeset publish"
   },
-  "packageManager": "pnpm@9.3.0",
+  "packageManager": "pnpm@9.5.0",
   "engines": {
-    "node": ">=18"
+    "node": ">=20"
   },
   "manypkg": {
     "ignoredRules": [
@@ -31,8 +31,8 @@
     "dotenv-cli": "latest",
     "husky": "latest",
     "prettier": "latest",
-    "prettier-plugin-tailwindcss": "latest",
     "turbo": "latest",
+    "typescript": "latest",
     "vercel-submodules": "latest"
   }
 }

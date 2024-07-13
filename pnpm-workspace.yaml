@@ -1,6 +1,6 @@
 packages:
   # include
-  # - "packages/**"
+  - "packages/**"
 
   # exclude
   - "!**/.next/**"
