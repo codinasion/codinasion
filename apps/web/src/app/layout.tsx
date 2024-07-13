@@ -3,16 +3,16 @@ import { Metadata, Viewport } from "next";
 import clsx from "clsx";
 
 import { Providers } from "@/app/providers";
-import { siteConfig } from "@/config/site";
-import { fontSans } from "@/config/fonts";
+import { sitemetadata } from "@/data";
+import { fontSans } from "@/data";
 import Layout from "@/layout";
 
 export const metadata: Metadata = {
   title: {
-    default: siteConfig.name,
-    template: `%s - ${siteConfig.name}`,
+    default: sitemetadata.name,
+    template: `%s - ${sitemetadata.name}`,
   },
-  description: siteConfig.description,
+  description: sitemetadata.description,
   icons: {
     icon: "/favicon.ico",
   },

@@ -14,7 +14,7 @@ import clsx from "clsx";
 import Image from "next/image";
 import { Button } from "@nextui-org/button";
 
-import { siteConfig } from "@/config/site";
+import { sitemetadata, navbarLinks } from "@/data";
 import { ThemeSwitch } from "@/components/theme-switch";
 import {
   GithubIcon,
@@ -51,17 +51,17 @@ export const Navbar = () => {
           <NextLink className="flex justify-start items-center gap-1" href="/">
             <Image
               priority
-              alt={siteConfig.name}
+              alt={sitemetadata.name}
               className="rounded mr-2 h-8 w-8 dark:invert"
               height={512}
               src="/logo.svg"
               width={512}
             />
-            <p className="font-bold text-inherit">{siteConfig.name}</p>
+            <p className="font-bold text-inherit">{sitemetadata.name}</p>
           </NextLink>
         </NavbarBrand>
         <ul className="hidden lg:flex gap-4 justify-start ml-2">
-          {siteConfig.navItems.map((item) => (
+          {navbarLinks.map((item) => (
             <NavbarItem key={item.href}>
               <NextLink
                 className={clsx(
@@ -83,7 +83,7 @@ export const Navbar = () => {
         justify="end"
       >
         <NavbarItem className="hidden sm:flex gap-2">
-          <Link isExternal aria-label="Github" href={siteConfig.links.github}>
+          <Link isExternal aria-label="Github" href={sitemetadata.github_link}>
             <GithubIcon className="text-default-500" />
           </Link>
           <ThemeSwitch />
@@ -94,7 +94,7 @@ export const Navbar = () => {
             isExternal
             as={Link}
             className="text-sm font-normal text-default-600 bg-default-100"
-            href={siteConfig.links.sponsor}
+            href={sitemetadata.sponsor_link}
             startContent={<HeartFilledIcon className="text-danger" />}
             variant="flat"
           >
@@ -104,7 +104,7 @@ export const Navbar = () => {
       </NavbarContent>
 
       <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
-        <Link isExternal aria-label="Github" href={siteConfig.links.github}>
+        <Link isExternal aria-label="Github" href={sitemetadata.github_link}>
           <GithubIcon className="text-default-500" />
         </Link>
         <ThemeSwitch />
@@ -114,13 +114,13 @@ export const Navbar = () => {
       <NavbarMenu>
         {/* {searchInput} */}
         <div className="mx-4 mt-2 flex flex-col gap-2">
-          {siteConfig.navMenuItems.map((item, index) => (
+          {navbarLinks.map((item, index) => (
             <NavbarMenuItem key={`${item}-${index}`}>
               <Link
                 color={
                   index === 2
                     ? "primary"
-                    : index === siteConfig.navMenuItems.length - 1
+                    : index === navbarLinks.length - 1
                       ? "danger"
                       : "foreground"
                 }

@@ -2,7 +2,7 @@ import { Link } from "@nextui-org/link";
 import Image from "next/image";
 import { button as buttonStyles } from "@nextui-org/theme";
 
-import { siteConfig } from "@/config/site";
+import { sitemetadata } from "@/data";
 import { title, subtitle } from "@/components/primitives";
 import { GithubIcon } from "@/components/icons";
 
@@ -11,7 +11,7 @@ export default function Home() {
     <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
       <Image
         priority
-        alt={siteConfig.name}
+        alt={sitemetadata.name}
         className="rounded-xl w-48 h-48 dark:invert"
         height={512}
         src="/logo.svg"
@@ -19,9 +19,9 @@ export default function Home() {
       />
       <div className="inline-block max-w-lg text-center justify-center">
         <h1 className={title()}>Welcome to&nbsp;</h1>
-        <h1 className={title({ color: "violet" })}>{siteConfig.name}</h1>
+        <h1 className={title({ color: "violet" })}>{sitemetadata.name}</h1>
         <h2 className={subtitle({ class: "mt-4" })}>
-          {siteConfig.description}
+          {sitemetadata.description}
         </h2>
       </div>
 
@@ -29,7 +29,7 @@ export default function Home() {
         <Link
           isExternal
           className={buttonStyles({ variant: "bordered", radius: "full" })}
-          href={siteConfig.links.github}
+          href={sitemetadata.github_link}
         >
           <GithubIcon size={20} />
           GitHub
