@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "git-fetch-prune-verbose": "git fetch --prune --verbose",
-    "git-delete-merged-branches": "git branch | grep -v \"master\" | xargs git branch -D",
+    "git-delete-merged-branches": "git branch | grep -v \"master\" | grep -v \"dev\" | xargs git branch -D",
     "prepare": "husky",
     "postinstall": "manypkg check",
     "clone-submodules": "npx vercel-submodules --all",
