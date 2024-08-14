@@ -16,4 +16,4 @@ ln -f docs/CONTRIBUTING.md CONTRIBUTING.md
 
 echo ""
 echo "${BLUE}INFO${NC}: ${YELLOW}Copying .env (if it exists in scripts folder)${NC}"
-cp -f scripts/.env .env
+ln -f scripts/.env .env
