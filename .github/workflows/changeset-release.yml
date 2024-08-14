@@ -1,14 +1,12 @@
-name: Release
+name: Changeset Release
 
 on:
   workflow_dispatch:
   push:
-    branches: ["master"]
+    branches:
+      - master
     paths:
-      - "apps/**"
-      - "packages/**"
-      - "package.json"
-      - "pnpm-lock.yaml"
+      - ".changeset/**"
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
@@ -18,7 +16,6 @@ jobs:
     if: github.repository == 'codinasion/codinasion'
 
     name: Release
-
     runs-on: ubuntu-latest
 
     # To use Turborepo Remote Caching, set the following environment variables for the job.
@@ -29,6 +26,8 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.CODINASION_GITHUB_TOKEN }}
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
