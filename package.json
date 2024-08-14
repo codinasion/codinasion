@@ -12,7 +12,8 @@
     "build": "dotenv -- turbo build",
     "test": "turbo test",
     "format": "source .venv/bin/activate && black . && prettier --write \"**/*.{js,jsx,ts,tsx,mjs,md,mdx,json,yml,yaml,html,css}\"",
-    "all": "pnpm clone-submodules && pnpm format && turbo lint && pnpm build && pnpm test",
+    "all": "pnpm format && pnpm lint && pnpm build && pnpm test",
+    "all:fresh": "pnpm clone-submodules && pnpm format && pnpm lint && pnpm build && pnpm test",
     "version-packages": "pnpm changeset version && pnpm all",
     "publish-packages": "pnpm all && pnpm changeset version && pnpm changeset publish && sh ./tag.sh"
   },
@@ -31,7 +32,7 @@
     "dotenv-cli": "^7.4.2",
     "husky": "^9.1.1",
     "prettier": "^3.3.2",
-    "turbo": "^2.0.12",
+    "turbo": "^2.0.13",
     "typescript": "^5.5.2",
     "vercel-submodules": "^1.0.10"
   }

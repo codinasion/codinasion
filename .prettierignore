@@ -1,4 +1,4 @@
 pnpm-lock.yaml
 .next
 dist
-backend/static
+codinasion/static

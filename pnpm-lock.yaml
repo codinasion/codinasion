@@ -24,7 +24,7 @@ importers:
         specifier: ^3.3.2
         version: 3.3.2
       turbo:
-        specifier: ^2.0.12
+        specifier: ^2.0.13
         version: 2.0.13
       typescript:
         specifier: ^5.5.2
@@ -36,10 +36,10 @@ importers:
   packages/eslint-config:
     devDependencies:
       '@typescript-eslint/eslint-plugin':
-        specifier: 7.2.0
+        specifier: ^7.1.0
         version: 7.2.0(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.5.4))(eslint@8.57.0)(typescript@5.5.4)
       '@typescript-eslint/parser':
-        specifier: 7.2.0
+        specifier: ^7.1.0
         version: 7.2.0(eslint@8.57.0)(typescript@5.5.4)
       '@vercel/style-guide':
         specifier: ^5.2.0

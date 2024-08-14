@@ -1,6 +1,6 @@
 packages:
   # include
-  - '.'
+  - "."
   - "packages/**"
 
   # exclude
