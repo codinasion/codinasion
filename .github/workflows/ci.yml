@@ -3,16 +3,15 @@ name: Turbo CI
 on:
   workflow_dispatch:
   push:
-    branches: ["master"]
+    branches:
+      - master
     paths:
-      - "apps/**"
       - "packages/**"
       - "package.json"
       - "pnpm-lock.yaml"
   pull_request:
     types: [opened, synchronize]
     paths:
-      - "apps/**"
       - "packages/**"
       - "package.json"
       - "pnpm-lock.yaml"
@@ -25,7 +24,6 @@ jobs:
     if: github.repository == 'codinasion/codinasion'
 
     name: Build and Test
-
     runs-on: ubuntu-latest
 
     # To use Turborepo Remote Caching, set the following environment variables for the job.
@@ -55,7 +53,7 @@ jobs:
         run: pnpm lint
 
       - name: Build
-        run: pnpm build:packages
+        run: pnpm build
 
       - name: Test
         run: pnpm test

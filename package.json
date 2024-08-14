@@ -1,5 +1,6 @@
 {
   "name": "codinasion",
+  "version": "0.0.0",
   "private": true,
   "scripts": {
     "git-fetch-prune-verbose": "git fetch --prune --verbose",
@@ -8,20 +9,14 @@
     "postinstall": "manypkg check",
     "clone-submodules": "npx vercel-submodules --all",
     "lint": "turbo lint",
-    "lint:packages": "pnpm lint --filter !./apps/* --filter !./packages/typescript-config",
-    "dev": "dotenv -- turbo dev",
     "build": "dotenv -- turbo build",
-    "build:packages": "pnpm build --filter !./apps/* --filter !./packages/typescript-config",
     "test": "turbo test",
-    "test:packages": "pnpm test --filter !./apps/* --filter !./packages/typescript-config",
-    "format": "source .venv/bin/activate && black . && prettier --write \"**/*.{js,jsx,ts,tsx,md,mdx,json,yml,yaml}\"",
-    "format:packages": "prettier --write \"packages/**/*.{js,jsx,ts,tsx,md,mdx,json,yml,yaml}\"",
+    "format": "source .venv/bin/activate && black . && prettier --write \"**/*.{js,jsx,ts,tsx,mjs,md,mdx,json,yml,yaml,html,css}\"",
     "all": "pnpm clone-submodules && pnpm format && turbo lint && pnpm build && pnpm test",
-    "all:packages": "pnpm format:packages && pnpm lint:packages && pnpm build:packages && pnpm test:packages",
-    "version-packages": "pnpm changeset version && pnpm all:packages",
-    "publish-packages": "pnpm all:packages && changeset version && changeset publish"
+    "version-packages": "pnpm changeset version && pnpm all",
+    "publish-packages": "pnpm all && pnpm changeset version && pnpm changeset publish && sh ./tag.sh"
   },
-  "packageManager": "pnpm@9.5.0",
+  "packageManager": "pnpm@9.7.0",
   "engines": {
     "node": ">=20"
   },
@@ -34,10 +29,10 @@
     "@changesets/cli": "^2.27.7",
     "@manypkg/cli": "^0.21.4",
     "dotenv-cli": "^7.4.2",
-    "husky": "^9.0.11",
+    "husky": "^9.1.1",
     "prettier": "^3.3.2",
-    "turbo": "^2.0.6",
-    "typescript": "5.4.5",
+    "turbo": "^2.0.12",
+    "typescript": "^5.5.2",
     "vercel-submodules": "^1.0.10"
   }
 }

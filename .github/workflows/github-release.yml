@@ -10,9 +10,12 @@ permissions:
 
 jobs:
   release:
+    # run only if repo is not a fork
     if: github.repository == 'codinasion/codinasion'
+
     name: Release pushed tag
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4

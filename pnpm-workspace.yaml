@@ -1,6 +1,5 @@
 packages:
   # include
-  - "apps/**"
   - "packages/**"
 
   # exclude
