@@ -1,6 +1,5 @@
 {
   "name": "codinasion",
-  "version": "0.0.0",
   "private": true,
   "scripts": {
     "git-fetch-prune-verbose": "git fetch --prune --verbose",
@@ -17,7 +16,7 @@
     "version-packages": "pnpm changeset version && pnpm all",
     "publish-packages": "pnpm all && pnpm changeset version && pnpm changeset publish && sh ./tag.sh"
   },
-  "packageManager": "pnpm@9.7.0",
+  "packageManager": "pnpm@9.7.1",
   "engines": {
     "node": ">=20"
   },

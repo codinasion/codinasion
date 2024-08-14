@@ -33,6 +33,8 @@ importers:
         specifier: ^1.0.10
         version: 1.0.10
 
+  codinasion: {}
+
   packages/eslint-config:
     devDependencies:
       '@typescript-eslint/eslint-plugin':
