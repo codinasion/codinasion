@@ -1,6 +1,3 @@
-#!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
-
 # Load config (variables)
 . "$(dirname -- "$0")/config.sh"
 
@@ -16,3 +13,7 @@ echo "${BLUE}INFO${NC}: ${YELLOW}Creating hard links${NC}"
 ln -f docs/README.md README.md
 ln -f docs/CODE_OF_CONDUCT.md CODE_OF_CONDUCT.md
 ln -f docs/CONTRIBUTING.md CONTRIBUTING.md
+
+echo ""
+echo "${BLUE}INFO${NC}: ${YELLOW}Copying .env (if it exists in scripts folder)${NC}"
+ln -f scripts/.env .env
