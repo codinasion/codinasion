@@ -1,5 +1,0 @@
----
-"codinasion": major
----
-
-Initial release
