@@ -1,6 +1,6 @@
 #!/bin/bash
 
-read -p "Use with caution! Proceed (y/n)? " answer
+read -r -p "Use with caution! Proceed (y/n)? " answer
 case $answer in
 [Yy]*)
 
