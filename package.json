@@ -12,9 +12,10 @@
     "test": "turbo test",
     "format": "source .venv/bin/activate && black . && prettier --write \"**/*.{js,jsx,ts,tsx,mjs,md,mdx,json,yml,yaml,html,css}\"",
     "all": "pnpm format && pnpm lint && pnpm build && pnpm test",
+    "all:packages": "pnpm lint && pnpm build && pnpm test",
     "all:fresh": "pnpm clone-submodules && pnpm format && pnpm lint && pnpm build && pnpm test",
-    "version-packages": "pnpm changeset version && pnpm all",
-    "publish-packages": "pnpm all && pnpm changeset version && pnpm changeset publish && sh ./tag.sh"
+    "version-packages": "pnpm changeset version && pnpm all:packages",
+    "publish-packages": "pnpm all:packages && pnpm changeset version && pnpm changeset publish && sh ./tag.sh"
   },
   "packageManager": "pnpm@9.7.1",
   "engines": {
