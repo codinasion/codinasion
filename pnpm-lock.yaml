@@ -27,7 +27,7 @@ importers:
         specifier: ^2.0.13
         version: 2.0.13
       typescript:
-        specifier: ^5.5.2
+        specifier: ^5.4.5
         version: 5.5.4
       vercel-submodules:
         specifier: ^1.0.10
@@ -59,7 +59,7 @@ importers:
         specifier: ^8.0.2
         version: 8.2.4(typescript@5.5.4)(yaml@2.4.5)
       typescript:
-        specifier: ^5.5.2
+        specifier: ^5.4.5
         version: 5.5.4
 
   packages/eslint-config:
@@ -83,7 +83,7 @@ importers:
         specifier: ^1.1.0
         version: 1.1.0
       typescript:
-        specifier: ^5.5.2
+        specifier: ^5.4.5
         version: 5.5.4
 
   packages/typescript-config: {}

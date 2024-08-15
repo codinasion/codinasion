@@ -33,7 +33,7 @@
     "husky": "^9.1.1",
     "prettier": "^3.3.2",
     "turbo": "^2.0.13",
-    "typescript": "^5.5.2",
+    "typescript": "^5.4.5",
     "vercel-submodules": "^1.0.10"
   }
 }
