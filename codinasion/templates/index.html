@@ -1,4 +1,172 @@
 {% extends "base.html" %}
 {% block content %}
-    Hello World!
+    <main class="flex-1">
+        <section class="w-full py-12 md:py-24 lg:py-32">
+            <div class="container px-4 md:px-6">
+                <div class="grid gap-6 lg:grid-cols-2 lg:gap-12">
+                    <div class="flex flex-col justify-center space-y-4">
+                        <div class="space-y-2">
+                            <h1 class="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">Welcome to our Open Source Community</h1>
+                            <p class="max-w-[600px] text-muted-foreground md:text-xl">
+                                Join a vibrant community of developers, designers, and enthusiasts who collaborate on open-source
+                                projects, share knowledge, and build amazing things together.ty of developers, designers, and
+                                enthusiasts who collaborate on open-source projects,
+                            </p>
+                        </div>
+                        <div class="flex flex-col gap-2 min-[400px]:flex-row">
+                            <a href="https://github.com/codinasion"
+                               class="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50">
+                                Join the Community
+                            </a>
+                        </div>
+                    </div>
+                    <img src="https://public.codinasion.org/android-chrome-512x512.png"
+                         width="512"
+                         height="512"
+                         alt="Hero"
+                         class="mx-auto aspect-video overflow-hidden rounded-xl object-cover sm:w-full lg:aspect-square" />
+                </div>
+            </div>
+        </section>
+        <section class="w-full py-12 md:py-24 lg:py-32 bg-muted">
+            <div class="container px-4 md:px-6">
+                <div class="flex flex-col items-center justify-center space-y-4 text-center">
+                    <div class="space-y-2">
+                        <div class="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Key Features</div>
+                        <h2 class="text-3xl font-bold tracking-tighter sm:text-5xl">Discover the Benefits of Our Community</h2>
+                        <p class="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                            Our open-source community offers a wealth of resources and opportunities for developers, designers,
+                            and enthusiasts to grow, collaborate, and make a real impact. offers a wealth of resources and
+                            opportunities for developers, designers, and enthusiasts
+                        </p>
+                    </div>
+                </div>
+                <div class="mx-auto grid max-w-5xl items-start gap-6 py-12 lg:grid-cols-3 lg:gap-12">
+                    <div class="grid gap-1">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                             width="24"
+                             height="24"
+                             viewBox="0 0 24 24"
+                             fill="none"
+                             stroke="currentColor"
+                             stroke-width="2"
+                             stroke-linecap="round"
+                             stroke-linejoin="round"
+                             class="h-8 w-8 text-primary">
+                            <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path>
+                            <line x1="4" x2="4" y1="22" y2="15"></line>
+                        </svg>
+                        <h3 class="text-lg font-bold">Active Forums</h3>
+                        <p class="text-muted-foreground">
+                            Engage in lively discussions, ask questions, and share knowledge with our vibrant community.
+                        </p>
+                    </div>
+                    <div class="grid gap-1">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                             width="24"
+                             height="24"
+                             viewBox="0 0 24 24"
+                             fill="none"
+                             stroke="currentColor"
+                             stroke-width="2"
+                             stroke-linecap="round"
+                             stroke-linejoin="round"
+                             class="h-8 w-8 text-primary">
+                            <path d="M3 7V5c0-1.1.9-2 2-2h2"></path>
+                            <path d="M17 3h2c1.1 0 2 .9 2 2v2"></path>
+                            <path d="M21 17v2c0 1.1-.9 2-2 2h-2"></path>
+                            <path d="M7 21H5c-1.1 0-2-.9-2-2v-2"></path>
+                            <rect width="7" height="5" x="7" y="7" rx="1"></rect>
+                            <rect width="7" height="5" x="10" y="12" rx="1"></rect>
+                        </svg>
+                        <h3 class="text-lg font-bold">Regular Meetups</h3>
+                        <p class="text-muted-foreground">
+                            Attend in-person and virtual events to network, learn, and collaborate with like-minded individuals.
+                        </p>
+                    </div>
+                    <div class="grid gap-1">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                             width="24"
+                             height="24"
+                             viewBox="0 0 24 24"
+                             fill="none"
+                             stroke="currentColor"
+                             stroke-width="2"
+                             stroke-linecap="round"
+                             stroke-linejoin="round"
+                             class="h-8 w-8 text-primary">
+                            <polyline points="16 18 22 12 16 6"></polyline>
+                            <polyline points="8 6 2 12 8 18"></polyline>
+                        </svg>
+                        <h3 class="text-lg font-bold">Code Repositories</h3>
+                        <p class="text-muted-foreground">
+                            Explore and contribute to a wide range of open-source projects, or start your own and get support from
+                            the community.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="w-full py-12 md:py-24 lg:py-32">
+            <div class="container px-4 md:px-6">
+                <div class="flex flex-col items-center justify-center space-y-4 text-center">
+                    <div class="space-y-2">
+                        <div class="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Community Spotlight</div>
+                        <h2 class="text-3xl font-bold tracking-tighter sm:text-5xl">Meet Our Inspiring Community Members</h2>
+                        <p class="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                            Our community is made up of talented individuals who contribute their time, skills, and passion to
+                            make a difference.
+                        </p>
+                    </div>
+                </div>
+                <div class="mx-auto grid max-w-5xl items-start gap-6 py-12 lg:grid-cols-3 lg:gap-12">
+                    <div class="grid gap-4">
+                        <div class="flex items-center gap-4">
+                            <span class="relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full">
+                                <span class="flex h-full w-full items-center justify-center rounded-full bg-muted">JD</span>
+                            </span>
+                            <div>
+                                <p class="text-lg font-medium leading-none">John Doe</p>
+                                <p class="text-sm text-muted-foreground">Open-Source Contributor</p>
+                            </div>
+                        </div>
+                        <p class="text-muted-foreground">
+                            John is an active contributor to several open-source projects, and he's always eager to help others
+                            learn and grow.
+                        </p>
+                    </div>
+                    <div class="grid gap-4">
+                        <div class="flex items-center gap-4">
+                            <span class="relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full">
+                                <span class="flex h-full w-full items-center justify-center rounded-full bg-muted">SA</span>
+                            </span>
+                            <div>
+                                <p class="text-lg font-medium leading-none">Sarah Anderson</p>
+                                <p class="text-sm text-muted-foreground">Community Organizer</p>
+                            </div>
+                        </div>
+                        <p class="text-muted-foreground">
+                            Sarah is the driving force behind our community events and initiatives, ensuring everyone feels
+                            welcome and supported.
+                        </p>
+                    </div>
+                    <div class="grid gap-4">
+                        <div class="flex items-center gap-4">
+                            <span class="relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full">
+                                <span class="flex h-full w-full items-center justify-center rounded-full bg-muted">MK</span>
+                            </span>
+                            <div>
+                                <p class="text-lg font-medium leading-none">Michael Kim</p>
+                                <p class="text-sm text-muted-foreground">Open-Source Maintainer</p>
+                            </div>
+                        </div>
+                        <p class="text-muted-foreground">
+                            Michael is the lead maintainer of one of our most popular open-source projects, and he's always
+                            available to provide guidance and support.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 {% endblock content %}

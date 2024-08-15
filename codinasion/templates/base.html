@@ -41,10 +41,8 @@
     </head>
     <body>
         {% include "partials/navbar.html" %}
-        <main>
-            {% block content %}
-            {% endblock content %}
-        </main>
+        {% block content %}
+        {% endblock content %}
         {% include "partials/footer.html" %}
     </body>
 </html>
