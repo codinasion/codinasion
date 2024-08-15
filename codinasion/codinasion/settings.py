@@ -48,10 +48,14 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    # Django Cleanup
+    "django_cleanup.apps.CleanupConfig",
     # Django REST Framework
     "rest_framework",
     # For token authentication
     "rest_framework.authtoken",
+    # Apps
+    "home.apps.HomeConfig",
 ]
 
 MIDDLEWARE = [
@@ -69,7 +73,7 @@ ROOT_URLCONF = "codinasion.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [os.path.join(BASE_DIR, "templates")],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [

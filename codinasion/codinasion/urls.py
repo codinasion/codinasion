@@ -23,6 +23,8 @@ from django.conf.urls.static import static
 urlpatterns = [
     # Backend Admin
     path("admin/", admin.site.urls),
+    # Apps
+    path("", include("home.urls")),
 ]
 
 # configuring path for static and media
