@@ -1,4 +1,3 @@
-// calculate-compound-interest.test.ts
 import { calculateCompoundInterest } from "./calculate-compound-interest";
 
 describe("calculateCompoundInterest", () => {
