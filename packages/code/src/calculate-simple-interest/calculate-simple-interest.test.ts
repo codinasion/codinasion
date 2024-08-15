@@ -2,9 +2,9 @@ import { calculateSimpleInterest } from "./calculate-simple-interest";
 
 describe("calculateSimpleInterest", () => {
   it("should calculate the correct simple interest for given inputs", () => {
-    const principal = 1000; // Initial amount
-    const rate = 5; // Annual interest rate in percentage
-    const years = 10; // Number of years
+    const principal = 1000;
+    const rate = 5;
+    const years = 10;
 
     const result = calculateSimpleInterest(principal, rate, years);
     expect(result).toBeCloseTo(500, 2); // Expected result with 2 decimal precision

@@ -2,10 +2,10 @@ import { calculateCompoundInterest } from "./calculate-compound-interest";
 
 describe("calculateCompoundInterest", () => {
   it("should calculate the correct compound interest for given inputs", () => {
-    const principal = 1000; // Initial amount
-    const rate = 5; // Annual interest rate in percentage
-    const timesCompounded = 12; // Compounded monthly
-    const years = 10; // Number of years
+    const principal = 1000;
+    const rate = 5;
+    const timesCompounded = 12;
+    const years = 10;
 
     const result = calculateCompoundInterest(
       principal,

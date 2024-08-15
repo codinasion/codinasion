@@ -27,13 +27,13 @@
     ]
   },
   "dependencies": {
-    "@changesets/cli": "^2.27.7",
-    "@manypkg/cli": "^0.21.4",
-    "dotenv-cli": "^7.4.2",
-    "husky": "^9.1.1",
-    "prettier": "^3.3.2",
-    "turbo": "^2.0.13",
-    "typescript": "^5.4.5",
-    "vercel-submodules": "^1.0.10"
+    "@changesets/cli": "2.27.7",
+    "@manypkg/cli": "0.21.4",
+    "dotenv-cli": "7.4.2",
+    "husky": "9.1.4",
+    "prettier": "3.3.3",
+    "turbo": "2.0.13",
+    "typescript": "5.5.4",
+    "vercel-submodules": "1.0.10"
   }
 }
