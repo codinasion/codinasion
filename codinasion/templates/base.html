@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -36,9 +37,13 @@
             <meta name="keywords" content="codinasion, open source" />
         {% endblock meta_keywords %}
         <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="{% static 'css/base.css' %}" />
     </head>
     <body>
-        {% block body %}
-        {% endblock body %}
+        {% include "partials/navbar.html" %}
+        <main>
+            {% block content %}
+            {% endblock content %}
+        </main>
     </body>
 </html>
