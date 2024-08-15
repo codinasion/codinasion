@@ -2,3 +2,4 @@ pnpm-lock.yaml
 .next
 dist
 codinasion/static
+codinasion/templates
