@@ -36,9 +36,12 @@
             <meta name="keywords" content="codinasion, open source" />
         {% endblock meta_keywords %}
         <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="https://public.codinasion.org/base.css" />
     </head>
     <body>
-        {% block body %}
-        {% endblock body %}
+        {% include "partials/navbar.html" %}
+        {% block content %}
+        {% endblock content %}
+        {% include "partials/footer.html" %}
     </body>
 </html>

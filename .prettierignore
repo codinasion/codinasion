@@ -1,5 +1,6 @@
 pnpm-lock.yaml
 .next
 dist
-codinasion/static
+codinasion/static/admin
+codinasion/static/rest_framework
 codinasion/templates
