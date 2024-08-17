@@ -24,4 +24,4 @@ ln -f scripts/.env backend/backend/.env
 
 echo ""
 echo "${BLUE}INFO${NC}: ${YELLOW}Copying requirements.txt to backend${NC}"
-ln -f requirements.txt backend/backend/requirements.txt
+ln -f requirements.txt backend/requirements.txt
