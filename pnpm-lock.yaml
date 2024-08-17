@@ -33,8 +33,6 @@ importers:
         specifier: 1.0.10
         version: 1.0.10
 
-  codinasion: {}
-
   packages/code:
     devDependencies:
       '@repo/eslint-config':

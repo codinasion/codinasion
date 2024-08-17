@@ -10,7 +10,7 @@
     "lint": "turbo lint",
     "build": "dotenv -- turbo build",
     "test": "turbo test",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,mjs,md,mdx,json,yml,yaml,html,css}\" && source .venv/bin/activate && black . && djlint . --reformat --quiet",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,mjs,md,mdx,json,yml,yaml,html,css}\" && source .venv/bin/activate && black .",
     "all": "pnpm format && pnpm lint && pnpm build && pnpm test",
     "all:packages": "pnpm lint && pnpm build && pnpm test",
     "all:fresh": "pnpm clone-submodules && pnpm format && pnpm lint && pnpm build && pnpm test",

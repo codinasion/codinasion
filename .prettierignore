@@ -1,6 +1,4 @@
 pnpm-lock.yaml
 .next
 dist
-codinasion/static/admin
-codinasion/static/rest_framework
-codinasion/templates
+backend/static/
