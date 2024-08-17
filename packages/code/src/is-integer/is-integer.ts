@@ -1,4 +1,3 @@
 export function isInteger(num: number): boolean {
-    return Number.isInteger(num);
-  }
-  
+  return Number.isInteger(num);
+}

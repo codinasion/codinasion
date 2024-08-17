@@ -1,1 +1,1 @@
-export * from "./is-float"
+export * from "./is-float";
