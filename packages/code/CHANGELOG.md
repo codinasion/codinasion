@@ -1,5 +1,17 @@
 # @codinasion/code
 
+## 3.0.1
+
+### Patch Changes
+
+- e29fa53: add isInteger
+- e29fa53: add isArmstrongNumber
+- e29fa53: add isOdd
+- e29fa53: add isEven
+- e29fa53: add isFloat
+- e29fa53: add permutation
+- e29fa53: add areAnagrams
+
 ## 3.0.0
 
 ### Major Changes
