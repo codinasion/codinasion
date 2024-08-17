@@ -1,17 +1,23 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { Bricolage_Grotesque } from "next/font/google";
+import { Space_Mono } from "next/font/google";
 
 import "@/styles/globals.css";
+import { cn } from "@/lib/utils";
 import Layout from "@/layout";
 import { ThemeProvider } from "@/components/theme-provider";
 
-const geistSans = localFont({
-  src: "../fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
+const fontHeading = Bricolage_Grotesque({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-heading",
 });
-const geistMono = localFont({
-  src: "../fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
+
+const fontBody = Space_Mono({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-body",
+  weight: "400",
 });
 
 export const metadata: Metadata = {
@@ -30,7 +36,7 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} bg-background font-sans antialiased`}
+        className={cn("antialiased", fontHeading.variable, fontBody.variable)}
       >
         <ThemeProvider
           attribute="class"
