@@ -15,5 +15,9 @@ ln -f docs/CODE_OF_CONDUCT.md CODE_OF_CONDUCT.md
 ln -f docs/CONTRIBUTING.md CONTRIBUTING.md
 
 echo ""
-echo "${BLUE}INFO${NC}: ${YELLOW}Copying .env (if it exists in scripts folder)${NC}"
+echo "${BLUE}INFO${NC}: ${YELLOW}Copying .env to root (if it exists in scripts folder)${NC}"
 ln -f scripts/.env .env
+
+echo ""
+echo "${BLUE}INFO${NC}: ${YELLOW}Copying .env to backend (if it exists in scripts folder)${NC}"
+ln -f scripts/.env backend/backend/.env
