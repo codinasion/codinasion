@@ -1,26 +1,47 @@
-import Link from "next/link"
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
-import { JSX, SVGProps } from "react"
+import Link from "next/link";
+import { JSX, SVGProps } from "react";
+
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 export default function HomePage() {
   return (
     <div className="flex flex-col min-h-[100dvh]">
       <header className="px-4 lg:px-6 h-14 flex items-center">
-        <Link href="#" className="flex items-center justify-center" prefetch={false}>
+        <Link
+          href="#"
+          className="flex items-center justify-center"
+          prefetch={false}
+        >
           <GroupIcon className="h-6 w-6" />
           <span className="sr-only">Open-Source Community</span>
         </Link>
         <nav className="ml-auto flex gap-4 sm:gap-6">
-          <Link href="#" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
+          <Link
+            href="#"
+            className="text-sm font-medium hover:underline underline-offset-4"
+            prefetch={false}
+          >
             Features
           </Link>
-          <Link href="#" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
+          <Link
+            href="#"
+            className="text-sm font-medium hover:underline underline-offset-4"
+            prefetch={false}
+          >
             Contributors
           </Link>
-          <Link href="#" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
+          <Link
+            href="#"
+            className="text-sm font-medium hover:underline underline-offset-4"
+            prefetch={false}
+          >
             About
           </Link>
-          <Link href="#" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
+          <Link
+            href="#"
+            className="text-sm font-medium hover:underline underline-offset-4"
+            prefetch={false}
+          >
             Join
           </Link>
         </nav>
@@ -35,8 +56,9 @@ export default function HomePage() {
                     Join our Open-Source Community
                   </h1>
                   <p className="max-w-[600px] text-muted-foreground md:text-xl">
-                    Collaborate with passionate developers, contribute to cutting-edge projects, and grow your skills in
-                    a supportive environment.
+                    Collaborate with passionate developers, contribute to
+                    cutting-edge projects, and grow your skills in a supportive
+                    environment.
                   </p>
                 </div>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
@@ -70,11 +92,15 @@ export default function HomePage() {
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Key Features</div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Discover the Benefits</h2>
+                <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">
+                  Key Features
+                </div>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                  Discover the Benefits
+                </h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Our open-source community offers a wealth of opportunities for developers to learn, grow, and make a
-                  meaningful impact.
+                  Our open-source community offers a wealth of opportunities for
+                  developers to learn, grow, and make a meaningful impact.
                 </p>
               </div>
             </div>
@@ -83,9 +109,12 @@ export default function HomePage() {
                 <ul className="grid gap-6">
                   <li>
                     <div className="grid gap-1">
-                      <h3 className="text-xl font-bold">Collaborative Learning</h3>
+                      <h3 className="text-xl font-bold">
+                        Collaborative Learning
+                      </h3>
                       <p className="text-muted-foreground">
-                        Engage with a diverse community of developers and learn from their experiences and expertise.
+                        Engage with a diverse community of developers and learn
+                        from their experiences and expertise.
                       </p>
                     </div>
                   </li>
@@ -93,7 +122,8 @@ export default function HomePage() {
                     <div className="grid gap-1">
                       <h3 className="text-xl font-bold">Skill Development</h3>
                       <p className="text-muted-foreground">
-                        Contribute to real-world projects and build your portfolio, enhancing your technical skills.
+                        Contribute to real-world projects and build your
+                        portfolio, enhancing your technical skills.
                       </p>
                     </div>
                   </li>
@@ -101,7 +131,8 @@ export default function HomePage() {
                     <div className="grid gap-1">
                       <h3 className="text-xl font-bold">Open Innovation</h3>
                       <p className="text-muted-foreground">
-                        Collaborate on cutting-edge technologies and be part of the open-source movement.
+                        Collaborate on cutting-edge technologies and be part of
+                        the open-source movement.
                       </p>
                     </div>
                   </li>
@@ -121,11 +152,15 @@ export default function HomePage() {
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Meet the Community</div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Active Contributors</h2>
+                <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">
+                  Meet the Community
+                </div>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                  Active Contributors
+                </h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Our open-source community is powered by passionate developers who contribute their time and expertise
-                  to various projects.
+                  Our open-source community is powered by passionate developers
+                  who contribute their time and expertise to various projects.
                 </p>
               </div>
             </div>
@@ -137,7 +172,9 @@ export default function HomePage() {
                 </Avatar>
                 <div className="text-center">
                   <div className="text-lg font-medium">John Doe</div>
-                  <div className="text-sm text-muted-foreground">Frontend Developer</div>
+                  <div className="text-sm text-muted-foreground">
+                    Frontend Developer
+                  </div>
                 </div>
               </div>
               <div className="flex flex-col items-center space-y-2">
@@ -147,7 +184,9 @@ export default function HomePage() {
                 </Avatar>
                 <div className="text-center">
                   <div className="text-lg font-medium">Jane Smith</div>
-                  <div className="text-sm text-muted-foreground">Backend Developer</div>
+                  <div className="text-sm text-muted-foreground">
+                    Backend Developer
+                  </div>
                 </div>
               </div>
               <div className="flex flex-col items-center space-y-2">
@@ -157,7 +196,9 @@ export default function HomePage() {
                 </Avatar>
                 <div className="text-center">
                   <div className="text-lg font-medium">Alex Brown</div>
-                  <div className="text-sm text-muted-foreground">DevOps Engineer</div>
+                  <div className="text-sm text-muted-foreground">
+                    DevOps Engineer
+                  </div>
                 </div>
               </div>
               <div className="flex flex-col items-center space-y-2">
@@ -167,7 +208,9 @@ export default function HomePage() {
                 </Avatar>
                 <div className="text-center">
                   <div className="text-lg font-medium">Emily Fernandez</div>
-                  <div className="text-sm text-muted-foreground">UI/UX Designer</div>
+                  <div className="text-sm text-muted-foreground">
+                    UI/UX Designer
+                  </div>
                 </div>
               </div>
               <div className="flex flex-col items-center space-y-2">
@@ -177,7 +220,9 @@ export default function HomePage() {
                 </Avatar>
                 <div className="text-center">
                   <div className="text-lg font-medium">Michael Reyes</div>
-                  <div className="text-sm text-muted-foreground">Data Scientist</div>
+                  <div className="text-sm text-muted-foreground">
+                    Data Scientist
+                  </div>
                 </div>
               </div>
               <div className="flex flex-col items-center space-y-2">
@@ -187,7 +232,9 @@ export default function HomePage() {
                 </Avatar>
                 <div className="text-center">
                   <div className="text-lg font-medium">Sarah Kim</div>
-                  <div className="text-sm text-muted-foreground">Mobile Developer</div>
+                  <div className="text-sm text-muted-foreground">
+                    Mobile Developer
+                  </div>
                 </div>
               </div>
             </div>
@@ -195,18 +242,28 @@ export default function HomePage() {
         </section>
       </main>
       <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
-        <p className="text-xs text-muted-foreground">&copy; 2024 Open-Source Community. All rights reserved.</p>
+        <p className="text-xs text-muted-foreground">
+          &copy; 2024 Open-Source Community. All rights reserved.
+        </p>
         <nav className="sm:ml-auto flex gap-4 sm:gap-6">
-          <Link href="#" className="text-xs hover:underline underline-offset-4" prefetch={false}>
+          <Link
+            href="#"
+            className="text-xs hover:underline underline-offset-4"
+            prefetch={false}
+          >
             Terms of Service
           </Link>
-          <Link href="#" className="text-xs hover:underline underline-offset-4" prefetch={false}>
+          <Link
+            href="#"
+            className="text-xs hover:underline underline-offset-4"
+            prefetch={false}
+          >
             Privacy
           </Link>
         </nav>
       </footer>
     </div>
-  )
+  );
 }
 
 function GroupIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
@@ -230,5 +287,5 @@ function GroupIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
       <rect width="7" height="5" x="7" y="7" rx="1" />
       <rect width="7" height="5" x="10" y="12" rx="1" />
     </svg>
-  )
+  );
 }
