@@ -1,12 +1,12 @@
 #!/bin/bash
 
-# Extract version from codinasion/package.json
-PACKAGE_VERSION=$(grep -oP '(?<="version": ")[^"]*' codinasion/package.json)
+# Extract version from web/package.json
+PACKAGE_VERSION=$(grep -oP '(?<="version": ")[^"]*' web/package.json)
 echo "Extracted version: $PACKAGE_VERSION"
 
 # Check if version extraction was successful
 if [ -z "$PACKAGE_VERSION" ]; then
-    echo "Failed to extract version from codinasion/package.json"
+    echo "Failed to extract version from web/package.json"
     exit 1
 fi
 

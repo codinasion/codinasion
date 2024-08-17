@@ -8,11 +8,15 @@
     "postinstall": "manypkg check",
     "clone-submodules": "npx vercel-submodules --all",
     "lint": "turbo lint",
+    "lint:packages": "pnpm lint --filter !./web",
+    "dev": "dotenv -- turbo dev",
     "build": "dotenv -- turbo build",
+    "build:packages": "pnpm build --filter !./web",
     "test": "turbo test",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,mjs,md,mdx,json,yml,yaml,html,css}\" && source .venv/bin/activate && black . && djlint . --reformat --quiet",
+    "test:packages": "pnpm test --filter !./web",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,mjs,md,mdx,json,yml,yaml,html,css}\" && source .venv/bin/activate && black .",
     "all": "pnpm format && pnpm lint && pnpm build && pnpm test",
-    "all:packages": "pnpm lint && pnpm build && pnpm test",
+    "all:packages": "pnpm lint:packages && pnpm build:packages && pnpm test:packages",
     "all:fresh": "pnpm clone-submodules && pnpm format && pnpm lint && pnpm build && pnpm test",
     "version-packages": "pnpm changeset version && pnpm all:packages",
     "publish-packages": "pnpm all:packages && pnpm changeset version && pnpm changeset publish && sh ./tag.sh"
@@ -32,7 +36,7 @@
     "dotenv-cli": "7.4.2",
     "husky": "9.1.4",
     "prettier": "3.3.3",
-    "turbo": "2.0.13",
+    "turbo": "2.0.14",
     "typescript": "5.5.4",
     "vercel-submodules": "1.0.10"
   }
