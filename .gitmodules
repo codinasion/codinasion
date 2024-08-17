@@ -4,3 +4,6 @@
 [submodule "scripts"]
 	path = scripts
 	url = https://github.com/codinasion/scripts
+[submodule "backend"]
+	path = backend
+	url = https://github.com/codinasion/backend
