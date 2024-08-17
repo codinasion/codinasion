@@ -8,6 +8,7 @@
     "postinstall": "manypkg check",
     "clone-submodules": "npx vercel-submodules --all",
     "lint": "turbo lint",
+    "dev": "dotenv -- turbo dev",
     "build": "dotenv -- turbo build",
     "test": "turbo test",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,mjs,md,mdx,json,yml,yaml,html,css}\" && source .venv/bin/activate && black .",
