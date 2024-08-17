@@ -1,11 +1,7 @@
 export function areAnagrams(str1: string, str2: string): boolean {
   // Helper function to normalize and sort a string
   const normalizeAndSort = (str: string): string => {
-    return str
-      .toLowerCase()
-      .split('')
-      .sort()
-      .join('');
+    return str.toLowerCase().split("").sort().join("");
   };
 
   // Normalize and sort both strings
@@ -15,4 +11,3 @@ export function areAnagrams(str1: string, str2: string): boolean {
   // Compare the normalized and sorted strings
   return normalizedStr1 === normalizedStr2;
 }
-

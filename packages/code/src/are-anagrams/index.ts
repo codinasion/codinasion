@@ -1,1 +1,1 @@
-export * from "./are-anagrams"
+export * from "./are-anagrams";

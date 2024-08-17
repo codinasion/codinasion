@@ -1,1 +1,1 @@
-export * from "./is-armstrong-number"
+export * from "./is-armstrong-number";
