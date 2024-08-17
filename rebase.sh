@@ -20,13 +20,8 @@ case $answer in
     git rebase master dev
 
     # Skip all the conflicts
-    while [ true ]; do
+    while [ $? -ne 0 ]; do
         git rebase --skip
-        if [ $? -eq 0 ]; then break; fi
-        if ! git rebase --continue 2>/dev/null; then
-            echo "No rebase in progress. Exiting loop."
-            break
-        fi
     done
 
     # Force push the changes to the dev branch
