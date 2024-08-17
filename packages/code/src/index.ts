@@ -4,4 +4,5 @@ export * from "./calculate-compound-interest";
 export * from "./calculate-simple-interest";
 export * from "./combination";
 export * from "./factorial";
+export * from "./is-armstrong-number"
 export * from "./permutation";
