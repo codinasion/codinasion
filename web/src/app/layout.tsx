@@ -1,11 +1,10 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Bricolage_Grotesque } from "next/font/google";
 import { Space_Mono } from "next/font/google";
 
 import "@/styles/globals.css";
 import { cn } from "@/lib/utils";
 import Layout from "@/layout";
-import { ThemeProvider } from "@/components/theme-provider";
 
 const fontHeading = Bricolage_Grotesque({
   subsets: ["latin"],
@@ -26,6 +25,13 @@ export const metadata: Metadata = {
     template: `%s - Codinasion`,
   },
   description: "Collaborate, Create, Innovate : Together with Open Source ❤️",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  themeColor: "#000f1f",
 };
 
 export default function RootLayout({
@@ -63,14 +69,7 @@ export default function RootLayout({
       <body
         className={cn("antialiased", fontHeading.variable, fontBody.variable)}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="light"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <Layout>{children}</Layout>
-        </ThemeProvider>
+        <Layout>{children}</Layout>
       </body>
     </html>
   );
