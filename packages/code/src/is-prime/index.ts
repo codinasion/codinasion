@@ -1,1 +1,1 @@
-export * from "./is-prime"
+export * from "./is-prime";

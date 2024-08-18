@@ -1,1 +1,1 @@
-export * from "./is-palindrome"
+export * from "./is-palindrome";

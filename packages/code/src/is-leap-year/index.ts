@@ -1,1 +1,1 @@
-export * from "./is-leap-year"
+export * from "./is-leap-year";

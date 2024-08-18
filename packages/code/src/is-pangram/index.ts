@@ -1,1 +1,1 @@
-export * from "./is-pangram"
+export * from "./is-pangram";

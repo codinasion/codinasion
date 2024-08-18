@@ -5,18 +5,21 @@ export function binaryToOctal(binaryStr: string): string {
   }
 
   // Pad the binary string to ensure its length is a multiple of 3
-  const paddedBinaryStr = binaryStr.padStart(Math.ceil(binaryStr.length / 3) * 3, '0');
+  const paddedBinaryStr = binaryStr.padStart(
+    Math.ceil(binaryStr.length / 3) * 3,
+    "0",
+  );
 
-  let octalStr = '';
+  let octalStr = "";
   const binaryToOctalMap: { [key: string]: string } = {
-    '000': '0',
-    '001': '1',
-    '010': '2',
-    '011': '3',
-    '100': '4',
-    '101': '5',
-    '110': '6',
-    '111': '7'
+    "000": "0",
+    "001": "1",
+    "010": "2",
+    "011": "3",
+    "100": "4",
+    "101": "5",
+    "110": "6",
+    "111": "7",
   };
 
   // Convert binary to octal

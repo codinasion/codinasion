@@ -1,1 +1,1 @@
-export * from "./string-to-integer"
+export * from "./string-to-integer";

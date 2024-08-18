@@ -1,1 +1,1 @@
-export * from "./binary-to-octal"
+export * from "./binary-to-octal";

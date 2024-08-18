@@ -1,5 +1,5 @@
 export function isPangram(str: string): boolean {
-  const alphabet = 'abcdefghijklmnopqrstuvwxyz';
+  const alphabet = "abcdefghijklmnopqrstuvwxyz";
   const normalizedStr = str.toLowerCase();
   const letterSet = new Set<string>();
 
@@ -11,4 +11,3 @@ export function isPangram(str: string): boolean {
 
   return letterSet.size === 26;
 }
-

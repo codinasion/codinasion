@@ -9,17 +9,17 @@ export function stringToInteger(str: string): number {
   let result = 0;
 
   // Handle sign
-  if (str[index] === '+' || str[index] === '-') {
-    sign = str[index] === '-' ? -1 : 1;
+  if (str[index] === "+" || str[index] === "-") {
+    sign = str[index] === "-" ? -1 : 1;
     index++;
   }
 
   // Convert characters to integer
   while (index < str.length) {
     const char = str[index];
-    if (char === undefined || char < '0' || char > '9') break;
+    if (char === undefined || char < "0" || char > "9") break;
 
-    result = result * 10 + (char.charCodeAt(0) - '0'.charCodeAt(0));
+    result = result * 10 + (char.charCodeAt(0) - "0".charCodeAt(0));
     index++;
   }
 

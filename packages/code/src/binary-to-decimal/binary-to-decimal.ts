@@ -10,7 +10,7 @@ export function binaryToDecimal(binaryStr: string): number {
   // Convert binary to decimal
   for (let i = 0; i < length; i++) {
     const bit = binaryStr[length - 1 - i];
-    if (bit === '1') {
+    if (bit === "1") {
       decimal += Math.pow(2, i);
     }
   }
