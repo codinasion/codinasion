@@ -14,3 +14,4 @@ export * from "./is-palindrome"
 export * from "./is-pangram"
 export * from "./is-prime"
 export * from "./permutation";
+export * from "./string-to-integer"
