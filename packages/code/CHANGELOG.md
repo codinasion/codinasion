@@ -1,5 +1,19 @@
 # @codinasion/code
 
+## 3.0.2
+
+### Patch Changes
+
+- d02effb: add isPalindrome
+- d02effb: add stringToInteger
+- d02effb: add binaryToHexadecimal
+- d02effb: add celsiusToFahrenheit
+- d02effb: add isLeapYear
+- d02effb: add isPangram
+- d02effb: add binaryToDecimal
+- d02effb: add isPrime
+- d02effb: add binaryToOctal
+
 ## 3.0.1
 
 ### Patch Changes
