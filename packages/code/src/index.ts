@@ -12,4 +12,5 @@ export * from "./is-leap-year"
 export * from "./is-odd";
 export * from "./is-palindrome"
 export * from "./is-pangram"
+export * from "./is-prime"
 export * from "./permutation";
