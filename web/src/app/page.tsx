@@ -98,14 +98,19 @@ export default function HomePage() {
                 </li>
               </ul>
             </div>
-            <Image
-              src="/contributors.svg"
-              width="512"
-              height="512"
-              alt="Contributors Image"
-              className="mx-auto aspect-video overflow-hidden rounded-xl object-center lg:order-last hidden lg:block"
-              priority
-            />
+            <Link
+              href="https://github.com/codinasion/codinasion/graphs/contributors"
+              target="_blank"
+            >
+              <Image
+                src="/contributors.svg"
+                width="512"
+                height="512"
+                alt="Contributors Image"
+                className="mx-auto aspect-video overflow-hidden rounded-xl object-center lg:order-last hidden lg:block"
+                priority
+              />
+            </Link>
           </div>
         </div>
       </section>
@@ -128,74 +133,128 @@ export default function HomePage() {
           <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-3 lg:gap-8">
             <div className="flex flex-col items-center space-y-2">
               <Avatar>
-                <AvatarImage src="/placeholder-user.jpg" />
-                <AvatarFallback>JD</AvatarFallback>
+                <AvatarImage src="https://github.com/harshraj8843.png" />
+                <AvatarFallback>HR</AvatarFallback>
               </Avatar>
               <div className="text-center">
-                <div className="text-lg font-medium">John Doe</div>
+                <div className="text-lg font-medium">Harsh Raj</div>
+                <div className="text-sm text-muted-foreground">Maintainer</div>
+              </div>
+            </div>
+            <div className="flex flex-col items-center space-y-2">
+              <Avatar>
+                <AvatarImage src="https://github.com/victoriacheng15.png" />
+                <AvatarFallback>VC</AvatarFallback>
+              </Avatar>
+              <div className="text-center">
+                <div className="text-lg font-medium">Victoria Cheng</div>
                 <div className="text-sm text-muted-foreground">
-                  Frontend Developer
+                  Core Team Member
                 </div>
               </div>
             </div>
             <div className="flex flex-col items-center space-y-2">
               <Avatar>
-                <AvatarImage src="/placeholder-user.jpg" />
-                <AvatarFallback>JS</AvatarFallback>
+                <AvatarImage src="https://github.com/0ME9A.png" />
+                <AvatarFallback>BS</AvatarFallback>
               </Avatar>
               <div className="text-center">
-                <div className="text-lg font-medium">Jane Smith</div>
+                <div className="text-lg font-medium">Baliram Singh</div>
                 <div className="text-sm text-muted-foreground">
-                  Backend Developer
+                  Core Team Member
                 </div>
               </div>
             </div>
             <div className="flex flex-col items-center space-y-2">
               <Avatar>
-                <AvatarImage src="/placeholder-user.jpg" />
-                <AvatarFallback>AB</AvatarFallback>
+                <AvatarImage src="https://github.com/anandfresh.png" />
+                <AvatarFallback>AKS</AvatarFallback>
               </Avatar>
               <div className="text-center">
-                <div className="text-lg font-medium">Alex Brown</div>
+                <div className="text-lg font-medium">Anandha Krishnan S</div>
                 <div className="text-sm text-muted-foreground">
-                  DevOps Engineer
+                  Core Team Member
                 </div>
               </div>
             </div>
             <div className="flex flex-col items-center space-y-2">
               <Avatar>
-                <AvatarImage src="/placeholder-user.jpg" />
-                <AvatarFallback>EF</AvatarFallback>
+                <AvatarImage src="https://github.com/hi-Kartik2004.png" />
+                <AvatarFallback>KS</AvatarFallback>
               </Avatar>
               <div className="text-center">
-                <div className="text-lg font-medium">Emily Fernandez</div>
-                <div className="text-sm text-muted-foreground">
-                  UI/UX Designer
-                </div>
+                <div className="text-lg font-medium">Kartikeya Saini</div>
+                <div className="text-sm text-muted-foreground">Team Member</div>
               </div>
             </div>
             <div className="flex flex-col items-center space-y-2">
               <Avatar>
-                <AvatarImage src="/placeholder-user.jpg" />
-                <AvatarFallback>MR</AvatarFallback>
+                <AvatarImage src="https://github.com/RiteshK-611.png" />
+                <AvatarFallback>RK</AvatarFallback>
               </Avatar>
               <div className="text-center">
-                <div className="text-lg font-medium">Michael Reyes</div>
-                <div className="text-sm text-muted-foreground">
-                  Data Scientist
-                </div>
+                <div className="text-lg font-medium">Ritesh Kokam</div>
+                <div className="text-sm text-muted-foreground">Team Member</div>
               </div>
             </div>
             <div className="flex flex-col items-center space-y-2">
               <Avatar>
-                <AvatarImage src="/placeholder-user.jpg" />
-                <AvatarFallback>SK</AvatarFallback>
+                <AvatarImage src="https://github.com/grraghav120.png" />
+                <AvatarFallback>RG</AvatarFallback>
               </Avatar>
               <div className="text-center">
-                <div className="text-lg font-medium">Sarah Kim</div>
-                <div className="text-sm text-muted-foreground">
-                  Mobile Developer
-                </div>
+                <div className="text-lg font-medium">Raghav Garg</div>
+                <div className="text-sm text-muted-foreground">Team Member</div>
+              </div>
+            </div>
+            <div className="flex flex-col items-center space-y-2">
+              <Avatar>
+                <AvatarImage src="https://github.com/isyuricunha.png" />
+                <AvatarFallback>Y</AvatarFallback>
+              </Avatar>
+              <div className="text-center">
+                <div className="text-lg font-medium">Yuri</div>
+                <div className="text-sm text-muted-foreground">Team Member</div>
+              </div>
+            </div>
+            <div className="flex flex-col items-center space-y-2">
+              <Avatar>
+                <AvatarImage src="https://github.com/brundabharadwaj.png" />
+                <AvatarFallback>BMB</AvatarFallback>
+              </Avatar>
+              <div className="text-center">
+                <div className="text-lg font-medium">Brunda M Bharadwaj</div>
+                <div className="text-sm text-muted-foreground">Team Member</div>
+              </div>
+            </div>
+            <div className="flex flex-col items-center space-y-2">
+              <Avatar>
+                <AvatarImage src="https://github.com/tanishq-singh-2407.png" />
+                <AvatarFallback>TS</AvatarFallback>
+              </Avatar>
+              <div className="text-center">
+                <div className="text-lg font-medium">Tanishq Singh</div>
+                <div className="text-sm text-muted-foreground">Team Member</div>
+              </div>
+            </div>
+            <div className="flex flex-col items-center space-y-2">
+              <Avatar>
+                <AvatarImage src="https://github.com/esivakumar26.png" />
+                <AvatarFallback>SKE</AvatarFallback>
+              </Avatar>
+              <div className="text-center">
+                <div className="text-lg font-medium">Siva Kumar Edupuganti</div>
+                <div className="text-sm text-muted-foreground">Contributor</div>
+              </div>
+            </div>
+            <div className="flex flex-col items-center space-y-2">
+              <Avatar>
+                <AvatarImage src="https://github.com/joao-vitor-souza.png" />
+                <AvatarFallback>JV</AvatarFallback>
+              </Avatar>
+              <div className="text-center">
+                <div className="text-lg font-medium">João Vitor</div>
+                <div className="text-sm text-muted-foreground">Contributor</div>
               </div>
             </div>
           </div>
