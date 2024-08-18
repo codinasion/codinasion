@@ -7,3 +7,6 @@
 [submodule "backend"]
 	path = backend
 	url = https://github.com/codinasion/backend
+[submodule "web/src/app/(Sponsor Only)"]
+	path = web/src/app/(Sponsor Only)
+	url = https://github.com/codinasion/sponsor-only
