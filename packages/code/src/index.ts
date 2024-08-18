@@ -11,4 +11,5 @@ export * from "./is-integer";
 export * from "./is-leap-year"
 export * from "./is-odd";
 export * from "./is-palindrome"
+export * from "./is-pangram"
 export * from "./permutation";
