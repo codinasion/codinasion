@@ -1,5 +1,6 @@
 export * from "./add-matrices";
 export * from "./are-anagrams";
+export * from "./binary-to-decimal"
 export * from "./calculate-compound-interest";
 export * from "./calculate-simple-interest";
 export * from "./combination";
