@@ -20,7 +20,7 @@
     "next": "15.0.0-canary.75",
     "next-themes": "^0.3.0",
     "react": "19.0.0-rc-f994737d14-20240522",
-    "react-dom": "19.0.0-rc-f994737d14-20240522",
+    "react-dom": "19.0.0-rc.0",
     "sharp": "^0.33.5",
     "tailwind-merge": "^2.5.2",
     "tailwindcss-animate": "^1.0.7"
