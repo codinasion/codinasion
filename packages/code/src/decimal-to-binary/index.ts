@@ -1,1 +1,1 @@
-export * from "./decimal-to-binary"
+export * from "./decimal-to-binary";

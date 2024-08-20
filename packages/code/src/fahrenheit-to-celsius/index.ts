@@ -1,1 +1,1 @@
-export * from "./fahrenheit-to-celsius"
+export * from "./fahrenheit-to-celsius";

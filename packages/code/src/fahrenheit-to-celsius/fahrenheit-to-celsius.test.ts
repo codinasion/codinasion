@@ -1,7 +1,7 @@
-import { fahrenheitToCelsius } from './fahrenheit-to-celsius';
+import { fahrenheitToCelsius } from "./fahrenheit-to-celsius";
 
-describe('fahrenheitToCelsius', () => {
-  it('should convert Fahrenheit to Celsius correctly', () => {
+describe("fahrenheitToCelsius", () => {
+  it("should convert Fahrenheit to Celsius correctly", () => {
     expect(fahrenheitToCelsius(32)).toBe(0);
     expect(fahrenheitToCelsius(212)).toBe(100);
     expect(fahrenheitToCelsius(-40)).toBe(-40);

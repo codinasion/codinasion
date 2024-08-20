@@ -1,7 +1,7 @@
-import { decimalToBinary } from './decimal-to-binary';
+import { decimalToBinary } from "./decimal-to-binary";
 
-describe('decimalToBinary', () => {
-  it('should convert decimal numbers to binary strings correctly', () => {
+describe("decimalToBinary", () => {
+  it("should convert decimal numbers to binary strings correctly", () => {
     expect(decimalToBinary(10)).toBe("1010");
     expect(decimalToBinary(15)).toBe("1111");
     expect(decimalToBinary(16)).toBe("10000");

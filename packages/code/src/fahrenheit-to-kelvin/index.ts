@@ -1,1 +1,1 @@
-export * from "./fahrenheit-to-kelvin"
+export * from "./fahrenheit-to-kelvin";

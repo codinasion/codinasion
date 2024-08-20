@@ -1,1 +1,1 @@
-export * from "./decimal-to-octal"
+export * from "./decimal-to-octal";

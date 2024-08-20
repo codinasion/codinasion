@@ -1,1 +1,1 @@
-export * from "./decimal-to-hexadecimal"
+export * from "./decimal-to-hexadecimal";

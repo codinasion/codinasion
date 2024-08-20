@@ -1,7 +1,7 @@
-import { decimalToHexadecimal } from './decimal-to-hexadecimal';
+import { decimalToHexadecimal } from "./decimal-to-hexadecimal";
 
-describe('decimalToHexadecimal', () => {
-  it('should convert decimal numbers to hexadecimal strings correctly', () => {
+describe("decimalToHexadecimal", () => {
+  it("should convert decimal numbers to hexadecimal strings correctly", () => {
     expect(decimalToHexadecimal(10)).toBe("A");
     expect(decimalToHexadecimal(255)).toBe("FF");
     expect(decimalToHexadecimal(4096)).toBe("1000");
