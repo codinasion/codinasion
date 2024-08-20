@@ -1,5 +1,15 @@
 # @codinasion/code
 
+## 3.0.3
+
+### Patch Changes
+
+- 3c0ea9c: add decimalToBinary
+- 3c0ea9c: add fahrenheitToCelsius
+- 3c0ea9c: add decimalToHexadecimal
+- 3c0ea9c: add decimalToOctal
+- 3c0ea9c: add fahrenheitToKelvin
+
 ## 3.0.2
 
 ### Patch Changes
