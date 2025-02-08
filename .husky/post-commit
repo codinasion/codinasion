@@ -1,5 +1,0 @@
-# Load config (variables)
-. "$(dirname -- "$0")/config.sh"
-
-# echo ""
-# echo "${BLUE}INFO${NC}: ${YELLOW}Commit done !!!${NC}"

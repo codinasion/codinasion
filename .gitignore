@@ -234,9 +234,3 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-
-# Data (files too large to be stored in git)
-data/
-!web/src/data/
-*.csv
-*.parquet

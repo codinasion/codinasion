@@ -1,8 +1,0 @@
-packages:
-  # include
-  - "web"
-  - "packages/**"
-
-  # exclude
-  - "!**/.next/**"
-  - "!**/node_modules/**"
