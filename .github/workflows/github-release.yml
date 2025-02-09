@@ -1,0 +1,32 @@
+name: GitHub release
+
+on:
+  push:
+    tags:
+      - v*
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    # run only if repo is not a fork
+    if: github.repository == 'codinasion/codinasion'
+
+    name: Release pushed tag
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Create release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          tag: ${{ github.ref_name }}
+        run: |
+          gh release create "$tag" \
+              --repo="$GITHUB_REPOSITORY" \
+              --title="${GITHUB_REPOSITORY#*/} ${tag#v}" \
+              --generate-notes
