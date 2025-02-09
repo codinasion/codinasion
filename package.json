@@ -10,14 +10,14 @@
     "test": "turbo test",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,mjs,md,mdx,json,yml,yaml,html,css}\"",
     "all": "pnpm format && pnpm lint && pnpm build && pnpm test",
-    "version-packages": "pnpm changeset version && pnpm all:packages",
-    "publish-packages": "pnpm all:packages && pnpm changeset version && pnpm changeset publish && sh ./tag.sh"
+    "version-packages": "pnpm changeset version && pnpm all",
+    "publish-packages": "pnpm all && pnpm changeset version && pnpm changeset publish"
   },
   "packageManager": "pnpm@9.0.0",
   "engines": {
     "node": ">=18"
   },
-  "dependencies": {
+  "devDependencies": {
     "@changesets/cli": "^2.27.12",
     "@manypkg/cli": "^0.23.0",
     "husky": "^9.1.7",

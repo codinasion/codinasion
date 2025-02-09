@@ -1,0 +1,9 @@
+# Load config (variables)
+. "$(dirname -- "$0")/config.sh"
+
+# Rule: No commit is allowed on master branch
+if [ "$(git rev-parse --abbrev-ref HEAD)" = "master" ]; then
+    echo "${RED}⚠️ Commit on master not allowed!${NC}."
+    exit 1
+fi
+echo "${GREEN}✅ Branch check passed${NC}"
