@@ -10,5 +10,5 @@
   "access": "public",
   "baseBranch": "master",
   "updateInternalDependencies": "patch",
-  "ignore": []
+  "ignore": ["codinasion.vercel.app"]
 }
