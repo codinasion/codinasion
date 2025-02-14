@@ -1,0 +1,10 @@
+# Load config (variables)
+. "$(dirname -- "$0")/config.sh"
+
+# Cloning submodules
+pnpm clone-submodules
+
+# Creating hard links
+ln -f docs/README.md README.md
+ln -f docs/CODE_OF_CONDUCT.md CODE_OF_CONDUCT.md
+ln -f docs/CONTRIBUTING.md CONTRIBUTING.md

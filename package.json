@@ -4,6 +4,7 @@
   "scripts": {
     "prepare": "husky",
     "postinstall": "manypkg check",
+    "clone-submodules": "npx vercel-submodules --all",
     "lint": "turbo lint",
     "dev": "turbo dev",
     "build": "turbo build",
@@ -23,6 +24,7 @@
     "husky": "^9.1.7",
     "prettier": "^3.4.2",
     "turbo": "^2.4.0",
-    "typescript": "^5.7.3"
+    "typescript": "^5.7.3",
+    "vercel-submodules": "^1.0.10"
   }
 }
