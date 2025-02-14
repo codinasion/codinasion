@@ -38,6 +38,7 @@
   },
   "devDependencies": {
     "@types/jest": "^29.5.14",
+    "eslint": "^9",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-only-warn": "^1.1.0",
     "eslint-plugin-turbo": "^2.3.3",
