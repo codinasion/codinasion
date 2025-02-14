@@ -10,6 +10,8 @@ on:
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
+permissions: {}
+
 jobs:
   release:
     # run only if repo is not a fork
@@ -17,6 +19,11 @@ jobs:
 
     name: Release
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: write # to create release (changesets/action)
+      issues: write # to post issue comments (changesets/action)
+      pull-requests: write # to create pull request (changesets/action)
 
     # To use Turborepo Remote Caching, set the following environment variables for the job.
     env:
