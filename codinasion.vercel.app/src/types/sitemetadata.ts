@@ -11,7 +11,6 @@ interface sitemetadataType {
   twitter_userid: string;
 
   email: string;
-
 }
 
 export type { sitemetadataType };

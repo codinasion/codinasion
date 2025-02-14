@@ -1,3 +1,5 @@
+import { JSX } from "react";
+
 export default function LoadingPage(): JSX.Element {
   return (
     <div className="flex flex-row items-center justify-center">

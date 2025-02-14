@@ -13,7 +13,6 @@ const sitemetadata: sitemetadataType = {
   twitter_userid: "1527970903367135232",
 
   email: "codinasion@gmail.com",
-
 };
 
 export { sitemetadata };

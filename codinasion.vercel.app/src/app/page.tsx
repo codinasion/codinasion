@@ -114,6 +114,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* TODO: DYNAMIC UPDATE */}
       <section className="w-full py-12 md:py-24 lg:py-32">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -122,7 +124,7 @@ export default function HomePage() {
                 Meet the Community
               </div>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                Active Contributors
+                Top Contributors
               </h2>
               <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                 Our open-source community is powered by passionate developers
@@ -138,7 +140,7 @@ export default function HomePage() {
               </Avatar>
               <div className="text-center">
                 <div className="text-lg font-medium">Harsh Raj</div>
-                <div className="text-sm text-muted-foreground">Maintainer</div>
+                <div className="text-sm text-muted-foreground">Contributor</div>
               </div>
             </div>
             <div className="flex flex-col items-center space-y-2">
@@ -148,9 +150,7 @@ export default function HomePage() {
               </Avatar>
               <div className="text-center">
                 <div className="text-lg font-medium">Victoria Cheng</div>
-                <div className="text-sm text-muted-foreground">
-                  Core Team Member
-                </div>
+                <div className="text-sm text-muted-foreground">Contributor</div>
               </div>
             </div>
             <div className="flex flex-col items-center space-y-2">
@@ -160,9 +160,7 @@ export default function HomePage() {
               </Avatar>
               <div className="text-center">
                 <div className="text-lg font-medium">Baliram Singh</div>
-                <div className="text-sm text-muted-foreground">
-                  Core Team Member
-                </div>
+                <div className="text-sm text-muted-foreground">Contributor</div>
               </div>
             </div>
             <div className="flex flex-col items-center space-y-2">
@@ -172,9 +170,7 @@ export default function HomePage() {
               </Avatar>
               <div className="text-center">
                 <div className="text-lg font-medium">Anandha Krishnan S</div>
-                <div className="text-sm text-muted-foreground">
-                  Core Team Member
-                </div>
+                <div className="text-sm text-muted-foreground">Contributor</div>
               </div>
             </div>
             <div className="flex flex-col items-center space-y-2">
@@ -184,7 +180,7 @@ export default function HomePage() {
               </Avatar>
               <div className="text-center">
                 <div className="text-lg font-medium">Kartikeya Saini</div>
-                <div className="text-sm text-muted-foreground">Team Member</div>
+                <div className="text-sm text-muted-foreground">Contributor</div>
               </div>
             </div>
             <div className="flex flex-col items-center space-y-2">
@@ -194,7 +190,7 @@ export default function HomePage() {
               </Avatar>
               <div className="text-center">
                 <div className="text-lg font-medium">Ritesh Kokam</div>
-                <div className="text-sm text-muted-foreground">Team Member</div>
+                <div className="text-sm text-muted-foreground">Contributor</div>
               </div>
             </div>
             <div className="flex flex-col items-center space-y-2">
@@ -204,7 +200,7 @@ export default function HomePage() {
               </Avatar>
               <div className="text-center">
                 <div className="text-lg font-medium">Raghav Garg</div>
-                <div className="text-sm text-muted-foreground">Team Member</div>
+                <div className="text-sm text-muted-foreground">Contributor</div>
               </div>
             </div>
             <div className="flex flex-col items-center space-y-2">
@@ -214,7 +210,7 @@ export default function HomePage() {
               </Avatar>
               <div className="text-center">
                 <div className="text-lg font-medium">Yuri</div>
-                <div className="text-sm text-muted-foreground">Team Member</div>
+                <div className="text-sm text-muted-foreground">Contributor</div>
               </div>
             </div>
             <div className="flex flex-col items-center space-y-2">
@@ -224,7 +220,7 @@ export default function HomePage() {
               </Avatar>
               <div className="text-center">
                 <div className="text-lg font-medium">Brunda M Bharadwaj</div>
-                <div className="text-sm text-muted-foreground">Team Member</div>
+                <div className="text-sm text-muted-foreground">Contributor</div>
               </div>
             </div>
             <div className="flex flex-col items-center space-y-2">
@@ -234,7 +230,7 @@ export default function HomePage() {
               </Avatar>
               <div className="text-center">
                 <div className="text-lg font-medium">Tanishq Singh</div>
-                <div className="text-sm text-muted-foreground">Team Member</div>
+                <div className="text-sm text-muted-foreground">Contributor</div>
               </div>
             </div>
             <div className="flex flex-col items-center space-y-2">

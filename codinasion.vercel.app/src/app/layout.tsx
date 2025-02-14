@@ -27,15 +27,15 @@ export const metadata: Metadata = {
   },
   description: "Collaborate, Create, Innovate : Together with Open Source ❤️",
   openGraph: {
-    type: 'website',
-    locale: 'en_US',
+    type: "website",
+    locale: "en_US",
     url: sitemetadata.site_url,
     siteName: sitemetadata.title,
   },
   twitter: {
     creator: `@codinasion${sitemetadata.twitter_username}`,
     site: `@codinasion${sitemetadata.twitter_username}`,
-    card: 'summary_large_image',
+    card: "summary_large_image",
   },
 };
 
