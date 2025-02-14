@@ -1,2 +1,3 @@
 packages:
   - "codinasion"
+  - "codinasion.vercel.app"
