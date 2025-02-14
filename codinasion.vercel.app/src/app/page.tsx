@@ -1,101 +1,265 @@
+import Link from "next/link";
 import Image from "next/image";
 
-export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+export default function HomePage() {
+  return (
+    <>
+      <section className="w-full py-12 md:py-24 lg:py-32">
+        <div className="container px-4 md:px-6">
+          <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
+            <div className="flex flex-col justify-center space-y-4">
+              <div className="space-y-2">
+                <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
+                  Join our Open-Source Community
+                </h1>
+                <p className="max-w-[600px] text-muted-foreground md:text-xl">
+                  Collaborate with passionate developers, contribute to
+                  cutting-edge projects, and grow your skills in a supportive
+                  environment.
+                </p>
+              </div>
+              <div className="flex flex-col gap-2 min-[400px]:flex-row">
+                <Link
+                  href="https://github.com/codinasion"
+                  className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                  target="_blank"
+                >
+                  Join Now
+                </Link>
+                <Link
+                  href="https://github.com/codinasion/codinasion"
+                  className="inline-flex h-10 items-center justify-center rounded-md border border-input bg-background px-8 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                  target="_blank"
+                >
+                  Learn More
+                </Link>
+              </div>
+            </div>
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              src="/logo.svg"
+              width="512"
+              height="512"
+              alt="Codinasion Logo"
+              className="mx-auto aspect-video overflow-hidden rounded-xl object-cover lg:order-last lg:aspect-square hidden lg:block"
+              priority
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+      <section className="w-full py-12 md:py-24 lg:py-32 bg-muted">
+        <div className="container px-4 md:px-6">
+          <div className="flex flex-col items-center justify-center space-y-4 text-center">
+            <div className="space-y-2">
+              <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">
+                Key Features
+              </div>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                Discover the Benefits
+              </h2>
+              <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                Our open-source community offers a wealth of opportunities for
+                developers to learn, grow, and make a meaningful impact.
+              </p>
+            </div>
+          </div>
+          <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
+            <div className="flex flex-col justify-center space-y-4">
+              <ul className="grid gap-6">
+                <li>
+                  <div className="grid gap-1">
+                    <h3 className="text-xl font-bold">
+                      Collaborative Learning
+                    </h3>
+                    <p className="text-muted-foreground">
+                      Engage with a diverse community of developers and learn
+                      from their experiences and expertise.
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <div className="grid gap-1">
+                    <h3 className="text-xl font-bold">Skill Development</h3>
+                    <p className="text-muted-foreground">
+                      Contribute to real-world projects and build your
+                      portfolio, enhancing your technical skills.
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <div className="grid gap-1">
+                    <h3 className="text-xl font-bold">Open Innovation</h3>
+                    <p className="text-muted-foreground">
+                      Collaborate on cutting-edge technologies and be part of
+                      the open-source movement.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <Link
+              href="https://github.com/codinasion/codinasion/graphs/contributors"
+              target="_blank"
+            >
+              <Image
+                src="/contributors.svg"
+                width="512"
+                height="512"
+                alt="Contributors Image"
+                className="mx-auto aspect-video overflow-hidden rounded-xl object-center lg:order-last hidden lg:block"
+                priority
+              />
+            </Link>
+          </div>
+        </div>
+      </section>
+      <section className="w-full py-12 md:py-24 lg:py-32">
+        <div className="container px-4 md:px-6">
+          <div className="flex flex-col items-center justify-center space-y-4 text-center">
+            <div className="space-y-2">
+              <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">
+                Meet the Community
+              </div>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                Active Contributors
+              </h2>
+              <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                Our open-source community is powered by passionate developers
+                who contribute their time and expertise to various projects.
+              </p>
+            </div>
+          </div>
+          <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-3 lg:gap-8">
+            <div className="flex flex-col items-center space-y-2">
+              <Avatar>
+                <AvatarImage src="https://github.com/harshraj8843.png" />
+                <AvatarFallback>HR</AvatarFallback>
+              </Avatar>
+              <div className="text-center">
+                <div className="text-lg font-medium">Harsh Raj</div>
+                <div className="text-sm text-muted-foreground">Maintainer</div>
+              </div>
+            </div>
+            <div className="flex flex-col items-center space-y-2">
+              <Avatar>
+                <AvatarImage src="https://github.com/victoriacheng15.png" />
+                <AvatarFallback>VC</AvatarFallback>
+              </Avatar>
+              <div className="text-center">
+                <div className="text-lg font-medium">Victoria Cheng</div>
+                <div className="text-sm text-muted-foreground">
+                  Core Team Member
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col items-center space-y-2">
+              <Avatar>
+                <AvatarImage src="https://github.com/0ME9A.png" />
+                <AvatarFallback>BS</AvatarFallback>
+              </Avatar>
+              <div className="text-center">
+                <div className="text-lg font-medium">Baliram Singh</div>
+                <div className="text-sm text-muted-foreground">
+                  Core Team Member
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col items-center space-y-2">
+              <Avatar>
+                <AvatarImage src="https://github.com/anandfresh.png" />
+                <AvatarFallback>AKS</AvatarFallback>
+              </Avatar>
+              <div className="text-center">
+                <div className="text-lg font-medium">Anandha Krishnan S</div>
+                <div className="text-sm text-muted-foreground">
+                  Core Team Member
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col items-center space-y-2">
+              <Avatar>
+                <AvatarImage src="https://github.com/hi-Kartik2004.png" />
+                <AvatarFallback>KS</AvatarFallback>
+              </Avatar>
+              <div className="text-center">
+                <div className="text-lg font-medium">Kartikeya Saini</div>
+                <div className="text-sm text-muted-foreground">Team Member</div>
+              </div>
+            </div>
+            <div className="flex flex-col items-center space-y-2">
+              <Avatar>
+                <AvatarImage src="https://github.com/RiteshK-611.png" />
+                <AvatarFallback>RK</AvatarFallback>
+              </Avatar>
+              <div className="text-center">
+                <div className="text-lg font-medium">Ritesh Kokam</div>
+                <div className="text-sm text-muted-foreground">Team Member</div>
+              </div>
+            </div>
+            <div className="flex flex-col items-center space-y-2">
+              <Avatar>
+                <AvatarImage src="https://github.com/grraghav120.png" />
+                <AvatarFallback>RG</AvatarFallback>
+              </Avatar>
+              <div className="text-center">
+                <div className="text-lg font-medium">Raghav Garg</div>
+                <div className="text-sm text-muted-foreground">Team Member</div>
+              </div>
+            </div>
+            <div className="flex flex-col items-center space-y-2">
+              <Avatar>
+                <AvatarImage src="https://github.com/isyuricunha.png" />
+                <AvatarFallback>Y</AvatarFallback>
+              </Avatar>
+              <div className="text-center">
+                <div className="text-lg font-medium">Yuri</div>
+                <div className="text-sm text-muted-foreground">Team Member</div>
+              </div>
+            </div>
+            <div className="flex flex-col items-center space-y-2">
+              <Avatar>
+                <AvatarImage src="https://github.com/brundabharadwaj.png" />
+                <AvatarFallback>BMB</AvatarFallback>
+              </Avatar>
+              <div className="text-center">
+                <div className="text-lg font-medium">Brunda M Bharadwaj</div>
+                <div className="text-sm text-muted-foreground">Team Member</div>
+              </div>
+            </div>
+            <div className="flex flex-col items-center space-y-2">
+              <Avatar>
+                <AvatarImage src="https://github.com/tanishq-singh-2407.png" />
+                <AvatarFallback>TS</AvatarFallback>
+              </Avatar>
+              <div className="text-center">
+                <div className="text-lg font-medium">Tanishq Singh</div>
+                <div className="text-sm text-muted-foreground">Team Member</div>
+              </div>
+            </div>
+            <div className="flex flex-col items-center space-y-2">
+              <Avatar>
+                <AvatarImage src="https://github.com/esivakumar26.png" />
+                <AvatarFallback>SKE</AvatarFallback>
+              </Avatar>
+              <div className="text-center">
+                <div className="text-lg font-medium">Siva Kumar Edupuganti</div>
+                <div className="text-sm text-muted-foreground">Contributor</div>
+              </div>
+            </div>
+            <div className="flex flex-col items-center space-y-2">
+              <Avatar>
+                <AvatarImage src="https://github.com/joao-vitor-souza.png" />
+                <AvatarFallback>JV</AvatarFallback>
+              </Avatar>
+              <div className="text-center">
+                <div className="text-lg font-medium">João Vitor</div>
+                <div className="text-sm text-muted-foreground">Contributor</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
