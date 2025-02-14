@@ -5,6 +5,7 @@ import { Space_Mono } from "next/font/google";
 import "@/styles/globals.css";
 import { cn } from "@/lib/utils";
 import Layout from "@/layout";
+import { sitemetadata } from "@/data";
 
 const fontHeading = Bricolage_Grotesque({
   subsets: ["latin"],
@@ -25,6 +26,17 @@ export const metadata: Metadata = {
     template: `%s - Codinasion`,
   },
   description: "Collaborate, Create, Innovate : Together with Open Source ❤️",
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: sitemetadata.site_url,
+    siteName: sitemetadata.title,
+  },
+  twitter: {
+    creator: `@codinasion${sitemetadata.twitter_username}`,
+    site: `@codinasion${sitemetadata.twitter_username}`,
+    card: 'summary_large_image',
+  },
 };
 
 export const viewport: Viewport = {
