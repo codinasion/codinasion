@@ -6,13 +6,13 @@ on:
     branches:
       - master
     paths:
-      - "npm/**"
+      - "codinasion"
       - "package.json"
       - "pnpm-lock.yaml"
   pull_request:
     types: [opened, synchronize]
     paths:
-      - "npm/**"
+      - "codinasion"
       - "package.json"
       - "pnpm-lock.yaml"
 
