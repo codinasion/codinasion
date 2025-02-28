@@ -14,7 +14,7 @@
     "version-packages": "pnpm changeset version && pnpm all",
     "publish-packages": "pnpm all && pnpm changeset version && pnpm changeset publish"
   },
-  "packageManager": "pnpm@10.4.0",
+  "packageManager": "pnpm@10.5.2",
   "engines": {
     "node": ">=18"
   },
