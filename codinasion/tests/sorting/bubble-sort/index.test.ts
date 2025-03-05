@@ -1,4 +1,4 @@
-import { bubbleSort } from "../../../src/sorting/bubble-sort";
+import { bubbleSort } from "../../../src";
 
 describe("bubbleSort", () => {
   test("should sort an array of numbers in ascending order", () => {

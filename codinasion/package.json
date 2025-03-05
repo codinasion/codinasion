@@ -1,6 +1,6 @@
 {
   "name": "codinasion",
-  "version": "2025.2.14",
+  "version": "2025.3.0",
   "type": "module",
   "publishConfig": {
     "access": "public"
